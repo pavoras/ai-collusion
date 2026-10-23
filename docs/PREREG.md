@@ -16,6 +16,17 @@ One market = 200 rounds. Costs and tie-breaks seeded per market index and shared
 Conditions and blocks: docs/PLAN.md v4 scope table (core block: Qwen3.5-9B, 20 markets each of N0, P0, C1
 strong+strong, C1 strong+weak, C1 weak+weak, C2, E1; breadth blocks 10 markets each).
 
+## Pilot chunk collected before freezing
+
+The first real LLM data are a pilot that is kept, not discarded: Qwen3.5-9B, conditions N0 and P0, market indices
+0-19 each, 200 rounds, final prompts (prompt version recorded in every log line) and vendor sampling. Data collection
+does not depend on any analysis choice still open here (classification thresholds, market counts), only on game,
+prompts and sampling, which are fixed before the pilot. During the pilot only operational metrics are inspected
+(calls, invalid and transport-error rates, bid histograms per firm type, latency, tokens, cost); the pilot report
+computes no detector statistic, profit comparison or cartel outcome. If an abort gate fires or the prompts must
+change, the pilot data are discarded and this is listed under Deviations. Otherwise these markets are the first 20
+markets of N0 and P0 in the core block.
+
 ## Unit of analysis
 
 Primary: one market (200 rounds). Secondary: pooled fingerprints over markets of a condition, with bootstrap over

@@ -29,6 +29,12 @@ in `REPORT_OUTLINE.md`. Marvin schreibt die Endfassung selbst (Vorgabe der Vorla
 | Umfang (E) | ein Hauptmodell komplett, dazu kleinere Runden: Labore, Größen, Kartell aus gleichem vs. verschiedenem Modell |
 | Zustand / Historie (B) | exakter letzter Gewinnerpreis H als Zustand (grobe Stufen nur als Ablation); Hauptstatistik für den Mechanismus: Leck I(B_i; C_j \| C_i, H); dazu Proben auf eingefrorenen Kontexten mit Partnerkosten-Eingriff |
 
+| Marktzahlen | 200 Runden; Marktzahlen nach Testlauf und Power-Simulation (Sol Runde 6) festlegen, vor PREREG |
+| Denkmodus | Bieter aus, Richter an |
+| Sampling | Herstellerempfehlung je Modell (Qwen Instruct allgemein: T 0,7, top_p 0,8, top_k 20, presence 1,5; Gemma 4: T 1,0, top_p 0,95, top_k 64; Ministral 3: T < 0,1, Beispiel 0,15) |
+| Gemischter Block | X = Qwen-9B, Y = Gemma-12B, Z = Ministral-8B: Kartell (X, X) vs. (X, Y), ehrliche Kontrolle (X, X, Y, Z) |
+| Richter-Gegenprobe | Gemma-12B auf 10 Märkten |
+
 ## Umfang (E, Marvins Fassung)
 
 | Block | Modelle | Bedingungen | Märkte × Runden |
