@@ -12,3 +12,4 @@ __pycache__/
 # Large raw LLM logs stay local unless chosen for the report
 results/raw/
 *.egg-info/
+*.env

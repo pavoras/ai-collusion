@@ -2,7 +2,7 @@
 
     .venv/Scripts/python cloud/smoke_test.py --base-url https://<workspace>--collusion-qwen-9b-server.modal.run
 
-Reads MODAL_PROXY_TOKEN_ID and MODAL_PROXY_TOKEN_SECRET from the environment or from `.env` (never printed).
+Reads MODAL_PROXY_TOKEN_ID and MODAL_PROXY_TOKEN_SECRET from the environment, `.env` or `tokens.env` (never printed).
 """
 
 import argparse
@@ -22,12 +22,16 @@ SYSTEM = (
 )
 
 
-def load_env(path: Path = Path(".env")) -> None:
-    if path.exists():
-        for line in path.read_text(encoding="utf-8").splitlines():
-            if "=" in line and not line.lstrip().startswith("#"):
-                key, value = line.split("=", 1)
-                os.environ.setdefault(key.strip(), value.strip().strip('"'))
+def load_env() -> None:
+    """Read `.env` or `tokens.env` from the repo root or any parent (worktrees live inside the main checkout)."""
+    for folder in Path(__file__).resolve().parents:
+        for name in (".env", "tokens.env"):
+            path = folder / name
+            if path.exists():
+                for line in path.read_text(encoding="utf-8").splitlines():
+                    if "=" in line and not line.lstrip().startswith("#"):
+                        key, value = line.split("=", 1)
+                        os.environ.setdefault(key.strip(), value.strip().strip('"'))
 
 
 def parse_bid(text: str) -> int | None:
