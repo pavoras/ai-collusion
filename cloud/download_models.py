@@ -18,8 +18,10 @@ app = modal.App("collusion-download")
 def download(repo: str) -> str:
     from huggingface_hub import snapshot_download
 
-    # Only what vLLM loads: weights, configs, tokenizer and chat template.
-    path = snapshot_download(repo, allow_patterns=["*.json", "*.safetensors", "*.model", "*.txt", "*.jinja", "*.tekken*"])
+    # Only what vLLM loads. Mistral repos ship the weights twice; vLLM's mistral format needs only consolidated.*
+    patterns = ["*.json", "*.jinja", "*.txt", "*.model"]
+    patterns += ["consolidated.safetensors"] if repo.startswith("mistralai/") else ["*.safetensors"]
+    path = snapshot_download(repo, allow_patterns=patterns)
     hf_cache.commit()
     return path
 
