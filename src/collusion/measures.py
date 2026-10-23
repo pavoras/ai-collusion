@@ -192,7 +192,9 @@ def calibrated_pairs(result: PermutationResult, level: float = 0.05) -> list[tup
 
     A pair (i, j) passes if its gamma is significant after Bonferroni over all pairs (p <= level / m) and,
     on bias-corrected gamma, each is the other's strongest partner: Gamma_c(i; j) > 0 and Gamma_c(j; i) > 0.
-    Under "no collusion" the chance of any pair passing is at most `level`.
+    The false-alarm rate is at most `level` only if the within-state shuffle is a valid null, i.e. each action
+    depends on nothing but the given state. Coarse states and adaptive histories can break this; check on
+    simulated data before relying on it.
     """
     n_agents = result.gamma.shape[0]
     m = n_agents * (n_agents - 1) // 2

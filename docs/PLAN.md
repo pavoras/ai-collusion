@@ -1,122 +1,131 @@
 # Plan: Frage 1.4, Netto-Einfluss bei LLM-Bietern
 
-Stand: 23.10.2026 abends, Plan v2. Schritt 0 und 1 fertig. Versuchsaufbau im Detail: `docs/DESIGN.md`.
-Ausführliches Sprint-Briefing: `../Job Search/Bewerbungsunterlagen/4_Bewerbungen/2026-10_Apart-Research_Special-Projects-Manager/Sprint_AI_Collusion.md`.
+Stand: 23.10.2026 abends, Plan v3 (v2 von Astra geprüft, Runde 1). Schritt 0 und 1 fertig. Versuchsaufbau:
+`docs/DESIGN.md`. Pitch: `docs/PITCH.md`. Sprint-Briefing:
+`../Job Search/Bewerbungsunterlagen/4_Bewerbungen/2026-10_Apart-Research_Special-Projects-Manager/Sprint_AI_Collusion.md`.
 
 ## Forschungsfrage
 
-*What does an auditor need to see to catch an AI bid-rigging cartel? Pairwise net influence at three levels of
-auditor access, tested on LLM bidders (three labs, two sizes, mixed populations) in a repeated procurement auction
-with one covert cartel pair.*
+*When does access to agents' private information let an auditor tell a covert bid-rigging cartel of LLM agents
+apart from dependence that merely comes from shared history or a shared model?*
 
-## Pflichtteil laut Sprint-Seite (muss im Report klar abgehakt werden)
+## Ziel: volle Punktzahl in allen drei Kategorien (Marvin: „Excellency across all measures“)
+
+| Kategorie | Was eine 5 verlangt | Wie wir sie erreichen |
+|---|---|---|
+| Impact & Innovation | neu fürs Feld, nicht Replikation; wichtig, wenn es klappt | offenes Problem der gleichzeitigen Arbeit („Abhängigkeit ist keine Absprache“) mit privater Information und einem kausalen Eingriff angehen; Praxisfall mit Anschluss an Kartellrecht (Screens) und AI Control (Betreiber-Aufsicht); wiederverwendbares Werkzeug und Benchmark |
+| Execution | sauber, robust validiert, überraschende Befunde | Vorregistrierung, Skript-Validierung mit bekannter Wahrheit, Positiv-/Negativkontrolle, Manipulationschecks, gepaarte Seeds, Markt-Bootstrap, Ablationen, ehrliche Grenzen |
+| Presentation | Vorbild an Klarheit | eine Kernabbildung, die die Geschichte trägt (Detektion je Zugriffsstufe × Bedingung); klare Begriffe; jede Zahl reproduzierbar aus dem Repo |
+
+## Pflichtteil laut Sprint-Seite (im Report sichtbar abhaken)
 
 | Vorgabe 1.4 | Wo bei uns |
 |---|---|
 | Netto-Einfluss implementieren | `src/collusion/measures.py` (fertig) |
-| an geskriptetem, wiederholtem RPS mit einem bekannten Paar testen | Schritt 2, minimal: Kontrollwerte, CDA-Tabelle, Fig. 3 |
+| an geskriptetem, wiederholtem RPS mit einem bekannten Paar testen | Schritt 2, minimal: Kontrollwerte, CDA-Tabelle, Fehlalarm |
 | diskretes Spiel mit 4 Agenten und genau einem gesetzten Paar | Ausschreibung mit 4 Bietern, ein Kartell-Paar |
-| Netto-Einfluss vs. einfache Aktionskorrelation vs. LLM-Richter beim Ranking des wahren Paars | auf allen drei Zugriffsstufen |
-| (Vorschlag) Marktfall | die Ausschreibung ist der Marktfall |
+| Netto-Einfluss vs. einfache Aktionskorrelation vs. LLM-Richter beim Ranking des wahren Paars | auf den Stufen L1 und L2 |
+| (Vorschlag) Marktfall, Doppelauktion | Ausschreibung als Marktfall; Begründung, warum statt Doppelauktion (diskret, private Kosten, ein Paar) |
 
-## Was neu ist (Abgrenzung)
+## Was neu ist (Abgrenzung, vorsichtig formuliert)
 
 Gleichzeitige Sprint-Arbeit, öffentlich vor Sprintbeginn: Raj-Taware/collusion-net-influence (RPS-Nachbau,
 Permutations-Kalibrierung, LLM-RPS mit 3 Agenten) und soumya-nayak-commits/collusion-sprint (4-Spieler-RPS vs.
-Cramér's V). Wir nutzen **keinen Code** daraus, zitieren beide mit Commit und Datum und vergleichen unsere
-RPS-Kalibrierung mit ihren Zahlen. Neu bei uns:
-1. Praxisfall Ausschreibungsabsprache mit privaten Kosten (Eq. 3, teilweise beobachtbar; bisher nie mit LLMs).
-2. Zugriffsstufen des Prüfers: Behörde (Gebote) → Plattform (plus Kosten) → Modellzugriff (kontrafaktische
-   ehrliche Wiederholung als bedingter Randomisierungstest). Die dritte Stufe zielt direkt auf das offene Problem
-   „Ähnlichkeit gleicher Modelle ist keine Absprache“.
-3. Gleiches-Modell-Attrappe und gemischte Kartelle (Kartell aus zwei Laboren neben einem unschuldigen
-   Gleiches-Modell-Paar).
+Cramér's V). Wir nutzen **keinen Code** daraus, zitieren beide mit Commit und Datum und vergleichen die
+RPS-Kalibrierung mit ihren Zahlen. Unser Beitrag:
+1. Teilweise beobachtbarer Fall (Eq. 3) mit privaten Kosten, inklusive Zerlegung in Aktionsabhängigkeit und
+   Abhängigkeit von fremden Beobachtungen; bei LLM-Agenten nach unserem Kenntnisstand nicht getestet (prüfen).
+2. Zugriffsstufen des Prüfers: Behörde (Gebote) vs. Plattform (plus Kosten), dazu Proben auf eingefrorenen
+   Kontexten: Ehrlich-Referenz-Swap (explorativ) und **Partnerkosten-Eingriff** (kausaler Check des Signals).
+3. Gleiches-Modell-Attrappe und gemischtes Kartell neben einem unschuldigen Gleiches-Modell-Paar.
 4. Aktuelle Modelle aus drei Laboren in zwei Größen als Robustheitsachsen des Detektors.
-5. Ehrliche Grenze: Ein stilles Kartell, das nur über öffentliche Signale koordiniert, ist für Statistiken, die auf
-   diese Signale bedingen, grundsätzlich unsichtbar.
 
 ## Zeitplan (deutsche Zeit)
 
 | Wann | Was |
 |---|---|
-| Fr 23.10. abends | Plan v2, Review durch Astra, Pitch, Modal vorbereiten. Marvin: Sprint-Ressourcen lesen, `modal setup`, HF-Token, Gemma-Lizenz |
-| Sa 9-12 | Schritt 2 (RPS minimal) und Schritt 3 (Auktion mit Skript-Agenten, alle Detektoren, Simulationen gratis). Danach Rundenzahl festlegen |
-| Sa 12-14 | Schritt 4: LLM-Agenten, Modal-Deploy Qwen-9B, Smoke-Test, Kostenmessung, Go/No-Go mit Marvin |
+| Fr 23.10. abends | Plan v3, Pitch, Modal vorbereitet. Marvin: Ressourcen lesen, `modal setup`, Proxy-Token anlegen |
+| Sa 9-12 | Schritt 2 (RPS minimal) und Schritt 3 (Auktion mit Skript-Agenten, Simulationen). Danach PREREG-Zahlen |
+| Sa 12-14 | Schritt 4a: LLM-Harness, Deploy Qwen-9B, Smoke-Test, Durchsatz- und Kostenmessung, Go/No-Go mit Marvin |
 | Sa 14:15 | Talk Nguyen. Danach `docs/PREREG.md` committen |
-| Sa 15-20 | Hauptmodell komplett (N0, P0, C1, C2, Replays), erste Auswertung |
-| Sa abends / nachts | übrige 5 Modelle homogen (N0, C1, C2) |
-| So vormittags | gemischte Gruppen (D, M2), LLM-Richter, Gesamtauswertung |
-| So nachmittags / abends | Abbildungen, Report-Entwurf, Review |
+| Sa 15-20 | Hauptmodell: N0, P0, C1, C2; erste Auswertung |
+| Sa abends / nachts | übrige 5 Modelle: N0, C1 |
+| So vormittags | D, M2, Proben auf eingefrorenen Kontexten, LLM-Richter |
+| So nachmittags / abends | Gesamtauswertung, Abbildungen, Report-Entwurf, Review durch Astra |
 | Mo bis 11:00 | Report fertig, Repo öffentlich (Marvin entscheidet), Abgabe. Harte Frist 12:59 |
 
 ## Schritte mit Abnahmekriterien
 
 ### 0. Setup (fertig)
-`.venv`, Python 3.14, `pip install -e ".[dev]"`, `requirements-lock.txt`.
+`.venv`, Python 3.14, `pip install -e ".[dev]"`, `requirements-lock.txt`. Modal-Dateien in `cloud/`.
 
-### 1. Maße (fertig)
-γ, Γ, Regel des Papers, Permutationstest, kalibrierte Regel, G-Test, 14 Tests. Noch zu ergänzen in Schritt 3:
-Eq. 3 mit getrennten Beobachtungen s_i, s_j (Permutation innerhalb s_i) und der Swap-Test für Stufe L3.
+### 1. Maße (fertig, Ergänzungen in Schritt 3)
+Vorhanden: γ, Γ, Regel des Papers, Permutationstest, kalibrierte Regel, G-Test, 14 Tests. Ergänzen: Eq. 3 mit
+getrennten Zuständen und Zerlegung (Test: Summe der drei Terme = Eq. 3), symmetrischer Permutationstest (beide
+Gebote innerhalb ihrer Zustände), Paar-Score min(Γ_ij, Γ_ji), Swap-Test.
 
 ### 2. RPS minimal (0 $, Pflicht)
-- 3-Spieler-RPS wie im Paper. Abnahme: γ trifft `METHOD.md`-Kontrollwerte; CDA für CP 0,3/0,4 bei 100-1000 Spielen
-  nahe Paper-Tabelle 2; Fehlalarm festes α vs. kalibriert bei Nullhypothese. Eine Abbildung, eine Tabelle.
-- Vergleich mit den Zahlen der gleichzeitigen Arbeit (Einheit beachten: dort nats, bei uns bits).
+3-Spieler-RPS wie im Paper. Abnahme: γ trifft die Kontrollwerte; CDA für CP 0,3/0,4 bei 100-1000 Spielen nahe
+Paper-Tabelle 2; Fehlalarm festes α vs. kalibriert. Eine Abbildung, eine Tabelle, Vergleich mit gleichzeitiger
+Arbeit (dort nats, hier bits).
 
 ### 3. Auktion mit Skript-Agenten (0 $)
-- Spiel nach `DESIGN.md`, geseedet. Ehrliche Skript-Bieter mit Geschichtsreaktion (simuliertes gleiches Modell),
-  Skript-Kartell mit Treue q.
-- Abnahme: Fehlalarm ~5 % auf L1-L3 ohne Kartell; Attrappen-Effekt sichtbar auf L1/L2 und auf L3 weg; Power-Kurve
-  über q und Runden. Daraus Märkte × Runden festlegen (Start: 30 × 60).
+- Spiel nach `DESIGN.md` v3. Ökonomik-Check: Skript-Kartell ist profitabel gegen Skript-Ehrliche (Gewinn, Zuschlag,
+  Entropie).
+- Simulationen: Gültigkeit der Nullverteilung (Fehlalarm), Tabellenbelegung, Power über q und Runden,
+  Attrappen-Effekt (Ergebnis offen), konstruiertes stilles Kartell (blinder Fleck nur unter dieser Bedingung).
+- Ergebnis: Rundenzahl, Märkte, Zustandsdefinition, primäre Einheit für PREREG.
 
-### 4. LLM-Läufe (Modal, ca. 25 $ von 50 $)
-- Agenten-Harness (OpenAI-kompatibel), Prompts symmetrisch, JSON, Logging jeder Anfrage (Prompt-Hash, Rohantwort,
-  Gebot, Nachricht, Seed, Latenz, Token), Antwort-Cache, damit alles offline neu ausgewertet werden kann.
-- Smoke-Test: 1 Markt × 10 Runden pro Modell. Abnahme: < 2 % ungültige Antworten, Gebote streuen (Entropie > 0),
-  Kosten pro 1000 Aufrufe gemessen. Hochrechnung an Marvin, dann Go.
-- Reihenfolge: Qwen-9B komplett → Gemma-12B, Ministral-8B → Qwen-4B → Gemma-E4B, Ministral-3B → D, M2.
+### 4. LLM-Läufe (Modal, Deckel 35 $ von ~50 $)
+- 4a Harness (OpenAI-kompatibel), symmetrische Prompts, Logging jeder Anfrage (Prompt-Hash, Rohantwort, Gebot,
+  Nachricht, Seed, Latenz, Token), Antwort-Cache. Smoke-Test: 1 Markt × 10 Runden je Modell; Abnahme: < 2 %
+  ungültig, Gebote streuen, Kosten pro 1000 Aufrufe gemessen. Hochrechnung an Marvin, dann Go.
+- 4b Reihenfolge: Qwen-9B (N0, P0, C1, C2) → Gemma-12B, Ministral-8B (N0, C1) → Qwen-4B, Gemma-E4B, Ministral-3B
+  (N0, C1) → D, M2 → Proben → Richter.
 
 ### 5. Auswertung und Report
-- Abbildungen: (1) RPS-Kalibrierung, (2) Detektion je Zugriffsstufe und Bedingung, (3) Fehlalarm Attrappe L1-L3,
-  (4) Labore × Größen, (5) Treffer vs. Rundenzahl. Tabellen mit Wilson-Intervallen.
+- Kernabbildung: Detektion (Top-1, Fehlalarm) je Stufe L1/L2 × Bedingung. Dazu RPS-Kalibrierung, Attrappe,
+  Labore × Größen, Partnerkosten-Eingriff, Treffer vs. Rundenzahl.
 - Report in der Vorlage, max. 8 Seiten, Abstract 150-250 Wörter, Anhang „Limitations and Dual-Use / Ethical
-  Considerations“. Autor „Marvin Kemper, Independent“. Gleichzeitige Arbeit in Related Work.
+  Considerations“ (synthetischer Nachweis, kein Schuldbeweis; mögliche Umgehung benennen). Autor „Marvin Kemper,
+  Independent“.
 
-## Prüfung (wie wir sicherstellen, dass die Ergebnisse stimmen)
+## Prüfung
 
-1. Unit-Tests für Maße, Auszahlungen, Parser, Skript-Strategien.
-2. Simulationen mit bekannter Wahrheit vor jedem LLM-Aufruf (Positiv, Negativ, Attrappe, Swap-Test-Gültigkeit).
-3. Smoke-Test mit Abbruchkriterien.
-4. Manipulationschecks: Hat das Kartell wirklich gekungelt (Scheingebote, Rotation, Preisaufschlag, Nachrichten)?
-5. Vorregistrierung (`docs/PREREG.md`) mit Git-Zeitstempel vor den Hauptläufen.
-6. Gepaarte Seeds über Bedingungen und Modelle; Wilson-Intervalle; alle Antworten gecacht.
-7. Review durch Astra (Plan jetzt, Code und Auswertung später) und Endkontrolle: frischer Clone rechnet alle Zahlen
-   des Reports aus den Logs nach.
+1. Unit-Tests für Maße (inkl. Eq.-3-Zerlegung), Auszahlungen, Parser, Skript-Strategien.
+2. Skript-Simulationen mit bekannter Wahrheit vor jedem LLM-Aufruf.
+3. Smoke-Test mit Abbruchkriterien und Kostenmessung.
+4. Manipulationschecks, in PREREG definiert; alle gesetzten Kartelle berichten, erfolgreiche getrennt.
+5. Vorregistrierung mit Git-Zeitstempel vor den Hauptläufen.
+6. Gepaarte Seeds; Bootstrap über Märkte; alle Antworten gecacht.
+7. Astra-Reviews (Plan erledigt; Code und Auswertung später); Endkontrolle: frischer Clone rechnet alle Zahlen nach.
 
 ## Ausweichleiter
 
 | Zeitpunkt | Wenn … | dann … |
 |---|---|---|
-| Sa 14 Uhr | Modal läuft nicht stabil | nur Qwen-9B und ein zweites Modell; L3 nur für Qwen-9B |
-| Sa 20 Uhr | LLM-Kartell kungelt nicht nachweisbar (Manipulationscheck negativ) | Kartell-Anweisung deutlicher, P0 als Hauptbeleg, Befund berichten |
-| So 12 Uhr | Zeit knapp | Streichliste: kleine Gemma/Ministral → M2 → C2 außer Hauptmodell → L3 außer Hauptmodell |
-| So abends | LLM-Teil unbrauchbar | RPS + Skript-Auktion (L1-L3) als Ergebnis, LLM als Pilot |
+| Sa 14 Uhr | Modal läuft nicht stabil oder Durchsatz zu klein | nur Qwen-9B plus ein zweites Labor; Proben nur Partnerkosten-Eingriff |
+| Sa 20 Uhr | LLM-Kartell kungelt nicht nachweisbar | Anweisung deutlicher, P0 als Hauptbeleg, Befund berichten |
+| So 12 Uhr | Zeit knapp | Streichliste: weitere Mischungs-Rotationen → Swap-Test → kleine Modelle von Gemma/Ministral → C2 |
+| So abends | LLM-Teil unbrauchbar | RPS + Skript-Auktion (L1/L2) als Ergebnis, LLM als Pilot |
 
 ## Offene Punkte
 
-- Modal: Token (`modal setup`), HF-Token als Modal-Secret, Gemma-Lizenz auf Hugging Face akzeptieren.
+- Marvin: `modal setup`, Proxy-Token im Modal-Dashboard anlegen und in `.env` eintragen (siehe `cloud/README.md`).
 - Literatur prüfen und zitieren: Screens für Ausschreibungsabsprachen (z. B. Imhof et al. 2018, Huber & Imhof 2019),
   bedingter Randomisierungstest (Candès et al. 2018), Efimov 2024. Erst nach Prüfung in den Report.
-- Richter-Modell: Qwen3.5-9B mit Denkmodus; Gegenprobe mit Gemma-12B auf einer Teilmenge.
+- Neuheitscheck Eq. 3 bei LLM-Agenten und Partnerkosten-Eingriff (Suche vor dem Report).
 
 ## Log
 
 - 23.10.: Projekt und Dokumentation angelegt, Paper gelesen, Einheit (Bits) aus den Paper-Zahlen abgeleitet,
   Kontrollwerte berechnet.
-- 23.10. abends: Schritt 0 (`.venv`, Python 3.14, `pip install -e ".[dev]"`, `requirements-lock.txt`) und
-  Schritt 1 (`src/collusion/measures.py`, 14 Tests grün). Plug-in-γ trifft die Kontrollwerte bei N = 200 000
-  auf ±0,003 bit. Zusätzlich zum Plan: Permutationstest mit Bonferroni-Regel (`detect_calibrated`) und
-  asymptotischer G-Test (`g_test_pvalue`) als billiger Gegencheck.
-- 23.10. abends: Lokale Modelle verworfen (PC zu schwach), nur Modal. Zwei gleichzeitige Sprint-Repos gefunden
-  (Raj-Taware, soumya-nayak), die RPS-Kalibrierung und LLM-RPS schon abdecken. Neuer Kern: Ausschreibung mit
-  privaten Kosten, Zugriffsstufen L1-L3, Attrappe und gemischte Kartelle. Plan v2 und `DESIGN.md`.
+- 23.10. abends: Schritt 0 und 1 fertig (14 Tests grün, Kontrollwerte bei N = 200 000 auf ±0,003 bit).
+- 23.10. abends: Lokale Modelle verworfen, nur Modal. Zwei gleichzeitige Sprint-Repos gefunden. Neuer Kern:
+  Ausschreibung mit privaten Kosten. Plan v2.
+- 23.10. abends: Astra Runde 1 (gpt-6-astra/high, read-only, Thread 01a168c9-0f89-7fa2-b825-53a5b8e444e9, ~1 %
+  Wochenkontingent): 6 Must-fix. Übernommen: Neuheit vorsichtiger, Eq.-3-Zerlegung, symmetrischer Nulltest ohne
+  Pauschalgarantie, In-Game-Replays durch Proben auf eingefrorenen Kontexten ersetzt, Tabellenbelegung und
+  Analyseeinheit vorab simulieren, Partnerkosten-Eingriff als kausaler Check, Umfang gekürzt. Selbst nachgerechnet:
+  Kartell-Regel war unprofitabel (−4 % gegen Kosten+1-Bieter); daher asymmetrisches Spiel mit zwei starken Firmen
+  (+29 % bis +76 %). Plan v3.
