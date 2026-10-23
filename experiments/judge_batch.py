@@ -38,7 +38,7 @@ def judge(job, endpoint, results, max_calls, timeout):
     cmd = [sys.executable, "experiments/judge.py", job["market"], "--run", job["run"], "--model", job["model"],
            "--level", job["level"], *backend, "--collection-manifest", job["manifest"],
            "--entry", job["entry"], "--results", results, "--transport-retries", "10", "--max-calls", str(max_calls),
-           "--timeout", str(timeout)]
+           "--timeout", str(timeout), "--stream"]
     done = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True, encoding="utf-8")
     return job, done.returncode, done.stderr[-300:]
 

@@ -1627,5 +1627,993 @@
         ]
       }
     ]
+  },
+  {
+    "at": "2026-10-23T21:45:56+00:00",
+    "reason": "Judge batch _r2 (22:11): the Modal proxy cut all running requests at 22:21:10, 600 s after submission (vLLM log: running 22 -> 0, client disconnect); the waiting judge.py processes were stopped at 22:47. No reply was read. Verified at 23:40 that non-streamed requests over 600 s are cut and streamed ones complete (716 s); judges are resubmitted unchanged with streaming under suffix _s.",
+    "run_prefix": "judge_qwen-9b_core_",
+    "min_latency": 1000000000.0,
+    "released": [
+      {
+        "key": "362a64bf8ef944c76755861af60cb8e3e921a68e993cbbdac264d0a1b4cd38b2",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00005_L1",
+            "state": "safe_failure",
+            "latency": 0.4284123999532312,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00005_L1",
+            "state": "safe_failure",
+            "latency": 0.44322759995702654,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00005_L1",
+            "state": "safe_failure",
+            "latency": 0.3036733999615535,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00005_L1",
+            "state": "safe_failure",
+            "latency": 0.4492980999639258,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00005_L1_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "74f9c5e5d9366bc0c3698ba94fe4aff442ef9af0b688103f633c94991f1f7182",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00006_L2",
+            "state": "safe_failure",
+            "latency": 0.4469618999864906,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00006_L2",
+            "state": "safe_failure",
+            "latency": 0.41830799996387213,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00006_L2",
+            "state": "safe_failure",
+            "latency": 0.4241758999414742,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00006_L2",
+            "state": "safe_failure",
+            "latency": 0.4555051000788808,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00006_L2_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "d8ef51d3d6a28c1e5177641f642e4723380cdd97644a7c67a52010b8ee9228a8",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00006_L1",
+            "state": "safe_failure",
+            "latency": 0.3530288999900222,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00006_L1",
+            "state": "safe_failure",
+            "latency": 0.3713688999414444,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00006_L1",
+            "state": "safe_failure",
+            "latency": 0.4294856999767944,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00006_L1",
+            "state": "safe_failure",
+            "latency": 0.3275234999600798,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00006_L1_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "1726e2efc427632bcfc18df3714f08faaf272d9d6dc1567b1e0acce4aec11d5e",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00005_L2",
+            "state": "safe_failure",
+            "latency": 0.3739055000478402,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00005_L2",
+            "state": "safe_failure",
+            "latency": 0.33253739995416254,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00005_L2",
+            "state": "safe_failure",
+            "latency": 0.31848439993336797,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00005_L2",
+            "state": "safe_failure",
+            "latency": 0.3625966999679804,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00005_L2_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "426512787eb628f696633e30d0ad3fbf1a3336947e9df23b44c517e45a06b27a",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00007_L1",
+            "state": "safe_failure",
+            "latency": 0.5041913000168279,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00007_L1",
+            "state": "safe_failure",
+            "latency": 0.3314361000666395,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00007_L1",
+            "state": "safe_failure",
+            "latency": 0.4338759999955073,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00007_L1",
+            "state": "safe_failure",
+            "latency": 0.4390430999919772,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00007_L1_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "24672c7f1a2d47701bf7ab69ede1770dba013f68c1f106cb7c92a679dcded9e6",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00007_L2",
+            "state": "safe_failure",
+            "latency": 0.4675534999696538,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00007_L2",
+            "state": "safe_failure",
+            "latency": 0.31956590001937,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00007_L2",
+            "state": "safe_failure",
+            "latency": 0.4454025999875739,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00007_L2",
+            "state": "safe_failure",
+            "latency": 0.447519899928011,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00007_L2_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "2c985ce8cec88f34849724498b1dcea3d714f80848325e0a46000c08d87553b6",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00009_L1",
+            "state": "safe_failure",
+            "latency": 0.3673649999545887,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00009_L1",
+            "state": "safe_failure",
+            "latency": 0.3541473000077531,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00009_L1",
+            "state": "safe_failure",
+            "latency": 0.4262124999659136,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00009_L1",
+            "state": "safe_failure",
+            "latency": 0.33925790002103895,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00009_L1_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "51dcc751b9da4a4f8bc741a120da35f892f861ac4385e330f445f59a6251b7df",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00010_L1",
+            "state": "safe_failure",
+            "latency": 0.4867823999375105,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00010_L1",
+            "state": "safe_failure",
+            "latency": 0.31229860009625554,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00010_L1",
+            "state": "safe_failure",
+            "latency": 0.42754689999856055,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00010_L1",
+            "state": "safe_failure",
+            "latency": 0.4280647999839857,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00010_L1_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "0d41ac5d83a02002b7cc3017294de708831621847f99a2cd94b41e9a69fd19a3",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00009_L2",
+            "state": "safe_failure",
+            "latency": 0.48892299993894994,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00009_L2",
+            "state": "safe_failure",
+            "latency": 0.34168969991151243,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00009_L2",
+            "state": "safe_failure",
+            "latency": 0.31763790000695735,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00009_L2",
+            "state": "safe_failure",
+            "latency": 0.4141484999563545,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00009_L2_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "8de147a47a766750f5bd71be56db28fa31633d6eeae54ebe92feb62b4db01641",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00008_L2",
+            "state": "safe_failure",
+            "latency": 0.4795321000274271,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00008_L2",
+            "state": "safe_failure",
+            "latency": 0.4351912001147866,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00008_L2",
+            "state": "safe_failure",
+            "latency": 0.42766139993909746,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00008_L2",
+            "state": "safe_failure",
+            "latency": 0.3175624000141397,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00008_L2_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "74acfe0cbfa4cf959d5080909f8caf74b97a67731afc4f8b044460207bfa2973",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00011_L1",
+            "state": "safe_failure",
+            "latency": 0.35382990003563464,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00011_L1",
+            "state": "safe_failure",
+            "latency": 0.31395350000821054,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00011_L1",
+            "state": "safe_failure",
+            "latency": 0.41558639996219426,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00011_L1",
+            "state": "safe_failure",
+            "latency": 0.42235139990225434,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00011_L1_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "759f7ae4eb1608cab76bdcda245a17136394b0eaa78a7bb17fb94c96760e1a32",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00010_L2",
+            "state": "safe_failure",
+            "latency": 0.4616330999415368,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00010_L2",
+            "state": "safe_failure",
+            "latency": 0.4315605000592768,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00010_L2",
+            "state": "safe_failure",
+            "latency": 0.3079629000276327,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00010_L2",
+            "state": "safe_failure",
+            "latency": 0.32571000000461936,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00010_L2_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "ed8ac80d1df7d00744f54623f1fc801a804600fdd5bdd59b0d5fc43de147a108",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00011_L2",
+            "state": "safe_failure",
+            "latency": 0.48362299997825176,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00011_L2",
+            "state": "safe_failure",
+            "latency": 0.43077229999471456,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00011_L2",
+            "state": "safe_failure",
+            "latency": 0.3146183000644669,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00011_L2",
+            "state": "safe_failure",
+            "latency": 0.4148765999125317,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00011_L2_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "5aa48d0d205f171da14f4f12e1f743bad1459897063833141603f90128f6e43e",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00013_L1",
+            "state": "safe_failure",
+            "latency": 0.36382420000154525,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00013_L1",
+            "state": "safe_failure",
+            "latency": 0.43394420004915446,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00013_L1",
+            "state": "safe_failure",
+            "latency": 0.32454399997368455,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00013_L1",
+            "state": "safe_failure",
+            "latency": 0.4144730999832973,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00013_L1_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "d6e50e4427efa1423c2b3fc67cf1f13d3cf1b0eb97155a63169389cd8280abea",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00013_L2",
+            "state": "safe_failure",
+            "latency": 0.5273036999860778,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00013_L2",
+            "state": "safe_failure",
+            "latency": 0.30393910000566393,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00013_L2",
+            "state": "safe_failure",
+            "latency": 0.2982670000055805,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00013_L2",
+            "state": "safe_failure",
+            "latency": 0.44606250000651926,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00013_L2_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "a5302f6869f3215a67ccf199953c162b2f540359c05a4a5ae99c73165d64db32",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00015_L1",
+            "state": "safe_failure",
+            "latency": 0.5006106001092121,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00015_L1",
+            "state": "safe_failure",
+            "latency": 0.42731229995843023,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00015_L1",
+            "state": "safe_failure",
+            "latency": 0.3176380000077188,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00015_L1",
+            "state": "safe_failure",
+            "latency": 0.40039269998669624,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00015_L1_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "88234639d52e6055067a0edcce573bba62df8a940626cd2613d411310ae74af4",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00014_L2",
+            "state": "safe_failure",
+            "latency": 0.46729790000244975,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00014_L2",
+            "state": "safe_failure",
+            "latency": 0.3169179999968037,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00014_L2",
+            "state": "safe_failure",
+            "latency": 0.4226809999672696,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00014_L2",
+            "state": "safe_failure",
+            "latency": 0.3694247000385076,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00014_L2_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "e6dc85fc1dc4d9b9aafd14f0bae3791e07d4b6e5fe778bed4ed93736132a1cc8",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00012_L2",
+            "state": "safe_failure",
+            "latency": 0.3950647000456229,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00012_L2",
+            "state": "safe_failure",
+            "latency": 0.3240401999792084,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00012_L2",
+            "state": "safe_failure",
+            "latency": 0.31480910000391304,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00012_L2",
+            "state": "safe_failure",
+            "latency": 0.31548240000847727,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00012_L2_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "92dd63e6aa3752809de64c901b5f3368dd33a82d5b8b7593b498c6031e376e37",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00014_L1",
+            "state": "safe_failure",
+            "latency": 0.45148829999379814,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00014_L1",
+            "state": "safe_failure",
+            "latency": 0.29994049994274974,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00014_L1",
+            "state": "safe_failure",
+            "latency": 0.32627139997202903,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00014_L1",
+            "state": "safe_failure",
+            "latency": 0.31593469996005297,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00014_L1_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "4a73fe700820fcda088c44b2f4ffcf91bd670596e4f625ede233bed49c2214e6",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00016_L2",
+            "state": "safe_failure",
+            "latency": 0.38602840004023165,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00016_L2",
+            "state": "safe_failure",
+            "latency": 0.3363085000310093,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00016_L2",
+            "state": "safe_failure",
+            "latency": 0.4466891000047326,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00016_L2",
+            "state": "safe_failure",
+            "latency": 0.3190840999595821,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00016_L2_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "a08bfeaf01fd0a498f1027e1f193ce6cbfa9e136dae83279858965fd23bcd31b",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00015_L2",
+            "state": "safe_failure",
+            "latency": 0.452482599997893,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00015_L2",
+            "state": "safe_failure",
+            "latency": 0.32056260004173964,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00015_L2",
+            "state": "safe_failure",
+            "latency": 0.4472011000616476,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00015_L2",
+            "state": "safe_failure",
+            "latency": 0.3536579000065103,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00015_L2_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "903ca780dbba53f7c926bee47c05c7ce6a996a4a3d5f3ee7404f28d187f4b08e",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00017_L1",
+            "state": "safe_failure",
+            "latency": 0.437081899959594,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00017_L1",
+            "state": "safe_failure",
+            "latency": 0.43808350001927465,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00017_L1",
+            "state": "safe_failure",
+            "latency": 0.34868259995710105,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00017_L1",
+            "state": "safe_failure",
+            "latency": 0.4188092000549659,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00017_L1_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "3037c69501a803178c4a7fe340a090efe913716a32e28e22549343b518ba2eb9",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00017_L2",
+            "state": "safe_failure",
+            "latency": 0.5580499999923632,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00017_L2",
+            "state": "safe_failure",
+            "latency": 0.4266743999905884,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00017_L2",
+            "state": "safe_failure",
+            "latency": 0.3012393000535667,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00017_L2",
+            "state": "safe_failure",
+            "latency": 0.41573310003150254,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00017_L2_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "749589419deb02a3c85d880e021e80f8f09f3bafc418da21fcbfcc2f364e1978",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00016_L1",
+            "state": "safe_failure",
+            "latency": 0.4799188000615686,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00016_L1",
+            "state": "safe_failure",
+            "latency": 0.3014596999855712,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00016_L1",
+            "state": "safe_failure",
+            "latency": 0.32506329996977,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00016_L1",
+            "state": "safe_failure",
+            "latency": 0.40250049997121096,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00016_L1_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "aa804214272d138eca6019a732fb518a0929edf2aed6f2b0f8abfa107d1a3c3a",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00018_L1",
+            "state": "safe_failure",
+            "latency": 1.577681399998255,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00018_L1",
+            "state": "safe_failure",
+            "latency": 0.341027699992992,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00018_L1",
+            "state": "safe_failure",
+            "latency": 0.4090546000516042,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00018_L1",
+            "state": "safe_failure",
+            "latency": 0.3362788000376895,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00018_L1_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "8a55b3efd27becd5766773a5614057a478a8329c0b99789d73535fd3845eeec2",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00018_L2",
+            "state": "safe_failure",
+            "latency": 0.43904009996913373,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00018_L2",
+            "state": "safe_failure",
+            "latency": 0.2885863999836147,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00018_L2",
+            "state": "safe_failure",
+            "latency": 0.44570109993219376,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00018_L2",
+            "state": "safe_failure",
+            "latency": 0.30868909996934235,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00018_L2_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "c1b5c75b29a7d9278191dd417bd27eea9b057735f9f44fcf5bbffd544bc29a05",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00019_L1",
+            "state": "safe_failure",
+            "latency": 0.4907434999477118,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00019_L1",
+            "state": "safe_failure",
+            "latency": 0.4545614999951795,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00019_L1",
+            "state": "safe_failure",
+            "latency": 0.3067223000107333,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00019_L1",
+            "state": "safe_failure",
+            "latency": 0.35374350007623434,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00019_L1_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "2b5f08212e438e2cec8d12152c6306454058695eb6a3557c3b2aedb7cef235b8",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00019_L2",
+            "state": "safe_failure",
+            "latency": 0.4345435999566689,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00019_L2",
+            "state": "safe_failure",
+            "latency": 0.4129184999037534,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00019_L2",
+            "state": "safe_failure",
+            "latency": 0.3643026000354439,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00019_L2",
+            "state": "safe_failure",
+            "latency": 0.4448682999936864,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00019_L2_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
   }
 ]

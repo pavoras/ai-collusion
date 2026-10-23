@@ -110,3 +110,31 @@ def test_modal_no_upstream_503_is_safe_to_retry(monkeypatch):
     backend = b.OpenAIBackend({"qwen-9b": "https://offline.invalid/v1"}, token="dummy")
     with pytest.raises(b.RetryableTransportError):
         asyncio.run(backend.complete(request()))
+
+
+def test_stream_rebuilds_reply_and_keeps_request_body(monkeypatch):
+    conn, _ = connection(monkeypatch)
+    chunks = [{"id": "x", "choices": [{"delta": {"reasoning_content": "think "}}]},
+              {"id": "x", "choices": [{"delta": {"reasoning_content": "more"}}]},
+              {"id": "x", "choices": [{"delta": {"content": '{"bid"'}}]},
+              {"id": "x", "choices": [{"delta": {"content": ':4}'}, "finish_reason": "stop"}]},
+              {"id": "x", "choices": [], "usage": {"prompt_tokens": 5, "completion_tokens": 8}}]
+    lines = [f"data: {json.dumps(c)}\n".encode() for c in chunks] + [b"\n", b"data: [DONE]\n", b""]
+    conn.getresponse.return_value.readline.side_effect = lines
+    backend = b.OpenAIBackend({"qwen-9b": "https://offline.invalid"}, token="dummy", timeout=5, stream=True)
+    result = asyncio.run(backend.complete(request()))
+    assert result.content == '{"bid":4}' and result.completion_tokens == 8
+    assert result.raw["choices"][0]["message"]["reasoning_content"] == "think more"
+    sent = json.loads(conn.request.call_args.kwargs["body"])
+    assert sent.pop("stream") is True and sent.pop("stream_options") == {"include_usage": True}
+    expected = dict(request()["body"])
+    expected.update(expected.pop("extra_body"))
+    assert sent == expected
+
+
+def test_stream_cut_before_done_is_ambiguous(monkeypatch):
+    conn, _ = connection(monkeypatch)
+    conn.getresponse.return_value.readline.side_effect = [b'data: {"choices": [{"delta": {"content": "{"}}]}\n', b""]
+    backend = b.OpenAIBackend({"qwen-9b": "https://offline.invalid"}, token="dummy", timeout=5, stream=True)
+    with pytest.raises(b.AmbiguousTransportError):
+        asyncio.run(backend.complete(request()))

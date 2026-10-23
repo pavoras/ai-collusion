@@ -23,6 +23,8 @@ def add_backend_args(parser):
     parser.add_argument("--entry", help="Declared collection entry ID")
     parser.add_argument("--deviation-cohort", help="Explicitly segregated exploratory/test cohort")
     parser.add_argument("--deviation-reason", help="Required justification, stored verbatim")
+    parser.add_argument("--stream", action="store_true",
+                        help="stream replies (transport only; needed for generations longer than ~600 s on Modal)")
     parser.add_argument("--parse-fenced", action="store_true",
                         help="parse version 2 (PREREG deviation 2): accept one Markdown code block around the JSON")
 
@@ -39,7 +41,7 @@ def make_service(args, models):
             endpoints[key] = url
         if set(models) - set(endpoints):
             raise ValueError("provide --endpoint MODEL=URL for every model used")
-        backend = OpenAIBackend(endpoints, timeout=args.timeout)
+        backend = OpenAIBackend(endpoints, timeout=args.timeout, stream=getattr(args, "stream", False))
     pilot = getattr(args, "pilot", False)
     max_calls = args.max_calls if args.max_calls is not None else (26000 if pilot else 1000)
     concurrency = args.concurrency if args.concurrency is not None else (128 if pilot else 8)

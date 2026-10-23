@@ -75,12 +75,15 @@ def endpoint_url(url):
 class OpenAIBackend:
     """One endpoint per model key; stdlib HTTP runs in worker threads."""
 
-    def __init__(self, endpoints, *, token=None, timeout=1200):
+    def __init__(self, endpoints, *, token=None, timeout=1200, stream=False):
         if timeout <= 0:
             raise ValueError("timeout must be positive")
         self.endpoints = {key: endpoint_url(value) for key, value in endpoints.items()}
         self._token = token if token is not None else modal_token()
         self.timeout = timeout
+        # Transport only (PREREG deviation 3c): Modal's proxy cuts a silent HTTP request after about 600 s, so long
+        # judge generations are streamed; the request body that defines the cache key is unchanged.
+        self.stream = stream
 
     def identity(self, model):
         return self.endpoints[model]
@@ -124,12 +127,15 @@ class OpenAIBackend:
                 raise RetryableTransportError("connection failed before submission") from None
             payload_body = dict(request["body"])
             payload_body.update(payload_body.pop("extra_body", {}))
+            if self.stream:
+                payload_body.update(stream=True, stream_options={"include_usage": True})
             body = json.dumps(payload_body).encode("utf-8")
             try:
                 connection.request("POST", parts.path + "/chat/completions", body=body,
                                    headers={"Authorization": f"Bearer {self._token}", "Content-Type": "application/json"})
                 response = connection.getresponse()
-                payload = response.read().decode("utf-8")
+                payload = (_collect_stream(response) if self.stream and response.status == 200
+                           else response.read().decode("utf-8"))
             except (OSError, http.client.HTTPException, UnicodeError):
                 raise AmbiguousTransportError("reply lost after possible submission") from None
             if response.status == 429:
@@ -156,6 +162,35 @@ class OpenAIBackend:
                 return Response("", raw={"malformed_response": payload})
         finally:
             connection.close()
+
+
+def _collect_stream(response):
+    """Rebuild the non-streaming JSON reply from server-sent chunks (content, reasoning, usage)."""
+    content, reasoning, usage, finish, ident, done = [], [], None, None, None, False
+    while True:
+        line = response.readline()
+        if not line:
+            break
+        line = line.decode("utf-8").strip()
+        if not line.startswith("data:"):
+            continue
+        data = line[5:].strip()
+        if data == "[DONE]":
+            done = True
+            break
+        chunk = json.loads(data)
+        ident = chunk.get("id", ident)
+        usage = chunk.get("usage") or usage
+        for choice in chunk.get("choices") or []:
+            delta = choice.get("delta") or {}
+            content.append(delta.get("content") or "")
+            reasoning.append(delta.get("reasoning_content") or delta.get("reasoning") or "")
+            finish = choice.get("finish_reason") or finish
+    if not done:
+        raise http.client.IncompleteRead(b"")
+    message = {"role": "assistant", "content": "".join(content), "reasoning_content": "".join(reasoning) or None}
+    return json.dumps({"id": ident, "transport": "stream", "usage": usage,
+                       "choices": [{"index": 0, "message": message, "finish_reason": finish}]})
 
 
 class FakeBackend:

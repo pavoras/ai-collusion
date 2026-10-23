@@ -397,4 +397,11 @@ manifest hash and is made before any addition is collected and before any LLM ou
    were still queued in processes stopped while the judge server reported no running request; no reply was read
    for any of them. They were released manually with an audit record (`results/llm/reconciliation_log.json`,
    `experiments/reconcile_uncertain.py`) and resubmitted unchanged (same request and seed) under new judge run IDs
-   (suffix `_r2`/`_r3`); the judge client timeout is now 3600 s.
+   (suffix `_r2`, then `_s`); the judge client timeout is now 3600 s. (c) Cause of the lost judge replies, verified
+   at 23:40: Modal's proxy cuts a non-streamed HTTP request after about 600 s (a forced 28 000-token test request
+   failed, the same request streamed completed in 716 s). Judge requests are therefore streamed (`--stream`); the
+   request body, seed and cache key are unchanged and the reply is reassembled from the stream. A second batch
+   (`_r2`, 28 requests) was lost this way and released with an audit record as in (b). (d) A status script of
+   mine read checkpoint files while core C1-SS/SF/FF were writing them; Windows refused the atomic replace and the
+   three runs stopped (22:19-22:50). They were resumed unchanged under new run IDs `core_C1-*_v1b` (completed
+   requests replay from the cache); the local replace retry was lengthened.
