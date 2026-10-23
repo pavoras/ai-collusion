@@ -18,7 +18,9 @@ Vor jeder Arbeit lesen:
   Report kommt aus einem Lauf, der im Repo reproduzierbar ist (Seed, Befehl, Datei).
 - **Vorher geschriebener Code**: Code vor Freitag 23.10. müsste als „preexisting“ markiert werden. Bisher gibt es
   keinen; alles im Repo entsteht ab dem 23.10.
-- **KI-Werkzeuge** sind im Sprint ausdrücklich erlaubt. Claude schreibt den Code selbst (kein Codex für Code).
+- **KI-Werkzeuge** sind im Sprint ausdrücklich erlaubt. Größere, klar abgegrenzte Code-Runden darf Codex (Sol)
+  übernehmen (Marvin, 23.10.); Claude plant, reviewt, prüft und committet. Claudes 5-h- und Wochenlimit im Blick
+  behalten. Regeln für Codex: `AGENTS.md`.
 - **API-Schlüssel**: Marvin trägt sie selbst in `.env` ein (`OPENROUTER_API_KEY` oder `NEBIUS_API_KEY`). Nie in
   Git, nie in Logs oder Chat. Ausgabelimit beim Anbieter ca. 30 $. Vor jedem LLM-Lauf Kosten schätzen und nennen.
 - **Erst die Positivkontrolle**, dann Varianten. Erst kostenlos (Skripte), dann kleine LLM-Läufe, dann größere.
