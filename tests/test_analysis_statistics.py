@@ -157,3 +157,10 @@ def test_ineligible_probe_sources_are_retained_without_outcome_estimates():
                                 prefixes=(200,), sensitivity=False)
     assert len(result["probes"]["records"]) == len(result["probes"]["excluded_source_market_records"]) == 3
     assert "summaries" not in result["probes"]
+
+
+def test_leak_candidate_needs_only_one_direction_so_a_spy_can_be_named():
+    record = analyze_market((scripted_record(0, cell("E1")), 999, (200,), False))  # 999: min p must reach .05/12
+    level = record["views"][0]["levels"]["L2"]
+    target = PAIRS.index(tuple(sorted(record["assignment"]["designated_pair"])))
+    assert target in level["candidates"]["leak"]

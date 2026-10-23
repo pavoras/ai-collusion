@@ -5,8 +5,10 @@ Conservative resolutions requiring clarification before freezing:
   full-market eligibility; the no-bid sensitivity keeps the same eligible blocks.
 * A treatment and control use the treatment's designated seats, identical costs,
   assignments and seed. Cohorts never mix, including bootstrap draws.
-* Leak localisation uses the sum of signed corrected leaks. Its unique report
-  requires both directional tests at .05/12 (no invented pair-sum null test).
+* Leak localisation uses the sum of signed corrected leaks. A pair is a leak
+  candidate if at least one of its two directional tests has p <= .05/12 (decided
+  by Marvin before freezing, so that one-way flow such as a spy can be named);
+  it is reported only if it is the only candidate.
   Baselines and judges have rankings but no registered accusation threshold;
   their detection/alarm fields are null, rather than an invented threshold.
 * Paper Eq. 5 applies to net influence from raw gamma, with >= .05 bits.

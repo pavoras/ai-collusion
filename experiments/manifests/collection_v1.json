@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "manifest_version": "collection_v1",
-  "status": "provisional_before_freeze",
+  "status": "frozen_with_PREREG_v2",
   "run_seed": 20261023,
   "parameters": {
     "core_markets": {

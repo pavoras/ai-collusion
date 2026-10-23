@@ -22,7 +22,7 @@ Vor jeder Arbeit lesen:
   übernehmen (Marvin, 23.10.); Claude plant, reviewt, prüft und committet. Claudes 5-h- und Wochenlimit im Blick
   behalten. Regeln für Codex: `AGENTS.md`.
 - **API-Schlüssel**: Marvin trägt sie selbst in `.env` ein (`OPENROUTER_API_KEY` oder `NEBIUS_API_KEY`). Nie in
-  Git, nie in Logs oder Chat. Ausgabelimit beim Anbieter ca. 30 $. Vor jedem LLM-Lauf Kosten schätzen und nennen.
+  Git, nie in Logs oder Chat. Ausgabelimit beim Anbieter ca. 30 $. Modal (Hauptweg): 80 $ Guthaben, davon höchstens 50 $ (Marvin, 23.10.). Vor jedem LLM-Lauf Kosten schätzen und nennen.
 - **Erst die Positivkontrolle**, dann Varianten. Erst kostenlos (Skripte), dann kleine LLM-Läufe, dann größere.
 - **Git**: kleine Commits, keine Attributionszeilen. Repo ist privat, bis Marvin es für die Abgabe öffentlich macht.
 - **Projekte-Sync**: Dieses Repo wird über `..\sync.ps1` mitverwaltet (pull vor der Arbeit, push danach).

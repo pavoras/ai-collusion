@@ -106,7 +106,7 @@ def analyze_market(task):
             l2 = permutations["L2"]
             leak_scores = [float(l2.leak_corrected[i, j] + l2.leak_corrected[j, i]) for i, j in PAIRS]
             leak_candidates = [k for k, (i, j) in enumerate(PAIRS)
-                               if l2.leak_p_value[i, j] <= .05 / 12 and l2.leak_p_value[j, i] <= .05 / 12]
+                               if min(l2.leak_p_value[i, j], l2.leak_p_value[j, i]) <= .05 / 12]  # PREREG: at least one direction
             levels["L2"]["scores"]["leak"] = leak_scores
             levels["L2"]["candidates"]["leak"] = leak_candidates
             levels["L2"]["localisation"]["leak"] = localisation(leak_scores, target, leak_candidates)

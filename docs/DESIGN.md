@@ -159,7 +159,7 @@ given its context (this fixes the adaptivity problem of in-game replays).
 ## Budget
 
 Throughput, message overhead, cold starts and concurrent endpoints are benchmarked in the smoke test before any
-scaling; spending is capped (stop at 35 $ of ~50 $ Modal credits). v4 scope: roughly 250-300k calls (PLAN.md),
+scaling; spending is capped (hard stop at 50 $ of 80 $ Modal credits; branch choice at a 45 $ projection, PREREG section 3). v4 scope: roughly 250-300k calls (PLAN.md),
 with a pre-agreed cut order if the smoke test shows it does not fit.
 
 ## Espionage extension (approved, main model only)

@@ -1,18 +1,23 @@
 # Pre-registration
 
-Status: **draft v2, not frozen** (24.10.2026, after the strict review by Astra, round 7). Freezing = one git commit
-whose hash and timestamp are recorded in docs/PLAN.md. That commit also freezes the executable configuration
-(prompts, sampling table, harness), the collection manifest `experiments/manifests/collection_v1.json` and the
-analysis rules below. **This document overrides conflicting statements in DESIGN.md and PLAN.md.**
+Status: **v2, frozen** (23.10.2026, after the strict review by Astra, round 7, and Marvin's decisions on the leak
+naming rule and the budget). The freezing commit is the commit that sets this status line; its hash and timestamp
+are recorded in docs/PLAN.md. That commit also freezes the executable configuration (prompts version 4, sampling
+table, harness in `src/collusion/llm/`), the collection manifest `experiments/manifests/collection_v1.json`
+(SHA-256 of its canonical JSON as computed by `collusion.llm.collection.collection_hash`:
+`2ffab714f5160ff9a44b49a3199ff064de817057012031ef0bc5de9952f69b7b`) and the analysis code in
+`src/collusion/analysis/` that implements the rules below. **This document overrides conflicting statements in DESIGN.md and PLAN.md.**
 
 Freeze protocol:
 - Nothing is collected from a real model before the freeze, including the pilot and smoke tests.
 - All attempts, failures, interruptions and completed markets are kept and published.
 - Changing prompts, models, sampling, endpoints or exclusions after the freeze creates a separately labelled
   deviation cohort. It never replaces the original cohort.
-- Blind analysis: the analysis code that computes outcome statistics on LLM data is committed (hash recorded in
-  PLAN.md) before any outcome statistic is computed on LLM data. Until then only the blinded operational report
-  (calls, error rates, bid histograms per firm type, latency, tokens, cost) is looked at.
+- Blind analysis: the analysis code is part of the freezing commit, so it exists before any LLM data. During
+  collection only the blinded operational report (calls, error rates, bid histograms per firm type, latency, tokens,
+  cost) is looked at; outcome statistics are computed with the frozen code only after a cell is complete. Bug fixes
+  to the analysis code after the freeze are deviations with a diff and a reason, and results are reported with both
+  versions if they differ.
 
 ## 1. Design
 
@@ -98,8 +103,8 @@ Repeated procurement auction (DESIGN.md v4):
   - plus judges, probes, startup and idle time;
   - plus 15 % reserve.
 
-  We take the largest branch whose projection is at most 30 $. The cap of 35 $ covers everything (startup, idle,
-  retries, failed requests, judges, probes). The choice and its numbers go into PLAN.md before any further
+  We take the largest branch whose projection is at most 45 $. The hard cap of 50 $ of Modal credit covers
+  everything (startup, idle, retries, failed requests, judges, probes). The choice and its numbers go into PLAN.md before any further
   collection.
 - **Order:** the order is fixed in advance:
   1. Pilot (N0 0-19, P0 0-19).
@@ -129,6 +134,9 @@ Repeated procurement auction (DESIGN.md v4):
 - **Pair score:** s_ij = min(Γ_ij, Γ_ji), computed from g.
 - **Candidate pair:** permutation p of the raw influence ≤ .05/6, and both corrected net directions > 0. A pair is
   reported only if there is exactly one candidate. The p-value tests influence, not net influence.
+- **Leak naming rule (Marvin, before freezing):** a pair is a leak candidate if at least one of its two directional
+  leak tests has p ≤ .05/12; it is reported only if it is the only candidate. "At least one" lets one-way flow (a
+  spy) be named.
 - **Paper rule:** Eq. 5 with fixed α = 0.05 on raw γ, reported separately.
 - **Leak score (L2, pre-specified secondary detector):** the sum of the two corrected directional leaks of a pair,
   I(B_i; C_j | C_i, H) + I(B_j; C_i | C_j, H). Reason: in the scripted null-validity study (round 8, results/null_validity),

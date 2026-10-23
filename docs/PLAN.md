@@ -57,7 +57,7 @@ auf 6.
 | Setup, Paket, 53 Tests | Sol Runde 4: Skript-Checks (exakter Zustand, Leck-Power, „unklar“) | `PREREG.md` |
 | Maße inkl. Gl.-3-Zerlegung, symm. Permutationstest, Baselines | | Skript-Checks: exakter Zustand (B2), Power/Fehlalarm der Leck-Terme, Kategorie „unklar“ |
 | RPS-Nachbau (Pflichtteil), Abbildungen | Sol Runde 5: LLM-Harness, Richter-Skript | |
-| Skript-Auktion, Kartelle, Spion, Attrappe, Fingerabdruck-Entwurf | | Testlauf Qwen-9B (1 Markt, ~0,30 $), dann Go |
+| Skript-Auktion, Kartelle, Spion, Attrappe, Fingerabdruck-Entwurf | | Pilot N0+P0 (eingefroren, ca. 24 000 Aufrufe), dann Budgetzweig |
 | Modal: Gewichte aller 6 Modelle, Qwen-9B deployt | | Hauptläufe, Auswertung, Abbildungen |
 | Literatur- und Neuheitscheck (erste Runde), `DESIGN.md` v4 | | Report (Marvin schreibt), Endkontrolle, Abgabe |
 
@@ -87,7 +87,7 @@ Kerngeschichte bleibt in jedem Fall erzählbar, weil Skript-Simulation und RPS-N
 | P3 Leck-Terme trennen Kartell und Spion bei LLMs nicht | Fingerabdruck E1 ≈ C1 | nach Kernblock | ehrlich berichten; Fingerabdruck an Skripten als Methode, LLM als Grenze |
 | P4 Gebote ohne Streuung (LLMs fast deterministisch) | Entropie der Gebote nahe 0 im Testlauf | Testlauf | Temperatur hoch, Prompt prüfen; sonst anderes Modell als Hauptmodell |
 | P5 Modal hakt oder zu langsam | Smoke-Test/Throughput | Testlauf | weniger Märkte; Hauptmodell + ein weiteres Labor; notfalls OpenRouter (Schlüssel: Marvin) |
-| P6 Budget läuft davon | Kostenzähler | laufend | Streichreihenfolge oben; harter Stopp bei 35 $ |
+| P6 Budget läuft davon | Kostenzähler | laufend | Budgetleiter (PREREG); harter Stopp bei 50 $ (80 $ Guthaben, Marvin 23.10.) |
 | P7 Zeit läuft davon | Sa 20 Uhr Kernblock nicht fertig | Sa 20 Uhr | Breitenblöcke streichen; Report = RPS + Skript-Auktion + LLM-Kern |
 | P8 Netto-Einfluss schlechter als Baselines | Vergleich | Auswertung | ehrlich berichten (Endpunkt C3 trägt die Geschichte trotzdem) |
 
@@ -132,7 +132,7 @@ frischem Clone. Keine Zahl im Report ohne reproduzierbaren Lauf.
   Sol Runde 4 (gpt-6.1-sol/high, Thread 01a1693a-392a-7870-a618-7cfa1dc09baa): Skript-Checks. Sol Runde 5
   (gpt-6.1-sol/xhigh wegen Geld und Logging, Thread 01a1693a-41b2-7543-91e0-b9a092a2a5e6): LLM-Harness. Beide
   parallel in getrennten Dateien. Testlauf vorbereitet, Ausführung erst nach Marvins Go.
-- 23./24.10. nachts: Sol Runde 4 fertig (exakter Zustand: L2-Fehlalarme bei geteilter Historie 7/20 -> 0/20;
+- 23.10. abends: Sol Runde 4 fertig (exakter Zustand: L2-Fehlalarme bei geteilter Historie 7/20 -> 0/20;
   Leck-Klassifikation mit "unklar"; Stark-Schwach-Kartell pro Markt kaum klassifizierbar). Sol Runde 6 (Power):
   Kartell stark+stark bei q = 0,5 mit 20 Märkten AUROC ~1; Zwei-Wege-Klassifikation pro Markt bricht bei q <= 0,5 ein.
   Astra Runde 7 (Thread 01a1695a-4029-7ea2-942d-deb2965ef22a): nicht einfrieren vor Must-fixes; umgesetzt in
