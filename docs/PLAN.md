@@ -132,3 +132,12 @@ frischem Clone. Keine Zahl im Report ohne reproduzierbaren Lauf.
   Sol Runde 4 (gpt-6.1-sol/high, Thread 01a1693a-392a-7870-a618-7cfa1dc09baa): Skript-Checks. Sol Runde 5
   (gpt-6.1-sol/xhigh wegen Geld und Logging, Thread 01a1693a-41b2-7543-91e0-b9a092a2a5e6): LLM-Harness. Beide
   parallel in getrennten Dateien. Testlauf vorbereitet, Ausführung erst nach Marvins Go.
+- 23./24.10. nachts: Sol Runde 4 fertig (exakter Zustand: L2-Fehlalarme bei geteilter Historie 7/20 -> 0/20;
+  Leck-Klassifikation mit "unklar"; Stark-Schwach-Kartell pro Markt kaum klassifizierbar). Sol Runde 6 (Power):
+  Kartell stark+stark bei q = 0,5 mit 20 Märkten AUROC ~1; Zwei-Wege-Klassifikation pro Markt bricht bei q <= 0,5 ein.
+  Astra Runde 7 (Thread 01a1695a-4029-7ea2-942d-deb2965ef22a): nicht einfrieren vor Must-fixes; umgesetzt in
+  PREREG v2 (eine Primärhypothese mit Label-Swap-Test, Manifest, Budgetleiter, blinde Auswertung, passende
+  Kontrollen im gemischten Block, keine Erfolgsselektion). Sol Runde 8 (Thread 01a16965-93f0-7ac2-8001-9811aef03105):
+  historienabhängige ehrliche Bieter treiben L1/L2-Fehlalarme bis 100 %, Leck-Terme bleiben bei ca. 1-8 % ->
+  Leck-Score als zusätzlicher Detektor in PREREG; Abbildung Kandidat für den Hauptteil. Marvin: Sol nur auf high;
+  Pilotlauf nach eigenem Ermessen nach dem Einfrieren.

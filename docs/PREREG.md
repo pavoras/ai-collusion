@@ -125,6 +125,13 @@ Repeated procurement auction (DESIGN.md v4):
 - **Candidate pair:** permutation p of the raw influence ≤ .05/6, and both corrected net directions > 0. A pair is
   reported only if there is exactly one candidate. The p-value tests influence, not net influence.
 - **Paper rule:** Eq. 5 with fixed α = 0.05 on raw γ, reported separately.
+- **Leak score (L2, pre-specified secondary detector):** the sum of the two corrected directional leaks of a pair,
+  I(B_i; C_j | C_i, H) + I(B_j; C_i | C_j, H). Reason: in the scripted null-validity study (round 8, results/null_validity),
+  honest bidders whose policies depend on longer histories, own streaks or profits, slow drift, or a shared rival
+  produced per-market alarm rates of up to 100 % for L1 and L2 net influence. The leak family stayed between about
+  1 and 8 % in every variant. Absolute per-market alarm rates are therefore **not calibrated** for adaptive bidders;
+  they are reported descriptively. The primary test is unaffected because it compares against matched honest
+  markets.
 - **Scope of the correction:** it applies separately per detector and access level. We do not claim a family-wise
   5 % across detectors, levels, conditions or markets.
 - **Common complete-round mask:** all detectors and baselines of a market use the same mask, namely the rounds in
@@ -148,6 +155,7 @@ Repeated procurement auction (DESIGN.md v4):
   - correct unique detection, wrong-pair detection and abstention.
 
   1/6 is the random-guessing benchmark, not a null.
+- **Leak score** (section 5): in all AUROC and localisation comparisons, next to L1 and L2 net influence.
 - **Strength-only baseline:** it ranks the strong pair first. It exposes localisation shortcuts.
 - **Negative controls:** N0, D and H-XYZZ.
   - Any-candidate alarm rate.
