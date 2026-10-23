@@ -36,6 +36,10 @@ class UncertainCall(Exception):
     """A pending/ambiguous request needs external reconciliation before reuse."""
 
 
+class PendingElsewhere(UncertainCall):
+    """Another process has submitted the identical request and has not finished it yet."""
+
+
 def canonical(value):
     return json.dumps(value, sort_keys=True, ensure_ascii=False, separators=(",", ":"), allow_nan=False)
 
@@ -74,7 +78,7 @@ class CallService:
     """Shared concurrency, bounded safe retries, cache and validation retry."""
 
     def __init__(self, backend, root, run_id, *, max_calls=1000, concurrency=8,
-                 timeout=1200, transport_retries=2, backoff=0.5):
+                 timeout=1200, transport_retries=2, backoff=0.5, pending_wait=None, pending_poll=2.):
         if not run_id or any(c not in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-" for c in run_id):
             raise ValueError("run_id must contain only letters, numbers, hyphens or underscores")
         if max_calls < 0 or concurrency < 1 or timeout <= 0 or transport_retries < 0 or backoff < 0:
@@ -86,10 +90,15 @@ class CallService:
         self.timeout = timeout
         self.transport_retries = transport_retries
         self.backoff = backoff
+        # Seed-paired cells run in parallel processes and share requests: wait for the other process's answer
+        # (then a cache hit) instead of failing; a key still pending after this long is treated as uncertain.
+        self.pending_wait = timeout if pending_wait is None else pending_wait
+        self.pending_poll = pending_poll
         self.semaphore = asyncio.Semaphore(concurrency)
         self.locks = {}
         self.guard = None
         self.observer = None
+        self.parse_fenced = False
         self.raw_dir = self.root / "raw" / run_id
         self.raw_dir.mkdir(parents=True, exist_ok=True)
         self.db = sqlite3.connect(self.root / "raw" / "response_cache.sqlite3", isolation_level=None, timeout=30)
@@ -142,7 +151,9 @@ class CallService:
             if row and row[0] == "complete":
                 self.db.execute("COMMIT")
                 return None, Response(**json.loads(row[1]))
-            if row and row[0] in ("pending", "uncertain"):
+            if row and row[0] == "pending":
+                raise PendingElsewhere(f"request {key}: in flight in another process")
+            if row and row[0] == "uncertain":
                 raise UncertainCall(f"request {key}: possible prior submission; automatic resubmission blocked")
             if row and row[0] == "rejected":
                 raise BackendError("request was previously rejected; change the request/configuration before retrying")
@@ -160,6 +171,16 @@ class CallService:
                 self.db.execute("ROLLBACK")
             raise
 
+    async def _claim_waiting(self, key, request):
+        deadline = time.monotonic() + self.pending_wait
+        while True:
+            try:
+                return self._claim(key, request)
+            except PendingElsewhere:
+                if time.monotonic() >= deadline:
+                    raise
+                await asyncio.sleep(self.pending_poll)
+
     def _finish(self, key, attempt, state, latency, response=None, error=None):
         self.db.execute("BEGIN IMMEDIATE")
         try:
@@ -172,7 +193,7 @@ class CallService:
             raise
 
     def _log(self, request, metadata, kind, *, attempt=None, response=None, latency=0, cache_hit=False, error=None):
-        value = parse(response.content, kind) if response else None
+        value = parse(response.content, kind, self.parse_fenced) if response else None
         entry = {**metadata, "run_id": self.run_id, "kind": kind, "model": request["model_key"], "request": request,
                  "prompt_version": request["prompt_version"],
                  "sampling": {k: v for k, v in request["body"].items() if k not in ("model", "messages", "seed", "max_tokens")},
@@ -196,7 +217,7 @@ class CallService:
             for retry in range(self.transport_retries + 1):
                 current_metadata = {**metadata, "transport_attempt": retry}
                 async with self.semaphore:
-                    attempt, cached = self._claim(key, request)
+                    attempt, cached = await self._claim_waiting(key, request)
                     if cached is not None:
                         self._log(request, current_metadata, kind, response=cached, cache_hit=True)
                         return cached
@@ -247,7 +268,7 @@ class CallService:
             actual_seed = seed if retry == 0 else seed_for(seed, "validation_retry")
             current = {**request, "body": {**request["body"], "seed": actual_seed}}
             response = await self._response(current, {**metadata, "validation_attempt": retry}, kind)
-            value = parse(response.content, kind)
+            value = parse(response.content, kind, self.parse_fenced)
             if value is not None:
                 return value
         return None

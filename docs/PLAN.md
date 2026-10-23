@@ -161,3 +161,11 @@ frischem Clone. Keine Zahl im Report ohne reproduzierbaren Lauf.
   setzt um; Amendment-Freeze `4c4b6f1` (21:05), Manifest v2 `a63ef104...`, 305 Tests grün. Zweig B0+ (ca. 548 000
   Aufrufe, grob 27 $ + Reserve). A1 startet sofort parallel zum Kernblock (Budget nicht bindend, Streichreihenfolge
   unverändert), A2 nach dem Aufwärmen von Gemma und Ministral.
+- 23.10. 22:00-22:50: Kern E1, C2, N0 (20-39), A2-LY fertig; C1-SS/SF/FF und A1 laufen. **Probleme aus
+  Betriebswerten (blind):** (1) Gemma/Ministral antworten mit JSON im Markdown-Codeblock, der strikte Parser wertet
+  100 % als ungültig -> alle A2-Zellen unbrauchbar, gestoppt; Parser-Version 2 (`--parse-fenced`) für alle Zellen mit
+  Gemma/Ministral, A2 neu als `_p2` (PREREG-Abweichung 2). Live-Test: 0 % ungültig. (2) Parallele gepaarte Zellen
+  blockierten sich gegenseitig -> Ledger wartet jetzt (Abweichung 3a). (3) Richter: 1200-s-Timeouts unter Last;
+  freigegeben und neu eingereicht (Abweichung 3b). Richterdurchsatz gemessen: ca. 670 Token/s bei 29 parallel, ca.
+  0,009 $ pro Urteil. Kleine Modelle (qwen-4b, gemma-e4b, ministral-3b) deployt. Marvin: insgesamt 80 $ für alles,
+  über Nacht höchstens 60 $; 30-Minuten-Statusmeldungen.

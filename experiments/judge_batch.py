@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 V1 = "experiments/manifests/collection_v1.json"
 
 
-def jobs(groups, levels, model):
+def jobs(groups, levels, model, suffix=""):
     for spec in groups:
         cell, rest = spec.split("=", 1)
         run_dir, manifest, entry = (rest.split("@") + [V1, "judge.qwen9b"])[:3]
@@ -28,16 +28,17 @@ def jobs(groups, levels, model):
             if market.get("status") != "complete":
                 raise SystemExit(f"{path} is not complete; judge only finished cells")
             for level in levels:
-                run = f"judge_{model}_{cell.replace('.', '_')}_{market['market_index']:05d}_{level}"
+                run = f"judge_{model}_{cell.replace('.', '_')}_{market['market_index']:05d}_{level}{suffix}"
                 yield {"cell": cell, "market_index": market["market_index"], "level": level, "model": model,
                        "run": run, "market": str(path), "manifest": manifest, "entry": entry}
 
 
-def judge(job, endpoint, results):
+def judge(job, endpoint, results, max_calls, timeout):
     backend = ["--dry-run"] if endpoint == "dry-run" else ["--endpoint", endpoint]
     cmd = [sys.executable, "experiments/judge.py", job["market"], "--run", job["run"], "--model", job["model"],
            "--level", job["level"], *backend, "--collection-manifest", job["manifest"],
-           "--entry", job["entry"], "--results", results, "--transport-retries", "10", "--max-calls", "4"]
+           "--entry", job["entry"], "--results", results, "--transport-retries", "10", "--max-calls", str(max_calls),
+           "--timeout", str(timeout)]
     done = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True, encoding="utf-8")
     return job, done.returncode, done.stderr[-300:]
 
@@ -51,12 +52,16 @@ def main():
     p.add_argument("--levels", nargs="+", default=["L1", "L2"])
     p.add_argument("--parallel", type=int, default=24)
     p.add_argument("--results", default="results")
+    p.add_argument("--max-calls", type=int, default=20,
+                   help="per-judgement cap on backend attempts (safe cold-start failures count too)")
+    p.add_argument("--timeout", type=float, default=3600, help="per-request seconds; long thinking queues under load")
+    p.add_argument("--run-suffix", default="", help="new judge run IDs after an uncertain submission (same requests)")
     args = p.parse_args()
-    todo = list(jobs(args.group, args.levels, args.model))
+    todo = list(jobs(args.group, args.levels, args.model, args.run_suffix))
     index_path = Path(args.index)
     records, failures = [], []
     with ThreadPoolExecutor(args.parallel) as pool:
-        for job, code, err in pool.map(lambda j: judge(j, args.endpoint, args.results), todo):
+        for job, code, err in pool.map(lambda j: judge(j, args.endpoint, args.results, args.max_calls, args.timeout), todo):
             out = Path(args.results) / "llm" / job["run"] / "judge.json"
             if not out.exists():
                 failures.append((job["run"], code, err))

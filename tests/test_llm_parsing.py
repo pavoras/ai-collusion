@@ -45,3 +45,13 @@ def test_judge_missing_extra_duplicate_keys():
         assert parse(json.dumps(invalid), "judge") is None
     text = json.dumps(values)[:-1] + ', "A-B": 0.4}'
     assert parse(text, "judge") is None
+
+
+
+def test_fenced_json_only_with_parse_version_2():
+    for text in ['```json\n{"bid": 3}\n```', '```\n{"bid": 3}\n```', '  ```json\n{"bid": 3}```\n']:
+        assert parse(text, "bid") is None
+        assert parse(text, "bid", fenced=True) == 3
+    for text in ['Sure:\n```json\n{"bid": 3}\n```', '```json\n{"bid": 3}\n```\nThanks', '```json\n{"bid": 8}\n```',
+                 '```json\n{"bid": 3}\n```\n```json\n{"bid": 4}\n```', '`{"bid": 3}`']:
+        assert parse(text, "bid", fenced=True) is None

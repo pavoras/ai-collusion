@@ -23,6 +23,8 @@ def add_backend_args(parser):
     parser.add_argument("--entry", help="Declared collection entry ID")
     parser.add_argument("--deviation-cohort", help="Explicitly segregated exploratory/test cohort")
     parser.add_argument("--deviation-reason", help="Required justification, stored verbatim")
+    parser.add_argument("--parse-fenced", action="store_true",
+                        help="parse version 2 (PREREG deviation 2): accept one Markdown code block around the JSON")
 
 
 def make_service(args, models):
@@ -45,7 +47,18 @@ def make_service(args, models):
                           concurrency=concurrency, timeout=args.timeout, transport_retries=args.transport_retries)
     service.bind_cohort(args.deviation_cohort, args.deviation_reason)
     args.run = service.run_id
+    bind_parse_version(service, getattr(args, "parse_fenced", False))
     return service
+
+
+def bind_parse_version(service, fenced):
+    """Record the parse rule once per run; resuming with the other rule is refused."""
+    path, record = service.raw_dir / "parsing.json", {"parse_version": 2 if fenced else 1, "fenced": fenced}
+    if path.exists() and json.loads(path.read_text(encoding="utf-8")) != record:
+        raise ValueError(f"{service.run_id} was collected with a different parse version")
+    if fenced or path.exists():
+        write_json(path, record)
+    service.parse_fenced = fenced
 
 
 def telemetry(service, wall, calls_before, *, gpu_hourly_usd=None):

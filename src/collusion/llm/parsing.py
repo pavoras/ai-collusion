@@ -17,11 +17,20 @@ def _object(pairs):
     return result
 
 
-def parse(text, kind):
-    """Return a validated value, or None; never coerce strings or booleans."""
+FENCE = re.compile(r"\s*```(?:json)?[ \t]*\n(.*?)\n?[ \t]*```\s*", re.S)
+
+
+def parse(text, kind, fenced=False):
+    """Return a validated value, or None; never coerce strings or booleans.
+
+    fenced=True (PREREG deviation 2, parse version 2) also accepts an answer that is exactly one Markdown code block
+    around the JSON, as Gemma and Ministral emit it; prose around the JSON stays invalid. The default is the frozen
+    strict rule (parse version 1)."""
     if isinstance(text, str):
         # Some non-thinking templates still emit an empty thought block.
         text = re.sub(r"^\s*(?:<think>\s*</think>|\[unused94\]thought\s*\[unused95\])\s*", "", text, count=1)
+        block = FENCE.fullmatch(text) if fenced else None
+        text = block.group(1) if block else text
     try:
         value = json.loads(text, object_pairs_hook=_object)
     except (ValueError, TypeError):

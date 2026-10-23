@@ -138,7 +138,7 @@ def test_crash_pending_ledger_blocks_dispatch(tmp_path):
     request = s.request("qwen-9b", MESSAGES, 10, "bid")
     s._claim(digest(request), request)
     s.close()
-    s = CallService(backend, tmp_path, "crash")
+    s = CallService(backend, tmp_path, "crash", pending_wait=.05, pending_poll=.01)
     try:
         with pytest.raises(UncertainCall):
             asyncio.run(ask(s))
@@ -186,8 +186,8 @@ def test_rejected_request_not_repeated(tmp_path):
 
 def test_independent_services_do_not_both_submit_same_request(tmp_path):
     backend = FakeBackend(delay=.01)
-    a = CallService(backend, tmp_path, "first")
-    b = CallService(backend, tmp_path, "second")
+    a = CallService(backend, tmp_path, "first", pending_poll=.005)
+    b = CallService(backend, tmp_path, "second", pending_poll=.005)
 
     async def work():
         return await asyncio.gather(ask(a), ask(b), return_exceptions=True)
@@ -195,7 +195,7 @@ def test_independent_services_do_not_both_submit_same_request(tmp_path):
     try:
         values = asyncio.run(work())
         assert len(backend.calls) == 1
-        assert sum(isinstance(v, UncertainCall) for v in values) == 1
+        assert values[0] == values[1] and not isinstance(values[0], Exception)
         assert a.calls + b.calls == 1
     finally:
         a.close()
@@ -222,3 +222,27 @@ def test_transient_windows_checkpoint_replace_is_retried_locally(tmp_path, monke
     write_json(target, {"round": 2})
     assert json.loads(target.read_text()) == {"round": 2}
     assert len(attempts) == 3
+
+
+def test_request_pending_in_another_process_is_awaited(tmp_path):
+    backend = FakeBackend(['{"bid":4}'])
+    other = CallService(backend, tmp_path, "other")
+    s = CallService(backend, tmp_path, "waiting", pending_wait=5, pending_poll=.01)
+    request = s.request("qwen-9b", MESSAGES, 10, "bid")
+    key = digest(request)
+    attempt, _ = other._claim(key, request)
+
+    async def work():
+        waiting = asyncio.create_task(ask(s))
+        await asyncio.sleep(.05)
+        assert not waiting.done()
+        other._finish(key, attempt, "complete", 0., response=await backend.complete(request))
+        return await waiting
+
+    try:
+        assert asyncio.run(work()) == 4
+        assert len(backend.calls) == 1
+        assert s.calls == 0
+    finally:
+        s.close()
+        other.close()

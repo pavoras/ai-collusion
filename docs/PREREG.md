@@ -380,3 +380,21 @@ manifest hash and is made before any addition is collected and before any LLM ou
    harness had classified every 5xx as a possibly paid submission and stopped. Fix: this specific 503 is a safe,
    retryable transport failure, and the warm-up polls every 10 s until its timeout. No bid was collected in the
    stopped attempt; its records stay in `results/raw/pilot_qwen9b_v4/`. The pilot is rerun as `pilot_qwen9b_v5`.
+2. **23.10.2026, 22:20-22:50, parse version 2 for every cell with Gemma or Ministral (no change to prompts,
+   sampling, models or analysis; found from operational validity metrics only, before any outcome statistic).**
+   Gemma-12B and Ministral-8B answer the bid prompt as one Markdown code block around the JSON
+   (```` ```json\n{"bid": 2}\n``` ````). The frozen strict parser rejects this, so in the first A2 attempts 100 % of
+   their bids were invalid ("no bid") while Qwen stayed below 1 %. Fix: an explicit option `--parse-fenced`
+   (parse version 2) also accepts an answer that is exactly one code block around valid JSON; prose around the JSON
+   stays invalid. Every run records its parse version in `raw/<run>/parsing.json`. Core cells and A1 (Qwen only)
+   keep parse version 1 and are not recollected. All A2 cells are recollected under parse version 2 with new run IDs
+   (`v2_lookalike_<cell>_p2`); the invalid first attempts stay in `results/raw/v2_lookalike_*` and are not analysed.
+   Labs, sizes and mixed blocks (not started before the fix) are collected under parse version 2.
+3. **23.10.2026, transport and bookkeeping, no change to any request.** (a) Seed-paired cells running in parallel
+   processes submit identical requests; the ledger made the second process fail ("pending elsewhere"), which
+   stopped first A2 attempts (reruns `_b`). The ledger now waits for the other process's answer (a cache hit) up to
+   the request timeout. (b) Pilot judge batch: 23 judge requests hit the 1200 s client timeout under load and 24
+   were still queued in processes stopped while the judge server reported no running request; no reply was read
+   for any of them. They were released manually with an audit record (`results/llm/reconciliation_log.json`,
+   `experiments/reconcile_uncertain.py`) and resubmitted unchanged (same request and seed) under new judge run IDs
+   (suffix `_r2`/`_r3`); the judge client timeout is now 3600 s.
