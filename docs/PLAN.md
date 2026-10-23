@@ -154,3 +154,10 @@ frischem Clone. Keine Zahl im Report ohne reproduzierbaren Lauf.
   Engpass ist Zeit, nicht Geld: Zellen eines Blocks laufen gleichzeitig (Modal skaliert Container hoch); die
   Streichreihenfolge bei Budget- oder Zeitnot bleibt die der PREREG. Auswertung der Ergebnisse erst, wenn der
   Kernblock komplett ist.
+- 23.10. ca. 20-21 Uhr: Kernblock (6 Zellen, Qwen-9B) läuft parallel auf Modal (bis zu 3 Container). Marvin: Stufe 1
+  voll umsetzen. PREREG-Nachtrag v2.1 (A1 Kartell ohne Warnsatz, A2 gekreuzte Doppelgänger mit Zwillingszellen,
+  A3 Breite auf 20 Märkte) vor jeder Ergebnisauswertung geschrieben (`fe26f6e`), Astra Runde 10 (Thread
+  01a16a06-2ee2-7910-8cad-f35a9ff265a8): A2 kausal umgebaut. Sol Runde 11 (Thread 01a16a08-ffdb-7582-bde8-5bfe9d9f67d0)
+  setzt um; Amendment-Freeze `4c4b6f1` (21:05), Manifest v2 `a63ef104...`, 305 Tests grün. Zweig B0+ (ca. 548 000
+  Aufrufe, grob 27 $ + Reserve). A1 startet sofort parallel zum Kernblock (Budget nicht bindend, Streichreihenfolge
+  unverändert), A2 nach dem Aufwärmen von Gemma und Ministral.
