@@ -1,0 +1,1084 @@
+{
+  "config": {
+    "seed": 20261028,
+    "rounds": 200,
+    "market_start": 80000,
+    "markets": 200,
+    "n_perm": 999,
+    "workers": 4,
+    "quick": false,
+    "conditions": [
+      {
+        "name": "iid",
+        "label": "IID",
+        "kwargs": {},
+        "positive": false
+      },
+      {
+        "name": "last_exact",
+        "label": "Last bid (old)",
+        "kwargs": {
+          "reactions": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "positive": false
+      },
+      {
+        "name": "mean3_1",
+        "label": "Mean 3, all x1",
+        "kwargs": {
+          "policies": [
+            "mean",
+            "mean",
+            "mean",
+            "mean"
+          ],
+          "policy_strengths": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "history_window": 3
+        },
+        "positive": false
+      },
+      {
+        "name": "mean3_2",
+        "label": "Mean 3, all x2",
+        "kwargs": {
+          "policies": [
+            "mean",
+            "mean",
+            "mean",
+            "mean"
+          ],
+          "policy_strengths": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "history_window": 3
+        },
+        "positive": false
+      },
+      {
+        "name": "mean10_1",
+        "label": "Mean 10, all x1",
+        "kwargs": {
+          "policies": [
+            "mean",
+            "mean",
+            "mean",
+            "mean"
+          ],
+          "policy_strengths": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "history_window": 10
+        },
+        "positive": false
+      },
+      {
+        "name": "mean10_2",
+        "label": "Mean 10, all x2",
+        "kwargs": {
+          "policies": [
+            "mean",
+            "mean",
+            "mean",
+            "mean"
+          ],
+          "policy_strengths": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "history_window": 10
+        },
+        "positive": false
+      },
+      {
+        "name": "streak_1",
+        "label": "Own streak, all x1",
+        "kwargs": {
+          "policies": [
+            "streak",
+            "streak",
+            "streak",
+            "streak"
+          ],
+          "policy_strengths": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "positive": false
+      },
+      {
+        "name": "streak_2",
+        "label": "Own streak, all x2",
+        "kwargs": {
+          "policies": [
+            "streak",
+            "streak",
+            "streak",
+            "streak"
+          ],
+          "policy_strengths": [
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "positive": false
+      },
+      {
+        "name": "profit_1",
+        "label": "Own profit, all x1",
+        "kwargs": {
+          "policies": [
+            "profit",
+            "profit",
+            "profit",
+            "profit"
+          ],
+          "policy_strengths": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "positive": false
+      },
+      {
+        "name": "profit_2",
+        "label": "Own profit, all x2",
+        "kwargs": {
+          "policies": [
+            "profit",
+            "profit",
+            "profit",
+            "profit"
+          ],
+          "policy_strengths": [
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "positive": false
+      },
+      {
+        "name": "rival_1",
+        "label": "Last rival, ring x1",
+        "kwargs": {
+          "policies": [
+            "rival",
+            "rival",
+            "rival",
+            "rival"
+          ],
+          "policy_strengths": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "rival_seats": [
+            1,
+            2,
+            3,
+            0
+          ]
+        },
+        "positive": false
+      },
+      {
+        "name": "rival_2",
+        "label": "Last rival, ring x2",
+        "kwargs": {
+          "policies": [
+            "rival",
+            "rival",
+            "rival",
+            "rival"
+          ],
+          "policy_strengths": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "rival_seats": [
+            1,
+            2,
+            3,
+            0
+          ]
+        },
+        "positive": false
+      },
+      {
+        "name": "drift_1",
+        "label": "Slow drift, all x1",
+        "kwargs": {
+          "policies": [
+            "drift",
+            "drift",
+            "drift",
+            "drift"
+          ],
+          "policy_strengths": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "positive": false
+      },
+      {
+        "name": "drift_2",
+        "label": "Slow drift, all x2",
+        "kwargs": {
+          "policies": [
+            "drift",
+            "drift",
+            "drift",
+            "drift"
+          ],
+          "policy_strengths": [
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "positive": false
+      },
+      {
+        "name": "decoy_mean3_1",
+        "label": "Mean 3, pair x1",
+        "kwargs": {
+          "policies": [
+            "mean",
+            "mean",
+            "none",
+            "none"
+          ],
+          "policy_strengths": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "history_window": 3
+        },
+        "positive": false
+      },
+      {
+        "name": "decoy_mean3_2",
+        "label": "Mean 3, pair x2",
+        "kwargs": {
+          "policies": [
+            "mean",
+            "mean",
+            "none",
+            "none"
+          ],
+          "policy_strengths": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "history_window": 3
+        },
+        "positive": false
+      },
+      {
+        "name": "decoy_mean10_1",
+        "label": "Mean 10, pair x1",
+        "kwargs": {
+          "policies": [
+            "mean",
+            "mean",
+            "none",
+            "none"
+          ],
+          "policy_strengths": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "history_window": 10
+        },
+        "positive": false
+      },
+      {
+        "name": "decoy_mean10_2",
+        "label": "Mean 10, pair x2",
+        "kwargs": {
+          "policies": [
+            "mean",
+            "mean",
+            "none",
+            "none"
+          ],
+          "policy_strengths": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "history_window": 10
+        },
+        "positive": false
+      },
+      {
+        "name": "decoy_rival_1",
+        "label": "Same rival, pair x1",
+        "kwargs": {
+          "policies": [
+            "rival",
+            "rival",
+            "none",
+            "none"
+          ],
+          "policy_strengths": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "rival_seats": [
+            2,
+            2,
+            0,
+            0
+          ]
+        },
+        "positive": false
+      },
+      {
+        "name": "decoy_rival_2",
+        "label": "Same rival, pair x2",
+        "kwargs": {
+          "policies": [
+            "rival",
+            "rival",
+            "none",
+            "none"
+          ],
+          "policy_strengths": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "rival_seats": [
+            2,
+            2,
+            0,
+            0
+          ]
+        },
+        "positive": false
+      },
+      {
+        "name": "cartel_mean10",
+        "label": "Cartel q=.5 / mean 10",
+        "kwargs": {
+          "cartel": [
+            0,
+            1
+          ],
+          "q": 0.5,
+          "history_window": 10,
+          "policies": [
+            "none",
+            "none",
+            "mean",
+            "mean"
+          ]
+        },
+        "positive": true
+      }
+    ],
+    "state": "exact",
+    "pair_level": 0.008333333333333333,
+    "direction_level": 0.004166666666666667,
+    "absence_p": 0.2,
+    "absence_bits": 0.05
+  },
+  "elapsed_seconds": 710.3248259000247,
+  "inflation": [
+    {
+      "condition": "streak_2",
+      "markets": 20,
+      "positive": false,
+      "statistic": "L1_any_candidate",
+      "hits": 10,
+      "rate": 0.5,
+      "ci_low": 0.2719578495607919,
+      "ci_high": 0.7280421504392081,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "streak_2",
+      "markets": 20,
+      "positive": false,
+      "statistic": "L2_any_candidate",
+      "hits": 17,
+      "rate": 0.85,
+      "ci_low": 0.621073173454686,
+      "ci_high": 0.9679290628145363,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "profit_2",
+      "markets": 20,
+      "positive": false,
+      "statistic": "L1_any_candidate",
+      "hits": 14,
+      "rate": 0.7,
+      "ci_low": 0.4572108177237109,
+      "ci_high": 0.8810684095942722,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "profit_2",
+      "markets": 20,
+      "positive": false,
+      "statistic": "L2_any_candidate",
+      "hits": 17,
+      "rate": 0.85,
+      "ci_low": 0.621073173454686,
+      "ci_high": 0.9679290628145363,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "rival_2",
+      "markets": 20,
+      "positive": false,
+      "statistic": "L1_any_candidate",
+      "hits": 12,
+      "rate": 0.6,
+      "ci_low": 0.3605425873074897,
+      "ci_high": 0.8088099392746928,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "rival_2",
+      "markets": 20,
+      "positive": false,
+      "statistic": "L2_any_candidate",
+      "hits": 4,
+      "rate": 0.2,
+      "ci_low": 0.05733399705003278,
+      "ci_high": 0.4366140029966683,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "drift_1",
+      "markets": 20,
+      "positive": false,
+      "statistic": "L1_any_candidate",
+      "hits": 6,
+      "rate": 0.3,
+      "ci_low": 0.11893159040572772,
+      "ci_high": 0.5427891822762891,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "drift_1",
+      "markets": 20,
+      "positive": false,
+      "statistic": "L2_any_candidate",
+      "hits": 16,
+      "rate": 0.8,
+      "ci_low": 0.5633859970033317,
+      "ci_high": 0.9426660029499672,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "drift_2",
+      "markets": 20,
+      "positive": false,
+      "statistic": "L1_any_candidate",
+      "hits": 16,
+      "rate": 0.8,
+      "ci_low": 0.5633859970033317,
+      "ci_high": 0.9426660029499672,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "drift_2",
+      "markets": 20,
+      "positive": false,
+      "statistic": "L2_any_candidate",
+      "hits": 20,
+      "rate": 1.0,
+      "ci_low": 0.8315665290169147,
+      "ci_high": 1.0,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "decoy_rival_1",
+      "markets": 20,
+      "positive": false,
+      "statistic": "L1_any_candidate",
+      "hits": 15,
+      "rate": 0.75,
+      "ci_low": 0.5089541282920426,
+      "ci_high": 0.9134285308985653,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "decoy_rival_1",
+      "markets": 20,
+      "positive": false,
+      "statistic": "L2_any_candidate",
+      "hits": 20,
+      "rate": 1.0,
+      "ci_low": 0.8315665290169147,
+      "ci_high": 1.0,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "decoy_rival_2",
+      "markets": 20,
+      "positive": false,
+      "statistic": "L1_any_candidate",
+      "hits": 20,
+      "rate": 1.0,
+      "ci_low": 0.8315665290169147,
+      "ci_high": 1.0,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "decoy_rival_2",
+      "markets": 20,
+      "positive": false,
+      "statistic": "L2_any_candidate",
+      "hits": 20,
+      "rate": 1.0,
+      "ci_low": 0.8315665290169147,
+      "ci_high": 1.0,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "mean3_1",
+      "markets": 200,
+      "positive": false,
+      "statistic": "L1_any_candidate",
+      "hits": 19,
+      "rate": 0.095,
+      "ci_low": 0.05816960972512025,
+      "ci_high": 0.14437663997685252,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "mean3_1",
+      "markets": 200,
+      "positive": false,
+      "statistic": "L2_any_candidate",
+      "hits": 18,
+      "rate": 0.09,
+      "ci_low": 0.054214254456096365,
+      "ci_high": 0.13850820847382211,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "mean3_2",
+      "markets": 200,
+      "positive": false,
+      "statistic": "L2_any_candidate",
+      "hits": 19,
+      "rate": 0.095,
+      "ci_low": 0.05816960972512025,
+      "ci_high": 0.14437663997685252,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "mean10_1",
+      "markets": 200,
+      "positive": false,
+      "statistic": "L1_any_candidate",
+      "hits": 25,
+      "rate": 0.125,
+      "ci_low": 0.08255234182881688,
+      "ci_high": 0.17897375007879948,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "mean10_1",
+      "markets": 200,
+      "positive": false,
+      "statistic": "L2_any_candidate",
+      "hits": 24,
+      "rate": 0.12,
+      "ci_low": 0.07842024799636274,
+      "ci_high": 0.1732723511641222,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "mean10_2",
+      "markets": 200,
+      "positive": false,
+      "statistic": "L1_any_candidate",
+      "hits": 23,
+      "rate": 0.115,
+      "ci_low": 0.07431337369229704,
+      "ci_high": 0.16754694448225396,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "mean10_2",
+      "markets": 200,
+      "positive": false,
+      "statistic": "L2_any_candidate",
+      "hits": 29,
+      "rate": 0.145,
+      "ci_low": 0.09930862255520755,
+      "ci_high": 0.20156149617317973,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "streak_1",
+      "markets": 200,
+      "positive": false,
+      "statistic": "L2_any_candidate",
+      "hits": 26,
+      "rate": 0.13,
+      "ci_low": 0.08670835276857532,
+      "ci_high": 0.18465233052341257,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "streak_2",
+      "markets": 200,
+      "positive": false,
+      "statistic": "L1_any_candidate",
+      "hits": 104,
+      "rate": 0.52,
+      "ci_low": 0.44841239866057403,
+      "ci_high": 0.5909860003619938,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "streak_2",
+      "markets": 200,
+      "positive": false,
+      "statistic": "L2_any_candidate",
+      "hits": 145,
+      "rate": 0.725,
+      "ci_low": 0.6575745813762495,
+      "ci_high": 0.7856225847569047,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "profit_1",
+      "markets": 200,
+      "positive": false,
+      "statistic": "L2_any_candidate",
+      "hits": 24,
+      "rate": 0.12,
+      "ci_low": 0.07842024799636274,
+      "ci_high": 0.1732723511641222,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "profit_2",
+      "markets": 200,
+      "positive": false,
+      "statistic": "L1_any_candidate",
+      "hits": 141,
+      "rate": 0.705,
+      "ci_low": 0.6365768666820897,
+      "ci_high": 0.7672312157768753,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "profit_2",
+      "markets": 200,
+      "positive": false,
+      "statistic": "L2_any_candidate",
+      "hits": 188,
+      "rate": 0.94,
+      "ci_low": 0.8975381686916755,
+      "ci_high": 0.9686160461065165,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "rival_2",
+      "markets": 200,
+      "positive": false,
+      "statistic": "L1_any_candidate",
+      "hits": 97,
+      "rate": 0.485,
+      "ci_low": 0.41391482961504394,
+      "ci_high": 0.5565363642507839,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "rival_2",
+      "markets": 200,
+      "positive": false,
+      "statistic": "L2_any_candidate",
+      "hits": 39,
+      "rate": 0.195,
+      "ci_low": 0.1424918747790589,
+      "ci_high": 0.2567856875265592,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "drift_1",
+      "markets": 200,
+      "positive": false,
+      "statistic": "L1_any_candidate",
+      "hits": 81,
+      "rate": 0.405,
+      "ci_low": 0.33633483005461734,
+      "ci_high": 0.47652497528327703,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "drift_1",
+      "markets": 200,
+      "positive": false,
+      "statistic": "L2_any_candidate",
+      "hits": 160,
+      "rate": 0.8,
+      "ci_low": 0.7377736354103998,
+      "ci_high": 0.8531055117842412,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "drift_2",
+      "markets": 200,
+      "positive": false,
+      "statistic": "L1_any_candidate",
+      "hits": 169,
+      "rate": 0.845,
+      "ci_low": 0.787262356784294,
+      "ci_high": 0.8921905998959034,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "drift_2",
+      "markets": 200,
+      "positive": false,
+      "statistic": "L2_any_candidate",
+      "hits": 199,
+      "rate": 0.995,
+      "ci_low": 0.9724581015427943,
+      "ci_high": 0.999873418972133,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "decoy_mean10_1",
+      "markets": 200,
+      "positive": false,
+      "statistic": "L1_any_candidate",
+      "hits": 19,
+      "rate": 0.095,
+      "ci_low": 0.05816960972512025,
+      "ci_high": 0.14437663997685252,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "decoy_mean10_1",
+      "markets": 200,
+      "positive": false,
+      "statistic": "L2_any_candidate",
+      "hits": 17,
+      "rate": 0.085,
+      "ci_low": 0.050295918630257286,
+      "ci_high": 0.13260516582955234,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "decoy_rival_1",
+      "markets": 200,
+      "positive": false,
+      "statistic": "L1_any_candidate",
+      "hits": 154,
+      "rate": 0.77,
+      "ci_low": 0.7053936054340193,
+      "ci_high": 0.8264191371984088,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "decoy_rival_1",
+      "markets": 200,
+      "positive": false,
+      "statistic": "L2_any_candidate",
+      "hits": 189,
+      "rate": 0.945,
+      "ci_low": 0.9037223555660872,
+      "ci_high": 0.9722277454479935,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "decoy_rival_2",
+      "markets": 200,
+      "positive": false,
+      "statistic": "L1_any_candidate",
+      "hits": 200,
+      "rate": 1.0,
+      "ci_low": 0.9817246596448638,
+      "ci_high": 1.0,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "decoy_rival_2",
+      "markets": 200,
+      "positive": false,
+      "statistic": "L2_any_candidate",
+      "hits": 200,
+      "rate": 1.0,
+      "ci_low": 0.9817246596448638,
+      "ci_high": 1.0,
+      "lower_exceeds_05": true
+    }
+  ],
+  "positive": [
+    {
+      "condition": "cartel_mean10",
+      "markets": 20,
+      "positive": true,
+      "statistic": "L1_any_candidate",
+      "hits": 8,
+      "rate": 0.4,
+      "ci_low": 0.19119006072530725,
+      "ci_high": 0.6394574126925103,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "cartel_mean10",
+      "markets": 20,
+      "positive": true,
+      "statistic": "L2_any_candidate",
+      "hits": 6,
+      "rate": 0.3,
+      "ci_low": 0.11893159040572772,
+      "ci_high": 0.5427891822762891,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "cartel_mean10",
+      "markets": 20,
+      "positive": true,
+      "statistic": "leak_family_alarm",
+      "hits": 3,
+      "rate": 0.15,
+      "ci_low": 0.032070937185463715,
+      "ci_high": 0.37892682654531396,
+      "lower_exceeds_05": false
+    },
+    {
+      "condition": "cartel_mean10",
+      "markets": 20,
+      "positive": true,
+      "statistic": "L1_reported_any",
+      "hits": 8,
+      "rate": 0.4,
+      "ci_low": 0.19119006072530725,
+      "ci_high": 0.6394574126925103,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "cartel_mean10",
+      "markets": 20,
+      "positive": true,
+      "statistic": "L2_reported_any",
+      "hits": 5,
+      "rate": 0.25,
+      "ci_low": 0.08657146910143462,
+      "ci_high": 0.49104587170795744,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "cartel_mean10",
+      "markets": 20,
+      "positive": true,
+      "statistic": "L1_reported_target",
+      "hits": 8,
+      "rate": 0.4,
+      "ci_low": 0.19119006072530725,
+      "ci_high": 0.6394574126925103,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "cartel_mean10",
+      "markets": 20,
+      "positive": true,
+      "statistic": "L2_reported_target",
+      "hits": 3,
+      "rate": 0.15,
+      "ci_low": 0.032070937185463715,
+      "ci_high": 0.37892682654531396,
+      "lower_exceeds_05": false
+    },
+    {
+      "condition": "cartel_mean10",
+      "markets": 20,
+      "positive": true,
+      "statistic": "detect_either",
+      "hits": 3,
+      "rate": 0.15,
+      "ci_low": 0.032070937185463715,
+      "ci_high": 0.37892682654531396,
+      "lower_exceeds_05": false
+    },
+    {
+      "condition": "cartel_mean10",
+      "markets": 20,
+      "positive": true,
+      "statistic": "detect_both",
+      "hits": 0,
+      "rate": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.16843347098308528,
+      "lower_exceeds_05": false
+    },
+    {
+      "condition": "cartel_mean10",
+      "markets": 20,
+      "positive": true,
+      "statistic": "off_target_leak_alarm",
+      "hits": 0,
+      "rate": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.16843347098308528,
+      "lower_exceeds_05": false
+    },
+    {
+      "condition": "cartel_mean10",
+      "markets": 200,
+      "positive": true,
+      "statistic": "L1_any_candidate",
+      "hits": 112,
+      "rate": 0.56,
+      "ci_low": 0.48825026907469704,
+      "ci_high": 0.6299444206609561,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "cartel_mean10",
+      "markets": 200,
+      "positive": true,
+      "statistic": "L2_any_candidate",
+      "hits": 62,
+      "rate": 0.31,
+      "ci_low": 0.24665803744172582,
+      "ci_high": 0.37907704052032587,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "cartel_mean10",
+      "markets": 200,
+      "positive": true,
+      "statistic": "leak_family_alarm",
+      "hits": 46,
+      "rate": 0.23,
+      "ci_low": 0.1735808628015912,
+      "ci_high": 0.29460639456598076,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "cartel_mean10",
+      "markets": 200,
+      "positive": true,
+      "statistic": "L1_reported_any",
+      "hits": 109,
+      "rate": 0.545,
+      "ci_low": 0.47325924751898857,
+      "ci_high": 0.6153869579610829,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "cartel_mean10",
+      "markets": 200,
+      "positive": true,
+      "statistic": "L2_reported_any",
+      "hits": 59,
+      "rate": 0.295,
+      "ci_low": 0.23276878422312475,
+      "ci_high": 0.3634231333179104,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "cartel_mean10",
+      "markets": 200,
+      "positive": true,
+      "statistic": "L1_reported_target",
+      "hits": 107,
+      "rate": 0.535,
+      "ci_low": 0.4632998577883212,
+      "ci_high": 0.6056472647385431,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "cartel_mean10",
+      "markets": 200,
+      "positive": true,
+      "statistic": "L2_reported_target",
+      "hits": 48,
+      "rate": 0.24,
+      "ci_low": 0.18257190389247274,
+      "ci_high": 0.3053062856471394,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "cartel_mean10",
+      "markets": 200,
+      "positive": true,
+      "statistic": "detect_either",
+      "hits": 38,
+      "rate": 0.19,
+      "ci_low": 0.13810312537283967,
+      "ci_high": 0.25133151862374414,
+      "lower_exceeds_05": true
+    },
+    {
+      "condition": "cartel_mean10",
+      "markets": 200,
+      "positive": true,
+      "statistic": "detect_both",
+      "hits": 3,
+      "rate": 0.015,
+      "ci_low": 0.00310410762155351,
+      "ci_high": 0.0432082819177126,
+      "lower_exceeds_05": false
+    },
+    {
+      "condition": "cartel_mean10",
+      "markets": 200,
+      "positive": true,
+      "statistic": "off_target_leak_alarm",
+      "hits": 8,
+      "rate": 0.04,
+      "ci_low": 0.0174248089944806,
+      "ci_high": 0.07729196822601608,
+      "lower_exceeds_05": false
+    }
+  ]
+}

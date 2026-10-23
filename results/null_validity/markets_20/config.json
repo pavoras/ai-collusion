@@ -1,0 +1,428 @@
+{
+  "seed": 20261028,
+  "rounds": 200,
+  "market_start": 80000,
+  "markets": 20,
+  "n_perm": 999,
+  "workers": 4,
+  "quick": false,
+  "conditions": [
+    {
+      "name": "iid",
+      "label": "IID",
+      "kwargs": {},
+      "positive": false
+    },
+    {
+      "name": "last_exact",
+      "label": "Last bid (old)",
+      "kwargs": {
+        "reactions": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "positive": false
+    },
+    {
+      "name": "mean3_1",
+      "label": "Mean 3, all x1",
+      "kwargs": {
+        "policies": [
+          "mean",
+          "mean",
+          "mean",
+          "mean"
+        ],
+        "policy_strengths": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "history_window": 3
+      },
+      "positive": false
+    },
+    {
+      "name": "mean3_2",
+      "label": "Mean 3, all x2",
+      "kwargs": {
+        "policies": [
+          "mean",
+          "mean",
+          "mean",
+          "mean"
+        ],
+        "policy_strengths": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "history_window": 3
+      },
+      "positive": false
+    },
+    {
+      "name": "mean10_1",
+      "label": "Mean 10, all x1",
+      "kwargs": {
+        "policies": [
+          "mean",
+          "mean",
+          "mean",
+          "mean"
+        ],
+        "policy_strengths": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "history_window": 10
+      },
+      "positive": false
+    },
+    {
+      "name": "mean10_2",
+      "label": "Mean 10, all x2",
+      "kwargs": {
+        "policies": [
+          "mean",
+          "mean",
+          "mean",
+          "mean"
+        ],
+        "policy_strengths": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "history_window": 10
+      },
+      "positive": false
+    },
+    {
+      "name": "streak_1",
+      "label": "Own streak, all x1",
+      "kwargs": {
+        "policies": [
+          "streak",
+          "streak",
+          "streak",
+          "streak"
+        ],
+        "policy_strengths": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "positive": false
+    },
+    {
+      "name": "streak_2",
+      "label": "Own streak, all x2",
+      "kwargs": {
+        "policies": [
+          "streak",
+          "streak",
+          "streak",
+          "streak"
+        ],
+        "policy_strengths": [
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "positive": false
+    },
+    {
+      "name": "profit_1",
+      "label": "Own profit, all x1",
+      "kwargs": {
+        "policies": [
+          "profit",
+          "profit",
+          "profit",
+          "profit"
+        ],
+        "policy_strengths": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "positive": false
+    },
+    {
+      "name": "profit_2",
+      "label": "Own profit, all x2",
+      "kwargs": {
+        "policies": [
+          "profit",
+          "profit",
+          "profit",
+          "profit"
+        ],
+        "policy_strengths": [
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "positive": false
+    },
+    {
+      "name": "rival_1",
+      "label": "Last rival, ring x1",
+      "kwargs": {
+        "policies": [
+          "rival",
+          "rival",
+          "rival",
+          "rival"
+        ],
+        "policy_strengths": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "rival_seats": [
+          1,
+          2,
+          3,
+          0
+        ]
+      },
+      "positive": false
+    },
+    {
+      "name": "rival_2",
+      "label": "Last rival, ring x2",
+      "kwargs": {
+        "policies": [
+          "rival",
+          "rival",
+          "rival",
+          "rival"
+        ],
+        "policy_strengths": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "rival_seats": [
+          1,
+          2,
+          3,
+          0
+        ]
+      },
+      "positive": false
+    },
+    {
+      "name": "drift_1",
+      "label": "Slow drift, all x1",
+      "kwargs": {
+        "policies": [
+          "drift",
+          "drift",
+          "drift",
+          "drift"
+        ],
+        "policy_strengths": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "positive": false
+    },
+    {
+      "name": "drift_2",
+      "label": "Slow drift, all x2",
+      "kwargs": {
+        "policies": [
+          "drift",
+          "drift",
+          "drift",
+          "drift"
+        ],
+        "policy_strengths": [
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "positive": false
+    },
+    {
+      "name": "decoy_mean3_1",
+      "label": "Mean 3, pair x1",
+      "kwargs": {
+        "policies": [
+          "mean",
+          "mean",
+          "none",
+          "none"
+        ],
+        "policy_strengths": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "history_window": 3
+      },
+      "positive": false
+    },
+    {
+      "name": "decoy_mean3_2",
+      "label": "Mean 3, pair x2",
+      "kwargs": {
+        "policies": [
+          "mean",
+          "mean",
+          "none",
+          "none"
+        ],
+        "policy_strengths": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "history_window": 3
+      },
+      "positive": false
+    },
+    {
+      "name": "decoy_mean10_1",
+      "label": "Mean 10, pair x1",
+      "kwargs": {
+        "policies": [
+          "mean",
+          "mean",
+          "none",
+          "none"
+        ],
+        "policy_strengths": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "history_window": 10
+      },
+      "positive": false
+    },
+    {
+      "name": "decoy_mean10_2",
+      "label": "Mean 10, pair x2",
+      "kwargs": {
+        "policies": [
+          "mean",
+          "mean",
+          "none",
+          "none"
+        ],
+        "policy_strengths": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "history_window": 10
+      },
+      "positive": false
+    },
+    {
+      "name": "decoy_rival_1",
+      "label": "Same rival, pair x1",
+      "kwargs": {
+        "policies": [
+          "rival",
+          "rival",
+          "none",
+          "none"
+        ],
+        "policy_strengths": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "rival_seats": [
+          2,
+          2,
+          0,
+          0
+        ]
+      },
+      "positive": false
+    },
+    {
+      "name": "decoy_rival_2",
+      "label": "Same rival, pair x2",
+      "kwargs": {
+        "policies": [
+          "rival",
+          "rival",
+          "none",
+          "none"
+        ],
+        "policy_strengths": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "rival_seats": [
+          2,
+          2,
+          0,
+          0
+        ]
+      },
+      "positive": false
+    },
+    {
+      "name": "cartel_mean10",
+      "label": "Cartel q=.5 / mean 10",
+      "kwargs": {
+        "cartel": [
+          0,
+          1
+        ],
+        "q": 0.5,
+        "history_window": 10,
+        "policies": [
+          "none",
+          "none",
+          "mean",
+          "mean"
+        ]
+      },
+      "positive": true
+    }
+  ],
+  "state": "exact",
+  "pair_level": 0.008333333333333333,
+  "direction_level": 0.004166666666666667,
+  "absence_p": 0.2,
+  "absence_bits": 0.05
+}

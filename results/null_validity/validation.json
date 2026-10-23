@@ -1,0 +1,16 @@
+{
+  "full_suite": {
+    "command": ".venv/Scripts/python -m pytest -q",
+    "passed": 233,
+    "warnings": 1,
+    "elapsed_seconds": 36.02
+  },
+  "focused_suite": {
+    "command": ".venv/Scripts/python -m pytest -q tests/test_null_validity.py tests/test_auction.py",
+    "passed": 55,
+    "warnings": 1,
+    "elapsed_seconds": 2.94
+  },
+  "warning": "PytestCacheWarning: the existing .pytest_cache/v/cache path could not be created (WinError 183).",
+  "legacy_snapshots": "Five SHA-256 snapshots recorded before editing auction.py: IID, shared history, q=.5 cartel, spy, and one-way cartel."
+}
