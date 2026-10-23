@@ -1,0 +1,17 @@
+population,condition,q,cohort,market,n_perm,level,score
+shared_fine,cartel,0.25,0,0,239,L1,0.2891258313341848
+shared_fine,cartel,0.25,0,0,239,L2,0.5062747773909302
+shared_fine,cartel,0.25,0,0,999,L1,0.2921696819401728
+shared_fine,cartel,0.25,0,0,999,L2,0.5062784815778452
+shared_fine,cartel,0.25,0,1,239,L1,0.31432314477683804
+shared_fine,cartel,0.25,0,1,239,L2,0.47474800501515074
+shared_fine,cartel,0.25,0,1,999,L1,0.3123967121438253
+shared_fine,cartel,0.25,0,1,999,L2,0.4697695383432756
+shared_fine,cartel,0.25,0,2,239,L1,0.28802344374964595
+shared_fine,cartel,0.25,0,2,239,L2,0.4070483621293853
+shared_fine,cartel,0.25,0,2,999,L1,0.2902271481251476
+shared_fine,cartel,0.25,0,2,999,L2,0.40506043210268505
+shared_fine,cartel,0.25,0,3,239,L1,0.34428907212556636
+shared_fine,cartel,0.25,0,3,239,L2,0.4818464556658717
+shared_fine,cartel,0.25,0,3,999,L1,0.34162074048231306
+shared_fine,cartel,0.25,0,3,999,L2,0.4804232663075303

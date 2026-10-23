@@ -17,7 +17,7 @@ import sys
 import time
 
 import numpy as np
-from scipy.stats import beta, binom
+from scipy.stats import beta, binom, rankdata
 
 from collusion.games.auction import play
 from collusion.measures import auroc, pair_score, symmetric_permutation_test
@@ -359,9 +359,206 @@ def figure(out, power):
     plt.close(fig)
 
 
+def paired_auc_test(negative, positive, n_swaps=1999, seed=None, swaps=None):
+    """One-sided AUROC test using independent condition swaps within matched pairs."""
+    negative, positive = np.asarray(negative), np.asarray(positive)
+    if negative.ndim != 1 or negative.shape != positive.shape or not len(negative):
+        raise ValueError("equal nonempty matched score vectors required")
+    n = len(negative)
+    observed = auroc(np.r_[np.zeros(n), np.ones(n)], np.r_[negative, positive])
+    if swaps is None:
+        if n_swaps < 1:
+            raise ValueError("positive number of swaps required")
+        swaps = np.random.default_rng(seed).integers(0, 2, size=(n_swaps, n), dtype=np.int8)
+    swaps = np.asarray(swaps)
+    if swaps.ndim != 2 or swaps.shape[1] != n or not len(swaps) or not np.isin(swaps, [0, 1]).all():
+        raise ValueError("one binary swap indicator per matched block required")
+    # Pooled midranks stay fixed under swaps. Twice the ranks make ties exact.
+    ranks = np.rint(2 * rankdata(np.r_[negative, positive])).astype(np.int64)
+    changes = swaps @ (ranks[:n] - ranks[n:])
+    p_value = (1 + np.count_nonzero(changes >= 0)) / (1 + len(swaps))
+    return {"auc": observed, "p_value": float(p_value), "reject": int(observed > .5 and p_value <= .05)}
+
+
+def confirmatory_market_batch(task):
+    """Fresh signed scores at both permutation counts; N0 cohorts share all game streams."""
+    population, condition, q, cohort, start, count = task
+    rows = []
+    for index in range(start, start + count):
+        market = play(200, seed=SEED, market_index=index, reactions=POPULATIONS[population],
+                      **({"cartel": (0, 1), "q": q} if condition == "cartel" else {}))
+        condition_key = 1 if condition == "cartel" else 3 if cohort else 0
+        key = [list(POPULATIONS).index(population), 200, condition_key, 0, int(q * 100), index]
+        for n_perm in (239, 999):
+            for result in analyse(market, n_perm, key):
+                if (result["i"], result["j"]) == (0, 1):
+                    rows.append({"population": population, "condition": condition, "q": q,
+                                 "cohort": cohort, "market": index, "n_perm": n_perm,
+                                 "level": result["level"], "score": result["score"]})
+    return rows
+
+
+def confirmatory_experiments(markets, repetitions, n_swaps, orient_null=True):
+    """Empirical-pool power and exchangeable empirical-null size, with common draws."""
+    grouped = {}
+    for row in sorted(markets, key=lambda r: r["market"]):
+        key = tuple(row[k] for k in ("population", "condition", "q", "cohort", "n_perm", "level"))
+        grouped.setdefault(key, []).append(row["score"])
+    grouped = {key: np.asarray(values) for key, values in grouped.items()}
+    records, summary = [], []
+    for population_index, population in enumerate(POPULATIONS):
+        for q in ((1.0, .5, .25, 0.0) if orient_null else (0.0,)):
+            kind = "power" if q else "size"
+            for n in (20, 30, 40):
+                key = [SEED, 950, population_index, int(q * 100), n]
+                size = len(grouped[(population, "N0", 0.0, 0, 999, "L2")])
+                draws = np.random.default_rng(key).integers(size, size=(repetitions, n))
+                # The empirical N0 pool must obey the null: each unordered pair
+                # has both possible cohort orientations with probability 1/2.
+                orientations = np.random.default_rng([*key, 952]).integers(2, size=(repetitions, n), dtype=np.int8)
+                for level in ("L1", "L2"):
+                    for n_perm in (239, 999):
+                        negative = grouped[(population, "N0", 0.0, 0, n_perm, level)]
+                        positive = grouped[(population, "cartel" if q else "N0", q, 0 if q else 1, n_perm, level)]
+                        local = []
+                        for experiment, indices in enumerate(draws):
+                            left, right = negative[indices], positive[indices]
+                            if kind == "size" and orient_null:
+                                flip = orientations[experiment]
+                                left, right = np.where(flip, right, left), np.where(flip, left, right)
+                            result = paired_auc_test(left, right, n_swaps,
+                                                     [*key, 951, experiment])
+                            local.append({"population": population, "kind": kind, "q": q, "n": n,
+                                          "level": level, "n_perm": n_perm, "experiment": experiment,
+                                          **result})
+                        records.extend(local)
+                        hits = sum(r["reject"] for r in local)
+                        rate = hits / repetitions
+                        low, high = exact_interval(hits, repetitions)
+                        summary.append({"population": population, "kind": kind, "q": q, "n": n,
+                                        "level": level, "n_perm": n_perm, "experiments": repetitions,
+                                        "rejections": hits, "rejection_rate": rate,
+                                        "mc_se": float(np.sqrt(rate * (1 - rate) / repetitions)),
+                                        "mc_ci_low": low, "mc_ci_high": high})
+                print(f"paired {population} q={q:g} n={n}: {repetitions} experiments", flush=True)
+    for row in summary:
+        reference = next(r for r in summary if all(r[k] == row[k] for k in
+                         ("population", "kind", "q", "n", "level")) and r["n_perm"] == 239)
+        row["difference_from_239_pp"] = 100 * (row["rejection_rate"] - reference["rejection_rate"])
+    return records, summary
+
+
+def confirmatory_recommendation(rows):
+    """Smallest tested n with at least .8 L2 rejection power in both populations."""
+    return next((n for n in (20, 30, 40) if all(any(
+        r["kind"] == "power" and r["q"] == .5 and r["n"] == n and r["level"] == "L2"
+        and r["n_perm"] == 999 and r["population"] == population and r["rejection_rate"] >= .8
+        for r in rows) for population in POPULATIONS)), None)
+
+
+def confirmatory_figure(out, rows):
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    plotting.apply_style()
+    fig, axes = plt.subplots(1, 2, figsize=(6.2, 2.6), layout="constrained", sharey=True)
+    for ax, population in zip(axes, POPULATIONS):
+        for q, color in [(1., plotting.BLUE), (.5, plotting.ORANGE), (.25, plotting.AQUA)]:
+            selected = [r for r in rows if r["population"] == population and r["kind"] == "power"
+                        and r["q"] == q and r["level"] == "L2" and r["n_perm"] == 999]
+            ax.errorbar([r["n"] for r in selected], [r["rejection_rate"] for r in selected],
+                        yerr=[1.96 * r["mc_se"] for r in selected], color=color, marker="o", label=f"q={q:g}")
+        ax.axhline(.8, color=plotting.TEXT_MUTED, linestyle="--", linewidth=.8, label="80% target")
+        ax.set(title=population, xlabel="Matched market pairs", xticks=[20, 30, 40], ylim=(0, 1.04))
+        ax.legend(fontsize=7, loc="lower right")
+    axes[0].set_ylabel("L2 paired-test rejection probability")
+    fig.savefig(out / "paired_test_power.png")
+    plt.close(fig)
+
+
+def run_confirmatory(args):
+    """Run the specified confirmatory test; preserve earlier descriptive AUROC outputs."""
+    started = time.perf_counter()
+    pool_size = args.pool_size or (4 if args.quick else 400)
+    repetitions = args.resamples or (10 if args.quick else 1000)
+    if min(pool_size, repetitions, args.workers, args.swaps) < 1:
+        raise ValueError("positive pool, experiment, worker and swap counts required")
+    out = OUT / ("confirmatory_quick" if args.quick else "confirmatory")
+    out.mkdir(parents=True, exist_ok=True)
+    hashes = {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest() for p in (
+        Path(__file__).resolve(), ROOT / "src/collusion/measures.py", ROOT / "src/collusion/games/auction.py")}
+    signature = hashlib.sha256(json.dumps(hashes, sort_keys=True).encode()).hexdigest()[:12]
+    cache = out / "cells" / signature
+    cache.mkdir(parents=True, exist_ok=True)
+    tasks = [(population, condition, q, cohort, start, min(40, pool_size - start))
+             for population in POPULATIONS
+             for condition, q, cohort in [("N0", 0., 0), ("N0", 0., 1),
+                                          ("cartel", 1., 0), ("cartel", .5, 0), ("cartel", .25, 0)]
+             for start in range(0, pool_size, 40)]
+    markets, pending = [], []
+    for task in tasks:
+        path = cache / (cell_name(task) + ".csv")
+        if path.exists():
+            with path.open(encoding="utf-8") as handle:
+                for row in csv.DictReader(handle):
+                    for field in ("cohort", "market", "n_perm"):
+                        row[field] = int(row[field])
+                    for field in ("q", "score"):
+                        row[field] = float(row[field])
+                    markets.append(row)
+        else:
+            pending.append(task)
+    with ProcessPoolExecutor(max_workers=args.workers) as executor:
+        for task, rows in zip(pending, executor.map(confirmatory_market_batch, pending)):
+            markets.extend(rows)
+            write_csv(cache / (cell_name(task) + ".csv"), rows)
+            print(f"scores {cell_name(task)}; elapsed {time.perf_counter()-started:.1f}s", flush=True)
+    score_seconds = time.perf_counter() - started
+    records, rows = confirmatory_experiments(markets, repetitions, args.swaps)
+    _, fixed_null = confirmatory_experiments(markets, repetitions, args.swaps, orient_null=False)
+    for name, data in [("markets", markets), ("experiments", records), ("power", [r for r in rows if r["kind"] == "power"]),
+                       ("size", [r for r in rows if r["kind"] == "size"])]:
+        write_csv(out / f"{name}.csv", data)
+    write_csv(out / "size_fixed_orientation_diagnostic.csv", fixed_null)
+    confirmatory_figure(out, rows)
+    previous = OUT / "full/markets.csv"
+    comparison = None
+    if previous.exists():
+        old = {(r["population"], r["condition"], r["q"], r["market"], r["level"]): r["score"]
+               for r in read_csv(previous) if r["rounds"] == 200 and (r["i"], r["j"]) == (0, 1)}
+        differences = [abs(r["score"] - old[(r["population"], r["condition"], r["q"], r["market"], r["level"])])
+                       for r in markets if r["cohort"] == 0 and r["n_perm"] == 239 and
+                       (r["population"], r["condition"], r["q"], r["market"], r["level"]) in old]
+        comparison = {"scores_compared": len(differences), "max_absolute_difference": max(differences, default=0.)}
+    if any(hashlib.sha256((ROOT / name).read_bytes()).hexdigest() != value for name, value in hashes.items()):
+        raise RuntimeError("source changed during simulation; rerun before reporting results")
+    summary = {"command": ".venv/Scripts/python " + " ".join(sys.argv), "seed": SEED, "source_sha256": hashes,
+               "quick": args.quick, "pool_size_per_cohort": pool_size, "experiments_per_cell": repetitions,
+               "within_market_permutations": [239, 999], "within_block_label_swaps": args.swaps,
+               "confirmatory_run_label_swaps": 99999, "rounds": 200, "designated_pair": [0, 1],
+               "test": "AUROC>0.5 AND (1 + number of swapped AUROCs >= observed)/(1+B) <= .05",
+               "score": "signed min(Gamma_ij,Gamma_ji), bias corrected separately within each market; no truncation",
+               "sampling": "1000 independent empirical-pool experiments by default; matched market indices drawn with replacement; common draws and swaps across access levels and 239/999",
+               "size": "N0 has identical game streams/data and independent bias correction (keys 0 and 3). For each sampled block, randomly assign the two estimates to cohort labels; the symmetrized empirical null obeys within-block exchangeability. Variation is calibration noise, not independent bidder noise.",
+               "size_diagnostic": "size_fixed_orientation_diagnostic.csv retains original cohort labels when resampling the finite pool; this empirical distribution need not obey exchangeability and its rejection rate is not test size under the stated null",
+               "identical_score_guard": paired_auc_test([0., 1.], [0., 1.], args.swaps, SEED),
+               "mc_se_maximum": float(.5 / np.sqrt(repetitions)), "mc_se_is_conditional_on_pool": True,
+               "previous_239_score_check": comparison, "recommended_n": confirmatory_recommendation(rows),
+               "limitations": ["MC SE does not include finite-market-pool uncertainty or LLM generalisation",
+                               "identical game streams with identical bias estimates give AUROC=.5 and zero rejection, not 5%",
+                               "size is at most nominal in degenerate/tied cases; about 5% is not a universal equality",
+                               "quick is a smoke test and cannot support sample-size recommendations"],
+               "cached_batches": len(tasks) - len(pending), "score_generation_seconds": score_seconds,
+               "elapsed_seconds": time.perf_counter() - started}
+    (out / "summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
+    print(json.dumps(summary, indent=2), flush=True)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--quick", action="store_true")
+    parser.add_argument("--confirmatory", action="store_true", help="Power of the paired AUROC label-swap hypothesis test")
+    parser.add_argument("--swaps", type=int, default=1999)
     parser.add_argument("--sensitivity", action="store_true", help="999-permutation check on 80 matched markets in selected cells")
     parser.add_argument("--pool-size", type=int)
     parser.add_argument("--resamples", type=int)
@@ -369,6 +566,11 @@ def main():
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--cartel-only", action="store_true", help="Run the cartel subset")
     args = parser.parse_args()
+    if args.confirmatory:
+        if args.sensitivity or args.cartel_only or args.permutations not in (None, 999):
+            parser.error("confirmatory mode uses 999 bias permutations plus its 239 comparison")
+        run_confirmatory(args)
+        return
     args.permutations = args.permutations or (999 if args.sensitivity else 239)
     pool_size = args.pool_size or (2 if args.quick else 80 if args.sensitivity else 400)
     repetitions = args.resamples or (100 if args.quick else 4000)

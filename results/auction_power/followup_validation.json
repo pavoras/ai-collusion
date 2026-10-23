@@ -1,0 +1,23 @@
+{
+  "tests": {
+    "command": ".venv/Scripts/python -m pytest -q -p no:cacheprovider",
+    "passed": 240,
+    "failed": 0,
+    "seconds": 24.83
+  },
+  "python_lines_added": 246,
+  "python_lines_removed": 1,
+  "python_net_lines": 245,
+  "source_hashes_verified": true,
+  "all_72_power_rows_have_1000_of_1000_rejections": true,
+  "power_difference_999_minus_239_pp": [
+    0.0
+  ],
+  "size_difference_range_999_minus_239_pp": [
+    -1.6,
+    1.9000000000000004
+  ],
+  "markets_per_cohort": 400,
+  "main_experiment_rows": 96000,
+  "condition_cohort_pools": 10
+}

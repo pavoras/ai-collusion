@@ -1,0 +1,13 @@
+{
+  "reused_batches": 100,
+  "fresh_scores_checked": 40,
+  "max_absolute_difference": 0.0,
+  "reason": "Only null resampling/reporting changed during score generation; score worker unchanged. Every population/cohort checked afresh at index 137.",
+  "old_cache": "1cfdbc3d71d9",
+  "new_cache": "73ee82571f9c",
+  "source_sha256": {
+    "experiments\\auction_power.py": "baed2ab6591cffea6775a92aa1612ef605baf1a654f07dcc7379dee25abaff89",
+    "src\\collusion\\measures.py": "b2daa241fe614ab4e7de02222635b858189fe51623cfb778fde9f33433298317",
+    "src\\collusion\\games\\auction.py": "c30377bdb49ed69d8f9e31bbdbfadd7613aacce311e57812302bf2c2fec9b482"
+  }
+}

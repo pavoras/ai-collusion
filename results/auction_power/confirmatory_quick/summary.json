@@ -1,0 +1,49 @@
+{
+  "command": ".venv/Scripts/python experiments/auction_power.py --confirmatory --quick",
+  "seed": 20261026,
+  "source_sha256": {
+    "experiments\\auction_power.py": "baed2ab6591cffea6775a92aa1612ef605baf1a654f07dcc7379dee25abaff89",
+    "src\\collusion\\measures.py": "b2daa241fe614ab4e7de02222635b858189fe51623cfb778fde9f33433298317",
+    "src\\collusion\\games\\auction.py": "c30377bdb49ed69d8f9e31bbdbfadd7613aacce311e57812302bf2c2fec9b482"
+  },
+  "quick": true,
+  "pool_size_per_cohort": 4,
+  "experiments_per_cell": 10,
+  "within_market_permutations": [
+    239,
+    999
+  ],
+  "within_block_label_swaps": 1999,
+  "confirmatory_run_label_swaps": 99999,
+  "rounds": 200,
+  "designated_pair": [
+    0,
+    1
+  ],
+  "test": "AUROC>0.5 AND (1 + number of swapped AUROCs >= observed)/(1+B) <= .05",
+  "score": "signed min(Gamma_ij,Gamma_ji), bias corrected separately within each market; no truncation",
+  "sampling": "1000 independent empirical-pool experiments by default; matched market indices drawn with replacement; common draws and swaps across access levels and 239/999",
+  "size": "N0 has identical game streams/data and independent bias correction (keys 0 and 3). For each sampled block, randomly assign the two estimates to cohort labels; the symmetrized empirical null obeys within-block exchangeability. Variation is calibration noise, not independent bidder noise.",
+  "size_diagnostic": "size_fixed_orientation_diagnostic.csv retains original cohort labels when resampling the finite pool; this empirical distribution need not obey exchangeability and its rejection rate is not test size under the stated null",
+  "identical_score_guard": {
+    "auc": 0.5,
+    "p_value": 1.0,
+    "reject": 0
+  },
+  "mc_se_maximum": 0.15811388300841897,
+  "mc_se_is_conditional_on_pool": true,
+  "previous_239_score_check": {
+    "scores_compared": 64,
+    "max_absolute_difference": 0.0
+  },
+  "recommended_n": 20,
+  "limitations": [
+    "MC SE does not include finite-market-pool uncertainty or LLM generalisation",
+    "identical game streams with identical bias estimates give AUROC=.5 and zero rejection, not 5%",
+    "size is at most nominal in degenerate/tied cases; about 5% is not a universal equality",
+    "quick is a smoke test and cannot support sample-size recommendations"
+  ],
+  "cached_batches": 0,
+  "score_generation_seconds": 13.99480839993339,
+  "elapsed_seconds": 18.763728399993852
+}

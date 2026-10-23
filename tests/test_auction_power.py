@@ -1,6 +1,7 @@
 """Tiny market grid and paired AUROC resampling checks."""
 
 import importlib.util
+from itertools import product
 from pathlib import Path
 
 import numpy as np
@@ -71,3 +72,45 @@ def test_partial_spy_reverts_to_own_policy_and_preserves_adaptive_history():
     assert np.array_equal(market.bids[~market.compliant], honest[~market.compliant])
     assert np.array_equal(market.bids[:, 1:], honest[:, 1:])
     assert np.array_equal(market.last_winning_bid[1:], market.bids[np.arange(199), market.winners[:-1]])
+
+
+def test_paired_auc_midrank_shortcut_matches_every_explicit_block_swap():
+    negative, positive = np.array([-2., -1., 0., 0., 2.]), np.array([-1., -.5, 0., 1., 2.])
+    swaps = np.array(list(product([0, 1], repeat=len(negative))), dtype=bool)
+    observed = auroc(np.r_[np.zeros(5), np.ones(5)], np.r_[negative, positive])
+    null = [auroc(np.r_[np.zeros(5), np.ones(5)], np.r_[
+        np.where(swap, positive, negative), np.where(swap, negative, positive)]) for swap in swaps]
+    result = power.paired_auc_test(negative, positive, swaps=swaps)
+    assert result["auc"] == observed
+    assert result["p_value"] == (1 + np.count_nonzero(np.array(null) >= observed)) / (len(swaps) + 1)
+
+
+def test_paired_test_reproducibility_direction_and_identical_score_null():
+    negative, positive = np.arange(20.), np.arange(20.) + 30
+    first = power.paired_auc_test(negative, positive, seed=17)
+    assert first == power.paired_auc_test(negative, positive, seed=17)
+    assert first["reject"] == 1 and first["auc"] == 1
+    assert power.paired_auc_test(positive, negative, seed=17)["reject"] == 0
+    assert power.paired_auc_test(negative, negative, seed=17) == {
+        "auc": .5, "p_value": 1., "reject": 0}
+
+
+def test_tiny_confirmatory_grid_and_joint_population_recommendation():
+    markets = [row for population in power.POPULATIONS
+               for condition, q, cohort in [("N0", 0., 0), ("N0", 0., 1),
+                                            ("cartel", 1., 0), ("cartel", .5, 0), ("cartel", .25, 0)]
+               for row in power.confirmatory_market_batch((population, condition, q, cohort, 0, 1))]
+    records, summary = power.confirmatory_experiments(markets, 2, 19)
+    assert len(summary) == 96 and len(records) == 192
+    assert {r["n_perm"] for r in summary} == {239, 999}
+    assert {r["kind"] for r in summary} == {"power", "size"}
+    assert all(0 <= r["rejection_rate"] <= 1 for r in summary)
+    assert all(0 < r["auc"] < 1 for r in records if r["kind"] == "size")
+    fixed_records, _ = power.confirmatory_experiments(markets, 2, 19, orient_null=False)
+    assert any(r["auc"] in (0., 1.) for r in fixed_records)
+    candidates = [{"population": population, "kind": "power", "q": .5,
+                   "n": n, "level": "L2", "n_perm": 999,
+                   "rejection_rate": .79 if population == "iid" and n == 20 else .9}
+                  for population in power.POPULATIONS for n in (20, 30, 40)]
+    assert power.confirmatory_recommendation(candidates) == 30
+    assert power.confirmatory_recommendation([]) is None
