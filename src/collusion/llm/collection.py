@@ -11,6 +11,7 @@ from .prompts import VERSION
 
 ROOT = Path(__file__).resolve().parents[3]
 DEFAULT_MANIFEST = ROOT / "experiments/manifests/collection_v1.json"
+V2_MANIFEST = ROOT / "experiments/manifests/collection_v2.json"
 ROLES = ("strong_0", "strong_1", "fringe_0", "fringe_1")
 POSITIONS = {"strong_strong": ROLES[:2], "strong_fringe": (ROLES[0], ROLES[2]), "fringe_fringe": ROLES[2:]}
 
@@ -117,6 +118,24 @@ def collection_hash(manifest):
     return digest(manifest)
 
 
+def manifest_registry(manifest):
+    """Trust only the recorded declaration; v2 must preserve every v1 entry."""
+    registry = {collection_hash(manifest): manifest}
+    if manifest.get("manifest_version") == "collection_v2":
+        original = load_collection(DEFAULT_MANIFEST)
+        entries = {e["id"]: e for e in manifest["entries"]}
+        if any(entries.get(e["id"]) != e for e in original["entries"]):
+            raise ValueError("v2 must contain every v1 entry unchanged")
+        for field in ("run_seed", "assignment"):
+            if manifest[field] != original[field]:
+                raise ValueError("v2 must preserve v1 seeds and assignments")
+        for key, value in original["parameters"].items():
+            if manifest["parameters"].get(key) != value:
+                raise ValueError("v2 must preserve v1 parameter meanings")
+        registry[collection_hash(original)] = original
+    return registry
+
+
 def authorize_judge(manifest, market, model, level, entry_id=None, deviation_cohort=None, deviation_reason=None):
     if deviation_cohort:
         if not deviation_reason or not deviation_reason.strip():
@@ -125,9 +144,10 @@ def authorize_judge(manifest, market, model, level, entry_id=None, deviation_coh
     entry_id = entry_id or ("judge.qwen9b" if model == "qwen-9b" else "judge.gemma12b")
     entry = next((e for e in manifest["entries"] if e["id"] == entry_id and e["phase"] == "judge"), None)
     source_id = market.get("metadata", {}).get("collection_entry")
+    recorded = manifest_registry(manifest).get(market.get("metadata", {}).get("manifest_hash"))
     source = next((e for e in manifest["entries"] if e["id"] == source_id and e["phase"] == "auction"), None)
     if (entry is None or source is None or entry["judge_model"] != model or level not in entry["levels"] or
-            market["metadata"].get("manifest_hash") != collection_hash(manifest) or
+            recorded is None or not any(e == source for e in recorded["entries"]) or
             market.get("planned_rounds") not in [rounds_for(manifest, source), *source.get("allowed_round_extensions", [])] or
             market["metadata"].get("deviation_cohort") is not None or
             market["market_index"] not in indices_for(manifest, source) or

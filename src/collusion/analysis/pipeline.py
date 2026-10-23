@@ -13,6 +13,7 @@ from .inference import (auc, block_weights, bootstrap_auc, bootstrap_mean, estim
                         exact_rate, localisation, primary_test)
 from .market import LABELS, PAIRS, analyze_market, pooled_fingerprint
 from .probes import analyze_probes
+from .addendum import analyze_addendum
 
 
 def clean(value):
@@ -103,8 +104,15 @@ def _validate_matches(markets, cells):
 
 def _attach_judges(markets, judgments, manifest=None):
     """Keep failures in the result and attach only raw successfully parsed scores."""
+    seen = set()
     for judgment in judgments:
-        key = tuple(judgment[k] for k in ("cohort", "cell", "market_index"))
+        entry = next((e for e in (manifest or {}).get("entries", []) if e.get("id") == judgment["cell"]), {})
+        canonical = entry.get("analysis_cell", judgment["cell"])
+        key = (judgment["cohort"], canonical, judgment["market_index"])
+        judge_key = (*key, judgment["model"], judgment["level"], judgment["prefix"], judgment["mask"])
+        if judge_key in seen:
+            raise ValueError("multiple judgments for one canonical market/view; no answer selection")
+        seen.add(judge_key)
         if key not in markets:
             raise ValueError("judge refers to undeclared/unavailable market")
         if manifest and manifest.get("entries") and judgment["cohort"] == "registered":
@@ -142,6 +150,8 @@ def _table_row(cell, eligible, all_markets, prefix, mode, level, detector, union
            "uncollected": len(cell["market_indices"]) - len(all_markets),
            "ineligible": sum(not m["eligible"] for m in all_markets), "eligible": len(eligible),
            "coverage": len(rows), "flow_separate_E1": condition == "E1"}
+    row["collection_status"] = ("complete" if len(all_markets) == len(cell["market_indices"]) and all(
+        m["observed_rounds"] == 200 for m in all_markets) else "incomplete or cancelled; partial estimate")
     for label in LABELS:
         row["label:" + label] = sum(view["designated_label"]["label"] == label for _, view in rows)
     row["label:unavailable"] = len(eligible) - len(rows)
@@ -189,6 +199,17 @@ def analyze_collection(markets, manifest, *, workers=1, n_perm=999, n_boot=10000
         raise ValueError("development analysis requires explicit offline provenance")
     cells = manifest["cells"]
     _validate_matches(markets, cells)
+    if manifest.get("manifest_version") == "collection_v2":
+        for name in ("LX", "LY", "LZ"):
+            for original in (m for m in markets if m.cell == "lookalike." + name and m.cohort == "registered"):
+                twin = next((m for m in markets if m.key == (original.cohort, original.cell + "-swap", original.index)), None)
+                if twin is not None:
+                    for field in ("role_seats", "labels", "strong_seats"):
+                        if original.assignment[field] != twin.assignment[field]:
+                            raise ValueError("A2 twin assignment mismatch")
+                    n = min(len(original.costs), len(twin.costs))
+                    if not np.array_equal(original.costs[:n], twin.costs[:n]):
+                        raise ValueError("A2 twin costs differ")
     results = _parallel(analyze_market, [(m, n_perm, prefixes, sensitivity) for m in markets], workers)
     market_seconds = time.perf_counter() - started
     if progress:
@@ -320,6 +341,7 @@ def analyze_collection(markets, manifest, *, workers=1, n_perm=999, n_boot=10000
                   "judgments": list(judgments), "judge_comparisons": judge_comparisons,
                   "judge_status": "supplied" if judgments else "unavailable: no judgments supplied",
                   "probes": probe_results, "bootstrap": bootstrap,
+                  "addendum": analyze_addendum(lookup, manifest, n_boot=n_boot),
                   "runtime": {"market_analysis_seconds": market_seconds, "total_seconds": time.perf_counter() - started,
                               "markets": len(markets), "workers": workers}})
 

@@ -366,6 +366,11 @@ Z = Ministral-3-8B; 20 markets each (0-19), 200 rounds; seats and labels from th
 (`results/llm/pilot_qwen9b_v5/pilot_report.json`, operations figure, projection) and call counts of the running core
 cells. The commit that adds `experiments/manifests/collection_v2.json` and the code implementing A1-A3 records the
 manifest hash and is made before any addition is collected and before any LLM outcome statistic is computed.
+  Recorded: `collection_v2.json` hash `a63ef1040a022c4d6a190fde1ae34dafdfefb13bd1626bdb57f19cdf2488a4ff`
+  (computed by `collusion.llm.collection.collection_hash`); `collection_v1.json` unchanged; 14 pre-change request
+  hashes reproduced by `tests/fixtures/frozen_v1_requests.json`. Null check of the A2 test on scripted cohorts
+  (2,000 cohorts, 99,999 swaps): endpoint rejection rates 4.25-5.70 %, Holm family rate 4.05 %
+  (`results/analysis_dev/addendum_v2/`).
 
 ## Deviations
 

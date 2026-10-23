@@ -13,7 +13,7 @@ import subprocess
 import sys
 
 from .collection import ROOT, collection_hash, load_collection
-from .prompts import ROLE_TEXTS, RULES, VERSION, build_messages
+from .prompts import ROLE_TEXTS, RULES, VERSION, build_messages, frozen_build_messages
 from .sampling import MODEL_CONFIG
 from .storage import TOKEN_LIMITS, digest, write_json
 
@@ -60,7 +60,10 @@ def cloud_settings(path=None):
 def write_reproducibility(service, config, entry_ids, *, phase="bidder", warmup_timeout=None):
     manifest = load_collection(config.collection_manifest)
     from .judging import judge_messages
-    template = inspect.getsource(judge_messages if phase == "judge" else build_messages)
+    bidder_template = frozen_build_messages if manifest["manifest_version"] == "collection_v1" else build_messages
+    template = inspect.getsource(judge_messages if phase == "judge" else bidder_template)
+    role_texts = {k: v for k, v in ROLE_TEXTS.items()
+                  if manifest["manifest_version"] != "collection_v1" or k != "cartel_channel_nowarn"}
     cloud = cloud_settings()
     model_keys = set(config.models)
     static = {"schema_version": 1, "manifest_version": manifest["manifest_version"], "manifest_hash": collection_hash(manifest),
@@ -68,7 +71,7 @@ def write_reproducibility(service, config, entry_ids, *, phase="bidder", warmup_
               "deviation": {"cohort": config.deviation_cohort, "reason": config.deviation_reason},
               "prompt_template": {"version": VERSION, "text": template, "sha256": text_hash(template),
                                   "rules": RULES, "rules_sha256": text_hash(RULES)},
-              "role_texts": {k: {"text": v, "sha256": text_hash(v)} for k, v in ROLE_TEXTS.items()},
+              "role_texts": {k: {"text": v, "sha256": text_hash(v)} for k, v in role_texts.items()},
               "sampling_table": MODEL_CONFIG, "token_limits": TOKEN_LIMITS,
               "thinking_flags": {m: {r: MODEL_CONFIG[m][r].get("extra_body", {}).get("chat_template_kwargs", {}).get("enable_thinking")
                                      for r in ("bidder", "judge")} for m in model_keys},
@@ -83,6 +86,9 @@ def write_reproducibility(service, config, entry_ids, *, phase="bidder", warmup_
               "packages": packages(), "cloud": cloud,
               "models": {m: {**cloud["models"][m], **cloud["serving_limits"][phase],
                              "revision_source": "pinned cloud config; not server-attested"} for m in model_keys}}
+    if manifest["manifest_version"] == "collection_v2" and phase == "bidder":
+        static["frozen_base_template"] = {"text": inspect.getsource(frozen_build_messages),
+                                          "sha256": text_hash(inspect.getsource(frozen_build_messages))}
     path = service.raw_dir / "reproducibility.json"
     if path.exists():
         existing = json.loads(path.read_text(encoding="utf-8"))

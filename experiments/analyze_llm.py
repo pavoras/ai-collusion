@@ -18,6 +18,7 @@ import re
 from collusion.analysis import analyze_collection, load_collection, operational_report, write_results
 from collusion.analysis.development import make_development_collection, save, size_check
 from collusion.analysis.io import load_judges
+from collusion.analysis.addendum import placement_size_check
 from collusion.analysis.probes import load_probes
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -47,6 +48,31 @@ def figure(output, result):
 def main(args):
     if args.quick and not args.dev:
         raise ValueError("--quick is restricted to offline development")
+    if args.addendum_size_repetitions:
+        if not args.dev:
+            raise ValueError("addendum size simulation is development only")
+        output = DEV / "addendum_v2"
+        output.mkdir(parents=True, exist_ok=True)
+        check = placement_size_check(args.addendum_size_repetitions, n_swaps=1999 if args.quick else 99999)
+        save(output / "placement_size.json", check)
+        save(output / f"placement_size_{check['n_swaps']}_swaps.json", check)
+        import matplotlib
+        matplotlib.use("Agg")
+        import matplotlib.pyplot as plt
+        from collusion import plotting
+        plotting.apply_style()
+        fig, ax = plt.subplots(figsize=(7, 3.5), layout="constrained")
+        rates = check["endpoint_size"]
+        ax.errorbar(range(7), [r["estimate"] for r in rates],
+                    yerr=[[r["estimate"] - r["low"] for r in rates], [r["high"] - r["estimate"] for r in rates]],
+                    fmt="o", color=plotting.BLUE, label="Exchangeable fake cell/twin scores, 95% intervals")
+        ax.axhline(.05, color=plotting.ORANGE, linestyle="--", label="Nominal 5%")
+        ax.set(xlabel="Pre-specified endpoint", ylabel="Rejection rate", xticks=range(7))
+        ax.legend()
+        fig.savefig(output / "placement_size.png")
+        plt.close(fig)
+        print(json.dumps(check, indent=2))
+        return
     if args.dev:
         output = DEV / ("quick" if args.quick else "full_core")
         manifest_path = make_development_collection(output / "inputs", quick=args.quick, include_fake=args.quick)
@@ -95,6 +121,8 @@ if __name__ == "__main__":
     parser.add_argument("--analysis-freeze-commit")
     parser.add_argument("--name", default="registered_v2")
     parser.add_argument("--size-repetitions", type=int, default=0)
+    parser.add_argument("--addendum-size-repetitions", type=int, default=0,
+                        help="Only run the seeded exchangeable-cell/twin offline size simulation")
     options = parser.parse_args()
     if options.size_repetitions and not options.dev:
         parser.error("size simulation is development only")

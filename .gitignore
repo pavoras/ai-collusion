@@ -19,3 +19,4 @@ results/analysis_dev/*/inputs/
 results/analysis_dev/*.log
 results/auction_scripted/*.log
 results/analysis_dev/*/results.json
+results/analysis_dev/addendum_v2/dry_runs*/

@@ -1,0 +1,88 @@
+{
+  "files": [
+    {
+      "file": "experiments/analyze_llm.py",
+      "added": 28,
+      "removed": 0,
+      "net": 28
+    },
+    {
+      "file": "experiments/run_llm.py",
+      "added": 14,
+      "removed": 3,
+      "net": 11
+    },
+    {
+      "file": "src/collusion/analysis/io.py",
+      "added": 30,
+      "removed": 4,
+      "net": 26
+    },
+    {
+      "file": "src/collusion/analysis/pipeline.py",
+      "added": 23,
+      "removed": 1,
+      "net": 22
+    },
+    {
+      "file": "src/collusion/llm/collection.py",
+      "added": 21,
+      "removed": 1,
+      "net": 20
+    },
+    {
+      "file": "src/collusion/llm/projection.py",
+      "added": 73,
+      "removed": 3,
+      "net": 70
+    },
+    {
+      "file": "src/collusion/llm/prompts.py",
+      "added": 16,
+      "removed": 1,
+      "net": 15
+    },
+    {
+      "file": "src/collusion/llm/reproducibility.py",
+      "added": 9,
+      "removed": 3,
+      "net": 6
+    },
+    {
+      "file": "src/collusion/llm/runner.py",
+      "added": 9,
+      "removed": 4,
+      "net": 5
+    },
+    {
+      "file": "experiments/manifests/collection_v2.json",
+      "added": 1700,
+      "removed": 0,
+      "net": 1700
+    },
+    {
+      "file": "src/collusion/analysis/addendum.py",
+      "added": 255,
+      "removed": 0,
+      "net": 255
+    },
+    {
+      "file": "tests/test_addendum_v2.py",
+      "added": 338,
+      "removed": 0,
+      "net": 338
+    },
+    {
+      "file": "tests/fixtures/frozen_v1_requests.json",
+      "added": 112,
+      "removed": 0,
+      "net": 112
+    }
+  ],
+  "totals": {
+    "files": 13,
+    "added": 2628,
+    "removed": 20,
+    "net": 2608
+  }
+}

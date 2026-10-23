@@ -16,7 +16,7 @@ No filename inference, answer selection, probability renormalisation or imputati
 is performed. Missing judgments are unavailable; supplied failures are retained.
 """
 
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 import json
 from pathlib import Path
 
@@ -217,6 +217,8 @@ def load_collection(root, manifest_path, *, legacy_fake=False):
     root, manifest_path = Path(root), Path(manifest_path)
     manifest = read_json(manifest_path)
     cells = adapt_collection_manifest(manifest)
+    from collusion.llm.collection import manifest_registry
+    registry = manifest_registry(manifest)
     records, seen = [], set()
     # A run index is explicit: directories outside it are never searched.
     run_index = read_json(root / "analysis_runs.json")
@@ -264,14 +266,29 @@ def load_collection(root, manifest_path, *, legacy_fake=False):
         endpoints = metadata.get("identity", {}).get("endpoints", metadata.get("endpoints", {}))
         offline = metadata.get("data_kind") in ("scripted", "fake") or (endpoints and all(
             e.startswith("fake://") for e in endpoints.values()))
+        if offline and "data_kind" not in metadata:
+            metadata["data_kind"] = "fake"
         if legacy_fake and not offline:
             raise ValueError("legacy assignment adapter is restricted to verified offline data")
         for path in sorted(directory.glob("market_*.json")):
-            record = compact_record(read_json(path), metadata, cell, legacy_fake=legacy_fake)
+            data = read_json(path)
+            if "entries" in manifest and cell["cohort"] == "registered":
+                compact_hash = data.get("metadata", {}).get("manifest_hash")
+                run_hash = metadata.get("identity", {}).get("manifest_hash")
+                recorded = registry.get(compact_hash)
+                if recorded is None or run_hash != compact_hash:
+                    raise ValueError("collection manifest hash mismatch or missing")
+                if any(m.get("collection_entry") != cell["id"] for m in (
+                    data.get("metadata", {}), metadata.get("identity", {}))):
+                    raise ValueError("market/run collection entry mismatch")
+                declared = next((c for c in adapt_collection_manifest(recorded) if c["id"] == cell["id"]), None)
+                if declared is None or data["market_index"] not in declared["market_indices"]:
+                    raise ValueError("market not declared by its recorded manifest")
+            record = compact_record(data, metadata, cell, legacy_fake=legacy_fake)
             compact_meta = record.metadata.get("metadata", {})
             identity = metadata.get("identity", {})
             if cell["cohort"] == "registered":
-                if any(m.get("manifest_hash") not in (None, digest(manifest)) for m in (compact_meta, identity)):
+                if any(m.get("manifest_hash") is not None and m["manifest_hash"] not in registry for m in (compact_meta, identity)):
                     raise ValueError("collection manifest hash mismatch")
                 if any(m.get("collection_entry") not in (None, cell["id"]) for m in (compact_meta, identity)):
                     raise ValueError("market/run collection entry mismatch")
@@ -291,11 +308,20 @@ def load_collection(root, manifest_path, *, legacy_fake=False):
                 raise ValueError("deviation cohort cannot be analysed as the registered cohort")
             if "run_seed" in manifest and not recorded_cohort and config.get("seed") != manifest["run_seed"]:
                 raise ValueError("run seed disagrees with collection manifest")
+            if cell.get("analysis_cell"):
+                original = next(c for c in cells if c["id"] == cell["analysis_cell"] and c["cohort"] == cell["cohort"])
+                record = replace(record, cell=original["id"], control=original["control"])
             if record.key in seen:
                 raise ValueError("duplicate market in collection")
             seen.add(record.key)
             records.append(record)
-    return sorted(records, key=lambda m: m.key), {**manifest, "cells": cells, "sha256": digest(manifest)}
+    merged = [dict(c) for c in cells if not c.get("analysis_cell")]
+    for extension in (c for c in cells if c.get("analysis_cell")):
+        original = next(c for c in merged if (c["cohort"], c["id"]) == (extension["cohort"], extension["analysis_cell"]))
+        if set(original["market_indices"]) & set(extension["market_indices"]):
+            raise ValueError("overlapping breadth extension")
+        original["market_indices"] = sorted(original["market_indices"] + extension["market_indices"])
+    return sorted(records, key=lambda m: m.key), {**manifest, "cells": merged, "sha256": digest(manifest)}
 
 
 def operational_report(markets, manifest):

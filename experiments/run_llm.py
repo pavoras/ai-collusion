@@ -17,7 +17,7 @@ from collusion.llm.backend import BackendError
 from collusion.llm.cli import add_backend_args, make_service, plot_probe, save_summary, telemetry
 from collusion.llm.probes import frozen_draw, partner_cost_draw
 from collusion.llm.pilot import PilotLimits, run_pilot
-from collusion.llm.projection import projection_table
+from collusion.llm.projection import projection_table, budget_projection, save_budget_projection
 from collusion.llm.runner import CONDITIONS, RunConfig, RunLock, run
 from collusion.llm.storage import BudgetStop, UncertainCall, digest, seed_for, write_json
 from collusion.llm.collection import ROLES, authorize, authorize_probe, collection_hash, entry_for, indices_for, load_collection, rounds_for
@@ -70,9 +70,18 @@ async def probes(args, service, probe_config):
 
 
 async def main(args):
+    if args.project_calls_per_hour is not None:
+        projection = budget_projection(args.project_calls_per_hour, overhead_usd=args.projection_overhead_usd,
+                                       judge_work_factor=args.judge_work_factor)
+        output = Path(args.results) / args.run
+        save_budget_projection(output, projection)
+        print(json.dumps(projection, indent=2))
+        return 0
     manifest = load_collection(args.collection_manifest)
     args.seed = manifest["run_seed"] if args.seed is None else args.seed
     selected = next((e for e in manifest["entries"] if e["id"] == args.entry), None) if args.entry else None
+    args.market_start = args.market_start if args.market_start is not None else (indices_for(manifest, selected)[0]
+        if selected and "market_indices" in selected else 0)
     args.condition = args.condition or (selected["condition"] if selected and selected["phase"] == "auction" else "N0")
     args.cartel_position = args.cartel_position or (selected.get("position", "strong_strong") if selected else "strong_strong")
     if args.models is None:
@@ -149,7 +158,7 @@ async def main(args):
                        "invalid_bid_rate": invalid / total if total else None,
                        "bid_min": min(valid) if valid else None, "bid_max": max(valid) if valid else None,
                        "bid_spread": max(valid) - min(valid) if valid else None,
-                       "planned_calls_without_retries": args.markets * args.rounds * (6 if args.condition in ("C1", "M2", "C1-XX", "C1-XY") else 2 if args.condition == "P0" else 4)}
+                       "planned_calls_without_retries": args.markets * args.rounds * (6 if args.condition in ("C1", "C1-NW", "M2", "C1-XX", "C1-XY") else 2 if args.condition == "P0" else 4)}
             save_summary(service.root / "llm" / args.run, summary, markets)
         print(json.dumps(summary, indent=2))
         print(f"Raw logs: {service.raw_dir}\nAnalysis: {service.root / 'llm' / args.run}")
@@ -167,7 +176,9 @@ def parser():
     p.add_argument("--models", nargs="+", help="One model, or four models in strength-role order")
     p.add_argument("--rounds", type=int)
     p.add_argument("--markets", type=int, help="Per condition: default 1, or 20 for --pilot")
-    p.add_argument("--market-start", type=int, default=0)
+    p.add_argument("--market-start", type=int)
+    p.add_argument("--project-calls-per-hour", type=float, help="Offline v2 branch projection from measured operational rate")
+    p.add_argument("--projection-overhead-usd", type=float, help="Measured/allowed startup and idle USD; required for branch choice")
     p.add_argument("--market-concurrency", type=int, help="Default 4, or all requested markets for --pilot")
     p.add_argument("--max-minutes", type=float, default=75, help="Cumulative active pilot wall time; in-flight calls are drained")
     p.add_argument("--max-p95-seconds", type=float, default=60)

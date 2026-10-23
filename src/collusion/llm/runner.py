@@ -9,14 +9,15 @@ import numpy as np
 
 from collusion.games import auction
 from .backend import BackendError
-from .prompts import Context, VERSION, build_messages
+from .prompts import Context, ROLE_TEXTS, VERSION, build_messages
 from .sampling import sampling_for
 from .collection import DEFAULT_MANIFEST, authorize, collection_hash, load_collection, resolve_market
-from .reproducibility import write_reproducibility
+from .reproducibility import text_hash, write_reproducibility
 from .scripted import cartel_bids
 from .storage import BudgetStop, UncertainCall, digest, seed_for, write_json
 
-CONDITIONS = ("N0", "P0", "C1", "C2", "D", "M2", "E1", "C1-XX", "C1-XY", "H-XYZZ")
+CONDITIONS = ("N0", "P0", "C1", "C2", "D", "M2", "E1", "C1-XX", "C1-XY", "H-XYZZ", "C1-NW",
+              "LX", "LX-swap", "LY", "LY-swap", "LZ", "LZ-swap")
 
 
 @dataclass(frozen=True)
@@ -100,6 +101,8 @@ def role_for(config, seat):
     if seat in config.pair:
         if config.condition == "P0":
             return "scripted"
+        if config.condition == "C1-NW":
+            return "cartel_channel_nowarn"
         if config.condition in ("C1", "M2", "C1-XX", "C1-XY"):
             return "cartel_channel"
         if config.condition == "C2":
@@ -169,7 +172,7 @@ async def _market(config, service, index, out, control=None):
             if control is not None:
                 control.check()
             contexts = [context_for(config, state, costs, t, seat) for seat in range(4)]
-            channel = [s for s in range(4) if contexts[s].role == "cartel_channel"]
+            channel = [s for s in range(4) if contexts[s].role in ("cartel_channel", "cartel_channel_nowarn")]
             private = [None] * 4
 
             async def decide(seat, step):
@@ -178,6 +181,8 @@ async def _market(config, service, index, out, control=None):
                             "role": c.role, "context": c.data(), "prompt_version": VERSION,
                             "label": config.labels[seat], "firm_type": "strong" if seat in config.strong else "fringe",
                             "collection_entry": config.entry_id, "assignment_hash": digest(config.assignment)}
+                if c.role == "cartel_channel_nowarn":
+                    metadata["role_text_hash"] = text_hash(ROLE_TEXTS[c.role])
                 return await service.ask(config.models[seat], build_messages(c, step),
                                          seed_for(config.seed, index, t + 1, seat, step), step, metadata)
 
