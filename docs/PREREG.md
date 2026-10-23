@@ -80,6 +80,11 @@ Repeated procurement auction (DESIGN.md v4):
   | Mixed | as in section 1 | D, C1-XX, H-XYZZ, C1-XY, 0-9 each |
   | Probes, judges | | sections 9 and 8 |
 
+- **Why 20 matched pairs:** in the scripted power study for the primary test (results/auction_power/confirmatory;
+  1,000 simulated experiments per cell, 999 bias permutations, 1,999 label swaps), n = 20 rejected in every
+  experiment for SS cartels with compliance q ∈ {1, .5, .25}, with iid and with shared-history honest firms (95 %
+  Monte Carlo interval 99.6-100 %). The size under N0 versus N0 was 3.1-4.5 % at L2. These are scripted planning
+  numbers, not a forecast for LLMs.
 - **Budget ladder:** each step removes cells from the previous branch.
   - B1: without C1-FF.
   - B2: N0 core only 0-19.
