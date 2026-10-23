@@ -62,16 +62,16 @@ def write_json(path, value):
         handle.write(json.dumps(value, indent=2, ensure_ascii=False, allow_nan=False) + "\n")
         handle.flush()
         os.fsync(handle.fileno())
-    for retry in range(6):
+    for retry in range(12):
         try:
             os.replace(temporary, path)
             break
         except PermissionError as error:
-            # Windows indexers/virus scanners can briefly deny replacement.
+            # Windows indexers/virus scanners or a concurrent reader can briefly deny replacement (about 9 s budget).
             # Retry only this local operation; never re-dispatch a model call.
-            if getattr(error, "winerror", None) not in (5, 32) or retry == 5:
+            if getattr(error, "winerror", None) not in (5, 32) or retry == 11:
                 raise
-            time.sleep(.01 * 2**retry)
+            time.sleep(min(2., .01 * 2**retry))
 
 
 class CallService:
