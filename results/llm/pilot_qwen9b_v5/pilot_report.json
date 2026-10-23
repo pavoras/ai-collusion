@@ -1,0 +1,55 @@
+{
+  "status": "complete",
+  "stop_reason": null,
+  "measurement_source": "live_qwen9b",
+  "calls": 24029,
+  "new_calls": 24029,
+  "market_transport_attempts": 24028,
+  "warmup_calls_completed": 1,
+  "retries": 68,
+  "validation_retries": 68,
+  "transport_retries": 0,
+  "cache_hits": 40,
+  "unique_answer_responses": 24028,
+  "invalid_answers": 79,
+  "invalid_answer_rate": 0.0032878308639920093,
+  "transport_errors": 0,
+  "transport_error_rate": 0.0,
+  "bid_histogram_llm_only": {
+    "strong": {
+      "2": 5044,
+      "3": 2789,
+      "4": 163,
+      "5": 0,
+      "6": 0,
+      "7": 0
+    },
+    "fringe": {
+      "2": 48,
+      "3": 5073,
+      "4": 4469,
+      "5": 3731,
+      "6": 2286,
+      "7": 386
+    }
+  },
+  "latency_p50_seconds": 11.70710764999967,
+  "latency_p95_seconds": 12.324654384952735,
+  "prompt_tokens": 10541235,
+  "completion_tokens": 244522,
+  "cached_prompt_tokens": null,
+  "token_usage_missing_calls": 0,
+  "cold_start_seconds": 6.042840700014494,
+  "wall_seconds": 2410.657561299973,
+  "load_seconds": 2404.038288300042,
+  "calls_per_hour_under_load": 35981.456876532095,
+  "thresholds": {
+    "gate_from_round": 10,
+    "max_invalid_rate": 0.05,
+    "max_transport_error_rate": 0.02,
+    "max_p95_seconds": 60.0,
+    "max_calls": 26000,
+    "max_wall_minutes": 75.0
+  },
+  "definitions": "Invalid rate counts unique received answers (including validation retries/cache reuse); transport rate counts backend attempts. Tokens/latencies/throughput exclude warm-up and cache hits. Histogram includes valid LLM bids only. Wall budget persists across resumes, excludes downtime, stops dispatch and drains in-flight calls."
+}

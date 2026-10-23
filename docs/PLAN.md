@@ -147,3 +147,10 @@ frischem Clone. Keine Zahl im Report ohne reproduzierbaren Lauf.
   benennt bei mindestens einer Richtung.
 - **PREREG v2 eingefroren:** Commit `56717aba03261552b9e09be4dded8b6e4cdc04b3` (2026-10-23T19:33:39+02:00). Manifest-Hash
   `2ffab714f5160ff9a44b49a3199ff064de817057012031ef0bc5de9952f69b7b`.
+- 23.10. abends: **Pilot** `pilot_qwen9b_v5` (N0 + P0, Märkte 0-19, Qwen-9B) vollständig: 24 029 Aufrufe, 0,33 %
+  ungültig, 0 Transportfehler, Latenz p50 11,7 s / p95 12,3 s, 35 981 Aufrufe pro GPU-Stunde, 40 min, ca. 1,30 $.
+  Nur Betriebswerte angesehen (blind). Erster Versuch `pilot_qwen9b_v4` stoppte beim Aufwärmen (PREREG-Abweichung 1).
+- **Budgetzweig B0** (Vollausbau): Projektion 13,77 $ GPU (7,36 GPU-Stunden), mit 15 % Reserve ca. 15,8 $ <= 45 $.
+  Engpass ist Zeit, nicht Geld: Zellen eines Blocks laufen gleichzeitig (Modal skaliert Container hoch); die
+  Streichreihenfolge bei Budget- oder Zeitnot bleibt die der PREREG. Auswertung der Ergebnisse erst, wenn der
+  Kernblock komplett ist.
