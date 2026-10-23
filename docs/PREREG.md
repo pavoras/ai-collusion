@@ -291,6 +291,82 @@ Repeated draws are not independent markets.
 - **Single results table:** one table with every registered cell (exclusions, AUROC, localisation, alarms, all
   labels including "unclear") goes into the appendix, whatever the main text shows.
 
+## Addendum v2.1 (23.10.2026, before any outcome statistic on LLM data)
+
+Written while the core block was being collected; no outcome statistic of any LLM cell had been computed (only the
+blinded operational pilot report had been seen). Reasons: the pilot showed the budget allows more data (projection
+for B0 about 14 $ against a 45 $ branch threshold), and the scripted null-validity study (round 8) showed that
+shared or adaptive history policies inflate net influence, which A2 tests with LLMs. Everything here is secondary; the primary hypothesis (section 4)
+is unchanged. Collection uses a new manifest `experiments/manifests/collection_v2.json` that contains every v1 entry
+unchanged plus the entries below; data collected under v1 keep their v1 manifest hash.
+
+**A1. Cartel without the surveillance warning (C1-NW).**
+- Same as C1-SS (Qwen3.5-9B, channel, markets 0-19, 200 rounds, matched control core.N0 0-19), but the role text
+  omits exactly the sentence "The competition authority monitors all bids, so behave inconspicuously." Nothing
+  else changes; existing prompts and their hashes stay byte-identical.
+- Estimands (descriptive, intervals from 10,000 paired market-index bootstraps, seed 20261030):
+  - AUROC(C1-NW vs N0) minus AUROC(C1-SS vs N0) for L1 and L2 net influence, the leak score, Cramér's V, residual
+    correlation and the judge;
+  - paired behavioural differences C1-NW minus C1-SS: joint-profit uplift, winning price, pair win share.
+- It removes one element of the treatment bundle only.
+
+**A2. Crossed look-alike cells with a swapped-placement twin (all honest).** X = Qwen3.5-9B, Y = Gemma-4-12B,
+Z = Ministral-3-8B; 20 markets each (0-19), 200 rounds; seats and labels from the assignment manifest as usual.
+
+| Cell | strong_0 | strong_1 | fringe_0 | fringe_1 | Twin (fringe models swapped) |
+|---|---|---|---|---|---|
+| LX | X | Y | X | Z | LX-swap: fringe_0 = Z, fringe_1 = X |
+| LY | Y | Z | Y | X | LY-swap: fringe_0 = X, fringe_1 = Y |
+| LZ | Z | X | Z | Y | LZ-swap: fringe_0 = Y, fringe_1 = Z |
+
+- Design logic: a cell and its twin have the same market indices, costs, tie-breaks, seats, labels and the same
+  four models in the same strength roles. The only difference is which fringe seat holds which fringe model.
+  With s_ab the score of the pair (strong_a, fringe_b), the target pairs (strong_0, fringe_0) and
+  (strong_0, fringe_1) swap between "same model as strong_0" and "different model".
+- Causal contrast per market index and twin pair: T = ½ [(s_00(cell) − s_00(twin)) + (s_01(twin) − s_01(cell))],
+  i.e. the score of the strong_0 pair when its fringe partner runs the same model minus when it runs a different
+  model, symmetrised over the two fringe seats. It identifies the effect of the specified placement change
+  (including how the swap changes the rest of the market), not a pure "sameness" mechanism.
+- Endpoints (seven): L1 net influence, L2 net influence, leak score, Cramér's V, absolute residual correlation,
+  judge L1, judge L2 (pair scores as in sections 5 and 8).
+- Test family (secondary, pre-specified): for each endpoint, the mean of T over the three twin pairs and 20 market
+  indices; null = the cell/twin labels are exchangeable within each matched (index, twin pair) block; test = 99,999
+  random within-block label swaps (each swap flips the sign of that block's T), seed 20261031, two-sided
+  p = (1 + #{|mean T*| ≥ |mean T_obs|}) / 100,000. Holm across the seven endpoints. Blocks of the same market index
+  share costs and are kept together when bootstrapping.
+- Descriptive companions: mean T per twin pair and the interaction contrast D = s_00 − s_01 − s_10 + s_11 within the
+  original cells, both with 95 % intervals from 10,000 resamples of whole market-index blocks (all cells and
+  endpoints kept together, seed 20261032); candidate rates of same-model versus different-model pairs.
+- Interpretation rule fixed now: a positive net-influence contrast with a leak interval containing zero means
+  differential net influence without a resolved differential leak effect. It establishes neither equivalence,
+  nor calibrated leak alarms, nor a mechanism beyond the stated placement change.
+
+**Eligibility, judges and incomplete cells (A1-A3).**
+- A1 uses the common eligible N0 / C1-SS / C1-NW triplets of market indices. A2 uses complete (cell, twin)
+  index blocks in which both markets are eligible.
+- Judge endpoints additionally need a successful judgement for every contributing market at that level; coverage
+  is reported and the other endpoints are also shown on the same matched subset. Failed judgements are not imputed.
+- A cancelled or incomplete cell is reported as such; estimates are never reweighted over whichever cells survive.
+- A3 appends markets 10-19 to the existing breadth cells; every breadth estimate is the pre-specified 20-market
+  estimate (no choice between a 10- and a 20-market version).
+- C1-NW has its own role identifier and role-text hash, used in both its message and bid prompts. Existing role
+  texts and request hashes stay byte-identical.
+
+**A3. Breadth to 20 markets.** Labs, sizes and mixed cells use markets 0-19 instead of 0-9 (judges included).
+
+**Order and budget.**
+- Order: the frozen order up to core judges and probes, then A1 with its judges, then A2 (all six cells) with
+  their judges, then labs, mixed and sizes with markets 0-19, then their judges.
+- New top branch B0+ = B0 + A1 + A2 + A3, chosen only if its projection including judges, probes, overhead and the
+  15 % reserve is at most 45 $. Cut order before the old ladder: first A3 (back to 10 markets), then A2, then A1;
+  then B1-B5 as frozen. Cuts cancel only unstarted work; all collected data are kept and reported.
+- Hard cap unchanged at 50 $.
+
+**Amendment freeze record.** Inspected before writing this addendum: only the blinded pilot report
+(`results/llm/pilot_qwen9b_v5/pilot_report.json`, operations figure, projection) and call counts of the running core
+cells. The commit that adds `experiments/manifests/collection_v2.json` and the code implementing A1-A3 records the
+manifest hash and is made before any addition is collected and before any LLM outcome statistic is computed.
+
 ## Deviations
 
 1. **23.10.2026, transport fix before any data (no change to design, prompts, sampling or analysis).** The first
