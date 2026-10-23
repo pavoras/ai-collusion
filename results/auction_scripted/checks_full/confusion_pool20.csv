@@ -1,0 +1,9 @@
+condition,truth,n_units,none,two-way,one-way j->i,one-way i->j,unclear
+honest_iid,none,20,14,0,0,0,6
+shared_fine,none,20,11,0,1,0,8
+decoy,none,20,13,0,0,0,7
+cartel_ss,two-way,20,0,20,0,0,0
+cartel_sf,two-way,20,0,20,0,0,0
+cartel_ff,two-way,20,0,20,0,0,0
+spy,one-way j->i,20,0,1,16,0,3
+one_way_cartel,one-way j->i,20,0,0,16,0,4

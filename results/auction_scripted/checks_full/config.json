@@ -1,0 +1,158 @@
+{
+  "seed": 20261024,
+  "quick": false,
+  "rounds": 200,
+  "primary_markets": 20,
+  "pool_size": 20,
+  "independent_pools": 20,
+  "n_perm": 999,
+  "bootstrap_markets": 399,
+  "bootstrap_n_perm": 99,
+  "market_index_start": 40000,
+  "strong_seats": [
+    0,
+    1
+  ],
+  "conditions": [
+    {
+      "name": "honest_iid",
+      "pair": [
+        0,
+        1
+      ],
+      "assigned_flow": "none",
+      "kwargs": {}
+    },
+    {
+      "name": "shared_fine",
+      "pair": [
+        0,
+        1
+      ],
+      "assigned_flow": "none",
+      "kwargs": {
+        "reactions": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "decoy",
+      "pair": [
+        0,
+        1
+      ],
+      "assigned_flow": "none",
+      "kwargs": {
+        "reactions": [
+          1,
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "cartel_ss",
+      "pair": [
+        0,
+        1
+      ],
+      "assigned_flow": "two-way",
+      "kwargs": {
+        "cartel": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "name": "cartel_sf",
+      "pair": [
+        0,
+        2
+      ],
+      "assigned_flow": "two-way",
+      "kwargs": {
+        "cartel": [
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "name": "cartel_ff",
+      "pair": [
+        2,
+        3
+      ],
+      "assigned_flow": "two-way",
+      "kwargs": {
+        "cartel": [
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "name": "spy",
+      "pair": [
+        0,
+        1
+      ],
+      "assigned_flow": "one-way j->i",
+      "kwargs": {
+        "spy": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "name": "one_way_cartel",
+      "pair": [
+        0,
+        1
+      ],
+      "assigned_flow": "one-way j->i",
+      "kwargs": {
+        "one_way": [
+          0,
+          1
+        ]
+      }
+    }
+  ],
+  "primary_state": "exact pre-round winning bid H, initial value 4",
+  "ablation_state": "three bins: 2-3, 4-5, 6-7",
+  "L1": "I(Bi;Bj|H); net ranks all six pairs, min of two net directions",
+  "L2": "Eq3, own states (Ci,H); leaks I(Bi;Cj|Ci,H)",
+  "null": "shuffle all bidders independently within (own cost,H), or H for L1; block by market in pools",
+  "significance": {
+    "family_level": 0.05,
+    "net_pairs": 6,
+    "leak_directions": 12
+  },
+  "classifier": {
+    "significant_p": 0.004166666666666667,
+    "absence_min_p": 0.2,
+    "absence_max_corrected_bits": 0.05,
+    "rule": "both significant: two-way; one significant and reverse absent: one-way with direction; both absent: none; otherwise unclear",
+    "justification": "5% family error over 12 directions; .2 guard requires weak null evidence, .05 bits is a fixed small practical margin (paper alpha scale); neither is fitted on these evaluations",
+    "warning": "absence is an operational guard, not a confidence bound or equivalence test; one-way labels cannot infer intent"
+  },
+  "pool_rate_design": "independent pools; primary markets are a prefix of the first pool, paired costs/tie streams across conditions",
+  "fingerprint_ci": "95% percentile bootstrap of whole primary markets, recomputing pooled MI and blocked null correction; common null draws, recentered to full-permutation point estimate",
+  "ranking_ties": "fractional top-rank credit; selected flow unclear on a tie",
+  "limitations": [
+    "adaptive history may invalidate exchangeability, even with exact H",
+    "20 primary markets give coarse rates and wide Wilson intervals",
+    "pooled mechanism power is secondary and uses additional independent markets",
+    "assigned two-way protocol does not imply both bids actually respond at every position",
+    "practical absence guard is heuristic; no claim of equivalence or causal intent",
+    "bootstrap null uses fewer permutations than endpoint tests; Monte Carlo CI error remains"
+  ]
+}

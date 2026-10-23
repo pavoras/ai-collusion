@@ -1,3 +1,5 @@
+from itertools import product
+
 import numpy as np
 import pytest
 
@@ -54,6 +56,53 @@ def test_two_way_exchange_has_two_leaks_and_no_conditional_action_term():
     assert incoming == pytest.approx(1)
     assert outgoing == pytest.approx(1)
     assert m.partial_influence(sj, si, si, sj) == pytest.approx(2)
+
+
+def test_exact_public_history_removes_fine_history_action_dependence():
+    h, ci, cj = np.array(list(product(range(2, 8), range(3), range(3)))).T
+    h, ci, cj = [np.tile(x, 10) for x in [h, ci, cj]]
+    ai = aj = (h - 2) % 2
+    exact = m.influence_decomposition(ai, aj, ci, cj, public_state=h)
+    coarse = m.influence_decomposition(ai, aj, ci, cj, public_state=(h - 2) // 2)
+    assert exact == pytest.approx([0, 0, 0], abs=1e-12)
+    assert coarse == pytest.approx([1, 0, 0], abs=1e-12)
+    assert m.partial_influence(ai, aj, ci, cj, public_state=h) == pytest.approx(sum(exact), abs=1e-12)
+    actions = np.column_stack([ai, aj, ci])
+    states = [ci, cj, ci]
+    direct = m.symmetric_permutation_test(actions, states, public_state=h, n_perm=19, rng=11)
+    manual = m.symmetric_permutation_test(actions, [np.column_stack([s, h]) for s in states], n_perm=19, rng=11)
+    assert np.allclose(direct.gamma, manual.gamma, equal_nan=True)
+    assert np.allclose(direct.null_mean, manual.null_mean, equal_nan=True)
+    assert direct.gamma_corrected[0, 1] == pytest.approx(0, abs=1e-12)
+    assert direct.p_value[0, 1] == 1
+
+
+def test_exact_public_history_retains_current_cost_leaks():
+    h, ci, cj = np.array(list(product(range(2, 8), range(3), range(3)))).T
+    parts = m.influence_decomposition(cj, ci, ci, cj, public_state=h)
+    assert parts == pytest.approx([0, np.log2(3), np.log2(3)], abs=1e-12)
+
+
+@pytest.mark.parametrize("p_in,p_out,incoming,outgoing,label", [
+    (.001, .001, .3, .3, "two-way"),
+    (.001, .5, .3, .01, "one-way j->i"),
+    (.5, .001, .01, .3, "one-way i->j"),
+    (.5, .5, .01, -.01, "none"),
+    (.001, .1, .3, .01, "unclear"),
+    (.001, .5, .3, .06, "unclear"),
+    (.01, .5, .3, .01, "unclear"),
+    (.2, .2, .05, .05, "none"),
+    (.05 / 12, .05 / 12, .3, .3, "two-way"),
+])
+def test_classification_has_explicit_unclear_and_absence_guard(p_in, p_out, incoming, outgoing, label):
+    assert m.classify_leaks(p_in, p_out, incoming, outgoing) == label
+
+
+def test_classification_invalid_values():
+    with pytest.raises(ValueError):
+        m.classify_leaks(np.nan, .5, .3, .1)
+    with pytest.raises(ValueError):
+        m.classify_leaks(-.1, .5, .3, .1)
 
 
 def test_own_state_determinism_is_preserved_by_symmetric_null():

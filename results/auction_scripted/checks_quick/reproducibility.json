@@ -1,0 +1,39 @@
+{
+  "mode": "quick",
+  "artifacts_checked": 14,
+  "mismatches": [],
+  "comparison": "SHA256 of CSV, PNG, config and canonical summary excluding elapsed_seconds; PDF metadata excluded",
+  "command": ".venv/Scripts/python experiments/auction_checks.py --quick",
+  "before": {
+    "config.json": "d330b2038c33da88499173d095bc9b4a66f55ce2d6a259b0d8e8bca89444c388",
+    "confusion_market.csv": "e466794818e37dbdae69184bb7b372dc47221ebb78b4fc7ba9a66aca48163e8b",
+    "confusion_pool20.csv": "551442ad437f8001b72785566367335f92c14b27875b5b2510258c86632180ab",
+    "confusion_selected_market.csv": "1ec8e609a3b8613533676319a849f4ed6a7b1edab6812a16ed73f54edfcc2a77",
+    "directional_tests.csv": "8da50081210e5e2805e89bf63ce35a4c31dcec28d549cf86983d35963697d6e9",
+    "false_alarms_v2.png": "01c1e360f57886fdb34d7514790945ccc71b2e51a5e788872044e87f565c4506",
+    "fingerprints_v2.csv": "2f25a2228e64cc9510d097895f399b4e684c429c9272ef6b14fdc76cc068d606",
+    "fingerprint_bootstrap.csv": "68689a7f638005b4b27862908f1804c5c40f0ef6b8ebe1601e007a144f8a2508",
+    "fingerprint_v2.png": "8891b1b433c5e83a35524bffe5969434114fd64107dc3f734115a7f252f0e046",
+    "market_and_pool_results.csv": "1941603d8c4307f855726676201ed7fca175b77f0c8e714e523f6029425835a5",
+    "occupancy.csv": "e7e7ba9c28b69b0587dcaf197b8b18d6eee273fd8ffe899f92316b2c9d2b6c4f",
+    "primary_rounds.csv": "c13bc4a0279dc6d12bc5aa79cc29551302b842237ee707c603f5d7de47e979d2",
+    "rates.csv": "f4e113d46c4e8d99af4070b4d1191e02225e74ee52fab25cd822817dcab46bf0",
+    "canonical_summary": "ce3bbb1f77ccd8658981e7836b2c19f19a695eb66d90ec0cb50c0de562905d7b"
+  },
+  "after": {
+    "config.json": "d330b2038c33da88499173d095bc9b4a66f55ce2d6a259b0d8e8bca89444c388",
+    "confusion_market.csv": "e466794818e37dbdae69184bb7b372dc47221ebb78b4fc7ba9a66aca48163e8b",
+    "confusion_pool20.csv": "551442ad437f8001b72785566367335f92c14b27875b5b2510258c86632180ab",
+    "confusion_selected_market.csv": "1ec8e609a3b8613533676319a849f4ed6a7b1edab6812a16ed73f54edfcc2a77",
+    "directional_tests.csv": "8da50081210e5e2805e89bf63ce35a4c31dcec28d549cf86983d35963697d6e9",
+    "false_alarms_v2.png": "01c1e360f57886fdb34d7514790945ccc71b2e51a5e788872044e87f565c4506",
+    "fingerprints_v2.csv": "2f25a2228e64cc9510d097895f399b4e684c429c9272ef6b14fdc76cc068d606",
+    "fingerprint_bootstrap.csv": "68689a7f638005b4b27862908f1804c5c40f0ef6b8ebe1601e007a144f8a2508",
+    "fingerprint_v2.png": "8891b1b433c5e83a35524bffe5969434114fd64107dc3f734115a7f252f0e046",
+    "market_and_pool_results.csv": "1941603d8c4307f855726676201ed7fca175b77f0c8e714e523f6029425835a5",
+    "occupancy.csv": "e7e7ba9c28b69b0587dcaf197b8b18d6eee273fd8ffe899f92316b2c9d2b6c4f",
+    "primary_rounds.csv": "c13bc4a0279dc6d12bc5aa79cc29551302b842237ee707c603f5d7de47e979d2",
+    "rates.csv": "f4e113d46c4e8d99af4070b4d1191e02225e74ee52fab25cd822817dcab46bf0",
+    "canonical_summary": "ce3bbb1f77ccd8658981e7836b2c19f19a695eb66d90ec0cb50c0de562905d7b"
+  }
+}

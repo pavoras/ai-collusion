@@ -1,0 +1,12 @@
+{
+  "checks": "passed",
+  "primary_rounds": 32000,
+  "market_and_pool_results": 480,
+  "directional_tests": 5760,
+  "bootstrap_replicates_per_condition": 399,
+  "paired_costs_across_conditions": true,
+  "null_corrections_and_classifications": true,
+  "bootstrap_intervals_match_saved_draws": true,
+  "test_result": "168 passed in 15.05s",
+  "test_command": "python -m pytest -q -p no:cacheprovider with workspace-local long-path basetemp"
+}

@@ -71,8 +71,49 @@ def test_spy_uses_only_victim_cost_and_has_optimal_bid():
         assert market.bids[t, 0] == a.best_bid(market.costs[t, 0], rivals)
 
 
+def test_exact_history_is_primary_and_coarse_history_is_explicit():
+    market = a.play(200)
+    assert np.array_equal(a.public_history(market), market.last_winning_bid)
+    assert np.array_equal(a.public_history(market, "coarse"), a.public_bin(market.last_winning_bid))
+    with pytest.raises(ValueError):
+        a.public_history(market, "missing")
+
+
+def test_one_way_sender_keeps_own_cost_policy_and_receiver_uses_joint_objective():
+    honest = a.play(200)
+    market = a.play(200, one_way=(0, 1))
+    assert np.array_equal(honest.costs, market.costs)
+    # There is no history response in this condition, so the sender is identical.
+    assert np.array_equal(honest.bids[:, 1], market.bids[:, 1])
+    assert np.array_equal(a.play(100, one_way=(0, 1)).bids, market.bids[:100])
+    assert not np.array_equal(honest.bids[:, 0], market.bids[:, 0])
+    for ci, cj in product(range(1, 4), repeat=2):
+        mask = (market.costs[:, 0] == ci) & (market.costs[:, 1] == cj)
+        expected = a.joint_response(ci, cj, [a.honest_distribution([3, 4, 5])] * 2,
+                                    a.honest_distribution([cj]))
+        assert np.all(market.bids[mask, 0] == expected)
+
+
+def test_joint_response_matches_exhaustive_settlement():
+    rng = np.random.default_rng(81)
+    pmfs = rng.dirichlet(np.ones(6), size=3)
+    profits = []
+    other = np.array(list(product(a.BIDS, repeat=3)))
+    probabilities = np.prod([pmfs[i, other[:, i] - 2] for i in range(3)], axis=0)
+    for bid in a.BIDS:
+        bids = np.column_stack([np.full(len(other), bid), other])
+        # Enumerate twelve tie uniforms: exact for all tie multiplicities 1..4.
+        total = np.zeros(len(other))
+        for tie in (np.arange(12) + .5) / 12:
+            _, payoff = a.settle(bids, np.tile([2, 3, 4, 5], (len(other), 1)), np.full(len(other), tie))
+            total += payoff[:, :2].sum(1) / 12
+        profits.append(total @ probabilities)
+    assert a.joint_response(2, 3, pmfs[1:], pmfs[0]) == a.BIDS[np.argmax(profits)]
+
+
 @pytest.mark.parametrize("kwargs", [{"q": -1}, {"n_rounds": 0}, {"strong": (0, 0)},
-                                   {"cartel": (0, 4)}, {"spy": (0, 1), "cartel": (2, 3)}])
+                                   {"cartel": (0, 4)}, {"spy": (0, 1), "cartel": (2, 3)},
+                                   {"one_way": (0, 0)}, {"one_way": (0, 1), "spy": (0, 1)}])
 def test_invalid_games(kwargs):
     with pytest.raises(ValueError):
         a.play(**kwargs)

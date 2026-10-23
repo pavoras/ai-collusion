@@ -244,8 +244,8 @@ def _conditional_entropy(actions, state, n_states, k):
 
 def _partial_components(a_i, a_j, s_i, s_j, n_i, n_j, k):
     """Eq. 3 and its three terms, including batches of shuffled actions."""
-    joint = s_i * n_j + s_j
-    counts = _counts(a_i, a_j, joint, n_i * n_j, k)
+    joint, n_joint = _encode_states(np.column_stack([s_i, s_j]), len(s_i))
+    counts = _counts(a_i, a_j, joint, n_joint, k)
     h_state = _entropy_counts(counts.sum(axis=(-2, -1)), (-1,))
     h_i_joint = _entropy_counts(counts.sum(axis=-1), (-2, -1)) - h_state
     h_j_joint = _entropy_counts(counts.sum(axis=-2), (-2, -1)) - h_state
@@ -256,34 +256,46 @@ def _partial_components(a_i, a_j, s_i, s_j, n_i, n_j, k):
     return action, h_i - h_i_joint, h_j - h_j_joint
 
 
-def _partial_inputs(actions_i, actions_j, states_i, states_j):
+def _add_public_state(state, public_state, n_rounds):
+    """Append shared history to an agent's private state, retaining exact labels."""
+    if public_state is None:
+        return state
+    history, _ = _encode_states(public_state, n_rounds)
+    if state is None:
+        return history
+    private, _ = _encode_states(state, n_rounds)
+    return np.column_stack([private, history])
+
+
+def _partial_inputs(actions_i, actions_j, states_i, states_j, public_state=None):
     a_i, a_j = np.asarray(actions_i), np.asarray(actions_j)
     if (a_i.ndim != 1 or a_i.shape != a_j.shape or a_i.size == 0 or
             not np.issubdtype(a_i.dtype, np.integer) or not np.issubdtype(a_j.dtype, np.integer) or
             min(a_i.min(), a_j.min()) < 0):
         raise ValueError("actions must be nonempty, equal-length nonnegative integer vectors")
-    s_i, n_i = _encode_states(states_i, len(a_i))
-    s_j, n_j = _encode_states(states_j, len(a_i))
+    s_i, n_i = _encode_states(_add_public_state(states_i, public_state, len(a_i)), len(a_i))
+    s_j, n_j = _encode_states(_add_public_state(states_j, public_state, len(a_i)), len(a_i))
     return a_i, a_j, s_i, s_j, n_i, n_j
 
 
-def influence_decomposition(actions_i, actions_j, states_i, states_j):
+def influence_decomposition(actions_i, actions_j, states_i, states_j, *, public_state=None):
     """Return (I(Bi;Bj|Si,Sj), I(Bi;Sj|Si), I(Bj;Si|Sj)) in bits.
 
-    The second term describes information received by bidder i from state j.
+    public_state adds the same exact history H to both private states.
+    The second term is then I(Bi;Sj|Si,H), information received by bidder i.
     Their sum is the symmetric, partially observable influence of paper Eq. 3.
     """
-    a_i, a_j, s_i, s_j, n_i, n_j = _partial_inputs(actions_i, actions_j, states_i, states_j)
+    a_i, a_j, s_i, s_j, n_i, n_j = _partial_inputs(actions_i, actions_j, states_i, states_j, public_state)
     return tuple(float(v) for v in _partial_components(a_i, a_j, s_i, s_j, n_i, n_j, _n_actions(a_i, a_j)))
 
 
-def partial_influence(actions_i, actions_j, states_i, states_j):
+def partial_influence(actions_i, actions_j, states_i, states_j, *, public_state=None):
     """Paper Eq. 3: H(Bi|Si) + H(Bj|Sj) - H(Bi,Bj|Si,Sj), in bits."""
-    a_i, a_j, s_i, s_j, n_i, n_j = _partial_inputs(actions_i, actions_j, states_i, states_j)
+    a_i, a_j, s_i, s_j, n_i, n_j = _partial_inputs(actions_i, actions_j, states_i, states_j, public_state)
     k = _n_actions(a_i, a_j)
-    joint = s_i * n_j + s_j
+    joint, n_joint = _encode_states(np.column_stack([s_i, s_j]), len(s_i))
     return float(_conditional_entropy(a_i, s_i, n_i, k) + _conditional_entropy(a_j, s_j, n_j, k)
-                 - _conditional_entropy(a_i * k + a_j, joint, n_i * n_j, k * k))
+                 - _conditional_entropy(a_i * k + a_j, joint, n_joint, k * k))
 
 
 @dataclass
@@ -305,11 +317,12 @@ class SymmetricPermutationResult(PermutationResult):
         return self.action - self.action_null_mean
 
 
-def symmetric_permutation_test(actions, states=None, *, n_perm=999, rng=None, blocks=None):
+def symmetric_permutation_test(actions, states=None, *, public_state=None, n_perm=999, rng=None, blocks=None):
     """Shuffle every bidder independently within its own state strata.
 
     states is a sequence of one state array per bidder (None means constant
-    states). Optionally restrict shuffles within blocks, e.g. market IDs when
+    states). public_state appends exact shared history H to every own state;
+    pass coarse labels explicitly for an ablation. Optionally restrict shuffles within blocks, e.g. market IDs when
     pooling. The returned gamma and directional leaks have plus-one p-values
     and signed bias corrections; corrections are deliberately not truncated.
     Validity requires exchangeability within each bidder's strata. This is
@@ -324,7 +337,7 @@ def symmetric_permutation_test(actions, states=None, *, n_perm=999, rng=None, bl
         states = [None] * players
     if len(states) != players:
         raise ValueError("one state array per bidder required")
-    encoded = [_encode_states(s, n) for s in states]
+    encoded = [_encode_states(_add_public_state(s, public_state, n), n) for s in states]
     rng = np.random.default_rng(rng)
     shuffled = []
     for i, (s, _) in enumerate(encoded):
@@ -353,6 +366,33 @@ def symmetric_permutation_test(actions, states=None, *, n_perm=999, rng=None, bl
             leak_p[receiver, source] = (1 + np.count_nonzero(null[term] >= observed[term] - 1e-12)) / (n_perm + 1)
     return SymmetricPermutationResult(gamma, null_mean, p_value, n_perm, action, action_mean,
                                       leak, leak_mean, leak_p)
+
+
+def classify_leaks(p_incoming, p_outgoing, incoming, outgoing, *, n_directions=12,
+                   level=0.05, absence_p=0.2, absence_bits=0.05):
+    """Classify measured flow with fixed significance and practical-absence guards.
+
+    Absence means p >= .2 AND corrected leak <= .05 bits. This operational
+    guard is not an equivalence test or proof of no flow. Intermediate evidence
+    is unclear. One-way flow does not distinguish espionage from cooperation.
+    Bonferroni covers all ordered pairs, including selection by net influence.
+    """
+    p = np.asarray([p_incoming, p_outgoing], dtype=float)
+    effect = np.asarray([incoming, outgoing], dtype=float)
+    if (not np.isfinite(np.r_[p, effect]).all() or np.any((p < 0) | (p > 1)) or
+            n_directions < 1 or not 0 < level < absence_p <= 1 or absence_bits < 0):
+        raise ValueError("finite effects, valid probabilities and classification thresholds required")
+    significant = p <= level / n_directions
+    absent = (p >= absence_p) & (effect <= absence_bits)
+    if significant.all():
+        return "two-way"
+    if significant[0] and absent[1]:
+        return "one-way j->i"
+    if significant[1] and absent[0]:
+        return "one-way i->j"
+    if absent.all():
+        return "none"
+    return "unclear"
 
 
 def pair_score(net):
