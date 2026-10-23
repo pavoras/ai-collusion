@@ -1,0 +1,13 @@
+# Secrets
+.env
+.env.*
+compute.env
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Large raw LLM logs stay local unless chosen for the report
+results/raw/
