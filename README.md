@@ -10,4 +10,15 @@ on LLM agents with one covertly coordinating pair.
 Author: Marvin Kemper (Independent). All code in this repository was written during the sprint, starting
 23 October 2026; there is no preexisting code.
 
-Status: planning. See `docs/PLAN.md`, `docs/METHOD.md` and `docs/RESOURCES.md`.
+Status: measures implemented and tested (`src/collusion/measures.py`). See `docs/PLAN.md`, `docs/METHOD.md`
+and `docs/RESOURCES.md`.
+
+## Setup
+
+```bash
+py -m venv .venv
+.venv/Scripts/python -m pip install -e ".[dev]"
+.venv/Scripts/python -m pytest
+```
+
+Exact versions used: `requirements-lock.txt` (Python 3.14).

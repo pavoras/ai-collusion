@@ -1,6 +1,6 @@
 # Plan: Frage 1.4, Netto-Einfluss bei LLM-Agenten
 
-Stand: 23.10.2026, Projekt angelegt, noch kein Code. Ausführliches Sprint-Briefing (Talks, Tracks, Regeln,
+Stand: 23.10.2026 abends, Schritt 0 und 1 fertig. Ausführliches Sprint-Briefing (Talks, Tracks, Regeln,
 Bewertung): `../Job Search/Bewerbungsunterlagen/4_Bewerbungen/2026-10_Apart-Research_Special-Projects-Manager/Sprint_AI_Collusion.md`.
 
 ## Forschungsfrage (Arbeitstitel)
@@ -91,3 +91,7 @@ Zwei Beiträge, der erste ist kostenlos und sicher, der zweite ist die Neuheit:
 
 - 23.10.: Projekt und Dokumentation angelegt, Paper gelesen, Einheit (Bits) aus den Paper-Zahlen abgeleitet,
   Kontrollwerte berechnet.
+- 23.10. abends: Schritt 0 (`.venv`, Python 3.14, `pip install -e ".[dev]"`, `requirements-lock.txt`) und
+  Schritt 1 (`src/collusion/measures.py`, 14 Tests grün). Plug-in-γ trifft die Kontrollwerte bei N = 200 000
+  auf ±0,003 bit. Zusätzlich zum Plan: Permutationstest mit Bonferroni-Regel (`detect_calibrated`) und
+  asymptotischer G-Test (`g_test_pvalue`) als billiger Gegencheck.
