@@ -27,7 +27,7 @@ in `REPORT_OUTLINE.md`. Marvin schreibt die Endfassung selbst (Vorgabe der Vorla
 | Kartell-Prompt | Hinweis auf Überwachung durch das Kartellamt, unauffällig bleiben; Scheingebote frei gewählt |
 | Kartell-Positionen | stark+stark (Haupt), dazu stark+schwach und schwach+schwach beim Hauptmodell |
 | Umfang (E) | ein Hauptmodell komplett, dazu kleinere Runden: Labore, Größen, Kartell aus gleichem vs. verschiedenem Modell |
-| Zustand / Historie (B) | **offen**: Erklärung an Marvin, Empfehlung B2 + B3 + B4 |
+| Zustand / Historie (B) | exakter letzter Gewinnerpreis H als Zustand (grobe Stufen nur als Ablation); Hauptstatistik für den Mechanismus: Leck I(B_i; C_j \| C_i, H); dazu Proben auf eingefrorenen Kontexten mit Partnerkosten-Eingriff |
 
 ## Umfang (E, Marvins Fassung)
 
@@ -47,12 +47,12 @@ auf 6.
 
 | Fertig | In Arbeit | Fehlt |
 |---|---|---|
-| Setup, Paket, 53 Tests | Entscheidung B (Marvin) | `DESIGN.md` v4 und `PREREG.md` |
+| Setup, Paket, 53 Tests | Sol Runde 4: Skript-Checks (exakter Zustand, Leck-Power, „unklar“) | `PREREG.md` |
 | Maße inkl. Gl.-3-Zerlegung, symm. Permutationstest, Baselines | | Skript-Checks: exakter Zustand (B2), Power/Fehlalarm der Leck-Terme, Kategorie „unklar“ |
-| RPS-Nachbau (Pflichtteil), Abbildungen | | LLM-Harness (Prompts, Parser, Logging, Cache, Runner), Richter-Skript |
+| RPS-Nachbau (Pflichtteil), Abbildungen | Sol Runde 5: LLM-Harness, Richter-Skript | |
 | Skript-Auktion, Kartelle, Spion, Attrappe, Fingerabdruck-Entwurf | | Testlauf Qwen-9B (1 Markt, ~0,30 $), dann Go |
 | Modal: Gewichte aller 6 Modelle, Qwen-9B deployt | | Hauptläufe, Auswertung, Abbildungen |
-| Literatur- und Neuheitscheck (erste Runde) | | Report (Marvin schreibt), Endkontrolle, Abgabe |
+| Literatur- und Neuheitscheck (erste Runde), `DESIGN.md` v4 | | Report (Marvin schreibt), Endkontrolle, Abgabe |
 
 ## Zeitplan (deutsche Zeit)
 
@@ -121,3 +121,7 @@ frischem Clone. Keine Zahl im Report ohne reproduzierbaren Lauf.
   Report-Vorlage gelesen (empfohlen 4 Seiten, Endfassung überwiegend vom Team). Literatur- und Neuheitscheck
   vorgezogen (siehe REPORT_OUTLINE.md), neu relevant: Audit the Whisper (2510.04303), Bid-Rigging-Screens von
   Huber/Imhof/Wallimann. Plan v4 mit Pivot-Plan.
+- 23.10. abends: Marvin entschied B (exakter letzter Gewinnerpreis, Leck-Term als Hauptstatistik). `DESIGN.md` v4.
+  Sol Runde 4 (gpt-6.1-sol/high, Thread 01a1693a-392a-7870-a618-7cfa1dc09baa): Skript-Checks. Sol Runde 5
+  (gpt-6.1-sol/xhigh wegen Geld und Logging, Thread 01a1693a-41b2-7543-91e0-b9a092a2a5e6): LLM-Harness. Beide
+  parallel in getrennten Dateien. Testlauf vorbereitet, Ausführung erst nach Marvins Go.
