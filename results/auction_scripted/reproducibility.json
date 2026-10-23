@@ -1,0 +1,7 @@
+{
+  "mode": "quick",
+  "artifacts_checked": 17,
+  "mismatches": [],
+  "comparison": "SHA-256 of CSVs, PNGs and config.json; canonical summary.json excluding elapsed_seconds",
+  "repeat_command": ".venv/Scripts/python experiments/auction_scripted.py --quick"
+}

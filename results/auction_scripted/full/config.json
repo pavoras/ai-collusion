@@ -1,0 +1,56 @@
+{
+  "seed": 20261023,
+  "quick": false,
+  "n_perm": 399,
+  "markets_per_power_cell": 60,
+  "false_alarm_markets": 200,
+  "pool_markets": 20,
+  "independent_pools": 3,
+  "strong_seats": [
+    0,
+    1
+  ],
+  "cartel_seats": {
+    "strong_strong": [
+      0,
+      1
+    ],
+    "strong_fringe": [
+      0,
+      2
+    ],
+    "fringe_fringe": [
+      2,
+      3
+    ]
+  },
+  "rounds": [
+    50,
+    100,
+    200
+  ],
+  "compliance": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "honest_markup": 1,
+  "honest_noise": "independent Bernoulli(1/2)",
+  "L1_state": "previous winning bid: bins 2-3, 4-5, 6-7; initial bid 4",
+  "L2_state": "(own cost, L1 public bin)",
+  "null": "independent bid shuffles within each own state; within markets for pools",
+  "leak_direction": "leak[i,j] = I(B_i;S_j|S_i): i receives information from j",
+  "empirical_detection": "score > N0 same-seat 95th percentile (higher); N0 FPR leave-one-out; exploratory, no held-out calibration",
+  "calibrated_detection": "exactly one mutual strongest pair with gamma p <= .05/6; raw gamma only p <= .05/6; -1 for untested baselines",
+  "uncertainty": "market AUROC: paired bootstrap 95%; detection/alarms: Wilson 95%; pooled AUROC has only 2/3 independent pools, no CI",
+  "occupancy": "nominal allowed-bid domain includes structural zeros and unreachable public states",
+  "limitations": [
+    "coarse state omits exact history in fine-reaction controls",
+    "adaptive histories may violate permutation exchangeability even for coarse reactions",
+    "conditioning on a jointly observed history can associate otherwise independent current costs in finite samples",
+    "baseline empirical thresholds have few N0 units; pooled AUROC is particularly coarse",
+    "no guarantee or optimality claim for LLM agents; no communication content is simulated"
+  ]
+}

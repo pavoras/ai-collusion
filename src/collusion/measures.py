@@ -221,3 +221,177 @@ def g_test_pvalue(gamma: float, n_rounds: int, k_i: int = 3, k_j: int = 3, n_sta
     """Asymptotic p-value: 2 N ln(2) * gamma ~ chi2 with n_states * (k_i - 1) * (k_j - 1) degrees of freedom."""
     dof = n_states * (k_i - 1) * (k_j - 1)
     return float(stats.chi2.sf(2 * n_rounds * np.log(2) * gamma, dof))
+
+
+def _entropy_counts(counts, axes):
+    """Entropy in bits from integer counts, using a small x*log2(x) lookup."""
+    total = counts.sum(axis=axes)
+    lookup = np.arange(int(total.max()) + 1, dtype=float)
+    lookup[1:] *= np.log2(lookup[1:])
+    return np.log2(total) - lookup[counts].sum(axis=axes) / total
+
+
+def _conditional_entropy(actions, state, n_states, k):
+    """H(B | S), allowing leading permutation axes on actions."""
+    lead = actions.shape[:-1]
+    blocks = int(np.prod(lead)) if lead else 1
+    offset = (np.arange(blocks) * n_states * k).reshape(lead + (1,)) if lead else 0
+    counts = np.bincount((state * k + actions + offset).ravel(), minlength=blocks * n_states * k)
+    counts = counts.reshape(lead + (n_states, k))
+    # H(S,B) - H(S) avoids undefined empty-stratum entropies.
+    return _entropy_counts(counts, (-2, -1)) - _entropy_counts(counts.sum(axis=-1), (-1,))
+
+
+def _partial_components(a_i, a_j, s_i, s_j, n_i, n_j, k):
+    """Eq. 3 and its three terms, including batches of shuffled actions."""
+    joint = s_i * n_j + s_j
+    counts = _counts(a_i, a_j, joint, n_i * n_j, k)
+    h_state = _entropy_counts(counts.sum(axis=(-2, -1)), (-1,))
+    h_i_joint = _entropy_counts(counts.sum(axis=-1), (-2, -1)) - h_state
+    h_j_joint = _entropy_counts(counts.sum(axis=-2), (-2, -1)) - h_state
+    h_pair_joint = _entropy_counts(counts, (-3, -2, -1)) - h_state
+    action = h_i_joint + h_j_joint - h_pair_joint
+    h_i = _conditional_entropy(a_i, s_i, n_i, k)
+    h_j = _conditional_entropy(a_j, s_j, n_j, k)
+    return action, h_i - h_i_joint, h_j - h_j_joint
+
+
+def _partial_inputs(actions_i, actions_j, states_i, states_j):
+    a_i, a_j = np.asarray(actions_i), np.asarray(actions_j)
+    if (a_i.ndim != 1 or a_i.shape != a_j.shape or a_i.size == 0 or
+            not np.issubdtype(a_i.dtype, np.integer) or not np.issubdtype(a_j.dtype, np.integer) or
+            min(a_i.min(), a_j.min()) < 0):
+        raise ValueError("actions must be nonempty, equal-length nonnegative integer vectors")
+    s_i, n_i = _encode_states(states_i, len(a_i))
+    s_j, n_j = _encode_states(states_j, len(a_i))
+    return a_i, a_j, s_i, s_j, n_i, n_j
+
+
+def influence_decomposition(actions_i, actions_j, states_i, states_j):
+    """Return (I(Bi;Bj|Si,Sj), I(Bi;Sj|Si), I(Bj;Si|Sj)) in bits.
+
+    The second term describes information received by bidder i from state j.
+    Their sum is the symmetric, partially observable influence of paper Eq. 3.
+    """
+    a_i, a_j, s_i, s_j, n_i, n_j = _partial_inputs(actions_i, actions_j, states_i, states_j)
+    return tuple(float(v) for v in _partial_components(a_i, a_j, s_i, s_j, n_i, n_j, _n_actions(a_i, a_j)))
+
+
+def partial_influence(actions_i, actions_j, states_i, states_j):
+    """Paper Eq. 3: H(Bi|Si) + H(Bj|Sj) - H(Bi,Bj|Si,Sj), in bits."""
+    a_i, a_j, s_i, s_j, n_i, n_j = _partial_inputs(actions_i, actions_j, states_i, states_j)
+    k = _n_actions(a_i, a_j)
+    joint = s_i * n_j + s_j
+    return float(_conditional_entropy(a_i, s_i, n_i, k) + _conditional_entropy(a_j, s_j, n_j, k)
+                 - _conditional_entropy(a_i * k + a_j, joint, n_i * n_j, k * k))
+
+
+@dataclass
+class SymmetricPermutationResult(PermutationResult):
+    """Joint independent shuffles; leak[i,j] means bid i receives state j."""
+
+    action: np.ndarray
+    action_null_mean: np.ndarray
+    leak: np.ndarray
+    leak_null_mean: np.ndarray
+    leak_p_value: np.ndarray
+
+    @property
+    def leak_corrected(self):
+        return self.leak - self.leak_null_mean
+
+    @property
+    def action_corrected(self):
+        return self.action - self.action_null_mean
+
+
+def symmetric_permutation_test(actions, states=None, *, n_perm=999, rng=None, blocks=None):
+    """Shuffle every bidder independently within its own state strata.
+
+    states is a sequence of one state array per bidder (None means constant
+    states). Optionally restrict shuffles within blocks, e.g. market IDs when
+    pooling. The returned gamma and directional leaks have plus-one p-values
+    and signed bias corrections; corrections are deliberately not truncated.
+    Validity requires exchangeability within each bidder's strata. This is
+    an empirical check, not a guarantee for adaptive repeated games.
+    """
+    actions = np.asarray(actions)
+    if (actions.ndim != 2 or not actions.size or actions.shape[1] < 2 or
+            not np.issubdtype(actions.dtype, np.integer) or actions.min() < 0 or n_perm < 1):
+        raise ValueError("nonempty nonnegative integer action matrix and positive n_perm required")
+    n, players = actions.shape
+    if states is None:
+        states = [None] * players
+    if len(states) != players:
+        raise ValueError("one state array per bidder required")
+    encoded = [_encode_states(s, n) for s in states]
+    rng = np.random.default_rng(rng)
+    shuffled = []
+    for i, (s, _) in enumerate(encoded):
+        strata = s if blocks is None else _encode_states(np.column_stack([s, blocks]), n)[0]
+        base, perm = _within_state_permutations(strata, n_perm, rng)
+        draws = np.empty((n_perm, n), dtype=np.int64)
+        draws[:, base] = actions[perm, i]
+        shuffled.append(draws)
+    k = _n_actions(actions)
+    gamma, null_mean, p_value, action, action_mean, leak, leak_mean, leak_p = [
+        np.full((players, players), np.nan) for _ in range(8)]
+    for i, j in combinations(range(players), 2):
+        s_i, n_i = encoded[i]
+        s_j, n_j = encoded[j]
+        observed = _partial_components(actions[:, i], actions[:, j], s_i, s_j, n_i, n_j, k)
+        null = _partial_components(shuffled[i], shuffled[j], s_i, s_j, n_i, n_j, k)
+        g, null_g = sum(observed), sum(null)
+        gamma[i, j] = gamma[j, i] = g
+        null_mean[i, j] = null_mean[j, i] = null_g.mean()
+        p_value[i, j] = p_value[j, i] = (1 + np.count_nonzero(null_g >= g - 1e-12)) / (n_perm + 1)
+        action[i, j] = action[j, i] = observed[0]
+        action_mean[i, j] = action_mean[j, i] = null[0].mean()
+        for receiver, source, term in [(i, j, 1), (j, i, 2)]:
+            leak[receiver, source] = observed[term]
+            leak_mean[receiver, source] = null[term].mean()
+            leak_p[receiver, source] = (1 + np.count_nonzero(null[term] >= observed[term] - 1e-12)) / (n_perm + 1)
+    return SymmetricPermutationResult(gamma, null_mean, p_value, n_perm, action, action_mean,
+                                      leak, leak_mean, leak_p)
+
+
+def pair_score(net):
+    """Symmetric matrix min(Gamma_ij, Gamma_ji); diagonal stays NaN."""
+    net = np.asarray(net)
+    return np.minimum(net, net.T)
+
+
+def cramers_v(actions_i, actions_j):
+    """Uncorrected Cramer's V on observed bid categories, zero for constants."""
+    x, nx = _encode_states(actions_i, len(actions_i))
+    y, ny = _encode_states(actions_j, len(actions_i))
+    if min(nx, ny) == 1:
+        return 0.0
+    counts = np.bincount(x * ny + y, minlength=nx * ny).reshape(nx, ny)
+    chi2 = stats.chi2_contingency(counts, correction=False).statistic
+    return float(np.sqrt(chi2 / (len(x) * min(nx - 1, ny - 1))))
+
+
+def residual_correlation(actions_i, actions_j, costs_i, costs_j):
+    """Signed Pearson correlation after subtracting each own-cost cell mean."""
+    residuals = []
+    for actions, costs in [(actions_i, costs_i), (actions_j, costs_j)]:
+        actions = np.asarray(actions, dtype=float)
+        codes, n_states = _encode_states(costs, len(actions))
+        means = np.bincount(codes, weights=actions, minlength=n_states) / np.bincount(codes, minlength=n_states)
+        residuals.append(actions - means[codes])
+    x, y = residuals
+    norm = np.linalg.norm(x) * np.linalg.norm(y)
+    return float(x @ y / norm) if norm > 1e-12 else 0.0
+
+
+def auroc(labels, scores):
+    """Rank AUROC with half credit for tied scores; both classes required."""
+    labels, scores = np.asarray(labels), np.asarray(scores, dtype=float)
+    if (labels.ndim != 1 or labels.shape != scores.shape or not np.isin(labels, [0, 1]).all()
+            or not np.isfinite(scores).all() or len(np.unique(labels)) != 2):
+        raise ValueError("finite scores and binary labels with both classes required")
+    positive = labels == 1
+    n_pos, n_neg = positive.sum(), (~positive).sum()
+    ranks = stats.rankdata(scores)
+    return float((ranks[positive].sum() - n_pos * (n_pos + 1) / 2) / (n_pos * n_neg))

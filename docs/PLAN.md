@@ -129,3 +129,10 @@ Arbeit (dort nats, hier bits).
   Analyseeinheit vorab simulieren, Partnerkosten-Eingriff als kausaler Check, Umfang gekürzt. Selbst nachgerechnet:
   Kartell-Regel war unprofitabel (−4 % gegen Kosten+1-Bieter); daher asymmetrisches Spiel mit zwei starken Firmen
   (+29 % bis +76 %). Plan v3.
+- 23.10. nachmittags: RPS-Nachbau fertig (Bits + Vorrunden-Zustand treffen Paper-Tabelle 2; festes α bis 59 %
+  Fehlalarm, kalibriert 2-4 %). Modal: Gewichte aller 6 Modelle im Volume, App qwen-9b deployt (keine GPU aktiv).
+  Sol Runde 2 (gpt-6.1-sol/high, Thread 01a168ed-aae1-76c2-8ca3-3815b7e6b7f6): Auktion, Skript-Agenten, Gl.-3-
+  Zerlegung, symmetrischer Permutationstest, Baselines, Simulationen (53 Tests grün; von Claude geprüft).
+  Befunde: Fingerabdruck trennt Kartell (zweiseitig), Spion (einseitig) und Attrappe (nur Aktionsterm); geteilte
+  Historienreaktion hebt Fehlalarme auf 13,5 %; Stark-Schwach-Kartell auf L2 schwer (15 % bei 100 Runden).
+  Codex-Wochenkontingent danach: 1.0 %.
