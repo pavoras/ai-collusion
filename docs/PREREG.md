@@ -293,4 +293,9 @@ Repeated draws are not independent markets.
 
 ## Deviations
 
-None yet.
+1. **23.10.2026, transport fix before any data (no change to design, prompts, sampling or analysis).** The first
+   pilot attempt (run `pilot_qwen9b_v4`) stopped at its warm-up call after 0.4 s. While no container is ready,
+   Modal's proxy answers HTTP 503 "no upstreams available" without forwarding the request to any model server; the
+   harness had classified every 5xx as a possibly paid submission and stopped. Fix: this specific 503 is a safe,
+   retryable transport failure, and the warm-up polls every 10 s until its timeout. No bid was collected in the
+   stopped attempt; its records stay in `results/raw/pilot_qwen9b_v4/`. The pilot is rerun as `pilot_qwen9b_v5`.

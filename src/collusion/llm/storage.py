@@ -28,6 +28,10 @@ class BudgetStop(Exception):
     """No further backend submissions are authorised by the call cap."""
 
 
+class SafeRetriesExhausted(BackendError):
+    """Every attempt failed before reaching a model server; nothing can have been paid."""
+
+
 class UncertainCall(Exception):
     """A pending/ambiguous request needs external reconciliation before reuse."""
 
@@ -210,7 +214,7 @@ class CallService:
                         self._finish(key, attempt, "safe_failure", latency, error="definitely_not_submitted_or_rate_rejected")
                         self._log(request, current_metadata, kind, attempt=attempt, latency=latency, error="safe_transport_failure")
                         if retry == self.transport_retries:
-                            raise BackendError("safe transport retries exhausted") from None
+                            raise SafeRetriesExhausted("safe transport retries exhausted") from None
                     except BackendError:
                         latency = time.perf_counter() - started
                         self._finish(key, attempt, "rejected", latency, error="endpoint_rejection")

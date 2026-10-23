@@ -102,3 +102,11 @@ def test_version_endpoint_is_best_effort_and_authenticated(monkeypatch, status, 
     assert args == ("GET", "/version")
     assert kwargs["headers"]["Authorization"] == "Bearer dummy"
     conn.close.assert_called_once()
+
+
+def test_modal_no_upstream_503_is_safe_to_retry(monkeypatch):
+    """Modal's proxy answers 503 "no upstreams available" before any container is ready: nothing was submitted."""
+    connection(monkeypatch, 503, '{"error":"no upstreams available"}')
+    backend = b.OpenAIBackend({"qwen-9b": "https://offline.invalid/v1"}, token="dummy")
+    with pytest.raises(b.RetryableTransportError):
+        asyncio.run(backend.complete(request()))

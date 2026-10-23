@@ -16,9 +16,11 @@ import time
 from .backend import BackendError, FakeBackend
 from .projection import save_projection, scope_projection
 from .runner import RunLock, _all, _market, run_identity, save_manifest
-from .storage import BudgetStop, UncertainCall, digest, seed_for, write_json
+from .storage import BudgetStop, SafeRetriesExhausted, UncertainCall, digest, seed_for, write_json
 from .collection import authorize, load_collection, resolve_market
 from .reproducibility import record_server_version, write_reproducibility
+
+WARMUP_POLL_SECONDS = 10
 
 
 class PilotStop(BudgetStop):
@@ -202,8 +204,16 @@ async def _warmup(service, monitor, config):
         service.timeout, service.transport_retries = monitor.limits.warmup_timeout, 0
         if backend_timeout is not None:
             service.backend.timeout = monitor.limits.warmup_timeout
-        await service._response(request, {"condition": "warmup", "market": None, "round": None, "seat": None,
-                                         "role": "warmup", "purpose": "warmup"}, "bid")
+        deadline = time.monotonic() + monitor.limits.warmup_timeout
+        while True:  # a cold Modal container answers 503 "no upstreams" until vLLM is up; that is never a submission
+            try:
+                await service._response(request, {"condition": "warmup", "market": None, "round": None, "seat": None,
+                                                 "role": "warmup", "purpose": "warmup"}, "bid")
+                break
+            except SafeRetriesExhausted:
+                if time.monotonic() > deadline:
+                    raise
+                await asyncio.sleep(WARMUP_POLL_SECONDS)
         await record_server_version(service, "qwen-9b")
         warmup.update(status="complete", cold_start_seconds=monitor.warmup_latencies.get(warmup["seed"]))
         monitor.persist()

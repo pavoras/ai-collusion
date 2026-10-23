@@ -134,6 +134,9 @@ class OpenAIBackend:
                 raise AmbiguousTransportError("reply lost after possible submission") from None
             if response.status == 429:
                 raise RetryableTransportError("endpoint rate rejection")
+            if response.status == 503 and "no upstreams available" in payload:
+                # Modal's proxy answers this while no container is ready: the request reached no model server.
+                raise RetryableTransportError("no upstream ready; request not forwarded")
             if response.status >= 500:
                 raise AmbiguousTransportError("endpoint server error after possible submission")
             if response.status != 200:
