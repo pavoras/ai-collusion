@@ -19,7 +19,7 @@ private inputs let an auditor tell collusion apart from espionage and shared-his
 | Section | Pages | Content | Figures / tables |
 |---|---|---|---|
 | Abstract | - | problem, approach, key results, takeaway; written last | - |
-| 1 Introduction | 0.6 | AI agents in markets; covert coordination; behaviour-based auditing reads no messages (robust to steganography); the confusion between collusion, espionage and look-alikes; contributions list (3) | Fig. 1 setup schematic (small) |
+| 1 Introduction | 0.6 | AI agents in markets; covert coordination; behaviour-based auditing reads no messages (so it does not depend on message content; we do not test steganographic channels); the confusion between collusion, espionage and look-alikes; contributions list (3) | Fig. 1 setup schematic (small) |
 | 2 Related Work | 0.4 | Bonjour et al. 2022; LLM collusion in markets (Fish 2024, Agrawal 2025, Lin 2024); covert channels and audits (Motwani 2024, Audit the Whisper 2025); white-box detectors (NARCBench / multi-agent interpretability); bid-rigging screens (Huber & Imhof 2019, Imhof & Wallimann 2021, Wallimann et al. 2022); concurrent sprint work (two repos) | - |
 | 3 Methods | 1.1 | Eq. 4-5; Eq. 3 and its decomposition into action and directional leak terms; permutation calibration; auction game; conditions; models; metrics; pre-registration | Table 1 conditions (compact) |
 | 4 Results | 1.4 | (a) replication + calibration in one sentence and a small panel; (b) detection per condition and auditor view (hero); (c) information-flow fingerprints; (d) causal partner-cost probe; (e) robustness across labs, sizes, mixed cartels (one compact panel or table) | Fig. 2 fingerprints (hero), Fig. 3 detection/AUROC, Table 2 robustness |
@@ -29,7 +29,15 @@ private inputs let an auditor tell collusion apart from espionage and shared-his
 | References | - | verified only | - |
 | Appendix | free | A replication details (Table 2 comparison, calibration figure); B prompts; C scripted simulations; D all per-model results; E statistics details; F Limitations and Dual-Use / Ethical Considerations (required); G LLM usage statement | - |
 
-Rule: a figure enters the main text only if the story needs it; everything else goes to the appendix.
+Rule: a figure enters the main text only if the story needs it; everything else goes to the appendix. The appendix
+always carries the single table with every registered cell (PREREG section 13), whatever the main text shows.
+
+Appendix F (Limitations and Dual-Use / Ethical Considerations) must cover: collusion is instructed, not emergent;
+synthetic procurement game, limited external validity; statistical dependence is not intent or harm; false
+accusations and the need for human review; access to private costs (privacy, who may hold such data); misuse for
+cartel design or detector evasion; no real procurement participants; compute spent; limits of behaviour-only
+auditing against adaptive concealment; the treatment bundle (goal, partner naming, secrecy, channel) cannot be
+separated.
 
 ## Related work, verified on 23.10.2026 (to cite)
 

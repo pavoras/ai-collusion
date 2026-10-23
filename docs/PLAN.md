@@ -42,11 +42,12 @@ in `REPORT_OUTLINE.md`. Marvin schreibt die Endfassung selbst (Vorgabe der Vorla
 | Kern | Qwen3.5-9B | N0, P0, C1 (stark+stark), C1 stark+schwach, C1 schwach+schwach, C2 (still), E1 (Spion), Proben auf eingefrorenen Kontexten | 20 × 200 |
 | Labore | Gemma-4-12B, Ministral-3-8B | N0, C1 | 10 × 200 |
 | Größen | Qwen3.5-4B, Gemma-4-E4B, Ministral-3-3B | N0, C1 | 10 × 200 |
-| Gleiches vs. verschiedenes Modell | Mittelgroße gemischt | C1 mit Kartell (X, X) vs. Kartell (X, Y), dazu ehrliche Kontrolle (X, X, Y, Z) | 10 × 200 |
+| Gleiches vs. verschiedenes Modell | X = Qwen-9B, Y = Gemma-12B, Z = Ministral-8B | D = ehrlich (X, X, Y, Z) mit Behandlung C1-XX; H-XYZZ = ehrlich (X, Y, Z, Z) mit Behandlung C1-XY; jede Behandlung nur gegen ihre eigene Kontrolle; keine Kausalaussage zu „gleiches Modell“ (Identität und Stärke nicht gekreuzt) | 10 × 200 |
 | Richter | Qwen3.5-9B mit Denkmodus | alle Märkte, L1 und L2 | - |
 
-Grob 250 000-300 000 Aufrufe. Ob das ins Budget passt (Deckel 35 $), zeigt der Testlauf. Streichreihenfolge:
-C1 schwach+schwach → kleine Modelle außer Qwen-4B → Rotationen der gemischten Gruppen → Märkte der Breitenblöcke
+Grob 250 000-300 000 Aufrufe. Verbindlich ist ab dem Einfrieren `docs/PREREG.md` (Manifest, Budgetleiter B0-B5,
+Reihenfolge); der Pilotlauf wählt nur anhand von Betriebsdaten den Zweig. Streichreihenfolge:
+C1 schwach+schwach → N0-Kern 40 → 20 → kleine Modelle außer Qwen-4B → gemischtes Paar H-XYZZ/C1-XY → Märkte der Breitenblöcke
 auf 6.
 
 ## Stand
