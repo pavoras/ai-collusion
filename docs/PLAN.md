@@ -141,3 +141,9 @@ frischem Clone. Keine Zahl im Report ohne reproduzierbaren Lauf.
   historienabhängige ehrliche Bieter treiben L1/L2-Fehlalarme bis 100 %, Leck-Terme bleiben bei ca. 1-8 % ->
   Leck-Score als zusätzlicher Detektor in PREREG; Abbildung Kandidat für den Hauptteil. Marvin: Sol nur auf high;
   Pilotlauf nach eigenem Ermessen nach dem Einfrieren.
+- 23.10. abends: Sol Runde 5 (Harness inkl. Manifest, Live-P0, blinder Richter, Proben, Pilot-Stopps) und Runde 9
+  (blinde Auswertung nach PREREG) fertig; von Claude geprüft und ergänzt (Spaltenreihenfolge im Prompt, Manifest an
+  PREREG angeglichen, Leck-Regel). 287 Tests grün. Marvin: 80 $ Modal-Guthaben, höchstens 50 $ nutzen; Leck-Score
+  benennt bei mindestens einer Richtung.
+- **PREREG v2 eingefroren:** Commit `56717aba03261552b9e09be4dded8b6e4cdc04b3` (2026-10-23T19:33:39+02:00). Manifest-Hash
+  `2ffab714f5160ff9a44b49a3199ff064de817057012031ef0bc5de9952f69b7b`.
