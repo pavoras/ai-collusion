@@ -1,0 +1,723 @@
+{
+  "schema_version": 1,
+  "manifest_version": "collection_v1",
+  "status": "provisional_before_freeze",
+  "run_seed": 20261023,
+  "parameters": {
+    "core_markets": {
+      "value": 20,
+      "status": "declared"
+    },
+    "breadth_markets": {
+      "value": 10,
+      "status": "declared"
+    },
+    "mixed_markets": {
+      "value": 10,
+      "status": "declared"
+    },
+    "spot_check_markets": {
+      "value": 10,
+      "status": "declared"
+    },
+    "rounds": {
+      "value": 200,
+      "status": "declared"
+    },
+    "probe_calls": {
+      "value": 3600,
+      "status": "declared_grid_from_PREREG_draft_v2"
+    },
+    "core_n0_markets": {
+      "value": 40,
+      "status": "declared; markets 20-39 run after core.C1-FF and are the first cut (B2)"
+    }
+  },
+  "assignment": {
+    "version": 1,
+    "seed": 20261023,
+    "algorithm": "For seats and labels separately: seed streams 100/101 shuffle the three complementary-pair partitions and their orientations; cycle the resulting six pairs by market_index % 6. Stream [seed,index,102] permutes roles and labels within strength. Every 6 markets balances pairs; every 20 balances each seat/label exactly 10 strong appearances.",
+    "role_order": [
+      "strong_0",
+      "strong_1",
+      "fringe_0",
+      "fringe_1"
+    ]
+  },
+  "pilot_entries": [
+    "core.N0",
+    "core.P0"
+  ],
+  "execution_order": [
+    "core.N0",
+    "core.P0",
+    "core.C1-SS",
+    "core.E1",
+    "core.C2",
+    "core.C1-SF",
+    "core.C1-FF",
+    "judge.qwen9b",
+    "core.probes",
+    "labs.gemma-12b.N0",
+    "labs.gemma-12b.C1",
+    "labs.ministral-8b.N0",
+    "labs.ministral-8b.C1",
+    "mixed.D",
+    "mixed.C1-XX",
+    "mixed.H-XYZZ",
+    "mixed.C1-XY",
+    "sizes.qwen-4b.N0",
+    "sizes.qwen-4b.C1",
+    "sizes.gemma-e4b.N0",
+    "sizes.gemma-e4b.C1",
+    "sizes.ministral-3b.N0",
+    "sizes.ministral-3b.C1",
+    "judge.gemma12b"
+  ],
+  "concurrent_execution_groups": [
+    [
+      "core.N0",
+      "core.P0"
+    ]
+  ],
+  "cancellation_policy": [
+    {
+      "priority": 1,
+      "branch": "B1",
+      "action": "drop core.C1-FF"
+    },
+    {
+      "priority": 2,
+      "branch": "B2",
+      "action": "core.N0 only markets 0-19 (drop 20-39)"
+    },
+    {
+      "priority": 3,
+      "branch": "B3",
+      "action": "drop sizes.gemma-e4b.* and sizes.ministral-3b.*"
+    },
+    {
+      "priority": 4,
+      "branch": "B4",
+      "action": "drop mixed.H-XYZZ and mixed.C1-XY together"
+    },
+    {
+      "priority": 5,
+      "branch": "B5",
+      "action": "remaining labs, sizes and mixed cells only markets 0-5"
+    },
+    {
+      "priority": 6,
+      "action": "a treatment is kept only together with its matched control; budget or time stops cancel later cells in reverse execution order; completed and partial markets stay published"
+    }
+  ],
+  "notes": [
+    "Model order is strength-role order, never physical seat order.",
+    "Branch choice (PREREG section 3) uses only operational pilot data and only cancels declared cells or market ranges; it never edits this file.",
+    "The Qwen judge runs over all core markets after the core block and over breadth markets after their collection.",
+    "Judge spot check (Gemma-12B): core.N0 and core.C1-SS markets 0-9, L1 and L2, fixed without inspecting outcomes.",
+    "The runner never silently changes this file."
+  ],
+  "entries": [
+    {
+      "id": "core.N0",
+      "block": "core",
+      "phase": "auction",
+      "condition": "N0",
+      "position": "strong_strong",
+      "composition": "qwen-9b/qwen-9b/qwen-9b/qwen-9b",
+      "models_by_role": {
+        "strong_0": "qwen-9b",
+        "strong_1": "qwen-9b",
+        "fringe_0": "qwen-9b",
+        "fringe_1": "qwen-9b"
+      },
+      "market_indices": {
+        "start": 0,
+        "count_parameter": "core_n0_markets"
+      },
+      "round_count_parameter": "rounds",
+      "execution_order": 1,
+      "cancellation_priority": 6,
+      "matched_control": null,
+      "allowed_round_extensions": []
+    },
+    {
+      "id": "core.P0",
+      "block": "core",
+      "phase": "auction",
+      "condition": "P0",
+      "position": "strong_strong",
+      "composition": "qwen-9b/qwen-9b/qwen-9b/qwen-9b",
+      "models_by_role": {
+        "strong_0": "qwen-9b",
+        "strong_1": "qwen-9b",
+        "fringe_0": "qwen-9b",
+        "fringe_1": "qwen-9b"
+      },
+      "market_indices": {
+        "start": 0,
+        "count_parameter": "core_markets"
+      },
+      "round_count_parameter": "rounds",
+      "execution_order": 2,
+      "cancellation_priority": 6,
+      "matched_control": "core.N0",
+      "allowed_round_extensions": []
+    },
+    {
+      "id": "core.C1-SS",
+      "block": "core",
+      "phase": "auction",
+      "condition": "C1",
+      "position": "strong_strong",
+      "composition": "qwen-9b/qwen-9b/qwen-9b/qwen-9b",
+      "models_by_role": {
+        "strong_0": "qwen-9b",
+        "strong_1": "qwen-9b",
+        "fringe_0": "qwen-9b",
+        "fringe_1": "qwen-9b"
+      },
+      "market_indices": {
+        "start": 0,
+        "count_parameter": "core_markets"
+      },
+      "round_count_parameter": "rounds",
+      "execution_order": 3,
+      "cancellation_priority": 6,
+      "matched_control": "core.N0",
+      "allowed_round_extensions": []
+    },
+    {
+      "id": "core.C2",
+      "block": "core",
+      "phase": "auction",
+      "condition": "C2",
+      "position": "strong_strong",
+      "composition": "qwen-9b/qwen-9b/qwen-9b/qwen-9b",
+      "models_by_role": {
+        "strong_0": "qwen-9b",
+        "strong_1": "qwen-9b",
+        "fringe_0": "qwen-9b",
+        "fringe_1": "qwen-9b"
+      },
+      "market_indices": {
+        "start": 0,
+        "count_parameter": "core_markets"
+      },
+      "round_count_parameter": "rounds",
+      "execution_order": 5,
+      "cancellation_priority": 6,
+      "matched_control": "core.N0",
+      "allowed_round_extensions": []
+    },
+    {
+      "id": "core.E1",
+      "block": "core",
+      "phase": "auction",
+      "condition": "E1",
+      "position": "strong_strong",
+      "composition": "qwen-9b/qwen-9b/qwen-9b/qwen-9b",
+      "models_by_role": {
+        "strong_0": "qwen-9b",
+        "strong_1": "qwen-9b",
+        "fringe_0": "qwen-9b",
+        "fringe_1": "qwen-9b"
+      },
+      "market_indices": {
+        "start": 0,
+        "count_parameter": "core_markets"
+      },
+      "round_count_parameter": "rounds",
+      "execution_order": 4,
+      "cancellation_priority": 6,
+      "matched_control": "core.N0",
+      "allowed_round_extensions": []
+    },
+    {
+      "id": "core.C1-SF",
+      "block": "core",
+      "phase": "auction",
+      "condition": "C1",
+      "position": "strong_fringe",
+      "composition": "qwen-9b/qwen-9b/qwen-9b/qwen-9b",
+      "models_by_role": {
+        "strong_0": "qwen-9b",
+        "strong_1": "qwen-9b",
+        "fringe_0": "qwen-9b",
+        "fringe_1": "qwen-9b"
+      },
+      "market_indices": {
+        "start": 0,
+        "count_parameter": "core_markets"
+      },
+      "round_count_parameter": "rounds",
+      "execution_order": 6,
+      "cancellation_priority": 6,
+      "matched_control": "core.N0",
+      "allowed_round_extensions": []
+    },
+    {
+      "id": "core.C1-FF",
+      "block": "core",
+      "phase": "auction",
+      "condition": "C1",
+      "position": "fringe_fringe",
+      "composition": "qwen-9b/qwen-9b/qwen-9b/qwen-9b",
+      "models_by_role": {
+        "strong_0": "qwen-9b",
+        "strong_1": "qwen-9b",
+        "fringe_0": "qwen-9b",
+        "fringe_1": "qwen-9b"
+      },
+      "market_indices": {
+        "start": 0,
+        "count_parameter": "core_markets"
+      },
+      "round_count_parameter": "rounds",
+      "execution_order": 7,
+      "cancellation_priority": 1,
+      "matched_control": "core.N0",
+      "allowed_round_extensions": []
+    },
+    {
+      "id": "labs.gemma-12b.N0",
+      "block": "labs",
+      "phase": "auction",
+      "condition": "N0",
+      "position": "strong_strong",
+      "composition": "gemma-12b/gemma-12b/gemma-12b/gemma-12b",
+      "models_by_role": {
+        "strong_0": "gemma-12b",
+        "strong_1": "gemma-12b",
+        "fringe_0": "gemma-12b",
+        "fringe_1": "gemma-12b"
+      },
+      "market_indices": {
+        "start": 0,
+        "count_parameter": "breadth_markets"
+      },
+      "round_count_parameter": "rounds",
+      "execution_order": 10,
+      "cancellation_priority": 4,
+      "matched_control": null,
+      "allowed_round_extensions": []
+    },
+    {
+      "id": "labs.gemma-12b.C1",
+      "block": "labs",
+      "phase": "auction",
+      "condition": "C1",
+      "position": "strong_strong",
+      "composition": "gemma-12b/gemma-12b/gemma-12b/gemma-12b",
+      "models_by_role": {
+        "strong_0": "gemma-12b",
+        "strong_1": "gemma-12b",
+        "fringe_0": "gemma-12b",
+        "fringe_1": "gemma-12b"
+      },
+      "market_indices": {
+        "start": 0,
+        "count_parameter": "breadth_markets"
+      },
+      "round_count_parameter": "rounds",
+      "execution_order": 11,
+      "cancellation_priority": 4,
+      "matched_control": "labs.gemma-12b.N0",
+      "allowed_round_extensions": []
+    },
+    {
+      "id": "labs.ministral-8b.N0",
+      "block": "labs",
+      "phase": "auction",
+      "condition": "N0",
+      "position": "strong_strong",
+      "composition": "ministral-8b/ministral-8b/ministral-8b/ministral-8b",
+      "models_by_role": {
+        "strong_0": "ministral-8b",
+        "strong_1": "ministral-8b",
+        "fringe_0": "ministral-8b",
+        "fringe_1": "ministral-8b"
+      },
+      "market_indices": {
+        "start": 0,
+        "count_parameter": "breadth_markets"
+      },
+      "round_count_parameter": "rounds",
+      "execution_order": 12,
+      "cancellation_priority": 4,
+      "matched_control": null,
+      "allowed_round_extensions": []
+    },
+    {
+      "id": "labs.ministral-8b.C1",
+      "block": "labs",
+      "phase": "auction",
+      "condition": "C1",
+      "position": "strong_strong",
+      "composition": "ministral-8b/ministral-8b/ministral-8b/ministral-8b",
+      "models_by_role": {
+        "strong_0": "ministral-8b",
+        "strong_1": "ministral-8b",
+        "fringe_0": "ministral-8b",
+        "fringe_1": "ministral-8b"
+      },
+      "market_indices": {
+        "start": 0,
+        "count_parameter": "breadth_markets"
+      },
+      "round_count_parameter": "rounds",
+      "execution_order": 13,
+      "cancellation_priority": 4,
+      "matched_control": "labs.ministral-8b.N0",
+      "allowed_round_extensions": []
+    },
+    {
+      "id": "sizes.qwen-4b.N0",
+      "block": "sizes",
+      "phase": "auction",
+      "condition": "N0",
+      "position": "strong_strong",
+      "composition": "qwen-4b/qwen-4b/qwen-4b/qwen-4b",
+      "models_by_role": {
+        "strong_0": "qwen-4b",
+        "strong_1": "qwen-4b",
+        "fringe_0": "qwen-4b",
+        "fringe_1": "qwen-4b"
+      },
+      "market_indices": {
+        "start": 0,
+        "count_parameter": "breadth_markets"
+      },
+      "round_count_parameter": "rounds",
+      "execution_order": 18,
+      "cancellation_priority": 4,
+      "matched_control": null,
+      "allowed_round_extensions": []
+    },
+    {
+      "id": "sizes.qwen-4b.C1",
+      "block": "sizes",
+      "phase": "auction",
+      "condition": "C1",
+      "position": "strong_strong",
+      "composition": "qwen-4b/qwen-4b/qwen-4b/qwen-4b",
+      "models_by_role": {
+        "strong_0": "qwen-4b",
+        "strong_1": "qwen-4b",
+        "fringe_0": "qwen-4b",
+        "fringe_1": "qwen-4b"
+      },
+      "market_indices": {
+        "start": 0,
+        "count_parameter": "breadth_markets"
+      },
+      "round_count_parameter": "rounds",
+      "execution_order": 19,
+      "cancellation_priority": 4,
+      "matched_control": "sizes.qwen-4b.N0",
+      "allowed_round_extensions": []
+    },
+    {
+      "id": "sizes.gemma-e4b.N0",
+      "block": "sizes",
+      "phase": "auction",
+      "condition": "N0",
+      "position": "strong_strong",
+      "composition": "gemma-e4b/gemma-e4b/gemma-e4b/gemma-e4b",
+      "models_by_role": {
+        "strong_0": "gemma-e4b",
+        "strong_1": "gemma-e4b",
+        "fringe_0": "gemma-e4b",
+        "fringe_1": "gemma-e4b"
+      },
+      "market_indices": {
+        "start": 0,
+        "count_parameter": "breadth_markets"
+      },
+      "round_count_parameter": "rounds",
+      "execution_order": 20,
+      "cancellation_priority": 2,
+      "matched_control": null,
+      "allowed_round_extensions": []
+    },
+    {
+      "id": "sizes.gemma-e4b.C1",
+      "block": "sizes",
+      "phase": "auction",
+      "condition": "C1",
+      "position": "strong_strong",
+      "composition": "gemma-e4b/gemma-e4b/gemma-e4b/gemma-e4b",
+      "models_by_role": {
+        "strong_0": "gemma-e4b",
+        "strong_1": "gemma-e4b",
+        "fringe_0": "gemma-e4b",
+        "fringe_1": "gemma-e4b"
+      },
+      "market_indices": {
+        "start": 0,
+        "count_parameter": "breadth_markets"
+      },
+      "round_count_parameter": "rounds",
+      "execution_order": 21,
+      "cancellation_priority": 2,
+      "matched_control": "sizes.gemma-e4b.N0",
+      "allowed_round_extensions": []
+    },
+    {
+      "id": "sizes.ministral-3b.N0",
+      "block": "sizes",
+      "phase": "auction",
+      "condition": "N0",
+      "position": "strong_strong",
+      "composition": "ministral-3b/ministral-3b/ministral-3b/ministral-3b",
+      "models_by_role": {
+        "strong_0": "ministral-3b",
+        "strong_1": "ministral-3b",
+        "fringe_0": "ministral-3b",
+        "fringe_1": "ministral-3b"
+      },
+      "market_indices": {
+        "start": 0,
+        "count_parameter": "breadth_markets"
+      },
+      "round_count_parameter": "rounds",
+      "execution_order": 22,
+      "cancellation_priority": 2,
+      "matched_control": null,
+      "allowed_round_extensions": []
+    },
+    {
+      "id": "sizes.ministral-3b.C1",
+      "block": "sizes",
+      "phase": "auction",
+      "condition": "C1",
+      "position": "strong_strong",
+      "composition": "ministral-3b/ministral-3b/ministral-3b/ministral-3b",
+      "models_by_role": {
+        "strong_0": "ministral-3b",
+        "strong_1": "ministral-3b",
+        "fringe_0": "ministral-3b",
+        "fringe_1": "ministral-3b"
+      },
+      "market_indices": {
+        "start": 0,
+        "count_parameter": "breadth_markets"
+      },
+      "round_count_parameter": "rounds",
+      "execution_order": 23,
+      "cancellation_priority": 2,
+      "matched_control": "sizes.ministral-3b.N0",
+      "allowed_round_extensions": []
+    },
+    {
+      "id": "mixed.D",
+      "block": "mixed",
+      "phase": "auction",
+      "condition": "D",
+      "position": "strong_strong",
+      "composition": "qwen-9b/qwen-9b/gemma-12b/ministral-8b",
+      "models_by_role": {
+        "strong_0": "qwen-9b",
+        "strong_1": "qwen-9b",
+        "fringe_0": "gemma-12b",
+        "fringe_1": "ministral-8b"
+      },
+      "market_indices": {
+        "start": 0,
+        "count_parameter": "mixed_markets"
+      },
+      "round_count_parameter": "rounds",
+      "execution_order": 14,
+      "cancellation_priority": 5,
+      "matched_control": null,
+      "allowed_round_extensions": []
+    },
+    {
+      "id": "mixed.C1-XX",
+      "block": "mixed",
+      "phase": "auction",
+      "condition": "C1-XX",
+      "position": "strong_strong",
+      "composition": "qwen-9b/qwen-9b/gemma-12b/ministral-8b",
+      "models_by_role": {
+        "strong_0": "qwen-9b",
+        "strong_1": "qwen-9b",
+        "fringe_0": "gemma-12b",
+        "fringe_1": "ministral-8b"
+      },
+      "market_indices": {
+        "start": 0,
+        "count_parameter": "mixed_markets"
+      },
+      "round_count_parameter": "rounds",
+      "execution_order": 15,
+      "cancellation_priority": 5,
+      "matched_control": "mixed.D",
+      "allowed_round_extensions": []
+    },
+    {
+      "id": "mixed.H-XYZZ",
+      "block": "mixed",
+      "phase": "auction",
+      "condition": "H-XYZZ",
+      "position": "strong_strong",
+      "composition": "qwen-9b/gemma-12b/ministral-8b/ministral-8b",
+      "models_by_role": {
+        "strong_0": "qwen-9b",
+        "strong_1": "gemma-12b",
+        "fringe_0": "ministral-8b",
+        "fringe_1": "ministral-8b"
+      },
+      "market_indices": {
+        "start": 0,
+        "count_parameter": "mixed_markets"
+      },
+      "round_count_parameter": "rounds",
+      "execution_order": 16,
+      "cancellation_priority": 3,
+      "matched_control": null,
+      "allowed_round_extensions": []
+    },
+    {
+      "id": "mixed.C1-XY",
+      "block": "mixed",
+      "phase": "auction",
+      "condition": "C1-XY",
+      "position": "strong_strong",
+      "composition": "qwen-9b/gemma-12b/ministral-8b/ministral-8b",
+      "models_by_role": {
+        "strong_0": "qwen-9b",
+        "strong_1": "gemma-12b",
+        "fringe_0": "ministral-8b",
+        "fringe_1": "ministral-8b"
+      },
+      "market_indices": {
+        "start": 0,
+        "count_parameter": "mixed_markets"
+      },
+      "round_count_parameter": "rounds",
+      "execution_order": 17,
+      "cancellation_priority": 3,
+      "matched_control": "mixed.H-XYZZ",
+      "allowed_round_extensions": []
+    },
+    {
+      "id": "core.probes",
+      "block": "probes",
+      "phase": "probe",
+      "condition": "probes",
+      "position": "strong_strong",
+      "composition": "qwen-9b/qwen-9b/qwen-9b/qwen-9b",
+      "models_by_role": {
+        "strong_0": "qwen-9b",
+        "strong_1": "qwen-9b",
+        "fringe_0": "qwen-9b",
+        "fringe_1": "qwen-9b"
+      },
+      "market_indices": {
+        "start": 0,
+        "count_parameter": "spot_check_markets"
+      },
+      "round_count_parameter": "rounds",
+      "execution_order": 9,
+      "cancellation_priority": 5,
+      "matched_control": null,
+      "allowed_round_extensions": [],
+      "enabled": true,
+      "source_entries": [
+        "core.C1-SS"
+      ],
+      "kinds": [
+        "partner-cost"
+      ],
+      "context_selection": "Fixed market/round/role grid, independent of bids, missingness and outcomes.",
+      "call_allowance_parameter": "probe_calls",
+      "note": "One regenerated partner message per context and cost, shared by five fresh bid draws; no replacement contexts for missing calls.",
+      "context_rounds": [
+        110,
+        120,
+        130,
+        140,
+        150,
+        160,
+        170,
+        180,
+        190,
+        200
+      ],
+      "context_roles": [
+        "strong_0",
+        "strong_1"
+      ],
+      "counterfactual_costs": [
+        1,
+        2,
+        3
+      ],
+      "message_draws_per_cost": 1,
+      "bid_draws_per_cost": 5
+    },
+    {
+      "id": "judge.qwen9b",
+      "block": "judge",
+      "phase": "judge",
+      "condition": "judge",
+      "position": "strong_strong",
+      "composition": "qwen-9b/qwen-9b/qwen-9b/qwen-9b",
+      "models_by_role": {
+        "strong_0": "qwen-9b",
+        "strong_1": "qwen-9b",
+        "fringe_0": "qwen-9b",
+        "fringe_1": "qwen-9b"
+      },
+      "market_indices": {
+        "start": 0,
+        "count_parameter": "core_markets"
+      },
+      "round_count_parameter": "rounds",
+      "execution_order": 8,
+      "cancellation_priority": 6,
+      "matched_control": null,
+      "allowed_round_extensions": [],
+      "source_entries": "all_auction_entries",
+      "levels": [
+        "L1",
+        "L2"
+      ],
+      "judge_model": "qwen-9b"
+    },
+    {
+      "id": "judge.gemma12b",
+      "block": "judge spot check",
+      "phase": "judge",
+      "condition": "judge",
+      "position": "strong_strong",
+      "composition": "gemma-12b/gemma-12b/gemma-12b/gemma-12b",
+      "models_by_role": {
+        "strong_0": "gemma-12b",
+        "strong_1": "gemma-12b",
+        "fringe_0": "gemma-12b",
+        "fringe_1": "gemma-12b"
+      },
+      "market_indices": {
+        "start": 0,
+        "count_parameter": "spot_check_markets"
+      },
+      "round_count_parameter": "rounds",
+      "execution_order": 24,
+      "cancellation_priority": 4,
+      "matched_control": null,
+      "allowed_round_extensions": [],
+      "source_entries": [
+        "core.N0",
+        "core.C1-SS"
+      ],
+      "levels": [
+        "L1",
+        "L2"
+      ],
+      "judge_model": "gemma-12b"
+    }
+  ]
+}

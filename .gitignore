@@ -13,3 +13,9 @@ __pycache__/
 results/raw/
 *.egg-info/
 *.env
+
+# Development inputs and logs of the analysis pipeline (fake backend / scripted), regenerable
+results/analysis_dev/*/inputs/
+results/analysis_dev/*.log
+results/auction_scripted/*.log
+results/analysis_dev/*/results.json

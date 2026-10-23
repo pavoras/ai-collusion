@@ -1,0 +1,151 @@
+{
+  "mode": "blind",
+  "validated_markets": 45,
+  "manifest_sha256": "53c69c0f64e62cc77060d695f198c7b4c903c1455d468970998b43d070454fb0",
+  "declared_markets": 45,
+  "observed_rounds": 9000,
+  "bid_histograms_by_firm_type": {
+    "strong": {
+      "2": 1769,
+      "3": 4564,
+      "4": 6614,
+      "5": 2713,
+      "6": 1217,
+      "7": 1123,
+      "8": 0
+    },
+    "fringe": {
+      "2": 79,
+      "3": 64,
+      "4": 3295,
+      "5": 5774,
+      "6": 5678,
+      "7": 3110,
+      "8": 0
+    }
+  },
+  "no_bid_category": 8,
+  "operations_by_run": [
+    {
+      "run": {
+        "cell": "fake-N0",
+        "cohort": "fake",
+        "path": "fake-N0"
+      },
+      "calls": 800,
+      "invalid_response_rate": null,
+      "transport_error_rate": null,
+      "latency_median_seconds": null,
+      "latency_max_seconds": null,
+      "prompt_tokens": null,
+      "completion_tokens": null,
+      "estimated_invocation_usd": null
+    },
+    {
+      "run": {
+        "cell": "C1-FF",
+        "cohort": "registered",
+        "path": "C1-FF"
+      },
+      "calls": null,
+      "invalid_response_rate": null,
+      "transport_error_rate": null,
+      "latency_median_seconds": null,
+      "latency_max_seconds": null,
+      "prompt_tokens": null,
+      "completion_tokens": null,
+      "estimated_invocation_usd": null
+    },
+    {
+      "run": {
+        "cell": "C1-SF",
+        "cohort": "registered",
+        "path": "C1-SF"
+      },
+      "calls": null,
+      "invalid_response_rate": null,
+      "transport_error_rate": null,
+      "latency_median_seconds": null,
+      "latency_max_seconds": null,
+      "prompt_tokens": null,
+      "completion_tokens": null,
+      "estimated_invocation_usd": null
+    },
+    {
+      "run": {
+        "cell": "C1-SS",
+        "cohort": "registered",
+        "path": "C1-SS"
+      },
+      "calls": null,
+      "invalid_response_rate": null,
+      "transport_error_rate": null,
+      "latency_median_seconds": null,
+      "latency_max_seconds": null,
+      "prompt_tokens": null,
+      "completion_tokens": null,
+      "estimated_invocation_usd": null
+    },
+    {
+      "run": {
+        "cell": "C2",
+        "cohort": "registered",
+        "path": "C2"
+      },
+      "calls": null,
+      "invalid_response_rate": null,
+      "transport_error_rate": null,
+      "latency_median_seconds": null,
+      "latency_max_seconds": null,
+      "prompt_tokens": null,
+      "completion_tokens": null,
+      "estimated_invocation_usd": null
+    },
+    {
+      "run": {
+        "cell": "E1",
+        "cohort": "registered",
+        "path": "E1"
+      },
+      "calls": null,
+      "invalid_response_rate": null,
+      "transport_error_rate": null,
+      "latency_median_seconds": null,
+      "latency_max_seconds": null,
+      "prompt_tokens": null,
+      "completion_tokens": null,
+      "estimated_invocation_usd": null
+    },
+    {
+      "run": {
+        "cell": "N0",
+        "cohort": "registered",
+        "path": "N0"
+      },
+      "calls": null,
+      "invalid_response_rate": null,
+      "transport_error_rate": null,
+      "latency_median_seconds": null,
+      "latency_max_seconds": null,
+      "prompt_tokens": null,
+      "completion_tokens": null,
+      "estimated_invocation_usd": null
+    },
+    {
+      "run": {
+        "cell": "P0",
+        "cohort": "registered",
+        "path": "P0"
+      },
+      "calls": null,
+      "invalid_response_rate": null,
+      "transport_error_rate": null,
+      "latency_median_seconds": null,
+      "latency_max_seconds": null,
+      "prompt_tokens": null,
+      "completion_tokens": null,
+      "estimated_invocation_usd": null
+    }
+  ],
+  "operations_note": "Calls/errors/latency/tokens/cost are retained as supplied; unavailable fields are not estimated."
+}
