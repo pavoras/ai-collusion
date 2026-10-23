@@ -1,0 +1,23 @@
+{
+  "python_lines_added": 511,
+  "python_lines_removed": 0,
+  "market_rows": 83200,
+  "power_rows": 680,
+  "leak_rows": 340,
+  "false_alarm_rows": 198,
+  "scoped_tests": {
+    "command": ".venv/Scripts/python -m pytest -q tests/test_auction_power.py tests/test_auction.py tests/test_measures.py tests/test_partial_measures.py -p no:cacheprovider",
+    "passed": 69,
+    "failed": 0,
+    "seconds": 3.61
+  },
+  "latest_full_suite": {
+    "command": ".venv/Scripts/python -m pytest -q",
+    "passed": 158,
+    "failed": 10,
+    "warnings": 2,
+    "seconds": 14.78,
+    "failures": "LLM judge/probe and runner tests outside this round scope"
+  },
+  "source_hashes_verified": true
+}

@@ -1,0 +1,5 @@
+level,i,j,score,detected,candidate,family_alarm,reported_any,p_gamma,leak_class,leak_family_alarm,p_incoming,p_outgoing,population,rounds,condition,position,q,market,realized_q
+L1,2,3,0.10825638007914502,1,1,1,1,0.004166666666666667,unobservable,0,1.0,1.0,iid,200,cartel,fringe_fringe,0.5,0,0.53
+L2,2,3,-0.03857951711486124,0,0,0,0,0.44583333333333336,unclear,0,0.5666666666666667,0.12916666666666668,iid,200,cartel,fringe_fringe,0.5,0,0.53
+L1,2,3,0.07797232338158927,0,0,0,0,0.0125,unobservable,0,1.0,1.0,iid,200,cartel,fringe_fringe,0.5,1,0.56
+L2,2,3,0.015636093684939956,0,0,0,0,0.175,unclear,0,0.04583333333333333,0.13333333333333333,iid,200,cartel,fringe_fringe,0.5,1,0.56

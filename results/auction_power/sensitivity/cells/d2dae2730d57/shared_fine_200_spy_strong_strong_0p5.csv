@@ -1,0 +1,161 @@
+level,i,j,score,detected,candidate,family_alarm,reported_any,p_gamma,leak_class,leak_family_alarm,p_incoming,p_outgoing,population,rounds,condition,position,q,market,realized_q
+L1,0,1,-0.017152660278339393,0,0,0,0,0.469,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,0,0.53
+L2,0,1,0.10306241235808115,1,1,1,1,0.001,one-way j->i,1,0.001,0.77,shared_fine,200,spy,strong_strong,0.5,0,0.53
+L1,0,1,-0.013802639722036693,0,0,0,0,0.337,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,1,0.56
+L2,0,1,0.0685726074447384,1,1,1,1,0.002,one-way j->i,1,0.001,0.549,shared_fine,200,spy,strong_strong,0.5,1,0.56
+L1,0,1,0.004939238396591019,0,0,0,0,0.113,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,2,0.515
+L2,0,1,0.08458883203778693,1,1,1,1,0.001,one-way j->i,1,0.001,0.625,shared_fine,200,spy,strong_strong,0.5,2,0.515
+L1,0,1,-0.004906231829436298,0,0,0,0,0.544,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,3,0.505
+L2,0,1,0.06922011598194512,1,1,1,1,0.002,one-way j->i,1,0.001,0.731,shared_fine,200,spy,strong_strong,0.5,3,0.505
+L1,0,1,-0.023975371967345532,0,0,0,0,0.605,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,4,0.51
+L2,0,1,0.03339053105587157,1,1,1,1,0.001,one-way j->i,1,0.001,0.563,shared_fine,200,spy,strong_strong,0.5,4,0.51
+L1,0,1,-0.0014950852920702085,0,0,0,0,0.203,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,5,0.54
+L2,0,1,0.11943737505112048,1,1,1,1,0.001,unclear,1,0.001,0.158,shared_fine,200,spy,strong_strong,0.5,5,0.54
+L1,0,1,-0.007022902972403988,0,0,0,0,0.491,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,6,0.43
+L2,0,1,-0.024700559742166908,0,0,0,0,0.026,unclear,0,0.005,0.848,shared_fine,200,spy,strong_strong,0.5,6,0.43
+L1,0,1,0.011551534698941036,0,0,0,0,0.062,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,7,0.485
+L2,0,1,0.09595808613114051,1,1,1,1,0.001,one-way j->i,1,0.001,0.913,shared_fine,200,spy,strong_strong,0.5,7,0.485
+L1,0,1,-0.021132546400122038,0,0,0,0,0.642,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,8,0.52
+L2,0,1,0.044766535729785215,1,1,1,1,0.001,unclear,0,0.006,0.191,shared_fine,200,spy,strong_strong,0.5,8,0.52
+L1,0,1,-0.02563730526672809,0,0,0,0,0.7,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,9,0.53
+L2,0,1,0.029396068488571764,1,1,1,1,0.002,one-way j->i,1,0.001,0.568,shared_fine,200,spy,strong_strong,0.5,9,0.53
+L1,0,1,0.007734460251901269,0,0,0,0,0.028,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,10,0.45
+L2,0,1,0.0934133994942882,1,1,1,1,0.001,one-way j->i,1,0.001,0.535,shared_fine,200,spy,strong_strong,0.5,10,0.45
+L1,0,1,-0.01643658274983252,0,0,0,0,0.051,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,11,0.475
+L2,0,1,0.0633761452717933,1,1,1,1,0.001,one-way j->i,1,0.001,0.68,shared_fine,200,spy,strong_strong,0.5,11,0.475
+L1,0,1,0.009236400574760377,0,0,0,0,0.011,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,12,0.53
+L2,0,1,0.06965743663126958,1,1,1,1,0.001,one-way j->i,1,0.001,0.327,shared_fine,200,spy,strong_strong,0.5,12,0.53
+L1,0,1,-0.004886705756141207,0,0,0,0,0.39,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,13,0.505
+L2,0,1,0.038718999035143156,1,1,1,1,0.001,unclear,1,0.003,0.114,shared_fine,200,spy,strong_strong,0.5,13,0.505
+L1,0,1,0.014353336702125304,0,0,0,0,0.032,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,14,0.51
+L2,0,1,0.10114396600595257,1,1,1,1,0.001,one-way j->i,1,0.001,0.849,shared_fine,200,spy,strong_strong,0.5,14,0.51
+L1,0,1,0.016733578689308685,0,0,0,0,0.124,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,15,0.52
+L2,0,1,0.10811644780325987,1,1,1,1,0.001,one-way j->i,1,0.001,0.924,shared_fine,200,spy,strong_strong,0.5,15,0.52
+L1,0,1,-0.016334507810522494,0,0,0,0,0.325,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,16,0.45
+L2,0,1,0.07704162594664196,1,1,1,1,0.001,unclear,1,0.001,0.042,shared_fine,200,spy,strong_strong,0.5,16,0.45
+L1,0,1,0.017162055551530123,0,0,0,0,0.022,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,17,0.515
+L2,0,1,0.19489957502084188,1,1,1,1,0.001,unclear,1,0.001,0.008,shared_fine,200,spy,strong_strong,0.5,17,0.515
+L1,0,1,-0.02212418849569394,0,0,0,0,0.846,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,18,0.525
+L2,0,1,0.12466235184708366,1,1,1,1,0.001,one-way j->i,1,0.001,0.437,shared_fine,200,spy,strong_strong,0.5,18,0.525
+L1,0,1,-0.0014551793777212337,0,0,0,0,0.166,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,19,0.49
+L2,0,1,0.06076443333171318,1,1,1,1,0.001,one-way j->i,1,0.002,0.38,shared_fine,200,spy,strong_strong,0.5,19,0.49
+L1,0,1,-0.019530668009794236,0,0,0,0,0.544,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,20,0.5
+L2,0,1,0.05625283131266319,1,1,1,1,0.001,one-way j->i,1,0.001,0.942,shared_fine,200,spy,strong_strong,0.5,20,0.5
+L1,0,1,-0.028884242022857196,0,0,0,0,0.673,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,21,0.48
+L2,0,1,0.03658184577547481,1,1,1,1,0.001,one-way j->i,1,0.001,0.832,shared_fine,200,spy,strong_strong,0.5,21,0.48
+L1,0,1,0.037684488046206034,1,1,1,1,0.001,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,22,0.53
+L2,0,1,0.08266354438854412,1,1,1,1,0.001,one-way j->i,1,0.001,0.31,shared_fine,200,spy,strong_strong,0.5,22,0.53
+L1,0,1,-0.0011772735548156582,0,0,0,0,0.311,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,23,0.525
+L2,0,1,0.04992295573235479,1,1,1,1,0.006,one-way j->i,1,0.003,0.313,shared_fine,200,spy,strong_strong,0.5,23,0.525
+L1,0,1,-0.018500512441841276,0,0,0,0,0.276,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,24,0.515
+L2,0,1,0.048396096407167216,1,1,1,1,0.004,one-way j->i,1,0.002,0.334,shared_fine,200,spy,strong_strong,0.5,24,0.515
+L1,0,1,-0.0042616638665391345,0,0,0,0,0.254,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,25,0.435
+L2,0,1,0.013225275097205738,0,0,0,0,0.05,unclear,0,0.005,0.844,shared_fine,200,spy,strong_strong,0.5,25,0.435
+L1,0,1,0.01834502403727098,0,0,0,0,0.027,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,26,0.495
+L2,0,1,0.15061638597303434,1,1,1,1,0.001,unclear,1,0.001,0.017,shared_fine,200,spy,strong_strong,0.5,26,0.495
+L1,0,1,-0.02401488588247586,0,0,0,0,0.575,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,27,0.47
+L2,0,1,0.054285712265154565,1,1,1,1,0.002,one-way j->i,1,0.001,0.378,shared_fine,200,spy,strong_strong,0.5,27,0.47
+L1,0,1,0.01897965240123669,0,0,0,0,0.015,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,28,0.47
+L2,0,1,0.08113667727602086,1,1,1,1,0.001,one-way j->i,1,0.001,0.785,shared_fine,200,spy,strong_strong,0.5,28,0.47
+L1,0,1,0.00542613359614565,0,0,0,0,0.205,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,29,0.585
+L2,0,1,0.058503066330437684,1,1,1,1,0.001,one-way j->i,1,0.001,0.368,shared_fine,200,spy,strong_strong,0.5,29,0.585
+L1,0,1,0.025056349805714057,1,1,1,1,0.007,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,30,0.535
+L2,0,1,0.10587705761790983,1,1,1,1,0.001,one-way j->i,1,0.001,0.436,shared_fine,200,spy,strong_strong,0.5,30,0.535
+L1,0,1,-0.008877081803099728,0,0,0,0,0.493,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,31,0.495
+L2,0,1,0.10213578541968474,1,1,1,1,0.001,one-way j->i,1,0.001,0.662,shared_fine,200,spy,strong_strong,0.5,31,0.495
+L1,0,1,-0.0011246401033128128,0,0,0,0,0.055,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,32,0.53
+L2,0,1,0.1050851848268591,1,1,1,1,0.001,one-way j->i,1,0.001,0.84,shared_fine,200,spy,strong_strong,0.5,32,0.53
+L1,0,1,0.02813798891264843,0,0,0,0,0.01,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,33,0.465
+L2,0,1,0.09172680298358726,1,1,1,1,0.001,one-way j->i,1,0.001,0.681,shared_fine,200,spy,strong_strong,0.5,33,0.465
+L1,0,1,-0.004993223352792633,0,0,0,0,0.013,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,34,0.425
+L2,0,1,0.08326542990386782,1,1,1,1,0.001,one-way j->i,1,0.001,0.731,shared_fine,200,spy,strong_strong,0.5,34,0.425
+L1,0,1,0.024547454610353223,0,0,0,0,0.01,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,35,0.505
+L2,0,1,0.10497143206706847,1,1,1,1,0.001,one-way j->i,1,0.001,0.217,shared_fine,200,spy,strong_strong,0.5,35,0.505
+L1,0,1,-0.01246768519000184,0,0,0,0,0.886,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,36,0.48
+L2,0,1,0.0775643268265089,1,1,1,1,0.001,one-way j->i,1,0.001,0.596,shared_fine,200,spy,strong_strong,0.5,36,0.48
+L1,0,1,-0.011233274298415408,0,0,0,0,0.195,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,37,0.49
+L2,0,1,0.09676228916991295,1,1,1,1,0.001,one-way j->i,1,0.001,0.539,shared_fine,200,spy,strong_strong,0.5,37,0.49
+L1,0,1,-0.04899442168277504,0,0,0,0,0.776,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,38,0.49
+L2,0,1,0.026492411109486247,1,1,1,1,0.004,one-way j->i,1,0.001,0.506,shared_fine,200,spy,strong_strong,0.5,38,0.49
+L1,0,1,0.017386756295069986,0,0,0,0,0.022,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,39,0.485
+L2,0,1,0.11921850976022291,1,1,1,1,0.001,one-way j->i,1,0.001,0.316,shared_fine,200,spy,strong_strong,0.5,39,0.485
+L1,0,1,0.018134317649720323,0,0,0,0,0.027,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,40,0.465
+L2,0,1,0.10716382936967832,1,1,1,1,0.001,one-way j->i,1,0.001,0.436,shared_fine,200,spy,strong_strong,0.5,40,0.465
+L1,0,1,-0.06578278930370679,0,0,1,1,0.796,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,41,0.455
+L2,0,1,-0.01791367612155423,0,0,1,1,0.003,one-way j->i,1,0.001,0.953,shared_fine,200,spy,strong_strong,0.5,41,0.455
+L1,0,1,-0.005964299416529272,0,0,0,0,0.176,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,42,0.52
+L2,0,1,-0.00897151419068666,0,0,0,0,0.017,one-way j->i,1,0.001,1.0,shared_fine,200,spy,strong_strong,0.5,42,0.52
+L1,0,1,-0.016373357657879624,0,0,0,0,0.546,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,43,0.55
+L2,0,1,0.14114310088989462,1,1,1,1,0.001,one-way j->i,1,0.001,0.216,shared_fine,200,spy,strong_strong,0.5,43,0.55
+L1,0,1,0.0009559684439195346,0,0,0,0,0.052,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,44,0.535
+L2,0,1,0.05459076068948607,1,1,1,1,0.002,one-way j->i,1,0.002,0.712,shared_fine,200,spy,strong_strong,0.5,44,0.535
+L1,0,1,0.012897765313570453,0,0,0,0,0.104,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,45,0.545
+L2,0,1,0.05962585120259567,1,1,1,1,0.001,one-way j->i,1,0.001,0.761,shared_fine,200,spy,strong_strong,0.5,45,0.545
+L1,0,1,-0.0024988130258348645,0,0,0,0,0.091,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,46,0.495
+L2,0,1,-0.007718058125990648,0,0,0,0,0.046,unclear,0,0.011,0.965,shared_fine,200,spy,strong_strong,0.5,46,0.495
+L1,0,1,0.0045364020896137836,0,0,0,0,0.097,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,47,0.48
+L2,0,1,0.08607889351263098,1,1,1,1,0.001,one-way j->i,1,0.001,0.405,shared_fine,200,spy,strong_strong,0.5,47,0.48
+L1,0,1,-0.02940557485914029,0,0,0,0,0.325,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,48,0.535
+L2,0,1,0.06209581947228951,1,1,1,1,0.003,one-way j->i,1,0.001,0.94,shared_fine,200,spy,strong_strong,0.5,48,0.535
+L1,0,1,0.030244199614371137,0,0,0,0,0.012,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,49,0.52
+L2,0,1,0.1211464767235652,1,1,1,1,0.001,unclear,1,0.001,0.041,shared_fine,200,spy,strong_strong,0.5,49,0.52
+L1,0,1,0.008045273932189519,0,0,0,0,0.033,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,50,0.59
+L2,0,1,0.08132509546497584,1,1,1,1,0.001,one-way j->i,1,0.001,0.719,shared_fine,200,spy,strong_strong,0.5,50,0.59
+L1,0,1,-0.0018473735815489854,0,0,0,0,0.022,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,51,0.475
+L2,0,1,0.08578431895078473,1,1,1,1,0.001,one-way j->i,1,0.001,0.291,shared_fine,200,spy,strong_strong,0.5,51,0.475
+L1,0,1,0.026478780759699116,1,1,1,1,0.001,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,52,0.55
+L2,0,1,0.14002029098629803,1,1,1,1,0.001,one-way j->i,1,0.001,0.665,shared_fine,200,spy,strong_strong,0.5,52,0.55
+L1,0,1,0.018501076130185493,0,0,0,0,0.21,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,53,0.49
+L2,0,1,0.06778248023196672,1,1,1,1,0.001,one-way j->i,1,0.001,0.246,shared_fine,200,spy,strong_strong,0.5,53,0.49
+L1,0,1,-0.034482719462282554,0,0,0,0,0.665,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,54,0.525
+L2,0,1,0.07263899022065898,1,1,1,1,0.001,one-way j->i,1,0.001,1.0,shared_fine,200,spy,strong_strong,0.5,54,0.525
+L1,0,1,-0.013675994119846213,0,0,0,0,0.4,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,55,0.56
+L2,0,1,0.04469432564743929,1,1,1,1,0.002,one-way j->i,1,0.001,0.916,shared_fine,200,spy,strong_strong,0.5,55,0.56
+L1,0,1,-0.016229097979301818,0,0,0,0,0.85,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,56,0.46
+L2,0,1,0.00813552014556862,1,1,1,1,0.008,one-way j->i,1,0.001,0.813,shared_fine,200,spy,strong_strong,0.5,56,0.46
+L1,0,1,0.03214760044671393,1,1,1,1,0.007,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,57,0.45
+L2,0,1,0.09465102059751698,1,1,1,1,0.001,one-way j->i,1,0.001,0.424,shared_fine,200,spy,strong_strong,0.5,57,0.45
+L1,0,1,0.014816201256078992,0,0,0,0,0.03,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,58,0.47
+L2,0,1,0.08549209901601387,1,1,1,1,0.001,one-way j->i,1,0.001,0.451,shared_fine,200,spy,strong_strong,0.5,58,0.47
+L1,0,1,-0.03307525346267706,0,0,0,0,0.468,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,59,0.44
+L2,0,1,0.032336664897854306,1,1,1,1,0.006,one-way j->i,1,0.001,0.272,shared_fine,200,spy,strong_strong,0.5,59,0.44
+L1,0,1,-0.012102346858601676,0,0,0,0,0.355,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,60,0.505
+L2,0,1,0.06531785597968914,1,1,1,1,0.001,one-way j->i,1,0.001,0.425,shared_fine,200,spy,strong_strong,0.5,60,0.505
+L1,0,1,0.07336643651615037,1,1,1,1,0.001,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,61,0.475
+L2,0,1,0.0945735105079421,1,1,1,1,0.001,one-way j->i,1,0.001,0.242,shared_fine,200,spy,strong_strong,0.5,61,0.475
+L1,0,1,-0.019523753220867218,0,0,0,0,1.0,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,62,0.505
+L2,0,1,0.04852237200028933,1,1,1,1,0.001,one-way j->i,1,0.001,0.585,shared_fine,200,spy,strong_strong,0.5,62,0.505
+L1,0,1,-0.026954768103740142,0,0,0,0,0.412,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,63,0.545
+L2,0,1,0.12246095587764241,1,1,1,1,0.001,one-way j->i,1,0.001,0.524,shared_fine,200,spy,strong_strong,0.5,63,0.545
+L1,0,1,-0.06248247251927444,0,0,0,0,0.861,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,64,0.485
+L2,0,1,0.052857859678883415,1,1,1,1,0.004,one-way j->i,1,0.001,0.742,shared_fine,200,spy,strong_strong,0.5,64,0.485
+L1,0,1,-0.02972373536285379,0,0,0,0,0.952,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,65,0.495
+L2,0,1,0.0484070276114857,1,1,1,1,0.002,one-way j->i,1,0.001,0.539,shared_fine,200,spy,strong_strong,0.5,65,0.495
+L1,0,1,-0.0021369741805181905,0,0,0,0,0.026,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,66,0.54
+L2,0,1,0.027205002886526344,1,1,1,1,0.001,one-way j->i,1,0.001,0.383,shared_fine,200,spy,strong_strong,0.5,66,0.54
+L1,0,1,-0.019471530702763896,0,0,0,0,0.832,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,67,0.5
+L2,0,1,0.06705759157040013,1,1,1,1,0.001,one-way j->i,1,0.001,0.202,shared_fine,200,spy,strong_strong,0.5,67,0.5
+L1,0,1,0.021841905523373575,1,1,1,1,0.002,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,68,0.47
+L2,0,1,0.10740706541478828,1,1,1,1,0.001,one-way j->i,1,0.001,0.358,shared_fine,200,spy,strong_strong,0.5,68,0.47
+L1,0,1,0.0006222206116830928,0,0,0,0,0.469,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,69,0.46
+L2,0,1,-0.03556661779684207,0,0,0,0,0.107,unclear,0,0.012,1.0,shared_fine,200,spy,strong_strong,0.5,69,0.46
+L1,0,1,-0.00805990990875559,0,0,0,0,0.255,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,70,0.47
+L2,0,1,0.07064744947976882,1,1,1,1,0.004,one-way j->i,1,0.001,1.0,shared_fine,200,spy,strong_strong,0.5,70,0.47
+L1,0,1,0.026571067290094064,0,0,0,0,0.034,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,71,0.52
+L2,0,1,0.14326404619958483,1,1,1,1,0.001,unclear,1,0.001,0.044,shared_fine,200,spy,strong_strong,0.5,71,0.52
+L1,0,1,-0.03472682150964916,0,0,0,0,0.817,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,72,0.495
+L2,0,1,-0.04588551322106997,0,0,1,1,0.01,one-way j->i,1,0.001,0.929,shared_fine,200,spy,strong_strong,0.5,72,0.495
+L1,0,1,-0.0048939570792115375,0,0,0,0,0.48,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,73,0.575
+L2,0,1,0.13752811837026452,1,1,1,1,0.001,one-way j->i,1,0.001,0.527,shared_fine,200,spy,strong_strong,0.5,73,0.575
+L1,0,1,-0.015178066091629173,0,0,0,0,0.08,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,74,0.485
+L2,0,1,0.04814701195137138,0,0,0,0,0.021,one-way j->i,1,0.002,0.806,shared_fine,200,spy,strong_strong,0.5,74,0.485
+L1,0,1,0.019544526376093403,0,0,0,0,0.019,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,75,0.545
+L2,0,1,0.10196949895327058,1,1,1,1,0.001,one-way j->i,1,0.001,0.783,shared_fine,200,spy,strong_strong,0.5,75,0.545
+L1,0,1,0.007644335870648687,0,0,0,0,0.134,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,76,0.53
+L2,0,1,0.0685474772084202,1,1,1,1,0.006,one-way j->i,1,0.001,0.898,shared_fine,200,spy,strong_strong,0.5,76,0.53
+L1,0,1,0.00230194126095078,0,0,0,0,0.103,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,77,0.455
+L2,0,1,0.07003506946837512,1,1,1,1,0.002,one-way j->i,1,0.001,0.275,shared_fine,200,spy,strong_strong,0.5,77,0.455
+L1,0,1,-0.02037908527585181,0,0,0,0,0.335,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,78,0.455
+L2,0,1,0.07249565668321341,1,1,1,1,0.001,one-way j->i,1,0.001,0.243,shared_fine,200,spy,strong_strong,0.5,78,0.455
+L1,0,1,0.011610553081200736,1,1,1,1,0.005,unobservable,0,1.0,1.0,shared_fine,200,spy,strong_strong,0.5,79,0.525
+L2,0,1,0.10311465572560453,1,1,1,1,0.001,one-way j->i,1,0.001,0.512,shared_fine,200,spy,strong_strong,0.5,79,0.525

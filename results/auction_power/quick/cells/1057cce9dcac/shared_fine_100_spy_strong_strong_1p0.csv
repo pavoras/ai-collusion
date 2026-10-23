@@ -1,0 +1,5 @@
+level,i,j,score,detected,candidate,family_alarm,reported_any,p_gamma,leak_class,leak_family_alarm,p_incoming,p_outgoing,population,rounds,condition,position,q,market,realized_q
+L1,0,1,0.01938883287755612,1,1,1,1,0.008333333333333333,unobservable,0,1.0,1.0,shared_fine,100,spy,strong_strong,1.0,0,1.0
+L2,0,1,0.18977498295718487,1,1,1,1,0.004166666666666667,one-way j->i,1,0.004166666666666667,0.6625,shared_fine,100,spy,strong_strong,1.0,0,1.0
+L1,0,1,-0.0013697271511347586,0,0,0,0,0.07083333333333333,unobservable,0,1.0,1.0,shared_fine,100,spy,strong_strong,1.0,1,1.0
+L2,0,1,0.2849438789523464,1,1,1,1,0.004166666666666667,one-way j->i,1,0.004166666666666667,0.30416666666666664,shared_fine,100,spy,strong_strong,1.0,1,1.0

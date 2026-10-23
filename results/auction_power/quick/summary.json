@@ -1,0 +1,132 @@
+{
+  "command": ".venv/Scripts/python experiments/auction_power.py --quick",
+  "seed": 20261026,
+  "quick": true,
+  "pool_size_per_cell": 2,
+  "resampled_experiments": 100,
+  "n_perm": 239,
+  "workers": 4,
+  "source_sha256": {
+    "experiments\\auction_power.py": "49408e46f8dddbdb37746f12bea2ad39ce58aff7325f39e4af1e3931ed3e82ac",
+    "src\\collusion\\measures.py": "b2daa241fe614ab4e7de02222635b858189fe51623cfb778fde9f33433298317",
+    "src\\collusion\\games\\auction.py": "9af883f17f94f1cfee988f20334a5017defb8229a7095e1b705c7f37d0ce1f68"
+  },
+  "cells": 32,
+  "simulated_markets": 64,
+  "cached_cells": 0,
+  "runtime_is_current_invocation": true,
+  "spy_compliance": "local validated extension; exact same q=0/1 bids, costs, winners and history as public play",
+  "n_per_side": [
+    10,
+    15,
+    20,
+    30,
+    40
+  ],
+  "populations": {
+    "iid": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "shared_fine": [
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "spy_positions": "strong_strong only",
+  "state": "exact pre-round last winning bid; L2 adds each bidder's own cost",
+  "detection": "exactly one mutual strongest corrected pair, gamma p<=.05/6",
+  "false_alarm": "any candidate among six pairs; reported-any also exported",
+  "leak": "L2 only; correct designated pattern, not conditional on detection; gated rate also exported",
+  "leak_rule": "significant p<=.05/12; absent p>=.2 AND corrected leak<=.05 bits; else unclear",
+  "sampling": "paired market-index draws with replacement; AUROC uses all cross-class comparisons with half ties",
+  "ranges": "2.5-97.5% sampling range across n-market experiments, conditional on finite scripted pool; not a CI on truth",
+  "false_alarm_intervals": "two-sided exact Clopper-Pearson on first n N0 markets; pool interval and plug-in planning probability also exported",
+  "recommendations": [
+    {
+      "population": "iid",
+      "position": "strong_strong",
+      "auc_frontier": [
+        {
+          "n": 10,
+          "rounds": 100,
+          "auc_low": 1.0
+        }
+      ],
+      "smallest_joint_by_total_rounds": null
+    },
+    {
+      "population": "iid",
+      "position": "strong_fringe",
+      "auc_frontier": [
+        {
+          "n": 10,
+          "rounds": 200,
+          "auc_low": 1.0
+        }
+      ],
+      "smallest_joint_by_total_rounds": null
+    },
+    {
+      "population": "iid",
+      "position": "fringe_fringe",
+      "auc_frontier": [
+        {
+          "n": 10,
+          "rounds": 200,
+          "auc_low": 0.75
+        }
+      ],
+      "smallest_joint_by_total_rounds": null
+    },
+    {
+      "population": "shared_fine",
+      "position": "strong_strong",
+      "auc_frontier": [
+        {
+          "n": 10,
+          "rounds": 100,
+          "auc_low": 1.0
+        }
+      ],
+      "smallest_joint_by_total_rounds": null
+    },
+    {
+      "population": "shared_fine",
+      "position": "strong_fringe",
+      "auc_frontier": [
+        {
+          "n": 10,
+          "rounds": 100,
+          "auc_low": 1.0
+        }
+      ],
+      "smallest_joint_by_total_rounds": null
+    },
+    {
+      "population": "shared_fine",
+      "position": "fringe_fringe",
+      "auc_frontier": [
+        {
+          "n": 10,
+          "rounds": 200,
+          "auc_low": 1.0
+        }
+      ],
+      "smallest_joint_by_total_rounds": null
+    }
+  ],
+  "limitations": [
+    "239 permutations resolve direction threshold only at zero exceedances; separate 999-permutation sensitivity exported",
+    "finite pool uncertainty is not included in resampled ranges",
+    "paired adaptive history may violate within-state exchangeability",
+    "shared Bernoulli compliance is a particular scripted alternative, not an LLM forecast",
+    "operational absence guard is not an equivalence test",
+    "quick uses only two markets per cell and cannot justify sample sizes"
+  ],
+  "elapsed_seconds": 9.734076999942772
+}
