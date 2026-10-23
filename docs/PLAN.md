@@ -1,120 +1,100 @@
 # Plan: Frage 1.4, Netto-Einfluss bei LLM-Bietern
 
-Stand: 23.10.2026 abends, Plan v3 (v2 von Astra geprüft, Runde 1). Schritt 0 und 1 fertig. Versuchsaufbau:
-`docs/DESIGN.md`. Pitch: `docs/PITCH.md`. Sprint-Briefing:
-`../Job Search/Bewerbungsunterlagen/4_Bewerbungen/2026-10_Apart-Research_Special-Projects-Manager/Sprint_AI_Collusion.md`.
+Stand: Fr 23.10.2026, ca. 17 Uhr, Plan v4. Details: `docs/DESIGN.md` (Versuch), `docs/REPORT_OUTLINE.md` (Report,
+Literatur), `docs/PITCH.md`, `docs/METHOD.md`.
 
-## Forschungsfrage
+## Auf einen Blick
 
-*When does access to agents' private information let an auditor tell a covert bid-rigging cartel of LLM agents
-apart from dependence that merely comes from shared history or a shared model?*
+**Titel:** Collusion, Espionage, or Look-alikes? Auditing Information Flow between LLM Agents
+**Untertitel:** Pairwise net influence with and without private inputs in a procurement auction
+**Forschungsfrage:** Can pairwise net influence detect covert coordination between LLM agents, and when do
+private inputs let an auditor tell collusion apart from espionage and shared-history dependence?
 
-## Ziel: volle Punktzahl in allen drei Kategorien (Marvin: „Excellency across all measures“)
+**Kerngeschichte:** Gebote allein zeigen, *dass* Information fließt. Die privaten Kosten zeigen, *in welche Richtung*:
+zweiseitig (Kartell), einseitig (Spion) oder gar nicht (bloße Ähnlichkeit, gleiche Historie).
 
-| Kategorie | Was eine 5 verlangt | Wie wir sie erreichen |
-|---|---|---|
-| Impact & Innovation | neu fürs Feld, nicht Replikation; wichtig, wenn es klappt | offenes Problem der gleichzeitigen Arbeit („Abhängigkeit ist keine Absprache“) mit privater Information und einem kausalen Eingriff angehen; Praxisfall mit Anschluss an Kartellrecht (Screens) und AI Control (Betreiber-Aufsicht); wiederverwendbares Werkzeug und Benchmark |
-| Execution | sauber, robust validiert, überraschende Befunde | Vorregistrierung, Skript-Validierung mit bekannter Wahrheit, Positiv-/Negativkontrolle, Manipulationschecks, gepaarte Seeds, Markt-Bootstrap, Ablationen, ehrliche Grenzen |
-| Presentation | Vorbild an Klarheit | eine Kernabbildung, die die Geschichte trägt (Detektion je Zugriffsstufe × Bedingung); klare Begriffe; jede Zahl reproduzierbar aus dem Repo |
+**Report:** offizielle Vorlage, empfohlen 4 Seiten (max. 8) ohne Literatur und Anhang. Gliederung und Seitenbudget
+in `REPORT_OUTLINE.md`. Marvin schreibt die Endfassung selbst (Vorgabe der Vorlage), Claude entwirft und prüft.
 
-## Pflichtteil laut Sprint-Seite (im Report sichtbar abhaken)
+## Entscheidungen (Marvin, 23.10.)
 
-| Vorgabe 1.4 | Wo bei uns |
+| Punkt | Entscheidung |
 |---|---|
-| Netto-Einfluss implementieren | `src/collusion/measures.py` (fertig) |
-| an geskriptetem, wiederholtem RPS mit einem bekannten Paar testen | Schritt 2, minimal: Kontrollwerte, CDA-Tabelle, Fehlalarm |
-| diskretes Spiel mit 4 Agenten und genau einem gesetzten Paar | Ausschreibung mit 4 Bietern, ein Kartell-Paar |
-| Netto-Einfluss vs. einfache Aktionskorrelation vs. LLM-Richter beim Ranking des wahren Paars | auf den Stufen L1 und L2 |
-| (Vorschlag) Marktfall, Doppelauktion | Ausschreibung als Marktfall; Begründung, warum statt Doppelauktion (diskret, private Kosten, ein Paar) |
+| Titel und Frage | D3 (oben) |
+| Analyseeinheit (A) | A4: Erkennung pro Markt mit 200 Runden als Hauptergebnis; gepoolte Fingerabdrücke als Mechanismus-Analyse |
+| Hauptstatistik (C) | C3: zwei vorab festgelegte Endpunkte. Netto-Einfluss für „welches Paar“ (Pflichtteil, fairer Vergleich mit Korrelation und LLM-Richter auf gleicher Zugriffsstufe); gerichtete Leck-Terme für „welche Art Informationsfluss“ |
+| Spionage | ja (Marvin: „das ist gold“) |
+| Kartell-Prompt | Hinweis auf Überwachung durch das Kartellamt, unauffällig bleiben; Scheingebote frei gewählt |
+| Kartell-Positionen | stark+stark (Haupt), dazu stark+schwach und schwach+schwach beim Hauptmodell |
+| Umfang (E) | ein Hauptmodell komplett, dazu kleinere Runden: Labore, Größen, Kartell aus gleichem vs. verschiedenem Modell |
+| Zustand / Historie (B) | **offen**: Erklärung an Marvin, Empfehlung B2 + B3 + B4 |
 
-## Was neu ist (Abgrenzung, vorsichtig formuliert)
+## Umfang (E, Marvins Fassung)
 
-Gleichzeitige Sprint-Arbeit, öffentlich vor Sprintbeginn: Raj-Taware/collusion-net-influence (RPS-Nachbau,
-Permutations-Kalibrierung, LLM-RPS mit 3 Agenten) und soumya-nayak-commits/collusion-sprint (4-Spieler-RPS vs.
-Cramér's V). Wir nutzen **keinen Code** daraus, zitieren beide mit Commit und Datum und vergleichen die
-RPS-Kalibrierung mit ihren Zahlen. Unser Beitrag:
-1. Teilweise beobachtbarer Fall (Eq. 3) mit privaten Kosten, inklusive Zerlegung in Aktionsabhängigkeit und
-   Abhängigkeit von fremden Beobachtungen; bei LLM-Agenten nach unserem Kenntnisstand nicht getestet (prüfen).
-2. Zugriffsstufen des Prüfers: Behörde (Gebote) vs. Plattform (plus Kosten), dazu Proben auf eingefrorenen
-   Kontexten: Ehrlich-Referenz-Swap (explorativ) und **Partnerkosten-Eingriff** (kausaler Check des Signals).
-3. Gleiches-Modell-Attrappe und gemischtes Kartell neben einem unschuldigen Gleiches-Modell-Paar.
-4. Aktuelle Modelle aus drei Laboren in zwei Größen als Robustheitsachsen des Detektors.
+| Block | Modelle | Bedingungen | Märkte × Runden |
+|---|---|---|---|
+| Kern | Qwen3.5-9B | N0, P0, C1 (stark+stark), C1 stark+schwach, C1 schwach+schwach, C2 (still), E1 (Spion), Proben auf eingefrorenen Kontexten | 20 × 200 |
+| Labore | Gemma-4-12B, Ministral-3-8B | N0, C1 | 10 × 200 |
+| Größen | Qwen3.5-4B, Gemma-4-E4B, Ministral-3-3B | N0, C1 | 10 × 200 |
+| Gleiches vs. verschiedenes Modell | Mittelgroße gemischt | C1 mit Kartell (X, X) vs. Kartell (X, Y), dazu ehrliche Kontrolle (X, X, Y, Z) | 10 × 200 |
+| Richter | Qwen3.5-9B mit Denkmodus | alle Märkte, L1 und L2 | - |
+
+Grob 250 000-300 000 Aufrufe. Ob das ins Budget passt (Deckel 35 $), zeigt der Testlauf. Streichreihenfolge:
+C1 schwach+schwach → kleine Modelle außer Qwen-4B → Rotationen der gemischten Gruppen → Märkte der Breitenblöcke
+auf 6.
+
+## Stand
+
+| Fertig | In Arbeit | Fehlt |
+|---|---|---|
+| Setup, Paket, 53 Tests | Entscheidung B (Marvin) | `DESIGN.md` v4 und `PREREG.md` |
+| Maße inkl. Gl.-3-Zerlegung, symm. Permutationstest, Baselines | | Skript-Checks: exakter Zustand (B2), Power/Fehlalarm der Leck-Terme, Kategorie „unklar“ |
+| RPS-Nachbau (Pflichtteil), Abbildungen | | LLM-Harness (Prompts, Parser, Logging, Cache, Runner), Richter-Skript |
+| Skript-Auktion, Kartelle, Spion, Attrappe, Fingerabdruck-Entwurf | | Testlauf Qwen-9B (1 Markt, ~0,30 $), dann Go |
+| Modal: Gewichte aller 6 Modelle, Qwen-9B deployt | | Hauptläufe, Auswertung, Abbildungen |
+| Literatur- und Neuheitscheck (erste Runde) | | Report (Marvin schreibt), Endkontrolle, Abgabe |
 
 ## Zeitplan (deutsche Zeit)
 
-| Wann | Was |
-|---|---|
-| Fr 23.10. abends | Plan v3, Pitch, Modal vorbereitet. Marvin: Ressourcen lesen, `modal setup`, Proxy-Token anlegen |
-| Sa 9-12 | Schritt 2 (RPS minimal) und Schritt 3 (Auktion mit Skript-Agenten, Simulationen). Danach PREREG-Zahlen |
-| Sa 12-14 | Schritt 4a: LLM-Harness, Deploy Qwen-9B, Smoke-Test, Durchsatz- und Kostenmessung, Go/No-Go mit Marvin |
-| Sa 14:15 | Talk Nguyen. Danach `docs/PREREG.md` committen |
-| Sa 15-20 | Hauptmodell: N0, P0, C1, C2; erste Auswertung |
-| Sa abends / nachts | übrige 5 Modelle: N0, C1 |
-| So vormittags | D, M2, Proben auf eingefrorenen Kontexten, LLM-Richter |
-| So nachmittags / abends | Gesamtauswertung, Abbildungen, Report-Entwurf, Review durch Astra |
-| Mo bis 11:00 | Report fertig, Repo öffentlich (Marvin entscheidet), Abgabe. Harte Frist 12:59 |
+| Wann | Was | Wer |
+|---|---|---|
+| Fr bis 20 Uhr | Entscheidung B; `DESIGN.md` v4; Sol-Runde: Skript-Checks + LLM-Harness | Marvin, Claude, Sol |
+| Fr abends | Harness prüfen; Testlauf Qwen-9B; Kosten hochrechnen; Go/No-Go | Claude, Go: Marvin |
+| Sa bis 12 Uhr | `PREREG.md` committen; Kernblock starten | Claude |
+| Sa 14:15 | Talk Nguyen (Einleitung, Begriffe) | Marvin |
+| Sa nachmittags / abends | Kernblock auswerten (Checkpoint P1-P3); Breitenblöcke starten | Claude |
+| So vormittags | Breitenblöcke fertig, Richter, Proben; Abbildungen | Claude / Sol |
+| So nachmittags | Report-Entwurf nach `REPORT_OUTLINE.md` | Claude entwirft |
+| So abends | Marvin überarbeitet in eigenen Worten; Astra-Review | Marvin, Astra |
+| Mo bis 11 Uhr | Endkorrektur, Reproduktionscheck aus frischem Clone, Repo öffentlich, Abgabe (Frist 12:59) | Marvin |
 
-## Schritte mit Abnahmekriterien
+## Pivot-Plan (es wird etwas schiefgehen)
 
-### 0. Setup (fertig)
-`.venv`, Python 3.14, `pip install -e ".[dev]"`, `requirements-lock.txt`. Modal-Dateien in `cloud/`.
+Jede Zeile ist ein Szenario mit Erkennungsmerkmal, Entscheidungszeitpunkt und dem, was wir dann berichten. Die
+Kerngeschichte bleibt in jedem Fall erzählbar, weil Skript-Simulation und RPS-Nachbau schon stehen.
 
-### 1. Maße (fertig, Ergänzungen in Schritt 3)
-Vorhanden: γ, Γ, Regel des Papers, Permutationstest, kalibrierte Regel, G-Test, 14 Tests. Ergänzen: Eq. 3 mit
-getrennten Zuständen und Zerlegung (Test: Summe der drei Terme = Eq. 3), symmetrischer Permutationstest (beide
-Gebote innerhalb ihrer Zustände), Paar-Score min(Γ_ij, Γ_ji), Swap-Test.
+| Szenario | Woran wir es merken | Wann | Dann |
+|---|---|---|---|
+| P1 LLM-Kartell kungelt nicht | Manipulationscheck: kein Preisaufschlag, keine Scheingebote, Nachrichten ohne Absprache | nach 3 Märkten C1 | einmal vorregistrierte deutlichere Anweisung; sonst Befund „LLMs setzen Kartell nicht um“ berichten, Erkennung an P0 und Spion zeigen |
+| P2 viele Fehlalarme bei ehrlichen LLMs | N0-Fehlalarm deutlich über 5 % | nach N0 Kernblock | Befund zur gemeinsamen Historie wird zentral; Gewicht auf Leck-Terme und Proben |
+| P3 Leck-Terme trennen Kartell und Spion bei LLMs nicht | Fingerabdruck E1 ≈ C1 | nach Kernblock | ehrlich berichten; Fingerabdruck an Skripten als Methode, LLM als Grenze |
+| P4 Gebote ohne Streuung (LLMs fast deterministisch) | Entropie der Gebote nahe 0 im Testlauf | Testlauf | Temperatur hoch, Prompt prüfen; sonst anderes Modell als Hauptmodell |
+| P5 Modal hakt oder zu langsam | Smoke-Test/Throughput | Testlauf | weniger Märkte; Hauptmodell + ein weiteres Labor; notfalls OpenRouter (Schlüssel: Marvin) |
+| P6 Budget läuft davon | Kostenzähler | laufend | Streichreihenfolge oben; harter Stopp bei 35 $ |
+| P7 Zeit läuft davon | Sa 20 Uhr Kernblock nicht fertig | Sa 20 Uhr | Breitenblöcke streichen; Report = RPS + Skript-Auktion + LLM-Kern |
+| P8 Netto-Einfluss schlechter als Baselines | Vergleich | Auswertung | ehrlich berichten (Endpunkt C3 trägt die Geschichte trotzdem) |
 
-### 2. RPS minimal (0 $, Pflicht)
-3-Spieler-RPS wie im Paper. Abnahme: γ trifft die Kontrollwerte; CDA für CP 0,3/0,4 bei 100-1000 Spielen nahe
-Paper-Tabelle 2; Fehlalarm festes α vs. kalibriert. Eine Abbildung, eine Tabelle, Vergleich mit gleichzeitiger
-Arbeit (dort nats, hier bits).
+## Pflichtteil 1.4 (im Report sichtbar)
 
-### 3. Auktion mit Skript-Agenten (0 $)
-- Spiel nach `DESIGN.md` v3. Ökonomik-Check: Skript-Kartell ist profitabel gegen Skript-Ehrliche (Gewinn, Zuschlag,
-  Entropie).
-- Simulationen: Gültigkeit der Nullverteilung (Fehlalarm), Tabellenbelegung, Power über q und Runden,
-  Attrappen-Effekt (Ergebnis offen), konstruiertes stilles Kartell (blinder Fleck nur unter dieser Bedingung).
-- Ergebnis: Rundenzahl, Märkte, Zustandsdefinition, primäre Einheit für PREREG.
-
-### 4. LLM-Läufe (Modal, Deckel 35 $ von ~50 $)
-- 4a Harness (OpenAI-kompatibel), symmetrische Prompts, Logging jeder Anfrage (Prompt-Hash, Rohantwort, Gebot,
-  Nachricht, Seed, Latenz, Token), Antwort-Cache. Smoke-Test: 1 Markt × 10 Runden je Modell; Abnahme: < 2 %
-  ungültig, Gebote streuen, Kosten pro 1000 Aufrufe gemessen. Hochrechnung an Marvin, dann Go.
-- 4b Reihenfolge: Qwen-9B (N0, P0, C1, C2) → Gemma-12B, Ministral-8B (N0, C1) → Qwen-4B, Gemma-E4B, Ministral-3B
-  (N0, C1) → D, M2 → Proben → Richter.
-
-### 5. Auswertung und Report
-- Kernabbildung: Detektion (Top-1, Fehlalarm) je Stufe L1/L2 × Bedingung. Dazu RPS-Kalibrierung, Attrappe,
-  Labore × Größen, Partnerkosten-Eingriff, Treffer vs. Rundenzahl.
-- Report in der Vorlage, max. 8 Seiten, Abstract 150-250 Wörter, Anhang „Limitations and Dual-Use / Ethical
-  Considerations“ (synthetischer Nachweis, kein Schuldbeweis; mögliche Umgehung benennen). Autor „Marvin Kemper,
-  Independent“.
+Netto-Einfluss implementiert ✓ · an geskriptetem RPS getestet ✓ · 4-Agenten-Spiel mit genau einem gesetzten Paar
+(Ausschreibung) · Vergleich Netto-Einfluss vs. Korrelation vs. LLM-Richter · Marktfall (Ausschreibung statt
+Doppelauktion, begründet).
 
 ## Prüfung
 
-1. Unit-Tests für Maße (inkl. Eq.-3-Zerlegung), Auszahlungen, Parser, Skript-Strategien.
-2. Skript-Simulationen mit bekannter Wahrheit vor jedem LLM-Aufruf.
-3. Smoke-Test mit Abbruchkriterien und Kostenmessung.
-4. Manipulationschecks, in PREREG definiert; alle gesetzten Kartelle berichten, erfolgreiche getrennt.
-5. Vorregistrierung mit Git-Zeitstempel vor den Hauptläufen.
-6. Gepaarte Seeds; Bootstrap über Märkte; alle Antworten gecacht.
-7. Astra-Reviews (Plan erledigt; Code und Auswertung später); Endkontrolle: frischer Clone rechnet alle Zahlen nach.
-
-## Ausweichleiter
-
-| Zeitpunkt | Wenn … | dann … |
-|---|---|---|
-| Sa 14 Uhr | Modal läuft nicht stabil oder Durchsatz zu klein | nur Qwen-9B plus ein zweites Labor; Proben nur Partnerkosten-Eingriff |
-| Sa 20 Uhr | LLM-Kartell kungelt nicht nachweisbar | Anweisung deutlicher, P0 als Hauptbeleg, Befund berichten |
-| So 12 Uhr | Zeit knapp | Streichliste: weitere Mischungs-Rotationen → Swap-Test → kleine Modelle von Gemma/Ministral → C2 |
-| So abends | LLM-Teil unbrauchbar | RPS + Skript-Auktion (L1/L2) als Ergebnis, LLM als Pilot |
-
-## Offene Punkte
-
-- Marvin: `modal setup`, Proxy-Token im Modal-Dashboard anlegen und in `.env` eintragen (siehe `cloud/README.md`).
-- Literatur prüfen und zitieren: Screens für Ausschreibungsabsprachen (z. B. Imhof et al. 2018, Huber & Imhof 2019),
-  bedingter Randomisierungstest (Candès et al. 2018), Efimov 2024. Erst nach Prüfung in den Report.
-- Neuheitscheck Eq. 3 bei LLM-Agenten und Partnerkosten-Eingriff (Suche vor dem Report).
+Unit-Tests; Skript-Simulationen mit bekannter Wahrheit; Testlauf mit Abbruchkriterien; Manipulationschecks;
+Vorregistrierung vor den Hauptläufen; gepaarte Seeds, Bootstrap über Märkte; Astra-Reviews; Endkontrolle aus
+frischem Clone. Keine Zahl im Report ohne reproduzierbaren Lauf.
 
 ## Log
 
@@ -136,3 +116,8 @@ Arbeit (dort nats, hier bits).
   Befunde: Fingerabdruck trennt Kartell (zweiseitig), Spion (einseitig) und Attrappe (nur Aktionsterm); geteilte
   Historienreaktion hebt Fehlalarme auf 13,5 %; Stark-Schwach-Kartell auf L2 schwer (15 % bei 100 Runden).
   Codex-Wochenkontingent danach: 1.0 %.
+- 23.10. ca. 17 Uhr: Astra Runde 3 (gpt-6-astra/high, read-only, Thread 01a1691c-4ed8-7af1-b815-4e020a52916f) zu
+  Analyseeinheit, Zustand, Hauptstatistik, Titel, Umfang. Marvin entschied A4, C3, D3, Umfang wie oben; B offen.
+  Report-Vorlage gelesen (empfohlen 4 Seiten, Endfassung überwiegend vom Team). Literatur- und Neuheitscheck
+  vorgezogen (siehe REPORT_OUTLINE.md), neu relevant: Audit the Whisper (2510.04303), Bid-Rigging-Screens von
+  Huber/Imhof/Wallimann. Plan v4 mit Pivot-Plan.

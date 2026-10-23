@@ -6,8 +6,9 @@ simulations (step 3) decide the open numbers.
 
 ## Research question
 
-*When does access to agents' private information let an auditor tell a covert bid-rigging cartel of LLM agents
-apart from dependence that merely comes from shared history or a shared model?* We test pairwise net influence
+*Can pairwise net influence detect covert coordination between LLM agents, and when do private inputs let an
+auditor tell collusion apart from espionage and shared-history dependence?* (Decided 23.10.; scope, analysis unit
+and endpoints in docs/PLAN.md v4; this file becomes v4 once decision B is made.) We test pairwise net influence
 (Bonjour et al. 2022) in its fully observable form (bids only) and its partially observable form (bids plus private
 costs) on LLM bidders in a repeated procurement auction with one cartel pair, against correlation and LLM-judge
 baselines, across three model families and two sizes.

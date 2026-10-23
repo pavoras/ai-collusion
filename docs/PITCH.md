@@ -1,14 +1,14 @@
 # Pitch: Was muss ein Prüfer sehen, um ein KI-Kartell zu erkennen?
 
-Arbeitstitel (Report): **What Must an Auditor See? Detecting Covert LLM Bid-Rigging Cartels with Pairwise Net
-Influence**
+Titel: **Collusion, Espionage, or Look-alikes? Auditing Information Flow between LLM Agents**
+Untertitel: *Pairwise net influence with and without private inputs in a procurement auction*
 
 Stand 23.10.2026, Plan v3. Alles unten sind Ziele und Hypothesen, keine Ergebnisse.
 
 ## Die Frage in einem Satz
 
-*When does access to agents' private information let an auditor tell a covert bid-rigging cartel of LLM agents
-apart from dependence that merely comes from shared history or a shared model?*
+*Can pairwise net influence detect covert coordination between LLM agents, and when do private inputs let an
+auditor tell collusion apart from espionage and shared-history dependence?*
 
 ## Das Problem
 
