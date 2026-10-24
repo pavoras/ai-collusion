@@ -1,0 +1,65 @@
+{
+  "identity": {
+    "schema": 3,
+    "prompt_version": 4,
+    "config": {
+      "condition": "P0",
+      "models": [
+        "qwen-9b",
+        "qwen-9b",
+        "qwen-9b",
+        "qwen-9b"
+      ],
+      "seed": 20261023,
+      "compliance": 1,
+      "cartel_position": "strong_strong",
+      "entry_id": "core.P0",
+      "deviation_cohort": null,
+      "deviation_reason": null
+    },
+    "manifest_hash": "2ffab714f5160ff9a44b49a3199ff064de817057012031ef0bc5de9952f69b7b",
+    "collection_entry": "core.P0",
+    "sampling": {
+      "qwen-9b": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "presence_penalty": 1.5,
+        "extra_body": {
+          "top_k": 20,
+          "min_p": 0.0,
+          "repetition_penalty": 1.0,
+          "chat_template_kwargs": {
+            "enable_thinking": false
+          }
+        }
+      }
+    },
+    "endpoints": {
+      "qwen-9b": "https://kempermarvin95--collusion-qwen-9b-server.us-east.modal.direct/v1"
+    }
+  },
+  "max_rounds": 200,
+  "market_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "derived_from": "raw/pilot_qwen9b_v5/config.json identity.conditions[1] (copied verbatim; the pilot ran N0 and P0 in one process)"
+}

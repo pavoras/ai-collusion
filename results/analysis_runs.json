@@ -1,0 +1,224 @@
+{
+  "note": "Explicit map of analysed runs to manifest cells (PREREG deviation 4). Core C1 cells resumed as _v1c after stops; earlier partial attempts (_v1, _v1b) are superseded and their completed requests were replayed from the cache. A2 twins use the parse-version-2 recollection (_p2, deviation 2) resumed as _p2_c; breadth cells and their A3 extensions were resumed as _c after stops (deviation 4); sizes.gemma-e4b.C1.A3 as _d after a max-calls ceiling stop. Superseded partial attempts replayed from the cache.",
+  "runs": [
+    {
+      "cell": "core.N0",
+      "path": "llm/pilot_qwen9b_v5/N0",
+      "cohort": "registered",
+      "metadata_path": "analysis_meta/pilot_qwen9b_v5_N0.json",
+      "reproducibility_path": "raw/pilot_qwen9b_v5/reproducibility.json"
+    },
+    {
+      "cell": "core.N0",
+      "path": "llm/core_N0_v1",
+      "cohort": "registered"
+    },
+    {
+      "cell": "core.P0",
+      "path": "llm/pilot_qwen9b_v5/P0",
+      "cohort": "registered",
+      "metadata_path": "analysis_meta/pilot_qwen9b_v5_P0.json",
+      "reproducibility_path": "raw/pilot_qwen9b_v5/reproducibility.json"
+    },
+    {
+      "cell": "core.C1-SS",
+      "path": "llm/core_C1-SS_v1c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "core.C1-SF",
+      "path": "llm/core_C1-SF_v1c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "core.C1-FF",
+      "path": "llm/core_C1-FF_v1c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "core.C2",
+      "path": "llm/core_C2_v1",
+      "cohort": "registered"
+    },
+    {
+      "cell": "core.E1",
+      "path": "llm/core_E1_v1",
+      "cohort": "registered"
+    },
+    {
+      "cell": "core.C1-NW",
+      "path": "llm/v2_core_C1-NW",
+      "cohort": "registered"
+    },
+    {
+      "cell": "lookalike.LX",
+      "path": "llm/v2_lookalike_LX_p2_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "lookalike.LY",
+      "path": "llm/v2_lookalike_LY_p2_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "lookalike.LZ",
+      "path": "llm/v2_lookalike_LZ_p2_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "lookalike.LX-swap",
+      "path": "llm/v2_lookalike_LX-swap_p2_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "lookalike.LY-swap",
+      "path": "llm/v2_lookalike_LY-swap_p2_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "lookalike.LZ-swap",
+      "path": "llm/v2_lookalike_LZ-swap_p2_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "labs.gemma-12b.N0",
+      "path": "llm/v2_labs_gemma-12b_N0_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "labs.gemma-12b.N0.A3",
+      "path": "llm/v2_labs_gemma-12b_N0_A3_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "labs.gemma-12b.C1",
+      "path": "llm/v2_labs_gemma-12b_C1_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "labs.gemma-12b.C1.A3",
+      "path": "llm/v2_labs_gemma-12b_C1_A3_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "labs.ministral-8b.N0",
+      "path": "llm/v2_labs_ministral-8b_N0_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "labs.ministral-8b.N0.A3",
+      "path": "llm/v2_labs_ministral-8b_N0_A3_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "labs.ministral-8b.C1",
+      "path": "llm/v2_labs_ministral-8b_C1_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "labs.ministral-8b.C1.A3",
+      "path": "llm/v2_labs_ministral-8b_C1_A3_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "mixed.C1-XX",
+      "path": "llm/v2_mixed_C1-XX_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "mixed.C1-XX.A3",
+      "path": "llm/v2_mixed_C1-XX_A3_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "mixed.C1-XY",
+      "path": "llm/v2_mixed_C1-XY_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "mixed.C1-XY.A3",
+      "path": "llm/v2_mixed_C1-XY_A3_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "mixed.D",
+      "path": "llm/v2_mixed_D_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "mixed.D.A3",
+      "path": "llm/v2_mixed_D_A3_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "mixed.H-XYZZ",
+      "path": "llm/v2_mixed_H-XYZZ_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "mixed.H-XYZZ.A3",
+      "path": "llm/v2_mixed_H-XYZZ_A3_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "sizes.qwen-4b.N0",
+      "path": "llm/v2_sizes_qwen-4b_N0_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "sizes.qwen-4b.N0.A3",
+      "path": "llm/v2_sizes_qwen-4b_N0_A3_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "sizes.qwen-4b.C1",
+      "path": "llm/v2_sizes_qwen-4b_C1_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "sizes.qwen-4b.C1.A3",
+      "path": "llm/v2_sizes_qwen-4b_C1_A3_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "sizes.gemma-e4b.N0",
+      "path": "llm/v2_sizes_gemma-e4b_N0_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "sizes.gemma-e4b.N0.A3",
+      "path": "llm/v2_sizes_gemma-e4b_N0_A3_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "sizes.gemma-e4b.C1",
+      "path": "llm/v2_sizes_gemma-e4b_C1_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "sizes.gemma-e4b.C1.A3",
+      "path": "llm/v2_sizes_gemma-e4b_C1_A3_d",
+      "cohort": "registered"
+    },
+    {
+      "cell": "sizes.ministral-3b.N0",
+      "path": "llm/v2_sizes_ministral-3b_N0_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "sizes.ministral-3b.N0.A3",
+      "path": "llm/v2_sizes_ministral-3b_N0_A3_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "sizes.ministral-3b.C1",
+      "path": "llm/v2_sizes_ministral-3b_C1_c",
+      "cohort": "registered"
+    },
+    {
+      "cell": "sizes.ministral-3b.C1.A3",
+      "path": "llm/v2_sizes_ministral-3b_C1_A3_c",
+      "cohort": "registered"
+    }
+  ]
+}

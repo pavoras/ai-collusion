@@ -19,12 +19,14 @@ ROOT = Path(__file__).resolve().parents[1]
 V1 = "experiments/manifests/collection_v1.json"
 
 
-def jobs(groups, levels, model, suffix=""):
+def jobs(groups, levels, model, suffix="", indices=None):
     for spec in groups:
         cell, rest = spec.split("=", 1)
         run_dir, manifest, entry = (rest.split("@") + [V1, "judge.qwen9b"])[:3]
         for path in sorted(Path(run_dir).glob("market_*.json")):
             market = json.loads(path.read_text(encoding="utf-8"))
+            if indices is not None and market["market_index"] not in indices:
+                continue
             if market.get("status") != "complete":
                 raise SystemExit(f"{path} is not complete; judge only finished cells")
             for level in levels:
@@ -33,12 +35,12 @@ def jobs(groups, levels, model, suffix=""):
                        "run": run, "market": str(path), "manifest": manifest, "entry": entry}
 
 
-def judge(job, endpoint, results, max_calls, timeout):
+def judge(job, endpoint, results, max_calls, timeout, fenced=False):
     backend = ["--dry-run"] if endpoint == "dry-run" else ["--endpoint", endpoint]
     cmd = [sys.executable, "experiments/judge.py", job["market"], "--run", job["run"], "--model", job["model"],
            "--level", job["level"], *backend, "--collection-manifest", job["manifest"],
            "--entry", job["entry"], "--results", results, "--transport-retries", "10", "--max-calls", str(max_calls),
-           "--timeout", str(timeout), "--stream"]
+           "--timeout", str(timeout), "--stream"] + (["--parse-fenced"] if fenced else [])
     done = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True, encoding="utf-8", errors="replace")
     return job, done.returncode, done.stderr[-300:]
 
@@ -55,13 +57,15 @@ def main():
     p.add_argument("--max-calls", type=int, default=20,
                    help="per-judgement cap on backend attempts (safe cold-start failures count too)")
     p.add_argument("--timeout", type=float, default=3600, help="per-request seconds; long thinking queues under load")
+    p.add_argument("--markets", type=int, nargs="+", help="judge only these market indices (e.g. spot checks)")
+    p.add_argument("--parse-fenced", action="store_true", help="parse version 2 (Gemma answers in a code fence)")
     p.add_argument("--run-suffix", default="", help="new judge run IDs after an uncertain submission (same requests)")
     args = p.parse_args()
-    todo = list(jobs(args.group, args.levels, args.model, args.run_suffix))
+    todo = list(jobs(args.group, args.levels, args.model, args.run_suffix, args.markets))
     index_path = Path(args.index)
     records, failures = [], []
     with ThreadPoolExecutor(args.parallel) as pool:
-        for job, code, err in pool.map(lambda j: judge(j, args.endpoint, args.results, args.max_calls, args.timeout), todo):
+        for job, code, err in pool.map(lambda j: judge(j, args.endpoint, args.results, args.max_calls, args.timeout, args.parse_fenced), todo):
             out = Path(args.results) / "llm" / job["run"] / "judge.json"
             if not out.exists():
                 failures.append((job["run"], code, err))

@@ -410,4 +410,43 @@ manifest hash and is made before any addition is collected and before any LLM ou
    released with an audit record (`results/llm/reconciliation_log.json`) once no process was alive, and every
    stopped run was resumed unchanged under a new run ID (suffix `_c`; completed requests replay from the cache).
    Raw data now live on drive D: (`results/raw` is a junction). Each process now stops cleanly (BudgetStop) when
-   less than 3 GB are free. The analysis maps each cell to its last run ID (`results/llm/run_index.json`).
+   less than 3 GB are free. The analysis maps each cell to its last run ID (`results/analysis_runs.json`; this sentence first named a
+   file `results/llm/run_index.json` that was never created).
+5. **24.10.2026 08:00-11:50, operations of the breadth, A2 and judge phases (no change to any request, prompt,
+   seed, sampling or analysis).** Every release below is in `results/llm/reconciliation_log.json` (40 entries and
+   736 released keys since the start, each without a read reply); every stopped run was resumed from the cache.
+   (a) The disk guard measured drive C: although raw data live on D:; when 64 judge processes grew the page file,
+   it stopped all bidders cleanly (09:25). It now measures the raw-data drive (3 GB) and the output drive (0.5 GB).
+   (b) Modal preempted all bidder containers at once (09:04); the requests in flight were released. (c) A judge
+   batch hit its per-judgement `--max-calls 20` on cold-start 503 retries; batches now warm the endpoint first and
+   use `--max-calls 60`. One streamed judge request hung and was killed and released. (d) With about 35 writer
+   processes on the ledger (now on D:), the 30 s SQLite busy timeout was exceeded ("database is locked") and about
+   25 runs stopped between 09:53 and 11:12. The busy timeout is now 300 s; processes already running kept the old
+   value, so each stopped run was released and resumed under its own run ID. (e) Two Gemma-E4B A3 runs reached
+   their `--max-calls` ceiling (10 markets x 200 rounds x 5.5 or 6.7) before round 2000 because of high invalid
+   first answers (invalid-response rate 0.60 in `sizes.gemma-e4b.N0.A3`, 0.34 in `sizes.gemma-e4b.C1.A3`). The
+   ceiling is a cost cap, not a design parameter: N0.A3 was resumed with 14 000, C1.A3 (after commit `0dcbff0`,
+   which blocks a same-ID resume) as `v2_sizes_gemma-e4b_C1_A3_d` with 17 000. Invalid rates are reported.
+   (f) Judges: under load a judgement takes about 570 s (median), so the `--timeout 600` of the first post-commit
+   judge batch (`_s3`) cut many requests (43 of 68 judgements failed as UncertainCall). The batch was stopped, its
+   82 keys released, and all remaining judges run as `_s4` with `--timeout 1800` (the timeout is part of the
+   reproducibility record, so `_s3` could not resume). Judgements that failed on content (invalid judge JSON after
+   the registered retry) are kept as failures and never rerun. (g) The analysis loader's path containment check
+   resolved the `results/raw` junction and rejected it; it now checks containment without resolving links.
+   (h) Budget: the hard cap of 50 $ ("Hard cap unchanged at 50 $", Addendum) was exceeded. Real cost per call was
+   above the projection (idle and cold-start billing, invalid-answer retries, the restarts above). Marvin raised
+   the limit to about 60 $ overnight and later set the cut point at a 70 $ projection (Modal credit 80 $). No cell
+   was cut at that point. Actual spend is reported from Modal billing.
+6. **24.10.2026 11:45-15:00, judge phase (no change to any judge request, prompt, seed or sampling).** (a) A
+   judgement costs about 18k generated tokens (two registered attempts often run to max_tokens 12,000), about
+   twice the projection. To stay below 80 $, Marvin cut the breadth judges (labs, mixed, sizes, markets 0-19) at
+   12:45; core and A2 judges ran completely (600 judgements, `results/llm/judge_index_main.json`). Breadth cells keep
+   all non-judge analyses. (b) Windows commit memory ran out when two judge pools overlapped (12:12; low-memory event
+   in the system log); judge streams broke and an analysis run died before writing results. Pools are no longer
+   overlapped. (c) Modal's autoscaler removed judge containers while their ~10-minute streams were running (it
+   drains for 35 s, then aborts; server log at 12:43:15), so streams broke or hung until the client timeout. The
+   judge app was pinned to two containers (`update_autoscaler`, no redeploy) until the batch ended. (d) Every
+   judgement that failed on transport (71 in total) was released with an audit record and resubmitted unchanged
+   under the same `_s4` run ID; judgements that failed on content (no valid JSON after the registered retry) are
+   kept as failures. (e) The Gemma counter-judge ran as registered (core N0 and C1-SS, markets 0-9, L1 and L2,
+   parse version 2); `judge_batch.py` gained `--markets` and `--parse-fenced` for it.

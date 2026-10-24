@@ -9610,5 +9610,2787 @@
         ]
       }
     ]
+  },
+  {
+    "at": "2026-10-24T09:44:58+00:00",
+    "reason": "24.10. 11:27-11:45: streamed judge calls with --timeout 600 s; judgements take ~570 s under load, so many hit the client timeout (vLLM aborts on disconnect) or broke with ambiguous transport errors after 60-100 s; the batch was stopped at 11:45 (pending keys of killed processes). No reply was read for any released key. Rerun with --timeout 1800.",
+    "run_prefix": "judge_qwen-9b_core_C1-",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "d8f0089186a55661812707b775979dba26f737c2b6dd6489a42ee7aaad147d2d",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SS_00015_L2_s3",
+            "state": "uncertain",
+            "latency": 600.0072628000053,
+            "error": "TimeoutError"
+          }
+        ]
+      },
+      {
+        "key": "3bf324718483e112a869f6d662d85e5dca97df9dfa8cdf80c8f5e406551cbd7e",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00001_L1_s3",
+            "state": "uncertain",
+            "latency": 600.0055771000916,
+            "error": "TimeoutError"
+          }
+        ]
+      },
+      {
+        "key": "1ccf88bbb2e75f0cdbade2c17d40e56371c6013ebe2c5ef2f1f3de367b8499f9",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SS_00015_L1_s3",
+            "state": "uncertain",
+            "latency": 600.0093535999767,
+            "error": "TimeoutError"
+          }
+        ]
+      },
+      {
+        "key": "6a3dc6aac499b811844c46839650a2ec7a3c1a754133d09d8560b3cfc605500a",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SS_00018_L1_s3",
+            "state": "uncertain",
+            "latency": 600.0015306000132,
+            "error": "TimeoutError"
+          }
+        ]
+      },
+      {
+        "key": "06b083299f8106ddcfed06fde841c05dc5b158f86e5ad5dd346eb390c4447172",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SS_00014_L1_s3",
+            "state": "uncertain",
+            "latency": 600.0011892000912,
+            "error": "TimeoutError"
+          }
+        ]
+      },
+      {
+        "key": "c750713c235f9c3336e79c0c5adebc3e75fadeedbba535c35b6c1a6930c6692b",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SS_00019_L1_s3",
+            "state": "uncertain",
+            "latency": 600.0008680999745,
+            "error": "TimeoutError"
+          }
+        ]
+      },
+      {
+        "key": "8eb0ef961518a90b54db693635bf8a148c4e5fd340124f9ec591ab6af56da7eb",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SS_00019_L2_s3",
+            "state": "uncertain",
+            "latency": 600.0103871000465,
+            "error": "TimeoutError"
+          }
+        ]
+      },
+      {
+        "key": "a97dbecf1ac7061ae21a891de714dcb1aa0937d2b7c237632e79014e9cbd365b",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00004_L1_s3",
+            "state": "uncertain",
+            "latency": 600.0126289000036,
+            "error": "TimeoutError"
+          }
+        ]
+      },
+      {
+        "key": "d7655f8a2379f1e51554af48b424642b0e49e1f7139f02c4285c0952c5c00441",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00004_L2_s3",
+            "state": "uncertain",
+            "latency": 600.0113767000148,
+            "error": "TimeoutError"
+          }
+        ]
+      },
+      {
+        "key": "185683fdca5e0fc557e99c5806167195989b849d3473429cbb5b4077e32e0875",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00005_L1_s3",
+            "state": "uncertain",
+            "latency": 600.0147555998992,
+            "error": "TimeoutError"
+          }
+        ]
+      },
+      {
+        "key": "4718431b60ffe83ac7789105cc81c4c914d95b7986ef2788a1e32ba315f6fe1e",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00005_L2_s3",
+            "state": "uncertain",
+            "latency": 600.00965370005,
+            "error": "TimeoutError"
+          }
+        ]
+      },
+      {
+        "key": "78f07a665d0fc11a02bf9cf728d86de2cc3a69da0bbac6f34fd420b90765f97d",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00006_L1_s3",
+            "state": "uncertain",
+            "latency": 600.0055035999976,
+            "error": "TimeoutError"
+          }
+        ]
+      },
+      {
+        "key": "d0948ec249797cec5904efd01a8182fe402735cb375e85e032e2146d6e71a14c",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00006_L2_s3",
+            "state": "uncertain",
+            "latency": 600.0005877999356,
+            "error": "TimeoutError"
+          }
+        ]
+      },
+      {
+        "key": "2168f4b1c87a08f4ed5767edff39a20843a84697cd9f7d391273ac7e97bb19b0",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00007_L2_s3",
+            "state": "uncertain",
+            "latency": 600.0146526999306,
+            "error": "TimeoutError"
+          }
+        ]
+      },
+      {
+        "key": "ed9cfae1d062beee1704337369dd38dadcce548db7392208285ffdc010ed5c3c",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00007_L1_s3",
+            "state": "uncertain",
+            "latency": 600.0039119999856,
+            "error": "TimeoutError"
+          }
+        ]
+      },
+      {
+        "key": "41a8af2d758435ca78251d3cd7e4b018ef4fa2790606c507f4fee8f45ff1b96d",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00008_L1_s3",
+            "state": "uncertain",
+            "latency": 600.0087238000706,
+            "error": "TimeoutError"
+          }
+        ]
+      },
+      {
+        "key": "5a864d531f9eaf9e85cb7205bad4d618c62f9a796d8449075e44627630595e1d",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00009_L1_s3",
+            "state": "uncertain",
+            "latency": 206.3938460999634,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "df67315c11f968311b4139303c88f19aa5c21132967a2220e2827b7b69b980ac",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00009_L2_s3",
+            "state": "uncertain",
+            "latency": 166.65677590004634,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "2a1d47c22b730777b655437df15d4ed82b52830a238c9c614e600ecf5a48a449",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00010_L1_s3",
+            "state": "uncertain",
+            "latency": 159.08847409998998,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "cfc23f8c46edefb18171e9104af7f86a50f4760d205b60cfc569783ec2ed25af",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00010_L2_s3",
+            "state": "uncertain",
+            "latency": 104.72170900006313,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "4f7b71b68e8381919cb884f69d58755c30611471a0223237a0dbab55792b1e6f",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00011_L1_s3",
+            "state": "uncertain",
+            "latency": 101.89820759999566,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "d1c255a21d3096464635413aff163f88e98457ea2df7d5dc40cab745d1c5797c",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00011_L2_s3",
+            "state": "uncertain",
+            "latency": 90.11706959991716,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "101247b0d22d7423c337cba7661cf4ecfad70782bd47fdcf0ef4c48b58b35e3b",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SS_00002_L1_s3",
+            "state": "uncertain",
+            "latency": 85.84406090003904,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "babe7d0f3d04586e936c4617192d041ac0953f142d8c8e536ebc33929630c10f",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00012_L1_s3",
+            "state": "uncertain",
+            "latency": 69.62884329992812,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "fdceb5db489838834625d9fbe85f914eb3cd96098cad8ea7ea5c060e079f8988",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SS_00000_L1_s3",
+            "state": "uncertain",
+            "latency": 67.04005559999496,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "258356f10ad4e330f2e37343bc92d1ac4c0b2a4811cfa7c2b22917362cf9cbe6",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SS_00004_L2_s3",
+            "state": "uncertain",
+            "latency": 67.8961562999757,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "9562d4064397e06239fe224699dab774057ae47e4f6ac57605d78baf880a2dde",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SS_00008_L2_s3",
+            "state": "uncertain",
+            "latency": 62.62094779999461,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "c86613227d758d9d0c6a5dc69395bd7899fd4a30ee706559fafe6aed57bf1bdc",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SS_00006_L1_s3",
+            "state": "uncertain",
+            "latency": 62.40544919995591,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "44638e658210b04fcca5952d509f2bec5f2a77aba4fd6bd5884ea6b270a618c6",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SS_00005_L1_s3",
+            "state": "uncertain",
+            "latency": 66.49043759994674,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "523d6b6f9e67c77374ed09d444bd3295dc2e52f3c4afdba42316bc9b81013cd5",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SS_00007_L2_s3",
+            "state": "uncertain",
+            "latency": 62.17785239999648,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "95633f425d453a4ea6d39c8a98b079497d91c00be55c461d23c90b7be231b639",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SS_00002_L2_s3",
+            "state": "uncertain",
+            "latency": 66.08502689993475,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "8c0251a0addcebe40b9bdd3b8aa5b22c67765edbf3d887d6f73aa3f1b12a30ab",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SS_00003_L2_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "466c7ad35d507c96001d29f8e01daa7621dfc8ab158b10a5ec32a1d44c51a49f",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SS_00011_L1_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "15b328590a3f3cabd1210d3f0be6db50bde104849cefc8c5ab4661835538e30d",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SS_00016_L1_s3",
+            "state": "uncertain",
+            "latency": 61.2263298999751,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "f620bf57665448197283ea1657df793356bcc8cb472a986280163b8cc0df7fcd",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00003_L2_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "8706ecb4e0f0a82d67ddb0ce2a00e021b8cd474815b68ae796f18068fb8b1844",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SS_00007_L1_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "e89b626aa0a02efe27371bcc5a42bebd37954cfe215bf10b80b661851fc0775f",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SS_00001_L2_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "9df5b3b5feb9b1791a84dfb1eb72c098a5de1d4e61469d01ff70d445481bef40",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00002_L2_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "df36c1d021ddb6ce6e82e112cbcf7d4053f9852131bacd5273fc56603bc31131",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00002_L1_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "ffef99fcd7bcf88d3b0899c01bb2199215f8c700c6aabc24c0a7e673eb69ae65",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SS_00011_L2_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "e2f3f36478b511eaa65fd29eb303b09ca7df01573334b2b46ca044a2fe71a0dd",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00003_L1_s3",
+            "state": "uncertain",
+            "latency": 65.05766659998335,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "0608d5663e47bb9389a287390859101d2b6e7f7f80c33592be7c8260481b1670",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SS_00017_L2_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "5e747b29fb4d39807706cfea03dd127ea8077257e67ba374011339f57c546985",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SS_00016_L2_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "b8d80183441954d19da902c251c8046b7ef16be660d9683b6b307d249bbb5b48",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00012_L2_s3",
+            "state": "uncertain",
+            "latency": 54.647417000029236,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "c6409c61037379cf59bbed921c3775218f166513ff694400b91c1006ec205da0",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00013_L2_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "fe3b7f974f74d34aa3b24a9318e0df339e718f239fef24d388e9e4fe382bb523",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00013_L1_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "45fe7459de7a8e6cafdba0a5b28bbcb0ed95e6f04b77979e5941f54dac420bff",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00014_L1_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "61f2c0630b8862d9636c42267c70aeec561cee61d41665ed6798f7497a7f7c63",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00014_L2_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "7fcd121341189570622ad7e8091d2418293c8a5597685367c275ea4d91bca2f2",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00015_L1_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "30e47974d5a1b4cbd3b7dd62b58e487050573a7e7420f0d66170864dd6308318",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00015_L2_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "b7992f6c2679c772649458622e14216fed4658086a633c65680d1f39b6e4c26d",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00016_L1_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "39d1cf84067d47efe0d549db21af1791aa02deba09ed926c3f81a0334b2de75f",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00016_L2_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "546400a93027ecd8ba37f0920a1b419c53375e3874437888476d3bffa9187d8c",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00017_L2_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "beb448a6d125cdb4fd96d68ea93e857cdc60b5ccae537339eeb4e7f363363be7",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00018_L1_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "020bf79da63663d9facf1a141606eba1b1efd94357ba4ebe1e25b3b5a5e114f4",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00019_L1_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "95c708ce9d8f59690a113d1a68246cfb0c012f07f794459df100f2f311150234",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-FF_00000_L1_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "d7c216a99e596681f2241a481c8bacf2ad37e059ef4e28a56910c770f0daec3f",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00019_L2_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "f9f7886b9afe733312bb89a563fca0cecc7e4c7284b28a2b6ee6b7e0e0470502",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-FF_00001_L1_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "739bbcc4caabe2124e875d6705621fee994c1962bfe1387be4311b26f532ddec",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-FF_00001_L2_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "c62a87d00ce964f8fad51a36b1b10e7d18f985b6250a483a371cb05fa9924708",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-FF_00003_L2_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "12fbaaca26c6e5262daa9424d50bf307bb67e5921047ff2a05738ba018b890fd",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-FF_00002_L1_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "846430f759f1ebef8236dd20e7b2e8fad9ca7678f89d1a55fa51762c84e1d507",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-FF_00003_L1_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "b91e287014a8352363f3616650c2f8c076cef3ff372c3c7f583a75cf226a7831",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-FF_00006_L1_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "264630b3c1036a69ece78b0fe67b6cded07598df7915fff614f1f7505a78baee",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-FF_00004_L1_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "865f08c3e7cb97b0c1be8cc5b8e99bb951ca2d8c61c606504af659957c7abcdd",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-FF_00008_L2_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "04e3fca70db0efe746b44c79dacbd8044e9f4f33f2de0f5c8634ce8f6bb93a7d",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-FF_00008_L1_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "860a7ab43d6db87a12469f078de072c061055fa3cb1b1e91308d737ec389ad04",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-FF_00007_L2_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "96422ca157187b4dfcbec36a5301c6d49053fef88db8eccb6c1f242ac2567ac8",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-FF_00009_L2_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "3bacde4333f4b59ea64493a5e88746a5906e56b3025bec9ce807d0422483d9c2",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-FF_00010_L2_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "c179cb530ab0285da20794f6b80b9e0500f83d4ffc8cb375f69ad5c0d230760d",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-FF_00011_L1_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "8b979b5084980712c638e2e460ac377818b439b5bbe6e26c8df3492869354a08",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-FF_00012_L1_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "b63704c87f9b774945594331dd6fe89d898085ce6a249e795abf22e7e5b6c9cc",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-FF_00011_L2_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "f996558fcd7a7b063bd5bdec850d948c63543fe24216f0399c72bad401408259",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-FF_00012_L2_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "bd0c3f121ad54fd541b17fb560178632cd29baa08b608ac435e4484ec524a49e",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-FF_00013_L1_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "8d7c3937beed61c90e3b8dc176f05dbec0d4baec8b599cf6e388e7d4d29bdf32",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-FF_00013_L2_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "31aebb3f6883db6f14ceb1b968c290260f2e5f7e040123ac5c8f295c6b8989e2",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-FF_00014_L1_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "82a4485830df0fce7d5ee9ab370e02e742562358b17a3c5a794bfbdd9c21ec0b",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-FF_00014_L2_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "c5a42e4437e145f4805fcabcb1f6aa07065b5d2afa5a926b6a6e917f456173b8",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-FF_00015_L1_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "a36892ade87026b2d2076609aae0bb8a78340736d18a06fd14ef18d2cf30a114",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-FF_00016_L1_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "c796fc680758036e74cf833de817bdffda1a800a4171929bc67148ec887986a0",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-FF_00017_L1_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "cfedf25fa6fceaaa5baec6dbac66afcfee61ec21d0678b5f07753740c4d2c17f",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-FF_00017_L2_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "92ecf0205c21eaf68b829dc19b956124256e360d2aaa9d19d89855bf5733f703",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-FF_00018_L1_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T09:46:59+00:00",
+    "reason": "24.10. 11:46-11:52: restart under the s3 IDs was refused (--timeout is part of the reproducibility record), so the batch was stopped again and moves to suffix s4; pending keys of the killed processes released. No reply was read for these keys.",
+    "run_prefix": "judge_qwen-9b_core_C1-",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "dd71552c0924a302a2c01eee45f9e91457eabc9fddbcfc6b81028dcdc67fe2bf",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-FF_00018_L2_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "83027d0808068c23c26a3aa980c126ebbc6b67cbe4e273fde74e440f32deda1c",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-FF_00019_L1_s3",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:38:00+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_core_N0_00000_L2_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00000_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "66c06c14fe779531dccddaeda815f3ec36992c2014f2742979311e60065370bd",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00000_L2_s4",
+            "state": "uncertain",
+            "latency": 131.47833459998947,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:38:04+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_core_N0_00002_L1_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00002_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "aea8984d62c4649a6967abb5a418445d0a528265a9ed23a35e4acb4a4d10b64e",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00002_L1_s4",
+            "state": "uncertain",
+            "latency": 223.9988888000371,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:38:08+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_core_N0_00002_L2_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00002_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "0dd8edc8125fae54b4232939b0832a5ed15e3d195fff90b4e91d8762563bf3f7",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00002_L2_s4",
+            "state": "uncertain",
+            "latency": 224.01151390001178,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:38:12+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_core_N0_00003_L2_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00003_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "2235ffabbbf9f43e93522cfbc6daed77830c15071b395b04155355292d697c8a",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00003_L2_s4",
+            "state": "uncertain",
+            "latency": 133.59078950004186,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:38:16+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_core_N0_00004_L1_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00004_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "811dd04bf118c8cffa5c2002b43c4244b13679b5c1e5779c93d2484a080cefa3",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00004_L1_s4",
+            "state": "uncertain",
+            "latency": 185.19693259999622,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:38:19+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_core_N0_00007_L1_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00007_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "8f69a35b1eb3de74688492a47172f2951ea197beb5fdb734690c214f2f71f554",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00007_L1_s4",
+            "state": "uncertain",
+            "latency": 214.73321179999039,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:38:23+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_core_N0_00007_L2_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00007_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "00dcf6f93b8fb982fc154d2e88fb164dda085b1e4e7a07873f22062552232869",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00007_L2_s4",
+            "state": "uncertain",
+            "latency": 214.75195229996461,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:38:27+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_core_N0_00008_L2_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00008_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "cf94e701f11864dd614357a016f8694c53d971fd2e46a646c6ca03a2cd6a26fb",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00008_L2_s4",
+            "state": "uncertain",
+            "latency": 278.6641945000738,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:38:31+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_core_N0_00009_L2_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00009_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "8a1056d56a3c7ce68cc7ff2f777c39a319efcb18291db9f3091e3706c4c5b6a2",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00009_L2_s4",
+            "state": "uncertain",
+            "latency": 214.99296019994654,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:38:34+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_core_N0_00010_L1_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00010_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "1196e0bf38512685605715fba15d267b0a2259f5c9bab4a27dbf28092296ad79",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00010_L1_s4",
+            "state": "uncertain",
+            "latency": 128.77614689990878,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:38:38+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_core_N0_00011_L2_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00011_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "f2aa9c229f027524b0222c5087414c1491960e3eaaf401138d552fc439e98e9c",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00011_L2_s4",
+            "state": "uncertain",
+            "latency": 224.0193747000303,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:38:41+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_core_N0_00014_L2_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00014_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "9919f48c4aab0df79c735a3467e62bffa2b8557e56338fe2cbad9ec53276bf7b",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00014_L2_s4",
+            "state": "uncertain",
+            "latency": 277.065183000057,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:38:44+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_core_N0_00015_L1_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00015_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "776b7631ec109d9cce9991f1cc5f9fdeb487cd93aa1f4f81c9579e067e8ae24f",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00015_L1_s4",
+            "state": "uncertain",
+            "latency": 396.2396103000501,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:38:46+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_core_N0_00015_L2_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00015_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "3439ab48af027c2343f3c19c598ccfe40e521cf83af424f848d1492cbaa7d6b6",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00015_L2_s4",
+            "state": "uncertain",
+            "latency": 276.20722229999956,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:38:49+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_core_N0_00016_L1_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00016_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "5c11678a4e476127a1061b27c914576f54f8a886d6ecb82f47ca59aa135972ad",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00016_L1_s4",
+            "state": "uncertain",
+            "latency": 144.62192279996816,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:38:52+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_core_N0_00020_L1_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00020_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "54b763ceeee3cf3f351766c24879a1b22570d6fea7138f438aaeebe2725ebf63",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00020_L1_s4",
+            "state": "uncertain",
+            "latency": 223.97197640000377,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:38:55+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_core_N0_00021_L1_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00021_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "2d932a10d8c5e45ea8d0b9bd3cb15b8d30ffed54576e709b6f550cc057106b0f",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00021_L1_s4",
+            "state": "uncertain",
+            "latency": 123.92070619994774,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:38:57+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_core_N0_00022_L1_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00022_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "75f7899e7edde51466dcefb798a44a864bf5ee88ca1a3eddd374af384b4eb67e",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00022_L1_s4",
+            "state": "uncertain",
+            "latency": 141.0202408999903,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:39:00+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_core_N0_00022_L2_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00022_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "991213bb15aeac2581bef2da1de1d06f0490952f82490b4b70de38c9ec78e936",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00022_L2_s4",
+            "state": "uncertain",
+            "latency": 274.2767762999283,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:39:03+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_core_N0_00024_L1_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00024_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "f977ce9ac649451db11e8b90ac9136a406c4b07f8e0f0e4c64991b1ee0826564",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00024_L1_s4",
+            "state": "uncertain",
+            "latency": 214.69221509993076,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:39:06+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_core_N0_00024_L2_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00024_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "4e607669d9dec78cf03c8c6d57afb73fdad58f1a7bcb15d1b703df191da008c5",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00024_L2_s4",
+            "state": "uncertain",
+            "latency": 396.21812189999036,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:39:09+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_core_N0_00025_L2_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00025_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "3c2abc3836a4bba3af338f503cc982282031ceeae22e67d03ff466dd52422d1e",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00025_L2_s4",
+            "state": "uncertain",
+            "latency": 140.82276939996518,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:39:12+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_core_N0_00028_L2_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00028_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "8b3f82878e88d73daf62973a441e63e2dcd6e9531e76451356c0830f0de8b8f3",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00028_L2_s4",
+            "state": "uncertain",
+            "latency": 404.95858039997984,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:39:15+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_core_N0_00030_L2_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00030_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "12fc40f64bfd133a3fcc8eb8f8b28482295cc06f4a82fff0a98f250833f73feb",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00030_L2_s4",
+            "state": "uncertain",
+            "latency": 237.33912569994573,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:39:18+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_core_N0_00035_L1_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00035_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "f3ac2d0adeda3928318b1a2e39f3008ae331e28e49ee707ef06106adbfb6c685",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00035_L1_s4",
+            "state": "uncertain",
+            "latency": 86.66309149994049,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:39:20+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_lookalike_LY_00007_L2_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_lookalike_LY_00007_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "c603daabc0781868678e93901860918c3e8463d54b9371e489effbac95529030",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_lookalike_LY_00007_L2_s4",
+            "state": "uncertain",
+            "latency": 354.86770479998086,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:39:23+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_lookalike_LY_00008_L1_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_lookalike_LY_00008_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "7329f8403c132f5f3c471095ce08e390fa717013c9d62210905f6c3683042576",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_lookalike_LY_00008_L1_s4",
+            "state": "uncertain",
+            "latency": 325.646273600054,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:39:26+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_lookalike_LY_00008_L2_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_lookalike_LY_00008_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "9ed15d7b346b691fc47155b5728bc679e85e0cf60f20722975fedf4ffb85cb1e",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_lookalike_LY_00008_L2_s4",
+            "state": "uncertain",
+            "latency": 331.6095012000296,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:39:28+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_lookalike_LY_00009_L1_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_lookalike_LY_00009_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "11c5272282b8a35c46c18742ffdeed4222a53d4b61a62f9125ce50b678cec06c",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_lookalike_LY_00009_L1_s4",
+            "state": "uncertain",
+            "latency": 369.26775290002115,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:39:31+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_lookalike_LY_00010_L2_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_lookalike_LY_00010_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "cb025012d7cb119b01471d322495666121aa7fcd2093e93b416152e69057d9f6",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_lookalike_LY_00010_L2_s4",
+            "state": "uncertain",
+            "latency": 272.08325030002743,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:39:34+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_lookalike_LY_00011_L1_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_lookalike_LY_00011_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "5b0b314f947251e0662442ebb733b2179643659d09e094794def330c8bbd9548",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_lookalike_LY_00011_L1_s4",
+            "state": "uncertain",
+            "latency": 325.06769529997837,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:39:37+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_lookalike_LY_00011_L2_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_lookalike_LY_00011_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "50b452b25e88eb380006a012730639ba040657da3821583cd18a45d408a31d50",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_lookalike_LY_00011_L2_s4",
+            "state": "uncertain",
+            "latency": 1800.0109548999462,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:39:39+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_lookalike_LY_00012_L1_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_lookalike_LY_00012_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "03eba1046f74a0c599a62cc2c8fc3760d6a001ecba452c2adba50edf20c27ea7",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_lookalike_LY_00012_L1_s4",
+            "state": "uncertain",
+            "latency": 222.17311139998492,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T10:39:42+00:00",
+    "reason": "24.10. 12:14-12:36: judge run judge_qwen-9b_lookalike_LY_00012_L2_s4 failed as UncertainCall after its stream broke (AmbiguousTransportError after 100-400 s): first under Windows commit-memory exhaustion while two judge pools overlapped (low-memory event 12:12:54), then a judge container lost at 12:25:36; reruns hit the uncertain key. Run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_lookalike_LY_00012_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "63364d48f5e52c3826efa4cb229e143a5507427a89e7bff8b04cb3c853cc8835",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_lookalike_LY_00012_L2_s4",
+            "state": "uncertain",
+            "latency": 300.09018569998443,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:47:01+00:00",
+    "reason": "24.10. 13:41: breadth judge run judge_qwen-9b_labs_gemma-12b_N0_00000_L1_s4 was killed seconds after start by the budget-cut guard (breadth judges cut by Marvin 12:45); no reply was read.",
+    "run_prefix": "judge_qwen-9b_labs_gemma-12b_N0_00000_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "207700fdaa136b5ec4595f89431147afd4b4b53ea7502f968358a60929828647",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_labs_gemma-12b_N0_00000_L1_s4",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:47:04+00:00",
+    "reason": "24.10. 13:41: breadth judge run judge_qwen-9b_labs_gemma-12b_N0_00000_L2_s4 was killed seconds after start by the budget-cut guard (breadth judges cut by Marvin 12:45); no reply was read.",
+    "run_prefix": "judge_qwen-9b_labs_gemma-12b_N0_00000_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "cf8a2b0ce764f886ac5cc7b754c86cf51293cf31e8b9fe098f1e6534b3025cbd",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_labs_gemma-12b_N0_00000_L2_s4",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:54:37+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00000_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00000_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "1a81f3ffa4f6c0ec44e969976b7243c5d324b21de38db6a63fce9b5aee9fbcf3",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00000_L2_s4",
+            "state": "uncertain",
+            "latency": 1800.002404699917,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:54:40+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00001_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00001_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "5ec8e71322d9f1d032360797524c14ae2cfd893f17da4e8682665863a33e8a81",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00001_L2_s4",
+            "state": "uncertain",
+            "latency": 1800.0144145999802,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:54:42+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00002_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00002_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "6fb625fc018b7a0e97450cd5d87ec1c6d83365f2eafc6e66ac752597d7db11a9",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00002_L2_s4",
+            "state": "uncertain",
+            "latency": 1800.009806200047,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:54:44+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00003_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00003_L1_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:54:47+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00003_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00003_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "e300bafecaf5b4d99e953b9b5ec0e615e92de5f12191833a2441f19815a3f341",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00003_L2_s4",
+            "state": "uncertain",
+            "latency": 1800.0155165999895,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:54:49+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00004_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00004_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "ea980448e30f53a4ffd5858360608a0bae8d8ca358f2c1935ad07102e18f0c66",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00004_L1_s4",
+            "state": "uncertain",
+            "latency": 1800.0131639000028,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:54:51+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00004_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00004_L2_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:54:54+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00005_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00005_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "d8a4cdc255ae81956c14d6b5ead10b9b44f714b85eedcf29da56119410f63bf3",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00005_L1_s4",
+            "state": "uncertain",
+            "latency": 1800.0050705000758,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:54:56+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00005_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00005_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "056000155088b989142ee04e56d85639de632a648965d50cd49631a97feb7e54",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00005_L2_s4",
+            "state": "uncertain",
+            "latency": 1800.014487999957,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:54:58+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00006_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00006_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "834ec30bb9769588b0a96ee78682edc71fd3b8527c0e363ce720f3b9255d2de6",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00006_L2_s4",
+            "state": "uncertain",
+            "latency": 1800.014614099986,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:55:01+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00007_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00007_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "158aa13bc1d6e606ff07169f4c3da02801b5dc80a83400c89e1b3e1b227707d7",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00007_L1_s4",
+            "state": "uncertain",
+            "latency": 1800.0107283999678,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:55:03+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00007_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00007_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "c43e0117378d8ea4439bb17df225fe2eec1b6da9e021ae9c4adce11c0fd18b5f",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00007_L2_s4",
+            "state": "uncertain",
+            "latency": 1800.0069096999941,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:55:05+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00008_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00008_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "9e5556f2798bbc0c029e9e1cd62feb54b0230f18c69b5946541b07c4db211176",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00008_L1_s4",
+            "state": "uncertain",
+            "latency": 1800.0099642999703,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:55:07+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00008_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00008_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "d9ab6bca8b4f35039e092cfece4306ea24cd70f6f718452ed07f63fc52105866",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00008_L2_s4",
+            "state": "uncertain",
+            "latency": 1800.0022649000166,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:55:10+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00009_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00009_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "0a50759e31183e42445efc1ff5d82b9c8cb85a62cf61e5684fad6b26e2d2561a",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00009_L1_s4",
+            "state": "uncertain",
+            "latency": 1800.0017968999455,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:55:12+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00010_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00010_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "83da546fc7230dd9b29486bb2cfe93440440c42a0380ba832f3ac85b56777137",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00010_L1_s4",
+            "state": "uncertain",
+            "latency": 1800.005586400046,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:55:14+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00010_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00010_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "b78500bb4247ff72dedff205608c4e47347cd29a77a45a7885029581cb2bfd4c",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00010_L2_s4",
+            "state": "uncertain",
+            "latency": 1800.0070041000145,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:55:17+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00011_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00011_L1_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:55:19+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00011_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00011_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "fb2c25c3c4307c2185bf87eac558c3a116672b37611a1ecdc82b9de2d9f3f6e4",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00011_L2_s4",
+            "state": "uncertain",
+            "latency": 1800.0102514999453,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:55:21+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00012_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00012_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "398450c2af237f10ec512b67a507edba9dff6b76cc73a94aab446c9f461eb53f",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00012_L1_s4",
+            "state": "uncertain",
+            "latency": 1800.0033495000098,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:55:24+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00012_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00012_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "580c8eee9dd146b8141f653e80be6c248a1949d227e8f1675285f09f9a13130a",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00012_L2_s4",
+            "state": "uncertain",
+            "latency": 1800.0113995999563,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:55:26+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00013_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00013_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "94bb19209015316c51d1be9ca7e31f625ee551f58d7b159d407ddb71d575e840",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00013_L1_s4",
+            "state": "uncertain",
+            "latency": 1800.0139635999221,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:55:28+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00013_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00013_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "ce6d3cb9735d333718b42f8b0d92469b70004a0b4e7198b33310c4bd21defc50",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00013_L2_s4",
+            "state": "uncertain",
+            "latency": 1800.0144443999743,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:55:31+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00014_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00014_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "626ba3c71bba126ac9b59e8d7673ec83123ac0d8702d407eab9a244db6a039cf",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00014_L1_s4",
+            "state": "uncertain",
+            "latency": 1800.006075299927,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:55:33+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00014_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00014_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "27637bd16ab3551a855519263ec6a907dfa55627cfb490d693b26b27a0c68dd4",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00014_L2_s4",
+            "state": "uncertain",
+            "latency": 1800.0060619999422,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:55:36+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00015_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00015_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "69e9ab5455e3f5643e32836c4e335c248868dee914f1d99fb04d0f10dd13f86e",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00015_L1_s4",
+            "state": "uncertain",
+            "latency": 1800.0079638999887,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:55:38+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00015_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00015_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "e3036926c67884b59fe41dd657524ca3e24096b381b7be08980dd0c8a985c4c8",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00015_L2_s4",
+            "state": "uncertain",
+            "latency": 1800.002387400018,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:55:41+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00016_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00016_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "819289aeb9d69bee95d09858c13e9e1b1004973eaa01769e4db34aae8ff21301",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00016_L1_s4",
+            "state": "uncertain",
+            "latency": 252.4809376000194,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:55:43+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00016_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00016_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "7d3fdf26e8cbcb10557b55b444489d69892460d24e0327127b36e6ad081dd390",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00016_L2_s4",
+            "state": "uncertain",
+            "latency": 248.9089432999026,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:55:46+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00017_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00017_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "4ab434f84f139113f77181e3b08e805e8dc5e47b00d5279e4c0f30045c6ceb32",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00017_L1_s4",
+            "state": "uncertain",
+            "latency": 208.07434960000683,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:55:48+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_C2_00017_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00017_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "9ec5b9303a70a688b872c0faaf6d7625cc6228adcdf5d59cf3e24ac47eee6b56",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00017_L2_s4",
+            "state": "uncertain",
+            "latency": 123.50398919999134,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:55:51+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00000_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00000_L2_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:55:53+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00002_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00002_L1_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:55:56+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00002_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00002_L2_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:55:59+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00003_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00003_L2_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:56:01+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00004_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00004_L1_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:56:03+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00007_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00007_L1_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:56:06+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00007_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00007_L2_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:56:08+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00008_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00008_L2_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:56:10+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00009_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00009_L2_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:56:13+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00010_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00010_L1_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:56:15+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00011_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00011_L2_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:56:17+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00014_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00014_L2_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:56:20+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00015_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00015_L1_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:56:22+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00015_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00015_L2_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:56:24+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00016_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00016_L1_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:56:27+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00020_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00020_L1_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:56:29+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00021_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00021_L1_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:56:31+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00022_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00022_L1_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:56:34+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00022_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00022_L2_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:56:36+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00024_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00024_L1_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:56:38+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00024_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00024_L2_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:56:41+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00025_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00025_L2_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:56:43+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00028_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00028_L2_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:56:46+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00030_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00030_L2_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:56:48+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00031_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00031_L2_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:56:51+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00032_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00032_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "073e1c289e47ebb78404de4b9c1298b737b8cb7d4a583e95b3ccb7917d80f1e5",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00032_L2_s4",
+            "state": "uncertain",
+            "latency": 1800.0163673999486,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:56:53+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00035_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00035_L1_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:56:56+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00035_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00035_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "c658a90b3360b9d92ea602bcabd4332b65df21dd252be22dd92bb795417e3cfc",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00035_L2_s4",
+            "state": "uncertain",
+            "latency": 1800.0150777000235,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:56:58+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00036_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00036_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "8cd0a301457811b0bbaf1eb80e192d7f8676f2d592b154098247bac3aa69767c",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00036_L1_s4",
+            "state": "uncertain",
+            "latency": 1800.0046864999458,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:57:01+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00037_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00037_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "1138ae602221c77eab0f1e5d90484cbbb521e329c22dc4b35dc899878412c069",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00037_L1_s4",
+            "state": "uncertain",
+            "latency": 130.54694969998673,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:57:03+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00037_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00037_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "0c7bc5207e32b4b54953c0e80a9fceca78884f83c0f5356add969405cbed458c",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00037_L2_s4",
+            "state": "uncertain",
+            "latency": 103.30398710002191,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:57:05+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_N0_00039_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00039_L1_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "def0f5826e57e8244ce97567af4bc9fdbf426ae630309e3611cf4b04906239a9",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00039_L1_s4",
+            "state": "uncertain",
+            "latency": 202.5455714999698,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:57:08+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_core_P0_00019_L1_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_P0_00019_L1_s4",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T11:57:10+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_lookalike_LX_00016_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_lookalike_LX_00016_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "c9e53fd77decc670e7bf4323a4adb7ca738e96b1ae8a34e52d8816cb79e6af6c",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_lookalike_LX_00016_L2_s4",
+            "state": "uncertain",
+            "latency": 1800.0119489999488,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T11:57:12+00:00",
+    "reason": "24.10.: judge run judge_qwen-9b_lookalike_LX_00017_L2_s4 failed on transport (stream aborted when Modal scaled a judge container down after a 35 s drain, or client timeout on a stream hung by it); run not alive at release; no reply was read.",
+    "run_prefix": "judge_qwen-9b_lookalike_LX_00017_L2_s4",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "1a8fee9fda86a4547d9949ccce41be06b2d6fd870947a9f470a6b7edab650136",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_lookalike_LX_00017_L2_s4",
+            "state": "uncertain",
+            "latency": 1800.0084308999358,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T12:17:41+00:00",
+    "reason": "24.10. 14:20: judge request of judge_qwen-9b_core_C2_00003_L1 (attempts under several suffixes) last hit the 1800 s client timeout on a stream hung by the 12:43 container loss; no process alive; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00003_L1_",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "17a8b5b22aaddb6240b776bcd590b165f0a12a375f77c81a1e574ecef038705e",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00003_L1_s2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C2_00003_L1_s4",
+            "state": "uncertain",
+            "latency": 1800.001316000009,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T12:17:44+00:00",
+    "reason": "24.10. 14:20: judge request of judge_qwen-9b_core_C2_00004_L2 (attempts under several suffixes) last hit the 1800 s client timeout on a stream hung by the 12:43 container loss; no process alive; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00004_L2_",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "39f67006f04d2fbc9a2c384b73d0eb39a9e50f961e18a28bfd5bcd597ec034ce",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00004_L2_s",
+            "state": "safe_failure",
+            "latency": 0.43832279997877777,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C2_00004_L2_s",
+            "state": "safe_failure",
+            "latency": 0.3129466000245884,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C2_00004_L2_s",
+            "state": "safe_failure",
+            "latency": 0.2961399999912828,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C2_00004_L2_s",
+            "state": "safe_failure",
+            "latency": 0.30490799993276596,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C2_00004_L2_s",
+            "state": "safe_failure",
+            "latency": 0.2969558999175206,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C2_00004_L2_s",
+            "state": "safe_failure",
+            "latency": 0.30569399998057634,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C2_00004_L2_s",
+            "state": "safe_failure",
+            "latency": 0.30476750002708286,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C2_00004_L2_s",
+            "state": "safe_failure",
+            "latency": 0.3033334999345243,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C2_00004_L2_s",
+            "state": "safe_failure",
+            "latency": 0.3180608000839129,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C2_00004_L2_s",
+            "state": "safe_failure",
+            "latency": 0.0,
+            "error": "audit_write_failed_before_submission"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C2_00004_L2_s4",
+            "state": "uncertain",
+            "latency": 1800.0146982000442,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T12:17:47+00:00",
+    "reason": "24.10. 14:20: judge request of judge_qwen-9b_core_C2_00011_L1 (attempts under several suffixes) last hit the 1800 s client timeout on a stream hung by the 12:43 container loss; no process alive; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_C2_00011_L1_",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "190fdc68acc171b4a31266304bfee51289ea5353040ef2debd0fd123bbb76743",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00011_L1_s",
+            "state": "safe_failure",
+            "latency": 0.43435420002788305,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C2_00011_L1_s",
+            "state": "safe_failure",
+            "latency": 0.3508764000143856,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C2_00011_L1_s",
+            "state": "safe_failure",
+            "latency": 0.31551629991736263,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C2_00011_L1_s",
+            "state": "safe_failure",
+            "latency": 0.32136739999987185,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C2_00011_L1_s",
+            "state": "safe_failure",
+            "latency": 0.28937160002533346,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C2_00011_L1_s",
+            "state": "safe_failure",
+            "latency": 0.3108344000065699,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C2_00011_L1_s",
+            "state": "safe_failure",
+            "latency": 0.30157259991392493,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C2_00011_L1_s",
+            "state": "safe_failure",
+            "latency": 0.3286663999315351,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C2_00011_L1_s",
+            "state": "safe_failure",
+            "latency": 0.2946271999971941,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C2_00011_L1_s",
+            "state": "safe_failure",
+            "latency": 0.0,
+            "error": "audit_write_failed_before_submission"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C2_00011_L1_s4",
+            "state": "uncertain",
+            "latency": 1800.003131799982,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T12:17:51+00:00",
+    "reason": "24.10. 14:20: judge request of judge_qwen-9b_core_N0_00031_L2 (attempts under several suffixes) last hit the 1800 s client timeout on a stream hung by the 12:43 container loss; no process alive; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_N0_00031_L2_",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "cee66b9fac6c47d92fa4fa19d8a3f75aa221ad02207b52fbfe1f4b76faa19a75",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00031_L2_s",
+            "state": "uncertain",
+            "latency": 0.03710379998665303,
+            "error": "MemoryError"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_N0_00031_L2_s4",
+            "state": "uncertain",
+            "latency": 1800.0109517000383,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T12:17:54+00:00",
+    "reason": "24.10. 14:20: judge request of judge_qwen-9b_core_P0_00019_L1 (attempts under several suffixes) last hit the 1800 s client timeout on a stream hung by the 12:43 container loss; no process alive; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_P0_00019_L1_",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T12:18:11+00:00",
+    "reason": "24.10. 14:20: judge request of judge_qwen-9b_core_P0_00019_L1 (attempts under several run IDs incl. the pilot batch) last hit the 1800 s client timeout on a stream hung by the 12:43 container loss; no process alive; no reply was read.",
+    "run_prefix": "judge_qwen-9b_core_P0_00019_L1",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "c1b5c75b29a7d9278191dd417bd27eea9b057735f9f44fcf5bbffd544bc29a05",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_P0_00019_L1",
+            "state": "safe_failure",
+            "latency": 0.4907434999477118,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00019_L1",
+            "state": "safe_failure",
+            "latency": 0.4545614999951795,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00019_L1",
+            "state": "safe_failure",
+            "latency": 0.3067223000107333,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00019_L1",
+            "state": "safe_failure",
+            "latency": 0.35374350007623434,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00019_L1_r2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          },
+          {
+            "run_id": "judge_qwen-9b_core_P0_00019_L1_s4",
+            "state": "uncertain",
+            "latency": 1800.011195500032,
+            "error": "TimeoutError"
+          }
+        ]
+      }
+    ]
   }
 ]
