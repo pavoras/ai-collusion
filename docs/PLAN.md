@@ -52,14 +52,14 @@ auf 6.
 
 ## Stand
 
+Stand 24.10., 16:20: Datensammlung, eingefrorene Auswertung (`final_v1`) und Report-Entwurf fertig.
+
 | Fertig | In Arbeit | Fehlt |
 |---|---|---|
-| Setup, Paket, 53 Tests | Sol Runde 4: Skript-Checks (exakter Zustand, Leck-Power, „unklar“) | `PREREG.md` |
-| Maße inkl. Gl.-3-Zerlegung, symm. Permutationstest, Baselines | | Skript-Checks: exakter Zustand (B2), Power/Fehlalarm der Leck-Terme, Kategorie „unklar“ |
-| RPS-Nachbau (Pflichtteil), Abbildungen | Sol Runde 5: LLM-Harness, Richter-Skript | |
-| Skript-Auktion, Kartelle, Spion, Attrappe, Fingerabdruck-Entwurf | | Pilot N0+P0 (eingefroren, ca. 24 000 Aufrufe), dann Budgetzweig |
-| Modal: Gewichte aller 6 Modelle, Qwen-9B deployt | | Hauptläufe, Auswertung, Abbildungen |
-| Literatur- und Neuheitscheck (erste Runde), `DESIGN.md` v4 | | Report (Marvin schreibt), Endkontrolle, Abgabe |
+| Sammlung Kern, A1, A2, A3/Breite (43 Läufe, `results/analysis_runs.json`) | Report-Feinschliff | Marvins Endprüfung des Reports in eigenen Worten |
+| Qwen-Richter Kern + A2 (600 Urteile), Gemma-Gegenrichter (40), Sonden (`core.probes`) | | exakte Modal-Endsumme (Marvin) |
+| Auswertung `final_v1` (Freeze `4c4b6f1`), Astra Runde 13 (Prüfung), Runde 14 (Report) | | Repo öffentlich machen, URLs in Report, Repo verschlanken |
+| Report: 7 Seiten Haupttext, Abbildungen A/B, Anhang, Literatur geprüft (`report/main.pdf`) | | Abgabe bis Mo 26.10., 12:59 |
 
 ## Zeitplan (deutsche Zeit)
 
@@ -172,3 +172,13 @@ frischem Clone. Keine Zahl im Report ohne reproduzierbaren Lauf.
 - 23.10. 23:13-23:51: **C: voll**, alle Läufe abgebrochen (PREREG-Abweichung 4); Claude-Sitzung beendet, daher keine
   Nachtmeldungen. 24.10. 08:00: Marvin: 27,11 $ verbraucht; Rohdaten nach D: verschoben (Junction), Speicherwächter
   (BudgetStop unter 3 GB frei), verwaiste Ledger-Einträge freigegeben, alles unter Suffix `_c` fortgesetzt.
+- 24.10. 08:00-11:50: Wiederaufnahme der Sammlung unter `_c`/`_d`; Betriebsprobleme (Speicherwächter, Preemption,
+  `database is locked`, Gemma-E4B-Obergrenzen, Lader-Junction) als PREREG-Abweichung 5a-h dokumentiert.
+- 24.10. 11:50-15:00: **Richterphase** (Abweichung 6). Gemessen ca. 18 000 erzeugte Token pro Urteil, also ca.
+  0,018 $ statt der geschätzten 0,009 $. Marvin (12:45): Breiten-Richter gestrichen, Kern- und A2-Richter
+  vollständig. Richter-Timeout 1800 s (`_s4`); Modal-Autoscaler-Abbrüche durch festgepinnte Container behoben,
+  danach zurückgesetzt. 71 Transportfehler freigegeben und neu gelaufen. Gemma-Gegenrichter und Sonden danach.
+- 24.10. ca. 15:00: Auswertung `final_v1` mit Richtern und Sonden. Primärtest bestätigt (C1-SS vs. N0, L2, AUROC
+  0,865, p = 2e-05), aber kein allgemeiner Vorteil gegenüber Korrelation; E1 einzige Zelle mit Differenz-Intervall
+  ohne 0 (deskriptiv). Astra Runde 13 rechnete alle 122 AUROCs nach. Runde 14 schrieb den Report
+  (`2318815`). Literaturangaben am 24.10. an Primärquellen geprüft (`7584cae`). Modal-Stand laut Marvin ca. 70-71 $.
