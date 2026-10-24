@@ -10,8 +10,16 @@ on LLM agents with one covertly coordinating pair.
 Author: Marvin Kemper (Independent). All code in this repository was written during the sprint, starting
 23 October 2026; there is no preexisting code.
 
-Status: measures implemented and tested (`src/collusion/measures.py`). See `docs/PLAN.md`, `docs/METHOD.md`
-and `docs/RESOURCES.md`.
+Status: collection, pre-registered analysis (`results/analysis/final_v1/`) and two pre-registered addenda
+(replication on fresh markets, `results/analysis/replication_v22/`; judge token budget,
+`results/analysis/judge24k_v23/`) are complete. The report is `report/main.pdf`; build and provenance notes are in
+`report/README.md` and `report/SOURCE_AUDIT.md`. Design and deviations: `docs/PREREG.md`; method: `docs/METHOD.md`;
+log: `docs/PLAN.md`.
+
+Main findings: net influence detects the instructed cartel (pre-registered AUROC 0.865, p = 0.00002) but a plain
+correlation of the same data does at least as well; net influence adds information when one firm secretly sees a
+rival's cost (replicated on fresh markets); the most profitable cartel (no private channel) was the hardest to
+detect.
 
 ## Setup
 

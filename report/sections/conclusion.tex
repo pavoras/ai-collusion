@@ -1,15 +1,19 @@
 \section{Conclusion}
-Net influence detects the instructed strong-pair cartel treatment in the
-registered experiment. Correlation is a demanding same-access baseline,
-and the results show no general advantage over it. Espionage provides a
-specific descriptive lead for further work. Reliable flow classification,
-judge comparisons under broad coverage, and causal probe inference remain
-unresolved. These methods can support investigation; they do not establish
-agreement, intent, or harm.
+Pairwise net influence detects an instructed LLM cartel in a repeated
+procurement auction, but a simple correlation of the same data detects it
+as well or better. Its distinct value appears when one firm's private cost
+flows into another firm's bids: for espionage it beat correlation, and this
+held on fresh markets. The most profitable collusion, a cartel without a
+channel, was the hardest to detect, and a small LLM judge given ample tokens
+judged firm strength rather than coordination. Behaviour-based screens can
+support an investigation; they do not establish agreement, intent or harm.
 
 \section*{Code and Data}
-The final analysis is \path{results/analysis/final_v1/results.json};
-\path{experiments/report_figures.py} regenerates the report figures and
-numerical tables without model calls. Appendix~\ref{app:stats} gives the
+All code, collected market data and analysis outputs are in the project
+repository. The frozen final analysis is
+\path{results/analysis/final_v1/results.json}; the replication and judge
+check are in \path{results/analysis/replication_v22/} and
+\path{results/analysis/judge24k_v23/}, summarised by
+\path{experiments/addendum_summary.py}. Appendix~\ref{app:stats} gives every
 analysis command, execution provenance and checksums.
 \todo{Insert public repository and release archive URLs after release.}

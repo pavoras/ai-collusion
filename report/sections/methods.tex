@@ -140,12 +140,34 @@ with the recipient's cost and history fixed; draws remain nested in markets
 (Appendix~\ref{app:stats}).
 % source: docs/PREREG.md sections 7 and 9, addendum A2
 
+\subsection{Out-of-sample replication and judge-budget check}
+\label{sec:addenda}
+After the final analysis, two additions were written into the
+pre-registration before their data were collected (Addenda v2.2 and v2.3,
+Appendix~\ref{app:stats}). First, E1, C2 and C1-SS were collected again on
+fresh market indices 20--39 with unchanged prompts, sampling, seeds and
+200 rounds. Each new market shares its cost sequence with the already
+collected honest N0 market of the same index, which serves as its matched
+control. The frozen code analyses these markets as a separate cohort. The
+pre-specified criteria are: for E1, the L2 net-minus-correlation interval
+lies above zero; for C2, the joint-profit uplift over N0 lies above zero;
+for C1-SS, the L2 net AUROC interval lies above $0.5$. Because the original
+results were known, this is a replication of observed patterns, not a
+blind test. Second, an exploratory check re-ran the Qwen judge with a
+24,000-token instead of a 12,000-token output limit (L2; core N0, C1-SS and
+C1-SF markets 0--19; everything else unchanged).
+Re-analysing identical markets as a separate cohort reproduces correlation,
+strength and paper scores exactly; net and leak scores change only by
+permutation Monte Carlo noise (largest AUROC difference $0.0075$).
+% source: docs/PREREG.md Addenda v2.2-v2.3 (check cohort note)
+
 \subsection{Pre-registration and deviations}
 Design and executable analysis were frozen before collection; A1--A3
-preceded LLM outcome analysis. Six deviations cover warm-up transport;
+preceded LLM outcome analysis. Seven deviations cover warm-up transport;
 fenced-JSON parsing and labelled Gemma/Ministral recollection; caching,
-streaming and checkpoints; disk exhaustion and relocation; and later
-recovery, call ceilings, loader paths, and an exceeded budget cap; and judge
-transport recovery plus budget cancellation of breadth judging. Core
+streaming and checkpoints; disk exhaustion and relocation; later recovery,
+call ceilings, loader paths and an exceeded budget cap; judge transport
+recovery and budget cancellation of breadth judging; and the operations of
+the two addenda. Core
 Qwen prompts and sampling were retained. Appendix~\ref{app:stats} records
 the freezes, amendment, and deviations separately.

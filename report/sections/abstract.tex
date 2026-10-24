@@ -1,23 +1,26 @@
 \begin{abstract}
-Can a behaviour-based audit distinguish an instructed cartel from honest
-language-model bidders? We test pairwise net influence in a repeated
-procurement auction, comparing public-bid access with access to private
-costs. The sole confirmatory test distinguished strong-pair cartel markets
-from matched honest controls: AUROC $0.865$, descriptive interval
-$[0.734,0.968]$, and $p=0.00002$ across $20$ blocks.
-% source: results/analysis/final_v1/results.json primary; all_cells[206].auroc
-Same-access residual correlation achieved $0.9975$.
-% source: results/analysis/final_v1/results.json all_cells[202].auroc
-Net influence therefore shows no general advantage over correlation.
-In descriptive secondary comparisons, espionage was the only condition
-whose paired net-minus-correlation interval excluded zero in favour of net
-influence. Market-level flow labels remained largely weak or unclear.
-The Qwen judge returned invalid JSON for $322/600$ judgements;
-its matched comparisons cover only $1$--$8$ blocks.
-% source: results/analysis/final_v1/results.json judgments grouped by model/status/failure; judge_comparisons[*].judge_auroc.n_blocks
-Exploratory probes did not resolve an average linear bid response to partner
-cost. Their leak test has an anti-conservative bid-level permutation null
-because bids share regenerated messages. These results support screening
-for an assigned treatment in this game, not reliable identification of
-agreement, intent, or economic harm.
+Can an overseer find two colluding AI agents from their actions alone? We
+test pairwise net influence, an information-theoretic dependence measure,
+on language-model bidders in a repeated procurement auction with an
+instructed two-firm cartel and matched honest markets, with and without
+access to private costs. In the pre-registered primary test, net influence
+separated cartel from honest markets (AUROC $0.865$, $p=0.00002$, $20$
+matched blocks), but a plain correlation of the same data did better
+($0.9975$), and correlation matched or beat net influence on every cartel
+with a private channel.
+% source: results/analysis/final_v1/results.json primary; all_cells[206,202].auroc
+Net influence added information where one firm secretly saw a rival's cost:
+it beat correlation by $+0.285$ AUROC, and by $+0.265$ $[0.070,0.445]$ on
+fresh markets collected afterwards.
+% source: results/analysis/final_v1/results.json contrasts[263].result; results/analysis/replication_v22/results.json contrasts rep.E1 "L2:net minus L2:correlation"
+A cartel without a channel raised profit the most, also on fresh markets,
+yet was the hardest cartel to detect. The published fixed alarm threshold
+flagged all $40$ honest markets with cost access. An LLM judge with ample
+token budget barely separated cartel from honest markets (AUROC $0.62$,
+interval including $0.5$) and named the strongest firms rather than the
+colluders.
+% source: results/analysis/final_v1/results.json all_cells[63].any_candidate; results/analysis/judge24k_v23/results.json all_cells[138] judge:qwen-9b auroc
+Behaviour-based screens can support an investigation, but should be
+calibrated, compared with simple baselines, and not read as proof of
+agreement.
 \end{abstract}

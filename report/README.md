@@ -4,6 +4,21 @@ The manuscript uses `results/analysis/final_v1/results.json`, amendment freeze
 `4c4b6f1`, executed at `7ca459c` with the documented loader fix (deviation 5g).
 Results, Discussion, Conclusion and Abstract now use the final numbers.
 
+Two pre-registered addenda were added after the final analysis (`docs/PREREG.md`,
+Addenda v2.2 and v2.3, deviation 7): an out-of-sample replication of E1, C2 and
+C1-SS on markets 20-39 and a 24,000-token judge check. Their statistics come from
+the frozen analysis code run as separate cohorts:
+
+```powershell
+.venv/Scripts/python experiments/analyze_llm.py --unblind --input results --run-index results/analysis_runs_v22.json --manifest experiments/manifests/collection_v2.json --analysis-freeze-commit 4c4b6f1911486d479bd043e3590e9e0f90f6a42d --name replication_v22 --workers 3
+.venv/Scripts/python experiments/analyze_llm.py --unblind --input results --run-index results/analysis_runs_v23.json --manifest experiments/manifests/collection_v2.json --analysis-freeze-commit 4c4b6f1911486d479bd043e3590e9e0f90f6a42d --judges results/llm/judge_index_24k.json --name judge24k_v23 --workers 3
+.venv/Scripts/python experiments/addendum_summary.py --replication results/analysis/replication_v22/results.json --judge results/analysis/judge24k_v23/results.json --out results/analysis/addendum_summary
+```
+
+The last command writes `results/analysis/addendum_summary/summary.json` and the
+LaTeX tables `sections/addendum_table.tex` (Table 1) and
+`sections/addendum_full_table.tex` (Appendix E.7).
+
 From the repository root:
 
 ```powershell
@@ -28,7 +43,7 @@ pdflatex --disable-installer -interaction=nonstopmode -halt-on-error main.tex
 
 Times text/math, Helvetica sans and Courier mono are requested, with plainnat
 author-year citations. Built with MiKTeX on 24 Oct 2026 (pdflatex + bibtex): main text
-pages 1-7, references page 8, appendix after that.
+pages 1-8, references page 9, appendix after that (34 pages in total).
 
 Verification: the renderer ran; full/quick numerical files agree byte-for-byte;
 all 134 plotted values and interval endpoints match their cited JSON paths;
@@ -42,7 +57,8 @@ the arXiv API, Crossref or the GitHub API. The sprint repository listed in the o
 `soumya-nayak-commits/collusion-sprint` returned 404; the matching public repository of that
 account (`collusion-detetction`, Question 1.4) is cited with commit and access date.
 
-Remaining editorial items: exact Modal billing, release URLs, and Marvin's final
-substantive review. Remaining scientific
+Modal billing: USD 70.35 before the addenda, USD 76.30 metered after them
+(USD 76.03 from credits). Remaining editorial items: release URLs and Marvin's
+final substantive review. Remaining scientific
 limits: anti-conservative probe leak inference, failure-conditioned judge subsets,
 and the unaudited bias/Monte Carlo contributions to fingerprint intervals.

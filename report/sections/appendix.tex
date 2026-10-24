@@ -213,6 +213,10 @@ the fingerprint seed is $20261029$, and A1 uses $20261030$.
 A2 uses $20261031$ for swaps and $20261032$ for bootstrap.
 % source: results/analysis/final_v1/results.json primary.seed; bootstrap.registered.seed; fingerprints[*].seed; addendum.A1.seed; addendum.A2.swap_seed,bootstrap_seed
 \input{sections/checksums}
+The \path{src/collusion/analysis/io.py} digest refers to the version that
+executed \texttt{final\_v1} (\texttt{git show 7ca459c:src/collusion/analysis/io.py});
+for the addenda the file only gained the optional \texttt{--run-index}
+argument (commit \path{63cb9f4}), which does not change any statistic.
 
 The following command reproduces the final analysis from released local
 inputs. It is documented here, not rerun during report preparation.
@@ -242,6 +246,51 @@ pdflatex --disable-installer -interaction=nonstopmode main.tex
 pdflatex --disable-installer -interaction=nonstopmode main.tex
 \end{verbatim}
 
+\subsection{Addenda v2.2--v2.3: replication and judge budget}
+\label{app:addenda}
+Both addenda were committed before their data (\path{63cb9f4},
+\path{9d759d0}). The replication cohort re-declares the registered cells
+\texttt{core.E1}, \texttt{core.C2} and \texttt{core.C1-SS} on markets
+20--39 with \path{experiments/cohort_index.py}, which copies each registered
+manifest entry and changes only cohort, indices, control and reason. Its
+matched control is the registered N0 run on markets 20--39. Treatment runs:
+\path{results/llm/rep_{E1,C2,C1-SS}_v22__deviation_replication}, each
+complete with 4,000 rounds. Pre-specified verdicts: R1 (E1, L2 net minus
+correlation above zero) replicated; R1b (the same at L1) did not; R2 (C2
+joint-profit uplift above zero) replicated; R4 (C1-SS L2 net AUROC above
+$0.5$) replicated ($0.9075$ $[0.8025,0.985]$).
+% source: results/analysis/addendum_summary/summary.json preregistered_verdicts
+The judge check used the registered prompt, seed and sampling with a
+24,000-token limit (recorded in each run's configuration and reproducibility
+record). Eight second-attempt streams broke server-side after
+400--785\,s without a reply; they were released with an audit record and
+resubmitted unchanged, as for the registered judges. Of 60 judgements, 54
+returned valid output and 6 invalid JSON; the registered 12,000-token judge
+had 27 valid outputs on the same 60 markets.
+% source: results/llm/judge_index_24k.json; results/llm/reconciliation_log.json; results/analysis/addendum_summary/summary.json judge_budget
+A check cohort on the registered markets 0--19 reproduced \texttt{final\_v1}
+exactly for correlation, strength and paper scores and within permutation
+noise for net and leak (largest AUROC difference $0.0075$), because
+permutation seeds depend on the cohort name. Commands (one line each):
+\begin{verbatim}
+.venv/Scripts/python experiments/analyze_llm.py --unblind --input results
+  --run-index results/analysis_runs_v22.json
+  --manifest experiments/manifests/collection_v2.json
+  --analysis-freeze-commit 4c4b6f1911486d479bd043e3590e9e0f90f6a42d
+  --name replication_v22 --workers 3
+.venv/Scripts/python experiments/analyze_llm.py --unblind --input results
+  --run-index results/analysis_runs_v23.json
+  --manifest experiments/manifests/collection_v2.json
+  --judges results/llm/judge_index_24k.json
+  --analysis-freeze-commit 4c4b6f1911486d479bd043e3590e9e0f90f6a42d
+  --name judge24k_v23 --workers 3
+.venv/Scripts/python experiments/addendum_summary.py
+  --replication results/analysis/replication_v22/results.json
+  --judge results/analysis/judge24k_v23/results.json
+  --out results/analysis/addendum_summary
+\end{verbatim}
+\input{sections/addendum_full_table}
+
 \subsection{Deviations and collection order}
 The following summary follows the appended record in
 \path{docs/PREREG.md}; per-run metadata and
@@ -262,14 +311,19 @@ were reconciled. New run identifiers reused completed cached requests.
 \item Later recovery addressed drive-specific guards, preemption, warm-up
 caps, ledger contention, call ceilings and judge timeouts. The loader's
 containment check was changed to accept the raw-data junction. The original
-budget cap was exceeded and raised; total Modal billing was USD 70.35.
+budget cap was exceeded and raised; Modal billing was USD 70.35 before the
+addenda and USD 76.30 after them (deviation 7).
 \item Breadth judges were cancelled for budget, while core, A1, A2 and the
 Gemma counter-judge were completed as attempted judgements. Memory failures
 and interrupted judge streams were reconciled; autoscaling was pinned for
 the batch. Content-invalid outputs remained failures. The counter-judge
 used its registered market subset and the fenced parser.
+\item For the addenda, eight broken judge streams were released and
+resubmitted unchanged, and the budget stop was made tiered (judge before
+C1-SS); no tier was reached. The cohort index was regenerated as full copies
+of registered entries before any replication statistic.
 \end{enumerate}
-% source: docs/PREREG.md Deviations 1-6
+% source: docs/PREREG.md Deviations 1-7
 The amendment was recorded before LLM outcome analysis. Actual A1 collection
 started alongside the core; A2 and breadth work were interleaved after
 warm-up, rather than following the proposed fully sequential order.
@@ -350,19 +404,21 @@ better evaluation, rather than to offer a covert-coordination recipe.
 Collection used cloud-hosted open-weight models; interruptions, retries,
 idle time, and judging contribute to resource use. The registered budget
 cap was exceeded, so the initial budget is not an account of actual spend.
-Total Modal billing for the project was USD 70.35 as of 24 October 2026,
-covering deployment, pilot, collection, judging and probes (all runs had
-ended by then).
-% source: Modal billing dashboard, read by the author on 24 Oct 2026; not an analysis estimate
+Total Modal billing for the project was USD 70.35 before the addenda
+(deployment, pilot, collection, judging and probes) and USD 76.30 metered
+after them, of which USD 76.03 came from credits (24 October 2026, all runs
+ended).
+% source: Modal billing dashboard, read by the author on 24 Oct 2026 (70.35); `modal billing summary`, 24 Oct 2026 21:43 (76.30 / 76.03); not an analysis estimate
 Inference seeds and pinned configurations do not ensure identical outputs
 on re-collection. Logs and released data support analysis reproduction;
 unreconciled attempts, parser changes, and missing judgements must remain
 visible in that record.
 
 \section{LLM usage statement}
-Claude Code was used for planning, reviews, and commits during the project.
-Codex models wrote code in implementation rounds and prepared this report
-draft. Marvin Kemper made the research decisions and reviewed the work.
+Claude Code was used for planning, reviews, commits, the addenda code and
+runs, and the final revision of this report. Codex models wrote code in
+implementation rounds, reviewed the frozen results, and prepared the first
+report draft. Marvin Kemper made the research decisions and reviewed the work.
 The LLM bidders and judges described in the methods are experimental
 subjects and baselines, distinct from the tools used to develop the study.
 AI assistance does not establish the correctness of a citation, numerical
