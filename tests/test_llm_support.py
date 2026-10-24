@@ -19,6 +19,6 @@ def tmp_path():
     parent = workspace / "results" / "raw" / "llm_test_temp"
     parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix="test_", dir=parent) as folder:
-        path = Path(folder).resolve()
+        path = Path(folder).absolute()  # results/raw may be a junction to another drive
         assert workspace in path.parents
         yield path

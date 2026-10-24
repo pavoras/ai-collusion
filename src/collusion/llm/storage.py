@@ -105,7 +105,7 @@ class CallService:
         self.parse_fenced = False
         self.raw_dir = self.root / "raw" / run_id
         self.raw_dir.mkdir(parents=True, exist_ok=True)
-        self.db = sqlite3.connect(self.root / "raw" / "response_cache.sqlite3", isolation_level=None, timeout=30)
+        self.db = sqlite3.connect(self.root / "raw" / "response_cache.sqlite3", isolation_level=None, timeout=300)  # many writer processes share it
         self.db.execute("PRAGMA journal_mode=WAL")
         self.db.execute("PRAGMA synchronous=FULL")
         self.db.executescript("""
@@ -163,8 +163,9 @@ class CallService:
                 raise BackendError("request was previously rejected; change the request/configuration before retrying")
             if self.guard is not None:
                 self.guard()
-            if shutil.disk_usage(self.root).free < MIN_FREE_BYTES:
-                raise BudgetStop("free disk space below 3 GB; stop before the audit log cannot be written")
+            if (shutil.disk_usage(os.path.realpath(self.raw_dir)).free < MIN_FREE_BYTES or
+                    shutil.disk_usage(self.root).free < MIN_FREE_BYTES // 6):
+                raise BudgetStop("free disk space low (raw log < 3 GB or outputs < 0.5 GB); stop cleanly")
             if self.calls >= self.max_calls:
                 raise BudgetStop("persistent max_calls cap reached")
             self.db.execute("INSERT INTO requests VALUES (?,?,?,NULL) ON CONFLICT(key) DO UPDATE SET state='pending'",

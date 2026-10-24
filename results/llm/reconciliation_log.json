@@ -8321,5 +8321,1294 @@
         ]
       }
     ]
+  },
+  {
+    "at": "2026-10-24T06:52:39+00:00",
+    "reason": "24.10. 08:28-08:50: core judge batch _s2/a3 stopped (stderr decode crash in the batch driver; two manual diagnostic judge.py calls stopped by a 200-300 s shell timeout). No judge process alive; no reply read for these keys.",
+    "run_prefix": "judge_qwen-9b_core_",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "6cec19cf555d1a3ebcdfe8bad5f78cf6c877abae7ea1c33c91a502c48879b859",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00000_L1_s2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "17a8b5b22aaddb6240b776bcd590b165f0a12a375f77c81a1e574ecef038705e",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C2_00003_L1_s2",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T07:10:31+00:00",
+    "reason": "24.10. 08:52-09:10: (a) 23 collection runs stopped with 'database is locked' while the previous reconciliation scan held the ledger write lock for minutes (scan is now lock-free with an index); (b) at 09:04 Modal replaced every bidder container at once (13 requests in flight, replies never delivered). All collection processes were stopped before this release; no reply was read for these keys. Runs resume unchanged under their run IDs.",
+    "run_prefix": "v2_",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "28e47ed672cdf2fcabf68e37d9df9a6be25171b2e4b348d00c05b0ff7bc70bb0",
+        "attempts": [
+          {
+            "run_id": "v2_lookalike_LZ-swap_p2_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "6e3f189d100cd09deb570b38f3e1fa84e4d6f1070e9f18e814d43a1a5032f129",
+        "attempts": [
+          {
+            "run_id": "v2_lookalike_LZ_p2_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "5de3d4b0eb6312ad7712fe0dfe08b88819bc2dc9e1bc836798f7d5d54c471343",
+        "attempts": [
+          {
+            "run_id": "v2_labs_gemma-12b_C1_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "23dbc78b57079bcfc35bbfbc56f319de185a2a656df0f8ff3dc7564c118f8105",
+        "attempts": [
+          {
+            "run_id": "v2_labs_gemma-12b_C1_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "0cf0b13ad805bf8d77d0a91758863edef8518670a88b285d067e2730b756ec5c",
+        "attempts": [
+          {
+            "run_id": "v2_mixed_H-XYZZ_A3_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "ec9bef52198ad495703c5bbfe7beb22b34c07864952ba0ae1272aaa5fd1d384c",
+        "attempts": [
+          {
+            "run_id": "v2_lookalike_LX-swap_p2_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "eec0d1be42788b6ed40f5d40b655f5120cc4504ff71faba7f9aec29f60fe1438",
+        "attempts": [
+          {
+            "run_id": "v2_lookalike_LX_p2_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "d6c71f1062f379c71f21ebd470824b76febba93ad435cf5cf5263b1221d72b2b",
+        "attempts": [
+          {
+            "run_id": "v2_lookalike_LX_p2_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "b8d9b296a9e3c8ae2e5c8ae995b1a9fac029318b195ce4ba4903452b54c1f961",
+        "attempts": [
+          {
+            "run_id": "v2_sizes_gemma-e4b_N0_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "890b05ea1fbd101fcf2a4b1cbf94d2e9b3e6534c0608d2ab38bd6f51a1e48a8a",
+        "attempts": [
+          {
+            "run_id": "v2_labs_ministral-8b_C1_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "23c58e83daefaa53d98caf1dfcc632747cc9c10ec3595714f747a2ccd9d96dd6",
+        "attempts": [
+          {
+            "run_id": "v2_labs_gemma-12b_C1_A3_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "f00a80f673644cf9d32680bbf6655025418bfe396f476955da98ec9677a65952",
+        "attempts": [
+          {
+            "run_id": "v2_labs_gemma-12b_C1_A3_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "42188ad9575d28317896110756cde3424b06996f36b48f7b366e4574db902e8d",
+        "attempts": [
+          {
+            "run_id": "v2_mixed_C1-XY_A3_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "bad8a8674fb4452a74f6945f93c39f45baefd7ec405262176fc4bc687dc8c3b4",
+        "attempts": [
+          {
+            "run_id": "v2_sizes_ministral-3b_N0_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "0ac2678e24ba9ed763e769859c3edd3d8e3759068a017a52db2bad9f2d21ba08",
+        "attempts": [
+          {
+            "run_id": "v2_labs_ministral-8b_N0_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "24e18a5dc0c9b404e68e707a6e0330bf09f64c29ee8bf9d5e0d74ceeff4192e0",
+        "attempts": [
+          {
+            "run_id": "v2_labs_gemma-12b_N0_A3_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "fcf12b756048ebd62c03ddd279e013e338e8446f8c41ec5fe58339b68a5c9410",
+        "attempts": [
+          {
+            "run_id": "v2_labs_ministral-8b_N0_A3_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "00668bb50e4a8f9d820f2cc7151592a47a64cf0dc439755d3032a12bac337e96",
+        "attempts": [
+          {
+            "run_id": "v2_sizes_ministral-3b_C1_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "579bd1fdd052cc1c402dd483a9fc7475e54f1eefa1b676eba6603051cb76d08d",
+        "attempts": [
+          {
+            "run_id": "v2_sizes_ministral-3b_C1_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "932172809fef19569fd1ee97c7e9874234438c255340bc9f2db2bbfca8bab8e2",
+        "attempts": [
+          {
+            "run_id": "v2_lookalike_LY_p2_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "e3b4ee069185d51250ad61bba8598936e2bf2c3ba7fc86fb58809dc03e0c12d3",
+        "attempts": [
+          {
+            "run_id": "v2_labs_ministral-8b_C1_A3_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "5df3e4d78f10f5d6a1bbd634792e88a0d4203b2313302f5589cd3c0f008ce587",
+        "attempts": [
+          {
+            "run_id": "v2_sizes_qwen-4b_C1_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "12b2224a9248a4051772abb83c3914e129915fb0f22b568e69881619617e66cf",
+        "attempts": [
+          {
+            "run_id": "v2_sizes_ministral-3b_C1_A3_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "9b0707e118f8eebeaa23320261d1bcca24596f0b1d23a30c0ec4c0623ec55ae9",
+        "attempts": [
+          {
+            "run_id": "v2_mixed_D_A3_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T07:10:32+00:00",
+    "reason": "24.10. 08:52-09:10: (a) 23 collection runs stopped with 'database is locked' while the previous reconciliation scan held the ledger write lock for minutes (scan is now lock-free with an index); (b) at 09:04 Modal replaced every bidder container at once (13 requests in flight, replies never delivered). All collection processes were stopped before this release; no reply was read for these keys. Runs resume unchanged under their run IDs.",
+    "run_prefix": "core_",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T07:32:36+00:00",
+    "reason": "24.10. 09:25: a judge batch added 64 processes, pagefile growth left C: with 1.6 GB, the disk guard (then measured on C:) stopped every collection run and some crashed. No collection process alive at release; no reply read for these keys. Runs resume unchanged under their run IDs; the guard now measures the raw-log drive.",
+    "run_prefix": "v2_",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "907cdd538137473cff1b36b180189201282eb17cdebb239daccecfecd1cb41d6",
+        "attempts": [
+          {
+            "run_id": "v2_sizes_qwen-4b_C1_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "52d9e1a37e35d16456464a318a52b82fd5fe3cc6e5976c3ad56cffb04b3d4ae1",
+        "attempts": [
+          {
+            "run_id": "v2_mixed_D_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "d1c0aa2e986912e30d7073efa26198be82e68ec4d4b9292ea2232665e79947f4",
+        "attempts": [
+          {
+            "run_id": "v2_lookalike_LY-swap_p2_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "df619066baa95101eacc49f1fa4e34931f99fef183ac8c0936bf18a6a63d2233",
+        "attempts": [
+          {
+            "run_id": "v2_labs_gemma-12b_C1_A3_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T07:32:38+00:00",
+    "reason": "24.10. 09:25: a judge batch added 64 processes, pagefile growth left C: with 1.6 GB, the disk guard (then measured on C:) stopped every collection run and some crashed. No collection process alive at release; no reply read for these keys. Runs resume unchanged under their run IDs; the guard now measures the raw-log drive.",
+    "run_prefix": "core_",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T08:35:54+00:00",
+    "reason": "24.10. 10:35: judge P0_00007_L2_s2 hung on its stream since 08:52 (no reply completed); judge batches a4/b stopped. No judge process alive at release.",
+    "run_prefix": "judge_",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "a178b6934bbed038da11a5046bd575de12cfc4af02a9025c664213aa6709f912",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00018_L2_s",
+            "state": "safe_failure",
+            "latency": 0.3236732999794185,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00018_L2_s",
+            "state": "safe_failure",
+            "latency": 0.30319759994745255,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00018_L2_s",
+            "state": "safe_failure",
+            "latency": 0.29752479994203895,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00018_L2_s",
+            "state": "safe_failure",
+            "latency": 0.31141520000528544,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00018_L2_s",
+            "state": "safe_failure",
+            "latency": 0.3375005000270903,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00018_L2_s",
+            "state": "safe_failure",
+            "latency": 0.35250680008903146,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00018_L2_s",
+            "state": "safe_failure",
+            "latency": 0.3190924000227824,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00018_L2_s",
+            "state": "safe_failure",
+            "latency": 0.3298609999474138,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00018_L2_s",
+            "state": "safe_failure",
+            "latency": 0.29666779993567616,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00018_L2_s",
+            "state": "safe_failure",
+            "latency": 0.0,
+            "error": "audit_write_failed_before_submission"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00018_L2_s2",
+            "state": "safe_failure",
+            "latency": 0.35438689996954054,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00018_L2_s2",
+            "state": "safe_failure",
+            "latency": 0.29577860003337264,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00018_L2_s2",
+            "state": "safe_failure",
+            "latency": 0.3022392999846488,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00018_L2_s2",
+            "state": "safe_failure",
+            "latency": 0.2904889000346884,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00018_L2_s2",
+            "state": "safe_failure",
+            "latency": 0.31040469999425113,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00018_L2_s2",
+            "state": "safe_failure",
+            "latency": 0.30457599996589124,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00018_L2_s2",
+            "state": "safe_failure",
+            "latency": 0.3051707000704482,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00018_L2_s2",
+            "state": "uncertain",
+            "latency": 3600.008469399996,
+            "error": "TimeoutError"
+          }
+        ]
+      },
+      {
+        "key": "1c2f40ea2d1577b7eb859fb433d4ee24c48a22ccd2cc41e25ff470007af11aaf",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00019_L2_s2",
+            "state": "safe_failure",
+            "latency": 0.39844089990947396,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00019_L2_s2",
+            "state": "safe_failure",
+            "latency": 0.3018967000534758,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00019_L2_s2",
+            "state": "safe_failure",
+            "latency": 0.3117746999487281,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00019_L2_s2",
+            "state": "safe_failure",
+            "latency": 0.3026852000039071,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00019_L2_s2",
+            "state": "safe_failure",
+            "latency": 0.3131279000081122,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00019_L2_s2",
+            "state": "safe_failure",
+            "latency": 0.3190704999724403,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00019_L2_s2",
+            "state": "safe_failure",
+            "latency": 0.30177340004593134,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00019_L2_s2",
+            "state": "uncertain",
+            "latency": 3600.0094468999887,
+            "error": "TimeoutError"
+          }
+        ]
+      },
+      {
+        "key": "a88099e7a54b1c160e010b14fd878b710f0d4124b2aac8605dea8fdc36359c3d",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00003_L1_s2",
+            "state": "uncertain",
+            "latency": 69.57261329994071,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "da941082a87612521f0ca582d239f6afe50506c340c0a37e4ced5b83f029c6ea",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00000_L2_s2",
+            "state": "uncertain",
+            "latency": 69.40179559995886,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "4cc525add6b4484d0d3cded44798c5e6bdeb67f2f3cf676b7cb1deae8f0eeb3c",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_E1_00013_L1_s2",
+            "state": "uncertain",
+            "latency": 69.13124239991885,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "6bb6f86f263352c0e9d98ac9a8ea6d82c818234001aec863c47729c73fd76c38",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00004_L2_s2",
+            "state": "uncertain",
+            "latency": 68.93953380000312,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "44cef23de8ee0f4aa81fd2fc3b81f66ae3a68f39d0a66ffd8533bf01f28a4793",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_E1_00018_L1_s2",
+            "state": "uncertain",
+            "latency": 68.73807249998208,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "b427f10e92597566487218ddddba986b578c004f90eca199a94e667d81947381",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00008_L2_s2",
+            "state": "uncertain",
+            "latency": 68.4232373998966,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "1a1cf39ab2342f0fb72c7677f08ccc815feb3e3558d4efebb00b86f369eeac53",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00006_L2_s2",
+            "state": "uncertain",
+            "latency": 68.1894846999785,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "8bc24aaa3f3d568ea69cb151a036d34dfecaccb1ccf01e07e3e3ec7941b1b47d",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00009_L1_s2",
+            "state": "uncertain",
+            "latency": 68.0332977999933,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "4305ae8dcd180fb960ac1d9e187f3e991463a84d250981172b13faf4fe76517d",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00007_L2_s2",
+            "state": "uncertain",
+            "latency": 67.78377710003406,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "df96ce7a7ee00c04164d0ad9684eabb450c770056fcabf6c343a986476c68454",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00008_L1_s2",
+            "state": "uncertain",
+            "latency": 67.16313400003128,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "4d63723b1041af8a9f9d15a9dc525f4f3b623317933483c541b80350281fec82",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00014_L2_s2",
+            "state": "uncertain",
+            "latency": 67.06811650004238,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "cb39f101f53f6aaa2644371f6fb58d97dabe8f71fc027597847d2360f733c956",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00016_L2_s2",
+            "state": "uncertain",
+            "latency": 66.88338949996978,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "7302a214ffb6c655ab8d9757b91dd921248390ba5e6ebe616d2efba76a1d865c",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-NW_00014_L1_s2",
+            "state": "uncertain",
+            "latency": 66.58000319998246,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T08:44:20+00:00",
+    "reason": "24.10. 09:53-10:41: run v2_labs_ministral-8b_C1_A3_c stopped with 'database is locked' (30 s SQLite busy timeout exceeded under ~35 writer processes on the ledger now on D:; timeout raised to 300 s) or at the 09:25 disk-guard stop and was not alive at release. No reply was read for these keys.",
+    "run_prefix": "v2_labs_ministral-8b_C1_A3_c",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "560e83aa83ee5f3c5a2cb3bba1549e4fdf8477dab368ed084043e1575f16334e",
+        "attempts": [
+          {
+            "run_id": "v2_labs_ministral-8b_C1_A3_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T08:44:24+00:00",
+    "reason": "24.10. 09:53-10:41: run v2_labs_ministral-8b_N0_A3_c stopped with 'database is locked' (30 s SQLite busy timeout exceeded under ~35 writer processes on the ledger now on D:; timeout raised to 300 s) or at the 09:25 disk-guard stop and was not alive at release. No reply was read for these keys.",
+    "run_prefix": "v2_labs_ministral-8b_N0_A3_c",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "ecde9f1c13a08690d41eded8015eb9cfe6377bd28a1410042b9bf28f8df35f0e",
+        "attempts": [
+          {
+            "run_id": "v2_labs_ministral-8b_N0_A3_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T08:44:27+00:00",
+    "reason": "24.10. 09:53-10:41: run v2_mixed_C1-XX_A3_c stopped with 'database is locked' (30 s SQLite busy timeout exceeded under ~35 writer processes on the ledger now on D:; timeout raised to 300 s) or at the 09:25 disk-guard stop and was not alive at release. No reply was read for these keys.",
+    "run_prefix": "v2_mixed_C1-XX_A3_c",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "f543087dd0a451facad350a7dc80cab5e851f2c04af1e41d688e151f412fc8dc",
+        "attempts": [
+          {
+            "run_id": "v2_mixed_C1-XX_A3_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "aba040364f3d3af5bd95adc437d9f927394df9b2151dde99c3f39be7de8a7f3e",
+        "attempts": [
+          {
+            "run_id": "v2_mixed_C1-XX_A3_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T08:44:29+00:00",
+    "reason": "24.10. 09:53-10:41: run v2_mixed_C1-XY_A3_c stopped with 'database is locked' (30 s SQLite busy timeout exceeded under ~35 writer processes on the ledger now on D:; timeout raised to 300 s) or at the 09:25 disk-guard stop and was not alive at release. No reply was read for these keys.",
+    "run_prefix": "v2_mixed_C1-XY_A3_c",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "1e2dbf2d13d2dca9e17728535050ec3c77c59affdc423bf9f8f9fff2a53820a5",
+        "attempts": [
+          {
+            "run_id": "v2_mixed_C1-XY_A3_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "400ef8ce66789c6279d01c7e162df6991d6f6d53e78f515e588290bfff588abd",
+        "attempts": [
+          {
+            "run_id": "v2_mixed_C1-XY_A3_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T08:44:32+00:00",
+    "reason": "24.10. 09:53-10:41: run v2_mixed_D_A3_c stopped with 'database is locked' (30 s SQLite busy timeout exceeded under ~35 writer processes on the ledger now on D:; timeout raised to 300 s) or at the 09:25 disk-guard stop and was not alive at release. No reply was read for these keys.",
+    "run_prefix": "v2_mixed_D_A3_c",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "c3bd5310677c4f0a076ea723a0034416c73f915967723601195105b5564d0682",
+        "attempts": [
+          {
+            "run_id": "v2_mixed_D_A3_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T08:44:36+00:00",
+    "reason": "24.10. 09:53-10:41: run v2_mixed_D_c stopped with 'database is locked' (30 s SQLite busy timeout exceeded under ~35 writer processes on the ledger now on D:; timeout raised to 300 s) or at the 09:25 disk-guard stop and was not alive at release. No reply was read for these keys.",
+    "run_prefix": "v2_mixed_D_c",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "7311f016d167bbf78082ea2cb293ad8e2cdcc2dcd321ca33e33e080e78bd2684",
+        "attempts": [
+          {
+            "run_id": "v2_mixed_D_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T08:44:41+00:00",
+    "reason": "24.10. 09:53-10:41: run v2_mixed_H-XYZZ_A3_c stopped with 'database is locked' (30 s SQLite busy timeout exceeded under ~35 writer processes on the ledger now on D:; timeout raised to 300 s) or at the 09:25 disk-guard stop and was not alive at release. No reply was read for these keys.",
+    "run_prefix": "v2_mixed_H-XYZZ_A3_c",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T08:44:44+00:00",
+    "reason": "24.10. 09:53-10:41: run v2_sizes_gemma-e4b_N0_c stopped with 'database is locked' (30 s SQLite busy timeout exceeded under ~35 writer processes on the ledger now on D:; timeout raised to 300 s) or at the 09:25 disk-guard stop and was not alive at release. No reply was read for these keys.",
+    "run_prefix": "v2_sizes_gemma-e4b_N0_c",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "deeb91a6bc25a78f628d54768e31388c57a54a9911f3baeead60888fcf5b4951",
+        "attempts": [
+          {
+            "run_id": "v2_sizes_gemma-e4b_N0_c",
+            "state": "safe_failure",
+            "latency": 27.378074300009757,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "v2_sizes_gemma-e4b_N0_c",
+            "state": "safe_failure",
+            "latency": 12.823731599957682,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "v2_sizes_gemma-e4b_N0_c",
+            "state": "safe_failure",
+            "latency": 10.460389400017448,
+            "error": "definitely_not_submitted_or_rate_rejected"
+          },
+          {
+            "run_id": "v2_sizes_gemma-e4b_N0_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "fd4c62f793cdd688eb604e31fe8f9bed977094cda96aa352df62ab353e892f15",
+        "attempts": [
+          {
+            "run_id": "v2_sizes_gemma-e4b_N0_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T08:44:46+00:00",
+    "reason": "24.10. 09:53-10:41: run v2_sizes_ministral-3b_N0_A3_c stopped with 'database is locked' (30 s SQLite busy timeout exceeded under ~35 writer processes on the ledger now on D:; timeout raised to 300 s) or at the 09:25 disk-guard stop and was not alive at release. No reply was read for these keys.",
+    "run_prefix": "v2_sizes_ministral-3b_N0_A3_c",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T08:44:49+00:00",
+    "reason": "24.10. 09:53-10:41: run v2_sizes_ministral-3b_N0_c stopped with 'database is locked' (30 s SQLite busy timeout exceeded under ~35 writer processes on the ledger now on D:; timeout raised to 300 s) or at the 09:25 disk-guard stop and was not alive at release. No reply was read for these keys.",
+    "run_prefix": "v2_sizes_ministral-3b_N0_c",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "f7515cca6b86b5d58fbc1f9cc9222ddb4d06c940fd505dab57ea6fc6b20c8781",
+        "attempts": [
+          {
+            "run_id": "v2_sizes_ministral-3b_N0_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "50626a6150234e69f0bdded59bc23131a7d7487aa1af3ae7fbcea826e9a0bc0b",
+        "attempts": [
+          {
+            "run_id": "v2_sizes_ministral-3b_N0_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "9540d0a445d2bb25a1a0a5b994f6a70e525113e8a8ae7bef3894544f67717c41",
+        "attempts": [
+          {
+            "run_id": "v2_sizes_ministral-3b_N0_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "79c7d04730c2ef0fbc3e60b5dd8b0ef0a4e82495ccf27a12567639f5fdc4282f",
+        "attempts": [
+          {
+            "run_id": "v2_sizes_ministral-3b_N0_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T08:44:52+00:00",
+    "reason": "24.10. 09:53-10:41: run v2_sizes_qwen-4b_N0_A3_c stopped with 'database is locked' (30 s SQLite busy timeout exceeded under ~35 writer processes on the ledger now on D:; timeout raised to 300 s) or at the 09:25 disk-guard stop and was not alive at release. No reply was read for these keys.",
+    "run_prefix": "v2_sizes_qwen-4b_N0_A3_c",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "eb6fb57dd34e2779c63df4c6a33cc6e7ce02252e729316cc3078b3cc728fe48c",
+        "attempts": [
+          {
+            "run_id": "v2_sizes_qwen-4b_N0_A3_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T08:48:19+00:00",
+    "reason": "24.10. 10:43-10:46: run v2_labs_gemma-12b_C1_c (started before the busy-timeout fix) stopped with 'database is locked' (30 s SQLite busy timeout exceeded under ~35 writer processes on the ledger on D:; timeout raised to 300 s) and was not alive at release. No reply was read for these keys.",
+    "run_prefix": "v2_labs_gemma-12b_C1_c",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "bbc7e310089715f35f334e110df26b20a10bde9a582c090255bfd8c42db68b4a",
+        "attempts": [
+          {
+            "run_id": "v2_labs_gemma-12b_C1_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T08:48:25+00:00",
+    "reason": "24.10. 10:43-10:46: run v2_mixed_C1-XY_c (started before the busy-timeout fix) stopped with 'database is locked' (30 s SQLite busy timeout exceeded under ~35 writer processes on the ledger on D:; timeout raised to 300 s) and was not alive at release. No reply was read for these keys.",
+    "run_prefix": "v2_mixed_C1-XY_c",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "baa981250875f9be86d6e1c9bf8ae775ecb8538f1e985747480a11fd4647c127",
+        "attempts": [
+          {
+            "run_id": "v2_mixed_C1-XY_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T08:48:31+00:00",
+    "reason": "24.10. 10:43-10:46: run v2_sizes_ministral-3b_C1_c (started before the busy-timeout fix) stopped with 'database is locked' (30 s SQLite busy timeout exceeded under ~35 writer processes on the ledger on D:; timeout raised to 300 s) and was not alive at release. No reply was read for these keys.",
+    "run_prefix": "v2_sizes_ministral-3b_C1_c",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "45e6fb9b37bd160a8e57b3dcd15377ac4a8e84e6aa64e963b3cf0dc7c54650d3",
+        "attempts": [
+          {
+            "run_id": "v2_sizes_ministral-3b_C1_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T08:49:12+00:00",
+    "reason": "24.10. 10:48: run v2_labs_gemma-12b_C1_A3_c (started before the busy-timeout fix) stopped with 'database is locked' (30 s SQLite busy timeout exceeded under ~35 writer processes on the ledger on D:; timeout raised to 300 s) and was not alive at release. No reply was read for these keys.",
+    "run_prefix": "v2_labs_gemma-12b_C1_A3_c",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "ebd17f1fa6acf062dba33413baf9b34007da02bc907880dd366307b7a409f0d9",
+        "attempts": [
+          {
+            "run_id": "v2_labs_gemma-12b_C1_A3_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "763028c7fe1e0791440c325b4679213277e4d699c6b77efc83a16ac799760d26",
+        "attempts": [
+          {
+            "run_id": "v2_labs_gemma-12b_C1_A3_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T08:53:52+00:00",
+    "reason": "24.10. 10:50: run v2_sizes_qwen-4b_C1_c (started before the busy-timeout fix) stopped with 'database is locked' (30 s SQLite busy timeout exceeded under ~35 writer processes on the ledger on D:; timeout raised to 300 s) and was not alive at release. No reply was read for these keys.",
+    "run_prefix": "v2_sizes_qwen-4b_C1_c",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "aebf70c85a6e82fabf5e33404db772b48b8e6f8045422651509cbc87eb8f9b6a",
+        "attempts": [
+          {
+            "run_id": "v2_sizes_qwen-4b_C1_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T09:03:59+00:00",
+    "reason": "24.10. 10:56-11:02: run v2_labs_ministral-8b_C1_c (started before the busy-timeout fix) stopped with 'database is locked' (30 s SQLite busy timeout exceeded under ~35 writer processes on the ledger on D:; timeout raised to 300 s) and was not alive at release. No reply was read for these keys.",
+    "run_prefix": "v2_labs_ministral-8b_C1_c",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "99bb0abbeaa906fef8f0e8744031c58029902c897a311b61323d1fa37b122171",
+        "attempts": [
+          {
+            "run_id": "v2_labs_ministral-8b_C1_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T09:04:02+00:00",
+    "reason": "24.10. 10:56-11:02: run v2_mixed_C1-XX_c (started before the busy-timeout fix) stopped with 'database is locked' (30 s SQLite busy timeout exceeded under ~35 writer processes on the ledger on D:; timeout raised to 300 s) and was not alive at release. No reply was read for these keys.",
+    "run_prefix": "v2_mixed_C1-XX_c",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "c291cbb4526f5f21c1ed05760b74fc265f9fbc58ee50083d2c0ff341d4b47054",
+        "attempts": [
+          {
+            "run_id": "v2_mixed_C1-XX_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T09:04:07+00:00",
+    "reason": "24.10. 10:56-11:02: run v2_sizes_ministral-3b_C1_A3_c (started before the busy-timeout fix) stopped with 'database is locked' (30 s SQLite busy timeout exceeded under ~35 writer processes on the ledger on D:; timeout raised to 300 s) and was not alive at release. No reply was read for these keys.",
+    "run_prefix": "v2_sizes_ministral-3b_C1_A3_c",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T09:04:10+00:00",
+    "reason": "24.10. 10:56-11:02: run v2_sizes_qwen-4b_C1_A3_c (started before the busy-timeout fix) stopped with 'database is locked' (30 s SQLite busy timeout exceeded under ~35 writer processes on the ledger on D:; timeout raised to 300 s) and was not alive at release. No reply was read for these keys.",
+    "run_prefix": "v2_sizes_qwen-4b_C1_A3_c",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "fe3940042c5cb04df40c138bb442a3b2d8a4261aff2bddefd80811602005b84b",
+        "attempts": [
+          {
+            "run_id": "v2_sizes_qwen-4b_C1_A3_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "0bf1966cd3998909426b447a5006489cacc545cd1e8fbf04caedfe88f3ef17a1",
+        "attempts": [
+          {
+            "run_id": "v2_sizes_qwen-4b_C1_A3_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T09:14:09+00:00",
+    "reason": "24.10. 11:07-11:12: run v2_lookalike_LX-swap_p2_c (started before the busy-timeout fix) stopped with 'database is locked' (30 s SQLite busy timeout exceeded under ~35 writer processes on the ledger on D:; timeout raised to 300 s) and was not alive at release. No reply was read for these keys.",
+    "run_prefix": "v2_lookalike_LX-swap_p2_c",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "ec9980de6f38dc4b201ca05c04936dc5c7c2ec034fff2dcc2637c268d8e283aa",
+        "attempts": [
+          {
+            "run_id": "v2_lookalike_LX-swap_p2_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T09:14:11+00:00",
+    "reason": "24.10. 11:07-11:12: run v2_lookalike_LX_p2_c (started before the busy-timeout fix) stopped with 'database is locked' (30 s SQLite busy timeout exceeded under ~35 writer processes on the ledger on D:; timeout raised to 300 s) and was not alive at release. No reply was read for these keys.",
+    "run_prefix": "v2_lookalike_LX_p2_c",
+    "min_latency": 0.0,
+    "released": []
+  },
+  {
+    "at": "2026-10-24T09:14:14+00:00",
+    "reason": "24.10. 11:07-11:12: run v2_lookalike_LY-swap_p2_c (started before the busy-timeout fix) stopped with 'database is locked' (30 s SQLite busy timeout exceeded under ~35 writer processes on the ledger on D:; timeout raised to 300 s) and was not alive at release. No reply was read for these keys.",
+    "run_prefix": "v2_lookalike_LY-swap_p2_c",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "f41af14e03b95fa0d59bde3f65871519b69ea663e35df73f65062779f583d919",
+        "attempts": [
+          {
+            "run_id": "v2_lookalike_LY-swap_p2_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T09:14:17+00:00",
+    "reason": "24.10. 11:07-11:12: run v2_lookalike_LY_p2_c (started before the busy-timeout fix) stopped with 'database is locked' (30 s SQLite busy timeout exceeded under ~35 writer processes on the ledger on D:; timeout raised to 300 s) and was not alive at release. No reply was read for these keys.",
+    "run_prefix": "v2_lookalike_LY_p2_c",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "90a1699a956fd446540af4e84400f7f9946c72cbd4d568f346dbd9486260237f",
+        "attempts": [
+          {
+            "run_id": "v2_lookalike_LY_p2_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "2c9e6beb6070598dceb7af861196ec13168123eb67d00031c0200e9ae766dc77",
+        "attempts": [
+          {
+            "run_id": "v2_lookalike_LY_p2_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "15122458e20830bfbed620ddc8bf511d76c9f206f018d938151025a41c03d3fc",
+        "attempts": [
+          {
+            "run_id": "v2_lookalike_LY_p2_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T09:14:20+00:00",
+    "reason": "24.10. 11:07-11:12: run v2_lookalike_LZ_p2_c (started before the busy-timeout fix) stopped with 'database is locked' (30 s SQLite busy timeout exceeded under ~35 writer processes on the ledger on D:; timeout raised to 300 s) and was not alive at release. No reply was read for these keys.",
+    "run_prefix": "v2_lookalike_LZ_p2_c",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "0dc3cdd563433980d2a7007c55d46767e659d4228afb9110472032ad6deccb70",
+        "attempts": [
+          {
+            "run_id": "v2_lookalike_LZ_p2_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T09:14:23+00:00",
+    "reason": "24.10. 11:07-11:12: run v2_sizes_gemma-e4b_C1_A3_c (started before the busy-timeout fix) stopped with 'database is locked' (30 s SQLite busy timeout exceeded under ~35 writer processes on the ledger on D:; timeout raised to 300 s) and was not alive at release. No reply was read for these keys.",
+    "run_prefix": "v2_sizes_gemma-e4b_C1_A3_c",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "669f37903891aebabc4cb3c533f15e11ba03f7f8e4d6366a7bdb984330b872ff",
+        "attempts": [
+          {
+            "run_id": "v2_sizes_gemma-e4b_C1_A3_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      },
+      {
+        "key": "46582b3f37010c720f64249a990f846f0a951d8138e8d42801897ba59e2309d5",
+        "attempts": [
+          {
+            "run_id": "v2_sizes_gemma-e4b_C1_A3_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-24T09:14:26+00:00",
+    "reason": "24.10. 11:07-11:12: run v2_sizes_gemma-e4b_C1_c (started before the busy-timeout fix) stopped with 'database is locked' (30 s SQLite busy timeout exceeded under ~35 writer processes on the ledger on D:; timeout raised to 300 s) and was not alive at release. No reply was read for these keys.",
+    "run_prefix": "v2_sizes_gemma-e4b_C1_c",
+    "min_latency": 0.0,
+    "released": [
+      {
+        "key": "001728f3d555917e03530b1d302acc91e658fbfc28db44f628d304416a6d0bce",
+        "attempts": [
+          {
+            "run_id": "v2_sizes_gemma-e4b_C1_c",
+            "state": "pending",
+            "latency": null,
+            "error": null
+          }
+        ]
+      }
+    ]
   }
 ]

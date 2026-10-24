@@ -30,7 +30,8 @@ def main():
     p.add_argument("--apply", action="store_true", help="without it, only list what would be released")
     args = p.parse_args()
     db = sqlite3.connect(args.cache, timeout=60)
-    db.execute("BEGIN IMMEDIATE")
+    # Scan without holding the write lock (running collectors time out after 30 s); lock only for the update.
+    db.execute("CREATE INDEX IF NOT EXISTS attempts_key ON attempts(key)")
     states = ("uncertain", "pending") if args.dead_pending else ("uncertain",)
     rows = db.execute(f"SELECT key FROM requests WHERE state IN ({','.join('?' * len(states))})", states).fetchall()
     released = []
@@ -53,6 +54,7 @@ def main():
         released.append({"key": key, "attempts": [{"run_id": r[0], "state": r[1], "latency": r[2], "error": r[3]}
                                                   for r in attempts]})
     if args.apply:
+        db.execute("BEGIN IMMEDIATE")
         db.executemany("UPDATE requests SET state='reconciled_lost' WHERE key=? AND state IN ('uncertain','pending')",
                        [(r["key"],) for r in released])
         db.execute("COMMIT")
@@ -61,8 +63,6 @@ def main():
         entries.append({"at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "reason": args.reason,
                         "run_prefix": args.run_prefix, "min_latency": args.min_latency, "released": released})
         log.write_text(json.dumps(entries, indent=2) + "\n", encoding="utf-8")
-    else:
-        db.execute("ROLLBACK")
     print(f"{len(released)} of {len(rows)} uncertain requests {'released' if args.apply else 'would be released'}")
     for r in released:
         print(r["key"][:16], [(a["run_id"], a["state"], round(a["latency"] or 0)) for a in r["attempts"]])

@@ -135,6 +135,14 @@ def adapt_collection_manifest(manifest):
     return result
 
 
+def _inside(root, relative):
+    """Root-relative path, normalised lexically (results/raw may be a junction to another drive); None if it escapes."""
+    import os
+    base = Path(os.path.abspath(root))
+    path = Path(os.path.abspath(base / relative))
+    return path if path.is_relative_to(base) else None
+
+
 def _run_metadata(directory):
     for name in ("run_metadata.json", "metadata.json", "config.json"):
         path = directory / name
@@ -233,12 +241,12 @@ def load_collection(root, manifest_path, *, legacy_fake=False):
         if len(candidates) != 1:
             raise ValueError("undeclared run/cell/cohort")
         cell = candidates[0]
-        directory = (root / run["path"]).resolve()
-        if not directory.is_relative_to(root.resolve()):
+        directory = _inside(root, run["path"])
+        if directory is None:
             raise ValueError("run path escapes collection root")
         if run.get("metadata_path"):
-            path = (root / run["metadata_path"]).resolve()
-            if not path.is_relative_to(root.resolve()):
+            path = _inside(root, run["metadata_path"])
+            if path is None:
                 raise ValueError("metadata path escapes collection root")
             metadata = read_json(path)
         elif directory.parent.name == "llm" and (root / "raw" / directory.name / "config.json").exists():
@@ -248,7 +256,7 @@ def load_collection(root, manifest_path, *, legacy_fake=False):
         metadata["analysis_run_reference"] = {"cell": cell["id"], "cohort": cell["cohort"], "path": run["path"]}
         repro_path = (root / run["reproducibility_path"]) if run.get("reproducibility_path") else root / "raw" / directory.name / "reproducibility.json"
         if repro_path.exists():
-            if not repro_path.resolve().is_relative_to(root.resolve()):
+            if _inside(root, repro_path.relative_to(root) if repro_path.is_relative_to(root) else repro_path) is None:
                 raise ValueError("reproducibility path escapes collection root")
             metadata["reproducibility"] = read_json(repro_path)
         summary = directory / "summary.json"
