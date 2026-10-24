@@ -56,10 +56,12 @@ Stand 24.10., 16:20: Datensammlung, eingefrorene Auswertung (`final_v1`) und Rep
 
 | Fertig | In Arbeit | Fehlt |
 |---|---|---|
-| Sammlung Kern, A1, A2, A3/Breite (43 Läufe, `results/analysis_runs.json`) | Report-Feinschliff | Marvins Endprüfung des Reports in eigenen Worten |
-| Qwen-Richter Kern + A2 (600 Urteile), Gemma-Gegenrichter (40), Sonden (`core.probes`) | | exakte Modal-Endsumme (Marvin) |
-| Auswertung `final_v1` (Freeze `4c4b6f1`), Astra Runde 13 (Prüfung), Runde 14 (Report) | | Repo öffentlich machen, URLs in Report, Repo verschlanken |
-| Report: 7 Seiten Haupttext, Abbildungen A/B, Anhang, Literatur geprüft (`report/main.pdf`) | | Abgabe bis Mo 26.10., 12:59 |
+| Sammlung Kern, A1, A2, A3/Breite (43 Läufe, `results/analysis_runs.json`) | | Marvins Endprüfung des Reports in eigenen Worten |
+| Qwen-Richter Kern + A2 (600 Urteile), Gemma-Gegenrichter (40), Sonden (`core.probes`) | | Repo öffentlich machen, URLs in Report, Repo verschlanken |
+| Auswertung `final_v1` (Freeze `4c4b6f1`), Astra Runde 13 (Prüfung), Runde 14 (Report) | | Abgabe bis Mo 26.10., 12:59 |
+| Addenda v2.2 (Replikation E1/C2/C1-SS, Märkte 20-39) und v2.3 (Richter 24k), Abweichung 7 | | |
+| Report: 8 Seiten Haupttext, Abbildungen A/B, Tabelle 1 (Replikation), Anhang E.7, Literatur geprüft (`report/main.pdf`) | | |
+| Modal-Endstand 76,30 $ gemessen (76,03 $ Guthaben), unter 80 $ | | |
 
 ## Zeitplan (deutsche Zeit)
 
@@ -182,3 +184,24 @@ frischem Clone. Keine Zahl im Report ohne reproduzierbaren Lauf.
   0,865, p = 2e-05), aber kein allgemeiner Vorteil gegenüber Korrelation; E1 einzige Zelle mit Differenz-Intervall
   ohne 0 (deskriptiv). Astra Runde 13 rechnete alle 122 AUROCs nach. Runde 14 schrieb den Report
   (`2318815`). Literaturangaben am 24.10. an Primärquellen geprüft (`7584cae`). Modal-Stand laut Marvin ca. 70-71 $.
+- 24.10. abends: Codex-Abo abgelaufen (Astra/Sol nicht verfügbar); eine Luna-Runde wurde auf Marvins Anweisung
+  gestoppt und vollständig verworfen. Marvin (ca. 19:30): Zusatzläufe im 80-$-Budget, Reihenfolge E1+C2, Richter,
+  dann C1-SS nach Restbudget. **Addendum v2.2** (`63cb9f4`, vor den Daten): Replikation von E1/C2 (und C1-SS) auf den
+  frischen Märkten 20-39 gegen die vorhandenen N0 20-39, ausgewertet als eigene Kohorte mit dem eingefrorenen Code
+  (`--run-index results/analysis_runs_v22.json`). Kostenloser Trockenlauf inkl. Auswertung; eine Prüfkohorte auf den
+  Märkten 0-19 deckte einen fehlenden `position`-Eintrag auf (behoben mit `experiments/cohort_index.py`) und zeigte,
+  dass Korrelation/Stärke/Paper exakt und Netz/Leck bis auf Permutationsrauschen (max. 0,0075 AUROC) reproduziert
+  werden. E1+C2 gesammelt 20:01-20:35 (je 4 000 Runden, 1,39 $). Ergebnis: R1 (E1, L2 Netz minus Korrelation > 0)
+  repliziert (+0,265 [0,070, 0,445]); R1b (L1) nicht; R2 (C2 Gewinnaufschlag) repliziert (+0,283 [0,179, 0,371]).
+  **Addendum v2.3** (`9d759d0`, vor den Daten): Richter mit 24 000 statt 12 000 Tokens (L2, N0/C1-SS/C1-SF 0-19).
+  Richter und C1-SS ab 20:38 parallel; gestufter Kostenwächter (C1-SS-Stopp bei 77,3 $, Gesamtstopp bei 78,5 $),
+  weil drei GPUs zugleich ca. 6-7 $/h kosten.
+  C1-SS und Richter fertig bis 21:27 (Richter 54/60 gültig, 8 abgebrochene Streams mit Prüfprotokoll neu gestellt, Abweichung 7).
+  Kein Stopp-Schwellwert erreicht. Ergebnis: R4 (C1-SS, L2 Netz-AUROC > 0,5) repliziert (0,9075 [0,8025, 0,985]),
+  Korrelation wieder besser (0,995; Differenz -0,0875 [-0,19, -0,015]); C2 bei frischen Märkten etwas besser erkannt
+  (Netz 0,753, Korrelation 0,630), Differenz weiter mit 0 im Intervall. Richter 24k: AUROC 0,625 [0,424, 0,808] auf
+  17 Blöcken (Netz 0,907, Korrelation 1,000 auf denselben Blöcken); Top-1 SS 0,92, N0 0,90, SF 0,02: der Richter nennt
+  das starke Paar. Zusammenfassung: `experiments/addendum_summary.py` -> `results/analysis/addendum_summary/`,
+  Tabellen `report/sections/addendum_table.tex` und `addendum_full_table.tex`. Report überarbeitet (einfachere
+  Sprache, neue Abschnitte 3.5 und 4.4, Anhang E.7), 8 Seiten Haupttext. Modal-Endstand 21:43: 76,30 $ gemessen,
+  davon 76,03 $ aus Guthaben.

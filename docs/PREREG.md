@@ -519,3 +519,14 @@ limit truncates the judge's reasoning. The registered judge results stay the reg
    under the same `_s4` run ID; judgements that failed on content (no valid JSON after the registered retry) are
    kept as failures. (e) The Gemma counter-judge ran as registered (core N0 and C1-SS, markets 0-9, L1 and L2,
    parse version 2); `judge_batch.py` gained `--markets` and `--parse-fenced` for it.
+7. **24.10.2026 20:00-21:30, Addenda v2.2-v2.3 operations (no change to any request, prompt, seed or sampling).**
+   (a) `rep.E1` and `rep.C2` ran 20:01-20:35 and `rep.C1-SS` 20:38-21:24, all complete (4,000 rounds each).
+   (b) The judge24k batch (2 pinned containers, 20:38-21:05) lost 8 second-attempt streams server-side after about
+   400-785 s with no reply read; they were released with an audit record (`results/llm/reconciliation_log.json`)
+   and resubmitted unchanged on one pinned container (21:12-21:27), as in deviation 6d. Final: 54 of 60 valid,
+   6 content failures (invalid JSON), kept as failures. (c) Budget guard: because three GPUs ran at once (about
+   6-7 USD/h), the single 78 USD hard stop of Addendum v2.2 was replaced by a tiered guard (stop `rep.C1-SS` at
+   77.3 USD, everything at 78.5 USD), giving the judge priority as Marvin had ordered; neither tier was reached
+   (live reading 76.33 USD at 21:28; final `modal billing summary` at 21:43 after all runs: 76.30 USD metered,
+   76.03 USD from credits, 0.27 USD egress allowance). (d) The run index was regenerated with `experiments/cohort_index.py` before any
+   replication statistic (see the note in Addendum v2.2).
