@@ -35,12 +35,12 @@ def jobs(groups, levels, model, suffix="", indices=None):
                        "run": run, "market": str(path), "manifest": manifest, "entry": entry}
 
 
-def judge(job, endpoint, results, max_calls, timeout, fenced=False):
+def judge(job, endpoint, results, max_calls, timeout, fenced=False, extra=()):
     backend = ["--dry-run"] if endpoint == "dry-run" else ["--endpoint", endpoint]
     cmd = [sys.executable, "experiments/judge.py", job["market"], "--run", job["run"], "--model", job["model"],
            "--level", job["level"], *backend, "--collection-manifest", job["manifest"],
            "--entry", job["entry"], "--results", results, "--transport-retries", "10", "--max-calls", str(max_calls),
-           "--timeout", str(timeout), "--stream"] + (["--parse-fenced"] if fenced else [])
+           "--timeout", str(timeout), "--stream"] + (["--parse-fenced"] if fenced else []) + list(extra)
     done = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True, encoding="utf-8", errors="replace")
     return job, done.returncode, done.stderr[-300:]
 
@@ -60,17 +60,23 @@ def main():
     p.add_argument("--markets", type=int, nargs="+", help="judge only these market indices (e.g. spot checks)")
     p.add_argument("--parse-fenced", action="store_true", help="parse version 2 (Gemma answers in a code fence)")
     p.add_argument("--run-suffix", default="", help="new judge run IDs after an uncertain submission (same requests)")
+    p.add_argument("--max-tokens", type=int, help="judge token limit override (requires --deviation-cohort)")
+    p.add_argument("--deviation-cohort", help="separate named cohort for an exploratory judge variant")
+    p.add_argument("--deviation-reason")
     args = p.parse_args()
     todo = list(jobs(args.group, args.levels, args.model, args.run_suffix, args.markets))
+    extra = ([] if args.max_tokens is None else ["--max-tokens", str(args.max_tokens)]) + (
+        [] if not args.deviation_cohort else ["--deviation-cohort", args.deviation_cohort, "--deviation-reason", args.deviation_reason])
+    run_suffix = f"__deviation_{args.deviation_cohort}" if args.deviation_cohort else ""
     index_path = Path(args.index)
     records, failures = [], []
     with ThreadPoolExecutor(args.parallel) as pool:
-        for job, code, err in pool.map(lambda j: judge(j, args.endpoint, args.results, args.max_calls, args.timeout, args.parse_fenced), todo):
-            out = Path(args.results) / "llm" / job["run"] / "judge.json"
+        for job, code, err in pool.map(lambda j: judge(j, args.endpoint, args.results, args.max_calls, args.timeout, args.parse_fenced, extra), todo):
+            out = Path(args.results) / "llm" / (job["run"] + run_suffix) / "judge.json"
             if not out.exists():
                 failures.append((job["run"], code, err))
                 continue
-            records.append({"cohort": "registered", "cell": job["cell"], "market_index": job["market_index"],
+            records.append({"cohort": args.deviation_cohort or "registered", "cell": job["cell"], "market_index": job["market_index"],
                             "level": job["level"], "model": job["model"],
                             "path": Path(out).resolve().relative_to(index_path.parent.resolve()).as_posix()})
             print(f"{job['run']}: exit {code}", flush=True)

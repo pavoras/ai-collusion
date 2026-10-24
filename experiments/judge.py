@@ -18,11 +18,14 @@ from collusion.llm.collection import authorize_judge, collection_hash, load_coll
 from collusion.llm.reproducibility import write_reproducibility
 from collusion.llm.prompts import VERSION
 from collusion.llm.sampling import sampling_for
-from collusion.llm.storage import digest, seed_for, write_json
+from collusion.llm.storage import TOKEN_LIMITS, digest, seed_for, write_json
 
 
 async def main(args):
     market = json.loads(Path(args.market).read_text(encoding="utf-8"))
+    args.max_tokens = getattr(args, "max_tokens", None)
+    if args.max_tokens is not None and not args.deviation_cohort:
+        raise ValueError("--max-tokens changes the registered judge; use a deviation cohort")
     if market.get("status") != "complete":
         raise ValueError("judge requires a complete market")
     collection = load_collection(args.collection_manifest)
@@ -46,15 +49,19 @@ async def main(args):
                         "manifest_hash": collection_hash(collection), "entry": entry["id"] if entry else None,
                         "deviation_cohort": args.deviation_cohort, "deviation_reason": args.deviation_reason,
                         "public_prompt_hash": digest(messages), "endpoint": service.backend.identity(args.model)}
+            if args.max_tokens is not None:  # recorded only when overriding the registered limit
+                manifest["max_tokens"] = args.max_tokens
             path = service.raw_dir / "config.json"
             if path.exists() and digest(json.loads(path.read_text(encoding="utf-8"))) != digest(manifest):
                 raise ValueError("judge configuration changed; choose a new run_id")
             write_json(path, manifest)
             config = RunConfig(models=(args.model,) * 4, seed=args.seed, collection_manifest=args.collection_manifest,
                                deviation_cohort=args.deviation_cohort, deviation_reason=args.deviation_reason)
-            write_reproducibility(service, config, [entry["id"] if entry else args.entry or "judge.deviation"], phase="judge")
+            write_reproducibility(service, config, [entry["id"] if entry else args.entry or "judge.deviation"], phase="judge",
+                                  token_limits={**TOKEN_LIMITS, "judge": args.max_tokens} if args.max_tokens else None)
             result = await judge_market(service, market, args.model,
-                                        seed_for(args.seed, "judge", market["market_index"], args.level), args.level)
+                                        seed_for(args.seed, "judge", market["market_index"], args.level), args.level,
+                                        max_tokens=args.max_tokens)
             probabilities, status = result["probabilities"], result["status"]
             write_json(out / "judge.json", result)
             plot_judgement(out, probabilities, args.level)
@@ -72,6 +79,7 @@ if __name__ == "__main__":
     p.add_argument("market")
     p.add_argument("--level", choices=["L1", "L2"], default="L1")
     p.add_argument("--model", default="qwen-9b")
+    p.add_argument("--max-tokens", type=int, help="override the registered judge limit (deviation cohorts only)")
     args = p.parse_args()
     try:
         raise SystemExit(asyncio.run(main(args)))

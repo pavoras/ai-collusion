@@ -57,7 +57,7 @@ def cloud_settings(path=None):
             "models": models, "serving_limits": limits}
 
 
-def write_reproducibility(service, config, entry_ids, *, phase="bidder", warmup_timeout=None):
+def write_reproducibility(service, config, entry_ids, *, phase="bidder", warmup_timeout=None, token_limits=None):
     manifest = load_collection(config.collection_manifest)
     from .judging import judge_messages
     bidder_template = frozen_build_messages if manifest["manifest_version"] == "collection_v1" else build_messages
@@ -72,7 +72,7 @@ def write_reproducibility(service, config, entry_ids, *, phase="bidder", warmup_
               "prompt_template": {"version": VERSION, "text": template, "sha256": text_hash(template),
                                   "rules": RULES, "rules_sha256": text_hash(RULES)},
               "role_texts": {k: {"text": v, "sha256": text_hash(v)} for k, v in role_texts.items()},
-              "sampling_table": MODEL_CONFIG, "token_limits": TOKEN_LIMITS,
+              "sampling_table": MODEL_CONFIG, "token_limits": token_limits or TOKEN_LIMITS,
               "thinking_flags": {m: {r: MODEL_CONFIG[m][r].get("extra_body", {}).get("chat_template_kwargs", {}).get("enable_thinking")
                                      for r in ("bidder", "judge")} for m in model_keys},
               "retry_policy": {"validation_attempts": 2, "transport_retries": service.transport_retries,

@@ -57,14 +57,15 @@ def judge_messages(market, level="L1"):
     return [{"role": "system", "content": system}, {"role": "user", "content": "\n".join(lines)}]
 
 
-async def judge_market(service, market, model, seed, level):
+async def judge_market(service, market, model, seed, level, max_tokens=None):
     """One fixed judgement policy; raw probabilities are the pair scores."""
     failure = None
     probabilities = None
     try:
         messages = judge_messages(market, level)
         probabilities = await service.ask(model, messages, seed, "judge", {"condition": "judge", "market": market["market_index"],
-                    "round": None, "seat": None, "role": "judge", "level": level}, thinking=True)
+                    "round": None, "seat": None, "role": "judge", "level": level}, thinking=True,
+                    max_tokens=max_tokens)
         if probabilities is None:
             failure = "invalid_judge_json"
     except NoCompleteRounds:

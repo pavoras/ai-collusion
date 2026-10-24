@@ -1,11 +1,19 @@
 {
-  "note": "Addendum v2.2 replication cohort (docs/PREREG.md). Used with analyze_llm.py --input results --run-index results/analysis_runs_v22.json; the final_v1 index results/analysis_runs.json is unchanged.",
+  "note": "Addendum v2.2 replication cohort (docs/PREREG.md). analyze_llm.py --unblind --input results --run-index results/analysis_runs_v22.json; rep.N0 reuses the registered N0 markets 20-39. The final_v1 index results/analysis_runs.json is unchanged.",
   "deviation_cells": [
     {
       "id": "rep.N0",
-      "cohort": "replication",
+      "block": "core",
+      "phase": "auction",
       "condition": "N0",
-      "model": "qwen-9b",
+      "position": "strong_strong",
+      "composition": "qwen-9b/qwen-9b/qwen-9b/qwen-9b",
+      "models_by_role": {
+        "strong_0": "qwen-9b",
+        "strong_1": "qwen-9b",
+        "fringe_0": "qwen-9b",
+        "fringe_1": "qwen-9b"
+      },
       "market_indices": [
         20,
         21,
@@ -28,16 +36,32 @@
         38,
         39
       ],
+      "round_count_parameter": "rounds",
+      "execution_order": 1,
+      "cancellation_priority": 6,
+      "matched_control": null,
+      "allowed_round_extensions": [],
       "rounds": 200,
-      "control": null,
+      "cohort": "replication",
       "analysis_condition": "N0",
-      "deviation_reason": "Addendum v2.2: matched control = the registered N0 markets 20-39 (run core_N0_v1), already collected"
+      "model": "qwen-9b",
+      "control": null,
+      "deviation_reason": "Addendum v2.2 out-of-sample replication on markets 20-39",
+      "registered_source": "core.N0"
     },
     {
       "id": "rep.E1",
-      "cohort": "replication",
+      "block": "core",
+      "phase": "auction",
       "condition": "E1",
-      "model": "qwen-9b",
+      "position": "strong_strong",
+      "composition": "qwen-9b/qwen-9b/qwen-9b/qwen-9b",
+      "models_by_role": {
+        "strong_0": "qwen-9b",
+        "strong_1": "qwen-9b",
+        "fringe_0": "qwen-9b",
+        "fringe_1": "qwen-9b"
+      },
       "market_indices": [
         20,
         21,
@@ -60,16 +84,32 @@
         38,
         39
       ],
+      "round_count_parameter": "rounds",
+      "execution_order": 4,
+      "cancellation_priority": 6,
+      "matched_control": "rep.N0",
+      "allowed_round_extensions": [],
       "rounds": 200,
-      "control": "rep.N0",
+      "cohort": "replication",
       "analysis_condition": "E1",
-      "deviation_reason": "Addendum v2.2 out-of-sample replication on markets 20-39"
+      "model": "qwen-9b",
+      "control": "rep.N0",
+      "deviation_reason": "Addendum v2.2 out-of-sample replication on markets 20-39",
+      "registered_source": "core.E1"
     },
     {
       "id": "rep.C2",
-      "cohort": "replication",
+      "block": "core",
+      "phase": "auction",
       "condition": "C2",
-      "model": "qwen-9b",
+      "position": "strong_strong",
+      "composition": "qwen-9b/qwen-9b/qwen-9b/qwen-9b",
+      "models_by_role": {
+        "strong_0": "qwen-9b",
+        "strong_1": "qwen-9b",
+        "fringe_0": "qwen-9b",
+        "fringe_1": "qwen-9b"
+      },
       "market_indices": [
         20,
         21,
@@ -92,10 +132,18 @@
         38,
         39
       ],
+      "round_count_parameter": "rounds",
+      "execution_order": 5,
+      "cancellation_priority": 6,
+      "matched_control": "rep.N0",
+      "allowed_round_extensions": [],
       "rounds": 200,
-      "control": "rep.N0",
+      "cohort": "replication",
       "analysis_condition": "C2",
-      "deviation_reason": "Addendum v2.2 out-of-sample replication on markets 20-39"
+      "model": "qwen-9b",
+      "control": "rep.N0",
+      "deviation_reason": "Addendum v2.2 out-of-sample replication on markets 20-39",
+      "registered_source": "core.C2"
     }
   ],
   "runs": [

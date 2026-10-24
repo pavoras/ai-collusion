@@ -381,7 +381,14 @@ not a blind test of the original design. Marvin decided the scope (E1 and C2 fir
 - **Cohort and cells.** Separate named cohort `replication`, declared through the frozen loader's
   `deviation_cells` mechanism in a separate run index `results/analysis_runs_v22.json` (the `final_v1` index is
   left unchanged). The statistics of freeze `4c4b6f1` are not changed; the only code change is a CLI option
-  `--run-index` that lets `analyze_llm.py` read that separate index (paths stay relative to `--input results`). Cells `rep.E1` and `rep.C2` (and, conditionally, `rep.C1-SS`) use the same condition, model (Qwen3.5-9B),
+  `--run-index` that lets `analyze_llm.py` read that separate index (paths stay relative to `--input results`).
+  The index is written by `experiments/cohort_index.py`, which copies each registered manifest entry in full
+  (position, models, condition) and replaces only cohort, indices, control and reason. Note added during
+  collection, before any replication statistic: a first hand-written index lacked the `position` field, which the
+  loader needs to find the designated pair of non-strong-pair cells (it would not have changed E1 or C2); a
+  check cohort on the registered markets 0-19 reproduced `final_v1` exactly for correlation, strength and paper and
+  within permutation Monte Carlo noise for net and leak (largest AUROC difference 0.0075; the permutation seeds
+  depend on the cohort name). Cells `rep.E1` and `rep.C2` (and, conditionally, `rep.C1-SS`) use the same condition, model (Qwen3.5-9B),
   prompts, sampling, parse version 1, run seed 20261023, 200 rounds and assignment rule as `core.E1`, `core.C2` and
   `core.C1-SS`, on **market indices 20-39**, which were never collected for these conditions. Costs are drawn per
   market index, so each new market shares its cost sequence with the matched control market (as in the design).
@@ -410,6 +417,28 @@ not a blind test of the original design. Marvin decided the scope (E1 and C2 fir
 - **Order.** Dry run (fake backend, no cost) of the full pipeline including this analysis path, then E1 and C2
   together, then (Addendum v2.3, written before its data) a judge token-budget sensitivity check, then C1-SS if
   budget remains.
+
+## Addendum v2.3 (24.10.2026, evening; written before any judge data under it were collected)
+
+Purpose: an exploratory sensitivity check of the LLM judge baseline. In `final_v1`, 322 of 600 Qwen judgements
+were invalid; most failed calls ended with `finish_reason` "length" at the registered 12,000-token limit, and the
+valid calls themselves used a median of about 10,000 completion tokens (90th percentile about 11,600), so the
+limit truncates the judge's reasoning. The registered judge results stay the registered baseline.
+
+- **Change.** Only the judge's `max_tokens`: 24,000 instead of 12,000 (judge server context 32,768 tokens; the
+  longest judge prompt has 6,331 tokens). Prompt, model, seed derivation, sampling, two validation attempts,
+  parse version 1 and access level are unchanged. The override is recorded in each run's `config.json` and
+  reproducibility record (`token_limits`).
+- **Scope.** L2 only; registered core markets 0-19 of `core.N0`, `core.C1-SS` and `core.C1-SF` (60 judgements).
+  Separate cohort `judge24k` (run index `results/analysis_runs_v23.json`, judge index
+  `results/llm/judge_index_24k.json`), analysed with the frozen code.
+- **Reported (descriptive, exploratory):** valid-judgement rate versus the 12,000-token run on the same markets;
+  judge L2 AUROC for C1-SS versus N0 and judge top-1 localisation in C1-SF, each next to net influence and
+  correlation on the same matched blocks (frozen `judge_comparisons`). No decision rule; no claim about the
+  judge's internal reasoning.
+- **Budget.** At most 60 x 2 attempts x 24,000 tokens = 2.9 M generated tokens, about 3 USD at the measured
+  judge rate (about 1 USD per million generated tokens on one L40S); expected less. The hard stop of Addendum v2.2
+  (total Modal billing 78 USD) applies.
 
 ## Deviations
 
