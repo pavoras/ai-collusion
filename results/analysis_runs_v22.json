@@ -144,6 +144,54 @@
       "control": "rep.N0",
       "deviation_reason": "Addendum v2.2 out-of-sample replication on markets 20-39",
       "registered_source": "core.C2"
+    },
+    {
+      "id": "rep.C1-SS",
+      "block": "core",
+      "phase": "auction",
+      "condition": "C1",
+      "position": "strong_strong",
+      "composition": "qwen-9b/qwen-9b/qwen-9b/qwen-9b",
+      "models_by_role": {
+        "strong_0": "qwen-9b",
+        "strong_1": "qwen-9b",
+        "fringe_0": "qwen-9b",
+        "fringe_1": "qwen-9b"
+      },
+      "market_indices": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "round_count_parameter": "rounds",
+      "execution_order": 3,
+      "cancellation_priority": 6,
+      "matched_control": "rep.N0",
+      "allowed_round_extensions": [],
+      "rounds": 200,
+      "cohort": "replication",
+      "analysis_condition": "C1-SS",
+      "model": "qwen-9b",
+      "control": "rep.N0",
+      "deviation_reason": "Addendum v2.2 out-of-sample replication on markets 20-39",
+      "registered_source": "core.C1-SS"
     }
   ],
   "runs": [
@@ -161,6 +209,11 @@
       "cell": "rep.C2",
       "cohort": "replication",
       "path": "llm/rep_C2_v22__deviation_replication"
+    },
+    {
+      "cell": "rep.C1-SS",
+      "cohort": "replication",
+      "path": "llm/rep_C1-SS_v22__deviation_replication"
     }
   ]
 }

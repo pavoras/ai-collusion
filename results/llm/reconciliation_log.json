@@ -12392,5 +12392,101 @@
         ]
       }
     ]
+  },
+  {
+    "at": "2026-10-24T19:12:26+00:00",
+    "reason": "Addendum v2.3 judge24k: second-attempt streams broke server-side after about 400-785 s (no reply read); released and resubmitted unchanged as in deviation 6d",
+    "run_prefix": "judge_qwen-9b_core_",
+    "min_latency": 300.0,
+    "released": [
+      {
+        "key": "d46f6212f2c67d92c36a1b2660e2e724a9eb574f564952a43068725d5479bccf",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SS_00008_L2__deviation_judge24k",
+            "state": "uncertain",
+            "latency": 784.8944561999524,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "c43cbeba0f9968ac42a3b50966a84d193951a6c234a81f816db299291dec1580",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_N0_00005_L2__deviation_judge24k",
+            "state": "uncertain",
+            "latency": 447.8927762999665,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "297ea3a98a420db0165aaf7dcedde47914b03c9c3bc8a7f75eb1769056f0e65a",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SS_00018_L2__deviation_judge24k",
+            "state": "uncertain",
+            "latency": 439.89071669999976,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "efd4df352229e09c38fdcf7062022983325cfbaba60969d1a1b3b97e3d005feb",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00001_L2__deviation_judge24k",
+            "state": "uncertain",
+            "latency": 399.6327579000499,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "cf3ccee168b3884eaf8f3630dfffaf07738e63029d0d1d6b3e2b3af67ac4f6a8",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SS_00011_L2__deviation_judge24k",
+            "state": "uncertain",
+            "latency": 399.02882020000834,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "b2e229b93b534ba0475f641da7e1019749f0dbac209858b99f239efab6036785",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00015_L2__deviation_judge24k",
+            "state": "uncertain",
+            "latency": 397.8311131999362,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "9476332583b997ce448594b50e8f5513ce04c2ffafee39e39c550bf408b57139",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00017_L2__deviation_judge24k",
+            "state": "uncertain",
+            "latency": 397.41959579999093,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      },
+      {
+        "key": "6ad4ec16c7c6496c38c55e6e91d10ecd1958bdef454f45e7468eaff6328c2d42",
+        "attempts": [
+          {
+            "run_id": "judge_qwen-9b_core_C1-SF_00005_L2__deviation_judge24k",
+            "state": "uncertain",
+            "latency": 429.8173133999808,
+            "error": "AmbiguousTransportError"
+          }
+        ]
+      }
+    ]
   }
 ]
