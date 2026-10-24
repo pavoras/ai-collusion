@@ -46,9 +46,9 @@ def warm(models, timeout=25 * 60):
         raise SystemExit(f"endpoints not ready: {sorted(waiting)}")
 
 
-def launch(entry, logs):
+def launch(entry, logs, suffix=""):
     twin = entry["id"].startswith("lookalike.")
-    run = "v2_" + entry["id"].replace(".", "_") + ("_p2" if twin else "")
+    run = "v2_" + entry["id"].replace(".", "_") + ("_p2" if twin else "") + suffix
     markets = 20 if twin else 10
     # Ceilings, not targets: 4 bids per round plus validation retries and cold-start transport retries.
     caps = markets * 200 * (5.5 if entry["condition"] in ("N0", "D", "H-XYZZ") or twin else 6.7)
@@ -80,6 +80,8 @@ def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--logs", required=True)
     p.add_argument("--only", nargs="+", choices=sorted(WAVES), default=sorted(WAVES))
+    p.add_argument("--run-suffix", default="", help="new run IDs when a stopped run cannot resume (cache replays)")
+    p.add_argument("--no-stagger", action="store_true", help="launch all waves at once (resuming from cache)")
     args = p.parse_args()
     logs = Path(args.logs)
     logs.mkdir(parents=True, exist_ok=True)
@@ -90,8 +92,8 @@ def main():
     for k in range(depth):
         for waves in blocks.values():
             if k < len(waves):
-                running += [launch(e, logs) for e in waves[k]]
-        if k + 1 < depth:
+                running += [launch(e, logs, args.run_suffix) for e in waves[k]]
+        if k + 1 < depth and not args.no_stagger:
             time.sleep(STAGGER)
     for run, process in running:
         print(f"{time.strftime('%H:%M')} {run}: exit {process.wait()}", flush=True)

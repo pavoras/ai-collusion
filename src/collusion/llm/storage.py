@@ -12,6 +12,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import shutil
 import sqlite3
 import time
 import uuid
@@ -72,6 +73,9 @@ def write_json(path, value):
             if getattr(error, "winerror", None) not in (5, 32) or retry == 11:
                 raise
             time.sleep(min(2., .01 * 2**retry))
+
+
+MIN_FREE_BYTES = 3 * 2**30
 
 
 class CallService:
@@ -159,6 +163,8 @@ class CallService:
                 raise BackendError("request was previously rejected; change the request/configuration before retrying")
             if self.guard is not None:
                 self.guard()
+            if shutil.disk_usage(self.root).free < MIN_FREE_BYTES:
+                raise BudgetStop("free disk space below 3 GB; stop before the audit log cannot be written")
             if self.calls >= self.max_calls:
                 raise BudgetStop("persistent max_calls cap reached")
             self.db.execute("INSERT INTO requests VALUES (?,?,?,NULL) ON CONFLICT(key) DO UPDATE SET state='pending'",

@@ -169,3 +169,6 @@ frischem Clone. Keine Zahl im Report ohne reproduzierbaren Lauf.
   freigegeben und neu eingereicht (Abweichung 3b). Richterdurchsatz gemessen: ca. 670 Token/s bei 29 parallel, ca.
   0,009 $ pro Urteil. Kleine Modelle (qwen-4b, gemma-e4b, ministral-3b) deployt. Marvin: insgesamt 80 $ für alles,
   über Nacht höchstens 60 $; 30-Minuten-Statusmeldungen.
+- 23.10. 23:13-23:51: **C: voll**, alle Läufe abgebrochen (PREREG-Abweichung 4); Claude-Sitzung beendet, daher keine
+  Nachtmeldungen. 24.10. 08:00: Marvin: 27,11 $ verbraucht; Rohdaten nach D: verschoben (Junction), Speicherwächter
+  (BudgetStop unter 3 GB frei), verwaiste Ledger-Einträge freigegeben, alles unter Suffix `_c` fortgesetzt.

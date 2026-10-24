@@ -405,3 +405,9 @@ manifest hash and is made before any addition is collected and before any LLM ou
    mine read checkpoint files while core C1-SS/SF/FF were writing them; Windows refused the atomic replace and the
    three runs stopped (22:19-22:50). They were resumed unchanged under new run IDs `core_C1-*_v1b` (completed
    requests replay from the cache); the local replace retry was lengthened.
+4. **23.10.2026 23:13-23:51, disk full (no change to any request).** Drive C: ran full; ledger and audit writes
+   failed and every collection and judge process stopped mid-run. Requests orphaned as pending/uncertain were
+   released with an audit record (`results/llm/reconciliation_log.json`) once no process was alive, and every
+   stopped run was resumed unchanged under a new run ID (suffix `_c`; completed requests replay from the cache).
+   Raw data now live on drive D: (`results/raw` is a junction). Each process now stops cleanly (BudgetStop) when
+   less than 3 GB are free. The analysis maps each cell to its last run ID (`results/llm/run_index.json`).
