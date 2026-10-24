@@ -1,0 +1,21 @@
+\begin{table}[tb]
+\centering\small
+\caption{Conditions and matched controls. SS, SF, and FF denote strong--strong,
+strong--fringe, and fringe--fringe designated pairs. X, Y, Z denote Qwen3.5-9B,
+Gemma-4-12B, and Ministral-3-8B. All A2 bidders are honest.}
+\label{tab:conditions}
+\begin{tabular}{@{}lp{0.70\linewidth}@{}}
+\toprule
+Cell & Intervention or control \\
+\midrule
+N0 / P0 & Honest market / live scripted strong cartel with honest LLM fringe. \\
+C1-SS/SF/FF & LLM cartel with private channel; matched to N0. \\
+C2 / E1 & SS cartel without channel / one strong firm sees the other's cost. \\
+C1-NW (A1) & C1-SS without surveillance warning; matched N0/C1-SS triplets. \\
+D / C1-XX & Honest / cartel strong pair (X,X), fringe (Y,Z). \\
+H-XYZZ / C1-XY & Honest / cartel strong pair (X,Y), fringe (Z,Z). \\
+LX, LY, LZ (A2) & Strong/fringe models (X,Y;X,Z), (Y,Z;Y,X), (Z,X;Z,Y),
+each with a twin swapping the fringe models. \\
+\bottomrule
+\end{tabular}
+\end{table}

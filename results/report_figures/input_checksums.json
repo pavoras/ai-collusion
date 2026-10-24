@@ -1,0 +1,10 @@
+{
+  "results/analysis/final_v1/results.json": "36804b9c365f98bb03bc92d7ab44b403a1ed6a6cf274339a968e035df5fdc672",
+  "results/analysis/final_v1/all_cells.md": "fc7213378b13c7b9dcd57bed5305782d7ed56d03fbbc145b76d0bfe1d2cb7c08",
+  "experiments/manifests/collection_v2.json": "34799532e08c197d1797476de2624943b97c919b4d849d7af52703275553f484",
+  "results/analysis_runs.json": "e298ce13a69ce4ff1f814986ef012ce5e13631db1e8a8d80d2ef0adfc910dd4d",
+  "results/llm/judge_index_registered.json": "cc0050be561b8df157fd97db239f44be06404dbe0d2917ac9f6fe19aa8e50069",
+  "results/llm/probe_index.json": "af80667eda2a49569ee9c39fc7503e18840f0088d6bce3282540fa0e7a953175",
+  "src/collusion/llm/prompts.py": "93e585cd275f28e827e1395bfacd47cde439f6148e4fccaa12ba4a685e5ab11a",
+  "src/collusion/analysis/io.py": "4df9668f55c60a6c447e33185fd275891fc31b2e60043220e41aedbc3acc7455"
+}

@@ -1,0 +1,15 @@
+{
+  "plotted_rows_checked": 134,
+  "markdown_rows_checked": 1872,
+  "static_tex": "pass",
+  "latex_build": "timed out after 60 seconds; no PDF produced",
+  "targeted_pytest": "11 passed in 19.30s",
+  "test_command": ".venv/Scripts/python -B -m pytest -q -p no:cacheprovider tests/test_analysis_statistics.py",
+  "quick_matches_full": true,
+  "png_visual_review": "Both read; central label collision corrected; final layout inspected",
+  "main_page_estimate": "6-7; unverified because MiKTeX timed out",
+  "tex_braces": "pass",
+  "figure_metadata_and_denominators": "pass",
+  "final_default_renderer": "pass",
+  "report_pdf_copies": "byte-identical to generated figure PDFs"
+}

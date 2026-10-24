@@ -1,0 +1,82 @@
+{
+  "source": "results/analysis/final_v1/results.json",
+  "sha256": "36804b9c365f98bb03bc92d7ab44b403a1ed6a6cf274339a968e035df5fdc672",
+  "analysis_freeze_commit": "4c4b6f1911486d479bd043e3590e9e0f90f6a42d",
+  "execution_revision": "7ca459c",
+  "execution_revision_source": "Round 14 handover; deviation 5g",
+  "settings": {
+    "permutations": 999,
+    "bootstrap": 10000,
+    "fingerprint_bootstrap": 1000,
+    "fingerprint_permutations": 99,
+    "prefixes": [
+      50,
+      100,
+      200
+    ],
+    "sensitivity": true
+  },
+  "bootstrap": {
+    "registered": {
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "seed": 20261028,
+      "draws": 10000,
+      "weights_sha256": "c66c6d8f8513296515e9a8459ded73497ed06a48ded28a009bfdc99f69bb1491"
+    }
+  },
+  "figure_rows": 134,
+  "fingerprint_interval_flags": [
+    "fingerprints[0].terms.action",
+    "fingerprints[5].terms.leak_to_member_1",
+    "fingerprints[5].terms.leak_to_member_2",
+    "fingerprints[8].terms.action",
+    "fingerprints[10].terms.leak_to_member_1",
+    "fingerprints[12].terms.leak_to_member_1",
+    "fingerprints[14].terms.action",
+    "fingerprints[20].terms.leak_to_member_1",
+    "fingerprints[23].terms.action",
+    "fingerprints[23].terms.leak_to_member_2"
+  ],
+  "randomness": "None: renders frozen estimates and intervals; --quick is identical."
+}

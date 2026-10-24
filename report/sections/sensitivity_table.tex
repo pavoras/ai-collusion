@@ -1,0 +1,247 @@
+\begingroup\footnotesize\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}p{2.2in}lrrrr@{}}
+\caption{Prefix and missing-bid sensitivity for every available treatment comparison. Each entry is AUROC; exact intervals, exclusions and other metrics for every prefix/mask are in all\_cells.md.}\\
+\toprule Cell / level / detector & Mask & n (full) & Prefix 50 & 100 & 200\\\midrule\endfirsthead
+\toprule Cell / level / detector & Mask & n (full) & Prefix 50 & 100 & 200\\\midrule\endhead
+\bottomrule\endfoot
+% source: results/analysis/final_v1/results.json all_cells[80].auroc, all_cells[102].auroc, all_cells[124].auroc
+core.\allowbreak P0/\allowbreak L1/\allowbreak net & complete & 20 & 1.000 & 1.000 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[91].auroc, all_cells[113].auroc, all_cells[135].auroc
+core.\allowbreak P0/\allowbreak L1/\allowbreak net & no\_\allowbreak bid & 20 & 1.000 & 1.000 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[78].auroc, all_cells[100].auroc, all_cells[122].auroc
+core.\allowbreak P0/\allowbreak L1/\allowbreak correlation & complete & 20 & 1.000 & 1.000 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[89].auroc, all_cells[111].auroc, all_cells[133].auroc
+core.\allowbreak P0/\allowbreak L1/\allowbreak correlation & no\_\allowbreak bid & 20 & 1.000 & 1.000 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[86].auroc, all_cells[108].auroc, all_cells[130].auroc
+core.\allowbreak P0/\allowbreak L2/\allowbreak net & complete & 20 & 0.897 & 1.000 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[97].auroc, all_cells[119].auroc, all_cells[141].auroc
+core.\allowbreak P0/\allowbreak L2/\allowbreak net & no\_\allowbreak bid & 20 & 0.890 & 1.000 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[83].auroc, all_cells[105].auroc, all_cells[127].auroc
+core.\allowbreak P0/\allowbreak L2/\allowbreak correlation & complete & 20 & 0.978 & 1.000 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[94].auroc, all_cells[116].auroc, all_cells[138].auroc
+core.\allowbreak P0/\allowbreak L2/\allowbreak correlation & no\_\allowbreak bid & 20 & 0.978 & 1.000 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[85].auroc, all_cells[107].auroc, all_cells[129].auroc
+core.\allowbreak P0/\allowbreak L2/\allowbreak leak & complete & 20 & 0.953 & 1.000 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[96].auroc, all_cells[118].auroc, all_cells[140].auroc
+core.\allowbreak P0/\allowbreak L2/\allowbreak leak & no\_\allowbreak bid & 20 & 0.953 & 1.000 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[147].auroc, all_cells[173].auroc, all_cells[199].auroc
+core.\allowbreak C1-SS/\allowbreak L1/\allowbreak net & complete & 20 & 0.882 & 0.915 & 0.912\\
+% source: results/analysis/final_v1/results.json all_cells[160].auroc, all_cells[186].auroc, all_cells[212].auroc
+core.\allowbreak C1-SS/\allowbreak L1/\allowbreak net & no\_\allowbreak bid & 20 & 0.882 & 0.915 & 0.917\\
+% source: results/analysis/final_v1/results.json all_cells[144].auroc, all_cells[170].auroc, all_cells[196].auroc
+core.\allowbreak C1-SS/\allowbreak L1/\allowbreak correlation & complete & 20 & 0.968 & 0.978 & 0.988\\
+% source: results/analysis/final_v1/results.json all_cells[157].auroc, all_cells[183].auroc, all_cells[209].auroc
+core.\allowbreak C1-SS/\allowbreak L1/\allowbreak correlation & no\_\allowbreak bid & 20 & 0.968 & 0.975 & 0.988\\
+% source: results/analysis/final_v1/results.json all_cells[154].auroc, all_cells[180].auroc, all_cells[206].auroc
+core.\allowbreak C1-SS/\allowbreak L2/\allowbreak net & complete & 20 & 0.650 & 0.795 & 0.865\\
+% source: results/analysis/final_v1/results.json all_cells[167].auroc, all_cells[193].auroc, all_cells[219].auroc
+core.\allowbreak C1-SS/\allowbreak L2/\allowbreak net & no\_\allowbreak bid & 20 & 0.660 & 0.785 & 0.858\\
+% source: results/analysis/final_v1/results.json all_cells[150].auroc, all_cells[176].auroc, all_cells[202].auroc
+core.\allowbreak C1-SS/\allowbreak L2/\allowbreak correlation & complete & 20 & 0.975 & 0.998 & 0.998\\
+% source: results/analysis/final_v1/results.json all_cells[163].auroc, all_cells[189].auroc, all_cells[215].auroc
+core.\allowbreak C1-SS/\allowbreak L2/\allowbreak correlation & no\_\allowbreak bid & 20 & 0.915 & 0.990 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[153].auroc, all_cells[179].auroc, all_cells[205].auroc
+core.\allowbreak C1-SS/\allowbreak L2/\allowbreak leak & complete & 20 & 0.522 & 0.562 & 0.640\\
+% source: results/analysis/final_v1/results.json all_cells[166].auroc, all_cells[192].auroc, all_cells[218].auroc
+core.\allowbreak C1-SS/\allowbreak L2/\allowbreak leak & no\_\allowbreak bid & 20 & 0.520 & 0.560 & 0.627\\
+% source: results/analysis/final_v1/results.json all_cells[356].auroc, all_cells[378].auroc, all_cells[400].auroc
+core.\allowbreak C1-SF/\allowbreak L1/\allowbreak net & complete & 20 & 0.762 & 0.840 & 0.993\\
+% source: results/analysis/final_v1/results.json all_cells[367].auroc, all_cells[389].auroc, all_cells[411].auroc
+core.\allowbreak C1-SF/\allowbreak L1/\allowbreak net & no\_\allowbreak bid & 20 & 0.760 & 0.870 & 0.970\\
+% source: results/analysis/final_v1/results.json all_cells[354].auroc, all_cells[376].auroc, all_cells[398].auroc
+core.\allowbreak C1-SF/\allowbreak L1/\allowbreak correlation & complete & 20 & 0.902 & 0.990 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[365].auroc, all_cells[387].auroc, all_cells[409].auroc
+core.\allowbreak C1-SF/\allowbreak L1/\allowbreak correlation & no\_\allowbreak bid & 20 & 0.902 & 0.993 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[362].auroc, all_cells[384].auroc, all_cells[406].auroc
+core.\allowbreak C1-SF/\allowbreak L2/\allowbreak net & complete & 20 & 0.700 & 0.720 & 0.850\\
+% source: results/analysis/final_v1/results.json all_cells[373].auroc, all_cells[395].auroc, all_cells[417].auroc
+core.\allowbreak C1-SF/\allowbreak L2/\allowbreak net & no\_\allowbreak bid & 20 & 0.690 & 0.730 & 0.853\\
+% source: results/analysis/final_v1/results.json all_cells[359].auroc, all_cells[381].auroc, all_cells[403].auroc
+core.\allowbreak C1-SF/\allowbreak L2/\allowbreak correlation & complete & 20 & 0.833 & 0.920 & 0.980\\
+% source: results/analysis/final_v1/results.json all_cells[370].auroc, all_cells[392].auroc, all_cells[414].auroc
+core.\allowbreak C1-SF/\allowbreak L2/\allowbreak correlation & no\_\allowbreak bid & 20 & 0.748 & 0.887 & 0.998\\
+% source: results/analysis/final_v1/results.json all_cells[361].auroc, all_cells[383].auroc, all_cells[405].auroc
+core.\allowbreak C1-SF/\allowbreak L2/\allowbreak leak & complete & 20 & 0.650 & 0.642 & 0.645\\
+% source: results/analysis/final_v1/results.json all_cells[372].auroc, all_cells[394].auroc, all_cells[416].auroc
+core.\allowbreak C1-SF/\allowbreak L2/\allowbreak leak & no\_\allowbreak bid & 20 & 0.660 & 0.665 & 0.675\\
+% source: results/analysis/final_v1/results.json all_cells[422].auroc, all_cells[444].auroc, all_cells[466].auroc
+core.\allowbreak C1-FF/\allowbreak L1/\allowbreak net & complete & 20 & 0.907 & 1.000 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[433].auroc, all_cells[455].auroc, all_cells[477].auroc
+core.\allowbreak C1-FF/\allowbreak L1/\allowbreak net & no\_\allowbreak bid & 20 & 0.902 & 1.000 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[420].auroc, all_cells[442].auroc, all_cells[464].auroc
+core.\allowbreak C1-FF/\allowbreak L1/\allowbreak correlation & complete & 20 & 0.960 & 0.985 & 0.993\\
+% source: results/analysis/final_v1/results.json all_cells[431].auroc, all_cells[453].auroc, all_cells[475].auroc
+core.\allowbreak C1-FF/\allowbreak L1/\allowbreak correlation & no\_\allowbreak bid & 20 & 0.938 & 0.985 & 0.990\\
+% source: results/analysis/final_v1/results.json all_cells[428].auroc, all_cells[450].auroc, all_cells[472].auroc
+core.\allowbreak C1-FF/\allowbreak L2/\allowbreak net & complete & 20 & 0.750 & 0.882 & 0.998\\
+% source: results/analysis/final_v1/results.json all_cells[439].auroc, all_cells[461].auroc, all_cells[483].auroc
+core.\allowbreak C1-FF/\allowbreak L2/\allowbreak net & no\_\allowbreak bid & 20 & 0.752 & 0.887 & 0.998\\
+% source: results/analysis/final_v1/results.json all_cells[425].auroc, all_cells[447].auroc, all_cells[469].auroc
+core.\allowbreak C1-FF/\allowbreak L2/\allowbreak correlation & complete & 20 & 0.963 & 0.995 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[436].auroc, all_cells[458].auroc, all_cells[480].auroc
+core.\allowbreak C1-FF/\allowbreak L2/\allowbreak correlation & no\_\allowbreak bid & 20 & 0.958 & 0.995 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[427].auroc, all_cells[449].auroc, all_cells[471].auroc
+core.\allowbreak C1-FF/\allowbreak L2/\allowbreak leak & complete & 20 & 0.580 & 0.740 & 0.868\\
+% source: results/analysis/final_v1/results.json all_cells[438].auroc, all_cells[460].auroc, all_cells[482].auroc
+core.\allowbreak C1-FF/\allowbreak L2/\allowbreak leak & no\_\allowbreak bid & 20 & 0.590 & 0.708 & 0.863\\
+% source: results/analysis/final_v1/results.json all_cells[1412].auroc, all_cells[1434].auroc, all_cells[1456].auroc
+core.\allowbreak C1-NW/\allowbreak L1/\allowbreak net & complete & 20 & 0.845 & 0.902 & 0.968\\
+% source: results/analysis/final_v1/results.json all_cells[1423].auroc, all_cells[1445].auroc, all_cells[1467].auroc
+core.\allowbreak C1-NW/\allowbreak L1/\allowbreak net & no\_\allowbreak bid & 20 & 0.873 & 0.905 & 0.975\\
+% source: results/analysis/final_v1/results.json all_cells[1410].auroc, all_cells[1432].auroc, all_cells[1454].auroc
+core.\allowbreak C1-NW/\allowbreak L1/\allowbreak correlation & complete & 20 & 0.932 & 0.955 & 0.993\\
+% source: results/analysis/final_v1/results.json all_cells[1421].auroc, all_cells[1443].auroc, all_cells[1465].auroc
+core.\allowbreak C1-NW/\allowbreak L1/\allowbreak correlation & no\_\allowbreak bid & 20 & 0.970 & 0.980 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[1418].auroc, all_cells[1440].auroc, all_cells[1462].auroc
+core.\allowbreak C1-NW/\allowbreak L2/\allowbreak net & complete & 20 & 0.725 & 0.797 & 0.963\\
+% source: results/analysis/final_v1/results.json all_cells[1429].auroc, all_cells[1451].auroc, all_cells[1473].auroc
+core.\allowbreak C1-NW/\allowbreak L2/\allowbreak net & no\_\allowbreak bid & 20 & 0.730 & 0.810 & 0.963\\
+% source: results/analysis/final_v1/results.json all_cells[1415].auroc, all_cells[1437].auroc, all_cells[1459].auroc
+core.\allowbreak C1-NW/\allowbreak L2/\allowbreak correlation & complete & 20 & 0.927 & 0.955 & 0.985\\
+% source: results/analysis/final_v1/results.json all_cells[1426].auroc, all_cells[1448].auroc, all_cells[1470].auroc
+core.\allowbreak C1-NW/\allowbreak L2/\allowbreak correlation & no\_\allowbreak bid & 20 & 0.843 & 0.905 & 0.930\\
+% source: results/analysis/final_v1/results.json all_cells[1417].auroc, all_cells[1439].auroc, all_cells[1461].auroc
+core.\allowbreak C1-NW/\allowbreak L2/\allowbreak leak & complete & 20 & 0.598 & 0.613 & 0.682\\
+% source: results/analysis/final_v1/results.json all_cells[1428].auroc, all_cells[1450].auroc, all_cells[1472].auroc
+core.\allowbreak C1-NW/\allowbreak L2/\allowbreak leak & no\_\allowbreak bid & 20 & 0.590 & 0.620 & 0.690\\
+% source: results/analysis/final_v1/results.json all_cells[224].auroc, all_cells[246].auroc, all_cells[268].auroc
+core.\allowbreak C2/\allowbreak L1/\allowbreak net & complete & 20 & 0.662 & 0.688 & 0.610\\
+% source: results/analysis/final_v1/results.json all_cells[235].auroc, all_cells[257].auroc, all_cells[279].auroc
+core.\allowbreak C2/\allowbreak L1/\allowbreak net & no\_\allowbreak bid & 20 & 0.657 & 0.680 & 0.605\\
+% source: results/analysis/final_v1/results.json all_cells[222].auroc, all_cells[244].auroc, all_cells[266].auroc
+core.\allowbreak C2/\allowbreak L1/\allowbreak correlation & complete & 20 & 0.333 & 0.407 & 0.463\\
+% source: results/analysis/final_v1/results.json all_cells[233].auroc, all_cells[255].auroc, all_cells[277].auroc
+core.\allowbreak C2/\allowbreak L1/\allowbreak correlation & no\_\allowbreak bid & 20 & 0.370 & 0.432 & 0.485\\
+% source: results/analysis/final_v1/results.json all_cells[230].auroc, all_cells[252].auroc, all_cells[274].auroc
+core.\allowbreak C2/\allowbreak L2/\allowbreak net & complete & 20 & 0.445 & 0.470 & 0.655\\
+% source: results/analysis/final_v1/results.json all_cells[241].auroc, all_cells[263].auroc, all_cells[285].auroc
+core.\allowbreak C2/\allowbreak L2/\allowbreak net & no\_\allowbreak bid & 20 & 0.458 & 0.482 & 0.665\\
+% source: results/analysis/final_v1/results.json all_cells[227].auroc, all_cells[249].auroc, all_cells[271].auroc
+core.\allowbreak C2/\allowbreak L2/\allowbreak correlation & complete & 20 & 0.410 & 0.502 & 0.495\\
+% source: results/analysis/final_v1/results.json all_cells[238].auroc, all_cells[260].auroc, all_cells[282].auroc
+core.\allowbreak C2/\allowbreak L2/\allowbreak correlation & no\_\allowbreak bid & 20 & 0.365 & 0.470 & 0.472\\
+% source: results/analysis/final_v1/results.json all_cells[229].auroc, all_cells[251].auroc, all_cells[273].auroc
+core.\allowbreak C2/\allowbreak L2/\allowbreak leak & complete & 20 & 0.415 & 0.417 & 0.562\\
+% source: results/analysis/final_v1/results.json all_cells[240].auroc, all_cells[262].auroc, all_cells[284].auroc
+core.\allowbreak C2/\allowbreak L2/\allowbreak leak & no\_\allowbreak bid & 20 & 0.420 & 0.430 & 0.575\\
+% source: results/analysis/final_v1/results.json all_cells[290].auroc, all_cells[312].auroc, all_cells[334].auroc
+core.\allowbreak E1/\allowbreak L1/\allowbreak net & complete & 20 & 0.578 & 0.585 & 0.675\\
+% source: results/analysis/final_v1/results.json all_cells[301].auroc, all_cells[323].auroc, all_cells[345].auroc
+core.\allowbreak E1/\allowbreak L1/\allowbreak net & no\_\allowbreak bid & 20 & 0.593 & 0.598 & 0.672\\
+% source: results/analysis/final_v1/results.json all_cells[288].auroc, all_cells[310].auroc, all_cells[332].auroc
+core.\allowbreak E1/\allowbreak L1/\allowbreak correlation & complete & 20 & 0.450 & 0.500 & 0.482\\
+% source: results/analysis/final_v1/results.json all_cells[299].auroc, all_cells[321].auroc, all_cells[343].auroc
+core.\allowbreak E1/\allowbreak L1/\allowbreak correlation & no\_\allowbreak bid & 20 & 0.512 & 0.540 & 0.475\\
+% source: results/analysis/final_v1/results.json all_cells[296].auroc, all_cells[318].auroc, all_cells[340].auroc
+core.\allowbreak E1/\allowbreak L2/\allowbreak net & complete & 20 & 0.458 & 0.665 & 0.700\\
+% source: results/analysis/final_v1/results.json all_cells[307].auroc, all_cells[329].auroc, all_cells[351].auroc
+core.\allowbreak E1/\allowbreak L2/\allowbreak net & no\_\allowbreak bid & 20 & 0.455 & 0.682 & 0.705\\
+% source: results/analysis/final_v1/results.json all_cells[293].auroc, all_cells[315].auroc, all_cells[337].auroc
+core.\allowbreak E1/\allowbreak L2/\allowbreak correlation & complete & 20 & 0.440 & 0.500 & 0.415\\
+% source: results/analysis/final_v1/results.json all_cells[304].auroc, all_cells[326].auroc, all_cells[348].auroc
+core.\allowbreak E1/\allowbreak L2/\allowbreak correlation & no\_\allowbreak bid & 20 & 0.480 & 0.522 & 0.535\\
+% source: results/analysis/final_v1/results.json all_cells[295].auroc, all_cells[317].auroc, all_cells[339].auroc
+core.\allowbreak E1/\allowbreak L2/\allowbreak leak & complete & 20 & 0.522 & 0.695 & 0.703\\
+% source: results/analysis/final_v1/results.json all_cells[306].auroc, all_cells[328].auroc, all_cells[350].auroc
+core.\allowbreak E1/\allowbreak L2/\allowbreak leak & no\_\allowbreak bid & 20 & 0.515 & 0.698 & 0.705\\
+% source: results/analysis/final_v1/results.json all_cells[554].auroc, all_cells[576].auroc, all_cells[598].auroc
+labs.\allowbreak gemma-12b.\allowbreak C1/\allowbreak L1/\allowbreak net & complete & 14 & 0.765 & 1.000 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[565].auroc, all_cells[587].auroc, all_cells[609].auroc
+labs.\allowbreak gemma-12b.\allowbreak C1/\allowbreak L1/\allowbreak net & no\_\allowbreak bid & 14 & 0.832 & 1.000 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[552].auroc, all_cells[574].auroc, all_cells[596].auroc
+labs.\allowbreak gemma-12b.\allowbreak C1/\allowbreak L1/\allowbreak correlation & complete & 14 & 0.995 & 1.000 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[563].auroc, all_cells[585].auroc, all_cells[607].auroc
+labs.\allowbreak gemma-12b.\allowbreak C1/\allowbreak L1/\allowbreak correlation & no\_\allowbreak bid & 14 & 0.944 & 0.974 & 0.954\\
+% source: results/analysis/final_v1/results.json all_cells[560].auroc, all_cells[582].auroc, all_cells[604].auroc
+labs.\allowbreak gemma-12b.\allowbreak C1/\allowbreak L2/\allowbreak net & complete & 14 & 0.699 & 0.883 & 0.995\\
+% source: results/analysis/final_v1/results.json all_cells[571].auroc, all_cells[593].auroc, all_cells[615].auroc
+labs.\allowbreak gemma-12b.\allowbreak C1/\allowbreak L2/\allowbreak net & no\_\allowbreak bid & 14 & 0.714 & 0.883 & 0.995\\
+% source: results/analysis/final_v1/results.json all_cells[557].auroc, all_cells[579].auroc, all_cells[601].auroc
+labs.\allowbreak gemma-12b.\allowbreak C1/\allowbreak L2/\allowbreak correlation & complete & 14 & 0.842 & 1.000 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[568].auroc, all_cells[590].auroc, all_cells[612].auroc
+labs.\allowbreak gemma-12b.\allowbreak C1/\allowbreak L2/\allowbreak correlation & no\_\allowbreak bid & 14 & 0.867 & 0.959 & 0.944\\
+% source: results/analysis/final_v1/results.json all_cells[559].auroc, all_cells[581].auroc, all_cells[603].auroc
+labs.\allowbreak gemma-12b.\allowbreak C1/\allowbreak L2/\allowbreak leak & complete & 14 & 0.653 & 0.791 & 0.969\\
+% source: results/analysis/final_v1/results.json all_cells[570].auroc, all_cells[592].auroc, all_cells[614].auroc
+labs.\allowbreak gemma-12b.\allowbreak C1/\allowbreak L2/\allowbreak leak & no\_\allowbreak bid & 14 & 0.781 & 0.796 & 0.949\\
+% source: results/analysis/final_v1/results.json all_cells[686].auroc, all_cells[708].auroc, all_cells[730].auroc
+labs.\allowbreak ministral-8b.\allowbreak C1/\allowbreak L1/\allowbreak net & complete & 20 & 0.583 & 0.825 & 0.860\\
+% source: results/analysis/final_v1/results.json all_cells[697].auroc, all_cells[719].auroc, all_cells[741].auroc
+labs.\allowbreak ministral-8b.\allowbreak C1/\allowbreak L1/\allowbreak net & no\_\allowbreak bid & 20 & 0.590 & 0.820 & 0.855\\
+% source: results/analysis/final_v1/results.json all_cells[684].auroc, all_cells[706].auroc, all_cells[728].auroc
+labs.\allowbreak ministral-8b.\allowbreak C1/\allowbreak L1/\allowbreak correlation & complete & 20 & 0.853 & 0.875 & 0.897\\
+% source: results/analysis/final_v1/results.json all_cells[695].auroc, all_cells[717].auroc, all_cells[739].auroc
+labs.\allowbreak ministral-8b.\allowbreak C1/\allowbreak L1/\allowbreak correlation & no\_\allowbreak bid & 20 & 0.853 & 0.875 & 0.897\\
+% source: results/analysis/final_v1/results.json all_cells[692].auroc, all_cells[714].auroc, all_cells[736].auroc
+labs.\allowbreak ministral-8b.\allowbreak C1/\allowbreak L2/\allowbreak net & complete & 20 & 0.627 & 0.605 & 0.745\\
+% source: results/analysis/final_v1/results.json all_cells[703].auroc, all_cells[725].auroc, all_cells[747].auroc
+labs.\allowbreak ministral-8b.\allowbreak C1/\allowbreak L2/\allowbreak net & no\_\allowbreak bid & 20 & 0.618 & 0.613 & 0.743\\
+% source: results/analysis/final_v1/results.json all_cells[689].auroc, all_cells[711].auroc, all_cells[733].auroc
+labs.\allowbreak ministral-8b.\allowbreak C1/\allowbreak L2/\allowbreak correlation & complete & 20 & 0.585 & 0.760 & 0.828\\
+% source: results/analysis/final_v1/results.json all_cells[700].auroc, all_cells[722].auroc, all_cells[744].auroc
+labs.\allowbreak ministral-8b.\allowbreak C1/\allowbreak L2/\allowbreak correlation & no\_\allowbreak bid & 20 & 0.585 & 0.760 & 0.828\\
+% source: results/analysis/final_v1/results.json all_cells[691].auroc, all_cells[713].auroc, all_cells[735].auroc
+labs.\allowbreak ministral-8b.\allowbreak C1/\allowbreak L2/\allowbreak leak & complete & 20 & 0.590 & 0.637 & 0.675\\
+% source: results/analysis/final_v1/results.json all_cells[702].auroc, all_cells[724].auroc, all_cells[746].auroc
+labs.\allowbreak ministral-8b.\allowbreak C1/\allowbreak L2/\allowbreak leak & no\_\allowbreak bid & 20 & 0.588 & 0.650 & 0.675\\
+% source: results/analysis/final_v1/results.json all_cells[818].auroc, all_cells[840].auroc, all_cells[862].auroc
+sizes.\allowbreak qwen-4b.\allowbreak C1/\allowbreak L1/\allowbreak net & complete & 20 & 0.858 & 0.955 & 0.993\\
+% source: results/analysis/final_v1/results.json all_cells[829].auroc, all_cells[851].auroc, all_cells[873].auroc
+sizes.\allowbreak qwen-4b.\allowbreak C1/\allowbreak L1/\allowbreak net & no\_\allowbreak bid & 20 & 0.858 & 0.955 & 0.993\\
+% source: results/analysis/final_v1/results.json all_cells[816].auroc, all_cells[838].auroc, all_cells[860].auroc
+sizes.\allowbreak qwen-4b.\allowbreak C1/\allowbreak L1/\allowbreak correlation & complete & 20 & 0.760 & 0.915 & 0.978\\
+% source: results/analysis/final_v1/results.json all_cells[827].auroc, all_cells[849].auroc, all_cells[871].auroc
+sizes.\allowbreak qwen-4b.\allowbreak C1/\allowbreak L1/\allowbreak correlation & no\_\allowbreak bid & 20 & 0.760 & 0.915 & 0.978\\
+% source: results/analysis/final_v1/results.json all_cells[824].auroc, all_cells[846].auroc, all_cells[868].auroc
+sizes.\allowbreak qwen-4b.\allowbreak C1/\allowbreak L2/\allowbreak net & complete & 20 & 0.718 & 0.865 & 0.943\\
+% source: results/analysis/final_v1/results.json all_cells[835].auroc, all_cells[857].auroc, all_cells[879].auroc
+sizes.\allowbreak qwen-4b.\allowbreak C1/\allowbreak L2/\allowbreak net & no\_\allowbreak bid & 20 & 0.723 & 0.860 & 0.945\\
+% source: results/analysis/final_v1/results.json all_cells[821].auroc, all_cells[843].auroc, all_cells[865].auroc
+sizes.\allowbreak qwen-4b.\allowbreak C1/\allowbreak L2/\allowbreak correlation & complete & 20 & 0.723 & 0.838 & 0.955\\
+% source: results/analysis/final_v1/results.json all_cells[832].auroc, all_cells[854].auroc, all_cells[876].auroc
+sizes.\allowbreak qwen-4b.\allowbreak C1/\allowbreak L2/\allowbreak correlation & no\_\allowbreak bid & 20 & 0.723 & 0.838 & 0.955\\
+% source: results/analysis/final_v1/results.json all_cells[823].auroc, all_cells[845].auroc, all_cells[867].auroc
+sizes.\allowbreak qwen-4b.\allowbreak C1/\allowbreak L2/\allowbreak leak & complete & 20 & 0.550 & 0.450 & 0.463\\
+% source: results/analysis/final_v1/results.json all_cells[834].auroc, all_cells[856].auroc, all_cells[878].auroc
+sizes.\allowbreak qwen-4b.\allowbreak C1/\allowbreak L2/\allowbreak leak & no\_\allowbreak bid & 20 & 0.552 & 0.448 & 0.470\\
+% source: results/analysis/final_v1/results.json all_cells[1214].auroc, all_cells[1236].auroc, all_cells[1258].auroc
+mixed.\allowbreak C1-XX/\allowbreak L1/\allowbreak net & complete & 20 & 0.780 & 0.912 & 0.965\\
+% source: results/analysis/final_v1/results.json all_cells[1225].auroc, all_cells[1247].auroc, all_cells[1269].auroc
+mixed.\allowbreak C1-XX/\allowbreak L1/\allowbreak net & no\_\allowbreak bid & 20 & 0.802 & 0.912 & 0.958\\
+% source: results/analysis/final_v1/results.json all_cells[1212].auroc, all_cells[1234].auroc, all_cells[1256].auroc
+mixed.\allowbreak C1-XX/\allowbreak L1/\allowbreak correlation & complete & 20 & 0.943 & 0.985 & 0.990\\
+% source: results/analysis/final_v1/results.json all_cells[1223].auroc, all_cells[1245].auroc, all_cells[1267].auroc
+mixed.\allowbreak C1-XX/\allowbreak L1/\allowbreak correlation & no\_\allowbreak bid & 20 & 0.948 & 0.988 & 0.990\\
+% source: results/analysis/final_v1/results.json all_cells[1220].auroc, all_cells[1242].auroc, all_cells[1264].auroc
+mixed.\allowbreak C1-XX/\allowbreak L2/\allowbreak net & complete & 20 & 0.573 & 0.657 & 0.885\\
+% source: results/analysis/final_v1/results.json all_cells[1231].auroc, all_cells[1253].auroc, all_cells[1275].auroc
+mixed.\allowbreak C1-XX/\allowbreak L2/\allowbreak net & no\_\allowbreak bid & 20 & 0.580 & 0.675 & 0.900\\
+% source: results/analysis/final_v1/results.json all_cells[1217].auroc, all_cells[1239].auroc, all_cells[1261].auroc
+mixed.\allowbreak C1-XX/\allowbreak L2/\allowbreak correlation & complete & 20 & 0.875 & 0.920 & 0.998\\
+% source: results/analysis/final_v1/results.json all_cells[1228].auroc, all_cells[1250].auroc, all_cells[1272].auroc
+mixed.\allowbreak C1-XX/\allowbreak L2/\allowbreak correlation & no\_\allowbreak bid & 20 & 0.885 & 0.917 & 0.998\\
+% source: results/analysis/final_v1/results.json all_cells[1219].auroc, all_cells[1241].auroc, all_cells[1263].auroc
+mixed.\allowbreak C1-XX/\allowbreak L2/\allowbreak leak & complete & 20 & 0.485 & 0.552 & 0.695\\
+% source: results/analysis/final_v1/results.json all_cells[1230].auroc, all_cells[1252].auroc, all_cells[1274].auroc
+mixed.\allowbreak C1-XX/\allowbreak L2/\allowbreak leak & no\_\allowbreak bid & 20 & 0.490 & 0.545 & 0.705\\
+% source: results/analysis/final_v1/results.json all_cells[1346].auroc, all_cells[1368].auroc, all_cells[1390].auroc
+mixed.\allowbreak C1-XY/\allowbreak L1/\allowbreak net & complete & 20 & 0.950 & 0.963 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[1357].auroc, all_cells[1379].auroc, all_cells[1401].auroc
+mixed.\allowbreak C1-XY/\allowbreak L1/\allowbreak net & no\_\allowbreak bid & 20 & 0.960 & 0.970 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[1344].auroc, all_cells[1366].auroc, all_cells[1388].auroc
+mixed.\allowbreak C1-XY/\allowbreak L1/\allowbreak correlation & complete & 20 & 0.980 & 1.000 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[1355].auroc, all_cells[1377].auroc, all_cells[1399].auroc
+mixed.\allowbreak C1-XY/\allowbreak L1/\allowbreak correlation & no\_\allowbreak bid & 20 & 0.980 & 1.000 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[1352].auroc, all_cells[1374].auroc, all_cells[1396].auroc
+mixed.\allowbreak C1-XY/\allowbreak L2/\allowbreak net & complete & 20 & 0.818 & 0.948 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[1363].auroc, all_cells[1385].auroc, all_cells[1407].auroc
+mixed.\allowbreak C1-XY/\allowbreak L2/\allowbreak net & no\_\allowbreak bid & 20 & 0.830 & 0.950 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[1349].auroc, all_cells[1371].auroc, all_cells[1393].auroc
+mixed.\allowbreak C1-XY/\allowbreak L2/\allowbreak correlation & complete & 20 & 0.970 & 1.000 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[1360].auroc, all_cells[1382].auroc, all_cells[1404].auroc
+mixed.\allowbreak C1-XY/\allowbreak L2/\allowbreak correlation & no\_\allowbreak bid & 20 & 0.968 & 1.000 & 1.000\\
+% source: results/analysis/final_v1/results.json all_cells[1351].auroc, all_cells[1373].auroc, all_cells[1395].auroc
+mixed.\allowbreak C1-XY/\allowbreak L2/\allowbreak leak & complete & 20 & 0.792 & 0.865 & 0.860\\
+% source: results/analysis/final_v1/results.json all_cells[1362].auroc, all_cells[1384].auroc, all_cells[1406].auroc
+mixed.\allowbreak C1-XY/\allowbreak L2/\allowbreak leak & no\_\allowbreak bid & 20 & 0.762 & 0.865 & 0.868\\
+\end{longtable}\endgroup

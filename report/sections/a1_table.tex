@@ -1,0 +1,69 @@
+\begingroup\footnotesize\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}p{3.2in}rp{2.1in}@{}}
+\caption{A1: warning removed minus warning present. Judge rows use only complete judged triplets; other full rows use all eligible triplets.}\\
+\toprule Endpoint / subset & n & Difference [95\% interval]\\\midrule\endfirsthead
+\toprule Endpoint / subset & n & Difference [95\% interval]\\\midrule\endhead
+\bottomrule\endfoot
+% source: results/analysis/final_v1/results.json addendum.A1.auroc_differences.L1:net
+All: L1:net & 20 & 0.0550 [-0.0425, 0.1725]\\
+% source: results/analysis/final_v1/results.json addendum.A1.auroc_differences.L2:net
+All: L2:net & 20 & 0.0975 [-0.0051, 0.2300]\\
+% source: results/analysis/final_v1/results.json addendum.A1.auroc_differences.L2:leak
+All: L2:leak & 20 & 0.0425 [-0.1625, 0.2576]\\
+% source: results/analysis/final_v1/results.json addendum.A1.auroc_differences.L1:correlation
+All: L1:correlation & 20 & 0.0050 [-0.0250, 0.0250]\\
+% source: results/analysis/final_v1/results.json addendum.A1.auroc_differences.L2:correlation
+All: L2:correlation & 20 & -0.0125 [-0.0675, 0.0100]\\
+% source: results/analysis/final_v1/results.json addendum.A1.auroc_differences.L1:judge:qwen-9b
+All: L1:Q judge & 5 & 0.1600 [-0.4000, 0.6400]\\
+% source: results/analysis/final_v1/results.json addendum.A1.auroc_differences.L2:judge:qwen-9b
+All: L2:Q judge & 1 & 0.5000 [0.5000, 0.5000]\\
+% source: results/analysis/final_v1/results.json addendum.A1.behaviour_NW_minus_SS.joint_profit
+All: joint\_\allowbreak profit & 20 & -0.3478 [-0.4015, -0.2921]\\
+% source: results/analysis/final_v1/results.json addendum.A1.behaviour_NW_minus_SS.relative_profit_uplift_difference
+All: relative uplift & 20 & -1.0849 [-1.2533, -0.9299]\\
+% source: results/analysis/final_v1/results.json addendum.A1.behaviour_NW_minus_SS.winning_price
+All: winning\_\allowbreak price & 20 & -0.3335 [-0.3925, -0.2753]\\
+% source: results/analysis/final_v1/results.json addendum.A1.behaviour_NW_minus_SS.pair_win_share
+All: pair\_\allowbreak win\_\allowbreak share & 20 & 0.0706 [0.0540, 0.0879]\\
+% source: results/analysis/final_v1/results.json addendum.A1.judge_coverage_and_matched_comparisons.L1.auroc_differences.L1:net
+Judge L1 subset: L1:net & 5 & -0.0400 [-0.1600, 0.0000]\\
+% source: results/analysis/final_v1/results.json addendum.A1.judge_coverage_and_matched_comparisons.L1.auroc_differences.L2:net
+Judge L1 subset: L2:net & 5 & 0.0400 [-0.1200, 0.4000]\\
+% source: results/analysis/final_v1/results.json addendum.A1.judge_coverage_and_matched_comparisons.L1.auroc_differences.L2:leak
+Judge L1 subset: L2:leak & 5 & 0.2800 [0.0000, 0.7200]\\
+% source: results/analysis/final_v1/results.json addendum.A1.judge_coverage_and_matched_comparisons.L1.auroc_differences.L1:correlation
+Judge L1 subset: L1:correlation & 5 & 0.0000 [0.0000, 0.0000]\\
+% source: results/analysis/final_v1/results.json addendum.A1.judge_coverage_and_matched_comparisons.L1.auroc_differences.L2:correlation
+Judge L1 subset: L2:correlation & 5 & 0.0000 [0.0000, 0.0000]\\
+% source: results/analysis/final_v1/results.json addendum.A1.judge_coverage_and_matched_comparisons.L1.auroc_differences.L1:judge:qwen-9b
+Judge L1 subset: L1:Q judge & 5 & 0.1600 [-0.4000, 0.6400]\\
+% source: results/analysis/final_v1/results.json addendum.A1.judge_coverage_and_matched_comparisons.L1.behaviour_NW_minus_SS.joint_profit
+Judge L1 subset: joint\_\allowbreak profit & 5 & -0.2905 [-0.3826, -0.1985]\\
+% source: results/analysis/final_v1/results.json addendum.A1.judge_coverage_and_matched_comparisons.L1.behaviour_NW_minus_SS.relative_profit_uplift_difference
+Judge L1 subset: relative uplift & 5 & -0.9591 [-1.2861, -0.6699]\\
+% source: results/analysis/final_v1/results.json addendum.A1.judge_coverage_and_matched_comparisons.L1.behaviour_NW_minus_SS.winning_price
+Judge L1 subset: winning\_\allowbreak price & 5 & -0.2927 [-0.4227, -0.1860]\\
+% source: results/analysis/final_v1/results.json addendum.A1.judge_coverage_and_matched_comparisons.L1.behaviour_NW_minus_SS.pair_win_share
+Judge L1 subset: pair\_\allowbreak win\_\allowbreak share & 5 & 0.0607 [0.0267, 0.0972]\\
+% source: results/analysis/final_v1/results.json addendum.A1.judge_coverage_and_matched_comparisons.L2.auroc_differences.L1:net
+Judge L2 subset: L1:net & 1 & 0.0000 [0.0000, 0.0000]\\
+% source: results/analysis/final_v1/results.json addendum.A1.judge_coverage_and_matched_comparisons.L2.auroc_differences.L2:net
+Judge L2 subset: L2:net & 1 & 1.0000 [1.0000, 1.0000]\\
+% source: results/analysis/final_v1/results.json addendum.A1.judge_coverage_and_matched_comparisons.L2.auroc_differences.L2:leak
+Judge L2 subset: L2:leak & 1 & 0.0000 [0.0000, 0.0000]\\
+% source: results/analysis/final_v1/results.json addendum.A1.judge_coverage_and_matched_comparisons.L2.auroc_differences.L1:correlation
+Judge L2 subset: L1:correlation & 1 & 0.0000 [0.0000, 0.0000]\\
+% source: results/analysis/final_v1/results.json addendum.A1.judge_coverage_and_matched_comparisons.L2.auroc_differences.L2:correlation
+Judge L2 subset: L2:correlation & 1 & 0.0000 [0.0000, 0.0000]\\
+% source: results/analysis/final_v1/results.json addendum.A1.judge_coverage_and_matched_comparisons.L2.auroc_differences.L2:judge:qwen-9b
+Judge L2 subset: L2:Q judge & 1 & 0.5000 [0.5000, 0.5000]\\
+% source: results/analysis/final_v1/results.json addendum.A1.judge_coverage_and_matched_comparisons.L2.behaviour_NW_minus_SS.joint_profit
+Judge L2 subset: joint\_\allowbreak profit & 1 & -0.5287 [-0.5287, -0.5287]\\
+% source: results/analysis/final_v1/results.json addendum.A1.judge_coverage_and_matched_comparisons.L2.behaviour_NW_minus_SS.relative_profit_uplift_difference
+Judge L2 subset: relative uplift & 1 & -1.0070 [-1.0070, -1.0070]\\
+% source: results/analysis/final_v1/results.json addendum.A1.judge_coverage_and_matched_comparisons.L2.behaviour_NW_minus_SS.winning_price
+Judge L2 subset: winning\_\allowbreak price & 1 & -0.5132 [-0.5132, -0.5132]\\
+% source: results/analysis/final_v1/results.json addendum.A1.judge_coverage_and_matched_comparisons.L2.behaviour_NW_minus_SS.pair_win_share
+Judge L2 subset: pair\_\allowbreak win\_\allowbreak share & 1 & 0.1158 [0.1158, 0.1158]\\
+\end{longtable}\endgroup

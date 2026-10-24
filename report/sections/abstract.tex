@@ -1,0 +1,23 @@
+\begin{abstract}
+Can a behaviour-based audit distinguish an instructed cartel from honest
+language-model bidders? We test pairwise net influence in a repeated
+procurement auction, comparing public-bid access with access to private
+costs. The sole confirmatory test distinguished strong-pair cartel markets
+from matched honest controls: AUROC $0.865$, descriptive interval
+$[0.734,0.968]$, and $p=0.00002$ across $20$ blocks.
+% source: results/analysis/final_v1/results.json primary; all_cells[206].auroc
+Same-access residual correlation achieved $0.9975$.
+% source: results/analysis/final_v1/results.json all_cells[202].auroc
+Net influence therefore shows no general advantage over correlation.
+In descriptive secondary comparisons, espionage was the only condition
+whose paired net-minus-correlation interval excluded zero in favour of net
+influence. Market-level flow labels remained largely weak or unclear.
+The Qwen judge returned invalid JSON for $322/600$ judgements;
+its matched comparisons cover only $1$--$8$ blocks.
+% source: results/analysis/final_v1/results.json judgments grouped by model/status/failure; judge_comparisons[*].judge_auroc.n_blocks
+Exploratory probes did not resolve an average linear bid response to partner
+cost. Their leak test has an anti-conservative bid-level permutation null
+because bids share regenerated messages. These results support screening
+for an assigned treatment in this game, not reliable identification of
+agreement, intent, or economic harm.
+\end{abstract}

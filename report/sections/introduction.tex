@@ -1,0 +1,33 @@
+\section{Introduction}
+When language-model agents bid on behalf of competing firms, oversight must
+address coordination that is invisible in the public record. Reading messages
+may be impossible, and similar bids need not imply an agreement: agents can
+respond to the same history or implement similar policies. Conversely, a firm
+that learns a rival's private cost can produce suspicious dependence without
+the rival's cooperation. A useful audit therefore asks both which pair is
+dependent and what information could account for that dependence.
+
+Pairwise net influence \citep{bonjour2022} compares a pair's statistical
+influence with the strongest influence from a third agent. We test this screen
+in a procurement game with a designated pair of LLM bidders. Private costs
+provide an additional diagnostic: the partially observable statistic separates
+action dependence from dependence of a bid on another firm's private input.
+The distinction matters because the symmetric influence score can combine
+either unilateral or reciprocal information flow. Our auditors read no
+messages; this avoids reliance on message content, but does not constitute a
+test of steganographic channels.
+
+The contributions are:
+\begin{enumerate}
+\setlength{\itemsep}{0pt}
+\item A pre-registered test of net influence on LLM auctions, with matched
+honest controls, correlation and judge baselines, and separate measures of
+discrimination, localisation, and abstention.
+\item An audit comparison with and without private inputs, using an exact
+decomposition into action dependence and directional leaks, plus a
+partner-cost intervention on frozen contexts.
+\item Targeted tests of honest look-alikes, unilateral leakage, cartel
+placement, and model breadth, with explicit limits on what detection implies.
+\end{enumerate}
+The intended contribution is an assessment of the information an audit adds;
+superiority to a simpler screen is an empirical question.

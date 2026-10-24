@@ -1,0 +1,26 @@
+\section{Related Work}
+\citet{bonjour2022} introduce information-theoretic collusion detection in
+multi-agent games, including a partially observable formulation. We implement
+their statistic and fixed-threshold rule, then examine private-input access
+and permutation correction in LLM auctions. Work on algorithmic collusion by
+LLMs \citep{fish2024}, double auctions \citep{agrawal2025}, and market division
+\citep{lin2024} supplies the market context; our question concerns the audit
+of an assigned pair rather than whether collusion emerges spontaneously.
+
+Steganographic collusion \citep{motwani2024} motivates audits that do not
+depend on readable messages. \emph{Audit the Whisper} \citep{whisper2025}
+uses cross-run mutual information, permutation invariance, and interventions,
+including auctions. Its run-level focus differs from pair localisation and
+private-state directional decomposition here. Chain-of-thought monitoring
+\citep{faithful2026} and multi-agent interpretability/NARCBench
+\citep{rose2026} address complementary observation channels; we evaluate
+behaviour and private inputs, without access to model internals.
+
+Statistical procurement screens provide a related application tradition
+\citep{huber2019,imhof2021,wallimann2022}. We treat a screen as a reason for
+further investigation. Concurrent sprint repositories also investigate net
+influence \citep{tawareRepo,nayakRepo}; we make no claim to the first LLM
+application. The distinctive focus is the joint evaluation of pair detection,
+private-cost flow, and honest look-alikes under matched controls.
+\todo{Resolve incomplete bibliography metadata and pin concurrent repository
+commits and access dates before submission.}

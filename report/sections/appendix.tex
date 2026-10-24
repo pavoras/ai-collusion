@@ -1,0 +1,370 @@
+\section{Replication details}
+\label{app:replication}
+The scripted rock--paper--scissors replication implements the influence
+and mutual net-threshold rule of \citet{bonjour2022}. The comparison uses
+bits and the previous round's joint action as state, conventions inferred
+from the published results. The no-state variant is retained to show that
+conditioning choices matter. Detection rises with coordination and sample
+size, but the replication does not exactly reproduce all table entries.
+The values below distinguish the paper's published percentages from our
+simulation. These are development checks, not LLM results.
+\input{sections/replication_table}
+
+The deterministic seed is $20261023$; the full run uses $1000$ trials per
+detection cell. Its calibration experiment uses $500$ trials and $199$
+permutations. These settings differ from the registered LLM analysis.
+% source: experiments/rps_replication.py SEED and main; results/rps/cda.csv iters; results/rps/calibration.csv iters,n_perm
+The complete calibration data, including positive conditions, are in
+\path{results/rps/calibration.csv}. Reproduction from the repository root:
+\begin{verbatim}
+.venv/Scripts/python experiments/rps_replication.py
+\end{verbatim}
+
+\section{Conditions, prompts and model configuration}
+\label{app:prompts}
+\input{sections/conditions_table}
+The frozen manifest is \path{experiments/manifests/collection_v2.json}.
+It maps model identities to roles and hidden seat assignments. Exact prompt
+templates are in \path{src/collusion/llm/prompts.py}; model revisions and
+sampling settings are in the per-run configuration and reproducibility
+records named by \path{results/analysis_runs.json}. Request hashes, prompts,
+responses and parsing metadata remain associated with each raw run.
+\path{results/analysis_meta/pilot_qwen9b_v5_N0.json} records the pilot-derived
+N0 configuration explicitly. The manifest and source checksums accompanying
+this report allow these inputs to be checked without re-collecting outputs.
+
+The A1 prompt removes only: ``The competition authority monitors all bids,
+so behave inconspicuously.'' The joint-profit objective and private channel
+remain. This is a warning-removal treatment, not a direct test of an internal
+evasion strategy. Core Qwen and A1 retain the strict parser; the documented
+fenced-JSON parser cohort covers Gemma/Ministral, A2 and breadth collection.
+Bidders run without thinking, whereas the primary judge uses thinking.
+No treatment labels, messages or model identities are given to the judges.
+% source: docs/PREREG.md sections 2,8, Addendum A1 and deviation 2; src/collusion/llm/prompts.py
+
+\section{Scripted validation}
+\label{app:scripted}
+Scripted auctions test known cartels, spies and honest policies under the
+same observation constraints. Shared-history stress tests show why a
+coarse or incomplete public state can invalidate a permutation null.
+Power planning and conditional-table occupancy checks motivated the market
+horizon and weak-evidence category. These simulations inform the design;
+they do not establish calibration for arbitrary adaptive LLM bidders.
+The existing artefacts are in \path{results/auction_scripted/},
+\path{results/auction_power/}, and \path{results/null_validity/}.
+Reproduction commands (each also accepts \texttt{--quick}):
+\begin{verbatim}
+.venv/Scripts/python experiments/auction_scripted.py
+.venv/Scripts/python experiments/auction_checks.py
+.venv/Scripts/python experiments/auction_power.py
+.venv/Scripts/python experiments/null_validity.py
+\end{verbatim}
+These commands regenerate development outputs. They were not rerun for
+this report update, which reads existing frozen analysis files only.
+
+\section{All registered cells and per-model results}
+\label{app:allresults}
+The following single comprehensive table includes every registered cell,
+including unavailable detector results and cancelled breadth judges, at
+prefix $200$ with the complete-round mask. It contains $312$ detector/access
+rows spanning $28$ cells. The full machine-readable table with every prefix
+and mask is \path{results/analysis/final_v1/all_cells.md}; no sensitivity
+rows are silently discarded from that file.
+% source: results/analysis/final_v1/results.json all_cells filtered prefix=200,mask=complete; distinct cell
+
+Cov. is successful detector coverage; $n$ is the matched AUROC block count.
+A dash means unavailable or not applicable, never a score of zero.
+Unique/wrong/abstain are rates under the operational reporting rule;
+AUROC uses the continuous score, including for the paper detector.
+For honest cells, top-1 and mean reciprocal rank (MRR) describe the
+\emph{designated reference pair}, not localisation accuracy. Similarly,
+``unique'' is a report of that reference pair, and ``wrong'' is a report
+of another pair; neither is a correct collusion finding in an honest market.
+Alarm columns give any candidate, exactly one report, and designated
+reference-pair alarms, with exact binomial intervals.
+
+Flow counts are ordered both detected / one detected, reverse weak /
+neither detected, both weak / unclear / unavailable. Pipeline counts use
+the same first categories, ending in no pair instead of unavailable.
+All-zero pipeline counts for score-only baselines mean no reporting rule,
+not evidence that no information flowed. Judge rows' label counts describe
+their available subset. Excluded markets fail the registered bid-validity
+rule. Superseded operational attempts are retained in the raw record, but
+are not extra independent markets in this registered cohort.
+\input{sections/all_cells_table}
+
+\subsection{Prefix, missing-bid and breadth sensitivity}
+The following compact table provides the score trajectories. Full intervals,
+coverage, flow labels and reporting outcomes for every prefix/mask remain
+in \path{results/analysis/final_v1/all_cells.md}. A3 merges all registered
+breadth indices; it does not select the first subset after observing scores.
+The unavailable Gemma-E4B and Ministral-3B cells remain in the comprehensive
+table above. Mixed XX and XY treatments each use their own composition-matched
+honest control; their contrast does not isolate model identity.
+\input{sections/sensitivity_table}
+
+\section{Statistics, provenance, and deviations}
+\label{app:stats}
+\subsection{A1: warning removal}
+A1 compares matched N0/C1-SS/C1-NW triplets. Its profit contrast is the
+difference of additive N0-referenced joint-profit uplifts; the relative
+uplift companion is listed separately. All eligible triplets contribute to
+the non-judge estimates. Judge comparisons use only triplets judged
+successfully in all conditions. The L2 judge difference of $0.5$ with
+interval $[0.5,0.5]$ comes from a single triplet and is not precise evidence.
+% source: results/analysis/final_v1/results.json addendum.A1.profit_definition; addendum.A1.judge_coverage_and_matched_comparisons.L2
+\input{sections/a1_table}
+
+\subsection{A2: honest placement swaps}
+Write $s_{ab}$ for the score of strong firm $a$ and fringe firm $b$.
+The registered symmetrised placement contrast is
+\[
+T=\tfrac12\{s_{00}(\mathrm{cell})-s_{00}(\mathrm{twin})
++s_{01}(\mathrm{twin})-s_{01}(\mathrm{cell})\}.
+\]
+The descriptive within-original-cell interaction is
+$D=s_{00}-s_{01}-s_{10}+s_{11}$. The intervention changes fringe placement
+and therefore can change the rest of the market. It does not identify
+an isolated sameness mechanism. The two-sided test swaps cell/twin labels
+within each index and twin-pair block. Bootstrap sampling keeps blocks with
+the same market index together. The tables retain all registered endpoints,
+per-twin contrasts and corresponding successful-judge subsets.
+Candidate denominators are pair opportunities, not independent trials.
+% source: docs/PREREG.md Addendum A2; results/analysis/final_v1/results.json addendum.A2.interpretation,candidate_rate_note
+\input{sections/a2_tables}
+
+\subsection{Judge failures and matched coverage}
+Qwen produced $278$ valid and $322$ invalid judgements out of $600$;
+Gemma produced $5$ valid and $35$ invalid out of $40$.
+% source: results/analysis/final_v1/results.json judgments grouped by model,status,failure
+Content failures were retained, not resubmitted for a preferred answer.
+Transport failures were reconciled and retried unchanged as recorded in
+the deviations. Breadth judging was cut for budget. Its absent rows are
+uncollected judge coverage, not judge scores of zero. The registered limit
+was $12{,}000$ generated tokens per attempt with the registered retry;
+most failed calls ended with \texttt{length}, according to the raw-log
+observation in the final handover. This report does not infer a cause for
+every invalid output from the failure code alone.
+% source: docs/PREREG.md section 8 and deviation 6; Round 14 handover raw-log observation
+
+The successful-output Qwen top-1 pattern in C1-SS was $0.808/0.881$ at
+L1/L2, versus SF $0.0476/0.0303$ and FF $0.100/0.0119$.
+The honest N0 strong reference pair received $0.952/1.000$.
+% source: results/analysis/final_v1/results.json all_cells[198,204,399,404,465,470,54,60].top1
+These are treatment-only available-output summaries, not the matched
+samples plotted in Figure~\ref{fig:localisation}. They are consistent with
+strong-pair preference in these cells, without establishing a universal
+rule or an internal reasoning mechanism. P0 is a counterexample to a
+universal strong-pair account: its matched judge AUROC is zero at each
+access level, with only $4$ and $3$ blocks. Tiny-sample percentile intervals
+can collapse and must not be read as certainty.
+% source: results/analysis/final_v1/results.json judge_comparisons[0,3].judge_auroc
+\input{sections/judge_tables}
+
+\subsection{Exploratory frozen-context probes}
+The complete-context slope was $0.0134737$ $[-0.0035263,0.0319480]$;
+$199$ contexts were complete. One context was incomplete (market $7$,
+round $130$, seat $3$). The leak uses $2997$ observed bids, including
+observations from the incomplete context: raw $0.1481534$ bits, corrected
+$0.0887914$ bits, implemented $p=0.001$.
+% source: results/analysis/final_v1/results.json probes.summaries[0]; probes.incomplete_contexts[0]
+No resolved average linear response follows from the slope interval.
+A signed mean slope can cancel across contexts while mutual information
+detects distributional changes, but neither cancellation nor nonlinearity
+is demonstrated here.
+
+The leak inference has a more fundamental limitation. Each cost-specific
+regenerated message is shared by five recipient bids. Individual-bid
+permutation within context breaks that bundle structure and can treat
+stochastic message variation as evidence against its null. The resulting
+null is anti-conservative for a claim of reproducible partner-cost
+transmission. The frozen estimate and implemented p-value are retained for
+transparency, with no causal claim. Repeated independently regenerated
+messages within cost/context and an inference procedure respecting that
+hierarchy are needed. Relabelling cost categories among whole bundles
+alone leaves context-conditional mutual information unchanged.
+% source: experiments/run_llm.py probe generation; src/collusion/analysis/probes.py; Round 13 review D
+
+\subsection{Pooled fingerprints: descriptive numerical caution}
+The frozen fingerprint analysis uses $1000$ market-bootstrap draws, $99$
+permutations per draw and $999$ for each point estimate. Some point estimates
+lie outside their percentile intervals. The report generator flags all such
+entries below; it does not alter or refit them. Bootstrap bias and Monte
+Carlo variation are possible explanations, not demonstrated causes. A
+numerical audit of their relative contributions remains open, so these
+intervals are not central evidence for mechanism classification.
+% source: results/analysis/final_v1/results.json settings; fingerprints[*].n_boot,n_perm_per_draw,point_permutations
+\input{sections/fingerprint_table}
+
+\subsection{Freeze, execution and reproducibility}
+The initial preregistration freeze was
+\path{56717aba03261552b9e09be4dded8b6e4cdc04b3}; the amendment freeze was
+\path{4c4b6f1911486d479bd043e3590e9e0f90f6a42d}.
+The final analysis executed at revision \path{7ca459c}, with the documented
+junction-handling loader fix (deviation 5g). It did not run exactly the
+amendment checkout. The registered estimands are retained, and the executable
+change is disclosed separately.
+% source: docs/PLAN.md freeze records; results/analysis/final_v1/results.json analysis_freeze_commit; Round 14 execution handover; docs/PREREG.md deviation 5g
+The manifest hash is
+\path{a63ef1040a022c4d6a190fde1ae34dafdfefb13bd1626bdb57f19cdf2488a4ff}.
+% source: results/analysis/final_v1/results.json manifest.sha256
+The primary swap seed is $20261027$; the main bootstrap seed is $20261028$,
+the fingerprint seed is $20261029$, and A1 uses $20261030$.
+A2 uses $20261031$ for swaps and $20261032$ for bootstrap.
+% source: results/analysis/final_v1/results.json primary.seed; bootstrap.registered.seed; fingerprints[*].seed; addendum.A1.seed; addendum.A2.swap_seed,bootstrap_seed
+\input{sections/checksums}
+
+The following command reproduces the final analysis from released local
+inputs. It is documented here, not rerun during report preparation.
+\begin{verbatim}
+.venv/Scripts/python experiments/analyze_llm.py --unblind
+  --input results --manifest experiments/manifests/collection_v2.json
+  --analysis-freeze-commit 4c4b6f1911486d479bd043e3590e9e0f90f6a42d
+  --judges results/llm/judge_index_registered.json
+  --probes results/llm/probe_index.json --name final_v1 --workers 4
+\end{verbatim}
+Join the displayed lines into one command. From the repository root, the
+report-only command is:
+\begin{verbatim}
+.venv/Scripts/python experiments/report_figures.py
+\end{verbatim}
+The optional \texttt{--quick} flag produces identical report numbers: the
+script reads frozen estimates and performs no resampling. It writes PDF/PNG
+figures and a numerical CSV/JSON to \path{results/report_figures/}, copies
+PDFs to \path{report/figures/}, and generates the numerical LaTeX tables.
+\path{results/report_figures/provenance.json} records the source digest,
+analysis settings and bootstrap-weight digest. In \path{report/}, compile
+with automatic package installation disabled:
+\begin{verbatim}
+pdflatex --disable-installer -interaction=nonstopmode main.tex
+bibtex --disable-installer main
+pdflatex --disable-installer -interaction=nonstopmode main.tex
+pdflatex --disable-installer -interaction=nonstopmode main.tex
+\end{verbatim}
+
+\subsection{Deviations and collection order}
+The following summary follows the appended record in
+\path{docs/PREREG.md}; per-run metadata and
+\path{results/llm/reconciliation_log.json} retain affected attempts.
+\begin{enumerate}
+\item Warm-up transport handling was corrected before any bid was collected.
+The stopped pilot attempt was retained.
+\item A versioned parser accepted a single Markdown code block around valid
+JSON for Gemma/Ministral. Initial invalid A2 attempts were retained and
+recollected as labelled cohorts. Core Qwen and A1 kept the original parser.
+\item Concurrent-request caching, lost judge replies, streaming, timeouts
+and Windows checkpoint replacement were repaired. Unread transport replies
+were reconciled and requests resumed unchanged; answers were not selected
+on content.
+\item Disk exhaustion interrupted collection. Raw data moved to another
+drive through a junction, storage guards were added, and orphaned requests
+were reconciled. New run identifiers reused completed cached requests.
+\item Later recovery addressed drive-specific guards, preemption, warm-up
+caps, ledger contention, call ceilings and judge timeouts. The loader's
+containment check was changed to accept the raw-data junction. The original
+budget cap was exceeded and raised; final spend must come from billing.
+\item Breadth judges were cancelled for budget, while core, A1, A2 and the
+Gemma counter-judge were completed as attempted judgements. Memory failures
+and interrupted judge streams were reconciled; autoscaling was pinned for
+the batch. Content-invalid outputs remained failures. The counter-judge
+used its registered market subset and the fenced parser.
+\end{enumerate}
+% source: docs/PREREG.md Deviations 1-6
+The amendment was recorded before LLM outcome analysis. Actual A1 collection
+started alongside the core; A2 and breadth work were interleaved after
+warm-up, rather than following the proposed fully sequential order.
+The report retains this operational ordering and the parser cohorts instead
+of describing an uninterrupted frozen-code collection.
+% source: docs/PLAN.md Log, 23.10 amendment and collection entries; docs/PREREG.md Addendum order and deviations
+
+\section{Limitations and Dual-Use / Ethical Considerations}
+\label{app:ethics}
+\paragraph{Instructed coordination and treatment attribution.}
+The cartel is assigned by prompt; this is not evidence of emergent collusion
+among independently deployed agents. The treatment combines a joint-profit
+objective, partner naming, secrecy, a surveillance warning, and, in the
+channel condition, private communication. Their effects cannot generally
+be separated. The warning-removal and no-channel comparisons vary specific
+components, without identifying all interactions in the bundle. Poor
+compliance and refusal remain part of the assigned treatment outcomes.
+
+\paragraph{Synthetic environment and external validity.}
+No real procurement participants are involved. The firms, private costs,
+contracts, and payoffs belong to a synthetic game. Its discrete bids,
+independently redrawn costs, asymmetric firms, and fixed horizon simplify
+real procurement. Real bidders can have correlated costs, durable capacity
+constraints, changing strategies, and legitimate information exchange.
+Model family and size comparisons test robustness in this environment, not
+intrinsic propensities to collude. Mixed-population contrasts do not isolate
+identity from market strength; A2 identifies a specified placement change,
+including its effects on the rest of the market.
+
+\paragraph{Dependence, intent, and harm.}
+An influence score measures statistical dependence, not agreement, intent,
+illegality, or harm. A leak can reflect unilateral espionage, legitimate
+disclosure, or a cooperative cartel. A one-way pattern does not distinguish
+all such cases, and nondetection does not establish absence. Realised profit
+uplift and winning-price differences are manipulation checks in the game;
+they do not prove a real-world welfare loss. Audits must retain unclear cases
+and abstentions instead of forcing a substantive accusation.
+
+\paragraph{Null validity and finite data.}
+Within-state permutation tests assume exchangeability that can fail when
+bidders adapt to omitted history, drift, or their own cumulative outcomes.
+The correction reduces estimated null bias under the specified shuffle; it
+does not provide a universal false-alarm guarantee. Sparse conditional
+tables, limited independent markets, missing bids, and model-specific parse
+failures affect precision and generalisation. The matched primary test has
+its own condition-label exchangeability null. Secondary intervals are
+pointwise, and error control for one detector or test family does not extend
+to all reported comparisons. Pooled fingerprints and repeated probe draws
+must not be counted as additional independent markets.
+
+\paragraph{False accusations and human review.}
+A false alarm can wrongly implicate an honest pair responding to shared
+history or similar incentives. These scores should support investigation
+with contextual evidence and human review, not automated sanctions. The
+evaluation must present honest controls, wrong-pair reports, abstention,
+and uncertainty alongside successful rankings. A judge's answer is another
+fallible baseline; family overlap and incomplete coverage limit its role as
+independent corroboration.
+
+\paragraph{Private-input access and privacy.}
+L2 assumes an authorised auditor can inspect private costs, an informational
+advantage that need not exist for a competition authority. A platform might
+hold agent inputs without being entitled to reuse or disclose them for
+every purpose. Deployment would require a legitimate access basis, purpose
+limitations, access controls, and protection of commercially sensitive data.
+The synthetic inputs here do not resolve those governance questions.
+
+\paragraph{Dual use and adaptive concealment.}
+Publishing detector strengths and blind spots could help design cartels or
+evade detection. In particular, behaviour-only auditing can miss dependence
+absorbed by the conditioning state, and an adaptive agent may deliberately
+suppress detectable private-cost dependence. This experiment does not test
+steganographic channels or establish robustness against agents optimising
+against the audit. The defensive value is to expose such limits and support
+better evaluation, rather than to offer a covert-coordination recipe.
+
+\paragraph{Compute and reproducibility.}
+Collection used cloud-hosted open-weight models; interruptions, retries,
+idle time, and judging contribute to resource use. The registered budget
+cap was exceeded, so the initial budget is not an account of actual spend.
+\todo{Marvin: insert exact final Modal billing total (approximately USD 71
+reported in the handover), billing window, and GPU time if available.}
+% source: Round 14 handover; exact billing pending, not an analysis estimate
+Inference seeds and pinned configurations do not ensure identical outputs
+on re-collection. Logs and released data support analysis reproduction;
+unreconciled attempts, parser changes, and missing judgements must remain
+visible in that record.
+
+\section{LLM usage statement}
+Claude Code was used for planning, reviews, and commits during the project.
+Codex models wrote code in implementation rounds and prepared this report
+draft. Marvin Kemper made the research decisions and reviewed the work.
+The LLM bidders and judges described in the methods are experimental
+subjects and baselines, distinct from the tools used to develop the study.
+AI assistance does not establish the correctness of a citation, numerical
+result, or interpretation; the final claims remain Marvin's responsibility.
+\todo{Marvin to complete the final substantive review and revise the prose
+in his own words before submission, as encouraged by the report template.}

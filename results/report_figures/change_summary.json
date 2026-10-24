@@ -1,0 +1,159 @@
+{
+  "files": [
+    {
+      "file": "report/main.tex",
+      "old_lines": 36,
+      "new_lines": 34,
+      "net_lines": -2
+    },
+    {
+      "file": "report/README.md",
+      "old_lines": 5,
+      "new_lines": 45,
+      "net_lines": 40
+    },
+    {
+      "file": "report/SOURCE_AUDIT.md",
+      "old_lines": 84,
+      "new_lines": 110,
+      "net_lines": 26
+    },
+    {
+      "file": "report/figures/figure_a.pdf",
+      "old_lines": 0,
+      "new_lines": null,
+      "net_lines": null
+    },
+    {
+      "file": "report/figures/figure_b.pdf",
+      "old_lines": 0,
+      "new_lines": null,
+      "net_lines": null
+    },
+    {
+      "file": "report/sections/a1_table.tex",
+      "old_lines": 0,
+      "new_lines": 69,
+      "net_lines": 69
+    },
+    {
+      "file": "report/sections/a2_tables.tex",
+      "old_lines": 0,
+      "new_lines": 195,
+      "net_lines": 195
+    },
+    {
+      "file": "report/sections/abstract.tex",
+      "old_lines": 23,
+      "new_lines": 23,
+      "net_lines": 0
+    },
+    {
+      "file": "report/sections/all_cells_table.tex",
+      "old_lines": 0,
+      "new_lines": 1027,
+      "net_lines": 1027
+    },
+    {
+      "file": "report/sections/appendix.tex",
+      "old_lines": 163,
+      "new_lines": 370,
+      "net_lines": 207
+    },
+    {
+      "file": "report/sections/behaviour_table.tex",
+      "old_lines": 0,
+      "new_lines": 23,
+      "net_lines": 23
+    },
+    {
+      "file": "report/sections/checksums.tex",
+      "old_lines": 0,
+      "new_lines": 25,
+      "net_lines": 25
+    },
+    {
+      "file": "report/sections/conclusion.tex",
+      "old_lines": 15,
+      "new_lines": 15,
+      "net_lines": 0
+    },
+    {
+      "file": "report/sections/conditions_table.tex",
+      "old_lines": 0,
+      "new_lines": 21,
+      "net_lines": 21
+    },
+    {
+      "file": "report/sections/discussion.tex",
+      "old_lines": 29,
+      "new_lines": 48,
+      "net_lines": 19
+    },
+    {
+      "file": "report/sections/fingerprint_table.tex",
+      "old_lines": 0,
+      "new_lines": 157,
+      "net_lines": 157
+    },
+    {
+      "file": "report/sections/introduction.tex",
+      "old_lines": 43,
+      "new_lines": 33,
+      "net_lines": -10
+    },
+    {
+      "file": "report/sections/judge_tables.tex",
+      "old_lines": 0,
+      "new_lines": 211,
+      "net_lines": 211
+    },
+    {
+      "file": "report/sections/methods.tex",
+      "old_lines": 165,
+      "new_lines": 151,
+      "net_lines": -14
+    },
+    {
+      "file": "report/sections/replication_table.tex",
+      "old_lines": 0,
+      "new_lines": 66,
+      "net_lines": 66
+    },
+    {
+      "file": "report/sections/results.tex",
+      "old_lines": 88,
+      "new_lines": 143,
+      "net_lines": 55
+    },
+    {
+      "file": "report/sections/sensitivity_table.tex",
+      "old_lines": 0,
+      "new_lines": 247,
+      "net_lines": 247
+    },
+    {
+      "file": "experiments/report_figures.py",
+      "old_lines": 0,
+      "new_lines": 478,
+      "net_lines": 478
+    }
+  ],
+  "manuscript_and_script_net_lines": 2840,
+  "comparison": "Before/after Round 14 snapshot; binary files excluded from line counts",
+  "generated_results_files": [
+    "baseline.json",
+    "build_timeout.txt",
+    "change_summary.json",
+    "figure_a.pdf",
+    "figure_a.png",
+    "figure_b.pdf",
+    "figure_b.png",
+    "figure_numbers.csv",
+    "figure_numbers.json",
+    "input_checksums.json",
+    "number_sources.csv",
+    "provenance.json",
+    "validation.json"
+  ]
+}

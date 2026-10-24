@@ -1,0 +1,135 @@
+figure,panel,cell,level,detector,metric,subset,n,estimate,low,high,hits,source
+A,AUROC,core.P0,L1,net,auroc,all,20,1.0,1.0,1.0,,results/analysis/final_v1/results.json all_cells[124].auroc
+A,AUROC,core.P0,L1,correlation,auroc,all,20,1.0,1.0,1.0,,results/analysis/final_v1/results.json all_cells[122].auroc
+A,paired difference,core.P0,L1,net-correlation,auroc difference,all,20,0.0,0.0,0.0,,results/analysis/final_v1/results.json contrasts[36].result
+A,AUROC,core.C1-SS,L1,net,auroc,all,20,0.9125,0.7955530303030304,1.0,,results/analysis/final_v1/results.json all_cells[199].auroc
+A,AUROC,core.C1-SS,L1,correlation,auroc,all,20,0.9875,0.9586776859504132,1.0,,results/analysis/final_v1/results.json all_cells[196].auroc
+A,paired difference,core.C1-SS,L1,net-correlation,auroc difference,all,20,-0.07500000000000007,-0.1875,0.00692041522491349,,results/analysis/final_v1/results.json contrasts[91].result
+A,AUROC,core.C1-SF,L1,net,auroc,all,20,0.9925,0.9693877551020408,1.0,,results/analysis/final_v1/results.json all_cells[400].auroc
+A,AUROC,core.C1-SF,L1,correlation,auroc,all,20,1.0,1.0,1.0,,results/analysis/final_v1/results.json all_cells[398].auroc
+A,paired difference,core.C1-SF,L1,net-correlation,auroc difference,all,20,-0.007499999999999951,-0.030612244897959218,0.0,,results/analysis/final_v1/results.json contrasts[314].result
+A,AUROC,core.C1-FF,L1,net,auroc,all,20,1.0,1.0,1.0,,results/analysis/final_v1/results.json all_cells[466].auroc
+A,AUROC,core.C1-FF,L1,correlation,auroc,all,20,0.9925,0.9716446124763705,1.0,,results/analysis/final_v1/results.json all_cells[464].auroc
+A,paired difference,core.C1-FF,L1,net-correlation,auroc difference,all,20,0.007499999999999951,0.0,0.02835538752362954,,results/analysis/final_v1/results.json contrasts[369].result
+A,AUROC,core.C1-NW,L1,net,auroc,all,20,0.9675,0.9030432281770107,1.0,,results/analysis/final_v1/results.json all_cells[1456].auroc
+A,AUROC,core.C1-NW,L1,correlation,auroc,all,20,0.9925,0.9598765432098766,1.0,,results/analysis/final_v1/results.json all_cells[1454].auroc
+A,paired difference,core.C1-NW,L1,net-correlation,auroc difference,all,20,-0.025000000000000022,-0.07479318597244998,0.0078125,,results/analysis/final_v1/results.json contrasts[754].result
+A,AUROC,core.C2,L1,net,auroc,all,20,0.61,0.41274238227146814,0.7854671280276817,,results/analysis/final_v1/results.json all_cells[268].auroc
+A,AUROC,core.C2,L1,correlation,auroc,all,20,0.4625,0.2421875,0.6942206152433424,,results/analysis/final_v1/results.json all_cells[266].auroc
+A,paired difference,core.C2,L1,net-correlation,auroc difference,all,20,0.14749999999999996,-0.18181818181818182,0.44218105011380726,,results/analysis/final_v1/results.json contrasts[204].result
+A,AUROC,core.E1,L1,net,auroc,all,20,0.675,0.4930747922437673,0.8449905482041588,,results/analysis/final_v1/results.json all_cells[334].auroc
+A,AUROC,core.E1,L1,correlation,auroc,all,20,0.4825,0.33672682035777274,0.6281179138321995,,results/analysis/final_v1/results.json all_cells[332].auroc
+A,paired difference,core.E1,L1,net-correlation,auroc difference,all,20,0.19250000000000006,0.022220683287165206,0.35986505190311413,,results/analysis/final_v1/results.json contrasts[259].result
+A,AUROC,labs.gemma-12b.C1,L1,net,auroc,all,14,1.0,1.0,1.0,,results/analysis/final_v1/results.json all_cells[598].auroc
+A,AUROC,labs.gemma-12b.C1,L1,correlation,auroc,all,14,1.0,1.0,1.0,,results/analysis/final_v1/results.json all_cells[596].auroc
+A,paired difference,labs.gemma-12b.C1,L1,net-correlation,auroc difference,all,14,0.0,0.0,0.0,,results/analysis/final_v1/results.json contrasts[424].result
+A,AUROC,labs.ministral-8b.C1,L1,net,auroc,all,20,0.86,0.7119113573407202,0.9753086419753086,,results/analysis/final_v1/results.json all_cells[730].auroc
+A,AUROC,labs.ministral-8b.C1,L1,correlation,auroc,all,20,0.8975,0.7854671280276817,0.9752066115702479,,results/analysis/final_v1/results.json all_cells[728].auroc
+A,paired difference,labs.ministral-8b.C1,L1,net-correlation,auroc difference,all,20,-0.03749999999999998,-0.1575098684210526,0.0642857767975914,,results/analysis/final_v1/results.json contrasts[478].result
+A,AUROC,sizes.qwen-4b.C1,L1,net,auroc,all,20,0.9925,0.9722991689750693,1.0,,results/analysis/final_v1/results.json all_cells[862].auroc
+A,AUROC,sizes.qwen-4b.C1,L1,correlation,auroc,all,20,0.9775,0.9262699802015637,1.0,,results/analysis/final_v1/results.json all_cells[860].auroc
+A,paired difference,sizes.qwen-4b.C1,L1,net-correlation,auroc difference,all,20,0.015000000000000013,-0.01909722222222221,0.0692041522491349,,results/analysis/final_v1/results.json contrasts[532].result
+A,AUROC,mixed.C1-XX,L1,net,auroc,all,20,0.965,0.8979591836734694,1.0,,results/analysis/final_v1/results.json all_cells[1258].auroc
+A,AUROC,mixed.C1-XX,L1,correlation,auroc,all,20,0.99,0.9628099173553719,1.0,,results/analysis/final_v1/results.json all_cells[1256].auroc
+A,paired difference,mixed.C1-XX,L1,net-correlation,auroc difference,all,20,-0.025000000000000022,-0.08984375,0.02076124567474047,,results/analysis/final_v1/results.json contrasts[646].result
+A,AUROC,mixed.C1-XY,L1,net,auroc,all,20,1.0,1.0,1.0,,results/analysis/final_v1/results.json all_cells[1390].auroc
+A,AUROC,mixed.C1-XY,L1,correlation,auroc,all,20,1.0,1.0,1.0,,results/analysis/final_v1/results.json all_cells[1388].auroc
+A,paired difference,mixed.C1-XY,L1,net-correlation,auroc difference,all,20,0.0,0.0,0.0,,results/analysis/final_v1/results.json contrasts[700].result
+A,AUROC,core.P0,L2,net,auroc,all,20,1.0,1.0,1.0,,results/analysis/final_v1/results.json all_cells[130].auroc
+A,AUROC,core.P0,L2,correlation,auroc,all,20,1.0,1.0,1.0,,results/analysis/final_v1/results.json all_cells[127].auroc
+A,AUROC,core.P0,L2,leak,auroc,all,20,1.0,1.0,1.0,,results/analysis/final_v1/results.json all_cells[129].auroc
+A,paired difference,core.P0,L2,net-correlation,auroc difference,all,20,0.0,0.0,0.0,,results/analysis/final_v1/results.json contrasts[40].result
+A,AUROC,core.C1-SS,L2,net,auroc,all,20,0.865,0.7337237157306361,0.9675,,results/analysis/final_v1/results.json all_cells[206].auroc
+A,AUROC,core.C1-SS,L2,correlation,auroc,all,20,0.9975,0.9863917583494303,1.0,,results/analysis/final_v1/results.json all_cells[202].auroc
+A,AUROC,core.C1-SS,L2,leak,auroc,all,20,0.64,0.4275144230769231,0.8359495563271603,,results/analysis/final_v1/results.json all_cells[205].auroc
+A,paired difference,core.C1-SS,L2,net-correlation,auroc difference,all,20,-0.13250000000000006,-0.2646590264650283,-0.030864197530864224,,results/analysis/final_v1/results.json contrasts[95].result
+A,AUROC,core.C1-SF,L2,net,auroc,all,20,0.85,0.72265625,0.9584487534626038,,results/analysis/final_v1/results.json all_cells[406].auroc
+A,AUROC,core.C1-SF,L2,correlation,auroc,all,20,0.98,0.927437641723356,1.0,,results/analysis/final_v1/results.json all_cells[403].auroc
+A,AUROC,core.C1-SF,L2,leak,auroc,all,20,0.645,0.47914895124716556,0.8005596974549861,,results/analysis/final_v1/results.json all_cells[405].auroc
+A,paired difference,core.C1-SF,L2,net-correlation,auroc difference,all,20,-0.13,-0.25,-0.024930747922437765,,results/analysis/final_v1/results.json contrasts[318].result
+A,AUROC,core.C1-FF,L2,net,auroc,all,20,0.9975,0.9863945578231292,1.0,,results/analysis/final_v1/results.json all_cells[472].auroc
+A,AUROC,core.C1-FF,L2,correlation,auroc,all,20,1.0,1.0,1.0,,results/analysis/final_v1/results.json all_cells[469].auroc
+A,AUROC,core.C1-FF,L2,leak,auroc,all,20,0.8675,0.7274305555555556,0.9644457593688363,,results/analysis/final_v1/results.json all_cells[471].auroc
+A,paired difference,core.C1-FF,L2,net-correlation,auroc difference,all,20,-0.0024999999999999467,-0.013605442176870763,0.0,,results/analysis/final_v1/results.json contrasts[373].result
+A,AUROC,core.C1-NW,L2,net,auroc,all,20,0.9625,0.91,1.0,,results/analysis/final_v1/results.json all_cells[1462].auroc
+A,AUROC,core.C1-NW,L2,correlation,auroc,all,20,0.985,0.9318080496321237,1.0,,results/analysis/final_v1/results.json all_cells[1459].auroc
+A,AUROC,core.C1-NW,L2,leak,auroc,all,20,0.6825,0.505,0.8442906574394463,,results/analysis/final_v1/results.json all_cells[1461].auroc
+A,paired difference,core.C1-NW,L2,net-correlation,auroc difference,all,20,-0.022499999999999964,-0.0771604938271605,0.03749999999999998,,results/analysis/final_v1/results.json contrasts[758].result
+A,AUROC,core.C2,L2,net,auroc,all,20,0.655,0.46729651222592977,0.8325,,results/analysis/final_v1/results.json all_cells[274].auroc
+A,AUROC,core.C2,L2,correlation,auroc,all,20,0.495,0.2708333333333333,0.7129960317460312,,results/analysis/final_v1/results.json all_cells[271].auroc
+A,AUROC,core.C2,L2,leak,auroc,all,20,0.5625,0.36570119159359904,0.7599262759924386,,results/analysis/final_v1/results.json all_cells[273].auroc
+A,paired difference,core.C2,L2,net-correlation,auroc difference,all,20,0.16000000000000003,-0.125,0.4531290549307958,,results/analysis/final_v1/results.json contrasts[208].result
+A,AUROC,core.E1,L2,net,auroc,all,20,0.7,0.5290858725761773,0.8771359877126653,,results/analysis/final_v1/results.json all_cells[340].auroc
+A,AUROC,core.E1,L2,correlation,auroc,all,20,0.415,0.23268230609418283,0.6150096153846152,,results/analysis/final_v1/results.json all_cells[337].auroc
+A,AUROC,core.E1,L2,leak,auroc,all,20,0.7025,0.5736889215520004,0.8359495563271603,,results/analysis/final_v1/results.json all_cells[339].auroc
+A,paired difference,core.E1,L2,net-correlation,auroc difference,all,20,0.285,0.06197709417406389,0.5149999999999999,,results/analysis/final_v1/results.json contrasts[263].result
+A,AUROC,labs.gemma-12b.C1,L2,net,auroc,all,14,0.9948979591836735,0.9733333333333334,1.0,,results/analysis/final_v1/results.json all_cells[604].auroc
+A,AUROC,labs.gemma-12b.C1,L2,correlation,auroc,all,14,1.0,1.0,1.0,,results/analysis/final_v1/results.json all_cells[601].auroc
+A,AUROC,labs.gemma-12b.C1,L2,leak,auroc,all,14,0.9693877551020408,0.8760330578512396,1.0,,results/analysis/final_v1/results.json all_cells[603].auroc
+A,paired difference,labs.gemma-12b.C1,L2,net-correlation,auroc difference,all,14,-0.005102040816326481,-0.026666666666666616,0.0,,results/analysis/final_v1/results.json contrasts[427].result
+A,AUROC,labs.ministral-8b.C1,L2,net,auroc,all,20,0.745,0.5674993512110726,0.9081632653061225,,results/analysis/final_v1/results.json all_cells[736].auroc
+A,AUROC,labs.ministral-8b.C1,L2,correlation,auroc,all,20,0.8275,0.707499574829932,0.9351851851851852,,results/analysis/final_v1/results.json all_cells[733].auroc
+A,AUROC,labs.ministral-8b.C1,L2,leak,auroc,all,20,0.675,0.4693814562862182,0.8587257617728532,,results/analysis/final_v1/results.json all_cells[735].auroc
+A,paired difference,labs.ministral-8b.C1,L2,net-correlation,auroc difference,all,20,-0.08250000000000002,-0.2703235311137688,0.10726643598615915,,results/analysis/final_v1/results.json contrasts[481].result
+A,AUROC,sizes.qwen-4b.C1,L2,net,auroc,all,20,0.9425,0.8657024793388429,0.9924385633270322,,results/analysis/final_v1/results.json all_cells[868].auroc
+A,AUROC,sizes.qwen-4b.C1,L2,correlation,auroc,all,20,0.955,0.8429752066115702,1.0,,results/analysis/final_v1/results.json all_cells[865].auroc
+A,AUROC,sizes.qwen-4b.C1,L2,leak,auroc,all,20,0.4625,0.2788858454534933,0.6525,,results/analysis/final_v1/results.json all_cells[867].auroc
+A,paired difference,sizes.qwen-4b.C1,L2,net-correlation,auroc difference,all,20,-0.012499999999999956,-0.12244897959183676,0.12109408791089965,,results/analysis/final_v1/results.json contrasts[535].result
+A,AUROC,mixed.C1-XX,L2,net,auroc,all,20,0.885,0.7794991821625344,0.9645046153846153,,results/analysis/final_v1/results.json all_cells[1264].auroc
+A,AUROC,mixed.C1-XX,L2,correlation,auroc,all,20,0.9975,0.986159169550173,1.0,,results/analysis/final_v1/results.json all_cells[1261].auroc
+A,AUROC,mixed.C1-XX,L2,leak,auroc,all,20,0.695,0.5051881046536262,0.8581314878892734,,results/analysis/final_v1/results.json all_cells[1263].auroc
+A,paired difference,mixed.C1-XX,L2,net-correlation,auroc difference,all,20,-0.11250000000000004,-0.217687074829932,-0.03402646502835538,,results/analysis/final_v1/results.json contrasts[649].result
+A,AUROC,mixed.C1-XY,L2,net,auroc,all,20,1.0,1.0,1.0,,results/analysis/final_v1/results.json all_cells[1396].auroc
+A,AUROC,mixed.C1-XY,L2,correlation,auroc,all,20,1.0,1.0,1.0,,results/analysis/final_v1/results.json all_cells[1393].auroc
+A,AUROC,mixed.C1-XY,L2,leak,auroc,all,20,0.86,0.7006802721088435,0.9886579521537664,,results/analysis/final_v1/results.json all_cells[1395].auroc
+A,paired difference,mixed.C1-XY,L2,net-correlation,auroc difference,all,20,0.0,0.0,0.0,,results/analysis/final_v1/results.json contrasts[703].result
+B,localisation,core.C1-SS,L1,net,top1,all,20,0.85,0.68,1.0,,results/analysis/final_v1/results.json all_cells[199].top1
+B,localisation,core.C1-SS,L1,correlation,top1,all,20,0.75,0.55,0.9333333333333333,,results/analysis/final_v1/results.json all_cells[196].top1
+B,localisation,core.C1-SS,L1,strength,top1,all,20,1.0,1.0,1.0,,results/analysis/final_v1/results.json all_cells[201].top1
+B,localisation,core.C1-SF,L1,net,top1,all,20,1.0,1.0,1.0,,results/analysis/final_v1/results.json all_cells[400].top1
+B,localisation,core.C1-SF,L1,correlation,top1,all,20,1.0,1.0,1.0,,results/analysis/final_v1/results.json all_cells[398].top1
+B,localisation,core.C1-SF,L1,strength,top1,all,20,0.0,0.0,0.0,,results/analysis/final_v1/results.json all_cells[402].top1
+B,localisation,core.C1-FF,L1,net,top1,all,20,1.0,1.0,1.0,,results/analysis/final_v1/results.json all_cells[466].top1
+B,localisation,core.C1-FF,L1,correlation,top1,all,20,1.0,1.0,1.0,,results/analysis/final_v1/results.json all_cells[464].top1
+B,localisation,core.C1-FF,L1,strength,top1,all,20,0.0,0.0,0.0,,results/analysis/final_v1/results.json all_cells[468].top1
+B,localisation,core.C1-SS,L1,net,top1,judge matched,8,0.875,0.6,1.0,,results/analysis/final_v1/results.json judge_comparisons[7].detector_localisation.top1
+B,localisation,core.C1-SS,L1,correlation,top1,judge matched,8,0.75,0.4,1.0,,results/analysis/final_v1/results.json judge_comparisons[8].detector_localisation.top1
+B,localisation,core.C1-SS,L1,strength,top1,judge matched,8,1.0,1.0,1.0,,results/analysis/final_v1/results.json judge_comparisons[9].detector_localisation.top1
+B,localisation,core.C1-SS,L1,judge:qwen-9b,top1,judge matched,8,0.7916666666666667,0.5,1.0,,results/analysis/final_v1/results.json judge_comparisons[7].judge_localisation.top1
+B,localisation,core.C1-SF,L1,net,top1,judge matched,7,1.0,1.0,1.0,,results/analysis/final_v1/results.json judge_comparisons[28].detector_localisation.top1
+B,localisation,core.C1-SF,L1,correlation,top1,judge matched,7,1.0,1.0,1.0,,results/analysis/final_v1/results.json judge_comparisons[29].detector_localisation.top1
+B,localisation,core.C1-SF,L1,strength,top1,judge matched,7,0.0,0.0,0.0,,results/analysis/final_v1/results.json judge_comparisons[30].detector_localisation.top1
+B,localisation,core.C1-SF,L1,judge:qwen-9b,top1,judge matched,7,0.047619047619047616,0.0,0.1111111111111111,,results/analysis/final_v1/results.json judge_comparisons[28].judge_localisation.top1
+B,localisation,core.C1-FF,L1,net,top1,judge matched,4,1.0,1.0,1.0,,results/analysis/final_v1/results.json judge_comparisons[35].detector_localisation.top1
+B,localisation,core.C1-FF,L1,correlation,top1,judge matched,4,1.0,1.0,1.0,,results/analysis/final_v1/results.json judge_comparisons[36].detector_localisation.top1
+B,localisation,core.C1-FF,L1,strength,top1,judge matched,4,0.0,0.0,0.0,,results/analysis/final_v1/results.json judge_comparisons[37].detector_localisation.top1
+B,localisation,core.C1-FF,L1,judge:qwen-9b,top1,judge matched,4,0.0,0.0,0.0,,results/analysis/final_v1/results.json judge_comparisons[35].judge_localisation.top1
+B,localisation,core.C1-SS,L2,net,top1,all,20,0.7,0.5,0.8888888888888888,,results/analysis/final_v1/results.json all_cells[206].top1
+B,localisation,core.C1-SS,L2,correlation,top1,all,20,1.0,1.0,1.0,,results/analysis/final_v1/results.json all_cells[202].top1
+B,localisation,core.C1-SS,L2,strength,top1,all,20,1.0,1.0,1.0,,results/analysis/final_v1/results.json all_cells[208].top1
+B,localisation,core.C1-SF,L2,net,top1,all,20,0.8,0.6086956521739131,0.9523809523809523,,results/analysis/final_v1/results.json all_cells[406].top1
+B,localisation,core.C1-SF,L2,correlation,top1,all,20,0.9,0.75,1.0,,results/analysis/final_v1/results.json all_cells[403].top1
+B,localisation,core.C1-SF,L2,strength,top1,all,20,0.0,0.0,0.0,,results/analysis/final_v1/results.json all_cells[408].top1
+B,localisation,core.C1-FF,L2,net,top1,all,20,1.0,1.0,1.0,,results/analysis/final_v1/results.json all_cells[472].top1
+B,localisation,core.C1-FF,L2,correlation,top1,all,20,1.0,1.0,1.0,,results/analysis/final_v1/results.json all_cells[469].top1
+B,localisation,core.C1-FF,L2,strength,top1,all,20,0.0,0.0,0.0,,results/analysis/final_v1/results.json all_cells[474].top1
+B,localisation,core.C1-SS,L2,net,top1,judge matched,1,0.0,0.0,0.0,,results/analysis/final_v1/results.json judge_comparisons[10].detector_localisation.top1
+B,localisation,core.C1-SS,L2,correlation,top1,judge matched,1,1.0,1.0,1.0,,results/analysis/final_v1/results.json judge_comparisons[11].detector_localisation.top1
+B,localisation,core.C1-SS,L2,strength,top1,judge matched,1,1.0,1.0,1.0,,results/analysis/final_v1/results.json judge_comparisons[12].detector_localisation.top1
+B,localisation,core.C1-SS,L2,judge:qwen-9b,top1,judge matched,1,1.0,1.0,1.0,,results/analysis/final_v1/results.json judge_comparisons[10].judge_localisation.top1
+B,localisation,core.C1-SF,L2,net,top1,judge matched,3,0.6666666666666666,0.0,1.0,,results/analysis/final_v1/results.json judge_comparisons[31].detector_localisation.top1
+B,localisation,core.C1-SF,L2,correlation,top1,judge matched,3,0.6666666666666666,0.0,1.0,,results/analysis/final_v1/results.json judge_comparisons[32].detector_localisation.top1
+B,localisation,core.C1-SF,L2,strength,top1,judge matched,3,0.0,0.0,0.0,,results/analysis/final_v1/results.json judge_comparisons[33].detector_localisation.top1
+B,localisation,core.C1-SF,L2,judge:qwen-9b,top1,judge matched,3,0.0,0.0,0.0,,results/analysis/final_v1/results.json judge_comparisons[31].judge_localisation.top1
+B,localisation,core.C1-FF,L2,net,top1,judge matched,7,1.0,1.0,1.0,,results/analysis/final_v1/results.json judge_comparisons[38].detector_localisation.top1
+B,localisation,core.C1-FF,L2,correlation,top1,judge matched,7,1.0,1.0,1.0,,results/analysis/final_v1/results.json judge_comparisons[39].detector_localisation.top1
+B,localisation,core.C1-FF,L2,strength,top1,judge matched,7,0.0,0.0,0.0,,results/analysis/final_v1/results.json judge_comparisons[40].detector_localisation.top1
+B,localisation,core.C1-FF,L2,judge:qwen-9b,top1,judge matched,7,0.023809523809523808,0.0,0.08333333333333333,,results/analysis/final_v1/results.json judge_comparisons[38].judge_localisation.top1
+B,honest N0,core.N0,L1,net,any_candidate,all,40,0.025,0.000632744932049419,0.13158585848276572,1,results/analysis/final_v1/results.json all_cells[55].any_candidate
+B,honest N0,core.N0,L2,net,any_candidate,all,40,0.075,0.01574217985104153,0.20386474873289895,3,results/analysis/final_v1/results.json all_cells[62].any_candidate
+B,honest N0,core.N0,L2,leak,any_candidate,all,40,0.1,0.027925415294219307,0.23663739987609986,4,results/analysis/final_v1/results.json all_cells[61].any_candidate
+B,honest N0,core.N0,L2,paper,any_candidate,all,40,1.0,0.9119026971211976,1.0,40,results/analysis/final_v1/results.json all_cells[63].any_candidate
+B,honest N0,core.N0,L1,net,exactly_one_report,all,40,0.025,0.000632744932049419,0.13158585848276572,1,results/analysis/final_v1/results.json all_cells[55].exactly_one_report
+B,honest N0,core.N0,L2,net,exactly_one_report,all,40,0.075,0.01574217985104153,0.20386474873289895,3,results/analysis/final_v1/results.json all_cells[62].exactly_one_report
+B,honest N0,core.N0,L2,leak,exactly_one_report,all,40,0.1,0.027925415294219307,0.23663739987609986,4,results/analysis/final_v1/results.json all_cells[61].exactly_one_report
+B,honest N0,core.N0,L2,paper,exactly_one_report,all,40,1.0,0.9119026971211976,1.0,40,results/analysis/final_v1/results.json all_cells[63].exactly_one_report

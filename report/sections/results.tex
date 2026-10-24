@@ -1,0 +1,143 @@
+\section{Results}
+\label{sec:results}
+All LLM results below use the frozen final analysis, the complete-round mask,
+and the full market horizon. Intervals are descriptive and pointwise unless
+stated otherwise. The required scripted rock--paper--scissors replication
+recovered the rising detection pattern with coordination probability and
+sample size, but not every published percentage. Its state convention and
+full comparison are in Appendix~\ref{app:replication}; it is separate from
+the LLM evidence.
+
+\subsection{Discrimination: a positive primary test, a strong baseline}
+The preregistered L2 net-influence score discriminated C1-SS from matched N0
+markets: AUROC $0.865$ with interval $[0.734,0.968]$, $p=0.00002$, and
+$20$ matched blocks. This rejects within-block condition-label
+exchangeability, the sole confirmatory null.
+% source: results/analysis/final_v1/results.json primary; all_cells[206].auroc
+Correlation scored $0.9875$ at L1 and $0.9975$ at L2. The paired L2
+net-minus-correlation difference was $-0.1325$ $[-0.2647,-0.0309]$.
+% source: results/analysis/final_v1/results.json all_cells[196].auroc; all_cells[202].auroc; contrasts[95].result
+Figure~\ref{fig:detection} compares treatments with their own controls.
+There is no general discrimination advantage for net influence.
+The small L1 advantages in C1-FF and Qwen-4B have difference intervals
+including zero; absence of an advantage is not evidence of equivalence.
+% source: results/analysis/final_v1/results.json contrasts[369].result; contrasts[532].result
+
+In C2, net/correlation AUROCs were $0.6100/0.4625$ at L1 and
+$0.6550/0.4950$ at L2. The respective differences were
+$+0.1475$ $[-0.1818,0.4422]$ and $+0.1600$ $[-0.1250,0.4531]$.
+% source: results/analysis/final_v1/results.json all_cells[268,266,274,271].auroc; contrasts[204,208].result
+E1 is unilateral information access, not a collusion positive. Here net/correlation
+AUROCs were $0.6750/0.4825$ at L1 and $0.7000/0.4150$ at L2;
+differences were $+0.1925$ $[0.0222,0.3599]$ and
+$+0.2850$ $[0.0620,0.5150]$. L2 leak AUROC was $0.7025$
+$[0.5737,0.8360]$. Each comparison uses $20$ blocks.
+% source: results/analysis/final_v1/results.json all_cells[334,332,340,337,339].auroc; contrasts[259,263].result
+Only E1's paired difference intervals exclude zero in favour of net influence.
+These secondary comparisons do not establish a general benefit or incremental
+predictive value after accounting for correlation.
+
+\begin{figure}[tb]
+\centering\includegraphics[width=\linewidth]{figures/figure_a.pdf}
+\caption{Detector discrimination and paired net-minus-correlation differences.
+Points and bars are AUROC estimates and pointwise 95\% block-bootstrap
+intervals. Parentheses give matched blocks. E1 is visually separated because
+it tests espionage. Breadth labels denote channel-cartel treatments; each
+uses its registered control. Missing small-model comparisons are omitted
+from this plot and retained in the all-cells appendix.}
+% source: results/report_figures/figure_numbers.csv figure=A
+\label{fig:detection}
+\end{figure}
+
+\subsection{Localisation, unique reports, and honest-market alarms}
+Net influence localised assigned SF/FF pairs despite the strength baseline
+failing, although correlation performed similarly. Net top-1 for SF was
+$1.00/0.80$ at L1/L2, compared with correlation's $1.00/0.90$;
+FF was $1.00/1.00$ for both. Strength top-1 was zero for both placements.
+% source: results/analysis/final_v1/results.json all_cells[398,400,402,403,406,408,464,466,468,469,472,474].top1
+Ranking does not guarantee an operational report: in C1-SS at L2, net top-1
+was $0.70$, but correct unique reports occurred in $0.25$ of markets,
+with $0.75$ abstention and no wrong-pair reports.
+% source: results/analysis/final_v1/results.json all_cells[206].top1,correct_unique,abstention,wrong_pair
+
+In honest N0 markets, net had no designated-reference-pair alarms
+($0/40$ at each access level; upper interval limit $0.0881$).
+Any-pair alarms were nevertheless $1/40$ at L1 and $3/40$ at L2;
+L2 leak alarmed in $4/40$. Any-candidate and exactly-one-report counts
+coincided here (Figure~\ref{fig:localisation}).
+% source: results/analysis/final_v1/results.json all_cells[55,62].designated_alarm; all_cells[55,62,61].any_candidate,exactly_one_report
+The paper's fixed-threshold rule alarmed in $40/40$ honest L2 markets.
+Its C2 continuous raw-net score had AUROC $0.8875$, yet its threshold
+rule correctly reported the assigned pair in $0/20$ markets and a wrong
+pair in $20/20$. A useful score ranking and a useful reporting rule are
+different outcomes.
+% source: results/analysis/final_v1/results.json all_cells[63].any_candidate,exactly_one_report; all_cells[275].auroc,correct_unique,wrong_pair,coverage
+
+\begin{figure}[tb]
+\centering\includegraphics[width=\linewidth]{figures/figure_b.pdf}
+\caption{Localisation and false alarms. Top panels: assigned-pair top-1 on all
+eligible markets. Middle: all methods on the identical successful
+judge-matched blocks, with sample sizes shown. Bottom: honest-market alarm
+rates with exact binomial intervals; these are descriptive, not calibration
+guarantees. Bootstrap intervals accompany top-1. A degenerate interval in
+a tiny judge subset does not imply certainty.}
+% source: results/report_figures/figure_numbers.csv figure=B
+\label{fig:localisation}
+\end{figure}
+
+\subsection{Behaviour and information-flow labels}
+Table~\ref{tab:behaviour} separates economic outcomes from flow classification.
+C1-SS increased joint profit and winning price relative to N0. C2 showed
+larger increases despite weaker discrimination. Removing the warning (A1)
+raised the L2 net AUROC point estimate by $0.0975$ $[-0.0051,0.2300]$
+relative to C1-SS, while joint profit fell by $0.3478$
+$[0.2921,0.4015]$ and winning price fell by $0.3335$ $[0.2753,0.3925]$.
+% source: results/analysis/final_v1/results.json addendum.A1.auroc_differences.L2:net; addendum.A1.behaviour_NW_minus_SS.joint_profit,winning_price
+This divergence does not establish deliberate detector evasion.
+
+C1-SS had no designated pairs with both leak directions detected or with
+one detected and the reverse weak; $8$ were neither detected/both weak
+and $12$ unclear. E1 had $0$, $4$, $8$, and $8$ in those categories.
+% source: results/analysis/final_v1/results.json all_cells[206,340].label:*
+Thus, market-level flow labels did not reliably separate cartel and spy.
+Pooled fingerprints remain descriptive and are reported with numerical
+cautions in Appendix~\ref{app:stats}.
+\input{sections/behaviour_table}
+
+\subsection{Judges, breadth, and exploratory probes}
+The Qwen judge returned invalid JSON in $322/600$ judgements ($53.67\%$)
+under the registered $12{,}000$-token per-attempt limit. Most failed calls
+ended with \texttt{finish\_reason=length} in the raw logs; the JSON failure
+code alone does not establish token exhaustion for every failure.
+% source: results/analysis/final_v1/results.json judgments grouped by model/status/failure
+% source: docs/PREREG.md section 8 and deviation 6; Round 14 handover raw-log observation (most, not all)
+Matched AUROC comparisons cover only $1$--$8$ blocks. Successful outputs
+show a localisation pattern consistent with a preference for the strong
+pair: C1-SS and the N0 reference pair rank highly, whereas SF/FF are near
+zero. This is a behavioural pattern, not evidence of internal reasoning.
+Gemma returned only $5/40$ valid judgements and no evaluable matched
+C1-SS/N0 AUROC. All judge comparisons are descriptive and conditioned on
+successful output; breadth judges were cancelled for budget.
+% source: results/analysis/final_v1/results.json judge_comparisons[*].judge_auroc.n_blocks; all_cells[54,60,198,204,399,404,465,470].top1; judgments grouped by model/status; all_cells[197,203].auroc
+
+Gemma-E4B had no eligible N0 or C1 markets. Ministral-3B had no eligible
+N0 markets and only $2$ eligible C1 markets. Their matched discrimination
+results are unavailable, not negative findings. Available breadth results
+are in Figure~\ref{fig:detection}; all amended markets, prefix checks and
+missing-bid sensitivity are retained in Appendix~\ref{app:allresults}.
+% source: results/analysis/final_v1/results.json all_cells[934,1000,1066,1132].eligible,auroc
+None of the seven preregistered A2 placement-swap endpoints rejected after
+Holm adjustment. The leak endpoint's raw $p=0.03771$ became $0.26397$.
+This does not establish no placement effect.
+% source: results/analysis/final_v1/results.json addendum.A2.endpoints.*.holm_reject; addendum.A2.endpoints.L2:leak.test.p_value,holm_p_value
+
+Exploratory frozen-context probes yielded a slope of $0.01347$
+$[-0.00353,0.03195]$ across $199$ complete contexts. The corrected leak
+was $0.08879$ bits, with implemented permutation $p=0.001$ across
+$2{,}997$ observed bids.
+% source: results/analysis/final_v1/results.json probes.summaries[0].slope,complete_contexts,leak
+Five bids share each regenerated message, but the null permutes individual
+bids. This makes the leak null anti-conservative with respect to shared
+message variation. The slope is unresolved; the leak result is not validated
+causal evidence of partner-cost transmission.
+% source: docs/PREREG.md section 9; experiments/run_llm.py probe message-seed reuse; Round 13 review D

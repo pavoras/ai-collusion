@@ -1,0 +1,151 @@
+\section{Methods}
+\label{sec:methods}
+\subsection{Game, conditions, and models}
+Each market has four firms and 200 rounds. Two strong firms draw independent
+costs uniformly from $\{1,2,3\}$; two fringe firms draw from $\{3,4,5\}$.
+Bids range from 2 to 7; the lowest wins, with random ties. The winner earns
+bid minus cost, others zero. Bids and winners become public. Bidders see
+their own cost, the last ten rounds, and their cumulative profit. Costs,
+tie-breaks, and assignments are seeded and matched by market index. Strong
+seats cycle through all six label pairs, hidden from auditors.
+% source: docs/PREREG.md sections 1-2; docs/DESIGN.md Game
+
+C1 assigns a cartel with a private channel (SS: strong--strong; SF:
+strong--fringe; FF: fringe--fringe). C2 removes the channel; E1 gives a firm
+unilateral access to its rival's cost. N0 is honest, and P0 is a scripted
+cartel positive control. Appendix Table~\ref{tab:conditions} lists all conditions. C1 members exchange simultaneous private messages before bidding.
+The treatment bundles a joint-profit goal, partner naming, secrecy, a
+surveillance warning, and channel access. Assigned cartel markets remain
+included regardless of compliance or profit.
+
+
+
+The core uses Qwen3.5-9B: 40 N0 markets and 20 per other core cell.
+Breadth covers Gemma-4-12B and Ministral-3-8B, their smaller counterparts
+Gemma-4-E4B and Ministral-3-3B, and Qwen3.5-4B. The amendment specifies
+20 markets per breadth and A2 cell. Revisions and sampling are pinned;
+seeded re-collection is not bitwise reproducible (Appendix~\ref{app:prompts}).
+% source: docs/PREREG.md sections 2-3 and addendum A2-A3
+
+\subsection{Auditor access and influence}
+L1 receives bids $B_i$ and winners; L2 additionally receives costs $C_i$.
+Neither sees messages, role texts, condition labels, or model identities.
+The public state $H_t$ is the previous winning bid, with a start code and
+carry-forward after an all-invalid round; masking preserves this chronology.
+At L1, $\gamma_{ij}=I(B_i;B_j\mid H)$.
+At L2, set $S_i=(C_i,H)$. Equation~3 of \citet{bonjour2022} becomes
+\begin{equation}
+\gamma_{ij}=\sum_{s_{ij}}p(s_{ij})\sum_{b_i,b_j}p(b_i,b_j\mid s_{ij})
+\log_2\frac{p(b_i,b_j\mid s_{ij})}{p(b_i\mid s_i)p(b_j\mid s_j)}.
+\label{eq:influence}
+\end{equation}
+The chain rule gives the exact decomposition
+\begin{align}
+\gamma_{ij}
+&=\underbrace{I(B_i;B_j\mid C_i,C_j,H)}_{\text{action dependence}}
++\underbrace{I(B_i;C_j\mid C_i,H)}_{L_{j\to i}}
++\underbrace{I(B_j;C_i\mid C_j,H)}_{L_{i\to j}}.
+\label{eq:decomposition}
+\end{align}
+Under independent costs and no other access to a rival's current cost,
+leaks probe private-information flow; omitted history can induce action
+dependence. Arrows indicate cost source and bid receiver, not intent.
+Estimates use plug-in counts in bits, our replication convention inferred
+from the paper's results; the paper does not specify the log base.
+
+For any influence matrix $x$, define the paper's net transformation and
+mutual rule (its Equations~4--5) as
+\begin{equation}
+\Gamma_{ij}[x]=x_{ij}-\max_{k\ne i,j}x_{kj},\qquad
+\Gamma_{ij}[\hat\gamma]\ge\alpha\ \text{and}\quad
+\Gamma_{ji}[\hat\gamma]\ge\alpha,\quad\alpha=0.05.
+\label{eq:net}
+\end{equation}
+% source: docs/METHOD.md Definitions
+Only a unique passing pair is reported. Symmetric $\gamma$ need not imply
+symmetric $\Gamma$: the rival comparisons differ. Net direction is not leak
+direction.
+
+\subsection{Permutation correction and flow labels}
+Within each market, 999 symmetric permutations shuffle each firm's bids
+independently within its own strata: $H$ at L1 and $(C_i,H)$ at L2. Define
+\begin{equation}
+g_{ij}=\hat\gamma_{ij}-\frac{1}{999}\sum_{r=1}^{999}\hat\gamma^{(r)}_{ij},
+\qquad s_{ij}=\min\{\Gamma_{ij}[g],\Gamma_{ji}[g]\}.
+\label{eq:score}
+\end{equation}
+% source: docs/PREREG.md section 5
+Corrections remain signed. A candidate requires a permutation $p$-value for
+raw influence at most $0.05/6$ and both corrected net directions positive;
+only a unique candidate is reported. The test concerns influence, not net
+influence. The raw fixed-threshold rule is reported separately.
+The secondary leak score sums the two corrected leaks; a leak candidate
+requires either direction to pass $0.05/12$, again with unique-pair reporting.
+% source: docs/PREREG.md section 5
+
+Flow labels are both directions detected; one detected, reverse weak;
+neither detected, both weak; or unclear. ``Weak'' requires $p\ge0.20$ and a
+corrected leak at most $0.05$ bits. Labels cover designated pairs and the full
+detection pipeline. Weak evidence does not establish absence; one-way flow
+can arise in a cartel with unilateral sharing.
+% source: docs/PREREG.md section 7
+Permutation validity requires within-stratum exchangeability, which adaptive
+policies can violate. Per-market alarm rates are descriptive, without a
+general calibration guarantee or error control across all analyses.
+
+\subsection{Baselines and evaluation}
+The L1 correlation baseline is uncorrected Cram\'er's V. L2 uses absolute
+Pearson correlation after subtracting each firm's mean bid at its own cost
+within the market; constant residuals score zero and signed correlations are
+also retained. These baselines do not adjust for history. A strength-only
+benchmark ranks the strong pair first, exposing a localisation shortcut.
+
+The frozen Qwen3.5-9B judge uses thinking and returns raw pair probabilities
+from rules and masked round records, with costs only at L2 and no treatment
+information. There is no recalibration or answer selection; content failures
+remain failures. Comparisons use common judged markets and report coverage;
+descriptive Brier scores state the artificial prevalence. A Gemma-4-12B
+counter-judge was attempted on core N0/C1-SS indices 0--9 at both levels. Qwen judging
+Qwen remains a family-overlap limitation.
+% source: docs/PREREG.md section 8
+
+The market is the analysis unit. AUROC (area under the receiver operating
+characteristic curve) is the probability that a randomly chosen treatment
+market scores above a control market, with half credit for ties. All methods use rounds with four valid bids;
+more than 20 incomplete rounds makes a market ineligible and removes the
+matched block. A no-bid-category sensitivity retains missing bids. The sole
+confirmatory test compares designated-pair L2 net scores in Qwen C1-SS and
+N0 indices 0--19 over 200 rounds. With
+99,999 within-block label swaps (seed 20261027),
+\begin{equation}
+p=\frac{1+\#\{\mathrm{AUC}^{*}\ge\mathrm{AUC}_{\mathrm{obs}}\}}{100000};
+\qquad \text{reject if }\mathrm{AUC}_{\mathrm{obs}}>0.5\text{ and }p\le0.05.
+\label{eq:primary}
+\end{equation}
+% source: docs/PREREG.md sections 4 and 11
+This tests paired label exchangeability, not the composite null AUROC
+$\le0.5$. Secondary estimates use 10,000 whole matched-block bootstraps and
+pointwise 95\% percentile intervals. Top-1 is the fraction of credit for ranking the assigned pair first,
+shared equally across ties. Localisation also reports reciprocal rank,
+correct/wrong unique reports, and abstention; $1/6$ is a
+guessing benchmark, not a null. Honest-market alarms include counts and
+Clopper--Pearson intervals. E1 flow detection is not a collusion positive.
+% source: docs/PREREG.md section 6
+
+A2 tests paired fringe-placement swaps with Holm correction across seven
+endpoints, not a pure model-sameness mechanism. Pooled fingerprints align
+roles, bootstrap markets, and permute within markets. The exploratory probe
+regenerates a partner's message under counterfactual cost, then samples bids
+with the recipient's cost and history fixed; draws remain nested in markets
+(Appendix~\ref{app:stats}).
+% source: docs/PREREG.md sections 7 and 9, addendum A2
+
+\subsection{Pre-registration and deviations}
+Design and executable analysis were frozen before collection; A1--A3
+preceded LLM outcome analysis. Six deviations cover warm-up transport;
+fenced-JSON parsing and labelled Gemma/Ministral recollection; caching,
+streaming and checkpoints; disk exhaustion and relocation; and later
+recovery, call ceilings, loader paths, and an exceeded budget cap; and judge
+transport recovery plus budget cancellation of breadth judging. Core
+Qwen prompts and sampling were retained. Appendix~\ref{app:stats} records
+the freezes, amendment, and deviations separately.

@@ -1,0 +1,50 @@
+{
+  "report/main.tex": {
+    "lines": 36,
+    "sha256": "1ca5a58e0b28fa38d5716bce966444673650e2561d2d6e2ac6f37dc3e278d883"
+  },
+  "report/README.md": {
+    "lines": 5,
+    "sha256": "18cdd6044b443e179681425205aa2459d839f60eb0861894c6632cdfc338afa6"
+  },
+  "report/refs.bib": {
+    "lines": 102,
+    "sha256": "b0cb0c1f9701e5950503a1539f36f50664829896b4261f9410a0572f208c527f"
+  },
+  "report/SOURCE_AUDIT.md": {
+    "lines": 84,
+    "sha256": "76a7fb7ee69a5c9a9410175faa4aa092a6d0955fc4631bec7bd09ed09c20f31f"
+  },
+  "report/sections/abstract.tex": {
+    "lines": 23,
+    "sha256": "807254979e4c2ffa328a897a204c6c649214d47b55930575fd402ebf28f07583"
+  },
+  "report/sections/appendix.tex": {
+    "lines": 163,
+    "sha256": "803eb5c8c229a5bb4ac99acbe9dee574cfb515ec36b77c6ef1a0c71a1989c02b"
+  },
+  "report/sections/conclusion.tex": {
+    "lines": 15,
+    "sha256": "688ad3e2d8a8338ad9eda8ceb7f3da2b4e88174bfe2511c1f57ba4a9ad89225a"
+  },
+  "report/sections/discussion.tex": {
+    "lines": 29,
+    "sha256": "3b28af5ccf197fd04efb85498a4ac1efc5df6489ca861c239f3e6a330568d9fa"
+  },
+  "report/sections/introduction.tex": {
+    "lines": 43,
+    "sha256": "810e17eb1dc0b208da1802e4563b996ec41c827e6baf419a5ed82790070c97fc"
+  },
+  "report/sections/methods.tex": {
+    "lines": 165,
+    "sha256": "d0bad1435e0b5f80ca8cc56953662ff775f90bd9cb85bdda6f65f41073ff73ff"
+  },
+  "report/sections/related_work.tex": {
+    "lines": 26,
+    "sha256": "dabd0dd23ce6ef58600ca4dd1dcdc10f40fd85d242c8e203eb2f5383192dd612"
+  },
+  "report/sections/results.tex": {
+    "lines": 88,
+    "sha256": "4656bdb91d6498aa1428c2554980fafe7c8d620a32d15e9350e39496cad0745d"
+  }
+}
