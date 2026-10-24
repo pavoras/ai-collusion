@@ -262,7 +262,7 @@ were reconciled. New run identifiers reused completed cached requests.
 \item Later recovery addressed drive-specific guards, preemption, warm-up
 caps, ledger contention, call ceilings and judge timeouts. The loader's
 containment check was changed to accept the raw-data junction. The original
-budget cap was exceeded and raised; final spend must come from billing.
+budget cap was exceeded and raised; total Modal billing was USD 70.35.
 \item Breadth judges were cancelled for budget, while core, A1, A2 and the
 Gemma counter-judge were completed as attempted judgements. Memory failures
 and interrupted judge streams were reconciled; autoscaling was pinned for
@@ -350,9 +350,10 @@ better evaluation, rather than to offer a covert-coordination recipe.
 Collection used cloud-hosted open-weight models; interruptions, retries,
 idle time, and judging contribute to resource use. The registered budget
 cap was exceeded, so the initial budget is not an account of actual spend.
-\todo{Marvin: insert exact final Modal billing total (approximately USD 71
-reported in the handover), billing window, and GPU time if available.}
-% source: Round 14 handover; exact billing pending, not an analysis estimate
+Total Modal billing for the project was USD 70.35 as of 24 October 2026,
+covering deployment, pilot, collection, judging and probes (all runs had
+ended by then).
+% source: Modal billing dashboard, read by the author on 24 Oct 2026; not an analysis estimate
 Inference seeds and pinned configurations do not ensure identical outputs
 on re-collection. Logs and released data support analysis reproduction;
 unreconciled attempts, parser changes, and missing judgements must remain

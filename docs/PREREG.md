@@ -436,7 +436,8 @@ manifest hash and is made before any addition is collected and before any LLM ou
    (h) Budget: the hard cap of 50 $ ("Hard cap unchanged at 50 $", Addendum) was exceeded. Real cost per call was
    above the projection (idle and cold-start billing, invalid-answer retries, the restarts above). Marvin raised
    the limit to about 60 $ overnight and later set the cut point at a 70 $ projection (Modal credit 80 $). No cell
-   was cut at that point. Actual spend is reported from Modal billing.
+   was cut at that point. Actual spend from Modal billing: 70.35 $ in total as of 24.10.2026, after all runs had
+   ended (read by Marvin from the Modal dashboard).
 6. **24.10.2026 11:45-15:00, judge phase (no change to any judge request, prompt, seed or sampling).** (a) A
    judgement costs about 18k generated tokens (two registered attempts often run to max_tokens 12,000), about
    twice the projection. To stay below 80 $, Marvin cut the breadth judges (labs, mixed, sizes, markets 0-19) at
