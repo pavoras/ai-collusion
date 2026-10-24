@@ -220,7 +220,7 @@ def compact_record(data, metadata, cell, *, legacy_fake=False):
                         bids, costs, winners, payoffs, complete, assignment, data, metadata, cell["rounds"])
 
 
-def load_collection(root, manifest_path, *, legacy_fake=False):
+def load_collection(root, manifest_path, *, legacy_fake=False, run_index=None):
     """Load only enumerated run directories; reject undeclared/duplicate markets."""
     root, manifest_path = Path(root), Path(manifest_path)
     manifest = read_json(manifest_path)
@@ -229,7 +229,7 @@ def load_collection(root, manifest_path, *, legacy_fake=False):
     registry = manifest_registry(manifest)
     records, seen = [], set()
     # A run index is explicit: directories outside it are never searched.
-    run_index = read_json(root / "analysis_runs.json")
+    run_index = read_json(Path(run_index) if run_index else root / "analysis_runs.json")
     if run_index.get("deviation_cells"):
         deviations = run_index["deviation_cells"]
         if any(c.get("cohort", "registered") == "registered" or not c.get("deviation_reason") for c in deviations):

@@ -372,6 +372,45 @@ manifest hash and is made before any addition is collected and before any LLM ou
   (2,000 cohorts, 99,999 swaps): endpoint rejection rates 4.25-5.70 %, Holm family rate 4.05 %
   (`results/analysis_dev/addendum_v2/`).
 
+## Addendum v2.2 (24.10.2026, evening; written before any replication data were collected)
+
+Purpose: an out-of-sample replication of the two descriptive secondary findings of `final_v1` on fresh markets.
+The `final_v1` results are known at this point; this addendum is therefore a replication of observed patterns,
+not a blind test of the original design. Marvin decided the scope (E1 and C2 first; C1-SS only if budget remains).
+
+- **Cohort and cells.** Separate named cohort `replication`, declared through the frozen loader's
+  `deviation_cells` mechanism in a separate run index `results/analysis_runs_v22.json` (the `final_v1` index is
+  left unchanged). The statistics of freeze `4c4b6f1` are not changed; the only code change is a CLI option
+  `--run-index` that lets `analyze_llm.py` read that separate index (paths stay relative to `--input results`). Cells `rep.E1` and `rep.C2` (and, conditionally, `rep.C1-SS`) use the same condition, model (Qwen3.5-9B),
+  prompts, sampling, parse version 1, run seed 20261023, 200 rounds and assignment rule as `core.E1`, `core.C2` and
+  `core.C1-SS`, on **market indices 20-39**, which were never collected for these conditions. Costs are drawn per
+  market index, so each new market shares its cost sequence with the matched control market (as in the design).
+- **Matched control.** `rep.N0` = the registered N0 markets 20-39 (run `core_N0_v1`, already collected). These
+  controls were already used in the honest-market false-alarm analysis; only the treatment markets are new.
+- **Endpoints** (prefix 200, complete mask, frozen code: 10,000 resamples of whole matched blocks, seed 20261028).
+  Each finding is judged on its own; there is no multiplicity correction across R1 and R2, because they are
+  distinct claims. All endpoints are reported whatever the outcome.
+  - **R1 (E1: net influence beats same-access correlation).** Contrast `L2:net minus L2:correlation` for `rep.E1`.
+    Replicated if the 95 % interval's lower bound is above 0 (original: 0.285 [0.062, 0.515]). R1b: the same for
+    L1 (original 0.1925 [0.022, 0.360]).
+  - **R2 (C2: largest profit uplift).** Behaviour `joint_profit` paired difference `rep.C2` minus `rep.N0`.
+    Replicated if the lower bound is above 0 (original 0.399 [0.364, 0.434]).
+  - **R3 (C2 detection, descriptive).** `rep.C2` L1/L2 AUROCs of net, correlation, leak and paper, and the contrast
+    `L2:net minus L2:correlation` (original 0.16, interval including 0). No decision rule.
+  - **R4 (conditional on budget: C1-SS).** `rep.C1-SS` L2 net AUROC versus `rep.N0`; replicated if the lower bound
+    is above 0.5 (original 0.865 [0.734, 0.968]). The within-block swap test is computed by the frozen code only for
+    the registered primary cohort, so R4 uses the bootstrap interval. If collected, the frozen code also reports
+    `C1-SS minus C2` contrasts within the cohort.
+- **Power.** If the true E1 difference equalled the original estimate with a similar standard error (about 0.115),
+  the chance that the lower bound exceeds 0 is roughly 70 %; a failed replication is not evidence of no effect, and
+  the original estimate may be inflated by selection (it was the one cell that stood out).
+- **Exclusions and missing data** as registered (section 11); no replacement markets.
+- **Budget.** Estimated 2-4 USD for E1 and C2 (32,000 bid calls; pilot rate about 36,000 calls per GPU-hour on one
+  L40S at 1.95 USD/h, plus warm-up and idle). Hard stop: total Modal billing 78 USD (credit 80 USD).
+- **Order.** Dry run (fake backend, no cost) of the full pipeline including this analysis path, then E1 and C2
+  together, then (Addendum v2.3, written before its data) a judge token-budget sensitivity check, then C1-SS if
+  budget remains.
+
 ## Deviations
 
 1. **23.10.2026, transport fix before any data (no change to design, prompts, sampling or analysis).** The first

@@ -82,7 +82,7 @@ def main(args):
             raise ValueError("--input and --manifest are required outside development")
         collection, manifest_path = args.input, args.manifest
         output = ROOT / "results/analysis" / args.name
-    markets, manifest = load_collection(collection, manifest_path, legacy_fake=args.legacy_fake)
+    markets, manifest = load_collection(collection, manifest_path, legacy_fake=args.legacy_fake, run_index=args.run_index)
     if args.blind:
         print(json.dumps(operational_report(markets, manifest), indent=2))
         return
@@ -115,6 +115,7 @@ if __name__ == "__main__":
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--input", type=Path)
     parser.add_argument("--manifest", type=Path)
+    parser.add_argument("--run-index", type=Path, help="run index JSON (default: INPUT/analysis_runs.json); paths stay relative to --input")
     parser.add_argument("--judges", type=Path)
     parser.add_argument("--probes", type=Path)
     parser.add_argument("--legacy-fake", action="store_true")
