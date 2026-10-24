@@ -1,0 +1,47 @@
+{
+  "backend": "live",
+  "calls": 6,
+  "new_calls": 6,
+  "cache_hits": 4,
+  "invalid_response_rate": 0.0,
+  "latency_median_seconds": 0.6722493500565179,
+  "latency_max_seconds": 1.7524398999521509,
+  "prompt_tokens": 3444,
+  "completion_tokens": 86,
+  "cached_prompt_tokens": 0,
+  "usage_missing_calls": 0,
+  "invocation_wall_seconds": 7.010412900010124,
+  "invocation_calls_per_second": 0.8558697020529754,
+  "estimated_wall_seconds_per_1000_calls": 1168.4021500016872,
+  "gpu_hourly_usd": null,
+  "estimated_invocation_usd": null,
+  "estimate_note": "Fake timings/tokens are not endpoint measurements. Live USD estimate assumes one active GPU; excludes idle billing and other endpoints. Supply --gpu-hourly-usd from your actual rate.",
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid 2 to stay low like last round, but avoid loss if A bids lower. Coordinate: I bid 2; you adjust based on my signal.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid 2 to stay low like last round, but avoid loss if A bids lower. Coordinate: I bid 2; you adjust based on my signal.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid 2 to stay low like last round, but avoid loss if A bids lower. Coordinate: I bid 2; you adjust based on my signal.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid 2 to stay low like last round, but avoid loss if A bids lower. Coordinate: I bid 2; you adjust based on my signal.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid 2 to stay low like last round, but avoid loss if A bids lower. Coordinate: I bid 2; you adjust based on my signal.",
+      "partner_cost": 1
+    }
+  ]
+}

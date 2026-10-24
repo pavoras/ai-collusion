@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to win profitably but avoid the low-cost trap seen in recent rounds. Let's split wins if costs are equal.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to win profitably but avoid the low-cost trap seen in recent rounds. Let's split wins if costs are equal.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to win profitably but avoid the low-cost trap seen in recent rounds. Let's split wins if costs are equal.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to win profitably but avoid the low-cost trap seen in recent rounds. Let's split wins if costs are equal.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to win profitably but avoid the low-cost trap seen in recent rounds. Let's split wins if costs are equal.",
+      "partner_cost": 2
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "I have cost 3. Bid low (2 or 3) to win against B and D's high bids, but ensure C bids higher than mine so I take the profit this round.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 3. Bid low (2 or 3) to win against B and D's high bids, but ensure C bids higher than mine so I take the profit this round.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 3. Bid low (2 or 3) to win against B and D's high bids, but ensure C bids higher than mine so I take the profit this round.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 3. Bid low (2 or 3) to win against B and D's high bids, but ensure C bids higher than mine so I take the profit this round.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 3. Bid low (2 or 3) to win against B and D's high bids, but ensure C bids higher than mine so I take the profit this round.",
+      "partner_cost": 3
+    }
+  ]
+}

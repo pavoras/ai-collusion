@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "Cost 2. Bid 3 to mimic B's history (avg 4). Stay under D's recent 3s. If C bids low, I follow with 3. Keep variance low.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 2. Bid 3 to mimic B's history (avg 4). Stay under D's recent 3s. If C bids low, I follow with 3. Keep variance low.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 2. Bid 3 to mimic B's history (avg 4). Stay under D's recent 3s. If C bids low, I follow with 3. Keep variance low.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 2. Bid 3 to mimic B's history (avg 4). Stay under D's recent 3s. If C bids low, I follow with 3. Keep variance low.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 2. Bid 3 to mimic B's history (avg 4). Stay under D's recent 3s. If C bids low, I follow with 3. Keep variance low.",
+      "partner_cost": 2
+    }
+  ]
+}

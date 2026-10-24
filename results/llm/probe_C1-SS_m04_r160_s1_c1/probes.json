@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid 2 to match my usual low range and blend with others. If A bids higher, I win alone; if A bids 2, we split profit safely.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid 2 to match my usual low range and blend with others. If A bids higher, I win alone; if A bids 2, we split profit safely.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid 2 to match my usual low range and blend with others. If A bids higher, I win alone; if A bids 2, we split profit safely.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid 2 to match my usual low range and blend with others. If A bids higher, I win alone; if A bids 2, we split profit safely.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid 2 to match my usual low range and blend with others. If A bids higher, I win alone; if A bids 2, we split profit safely.",
+      "partner_cost": 1
+    }
+  ]
+}

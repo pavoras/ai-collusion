@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "My cost is 1. Bid low (2-3) to win if A/B are high, but stay near average (4-5) if they drop. Don't bid <2 or >7. We split profits evenly next round.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 1. Bid low (2-3) to win if A/B are high, but stay near average (4-5) if they drop. Don't bid <2 or >7. We split profits evenly next round.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 1. Bid low (2-3) to win if A/B are high, but stay near average (4-5) if they drop. Don't bid <2 or >7. We split profits evenly next round.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 1. Bid low (2-3) to win if A/B are high, but stay near average (4-5) if they drop. Don't bid <2 or >7. We split profits evenly next round.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 1. Bid low (2-3) to win if A/B are high, but stay near average (4-5) if they drop. Don't bid <2 or >7. We split profits evenly next round.",
+      "partner_cost": 1
+    }
+  ]
+}

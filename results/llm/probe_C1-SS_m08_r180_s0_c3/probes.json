@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid low to win if A/C are high, but avoid losing money. If we lose, bid just above the second lowest to minimize loss and stay under scrutiny.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid low to win if A/C are high, but avoid losing money. If we lose, bid just above the second lowest to minimize loss and stay under scrutiny.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid low to win if A/C are high, but avoid losing money. If we lose, bid just above the second lowest to minimize loss and stay under scrutiny.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid low to win if A/C are high, but avoid losing money. If we lose, bid just above the second lowest to minimize loss and stay under scrutiny.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid low to win if A/C are high, but avoid losing money. If we lose, bid just above the second lowest to minimize loss and stay under scrutiny.",
+      "partner_cost": 3
+    }
+  ]
+}

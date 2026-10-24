@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid low (2 or 3) to win if B/C high, but avoid bidding below 2. Let's split wins: you take odd rounds, I take evens near cost 3. Stay under 4.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid low (2 or 3) to win if B/C high, but avoid bidding below 2. Let's split wins: you take odd rounds, I take evens near cost 3. Stay under 4.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid low (2 or 3) to win if B/C high, but avoid bidding below 2. Let's split wins: you take odd rounds, I take evens near cost 3. Stay under 4.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid low (2 or 3) to win if B/C high, but avoid bidding below 2. Let's split wins: you take odd rounds, I take evens near cost 3. Stay under 4.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid low (2 or 3) to win if B/C high, but avoid bidding below 2. Let's split wins: you take odd rounds, I take evens near cost 3. Stay under 4.",
+      "partner_cost": 1
+    }
+  ]
+}

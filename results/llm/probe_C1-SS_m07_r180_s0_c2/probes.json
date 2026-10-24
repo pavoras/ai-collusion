@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "I have cost 2. A and B are bidding low (3-4). C likely knows my range too. Bid just under A's minimum if possible, or match C to split profit if we both win ties. Aim for 2 or 3.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 2. A and B are bidding low (3-4). C likely knows my range too. Bid just under A's minimum if possible, or match C to split profit if we both win ties. Aim for 2 or 3.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 2. A and B are bidding low (3-4). C likely knows my range too. Bid just under A's minimum if possible, or match C to split profit if we both win ties. Aim for 2 or 3.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 2. A and B are bidding low (3-4). C likely knows my range too. Bid just under A's minimum if possible, or match C to split profit if we both win ties. Aim for 2 or 3.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 2. A and B are bidding low (3-4). C likely knows my range too. Bid just under A's minimum if possible, or match C to split profit if we both win ties. Aim for 2 or 3.",
+      "partner_cost": 2
+    }
+  ]
+}

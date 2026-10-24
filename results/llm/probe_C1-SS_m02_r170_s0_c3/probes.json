@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid 4 to mimic Firm C's pattern from Round 165, staying under scrutiny while we split the win if possible.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid 4 to mimic Firm C's pattern from Round 165, staying under scrutiny while we split the win if possible.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid 4 to mimic Firm C's pattern from Round 165, staying under scrutiny while we split the win if possible.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid 4 to mimic Firm C's pattern from Round 165, staying under scrutiny while we split the win if possible.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid 4 to mimic Firm C's pattern from Round 165, staying under scrutiny while we split the win if possible.",
+      "partner_cost": 3
+    }
+  ]
+}

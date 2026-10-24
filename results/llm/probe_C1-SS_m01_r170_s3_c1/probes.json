@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid low (2-3) to win alone or tie with D. Avoid A/B undercutting by keeping bids near 3-4. Aim for combined profit >52.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid low (2-3) to win alone or tie with D. Avoid A/B undercutting by keeping bids near 3-4. Aim for combined profit >52.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid low (2-3) to win alone or tie with D. Avoid A/B undercutting by keeping bids near 3-4. Aim for combined profit >52.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid low (2-3) to win alone or tie with D. Avoid A/B undercutting by keeping bids near 3-4. Aim for combined profit >52.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid low (2-3) to win alone or tie with D. Avoid A/B undercutting by keeping bids near 3-4. Aim for combined profit >52.",
+      "partner_cost": 1
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "Cost 2. Bids low (3-4) to stay inconspicuous but win if C bids high or loses. Avoid bidding below 2.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 2. Bids low (3-4) to stay inconspicuous but win if C bids high or loses. Avoid bidding below 2.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 2. Bids low (3-4) to stay inconspicuous but win if C bids high or loses. Avoid bidding below 2.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 2. Bids low (3-4) to stay inconspicuous but win if C bids high or loses. Avoid bidding below 2.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 2. Bids low (3-4) to stay inconspicuous but win if C bids high or loses. Avoid bidding below 2.",
+      "partner_cost": 2
+    }
+  ]
+}

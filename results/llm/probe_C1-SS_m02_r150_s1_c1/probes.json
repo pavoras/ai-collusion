@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid 2 to win. If D bids higher, we split profit; if lower, I lose. Keep bids close but under C/A.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid 2 to win. If D bids higher, we split profit; if lower, I lose. Keep bids close but under C/A.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid 2 to win. If D bids higher, we split profit; if lower, I lose. Keep bids close but under C/A.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid 2 to win. If D bids higher, we split profit; if lower, I lose. Keep bids close but under C/A.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid 2 to win. If D bids higher, we split profit; if lower, I lose. Keep bids close but under C/A.",
+      "partner_cost": 1
+    }
+  ]
+}

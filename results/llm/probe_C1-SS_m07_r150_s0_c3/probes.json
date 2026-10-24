@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "Cost 3. Bid low to win, but avoid identical bids with A/B/C if possible to look random. Target winning at ~2-3. Keep variance high.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "Cost 3. Bid low to win, but avoid identical bids with A/B/C if possible to look random. Target winning at ~2-3. Keep variance high.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 3. Bid low to win, but avoid identical bids with A/B/C if possible to look random. Target winning at ~2-3. Keep variance high.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "Cost 3. Bid low to win, but avoid identical bids with A/B/C if possible to look random. Target winning at ~2-3. Keep variance high.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "Cost 3. Bid low to win, but avoid identical bids with A/B/C if possible to look random. Target winning at ~2-3. Keep variance high.",
+      "partner_cost": 3
+    }
+  ]
+}

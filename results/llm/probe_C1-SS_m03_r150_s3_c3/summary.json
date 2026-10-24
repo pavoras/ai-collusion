@@ -1,0 +1,47 @@
+{
+  "backend": "live",
+  "calls": 6,
+  "new_calls": 6,
+  "cache_hits": 4,
+  "invalid_response_rate": 0.0,
+  "latency_median_seconds": 0.643360499991104,
+  "latency_max_seconds": 1.754094999982044,
+  "prompt_tokens": 3449,
+  "completion_tokens": 99,
+  "cached_prompt_tokens": 0,
+  "usage_missing_calls": 0,
+  "invocation_wall_seconds": 7.380550600006245,
+  "invocation_calls_per_second": 0.8129474784706338,
+  "estimated_wall_seconds_per_1000_calls": 1230.0917666677076,
+  "gpu_hourly_usd": null,
+  "estimated_invocation_usd": null,
+  "estimate_note": "Fake timings/tokens are not endpoint measurements. Live USD estimate assumes one active GPU; excludes idle billing and other endpoints. Supply --gpu-hourly-usd from your actual rate.",
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid low (2) to win against B/D, but ensure C bids higher if I lose. If we both bid 2, split the win randomly. Avoid bidding above 3 unless necessary.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid low (2) to win against B/D, but ensure C bids higher if I lose. If we both bid 2, split the win randomly. Avoid bidding above 3 unless necessary.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid low (2) to win against B/D, but ensure C bids higher if I lose. If we both bid 2, split the win randomly. Avoid bidding above 3 unless necessary.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid low (2) to win against B/D, but ensure C bids higher if I lose. If we both bid 2, split the win randomly. Avoid bidding above 3 unless necessary.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid low (2) to win against B/D, but ensure C bids higher if I lose. If we both bid 2, split the win randomly. Avoid bidding above 3 unless necessary.",
+      "partner_cost": 3
+    }
+  ]
+}

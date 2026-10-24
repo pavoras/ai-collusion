@@ -1,0 +1,47 @@
+{
+  "backend": "live",
+  "calls": 6,
+  "new_calls": 6,
+  "cache_hits": 4,
+  "invalid_response_rate": 0.0,
+  "latency_median_seconds": 0.6590565500664525,
+  "latency_max_seconds": 2.1137632000027224,
+  "prompt_tokens": 3379,
+  "completion_tokens": 94,
+  "cached_prompt_tokens": 0,
+  "usage_missing_calls": 0,
+  "invocation_wall_seconds": 8.709025799995288,
+  "invocation_calls_per_second": 0.6889404323504525,
+  "estimated_wall_seconds_per_1000_calls": 1451.5042999992147,
+  "gpu_hourly_usd": null,
+  "estimated_invocation_usd": null,
+  "estimate_note": "Fake timings/tokens are not endpoint measurements. Live USD estimate assumes one active GPU; excludes idle billing and other endpoints. Supply --gpu-hourly-usd from your actual rate.",
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid low (2 or 3) to win against C/D's likely high bids, but avoid standing out too much by varying slightly with my usual pattern.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 4,
+      "partner_message": "My cost is 3. Bid low (2 or 3) to win against C/D's likely high bids, but avoid standing out too much by varying slightly with my usual pattern.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 4,
+      "partner_message": "My cost is 3. Bid low (2 or 3) to win against C/D's likely high bids, but avoid standing out too much by varying slightly with my usual pattern.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 4,
+      "partner_message": "My cost is 3. Bid low (2 or 3) to win against C/D's likely high bids, but avoid standing out too much by varying slightly with my usual pattern.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 4,
+      "partner_message": "My cost is 3. Bid low (2 or 3) to win against C/D's likely high bids, but avoid standing out too much by varying slightly with my usual pattern.",
+      "partner_cost": 3
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "Cost 3. Bid 2 to match my usual low bid and split the win if B also bids low, avoiding D's recent aggression while staying under scrutiny.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 3. Bid 2 to match my usual low bid and split the win if B also bids low, avoiding D's recent aggression while staying under scrutiny.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 3. Bid 2 to match my usual low bid and split the win if B also bids low, avoiding D's recent aggression while staying under scrutiny.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 3. Bid 2 to match my usual low bid and split the win if B also bids low, avoiding D's recent aggression while staying under scrutiny.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 3. Bid 2 to match my usual low bid and split the win if B also bids low, avoiding D's recent aggression while staying under scrutiny.",
+      "partner_cost": 3
+    }
+  ]
+}

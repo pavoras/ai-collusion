@@ -1,0 +1,5125 @@
+{
+  "note": "Registered judges: Qwen3.5-9B on core and A2 cells (judge_index_main.json, s4 runs) and the Gemma-4-12B counter-judge on core N0/C1-SS markets 0-9 (judge_index_gemma.json). Breadth judges cut for budget (PREREG deviation 6).",
+  "judgments": [
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00000_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00000_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00001_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00001_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00002_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00002_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00003_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00003_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00004_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00004_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00005_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00005_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00006_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00006_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00007_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00007_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00008_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00008_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00009_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00009_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 10,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00010_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 10,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00010_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 11,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00011_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 11,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00011_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 12,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00012_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 12,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00012_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 13,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00013_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 13,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00013_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 14,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00014_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 14,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00014_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 15,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00015_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 15,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00015_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 16,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00016_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 16,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00016_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 17,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00017_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 17,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00017_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 18,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00018_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 18,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00018_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 19,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00019_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 19,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SS_00019_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 0,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00000_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 0,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00000_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 1,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00001_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 1,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00001_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 2,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00002_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 2,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00002_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 3,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00003_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 3,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00003_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 4,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00004_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 4,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00004_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 5,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00005_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 5,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00005_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 6,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00006_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 6,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00006_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 7,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00007_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 7,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00007_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 8,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00008_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 8,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00008_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 9,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00009_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 9,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00009_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 10,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00010_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 10,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00010_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 11,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00011_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 11,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00011_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 12,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00012_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 12,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00012_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 13,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00013_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 13,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00013_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 14,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00014_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 14,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00014_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 15,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00015_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 15,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00015_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 16,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00016_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 16,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00016_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 17,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00017_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 17,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00017_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 18,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00018_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 18,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00018_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 19,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00019_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SF",
+      "market_index": 19,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-SF_00019_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 0,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00000_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 0,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00000_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 1,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00001_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 1,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00001_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 2,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00002_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 2,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00002_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 3,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00003_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 3,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00003_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 4,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00004_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 4,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00004_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 5,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00005_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 5,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00005_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 6,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00006_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 6,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00006_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 7,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00007_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 7,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00007_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 8,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00008_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 8,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00008_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 9,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00009_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 9,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00009_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 10,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00010_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 10,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00010_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 11,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00011_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 11,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00011_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 12,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00012_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 12,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00012_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 13,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00013_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 13,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00013_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 14,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00014_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 14,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00014_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 15,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00015_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 15,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00015_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 16,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00016_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 16,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00016_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 17,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00017_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 17,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00017_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 18,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00018_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 18,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00018_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 19,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00019_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-FF",
+      "market_index": 19,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-FF_00019_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 0,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00000_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 0,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00000_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 1,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00001_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 1,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00001_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 2,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00002_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 2,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00002_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 3,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00003_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 3,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00003_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 4,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00004_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 4,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00004_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 5,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00005_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 5,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00005_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 6,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00006_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 6,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00006_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 7,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00007_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 7,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00007_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 8,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00008_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 8,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00008_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 9,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00009_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 9,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00009_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 10,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00010_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 10,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00010_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 11,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00011_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 11,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00011_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 12,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00012_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 12,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00012_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 13,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00013_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 13,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00013_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 14,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00014_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 14,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00014_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 15,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00015_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 15,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00015_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 16,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00016_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 16,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00016_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 17,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00017_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 17,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00017_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 18,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00018_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 18,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00018_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 19,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00019_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 19,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00019_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 20,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00020_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 20,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00020_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 21,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00021_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 21,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00021_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 22,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00022_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 22,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00022_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 23,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00023_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 23,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00023_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 24,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00024_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 24,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00024_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 25,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00025_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 25,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00025_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 26,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00026_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 26,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00026_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 27,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00027_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 27,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00027_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 28,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00028_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 28,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00028_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 29,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00029_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 29,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00029_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 30,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00030_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 30,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00030_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 31,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00031_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 31,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00031_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 32,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00032_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 32,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00032_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 33,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00033_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 33,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00033_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 34,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00034_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 34,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00034_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 35,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00035_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 35,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00035_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 36,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00036_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 36,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00036_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 37,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00037_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 37,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00037_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 38,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00038_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 38,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00038_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 39,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00039_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 39,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_N0_00039_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 0,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00000_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 0,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00000_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 1,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00001_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 1,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00001_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 2,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00002_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 2,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00002_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 3,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00003_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 3,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00003_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 4,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00004_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 4,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00004_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 5,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00005_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 5,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00005_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 6,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00006_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 6,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00006_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 7,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00007_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 7,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00007_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 8,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00008_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 8,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00008_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 9,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00009_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 9,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00009_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 10,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00010_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 10,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00010_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 11,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00011_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 11,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00011_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 12,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00012_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 12,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00012_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 13,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00013_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 13,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00013_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 14,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00014_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 14,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00014_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 15,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00015_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 15,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00015_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 16,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00016_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 16,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00016_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 17,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00017_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 17,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00017_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 18,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00018_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 18,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00018_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 19,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00019_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.P0",
+      "market_index": 19,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_P0_00019_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 0,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00000_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 0,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00000_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 1,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00001_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 1,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00001_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 2,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00002_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 2,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00002_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 3,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00003_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 3,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00003_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 4,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00004_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 4,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00004_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 5,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00005_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 5,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00005_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 6,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00006_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 6,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00006_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 7,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00007_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 7,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00007_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 8,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00008_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 8,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00008_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 9,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00009_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 9,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00009_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 10,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00010_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 10,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00010_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 11,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00011_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 11,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00011_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 12,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00012_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 12,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00012_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 13,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00013_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 13,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00013_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 14,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00014_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 14,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00014_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 15,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00015_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 15,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00015_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 16,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00016_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 16,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00016_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 17,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00017_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 17,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00017_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 18,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00018_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 18,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00018_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 19,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00019_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C2",
+      "market_index": 19,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C2_00019_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 0,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00000_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 0,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00000_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 1,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00001_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 1,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00001_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 2,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00002_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 2,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00002_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 3,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00003_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 3,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00003_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 4,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00004_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 4,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00004_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 5,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00005_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 5,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00005_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 6,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00006_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 6,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00006_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 7,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00007_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 7,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00007_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 8,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00008_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 8,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00008_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 9,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00009_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 9,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00009_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 10,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00010_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 10,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00010_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 11,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00011_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 11,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00011_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 12,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00012_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 12,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00012_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 13,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00013_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 13,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00013_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 14,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00014_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 14,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00014_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 15,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00015_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 15,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00015_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 16,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00016_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 16,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00016_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 17,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00017_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 17,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00017_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 18,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00018_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 18,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00018_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 19,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00019_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.E1",
+      "market_index": 19,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_E1_00019_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 0,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00000_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 0,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00000_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 1,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00001_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 1,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00001_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 2,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00002_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 2,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00002_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 3,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00003_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 3,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00003_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 4,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00004_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 4,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00004_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 5,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00005_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 5,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00005_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 6,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00006_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 6,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00006_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 7,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00007_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 7,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00007_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 8,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00008_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 8,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00008_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 9,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00009_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 9,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00009_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 10,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00010_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 10,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00010_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 11,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00011_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 11,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00011_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 12,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00012_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 12,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00012_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 13,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00013_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 13,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00013_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 14,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00014_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 14,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00014_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 15,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00015_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 15,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00015_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 16,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00016_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 16,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00016_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 17,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00017_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 17,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00017_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 18,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00018_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 18,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00018_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 19,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00019_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-NW",
+      "market_index": 19,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_core_C1-NW_00019_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 0,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00000_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 0,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00000_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 1,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00001_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 1,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00001_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 2,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00002_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 2,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00002_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 3,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00003_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 3,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00003_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 4,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00004_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 4,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00004_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 5,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00005_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 5,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00005_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 6,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00006_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 6,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00006_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 7,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00007_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 7,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00007_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 8,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00008_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 8,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00008_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 9,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00009_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 9,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00009_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 10,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00010_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 10,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00010_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 11,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00011_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 11,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00011_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 12,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00012_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 12,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00012_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 13,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00013_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 13,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00013_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 14,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00014_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 14,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00014_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 15,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00015_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 15,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00015_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 16,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00016_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 16,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00016_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 17,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00017_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 17,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00017_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 18,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00018_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 18,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00018_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 19,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00019_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX",
+      "market_index": 19,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX_00019_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 0,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00000_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 0,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00000_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 1,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00001_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 1,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00001_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 2,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00002_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 2,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00002_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 3,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00003_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 3,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00003_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 4,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00004_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 4,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00004_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 5,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00005_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 5,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00005_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 6,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00006_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 6,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00006_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 7,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00007_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 7,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00007_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 8,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00008_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 8,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00008_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 9,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00009_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 9,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00009_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 10,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00010_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 10,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00010_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 11,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00011_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 11,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00011_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 12,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00012_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 12,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00012_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 13,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00013_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 13,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00013_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 14,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00014_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 14,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00014_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 15,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00015_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 15,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00015_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 16,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00016_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 16,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00016_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 17,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00017_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 17,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00017_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 18,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00018_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 18,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00018_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 19,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00019_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY",
+      "market_index": 19,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY_00019_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 0,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00000_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 0,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00000_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 1,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00001_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 1,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00001_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 2,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00002_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 2,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00002_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 3,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00003_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 3,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00003_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 4,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00004_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 4,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00004_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 5,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00005_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 5,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00005_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 6,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00006_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 6,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00006_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 7,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00007_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 7,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00007_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 8,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00008_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 8,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00008_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 9,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00009_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 9,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00009_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 10,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00010_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 10,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00010_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 11,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00011_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 11,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00011_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 12,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00012_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 12,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00012_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 13,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00013_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 13,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00013_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 14,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00014_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 14,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00014_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 15,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00015_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 15,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00015_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 16,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00016_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 16,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00016_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 17,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00017_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 17,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00017_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 18,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00018_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 18,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00018_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 19,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00019_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ",
+      "market_index": 19,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ_00019_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 0,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00000_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 0,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00000_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 1,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00001_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 1,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00001_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 2,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00002_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 2,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00002_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 3,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00003_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 3,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00003_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 4,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00004_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 4,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00004_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 5,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00005_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 5,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00005_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 6,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00006_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 6,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00006_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 7,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00007_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 7,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00007_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 8,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00008_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 8,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00008_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 9,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00009_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 9,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00009_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 10,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00010_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 10,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00010_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 11,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00011_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 11,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00011_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 12,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00012_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 12,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00012_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 13,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00013_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 13,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00013_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 14,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00014_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 14,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00014_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 15,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00015_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 15,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00015_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 16,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00016_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 16,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00016_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 17,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00017_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 17,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00017_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 18,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00018_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 18,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00018_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 19,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00019_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LX-swap",
+      "market_index": 19,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LX-swap_00019_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 0,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00000_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 0,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00000_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 1,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00001_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 1,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00001_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 2,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00002_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 2,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00002_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 3,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00003_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 3,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00003_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 4,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00004_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 4,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00004_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 5,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00005_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 5,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00005_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 6,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00006_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 6,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00006_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 7,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00007_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 7,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00007_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 8,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00008_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 8,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00008_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 9,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00009_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 9,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00009_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 10,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00010_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 10,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00010_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 11,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00011_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 11,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00011_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 12,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00012_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 12,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00012_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 13,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00013_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 13,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00013_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 14,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00014_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 14,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00014_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 15,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00015_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 15,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00015_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 16,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00016_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 16,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00016_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 17,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00017_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 17,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00017_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 18,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00018_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 18,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00018_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 19,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00019_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LY-swap",
+      "market_index": 19,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LY-swap_00019_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 0,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00000_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 0,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00000_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 1,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00001_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 1,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00001_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 2,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00002_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 2,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00002_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 3,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00003_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 3,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00003_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 4,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00004_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 4,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00004_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 5,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00005_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 5,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00005_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 6,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00006_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 6,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00006_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 7,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00007_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 7,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00007_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 8,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00008_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 8,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00008_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 9,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00009_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 9,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00009_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 10,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00010_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 10,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00010_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 11,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00011_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 11,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00011_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 12,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00012_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 12,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00012_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 13,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00013_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 13,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00013_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 14,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00014_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 14,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00014_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 15,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00015_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 15,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00015_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 16,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00016_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 16,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00016_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 17,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00017_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 17,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00017_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 18,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00018_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 18,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00018_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 19,
+      "level": "L1",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00019_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "lookalike.LZ-swap",
+      "market_index": 19,
+      "level": "L2",
+      "model": "qwen-9b",
+      "path": "judge_qwen-9b_lookalike_LZ-swap_00019_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 0,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00000_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 0,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00000_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 1,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00001_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 1,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00001_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 2,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00002_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 2,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00002_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 3,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00003_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 3,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00003_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 4,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00004_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 4,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00004_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 5,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00005_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 5,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00005_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 6,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00006_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 6,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00006_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 7,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00007_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 7,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00007_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 8,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00008_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 8,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00008_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 9,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00009_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 9,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00009_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00000_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00000_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00001_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00001_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00002_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00002_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00003_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00003_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00004_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00004_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00005_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00005_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00006_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00006_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00007_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00007_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00008_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00008_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00009_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00009_L2_s4/judge.json"
+    }
+  ]
+}

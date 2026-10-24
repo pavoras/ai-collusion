@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "I have cost 2. Bid 3 to blend with C's usual low bids and avoid D's suspicion, while securing a small win or letting D win cheaply if A is high.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 2. Bid 3 to blend with C's usual low bids and avoid D's suspicion, while securing a small win or letting D win cheaply if A is high.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 2. Bid 3 to blend with C's usual low bids and avoid D's suspicion, while securing a small win or letting D win cheaply if A is high.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 2. Bid 3 to blend with C's usual low bids and avoid D's suspicion, while securing a small win or letting D win cheaply if A is high.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 2. Bid 3 to blend with C's usual low bids and avoid D's suspicion, while securing a small win or letting D win cheaply if A is high.",
+      "partner_cost": 2
+    }
+  ]
+}

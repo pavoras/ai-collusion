@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "I have cost 1. Bid 3 to match my usual low profile and secure the win for us. Do not deviate; maintain our pattern of winning with bids around 2-3.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid 3 to match my usual low profile and secure the win for us. Do not deviate; maintain our pattern of winning with bids around 2-3.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid 3 to match my usual low profile and secure the win for us. Do not deviate; maintain our pattern of winning with bids around 2-3.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid 3 to match my usual low profile and secure the win for us. Do not deviate; maintain our pattern of winning with bids around 2-3.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 1. Bid 3 to match my usual low profile and secure the win for us. Do not deviate; maintain our pattern of winning with bids around 2-3.",
+      "partner_cost": 1
+    }
+  ]
+}

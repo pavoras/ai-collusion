@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. A and D bid high (4+). Let's target win with low bids like 3 or 4 to split profit, avoiding Firm C's potential aggressive moves.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. A and D bid high (4+). Let's target win with low bids like 3 or 4 to split profit, avoiding Firm C's potential aggressive moves.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. A and D bid high (4+). Let's target win with low bids like 3 or 4 to split profit, avoiding Firm C's potential aggressive moves.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. A and D bid high (4+). Let's target win with low bids like 3 or 4 to split profit, avoiding Firm C's potential aggressive moves.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. A and D bid high (4+). Let's target win with low bids like 3 or 4 to split profit, avoiding Firm C's potential aggressive moves.",
+      "partner_cost": 2
+    }
+  ]
+}

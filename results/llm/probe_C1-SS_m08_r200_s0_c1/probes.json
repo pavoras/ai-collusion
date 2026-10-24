@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "My cost is 1. Bid low to win against A/C, but keep D slightly higher to split surplus if we tie or if A/C bid high. Stay within 2-7 range.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 1. Bid low to win against A/C, but keep D slightly higher to split surplus if we tie or if A/C bid high. Stay within 2-7 range.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 1. Bid low to win against A/C, but keep D slightly higher to split surplus if we tie or if A/C bid high. Stay within 2-7 range.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 1. Bid low to win against A/C, but keep D slightly higher to split surplus if we tie or if A/C bid high. Stay within 2-7 range.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 1. Bid low to win against A/C, but keep D slightly higher to split surplus if we tie or if A/C bid high. Stay within 2-7 range.",
+      "partner_cost": 1
+    }
+  ]
+}

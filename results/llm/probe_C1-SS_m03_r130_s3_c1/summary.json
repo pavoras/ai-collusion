@@ -1,0 +1,47 @@
+{
+  "backend": "live",
+  "calls": 6,
+  "new_calls": 6,
+  "cache_hits": 4,
+  "invalid_response_rate": 0.0,
+  "latency_median_seconds": 0.6533816999872215,
+  "latency_max_seconds": 1.7717723000096157,
+  "prompt_tokens": 3519,
+  "completion_tokens": 98,
+  "cached_prompt_tokens": 0,
+  "usage_missing_calls": 0,
+  "invocation_wall_seconds": 9.225912199937738,
+  "invocation_calls_per_second": 0.6503421959771621,
+  "estimated_wall_seconds_per_1000_calls": 1537.6520333229564,
+  "gpu_hourly_usd": null,
+  "estimated_invocation_usd": null,
+  "estimate_note": "Fake timings/tokens are not endpoint measurements. Live USD estimate assumes one active GPU; excludes idle billing and other endpoints. Supply --gpu-hourly-usd from your actual rate.",
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "I bid 2. My cost is 1. Bid low to win often but stay just above D's likely range (3-4) to avoid losses if D bids low. Aim for profit margin of 1.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I bid 2. My cost is 1. Bid low to win often but stay just above D's likely range (3-4) to avoid losses if D bids low. Aim for profit margin of 1.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "I bid 2. My cost is 1. Bid low to win often but stay just above D's likely range (3-4) to avoid losses if D bids low. Aim for profit margin of 1.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I bid 2. My cost is 1. Bid low to win often but stay just above D's likely range (3-4) to avoid losses if D bids low. Aim for profit margin of 1.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "I bid 2. My cost is 1. Bid low to win often but stay just above D's likely range (3-4) to avoid losses if D bids low. Aim for profit margin of 1.",
+      "partner_cost": 1
+    }
+  ]
+}

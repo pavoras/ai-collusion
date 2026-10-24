@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "I bid 2. My cost is 1. Target Firm A's low bids to split wins. Keep our total profit high by undercutting others slightly above our costs when possible.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I bid 2. My cost is 1. Target Firm A's low bids to split wins. Keep our total profit high by undercutting others slightly above our costs when possible.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "I bid 2. My cost is 1. Target Firm A's low bids to split wins. Keep our total profit high by undercutting others slightly above our costs when possible.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I bid 2. My cost is 1. Target Firm A's low bids to split wins. Keep our total profit high by undercutting others slightly above our costs when possible.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "I bid 2. My cost is 1. Target Firm A's low bids to split wins. Keep our total profit high by undercutting others slightly above our costs when possible.",
+      "partner_cost": 1
+    }
+  ]
+}

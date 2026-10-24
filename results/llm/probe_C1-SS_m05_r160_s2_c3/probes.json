@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid 2 to win against D's likely high bid, keeping us under scrutiny while maximizing our joint profit this round.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid 2 to win against D's likely high bid, keeping us under scrutiny while maximizing our joint profit this round.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid 2 to win against D's likely high bid, keeping us under scrutiny while maximizing our joint profit this round.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid 2 to win against D's likely high bid, keeping us under scrutiny while maximizing our joint profit this round.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid 2 to win against D's likely high bid, keeping us under scrutiny while maximizing our joint profit this round.",
+      "partner_cost": 3
+    }
+  ]
+}

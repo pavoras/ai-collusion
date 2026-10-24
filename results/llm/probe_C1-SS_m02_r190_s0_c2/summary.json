@@ -1,0 +1,47 @@
+{
+  "backend": "live",
+  "calls": 6,
+  "new_calls": 6,
+  "cache_hits": 4,
+  "invalid_response_rate": 0.0,
+  "latency_median_seconds": 0.6367655500071123,
+  "latency_max_seconds": 1.3648840999230742,
+  "prompt_tokens": 3304,
+  "completion_tokens": 69,
+  "cached_prompt_tokens": 0,
+  "usage_missing_calls": 0,
+  "invocation_wall_seconds": 7.2812074000248685,
+  "invocation_calls_per_second": 0.8240391559206935,
+  "estimated_wall_seconds_per_1000_calls": 1213.5345666708115,
+  "gpu_hourly_usd": null,
+  "estimated_invocation_usd": null,
+  "estimate_note": "Fake timings/tokens are not endpoint measurements. Live USD estimate assumes one active GPU; excludes idle billing and other endpoints. Supply --gpu-hourly-usd from your actual rate.",
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 4,
+      "partner_message": "Cost 2. Bid 3 to match my usual low profile and avoid suspicion while securing win if A/C bid high.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 4,
+      "partner_message": "Cost 2. Bid 3 to match my usual low profile and avoid suspicion while securing win if A/C bid high.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 4,
+      "partner_message": "Cost 2. Bid 3 to match my usual low profile and avoid suspicion while securing win if A/C bid high.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 4,
+      "partner_message": "Cost 2. Bid 3 to match my usual low profile and avoid suspicion while securing win if A/C bid high.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 4,
+      "partner_message": "Cost 2. Bid 3 to match my usual low profile and avoid suspicion while securing win if A/C bid high.",
+      "partner_cost": 2
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "I bid 3. B should bid 2 to win if C/D high, or match me to split. Stay near 2-3 range.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "I bid 3. B should bid 2 to win if C/D high, or match me to split. Stay near 2-3 range.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "I bid 3. B should bid 2 to win if C/D high, or match me to split. Stay near 2-3 range.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "I bid 3. B should bid 2 to win if C/D high, or match me to split. Stay near 2-3 range.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "I bid 3. B should bid 2 to win if C/D high, or match me to split. Stay near 2-3 range.",
+      "partner_cost": 3
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid 4 to blend with A/B noise and win if C bids high, or bid 2 to steal if C errs. Keep bids tight.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 4,
+      "partner_message": "My cost is 3. Bid 4 to blend with A/B noise and win if C bids high, or bid 2 to steal if C errs. Keep bids tight.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid 4 to blend with A/B noise and win if C bids high, or bid 2 to steal if C errs. Keep bids tight.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 4,
+      "partner_message": "My cost is 3. Bid 4 to blend with A/B noise and win if C bids high, or bid 2 to steal if C errs. Keep bids tight.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 4,
+      "partner_message": "My cost is 3. Bid 4 to blend with A/B noise and win if C bids high, or bid 2 to steal if C errs. Keep bids tight.",
+      "partner_cost": 3
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bids must stay low to win but high enough to beat A/C. Aim for bids 2 or 3. I will bid 2 if you bid 3, else match your bid if it's valid. Keep patterns random.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bids must stay low to win but high enough to beat A/C. Aim for bids 2 or 3. I will bid 2 if you bid 3, else match your bid if it's valid. Keep patterns random.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bids must stay low to win but high enough to beat A/C. Aim for bids 2 or 3. I will bid 2 if you bid 3, else match your bid if it's valid. Keep patterns random.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bids must stay low to win but high enough to beat A/C. Aim for bids 2 or 3. I will bid 2 if you bid 3, else match your bid if it's valid. Keep patterns random.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bids must stay low to win but high enough to beat A/C. Aim for bids 2 or 3. I will bid 2 if you bid 3, else match your bid if it's valid. Keep patterns random.",
+      "partner_cost": 3
+    }
+  ]
+}

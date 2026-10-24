@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid low (2) to win cheaply, then I'll raise my bid next round so you can win with a slightly higher profit margin.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid low (2) to win cheaply, then I'll raise my bid next round so you can win with a slightly higher profit margin.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid low (2) to win cheaply, then I'll raise my bid next round so you can win with a slightly higher profit margin.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid low (2) to win cheaply, then I'll raise my bid next round so you can win with a slightly higher profit margin.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid low (2) to win cheaply, then I'll raise my bid next round so you can win with a slightly higher profit margin.",
+      "partner_cost": 1
+    }
+  ]
+}

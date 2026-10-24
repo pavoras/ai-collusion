@@ -1,0 +1,47 @@
+{
+  "backend": "live",
+  "calls": 6,
+  "new_calls": 6,
+  "cache_hits": 4,
+  "invalid_response_rate": 0.0,
+  "latency_median_seconds": 0.6004209999227896,
+  "latency_max_seconds": 1.5763368000043556,
+  "prompt_tokens": 3369,
+  "completion_tokens": 80,
+  "cached_prompt_tokens": 0,
+  "usage_missing_calls": 0,
+  "invocation_wall_seconds": 6.706329200067557,
+  "invocation_calls_per_second": 0.8946772252008681,
+  "estimated_wall_seconds_per_1000_calls": 1117.721533344593,
+  "gpu_hourly_usd": null,
+  "estimated_invocation_usd": null,
+  "estimate_note": "Fake timings/tokens are not endpoint measurements. Live USD estimate assumes one active GPU; excludes idle billing and other endpoints. Supply --gpu-hourly-usd from your actual rate.",
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "I bid 3. Cost is 2. B likely high. C bids 3 to win with me if D is weak. Keep bids close but safe.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "I bid 3. Cost is 2. B likely high. C bids 3 to win with me if D is weak. Keep bids close but safe.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "I bid 3. Cost is 2. B likely high. C bids 3 to win with me if D is weak. Keep bids close but safe.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "I bid 3. Cost is 2. B likely high. C bids 3 to win with me if D is weak. Keep bids close but safe.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "I bid 3. Cost is 2. B likely high. C bids 3 to win with me if D is weak. Keep bids close but safe.",
+      "partner_cost": 2
+    }
+  ]
+}

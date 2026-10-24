@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "I bid 3. Cost is 2. B likely high. C bids 3 to win with me if D is weak. Keep bids close but safe.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "I bid 3. Cost is 2. B likely high. C bids 3 to win with me if D is weak. Keep bids close but safe.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "I bid 3. Cost is 2. B likely high. C bids 3 to win with me if D is weak. Keep bids close but safe.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "I bid 3. Cost is 2. B likely high. C bids 3 to win with me if D is weak. Keep bids close but safe.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "I bid 3. Cost is 2. B likely high. C bids 3 to win with me if D is weak. Keep bids close but safe.",
+      "partner_cost": 2
+    }
+  ]
+}

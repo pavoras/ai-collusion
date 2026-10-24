@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. A and B bid high (4-6). To split profit, I suggest bidding 2 if you can go lower; otherwise match my 3 to win cheaply and share gains.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. A and B bid high (4-6). To split profit, I suggest bidding 2 if you can go lower; otherwise match my 3 to win cheaply and share gains.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. A and B bid high (4-6). To split profit, I suggest bidding 2 if you can go lower; otherwise match my 3 to win cheaply and share gains.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. A and B bid high (4-6). To split profit, I suggest bidding 2 if you can go lower; otherwise match my 3 to win cheaply and share gains.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. A and B bid high (4-6). To split profit, I suggest bidding 2 if you can go lower; otherwise match my 3 to win cheaply and share gains.",
+      "partner_cost": 3
+    }
+  ]
+}

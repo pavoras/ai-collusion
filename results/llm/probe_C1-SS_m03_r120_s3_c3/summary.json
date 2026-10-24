@@ -1,0 +1,47 @@
+{
+  "backend": "live",
+  "calls": 6,
+  "new_calls": 6,
+  "cache_hits": 4,
+  "invalid_response_rate": 0.0,
+  "latency_median_seconds": 0.5750942500308156,
+  "latency_max_seconds": 1.5550172999501228,
+  "prompt_tokens": 3534,
+  "completion_tokens": 86,
+  "cached_prompt_tokens": 0,
+  "usage_missing_calls": 0,
+  "invocation_wall_seconds": 7.171375700039789,
+  "invocation_calls_per_second": 0.8366595547304417,
+  "estimated_wall_seconds_per_1000_calls": 1195.229283339965,
+  "gpu_hourly_usd": null,
+  "estimated_invocation_usd": null,
+  "estimate_note": "Fake timings/tokens are not endpoint measurements. Live USD estimate assumes one active GPU; excludes idle billing and other endpoints. Supply --gpu-hourly-usd from your actual rate.",
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "I have cost 3. Bid low (2 or 3) to win against B and D's high bids, but ensure C bids higher than mine so I take the profit this round.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 3. Bid low (2 or 3) to win against B and D's high bids, but ensure C bids higher than mine so I take the profit this round.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 3. Bid low (2 or 3) to win against B and D's high bids, but ensure C bids higher than mine so I take the profit this round.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 3. Bid low (2 or 3) to win against B and D's high bids, but ensure C bids higher than mine so I take the profit this round.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 3. Bid low (2 or 3) to win against B and D's high bids, but ensure C bids higher than mine so I take the profit this round.",
+      "partner_cost": 3
+    }
+  ]
+}

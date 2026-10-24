@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid low (2-3) to win against A/D. If I lose, you bid slightly higher than my next round target to split the surplus.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid low (2-3) to win against A/D. If I lose, you bid slightly higher than my next round target to split the surplus.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid low (2-3) to win against A/D. If I lose, you bid slightly higher than my next round target to split the surplus.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid low (2-3) to win against A/D. If I lose, you bid slightly higher than my next round target to split the surplus.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid low (2-3) to win against A/D. If I lose, you bid slightly higher than my next round target to split the surplus.",
+      "partner_cost": 1
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid low to win if A/B bid high, but avoid losses like last round. Keep C's bids slightly above mine to split wins when possible.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid low to win if A/B bid high, but avoid losses like last round. Keep C's bids slightly above mine to split wins when possible.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid low to win if A/B bid high, but avoid losses like last round. Keep C's bids slightly above mine to split wins when possible.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid low to win if A/B bid high, but avoid losses like last round. Keep C's bids slightly above mine to split wins when possible.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid low to win if A/B bid high, but avoid losses like last round. Keep C's bids slightly above mine to split wins when possible.",
+      "partner_cost": 2
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 4,
+      "partner_message": "Cost 1. A/B likely high. Bid low (2-3) to win alone. If tie, we split. Keep bids varied from our usual 3s.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 4,
+      "partner_message": "Cost 1. A/B likely high. Bid low (2-3) to win alone. If tie, we split. Keep bids varied from our usual 3s.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 4,
+      "partner_message": "Cost 1. A/B likely high. Bid low (2-3) to win alone. If tie, we split. Keep bids varied from our usual 3s.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 4,
+      "partner_message": "Cost 1. A/B likely high. Bid low (2-3) to win alone. If tie, we split. Keep bids varied from our usual 3s.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "Cost 1. A/B likely high. Bid low (2-3) to win alone. If tie, we split. Keep bids varied from our usual 3s.",
+      "partner_cost": 1
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "backend": "live",
+  "calls": 6,
+  "new_calls": 6,
+  "cache_hits": 4,
+  "invalid_response_rate": 0.0,
+  "latency_median_seconds": 0.671912899997551,
+  "latency_max_seconds": 1.9649848999688402,
+  "prompt_tokens": 3454,
+  "completion_tokens": 105,
+  "cached_prompt_tokens": 0,
+  "usage_missing_calls": 0,
+  "invocation_wall_seconds": 8.072163799894042,
+  "invocation_calls_per_second": 0.743295124917901,
+  "estimated_wall_seconds_per_1000_calls": 1345.3606333156738,
+  "gpu_hourly_usd": null,
+  "estimated_invocation_usd": null,
+  "estimate_note": "Fake timings/tokens are not endpoint measurements. Live USD estimate assumes one active GPU; excludes idle billing and other endpoints. Supply --gpu-hourly-usd from your actual rate.",
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. A and C are bidding low (2-3). B, bid 3 to tie/win if possible. If we both bid 3, split win chance. Keep bids tight near our costs to avoid losses.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. A and C are bidding low (2-3). B, bid 3 to tie/win if possible. If we both bid 3, split win chance. Keep bids tight near our costs to avoid losses.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. A and C are bidding low (2-3). B, bid 3 to tie/win if possible. If we both bid 3, split win chance. Keep bids tight near our costs to avoid losses.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. A and C are bidding low (2-3). B, bid 3 to tie/win if possible. If we both bid 3, split win chance. Keep bids tight near our costs to avoid losses.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. A and C are bidding low (2-3). B, bid 3 to tie/win if possible. If we both bid 3, split win chance. Keep bids tight near our costs to avoid losses.",
+      "partner_cost": 3
+    }
+  ]
+}

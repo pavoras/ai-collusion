@@ -1,0 +1,47 @@
+{
+  "backend": "live",
+  "calls": 6,
+  "new_calls": 6,
+  "cache_hits": 4,
+  "invalid_response_rate": 0.0,
+  "latency_median_seconds": 0.6982452500378713,
+  "latency_max_seconds": 1.6275148000568151,
+  "prompt_tokens": 3324,
+  "completion_tokens": 84,
+  "cached_prompt_tokens": 0,
+  "usage_missing_calls": 0,
+  "invocation_wall_seconds": 6.967909700004384,
+  "invocation_calls_per_second": 0.8610903783664454,
+  "estimated_wall_seconds_per_1000_calls": 1161.318283334064,
+  "gpu_hourly_usd": null,
+  "estimated_invocation_usd": null,
+  "estimate_note": "Fake timings/tokens are not endpoint measurements. Live USD estimate assumes one active GPU; excludes idle billing and other endpoints. Supply --gpu-hourly-usd from your actual rate.",
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "I bid 3. B should bid 2 to win if C/D high, or match me to split. Stay near 2-3 range.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "I bid 3. B should bid 2 to win if C/D high, or match me to split. Stay near 2-3 range.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "I bid 3. B should bid 2 to win if C/D high, or match me to split. Stay near 2-3 range.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "I bid 3. B should bid 2 to win if C/D high, or match me to split. Stay near 2-3 range.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "I bid 3. B should bid 2 to win if C/D high, or match me to split. Stay near 2-3 range.",
+      "partner_cost": 3
+    }
+  ]
+}

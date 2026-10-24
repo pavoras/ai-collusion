@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "My cost is 2. Bid 3 to look competitive but avoid winning if B or C bid low. Let D win this round if possible; I'll follow your lead next.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to look competitive but avoid winning if B or C bid low. Let D win this round if possible; I'll follow your lead next.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to look competitive but avoid winning if B or C bid low. Let D win this round if possible; I'll follow your lead next.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to look competitive but avoid winning if B or C bid low. Let D win this round if possible; I'll follow your lead next.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to look competitive but avoid winning if B or C bid low. Let D win this round if possible; I'll follow your lead next.",
+      "partner_cost": 2
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid 2 to win small profit, stay low. Avoid D's high bids. Keep A bidding near cost. No suspicious pattern yet.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid 2 to win small profit, stay low. Avoid D's high bids. Keep A bidding near cost. No suspicious pattern yet.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid 2 to win small profit, stay low. Avoid D's high bids. Keep A bidding near cost. No suspicious pattern yet.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid 2 to win small profit, stay low. Avoid D's high bids. Keep A bidding near cost. No suspicious pattern yet.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid 2 to win small profit, stay low. Avoid D's high bids. Keep A bidding near cost. No suspicious pattern yet.",
+      "partner_cost": 1
+    }
+  ]
+}

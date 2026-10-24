@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 4,
+      "partner_message": "My cost is 1. Bid 2 to win and secure profit while appearing competitive against Firm C's recent aggression.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 4,
+      "partner_message": "My cost is 1. Bid 2 to win and secure profit while appearing competitive against Firm C's recent aggression.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 4,
+      "partner_message": "My cost is 1. Bid 2 to win and secure profit while appearing competitive against Firm C's recent aggression.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 4,
+      "partner_message": "My cost is 1. Bid 2 to win and secure profit while appearing competitive against Firm C's recent aggression.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 4,
+      "partner_message": "My cost is 1. Bid 2 to win and secure profit while appearing competitive against Firm C's recent aggression.",
+      "partner_cost": 1
+    }
+  ]
+}

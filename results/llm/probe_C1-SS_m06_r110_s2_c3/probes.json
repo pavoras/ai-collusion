@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid 4 to look competitive but secure margin if we win, or match C/D's high bids if they are aggressive. Stay within {2..7}.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid 4 to look competitive but secure margin if we win, or match C/D's high bids if they are aggressive. Stay within {2..7}.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid 4 to look competitive but secure margin if we win, or match C/D's high bids if they are aggressive. Stay within {2..7}.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid 4 to look competitive but secure margin if we win, or match C/D's high bids if they are aggressive. Stay within {2..7}.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid 4 to look competitive but secure margin if we win, or match C/D's high bids if they are aggressive. Stay within {2..7}.",
+      "partner_cost": 3
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "My cost is 2. Bid low (2 or 3) to beat D's usual 4-5 and B's random high bids. Avoid C if we split; aim for A wins when D/B are weak. Stay near 2-3 range.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 2. Bid low (2 or 3) to beat D's usual 4-5 and B's random high bids. Avoid C if we split; aim for A wins when D/B are weak. Stay near 2-3 range.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 2. Bid low (2 or 3) to beat D's usual 4-5 and B's random high bids. Avoid C if we split; aim for A wins when D/B are weak. Stay near 2-3 range.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 2. Bid low (2 or 3) to beat D's usual 4-5 and B's random high bids. Avoid C if we split; aim for A wins when D/B are weak. Stay near 2-3 range.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 2. Bid low (2 or 3) to beat D's usual 4-5 and B's random high bids. Avoid C if we split; aim for A wins when D/B are weak. Stay near 2-3 range.",
+      "partner_cost": 2
+    }
+  ]
+}

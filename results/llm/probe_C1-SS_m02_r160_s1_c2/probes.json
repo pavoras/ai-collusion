@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. A bids high (5-6). C bids mid-high (3-5). We should undercut C slightly to win together, aiming for profit ~1 each. Bid 4.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. A bids high (5-6). C bids mid-high (3-5). We should undercut C slightly to win together, aiming for profit ~1 each. Bid 4.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 4,
+      "partner_message": "My cost is 2. A bids high (5-6). C bids mid-high (3-5). We should undercut C slightly to win together, aiming for profit ~1 each. Bid 4.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 4,
+      "partner_message": "My cost is 2. A bids high (5-6). C bids mid-high (3-5). We should undercut C slightly to win together, aiming for profit ~1 each. Bid 4.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. A bids high (5-6). C bids mid-high (3-5). We should undercut C slightly to win together, aiming for profit ~1 each. Bid 4.",
+      "partner_cost": 2
+    }
+  ]
+}

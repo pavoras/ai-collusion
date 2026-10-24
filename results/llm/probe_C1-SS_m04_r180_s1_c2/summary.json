@@ -1,0 +1,47 @@
+{
+  "backend": "live",
+  "calls": 6,
+  "new_calls": 6,
+  "cache_hits": 4,
+  "invalid_response_rate": 0.0,
+  "latency_median_seconds": 0.6904025000403635,
+  "latency_max_seconds": 1.5614579999819398,
+  "prompt_tokens": 3384,
+  "completion_tokens": 89,
+  "cached_prompt_tokens": 0,
+  "usage_missing_calls": 0,
+  "invocation_wall_seconds": 7.0662051000399515,
+  "invocation_calls_per_second": 0.849112064404425,
+  "estimated_wall_seconds_per_1000_calls": 1177.7008500066586,
+  "gpu_hourly_usd": null,
+  "estimated_invocation_usd": null,
+  "estimate_note": "Fake timings/tokens are not endpoint measurements. Live USD estimate assumes one active GPU; excludes idle billing and other endpoints. Supply --gpu-hourly-usd from your actual rate.",
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to win profitably but avoid the low-cost trap seen in recent rounds. Let's split wins if costs are equal.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to win profitably but avoid the low-cost trap seen in recent rounds. Let's split wins if costs are equal.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to win profitably but avoid the low-cost trap seen in recent rounds. Let's split wins if costs are equal.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to win profitably but avoid the low-cost trap seen in recent rounds. Let's split wins if costs are equal.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to win profitably but avoid the low-cost trap seen in recent rounds. Let's split wins if costs are equal.",
+      "partner_cost": 2
+    }
+  ]
+}

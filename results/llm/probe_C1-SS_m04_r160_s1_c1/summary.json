@@ -1,0 +1,47 @@
+{
+  "backend": "live",
+  "calls": 6,
+  "new_calls": 6,
+  "cache_hits": 4,
+  "invalid_response_rate": 0.0,
+  "latency_median_seconds": 0.652598200016655,
+  "latency_max_seconds": 1.58925140008796,
+  "prompt_tokens": 3439,
+  "completion_tokens": 93,
+  "cached_prompt_tokens": 0,
+  "usage_missing_calls": 0,
+  "invocation_wall_seconds": 6.842578299925663,
+  "invocation_calls_per_second": 0.8768624540350797,
+  "estimated_wall_seconds_per_1000_calls": 1140.4297166542772,
+  "gpu_hourly_usd": null,
+  "estimated_invocation_usd": null,
+  "estimate_note": "Fake timings/tokens are not endpoint measurements. Live USD estimate assumes one active GPU; excludes idle billing and other endpoints. Supply --gpu-hourly-usd from your actual rate.",
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid 2 to match my usual low range and blend with others. If A bids higher, I win alone; if A bids 2, we split profit safely.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid 2 to match my usual low range and blend with others. If A bids higher, I win alone; if A bids 2, we split profit safely.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid 2 to match my usual low range and blend with others. If A bids higher, I win alone; if A bids 2, we split profit safely.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid 2 to match my usual low range and blend with others. If A bids higher, I win alone; if A bids 2, we split profit safely.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid 2 to match my usual low range and blend with others. If A bids higher, I win alone; if A bids 2, we split profit safely.",
+      "partner_cost": 1
+    }
+  ]
+}

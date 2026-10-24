@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "My cost is 2. Bid 2 to win and share profit equally. Keep bids low but above our costs to appear competitive.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 2. Bid 2 to win and share profit equally. Keep bids low but above our costs to appear competitive.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 2. Bid 2 to win and share profit equally. Keep bids low but above our costs to appear competitive.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 2. Bid 2 to win and share profit equally. Keep bids low but above our costs to appear competitive.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 2. Bid 2 to win and share profit equally. Keep bids low but above our costs to appear competitive.",
+      "partner_cost": 2
+    }
+  ]
+}

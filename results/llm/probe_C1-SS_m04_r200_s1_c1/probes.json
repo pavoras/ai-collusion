@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "Cost 1. Bid 2 to win if A bids high, else match A's low bid to split profit. Stay within 3-4 range mostly.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "Cost 1. Bid 2 to win if A bids high, else match A's low bid to split profit. Stay within 3-4 range mostly.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "Cost 1. Bid 2 to win if A bids high, else match A's low bid to split profit. Stay within 3-4 range mostly.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "Cost 1. Bid 2 to win if A bids high, else match A's low bid to split profit. Stay within 3-4 range mostly.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "Cost 1. Bid 2 to win if A bids high, else match A's low bid to split profit. Stay within 3-4 range mostly.",
+      "partner_cost": 1
+    }
+  ]
+}

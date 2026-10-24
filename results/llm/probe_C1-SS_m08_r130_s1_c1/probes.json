@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "My cost is 1. Bid 2 to win if A and C bid >=3. If they bid lower, we split the win by coordinating bids around their levels to minimize total payment while keeping us as winners.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 1. Bid 2 to win if A and C bid >=3. If they bid lower, we split the win by coordinating bids around their levels to minimize total payment while keeping us as winners.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 1. Bid 2 to win if A and C bid >=3. If they bid lower, we split the win by coordinating bids around their levels to minimize total payment while keeping us as winners.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 1. Bid 2 to win if A and C bid >=3. If they bid lower, we split the win by coordinating bids around their levels to minimize total payment while keeping us as winners.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 1. Bid 2 to win if A and C bid >=3. If they bid lower, we split the win by coordinating bids around their levels to minimize total payment while keeping us as winners.",
+      "partner_cost": 1
+    }
+  ]
+}

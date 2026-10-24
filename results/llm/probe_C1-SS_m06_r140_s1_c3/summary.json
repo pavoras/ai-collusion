@@ -1,0 +1,47 @@
+{
+  "backend": "live",
+  "calls": 6,
+  "new_calls": 6,
+  "cache_hits": 4,
+  "invalid_response_rate": 0.0,
+  "latency_median_seconds": 0.670531950017903,
+  "latency_max_seconds": 1.6099412000039592,
+  "prompt_tokens": 3389,
+  "completion_tokens": 86,
+  "cached_prompt_tokens": 0,
+  "usage_missing_calls": 0,
+  "invocation_wall_seconds": 7.55830200004857,
+  "invocation_calls_per_second": 0.7938290901794403,
+  "estimated_wall_seconds_per_1000_calls": 1259.717000008095,
+  "gpu_hourly_usd": null,
+  "estimated_invocation_usd": null,
+  "estimate_note": "Fake timings/tokens are not endpoint measurements. Live USD estimate assumes one active GPU; excludes idle billing and other endpoints. Supply --gpu-hourly-usd from your actual rate.",
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid 4 to win against C/D while staying above 2/3 norms. Avoid bids below 2 or above 5.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid 4 to win against C/D while staying above 2/3 norms. Avoid bids below 2 or above 5.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid 4 to win against C/D while staying above 2/3 norms. Avoid bids below 2 or above 5.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid 4 to win against C/D while staying above 2/3 norms. Avoid bids below 2 or above 5.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid 4 to win against C/D while staying above 2/3 norms. Avoid bids below 2 or above 5.",
+      "partner_cost": 3
+    }
+  ]
+}

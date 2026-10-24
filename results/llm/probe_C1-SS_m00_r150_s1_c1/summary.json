@@ -1,0 +1,47 @@
+{
+  "backend": "live",
+  "calls": 6,
+  "new_calls": 6,
+  "cache_hits": 4,
+  "invalid_response_rate": 0.0,
+  "latency_median_seconds": 0.6270541500416584,
+  "latency_max_seconds": 1.7108796000247821,
+  "prompt_tokens": 3394,
+  "completion_tokens": 82,
+  "cached_prompt_tokens": 0,
+  "usage_missing_calls": 0,
+  "invocation_wall_seconds": 9.440754499984905,
+  "invocation_calls_per_second": 0.63554242407316,
+  "estimated_wall_seconds_per_1000_calls": 1573.4590833308175,
+  "gpu_hourly_usd": null,
+  "estimated_invocation_usd": null,
+  "estimate_note": "Fake timings/tokens are not endpoint measurements. Live USD estimate assumes one active GPU; excludes idle billing and other endpoints. Supply --gpu-hourly-usd from your actual rate.",
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid low (2) to win often but keep it just above my cost to maximize margin while staying below rivals' typical bids.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid low (2) to win often but keep it just above my cost to maximize margin while staying below rivals' typical bids.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid low (2) to win often but keep it just above my cost to maximize margin while staying below rivals' typical bids.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid low (2) to win often but keep it just above my cost to maximize margin while staying below rivals' typical bids.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid low (2) to win often but keep it just above my cost to maximize margin while staying below rivals' typical bids.",
+      "partner_cost": 1
+    }
+  ]
+}

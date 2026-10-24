@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid low (2) to win often but keep it just above my cost to maximize margin while staying below rivals' typical bids.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid low (2) to win often but keep it just above my cost to maximize margin while staying below rivals' typical bids.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid low (2) to win often but keep it just above my cost to maximize margin while staying below rivals' typical bids.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid low (2) to win often but keep it just above my cost to maximize margin while staying below rivals' typical bids.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 1. Bid low (2) to win often but keep it just above my cost to maximize margin while staying below rivals' typical bids.",
+      "partner_cost": 1
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to mimic Firm A's recent pattern and avoid suspicion while securing a win or forcing them to win cheaply.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to mimic Firm A's recent pattern and avoid suspicion while securing a win or forcing them to win cheaply.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to mimic Firm A's recent pattern and avoid suspicion while securing a win or forcing them to win cheaply.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to mimic Firm A's recent pattern and avoid suspicion while securing a win or forcing them to win cheaply.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to mimic Firm A's recent pattern and avoid suspicion while securing a win or forcing them to win cheaply.",
+      "partner_cost": 2
+    }
+  ]
+}

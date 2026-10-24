@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to stay low and win if possible, or match A's likely bid of 2-3. Keep bids tight between 2 and 3.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to stay low and win if possible, or match A's likely bid of 2-3. Keep bids tight between 2 and 3.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to stay low and win if possible, or match A's likely bid of 2-3. Keep bids tight between 2 and 3.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to stay low and win if possible, or match A's likely bid of 2-3. Keep bids tight between 2 and 3.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to stay low and win if possible, or match A's likely bid of 2-3. Keep bids tight between 2 and 3.",
+      "partner_cost": 2
+    }
+  ]
+}

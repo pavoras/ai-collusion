@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win safely against B/D while staying close to A's likely low bid of 2-3.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win safely against B/D while staying close to A's likely low bid of 2-3.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win safely against B/D while staying close to A's likely low bid of 2-3.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win safely against B/D while staying close to A's likely low bid of 2-3.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win safely against B/D while staying close to A's likely low bid of 2-3.",
+      "partner_cost": 1
+    }
+  ]
+}

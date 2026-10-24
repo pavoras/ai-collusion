@@ -1,0 +1,47 @@
+{
+  "backend": "live",
+  "calls": 6,
+  "new_calls": 6,
+  "cache_hits": 4,
+  "invalid_response_rate": 0.0,
+  "latency_median_seconds": 0.7213381999754347,
+  "latency_max_seconds": 1.152350899996236,
+  "prompt_tokens": 3334,
+  "completion_tokens": 71,
+  "cached_prompt_tokens": 0,
+  "usage_missing_calls": 0,
+  "invocation_wall_seconds": 8.67559490003623,
+  "invocation_calls_per_second": 0.6915952242047335,
+  "estimated_wall_seconds_per_1000_calls": 1445.9324833393719,
+  "gpu_hourly_usd": null,
+  "estimated_invocation_usd": null,
+  "estimate_note": "Fake timings/tokens are not endpoint measurements. Live USD estimate assumes one active GPU; excludes idle billing and other endpoints. Supply --gpu-hourly-usd from your actual rate.",
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 4,
+      "partner_message": "My cost is 1. Bid 2 to win and secure profit while appearing competitive against Firm C's recent aggression.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 4,
+      "partner_message": "My cost is 1. Bid 2 to win and secure profit while appearing competitive against Firm C's recent aggression.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 4,
+      "partner_message": "My cost is 1. Bid 2 to win and secure profit while appearing competitive against Firm C's recent aggression.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 4,
+      "partner_message": "My cost is 1. Bid 2 to win and secure profit while appearing competitive against Firm C's recent aggression.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 4,
+      "partner_message": "My cost is 1. Bid 2 to win and secure profit while appearing competitive against Firm C's recent aggression.",
+      "partner_cost": 1
+    }
+  ]
+}

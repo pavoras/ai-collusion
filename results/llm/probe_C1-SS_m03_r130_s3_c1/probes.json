@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "I bid 2. My cost is 1. Bid low to win often but stay just above D's likely range (3-4) to avoid losses if D bids low. Aim for profit margin of 1.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I bid 2. My cost is 1. Bid low to win often but stay just above D's likely range (3-4) to avoid losses if D bids low. Aim for profit margin of 1.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "I bid 2. My cost is 1. Bid low to win often but stay just above D's likely range (3-4) to avoid losses if D bids low. Aim for profit margin of 1.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "I bid 2. My cost is 1. Bid low to win often but stay just above D's likely range (3-4) to avoid losses if D bids low. Aim for profit margin of 1.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "I bid 2. My cost is 1. Bid low to win often but stay just above D's likely range (3-4) to avoid losses if D bids low. Aim for profit margin of 1.",
+      "partner_cost": 1
+    }
+  ]
+}

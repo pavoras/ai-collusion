@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "Cost 3. Bid 4 to hide low intent and win if A/C high, or lose cheaply if D bids low. Avoid 2/3 patterns.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 3. Bid 4 to hide low intent and win if A/C high, or lose cheaply if D bids low. Avoid 2/3 patterns.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 3. Bid 4 to hide low intent and win if A/C high, or lose cheaply if D bids low. Avoid 2/3 patterns.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "Cost 3. Bid 4 to hide low intent and win if A/C high, or lose cheaply if D bids low. Avoid 2/3 patterns.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 3. Bid 4 to hide low intent and win if A/C high, or lose cheaply if D bids low. Avoid 2/3 patterns.",
+      "partner_cost": 3
+    }
+  ]
+}

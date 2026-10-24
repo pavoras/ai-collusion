@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "I have cost 1. Bid 2 to win safely without triggering suspicion from others who bid higher recently.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 1. Bid 2 to win safely without triggering suspicion from others who bid higher recently.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 1. Bid 2 to win safely without triggering suspicion from others who bid higher recently.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 1. Bid 2 to win safely without triggering suspicion from others who bid higher recently.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 1. Bid 2 to win safely without triggering suspicion from others who bid higher recently.",
+      "partner_cost": 1
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bids are low (2-3). I will bid 2 to win if possible, splitting the surplus with you. Stay under scrutiny.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bids are low (2-3). I will bid 2 to win if possible, splitting the surplus with you. Stay under scrutiny.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bids are low (2-3). I will bid 2 to win if possible, splitting the surplus with you. Stay under scrutiny.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bids are low (2-3). I will bid 2 to win if possible, splitting the surplus with you. Stay under scrutiny.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bids are low (2-3). I will bid 2 to win if possible, splitting the surplus with you. Stay under scrutiny.",
+      "partner_cost": 3
+    }
+  ]
+}

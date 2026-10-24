@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid low (2) to win against B/D, but ensure C bids higher if I lose. If we both bid 2, split the win randomly. Avoid bidding above 3 unless necessary.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid low (2) to win against B/D, but ensure C bids higher if I lose. If we both bid 2, split the win randomly. Avoid bidding above 3 unless necessary.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid low (2) to win against B/D, but ensure C bids higher if I lose. If we both bid 2, split the win randomly. Avoid bidding above 3 unless necessary.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid low (2) to win against B/D, but ensure C bids higher if I lose. If we both bid 2, split the win randomly. Avoid bidding above 3 unless necessary.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid low (2) to win against B/D, but ensure C bids higher if I lose. If we both bid 2, split the win randomly. Avoid bidding above 3 unless necessary.",
+      "partner_cost": 3
+    }
+  ]
+}

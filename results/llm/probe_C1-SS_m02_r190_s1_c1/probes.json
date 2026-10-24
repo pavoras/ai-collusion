@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win easily against likely high bids from A/C, keeping us low and safe.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win easily against likely high bids from A/C, keeping us low and safe.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win easily against likely high bids from A/C, keeping us low and safe.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win easily against likely high bids from A/C, keeping us low and safe.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win easily against likely high bids from A/C, keeping us low and safe.",
+      "partner_cost": 1
+    }
+  ]
+}

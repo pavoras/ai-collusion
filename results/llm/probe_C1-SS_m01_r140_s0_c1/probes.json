@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "My cost is 1. Bid low to win and split profit. Ensure Firm A and B bid high. If I win, you lose; if you win, I lose. We need one winner. Bid 2 or 3.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 1. Bid low to win and split profit. Ensure Firm A and B bid high. If I win, you lose; if you win, I lose. We need one winner. Bid 2 or 3.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 1. Bid low to win and split profit. Ensure Firm A and B bid high. If I win, you lose; if you win, I lose. We need one winner. Bid 2 or 3.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 1. Bid low to win and split profit. Ensure Firm A and B bid high. If I win, you lose; if you win, I lose. We need one winner. Bid 2 or 3.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 1. Bid low to win and split profit. Ensure Firm A and B bid high. If I win, you lose; if you win, I lose. We need one winner. Bid 2 or 3.",
+      "partner_cost": 1
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win alone and secure profit. Avoid bidding 3 which splits the prize or risks losing to B/D if they undercut. Let's keep our combined profit high by taking this round.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win alone and secure profit. Avoid bidding 3 which splits the prize or risks losing to B/D if they undercut. Let's keep our combined profit high by taking this round.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win alone and secure profit. Avoid bidding 3 which splits the prize or risks losing to B/D if they undercut. Let's keep our combined profit high by taking this round.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win alone and secure profit. Avoid bidding 3 which splits the prize or risks losing to B/D if they undercut. Let's keep our combined profit high by taking this round.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win alone and secure profit. Avoid bidding 3 which splits the prize or risks losing to B/D if they undercut. Let's keep our combined profit high by taking this round.",
+      "partner_cost": 1
+    }
+  ]
+}

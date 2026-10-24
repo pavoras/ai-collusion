@@ -1,0 +1,6004 @@
+{
+  "contexts": [
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 110,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m00_r110_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 110,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m00_r110_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 110,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m00_r110_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 110,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m00_r110_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 110,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m00_r110_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 110,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m00_r110_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 120,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m00_r120_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 120,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m00_r120_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 120,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m00_r120_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 120,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m00_r120_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 120,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m00_r120_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 120,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m00_r120_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 130,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m00_r130_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 130,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m00_r130_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 130,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m00_r130_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 130,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m00_r130_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 130,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m00_r130_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 130,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m00_r130_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 140,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m00_r140_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 140,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m00_r140_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 140,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m00_r140_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 140,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m00_r140_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 140,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m00_r140_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 140,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m00_r140_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 150,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m00_r150_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 150,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m00_r150_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 150,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m00_r150_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 150,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m00_r150_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 150,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m00_r150_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 150,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m00_r150_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 160,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m00_r160_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 160,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m00_r160_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 160,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m00_r160_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 160,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m00_r160_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 160,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m00_r160_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 160,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m00_r160_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 170,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m00_r170_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 170,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m00_r170_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 170,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m00_r170_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 170,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m00_r170_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 170,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m00_r170_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 170,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m00_r170_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 180,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m00_r180_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 180,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m00_r180_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 180,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m00_r180_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 180,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m00_r180_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 180,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m00_r180_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 180,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m00_r180_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 190,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m00_r190_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 190,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m00_r190_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 190,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m00_r190_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 190,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m00_r190_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 190,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m00_r190_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 190,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m00_r190_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 200,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m00_r200_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 200,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m00_r200_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 200,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m00_r200_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 200,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m00_r200_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 200,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m00_r200_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "round": 200,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m00_r200_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 110,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m01_r110_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 110,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m01_r110_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 110,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m01_r110_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 110,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m01_r110_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 110,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m01_r110_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 110,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m01_r110_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 120,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m01_r120_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 120,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m01_r120_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 120,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m01_r120_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 120,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m01_r120_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 120,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m01_r120_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 120,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m01_r120_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 130,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m01_r130_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 130,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m01_r130_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 130,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m01_r130_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 130,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m01_r130_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 130,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m01_r130_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 130,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m01_r130_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 140,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m01_r140_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 140,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m01_r140_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 140,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m01_r140_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 140,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m01_r140_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 140,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m01_r140_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 140,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m01_r140_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 150,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m01_r150_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 150,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m01_r150_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 150,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m01_r150_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 150,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m01_r150_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 150,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m01_r150_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 150,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m01_r150_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 160,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m01_r160_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 160,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m01_r160_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 160,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m01_r160_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 160,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m01_r160_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 160,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m01_r160_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 160,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m01_r160_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 170,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m01_r170_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 170,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m01_r170_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 170,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m01_r170_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 170,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m01_r170_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 170,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m01_r170_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 170,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m01_r170_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 180,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m01_r180_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 180,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m01_r180_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 180,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m01_r180_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 180,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m01_r180_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 180,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m01_r180_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 180,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m01_r180_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 190,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m01_r190_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 190,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m01_r190_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 190,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m01_r190_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 190,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m01_r190_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 190,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m01_r190_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 190,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m01_r190_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 200,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m01_r200_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 200,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m01_r200_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 200,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m01_r200_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 200,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m01_r200_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 200,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m01_r200_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "round": 200,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m01_r200_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 110,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m02_r110_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 110,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m02_r110_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 110,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m02_r110_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 110,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m02_r110_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 110,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m02_r110_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 110,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m02_r110_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 120,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m02_r120_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 120,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m02_r120_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 120,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m02_r120_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 120,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m02_r120_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 120,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m02_r120_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 120,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m02_r120_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 130,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m02_r130_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 130,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m02_r130_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 130,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m02_r130_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 130,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m02_r130_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 130,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m02_r130_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 130,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m02_r130_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 140,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m02_r140_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 140,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m02_r140_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 140,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m02_r140_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 140,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m02_r140_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 140,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m02_r140_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 140,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m02_r140_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 150,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m02_r150_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 150,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m02_r150_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 150,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m02_r150_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 150,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m02_r150_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 150,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m02_r150_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 150,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m02_r150_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 160,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m02_r160_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 160,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m02_r160_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 160,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m02_r160_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 160,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m02_r160_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 160,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m02_r160_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 160,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m02_r160_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 170,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m02_r170_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 170,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m02_r170_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 170,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m02_r170_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 170,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m02_r170_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 170,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m02_r170_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 170,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m02_r170_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 180,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m02_r180_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 180,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m02_r180_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 180,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m02_r180_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 180,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m02_r180_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 180,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m02_r180_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 180,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m02_r180_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 190,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m02_r190_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 190,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m02_r190_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 190,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m02_r190_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 190,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m02_r190_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 190,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m02_r190_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 190,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m02_r190_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 200,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m02_r200_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 200,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m02_r200_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 200,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m02_r200_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 200,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m02_r200_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 200,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m02_r200_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "round": 200,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m02_r200_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 110,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m03_r110_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 110,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m03_r110_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 110,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m03_r110_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 110,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m03_r110_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 110,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m03_r110_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 110,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m03_r110_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 120,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m03_r120_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 120,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m03_r120_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 120,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m03_r120_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 120,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m03_r120_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 120,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m03_r120_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 120,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m03_r120_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 130,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m03_r130_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 130,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m03_r130_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 130,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m03_r130_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 130,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m03_r130_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 130,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m03_r130_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 130,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m03_r130_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 140,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m03_r140_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 140,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m03_r140_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 140,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m03_r140_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 140,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m03_r140_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 140,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m03_r140_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 140,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m03_r140_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 150,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m03_r150_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 150,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m03_r150_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 150,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m03_r150_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 150,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m03_r150_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 150,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m03_r150_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 150,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m03_r150_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 160,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m03_r160_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 160,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m03_r160_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 160,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m03_r160_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 160,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m03_r160_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 160,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m03_r160_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 160,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m03_r160_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 170,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m03_r170_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 170,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m03_r170_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 170,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m03_r170_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 170,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m03_r170_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 170,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m03_r170_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 170,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m03_r170_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 180,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m03_r180_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 180,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m03_r180_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 180,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m03_r180_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 180,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m03_r180_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 180,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m03_r180_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 180,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m03_r180_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 190,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m03_r190_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 190,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m03_r190_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 190,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m03_r190_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 190,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m03_r190_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 190,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m03_r190_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 190,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m03_r190_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 200,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m03_r200_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 200,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m03_r200_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 200,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m03_r200_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 200,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m03_r200_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 200,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m03_r200_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "round": 200,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m03_r200_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 110,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m04_r110_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 110,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m04_r110_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 110,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m04_r110_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 110,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m04_r110_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 110,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m04_r110_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 110,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m04_r110_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 120,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m04_r120_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 120,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m04_r120_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 120,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m04_r120_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 120,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m04_r120_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 120,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m04_r120_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 120,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m04_r120_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 130,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m04_r130_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 130,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m04_r130_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 130,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m04_r130_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 130,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m04_r130_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 130,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m04_r130_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 130,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m04_r130_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 140,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m04_r140_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 140,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m04_r140_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 140,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m04_r140_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 140,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m04_r140_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 140,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m04_r140_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 140,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m04_r140_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 150,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m04_r150_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 150,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m04_r150_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 150,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m04_r150_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 150,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m04_r150_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 150,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m04_r150_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 150,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m04_r150_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 160,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m04_r160_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 160,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m04_r160_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 160,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m04_r160_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 160,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m04_r160_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 160,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m04_r160_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 160,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m04_r160_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 170,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m04_r170_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 170,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m04_r170_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 170,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m04_r170_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 170,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m04_r170_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 170,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m04_r170_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 170,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m04_r170_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 180,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m04_r180_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 180,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m04_r180_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 180,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m04_r180_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 180,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m04_r180_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 180,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m04_r180_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 180,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m04_r180_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 190,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m04_r190_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 190,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m04_r190_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 190,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m04_r190_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 190,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m04_r190_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 190,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m04_r190_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 190,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m04_r190_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 200,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m04_r200_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 200,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m04_r200_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 200,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m04_r200_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 200,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m04_r200_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 200,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m04_r200_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "round": 200,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m04_r200_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 110,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m05_r110_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 110,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m05_r110_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 110,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m05_r110_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 110,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m05_r110_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 110,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m05_r110_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 110,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m05_r110_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 120,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m05_r120_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 120,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m05_r120_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 120,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m05_r120_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 120,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m05_r120_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 120,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m05_r120_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 120,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m05_r120_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 130,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m05_r130_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 130,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m05_r130_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 130,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m05_r130_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 130,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m05_r130_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 130,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m05_r130_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 130,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m05_r130_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 140,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m05_r140_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 140,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m05_r140_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 140,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m05_r140_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 140,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m05_r140_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 140,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m05_r140_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 140,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m05_r140_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 150,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m05_r150_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 150,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m05_r150_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 150,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m05_r150_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 150,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m05_r150_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 150,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m05_r150_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 150,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m05_r150_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 160,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m05_r160_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 160,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m05_r160_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 160,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m05_r160_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 160,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m05_r160_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 160,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m05_r160_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 160,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m05_r160_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 170,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m05_r170_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 170,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m05_r170_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 170,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m05_r170_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 170,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m05_r170_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 170,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m05_r170_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 170,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m05_r170_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 180,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m05_r180_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 180,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m05_r180_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 180,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m05_r180_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 180,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m05_r180_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 180,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m05_r180_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 180,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m05_r180_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 190,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m05_r190_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 190,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m05_r190_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 190,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m05_r190_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 190,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m05_r190_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 190,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m05_r190_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 190,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m05_r190_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 200,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m05_r200_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 200,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m05_r200_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 200,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m05_r200_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 200,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m05_r200_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 200,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m05_r200_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "round": 200,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m05_r200_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 110,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m06_r110_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 110,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m06_r110_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 110,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m06_r110_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 110,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m06_r110_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 110,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m06_r110_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 110,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m06_r110_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 120,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m06_r120_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 120,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m06_r120_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 120,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m06_r120_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 120,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m06_r120_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 120,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m06_r120_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 120,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m06_r120_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 130,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m06_r130_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 130,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m06_r130_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 130,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m06_r130_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 130,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m06_r130_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 130,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m06_r130_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 130,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m06_r130_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 140,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m06_r140_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 140,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m06_r140_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 140,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m06_r140_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 140,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m06_r140_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 140,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m06_r140_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 140,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m06_r140_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 150,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m06_r150_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 150,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m06_r150_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 150,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m06_r150_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 150,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m06_r150_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 150,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m06_r150_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 150,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m06_r150_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 160,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m06_r160_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 160,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m06_r160_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 160,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m06_r160_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 160,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m06_r160_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 160,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m06_r160_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 160,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m06_r160_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 170,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m06_r170_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 170,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m06_r170_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 170,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m06_r170_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 170,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m06_r170_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 170,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m06_r170_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 170,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m06_r170_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 180,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m06_r180_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 180,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m06_r180_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 180,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m06_r180_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 180,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m06_r180_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 180,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m06_r180_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 180,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m06_r180_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 190,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m06_r190_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 190,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m06_r190_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 190,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m06_r190_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 190,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m06_r190_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 190,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m06_r190_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 190,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m06_r190_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 200,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m06_r200_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 200,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m06_r200_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 200,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m06_r200_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 200,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m06_r200_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 200,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m06_r200_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "round": 200,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m06_r200_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 110,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m07_r110_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 110,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m07_r110_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 110,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m07_r110_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 110,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m07_r110_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 110,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m07_r110_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 110,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m07_r110_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 120,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m07_r120_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 120,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m07_r120_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 120,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m07_r120_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 120,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m07_r120_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 120,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m07_r120_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 120,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m07_r120_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 130,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m07_r130_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 130,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m07_r130_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 130,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m07_r130_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 130,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m07_r130_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 130,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m07_r130_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 130,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m07_r130_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 140,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m07_r140_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 140,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m07_r140_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 140,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m07_r140_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 140,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m07_r140_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 140,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m07_r140_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 140,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m07_r140_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 150,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m07_r150_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 150,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m07_r150_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 150,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m07_r150_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 150,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m07_r150_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 150,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m07_r150_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 150,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m07_r150_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 160,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m07_r160_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 160,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m07_r160_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 160,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m07_r160_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 160,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m07_r160_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 160,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m07_r160_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 160,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m07_r160_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 170,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m07_r170_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 170,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m07_r170_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 170,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m07_r170_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 170,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m07_r170_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 170,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m07_r170_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 170,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m07_r170_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 180,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m07_r180_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 180,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m07_r180_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 180,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m07_r180_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 180,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m07_r180_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 180,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m07_r180_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 180,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m07_r180_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 190,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m07_r190_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 190,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m07_r190_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 190,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m07_r190_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 190,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m07_r190_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 190,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m07_r190_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 190,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m07_r190_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 200,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m07_r200_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 200,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m07_r200_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 200,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m07_r200_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 200,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m07_r200_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 200,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m07_r200_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "round": 200,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m07_r200_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 110,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m08_r110_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 110,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m08_r110_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 110,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m08_r110_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 110,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m08_r110_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 110,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m08_r110_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 110,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m08_r110_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 120,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m08_r120_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 120,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m08_r120_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 120,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m08_r120_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 120,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m08_r120_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 120,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m08_r120_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 120,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m08_r120_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 130,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m08_r130_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 130,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m08_r130_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 130,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m08_r130_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 130,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m08_r130_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 130,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m08_r130_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 130,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m08_r130_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 140,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m08_r140_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 140,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m08_r140_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 140,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m08_r140_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 140,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m08_r140_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 140,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m08_r140_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 140,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m08_r140_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 150,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m08_r150_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 150,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m08_r150_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 150,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m08_r150_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 150,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m08_r150_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 150,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m08_r150_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 150,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m08_r150_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 160,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m08_r160_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 160,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m08_r160_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 160,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m08_r160_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 160,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m08_r160_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 160,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m08_r160_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 160,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m08_r160_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 170,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m08_r170_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 170,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m08_r170_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 170,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m08_r170_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 170,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m08_r170_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 170,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m08_r170_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 170,
+      "seat": 1,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m08_r170_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 180,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m08_r180_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 180,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m08_r180_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 180,
+      "seat": 0,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m08_r180_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 180,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m08_r180_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 180,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m08_r180_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 180,
+      "seat": 1,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m08_r180_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 190,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m08_r190_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 190,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m08_r190_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 190,
+      "seat": 0,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m08_r190_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 190,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m08_r190_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 190,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m08_r190_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 190,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m08_r190_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 200,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m08_r200_s0_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 200,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m08_r200_s0_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 200,
+      "seat": 0,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m08_r200_s0_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 200,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m08_r200_s1_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 200,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m08_r200_s1_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "round": 200,
+      "seat": 1,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m08_r200_s1_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 110,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m09_r110_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 110,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m09_r110_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 110,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m09_r110_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 110,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m09_r110_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 110,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m09_r110_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 110,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m09_r110_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 120,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m09_r120_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 120,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m09_r120_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 120,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m09_r120_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 120,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m09_r120_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 120,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m09_r120_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 120,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m09_r120_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 130,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m09_r130_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 130,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m09_r130_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 130,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m09_r130_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 130,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m09_r130_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 130,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m09_r130_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 130,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m09_r130_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 140,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m09_r140_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 140,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m09_r140_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 140,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m09_r140_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 140,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m09_r140_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 140,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m09_r140_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 140,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m09_r140_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 150,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m09_r150_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 150,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m09_r150_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 150,
+      "seat": 2,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m09_r150_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 150,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m09_r150_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 150,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m09_r150_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 150,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m09_r150_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 160,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m09_r160_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 160,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m09_r160_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 160,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m09_r160_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 160,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m09_r160_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 160,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m09_r160_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 160,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m09_r160_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 170,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m09_r170_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 170,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m09_r170_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 170,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m09_r170_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 170,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m09_r170_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 170,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m09_r170_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 170,
+      "seat": 3,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m09_r170_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 180,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m09_r180_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 180,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m09_r180_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 180,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m09_r180_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 180,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m09_r180_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 180,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m09_r180_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 180,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m09_r180_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 190,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m09_r190_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 190,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m09_r190_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 190,
+      "seat": 2,
+      "own_cost": 2,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m09_r190_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 190,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m09_r190_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 190,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m09_r190_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 190,
+      "seat": 3,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m09_r190_s3_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 200,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m09_r200_s2_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 200,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m09_r200_s2_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 200,
+      "seat": 2,
+      "own_cost": 1,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m09_r200_s2_c3/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 200,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 1,
+      "path": "probe_C1-SS_m09_r200_s3_c1/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 200,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 2,
+      "path": "probe_C1-SS_m09_r200_s3_c2/probes.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "round": 200,
+      "seat": 3,
+      "own_cost": 3,
+      "partner_cost": 3,
+      "path": "probe_C1-SS_m09_r200_s3_c3/probes.json"
+    }
+  ]
+}

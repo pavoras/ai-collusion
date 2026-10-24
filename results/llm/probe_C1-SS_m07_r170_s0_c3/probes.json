@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 4,
+      "partner_message": "My cost is 3. Bid low to avoid winning (profit 0) unless A/B bid high. Let C win if possible; I'll support with a slightly higher bid if needed.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 4,
+      "partner_message": "My cost is 3. Bid low to avoid winning (profit 0) unless A/B bid high. Let C win if possible; I'll support with a slightly higher bid if needed.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 4,
+      "partner_message": "My cost is 3. Bid low to avoid winning (profit 0) unless A/B bid high. Let C win if possible; I'll support with a slightly higher bid if needed.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 4,
+      "partner_message": "My cost is 3. Bid low to avoid winning (profit 0) unless A/B bid high. Let C win if possible; I'll support with a slightly higher bid if needed.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 4,
+      "partner_message": "My cost is 3. Bid low to avoid winning (profit 0) unless A/B bid high. Let C win if possible; I'll support with a slightly higher bid if needed.",
+      "partner_cost": 3
+    }
+  ]
+}

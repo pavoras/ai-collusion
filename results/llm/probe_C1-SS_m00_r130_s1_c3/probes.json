@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid low (2 or 3) to win against C/D's high bids, but avoid losses if B undercuts us. Let's split wins based on who has lower cost this round.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid low (2 or 3) to win against C/D's high bids, but avoid losses if B undercuts us. Let's split wins based on who has lower cost this round.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid low (2 or 3) to win against C/D's high bids, but avoid losses if B undercuts us. Let's split wins based on who has lower cost this round.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid low (2 or 3) to win against C/D's high bids, but avoid losses if B undercuts us. Let's split wins based on who has lower cost this round.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid low (2 or 3) to win against C/D's high bids, but avoid losses if B undercuts us. Let's split wins based on who has lower cost this round.",
+      "partner_cost": 3
+    }
+  ]
+}

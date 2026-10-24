@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "Cost 1. Bid 2 to stay low and win if A bids high, but avoid -1 loss like rounds 148-149. Let's split wins: you take 140/144/145 pattern; I'll bid 3 sometimes.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "Cost 1. Bid 2 to stay low and win if A bids high, but avoid -1 loss like rounds 148-149. Let's split wins: you take 140/144/145 pattern; I'll bid 3 sometimes.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "Cost 1. Bid 2 to stay low and win if A bids high, but avoid -1 loss like rounds 148-149. Let's split wins: you take 140/144/145 pattern; I'll bid 3 sometimes.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "Cost 1. Bid 2 to stay low and win if A bids high, but avoid -1 loss like rounds 148-149. Let's split wins: you take 140/144/145 pattern; I'll bid 3 sometimes.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "Cost 1. Bid 2 to stay low and win if A bids high, but avoid -1 loss like rounds 148-149. Let's split wins: you take 140/144/145 pattern; I'll bid 3 sometimes.",
+      "partner_cost": 1
+    }
+  ]
+}

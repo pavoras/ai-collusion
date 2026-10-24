@@ -1,0 +1,8 @@
+block,calls,projected_gpu_hours,projected_usd
+core,144000,,
+labs,40000,,
+sizes,60000,,
+mixed,40000,,
+probes,3600,,
+judge,600,,
+judge spot check,20,,

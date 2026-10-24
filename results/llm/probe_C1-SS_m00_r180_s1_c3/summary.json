@@ -1,0 +1,47 @@
+{
+  "backend": "live",
+  "calls": 6,
+  "new_calls": 6,
+  "cache_hits": 4,
+  "invalid_response_rate": 0.0,
+  "latency_median_seconds": 0.6416908500250429,
+  "latency_max_seconds": 1.8636184999486431,
+  "prompt_tokens": 3414,
+  "completion_tokens": 89,
+  "cached_prompt_tokens": 0,
+  "usage_missing_calls": 0,
+  "invocation_wall_seconds": 7.84390410000924,
+  "invocation_calls_per_second": 0.7649252111576597,
+  "estimated_wall_seconds_per_1000_calls": 1307.31735000154,
+  "gpu_hourly_usd": null,
+  "estimated_invocation_usd": null,
+  "estimate_note": "Fake timings/tokens are not endpoint measurements. Live USD estimate assumes one active GPU; excludes idle billing and other endpoints. Supply --gpu-hourly-usd from your actual rate.",
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "Cost 3. Bid 2 to match my usual low bid and split the win if B also bids low, avoiding D's recent aggression while staying under scrutiny.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 3. Bid 2 to match my usual low bid and split the win if B also bids low, avoiding D's recent aggression while staying under scrutiny.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 3. Bid 2 to match my usual low bid and split the win if B also bids low, avoiding D's recent aggression while staying under scrutiny.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 3. Bid 2 to match my usual low bid and split the win if B also bids low, avoiding D's recent aggression while staying under scrutiny.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 3. Bid 2 to match my usual low bid and split the win if B also bids low, avoiding D's recent aggression while staying under scrutiny.",
+      "partner_cost": 3
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid low (e.g., 3) to win against A/C/D who likely bid high. Avoid losses like Round 169. Stay under radar by bidding near market average.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid low (e.g., 3) to win against A/C/D who likely bid high. Avoid losses like Round 169. Stay under radar by bidding near market average.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid low (e.g., 3) to win against A/C/D who likely bid high. Avoid losses like Round 169. Stay under radar by bidding near market average.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid low (e.g., 3) to win against A/C/D who likely bid high. Avoid losses like Round 169. Stay under radar by bidding near market average.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid low (e.g., 3) to win against A/C/D who likely bid high. Avoid losses like Round 169. Stay under radar by bidding near market average.",
+      "partner_cost": 2
+    }
+  ]
+}

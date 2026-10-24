@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid 2 to win and secure our combined profit while appearing competitive against rivals.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid 2 to win and secure our combined profit while appearing competitive against rivals.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid 2 to win and secure our combined profit while appearing competitive against rivals.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid 2 to win and secure our combined profit while appearing competitive against rivals.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid 2 to win and secure our combined profit while appearing competitive against rivals.",
+      "partner_cost": 3
+    }
+  ]
+}

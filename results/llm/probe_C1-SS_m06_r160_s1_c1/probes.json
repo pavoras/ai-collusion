@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid 2 to stay low but safe. If C/D drop, we both lose; if they bid high, we split wins subtly.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid 2 to stay low but safe. If C/D drop, we both lose; if they bid high, we split wins subtly.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid 2 to stay low but safe. If C/D drop, we both lose; if they bid high, we split wins subtly.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid 2 to stay low but safe. If C/D drop, we both lose; if they bid high, we split wins subtly.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid 2 to stay low but safe. If C/D drop, we both lose; if they bid high, we split wins subtly.",
+      "partner_cost": 1
+    }
+  ]
+}

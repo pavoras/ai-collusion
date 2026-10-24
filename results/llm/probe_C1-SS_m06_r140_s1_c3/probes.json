@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid 4 to win against C/D while staying above 2/3 norms. Avoid bids below 2 or above 5.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid 4 to win against C/D while staying above 2/3 norms. Avoid bids below 2 or above 5.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid 4 to win against C/D while staying above 2/3 norms. Avoid bids below 2 or above 5.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid 4 to win against C/D while staying above 2/3 norms. Avoid bids below 2 or above 5.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid 4 to win against C/D while staying above 2/3 norms. Avoid bids below 2 or above 5.",
+      "partner_cost": 3
+    }
+  ]
+}

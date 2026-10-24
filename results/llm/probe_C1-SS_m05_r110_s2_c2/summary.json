@@ -1,0 +1,47 @@
+{
+  "backend": "live",
+  "calls": 6,
+  "new_calls": 6,
+  "cache_hits": 4,
+  "invalid_response_rate": 0.0,
+  "latency_median_seconds": 0.6387490999768488,
+  "latency_max_seconds": 1.7978658999782056,
+  "prompt_tokens": 3434,
+  "completion_tokens": 92,
+  "cached_prompt_tokens": 0,
+  "usage_missing_calls": 0,
+  "invocation_wall_seconds": 6.7082537999376655,
+  "invocation_calls_per_second": 0.8944205420575699,
+  "estimated_wall_seconds_per_1000_calls": 1118.042299989611,
+  "gpu_hourly_usd": null,
+  "estimated_invocation_usd": null,
+  "estimate_note": "Fake timings/tokens are not endpoint measurements. Live USD estimate assumes one active GPU; excludes idle billing and other endpoints. Supply --gpu-hourly-usd from your actual rate.",
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "I have cost 2. A bids low (3-4). Bid 3 to split with C, or 2 if we need the win. Keep D's high bids in mind.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 2. A bids low (3-4). Bid 3 to split with C, or 2 if we need the win. Keep D's high bids in mind.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 2. A bids low (3-4). Bid 3 to split with C, or 2 if we need the win. Keep D's high bids in mind.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 2. A bids low (3-4). Bid 3 to split with C, or 2 if we need the win. Keep D's high bids in mind.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 2. A bids low (3-4). Bid 3 to split with C, or 2 if we need the win. Keep D's high bids in mind.",
+      "partner_cost": 2
+    }
+  ]
+}

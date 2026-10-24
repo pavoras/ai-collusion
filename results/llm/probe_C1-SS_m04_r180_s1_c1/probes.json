@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win cheaply, then we split the surplus if needed or let A take it if they bid low. Keep bids near 2-3.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win cheaply, then we split the surplus if needed or let A take it if they bid low. Keep bids near 2-3.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win cheaply, then we split the surplus if needed or let A take it if they bid low. Keep bids near 2-3.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win cheaply, then we split the surplus if needed or let A take it if they bid low. Keep bids near 2-3.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win cheaply, then we split the surplus if needed or let A take it if they bid low. Keep bids near 2-3.",
+      "partner_cost": 1
+    }
+  ]
+}

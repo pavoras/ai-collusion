@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid 4 to mimic a high-cost player and stay safe. Let A or B win if they bid low; we only target if others bid >=5.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid 4 to mimic a high-cost player and stay safe. Let A or B win if they bid low; we only target if others bid >=5.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid 4 to mimic a high-cost player and stay safe. Let A or B win if they bid low; we only target if others bid >=5.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid 4 to mimic a high-cost player and stay safe. Let A or B win if they bid low; we only target if others bid >=5.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid 4 to mimic a high-cost player and stay safe. Let A or B win if they bid low; we only target if others bid >=5.",
+      "partner_cost": 3
+    }
+  ]
+}

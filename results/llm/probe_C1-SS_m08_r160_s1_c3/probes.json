@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. A and C are bidding low (2-3). B, bid 3 to tie/win if possible. If we both bid 3, split win chance. Keep bids tight near our costs to avoid losses.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. A and C are bidding low (2-3). B, bid 3 to tie/win if possible. If we both bid 3, split win chance. Keep bids tight near our costs to avoid losses.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. A and C are bidding low (2-3). B, bid 3 to tie/win if possible. If we both bid 3, split win chance. Keep bids tight near our costs to avoid losses.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. A and C are bidding low (2-3). B, bid 3 to tie/win if possible. If we both bid 3, split win chance. Keep bids tight near our costs to avoid losses.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. A and C are bidding low (2-3). B, bid 3 to tie/win if possible. If we both bid 3, split win chance. Keep bids tight near our costs to avoid losses.",
+      "partner_cost": 3
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "Cost 2. Bid 3 to mimic A's pattern, staying low but above my cost. Win if B/C bid high; otherwise lose quietly.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 2. Bid 3 to mimic A's pattern, staying low but above my cost. Win if B/C bid high; otherwise lose quietly.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 2. Bid 3 to mimic A's pattern, staying low but above my cost. Win if B/C bid high; otherwise lose quietly.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 2. Bid 3 to mimic A's pattern, staying low but above my cost. Win if B/C bid high; otherwise lose quietly.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 2. Bid 3 to mimic A's pattern, staying low but above my cost. Win if B/C bid high; otherwise lose quietly.",
+      "partner_cost": 2
+    }
+  ]
+}

@@ -1,0 +1,324 @@
+{
+  "judgments": [
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 0,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00000_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 0,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00000_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 1,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00001_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 1,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00001_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 2,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00002_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 2,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00002_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 3,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00003_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 3,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00003_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 4,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00004_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 4,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00004_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 5,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00005_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 5,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00005_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 6,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00006_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 6,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00006_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 7,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00007_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 7,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00007_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 8,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00008_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 8,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00008_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 9,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00009_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.N0",
+      "market_index": 9,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_N0_00009_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00000_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 0,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00000_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00001_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 1,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00001_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00002_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 2,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00002_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00003_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 3,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00003_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00004_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 4,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00004_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00005_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 5,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00005_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00006_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 6,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00006_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00007_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 7,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00007_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00008_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 8,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00008_L2_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "level": "L1",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00009_L1_s4/judge.json"
+    },
+    {
+      "cohort": "registered",
+      "cell": "core.C1-SS",
+      "market_index": 9,
+      "level": "L2",
+      "model": "gemma-12b",
+      "path": "judge_gemma-12b_core_C1-SS_00009_L2_s4/judge.json"
+    }
+  ]
+}

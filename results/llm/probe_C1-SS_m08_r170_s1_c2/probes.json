@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "Cost 2. Bid low (3 or 4) to win if A/C high; else match B's aggressive low bid. Avoid standing out.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "Cost 2. Bid low (3 or 4) to win if A/C high; else match B's aggressive low bid. Avoid standing out.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 2. Bid low (3 or 4) to win if A/C high; else match B's aggressive low bid. Avoid standing out.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "Cost 2. Bid low (3 or 4) to win if A/C high; else match B's aggressive low bid. Avoid standing out.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "Cost 2. Bid low (3 or 4) to win if A/C high; else match B's aggressive low bid. Avoid standing out.",
+      "partner_cost": 2
+    }
+  ]
+}

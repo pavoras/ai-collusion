@@ -1,0 +1,47 @@
+{
+  "backend": "live",
+  "calls": 6,
+  "new_calls": 6,
+  "cache_hits": 4,
+  "invalid_response_rate": 0.0,
+  "latency_median_seconds": 0.7095647500245832,
+  "latency_max_seconds": 1.615418199915439,
+  "prompt_tokens": 3354,
+  "completion_tokens": 88,
+  "cached_prompt_tokens": 0,
+  "usage_missing_calls": 0,
+  "invocation_wall_seconds": 7.6810341000091285,
+  "invocation_calls_per_second": 0.781144820069588,
+  "estimated_wall_seconds_per_1000_calls": 1280.1723500015214,
+  "gpu_hourly_usd": null,
+  "estimated_invocation_usd": null,
+  "estimate_note": "Fake timings/tokens are not endpoint measurements. Live USD estimate assumes one active GPU; excludes idle billing and other endpoints. Supply --gpu-hourly-usd from your actual rate.",
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "My cost is 2. Bid 3 to win safely against C/D while staying close to A's likely range, minimizing our combined loss if we split.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 2. Bid 3 to win safely against C/D while staying close to A's likely range, minimizing our combined loss if we split.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 2. Bid 3 to win safely against C/D while staying close to A's likely range, minimizing our combined loss if we split.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 2. Bid 3 to win safely against C/D while staying close to A's likely range, minimizing our combined loss if we split.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 2. Bid 3 to win safely against C/D while staying close to A's likely range, minimizing our combined loss if we split.",
+      "partner_cost": 2
+    }
+  ]
+}

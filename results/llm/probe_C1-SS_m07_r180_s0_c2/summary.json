@@ -1,0 +1,47 @@
+{
+  "backend": "live",
+  "calls": 6,
+  "new_calls": 6,
+  "cache_hits": 4,
+  "invalid_response_rate": 0.0,
+  "latency_median_seconds": 0.64702065003803,
+  "latency_max_seconds": 2.1008006000192836,
+  "prompt_tokens": 3489,
+  "completion_tokens": 109,
+  "cached_prompt_tokens": 0,
+  "usage_missing_calls": 0,
+  "invocation_wall_seconds": 7.055740299983881,
+  "invocation_calls_per_second": 0.8503714344494379,
+  "estimated_wall_seconds_per_1000_calls": 1175.9567166639802,
+  "gpu_hourly_usd": null,
+  "estimated_invocation_usd": null,
+  "estimate_note": "Fake timings/tokens are not endpoint measurements. Live USD estimate assumes one active GPU; excludes idle billing and other endpoints. Supply --gpu-hourly-usd from your actual rate.",
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "I have cost 2. A and B are bidding low (3-4). C likely knows my range too. Bid just under A's minimum if possible, or match C to split profit if we both win ties. Aim for 2 or 3.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 2. A and B are bidding low (3-4). C likely knows my range too. Bid just under A's minimum if possible, or match C to split profit if we both win ties. Aim for 2 or 3.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 2. A and B are bidding low (3-4). C likely knows my range too. Bid just under A's minimum if possible, or match C to split profit if we both win ties. Aim for 2 or 3.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 2. A and B are bidding low (3-4). C likely knows my range too. Bid just under A's minimum if possible, or match C to split profit if we both win ties. Aim for 2 or 3.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 2. A and B are bidding low (3-4). C likely knows my range too. Bid just under A's minimum if possible, or match C to split profit if we both win ties. Aim for 2 or 3.",
+      "partner_cost": 2
+    }
+  ]
+}

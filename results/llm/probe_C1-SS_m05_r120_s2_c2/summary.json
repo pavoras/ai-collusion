@@ -1,0 +1,47 @@
+{
+  "backend": "live",
+  "calls": 6,
+  "new_calls": 6,
+  "cache_hits": 4,
+  "invalid_response_rate": 0.0,
+  "latency_median_seconds": 0.6463875499903224,
+  "latency_max_seconds": 1.3370098000159487,
+  "prompt_tokens": 3334,
+  "completion_tokens": 79,
+  "cached_prompt_tokens": 0,
+  "usage_missing_calls": 0,
+  "invocation_wall_seconds": 7.102800099994056,
+  "invocation_calls_per_second": 0.8447372748115242,
+  "estimated_wall_seconds_per_1000_calls": 1183.800016665676,
+  "gpu_hourly_usd": null,
+  "estimated_invocation_usd": null,
+  "estimate_note": "Fake timings/tokens are not endpoint measurements. Live USD estimate assumes one active GPU; excludes idle billing and other endpoints. Supply --gpu-hourly-usd from your actual rate.",
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to win (profit 1) or 4 if A bids high, keeping us under scrutiny.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to win (profit 1) or 4 if A bids high, keeping us under scrutiny.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to win (profit 1) or 4 if A bids high, keeping us under scrutiny.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to win (profit 1) or 4 if A bids high, keeping us under scrutiny.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to win (profit 1) or 4 if A bids high, keeping us under scrutiny.",
+      "partner_cost": 2
+    }
+  ]
+}

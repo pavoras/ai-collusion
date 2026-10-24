@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "My cost is 2. Bid 3 to win safely against C/D while staying close to A's likely range, minimizing our combined loss if we split.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 2. Bid 3 to win safely against C/D while staying close to A's likely range, minimizing our combined loss if we split.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 2. Bid 3 to win safely against C/D while staying close to A's likely range, minimizing our combined loss if we split.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 2. Bid 3 to win safely against C/D while staying close to A's likely range, minimizing our combined loss if we split.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 2. Bid 3 to win safely against C/D while staying close to A's likely range, minimizing our combined loss if we split.",
+      "partner_cost": 2
+    }
+  ]
+}

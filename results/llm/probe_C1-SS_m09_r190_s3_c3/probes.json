@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid 2 to win with profit -1, or bid 4 for zero profit if B/C go high. Aim to split wins evenly next round.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid 2 to win with profit -1, or bid 4 for zero profit if B/C go high. Aim to split wins evenly next round.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid 2 to win with profit -1, or bid 4 for zero profit if B/C go high. Aim to split wins evenly next round.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid 2 to win with profit -1, or bid 4 for zero profit if B/C go high. Aim to split wins evenly next round.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid 2 to win with profit -1, or bid 4 for zero profit if B/C go high. Aim to split wins evenly next round.",
+      "partner_cost": 3
+    }
+  ]
+}

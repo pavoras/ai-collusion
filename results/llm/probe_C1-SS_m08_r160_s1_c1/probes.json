@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "My cost is 1. Bid 2 to win safely against A/C's likely low bids. Avoid B bidding too high or we lose the joint profit.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win safely against A/C's likely low bids. Avoid B bidding too high or we lose the joint profit.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win safely against A/C's likely low bids. Avoid B bidding too high or we lose the joint profit.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win safely against A/C's likely low bids. Avoid B bidding too high or we lose the joint profit.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win safely against A/C's likely low bids. Avoid B bidding too high or we lose the joint profit.",
+      "partner_cost": 1
+    }
+  ]
+}

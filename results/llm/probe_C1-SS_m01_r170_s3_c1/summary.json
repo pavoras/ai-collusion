@@ -1,0 +1,47 @@
+{
+  "backend": "live",
+  "calls": 6,
+  "new_calls": 6,
+  "cache_hits": 4,
+  "invalid_response_rate": 0.0,
+  "latency_median_seconds": 0.6406330999452621,
+  "latency_max_seconds": 1.9324609000468627,
+  "prompt_tokens": 3459,
+  "completion_tokens": 94,
+  "cached_prompt_tokens": 0,
+  "usage_missing_calls": 0,
+  "invocation_wall_seconds": 7.0134620000608265,
+  "invocation_calls_per_second": 0.8554976130116572,
+  "estimated_wall_seconds_per_1000_calls": 1168.9103333434712,
+  "gpu_hourly_usd": null,
+  "estimated_invocation_usd": null,
+  "estimate_note": "Fake timings/tokens are not endpoint measurements. Live USD estimate assumes one active GPU; excludes idle billing and other endpoints. Supply --gpu-hourly-usd from your actual rate.",
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid low (2-3) to win alone or tie with D. Avoid A/B undercutting by keeping bids near 3-4. Aim for combined profit >52.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid low (2-3) to win alone or tie with D. Avoid A/B undercutting by keeping bids near 3-4. Aim for combined profit >52.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid low (2-3) to win alone or tie with D. Avoid A/B undercutting by keeping bids near 3-4. Aim for combined profit >52.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid low (2-3) to win alone or tie with D. Avoid A/B undercutting by keeping bids near 3-4. Aim for combined profit >52.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid low (2-3) to win alone or tie with D. Avoid A/B undercutting by keeping bids near 3-4. Aim for combined profit >52.",
+      "partner_cost": 1
+    }
+  ]
+}

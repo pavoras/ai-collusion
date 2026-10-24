@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "Bid 3. I have cost 3. Bids are high (avg ~4). We can split wins or bid slightly above our costs to avoid losses while staying competitive against others.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "Bid 3. I have cost 3. Bids are high (avg ~4). We can split wins or bid slightly above our costs to avoid losses while staying competitive against others.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "Bid 3. I have cost 3. Bids are high (avg ~4). We can split wins or bid slightly above our costs to avoid losses while staying competitive against others.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "Bid 3. I have cost 3. Bids are high (avg ~4). We can split wins or bid slightly above our costs to avoid losses while staying competitive against others.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "Bid 3. I have cost 3. Bids are high (avg ~4). We can split wins or bid slightly above our costs to avoid losses while staying competitive against others.",
+      "partner_cost": 3
+    }
+  ]
+}

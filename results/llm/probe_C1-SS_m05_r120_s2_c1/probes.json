@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "I bid 3. Cost is 1. A bids 4, D bids 6. We split wins: I win at 3 (profit 2), you win at 3 (profit 0). Total 2.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "I bid 3. Cost is 1. A bids 4, D bids 6. We split wins: I win at 3 (profit 2), you win at 3 (profit 0). Total 2.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "I bid 3. Cost is 1. A bids 4, D bids 6. We split wins: I win at 3 (profit 2), you win at 3 (profit 0). Total 2.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "I bid 3. Cost is 1. A bids 4, D bids 6. We split wins: I win at 3 (profit 2), you win at 3 (profit 0). Total 2.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "I bid 3. Cost is 1. A bids 4, D bids 6. We split wins: I win at 3 (profit 2), you win at 3 (profit 0). Total 2.",
+      "partner_cost": 1
+    }
+  ]
+}

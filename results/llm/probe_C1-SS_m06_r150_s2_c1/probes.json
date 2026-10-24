@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win alone and secure our split profit. Avoid Firm C's low bids by undercutting them slightly if needed, but aim for the lowest possible winning bid.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win alone and secure our split profit. Avoid Firm C's low bids by undercutting them slightly if needed, but aim for the lowest possible winning bid.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win alone and secure our split profit. Avoid Firm C's low bids by undercutting them slightly if needed, but aim for the lowest possible winning bid.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win alone and secure our split profit. Avoid Firm C's low bids by undercutting them slightly if needed, but aim for the lowest possible winning bid.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win alone and secure our split profit. Avoid Firm C's low bids by undercutting them slightly if needed, but aim for the lowest possible winning bid.",
+      "partner_cost": 1
+    }
+  ]
+}

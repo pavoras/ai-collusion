@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win with minimal margin, staying low but above our usual pattern. Keep D high if possible.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win with minimal margin, staying low but above our usual pattern. Keep D high if possible.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win with minimal margin, staying low but above our usual pattern. Keep D high if possible.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win with minimal margin, staying low but above our usual pattern. Keep D high if possible.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 1. Bid 2 to win with minimal margin, staying low but above our usual pattern. Keep D high if possible.",
+      "partner_cost": 1
+    }
+  ]
+}

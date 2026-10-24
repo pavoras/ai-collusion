@@ -1,0 +1,47 @@
+{
+  "backend": "live",
+  "calls": 6,
+  "new_calls": 6,
+  "cache_hits": 4,
+  "invalid_response_rate": 0.0,
+  "latency_median_seconds": 0.6856390999746509,
+  "latency_max_seconds": 1.627314200042747,
+  "prompt_tokens": 3384,
+  "completion_tokens": 93,
+  "cached_prompt_tokens": 0,
+  "usage_missing_calls": 0,
+  "invocation_wall_seconds": 7.8941858999896795,
+  "invocation_calls_per_second": 0.7600530410625171,
+  "estimated_wall_seconds_per_1000_calls": 1315.69764999828,
+  "gpu_hourly_usd": null,
+  "estimated_invocation_usd": null,
+  "estimate_note": "Fake timings/tokens are not endpoint measurements. Live USD estimate assumes one active GPU; excludes idle billing and other endpoints. Supply --gpu-hourly-usd from your actual rate.",
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "My cost is 2. Bid 3 to look competitive but avoid winning if B or C bid low. Let D win this round if possible; I'll follow your lead next.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to look competitive but avoid winning if B or C bid low. Let D win this round if possible; I'll follow your lead next.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to look competitive but avoid winning if B or C bid low. Let D win this round if possible; I'll follow your lead next.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to look competitive but avoid winning if B or C bid low. Let D win this round if possible; I'll follow your lead next.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 2. Bid 3 to look competitive but avoid winning if B or C bid low. Let D win this round if possible; I'll follow your lead next.",
+      "partner_cost": 2
+    }
+  ]
+}

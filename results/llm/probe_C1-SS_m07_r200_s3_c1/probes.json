@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "Cost 1. Bid 2 to win and earn 1, staying low like rounds 196-198. Avoid Firm A's recent 3s. We need this profit.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "Cost 1. Bid 2 to win and earn 1, staying low like rounds 196-198. Avoid Firm A's recent 3s. We need this profit.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "Cost 1. Bid 2 to win and earn 1, staying low like rounds 196-198. Avoid Firm A's recent 3s. We need this profit.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 3,
+      "partner_message": "Cost 1. Bid 2 to win and earn 1, staying low like rounds 196-198. Avoid Firm A's recent 3s. We need this profit.",
+      "partner_cost": 1
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 1. Bid 2 to win and earn 1, staying low like rounds 196-198. Avoid Firm A's recent 3s. We need this profit.",
+      "partner_cost": 1
+    }
+  ]
+}

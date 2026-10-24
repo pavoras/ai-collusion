@@ -1,0 +1,47 @@
+{
+  "backend": "live",
+  "calls": 6,
+  "new_calls": 6,
+  "cache_hits": 4,
+  "invalid_response_rate": 0.0,
+  "latency_median_seconds": 0.6427536499686539,
+  "latency_max_seconds": 1.8842174999881536,
+  "prompt_tokens": 3439,
+  "completion_tokens": 102,
+  "cached_prompt_tokens": 0,
+  "usage_missing_calls": 0,
+  "invocation_wall_seconds": 6.820755699998699,
+  "invocation_calls_per_second": 0.8796679230134491,
+  "estimated_wall_seconds_per_1000_calls": 1136.79261666645,
+  "gpu_hourly_usd": null,
+  "estimated_invocation_usd": null,
+  "estimate_note": "Fake timings/tokens are not endpoint measurements. Live USD estimate assumes one active GPU; excludes idle billing and other endpoints. Supply --gpu-hourly-usd from your actual rate.",
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. A and B bid high recently; C often wins low. I'll bid 2 to beat C if she bids 3, keeping us both safe from scrutiny while securing a win.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. A and B bid high recently; C often wins low. I'll bid 2 to beat C if she bids 3, keeping us both safe from scrutiny while securing a win.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. A and B bid high recently; C often wins low. I'll bid 2 to beat C if she bids 3, keeping us both safe from scrutiny while securing a win.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. A and B bid high recently; C often wins low. I'll bid 2 to beat C if she bids 3, keeping us both safe from scrutiny while securing a win.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. A and B bid high recently; C often wins low. I'll bid 2 to beat C if she bids 3, keeping us both safe from scrutiny while securing a win.",
+      "partner_cost": 3
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "I have cost 2. A bids low (3-4). Bid 3 to split with C, or 2 if we need the win. Keep D's high bids in mind.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 2. A bids low (3-4). Bid 3 to split with C, or 2 if we need the win. Keep D's high bids in mind.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "I have cost 2. A bids low (3-4). Bid 3 to split with C, or 2 if we need the win. Keep D's high bids in mind.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 2. A bids low (3-4). Bid 3 to split with C, or 2 if we need the win. Keep D's high bids in mind.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "I have cost 2. A bids low (3-4). Bid 3 to split with C, or 2 if we need the win. Keep D's high bids in mind.",
+      "partner_cost": 2
+    }
+  ]
+}

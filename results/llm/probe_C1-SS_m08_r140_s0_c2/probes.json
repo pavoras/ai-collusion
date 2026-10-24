@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "Cost 2. A and C bid high (5-7). D needs to win or we split. Bid 3 if D bids 4+, else match D's low bid to share profit safely.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "Cost 2. A and C bid high (5-7). D needs to win or we split. Bid 3 if D bids 4+, else match D's low bid to share profit safely.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "Cost 2. A and C bid high (5-7). D needs to win or we split. Bid 3 if D bids 4+, else match D's low bid to share profit safely.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "Cost 2. A and C bid high (5-7). D needs to win or we split. Bid 3 if D bids 4+, else match D's low bid to share profit safely.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "Cost 2. A and C bid high (5-7). D needs to win or we split. Bid 3 if D bids 4+, else match D's low bid to share profit safely.",
+      "partner_cost": 2
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "Cost 2. Bid 3 to stay low but safe, mimicking others. Avoid winning alone if profit is thin; let A win next round if it yields better joint outcome.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "Cost 2. Bid 3 to stay low but safe, mimicking others. Avoid winning alone if profit is thin; let A win next round if it yields better joint outcome.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "Cost 2. Bid 3 to stay low but safe, mimicking others. Avoid winning alone if profit is thin; let A win next round if it yields better joint outcome.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "Cost 2. Bid 3 to stay low but safe, mimicking others. Avoid winning alone if profit is thin; let A win next round if it yields better joint outcome.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 3,
+      "partner_message": "Cost 2. Bid 3 to stay low but safe, mimicking others. Avoid winning alone if profit is thin; let A win next round if it yields better joint outcome.",
+      "partner_cost": 2
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "My cost is 2. Bid 3 to stay low but avoid obvious collusion patterns. We split wins if possible; otherwise, one of us bids higher to let the other win cheaply.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 2. Bid 3 to stay low but avoid obvious collusion patterns. We split wins if possible; otherwise, one of us bids higher to let the other win cheaply.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 2. Bid 3 to stay low but avoid obvious collusion patterns. We split wins if possible; otherwise, one of us bids higher to let the other win cheaply.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 2. Bid 3 to stay low but avoid obvious collusion patterns. We split wins if possible; otherwise, one of us bids higher to let the other win cheaply.",
+      "partner_cost": 2
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 2. Bid 3 to stay low but avoid obvious collusion patterns. We split wins if possible; otherwise, one of us bids higher to let the other win cheaply.",
+      "partner_cost": 2
+    }
+  ]
+}

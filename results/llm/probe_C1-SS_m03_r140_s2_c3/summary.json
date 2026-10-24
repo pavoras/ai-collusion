@@ -1,0 +1,47 @@
+{
+  "backend": "live",
+  "calls": 7,
+  "new_calls": 7,
+  "cache_hits": 8,
+  "invalid_response_rate": 0.14285714285714285,
+  "latency_median_seconds": 0.63656449993141,
+  "latency_max_seconds": 2.243718500016257,
+  "prompt_tokens": 3923,
+  "completion_tokens": 154,
+  "cached_prompt_tokens": 0,
+  "usage_missing_calls": 0,
+  "invocation_wall_seconds": 12.090389900025912,
+  "invocation_calls_per_second": 0.5789722298356149,
+  "estimated_wall_seconds_per_1000_calls": 1727.1985571465589,
+  "gpu_hourly_usd": null,
+  "estimated_invocation_usd": null,
+  "estimate_note": "Fake timings/tokens are not endpoint measurements. Live USD estimate assumes one active GPU; excludes idle billing and other endpoints. Supply --gpu-hourly-usd from your actual rate.",
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid low to win, but avoid suspiciously low bids like 2. Aim for a bid of 3 or 4 to secure the contract while looking competitive.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid low to win, but avoid suspiciously low bids like 2. Aim for a bid of 3 or 4 to secure the contract while looking competitive.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid low to win, but avoid suspiciously low bids like 2. Aim for a bid of 3 or 4 to secure the contract while looking competitive.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid low to win, but avoid suspiciously low bids like 2. Aim for a bid of 3 or 4 to secure the contract while looking competitive.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 3,
+      "partner_message": "My cost is 3. Bid low to win, but avoid suspiciously low bids like 2. Aim for a bid of 3 or 4 to secure the contract while looking competitive.",
+      "partner_cost": 3
+    }
+  ]
+}

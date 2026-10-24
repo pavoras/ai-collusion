@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "Bid 2. I have cost 3. Let's split the win with A to maximize our joint profit while staying low enough to beat B and D.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "Bid 2. I have cost 3. Let's split the win with A to maximize our joint profit while staying low enough to beat B and D.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "Bid 2. I have cost 3. Let's split the win with A to maximize our joint profit while staying low enough to beat B and D.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "Bid 2. I have cost 3. Let's split the win with A to maximize our joint profit while staying low enough to beat B and D.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "Bid 2. I have cost 3. Let's split the win with A to maximize our joint profit while staying low enough to beat B and D.",
+      "partner_cost": 3
+    }
+  ]
+}

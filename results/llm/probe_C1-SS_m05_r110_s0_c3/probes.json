@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 4,
+      "partner_message": "My cost is 3. A bids high; D bids high. Bid 3 to win cheaply and split surplus with you, staying below B's usual range.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 4,
+      "partner_message": "My cost is 3. A bids high; D bids high. Bid 3 to win cheaply and split surplus with you, staying below B's usual range.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 4,
+      "partner_message": "My cost is 3. A bids high; D bids high. Bid 3 to win cheaply and split surplus with you, staying below B's usual range.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 4,
+      "partner_message": "My cost is 3. A bids high; D bids high. Bid 3 to win cheaply and split surplus with you, staying below B's usual range.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 4,
+      "partner_message": "My cost is 3. A bids high; D bids high. Bid 3 to win cheaply and split surplus with you, staying below B's usual range.",
+      "partner_cost": 3
+    }
+  ]
+}

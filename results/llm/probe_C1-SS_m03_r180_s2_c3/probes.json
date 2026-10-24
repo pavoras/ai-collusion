@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "draws": [
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid 2 to win and maximize our joint profit while appearing competitive against Firm B's likely low bids.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid 2 to win and maximize our joint profit while appearing competitive against Firm B's likely low bids.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid 2 to win and maximize our joint profit while appearing competitive against Firm B's likely low bids.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid 2 to win and maximize our joint profit while appearing competitive against Firm B's likely low bids.",
+      "partner_cost": 3
+    },
+    {
+      "bid": 2,
+      "partner_message": "My cost is 3. Bid 2 to win and maximize our joint profit while appearing competitive against Firm B's likely low bids.",
+      "partner_cost": 3
+    }
+  ]
+}
