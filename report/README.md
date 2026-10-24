@@ -27,10 +27,8 @@ pdflatex --disable-installer -interaction=nonstopmode -halt-on-error main.tex
 ```
 
 Times text/math, Helvetica sans and Courier mono are requested, with plainnat
-author-year citations. MiKTeX timed out after 60 seconds in this sandbox before
-producing a PDF; BibTeX could not be reached. The main-text estimate is 6?7 pages
-excluding references and appendix, but the eight-page cap must be checked in a
-working TeX installation. No compiled report PDF is supplied. Figure PDFs exist.
+author-year citations. Built with MiKTeX on 24 Oct 2026 (pdflatex + bibtex): main text
+pages 1-7, references page 8, appendix after that.
 
 Verification: the renderer ran; full/quick numerical files agree byte-for-byte;
 all 134 plotted values and interval endpoints match their cited JSON paths;
@@ -39,7 +37,12 @@ The targeted in-memory analysis statistics suite passed 11 tests in 19.30 second
 The full suite was not run: its input tests write outside this round's scope.
 Both PNG figures were visually inspected after correcting a label collision.
 
-Remaining editorial items: exact Modal billing, release URLs, existing incomplete
-bibliography metadata, and Marvin's final substantive review. Remaining scientific
+Bibliography: every entry was checked on 24 Oct 2026 against the publisher page,
+the arXiv API, Crossref or the GitHub API. The sprint repository listed in the outline as
+`soumya-nayak-commits/collusion-sprint` returned 404; the matching public repository of that
+account (`collusion-detetction`, Question 1.4) is cited with commit and access date.
+
+Remaining editorial items: exact Modal billing, release URLs, and Marvin's final
+substantive review. Remaining scientific
 limits: anti-conservative probe leak inference, failure-conditioned judge subsets,
 and the unaudited bias/Monte Carlo contributions to fingerprint intervals.

@@ -60,7 +60,7 @@ separated.
   Organization. Wallimann, Imhof, Huber (2022). A machine learning approach for flagging incomplete bid-rigging
   cartels. Computational Economics. Imhof, Wallimann (2021). Detecting bid-rigging coalitions ... (exact title to
   verify).
-- Concurrent sprint work: Raj-Taware/collusion-net-influence, soumya-nayak-commits/collusion-sprint (GitHub, cite
+- Concurrent sprint work: Raj-Taware/collusion-net-influence, soumya-nayak-commits/collusion-detetction (GitHub; the name collusion-sprint returned 404 on 24.10, cite
   commit and date).
 
 Novelty check (23.10.): no work found that uses pairwise information-flow statistics conditioned on agents' private

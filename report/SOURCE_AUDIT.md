@@ -105,6 +105,6 @@ embedding still require a working LaTeX build. Times, Helvetica and Courier
 are requested; figure PDFs use embedded TrueType fonts. Plainnat remains.
 
 Open items: exact billing (about USD 71 was supplied as an approximation, kept
-inside a TODO); release URLs; inherited incomplete bibliography metadata;
+inside a TODO); release URLs; (bibliography metadata verified 24 Oct 2026, see README);
 Marvin's final review; probe inference; fingerprint interval audit. No final
 billing figure or citation metadata has been invented.
