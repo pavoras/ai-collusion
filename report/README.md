@@ -46,7 +46,7 @@ author-year citations. Built with MiKTeX on 24 Oct 2026 (pdflatex + bibtex): mai
 pages 1-8, references page 9, appendix after that (34 pages in total).
 
 Verification: the renderer ran; full/quick numerical files agree byte-for-byte;
-all 134 plotted values and interval endpoints match their cited JSON paths;
+all plotted values and interval endpoints match their cited JSON paths (134 in Round 14; 130 after the Figure B update of 24 Oct, re-checked automatically);
 all 1,872 markdown rows agree with JSON flow counts; static LaTeX checks pass.
 The targeted in-memory analysis statistics suite passed 11 tests in 19.30 seconds.
 The full suite was not run: its input tests write outside this round's scope.

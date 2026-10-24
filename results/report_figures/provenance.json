@@ -65,7 +65,7 @@
       "weights_sha256": "c66c6d8f8513296515e9a8459ded73497ed06a48ded28a009bfdc99f69bb1491"
     }
   },
-  "figure_rows": 134,
+  "figure_rows": 130,
   "fingerprint_interval_flags": [
     "fingerprints[0].terms.action",
     "fingerprints[5].terms.leak_to_member_1",

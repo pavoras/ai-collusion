@@ -23,6 +23,7 @@ from collusion.plotting import apply_style, BLUE, ORANGE, AQUA
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = "results/analysis/final_v1/results.json"
+JUDGE24K = "results/analysis/judge24k_v23/results.json"  # Addendum v2.3 cohort
 OUT = ROOT / "results/report_figures"
 SECTIONS = ROOT / "report/sections"
 COLORS = {"net": BLUE, "correlation": ORANGE, "leak": AQUA,
@@ -78,11 +79,11 @@ def point(ax, value, y, detector, hollow=False):
             markerfacecolor="white" if hollow else COLORS[detector], ms=4, linestyle="none")
 
 
-def record(numbers, figure, panel, cell, level, detector, metric, value, n, path, subset="all"):
+def record(numbers, figure, panel, cell, level, detector, metric, value, n, path, subset="all", source_file=SOURCE):
     numbers.append(dict(figure=figure, panel=panel, cell=cell, level=level,
                         detector=detector, metric=metric, subset=subset, n=n,
                         estimate=value["estimate"], low=value["low"], high=value["high"],
-                        hits=value.get("hits"), source=f"{SOURCE} {path}"))
+                        hits=value.get("hits"), source=f"{source_file} {path}"))
 
 
 def save_figure(fig, name):
@@ -141,38 +142,51 @@ def detector_figure(data, numbers):
     save_figure(fig, "figure_a")
 
 
-def localisation_figure(data, numbers):
+def localisation_figure(data, judge24k, numbers):
+    """Top: all eligible markets. Middle: L2 judge-matched markets, registered 12k judge vs 24k judge."""
     fig = plt.figure(figsize=(6.5, 5.5))
     grid = fig.add_gridspec(3, 2, height_ratios=[1, 1, 1.1], hspace=.85, wspace=.85)
     detectors = ("net", "correlation", "strength", "judge:qwen-9b")
     for j, level in enumerate(("L1", "L2")):
-        for panel in range(2):
-            ax = fig.add_subplot(grid[panel, j])
-            labels = []
-            for y, suffix in enumerate(("SS", "SF", "FF")):
-                cell = f"core.C1-{suffix}"
-                js = [(i, r) for i, r in enumerate(data["judge_comparisons"])
-                      if r["cell"] == cell and r["level"] == level]
-                n = js[0][1]["judge_localisation"]["n_markets"]
-                labels.append(f"{suffix} (n={20 if panel == 0 else n})")
-                shown = detectors[:3] if panel == 0 else detectors
-                for offset, detector in zip(np.linspace(-.27, .27, len(shown)), shown):
-                    if panel == 0:
-                        i, r = row(data, cell, level, detector)
-                        v, count, path = r["top1"], r["coverage"], f"all_cells[{i}].top1"
-                    else:
-                        i, r = next((i, r) for i, r in js if r["detector"] ==
-                                    ("net" if detector == "judge:qwen-9b" else detector))
-                        key = "judge_localisation" if detector == "judge:qwen-9b" else "detector_localisation"
-                        v, count, path = r[key]["top1"], r[key]["n_markets"], f"judge_comparisons[{i}].{key}.top1"
-                    point(ax, v, y+offset, detector, hollow=panel == 1)
-                    record(numbers, "B", "localisation", cell, level, detector, "top1", v,
-                           count, path, "all" if panel == 0 else "judge matched")
-            ax.set(yticks=range(3), yticklabels=labels, xlim=(-.05, 1.05),
-                   xticks=[0, .5, 1], ylim=(2.5, -.5),
-                   title=f"{level}: {'all eligible markets' if panel == 0 else 'judge-matched subset'}")
-            ax.tick_params(labelsize=7)
-            ax.grid(axis="y", visible=False)
+        ax = fig.add_subplot(grid[0, j])
+        labels = []
+        for y, suffix in enumerate(("SS", "SF", "FF")):
+            cell = f"core.C1-{suffix}"
+            labels.append(f"{suffix} (n=20)")
+            for offset, detector in zip(np.linspace(-.27, .27, 3), detectors[:3]):
+                i, r = row(data, cell, level, detector)
+                point(ax, r["top1"], y+offset, detector)
+                record(numbers, "B", "localisation", cell, level, detector, "top1", r["top1"],
+                       r["coverage"], f"all_cells[{i}].top1", "all")
+        ax.set(yticks=range(3), yticklabels=labels, xlim=(-.05, 1.05),
+               xticks=[0, .5, 1], ylim=(2.5, -.5), title=f"{level}: all eligible markets")
+        ax.tick_params(labelsize=7)
+        ax.grid(axis="y", visible=False)
+    for j, (source_data, source_file, cohort, title, subset) in enumerate((
+            (data, SOURCE, "registered", "L2: 12k judge, matched", "judge matched"),
+            (judge24k, JUDGE24K, "judge24k", "L2: 24k judge, matched", "judge24k matched"))):
+        ax = fig.add_subplot(grid[1, j])
+        labels = []
+        for y, suffix in enumerate(("SS", "SF", "FF")):
+            cell = f"core.C1-{suffix}"
+            js = [(i, r) for i, r in enumerate(source_data["judge_comparisons"])
+                  if (r["cohort"], r["cell"], r["level"]) == (cohort, cell, "L2")]
+            if not js:
+                labels.append(f"{suffix} (not run)")
+                continue
+            labels.append(f"{suffix} (n={js[0][1]['judge_localisation']['n_markets']})")
+            for offset, detector in zip(np.linspace(-.27, .27, 4), detectors):
+                i, r = next((i, r) for i, r in js if r["detector"] ==
+                            ("net" if detector == "judge:qwen-9b" else detector))
+                key = "judge_localisation" if detector == "judge:qwen-9b" else "detector_localisation"
+                v = r[key]["top1"]
+                point(ax, v, y+offset, detector, hollow=True)
+                record(numbers, "B", "localisation", cell, "L2", detector, "top1", v,
+                       r[key]["n_markets"], f"judge_comparisons[{i}].{key}.top1", subset, source_file)
+        ax.set(yticks=range(3), yticklabels=labels, xlim=(-.05, 1.05),
+               xticks=[0, .5, 1], ylim=(2.5, -.5), title=title)
+        ax.tick_params(labelsize=7)
+        ax.grid(axis="y", visible=False)
     for j, metric in enumerate(("any_candidate", "exactly_one_report")):
         ax = fig.add_subplot(grid[2, j])
         labels = []
@@ -390,7 +404,7 @@ def replication_and_checksums():
     paths = [SOURCE, "results/analysis/final_v1/all_cells.md",
              "experiments/manifests/collection_v2.json", "results/analysis_runs.json",
              "results/llm/judge_index_registered.json", "results/llm/probe_index.json",
-             "src/collusion/llm/prompts.py", "src/collusion/analysis/io.py"]
+             "src/collusion/llm/prompts.py", "src/collusion/analysis/io.py", JUDGE24K]
     digests = {p: hashlib.sha256((ROOT / p).read_bytes()).hexdigest() for p in paths}
     (OUT / "input_checksums.json").write_text(json.dumps(digests, indent=2)+"\n", encoding="utf-8")
     lines = [r"\paragraph{Input SHA-256 digests.} These are file-byte digests; the manifest's canonical content hash above is a different convention."]
@@ -450,7 +464,9 @@ def main():
                          "pdf.fonttype": 42, "ps.fonttype": 42, "axes.titleweight": "bold"})
     numbers = []
     detector_figure(data, numbers)
-    localisation_figure(data, numbers)
+    judge24k = json.loads((ROOT / JUDGE24K).read_text(encoding="utf-8"))
+    assert judge24k["development"] is False and judge24k["analysis_freeze_commit"] == data["analysis_freeze_commit"]
+    localisation_figure(data, judge24k, numbers)
     with (OUT / "figure_numbers.csv").open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=list(numbers[0]))
         writer.writeheader()

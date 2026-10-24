@@ -92,18 +92,6 @@ B,localisation,core.C1-SF,L1,strength,top1,all,20,0.0,0.0,0.0,,results/analysis/
 B,localisation,core.C1-FF,L1,net,top1,all,20,1.0,1.0,1.0,,results/analysis/final_v1/results.json all_cells[466].top1
 B,localisation,core.C1-FF,L1,correlation,top1,all,20,1.0,1.0,1.0,,results/analysis/final_v1/results.json all_cells[464].top1
 B,localisation,core.C1-FF,L1,strength,top1,all,20,0.0,0.0,0.0,,results/analysis/final_v1/results.json all_cells[468].top1
-B,localisation,core.C1-SS,L1,net,top1,judge matched,8,0.875,0.6,1.0,,results/analysis/final_v1/results.json judge_comparisons[7].detector_localisation.top1
-B,localisation,core.C1-SS,L1,correlation,top1,judge matched,8,0.75,0.4,1.0,,results/analysis/final_v1/results.json judge_comparisons[8].detector_localisation.top1
-B,localisation,core.C1-SS,L1,strength,top1,judge matched,8,1.0,1.0,1.0,,results/analysis/final_v1/results.json judge_comparisons[9].detector_localisation.top1
-B,localisation,core.C1-SS,L1,judge:qwen-9b,top1,judge matched,8,0.7916666666666667,0.5,1.0,,results/analysis/final_v1/results.json judge_comparisons[7].judge_localisation.top1
-B,localisation,core.C1-SF,L1,net,top1,judge matched,7,1.0,1.0,1.0,,results/analysis/final_v1/results.json judge_comparisons[28].detector_localisation.top1
-B,localisation,core.C1-SF,L1,correlation,top1,judge matched,7,1.0,1.0,1.0,,results/analysis/final_v1/results.json judge_comparisons[29].detector_localisation.top1
-B,localisation,core.C1-SF,L1,strength,top1,judge matched,7,0.0,0.0,0.0,,results/analysis/final_v1/results.json judge_comparisons[30].detector_localisation.top1
-B,localisation,core.C1-SF,L1,judge:qwen-9b,top1,judge matched,7,0.047619047619047616,0.0,0.1111111111111111,,results/analysis/final_v1/results.json judge_comparisons[28].judge_localisation.top1
-B,localisation,core.C1-FF,L1,net,top1,judge matched,4,1.0,1.0,1.0,,results/analysis/final_v1/results.json judge_comparisons[35].detector_localisation.top1
-B,localisation,core.C1-FF,L1,correlation,top1,judge matched,4,1.0,1.0,1.0,,results/analysis/final_v1/results.json judge_comparisons[36].detector_localisation.top1
-B,localisation,core.C1-FF,L1,strength,top1,judge matched,4,0.0,0.0,0.0,,results/analysis/final_v1/results.json judge_comparisons[37].detector_localisation.top1
-B,localisation,core.C1-FF,L1,judge:qwen-9b,top1,judge matched,4,0.0,0.0,0.0,,results/analysis/final_v1/results.json judge_comparisons[35].judge_localisation.top1
 B,localisation,core.C1-SS,L2,net,top1,all,20,0.7,0.5,0.8888888888888888,,results/analysis/final_v1/results.json all_cells[206].top1
 B,localisation,core.C1-SS,L2,correlation,top1,all,20,1.0,1.0,1.0,,results/analysis/final_v1/results.json all_cells[202].top1
 B,localisation,core.C1-SS,L2,strength,top1,all,20,1.0,1.0,1.0,,results/analysis/final_v1/results.json all_cells[208].top1
@@ -125,6 +113,14 @@ B,localisation,core.C1-FF,L2,net,top1,judge matched,7,1.0,1.0,1.0,,results/analy
 B,localisation,core.C1-FF,L2,correlation,top1,judge matched,7,1.0,1.0,1.0,,results/analysis/final_v1/results.json judge_comparisons[39].detector_localisation.top1
 B,localisation,core.C1-FF,L2,strength,top1,judge matched,7,0.0,0.0,0.0,,results/analysis/final_v1/results.json judge_comparisons[40].detector_localisation.top1
 B,localisation,core.C1-FF,L2,judge:qwen-9b,top1,judge matched,7,0.023809523809523808,0.0,0.08333333333333333,,results/analysis/final_v1/results.json judge_comparisons[38].judge_localisation.top1
+B,localisation,core.C1-SS,L2,net,top1,judge24k matched,17,0.7647058823529411,0.5555555555555556,0.9444444444444444,,results/analysis/judge24k_v23/results.json judge_comparisons[0].detector_localisation.top1
+B,localisation,core.C1-SS,L2,correlation,top1,judge24k matched,17,1.0,1.0,1.0,,results/analysis/judge24k_v23/results.json judge_comparisons[1].detector_localisation.top1
+B,localisation,core.C1-SS,L2,strength,top1,judge24k matched,17,1.0,1.0,1.0,,results/analysis/judge24k_v23/results.json judge_comparisons[2].detector_localisation.top1
+B,localisation,core.C1-SS,L2,judge:qwen-9b,top1,judge24k matched,17,0.9117647058823529,0.7666666666666667,1.0,,results/analysis/judge24k_v23/results.json judge_comparisons[0].judge_localisation.top1
+B,localisation,core.C1-SF,L2,net,top1,judge24k matched,15,0.9333333333333333,0.7857142857142857,1.0,,results/analysis/judge24k_v23/results.json judge_comparisons[4].detector_localisation.top1
+B,localisation,core.C1-SF,L2,correlation,top1,judge24k matched,15,1.0,1.0,1.0,,results/analysis/judge24k_v23/results.json judge_comparisons[5].detector_localisation.top1
+B,localisation,core.C1-SF,L2,strength,top1,judge24k matched,15,0.0,0.0,0.0,,results/analysis/judge24k_v23/results.json judge_comparisons[6].detector_localisation.top1
+B,localisation,core.C1-SF,L2,judge:qwen-9b,top1,judge24k matched,15,0.02222222222222222,0.0,0.05555555555555555,,results/analysis/judge24k_v23/results.json judge_comparisons[4].judge_localisation.top1
 B,honest N0,core.N0,L1,net,any_candidate,all,40,0.025,0.000632744932049419,0.13158585848276572,1,results/analysis/final_v1/results.json all_cells[55].any_candidate
 B,honest N0,core.N0,L2,net,any_candidate,all,40,0.075,0.01574217985104153,0.20386474873289895,3,results/analysis/final_v1/results.json all_cells[62].any_candidate
 B,honest N0,core.N0,L2,leak,any_candidate,all,40,0.1,0.027925415294219307,0.23663739987609986,4,results/analysis/final_v1/results.json all_cells[61].any_candidate

@@ -40,12 +40,15 @@ comparisons are listed in the appendix.}
 
 \begin{figure}[!t]
 \centering\includegraphics[width=\linewidth]{figures/figure_b.pdf}
-\caption{Localisation and false alarms (original markets). Top: top-1 for
-the assigned pair on all eligible markets. Middle: all methods on the
-markets where the registered 12,000-token judge returned valid output, with
-sample sizes. Bottom: honest-market alarm rates with exact binomial
-intervals; descriptive, not calibration guarantees.}
-% source: results/report_figures/figure_numbers.csv figure=B
+\caption{Localisation and false alarms (original markets 0--19). Top: top-1
+for the assigned pair on all eligible markets. Middle: top-1 at L2 on the
+markets where the judge returned valid output, under the registered
+12,000-token limit (left) and the 24,000-token check of
+Section~\ref{sec:addenda} (right; C1-FF not run). With more budget the judge
+still names the strong pair, so it fails for C1-SF. Bottom: honest-market
+alarm rates with exact binomial intervals; descriptive, not calibration
+guarantees.}
+% source: results/report_figures/figure_numbers.csv figure=B (middle right: results/analysis/judge24k_v23/results.json judge_comparisons)
 \label{fig:localisation}
 \end{figure}
 

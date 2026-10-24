@@ -8,7 +8,7 @@ No analysis outputs, source modules, collection files or preregistration were ed
 ## Complete numerical provenance
 
 - `results/report_figures/figure_numbers.csv` and `.json`: every plotted estimate,
-  interval endpoint, denominator, subset and exact zero-based JSON path (134 rows).
+  interval endpoint, denominator, subset and exact zero-based JSON path (130 rows since 24 Oct; the middle row of Figure B now compares the registered 12k judge with the 24k judge cohort `results/analysis/judge24k_v23/results.json`, source file named per row).
 - `results/report_figures/number_sources.csv`: printed manuscript/table content
   alongside its source annotations, including the full appendix.
 - Every numerical LaTeX table row and each quantitative prose paragraph has a
@@ -102,7 +102,7 @@ bootstrap-bias or permutation-noise explanation has been verified.
 ## Verification and remaining limits
 
 The renderer and `--quick` both ran successfully. Numerical CSV/JSON output was
-byte-identical across modes. All 134 plotted triples matched their JSON paths;
+byte-identical across modes. All plotted triples matched their JSON paths (134 in Round 14; 130 re-checked on 24 Oct after the Figure B update);
 all 1,872 markdown rows and label counts agreed with JSON. Complete-mask flow
 counts balance against eligibility. TeX inputs, environments and reference
 labels passed static checks. Both PNGs were viewed; the central-label collision
