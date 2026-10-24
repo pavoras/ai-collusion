@@ -95,10 +95,14 @@ def judge_summary(final, judge):
     return result
 
 
+def num(v, nd=3):
+    return f"{v:.{nd}f}".replace("-", "$-$")
+
+
 def fmt(x, nd=3):
     if not x:
         return "--"
-    return f"{x['estimate']:.{nd}f} [{x['low']:.{nd}f}, {x['high']:.{nd}f}]"
+    return f"{num(x['estimate'], nd)} [{num(x['low'], nd)}, {num(x['high'], nd)}]"
 
 
 def latex(rep):
@@ -117,12 +121,47 @@ def latex(rep):
     return "\n".join(lines) + "\n"
 
 
+def short(x):
+    return "--" if not x else num(x["estimate"])
+
+
+def latex_full(rep, judge):
+    """Appendix table: every detector AUROC in both samples, and the judge-budget comparison."""
+    keys = ["L1:net", "L1:correlation", "L1:paper", "L2:net", "L2:correlation", "L2:paper", "L2:leak"]
+    heads = ["L1 net", "L1 corr.", "L1 paper", "L2 net", "L2 corr.", "L2 paper", "L2 leak"]
+    lines = [r"\begin{table}[htbp]", r"\centering\small", r"\setlength{\tabcolsep}{3pt}",
+             r"\caption{Addenda: AUROC versus matched N0 for every detector, original (markets 0--19) and "
+             r"replication (markets 20--39), with eligible markets $n$; 95\% intervals are in "
+             r"\texttt{addendum\_summary/summary.json}. Bottom: judge token-budget check.}",
+             r"\label{tab:addendum_full}", r"\begin{tabular}{ll" + "c" * (len(keys) + 1) + "}", r"\toprule",
+             "Cell & Sample & " + " & ".join(heads) + r" & $n$\\", r"\midrule"]
+    for name in ("E1", "C2", "C1-SS"):
+        for label in ("original", "replication"):
+            v = rep.get(name, {}).get(label)
+            if v:
+                lines.append(f"{name} & {label} & " + " & ".join(short(v[k]) for k in keys) + f" & {v['eligible']}" + r"\\")
+    lines += [r"\bottomrule", r"\end{tabular}"]
+    if judge:
+        lines += [r"\par\medskip", r"\begin{tabular}{lcccc}", r"\toprule",
+                  r"Judge (L2, markets 0--19) & valid & C1-SS AUROC & top-1 C1-SS & top-1 C1-SF\\", r"\midrule"]
+        for label, name in (("registered_12k", "12,000 tokens (registered)"), ("judge24k", "24,000 tokens (Addendum v2.3)")):
+            ss, sf = judge["core.C1-SS"][label], judge["core.C1-SF"][label]
+            auc = ss["auroc"]
+            auc_text = "--" if not auc else f"{num(auc['estimate'])} ({auc['n_blocks']} block{'s' if auc['n_blocks'] != 1 else ''})"
+            lines.append(f"{name} & {judge[label]['valid']}/{judge[label]['judgements']} & {auc_text} & "
+                         f"{short(ss['top1'])} & {short(sf['top1'])}" + r"\\")
+        lines += [r"\bottomrule", r"\end{tabular}"]
+    lines.append(r"\end{table}")
+    return "\n".join(lines) + "\n"
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--replication", required=True)
     p.add_argument("--judge")
     p.add_argument("--out", required=True)
     p.add_argument("--table", default="report/sections/addendum_table.tex")
+    p.add_argument("--full-table", default="report/sections/addendum_full_table.tex")
     args = p.parse_args()
     final, rep, judge = load(FINAL), load(args.replication), load(args.judge)
     rep_values, verdicts = replication(final, rep)
@@ -132,6 +171,7 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
     (out / "summary.json").write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
     Path(args.table).write_text(latex(rep_values), encoding="utf-8")
+    Path(args.full_table).write_text(latex_full(rep_values, summary["judge_budget"]), encoding="utf-8")
     print(json.dumps({"verdicts": verdicts, "judge": summary["judge_budget"] and {
         k: v for k, v in summary["judge_budget"].items() if k != "matched_comparisons"}}, indent=2))
 

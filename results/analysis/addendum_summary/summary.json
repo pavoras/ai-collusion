@@ -1,0 +1,757 @@
+{
+  "sources": {
+    "final": "results/analysis/final_v1/results.json",
+    "replication": "results/analysis/replication_v22/results.json",
+    "judge": "results/analysis/judge24k_v23/results.json"
+  },
+  "replication": {
+    "E1": {
+      "original": {
+        "L1:net": {
+          "estimate": 0.675,
+          "low": 0.4930747922437673,
+          "high": 0.8449905482041588,
+          "n_blocks": 20
+        },
+        "L1:correlation": {
+          "estimate": 0.4825,
+          "low": 0.33672682035777274,
+          "high": 0.6281179138321995,
+          "n_blocks": 20
+        },
+        "L1:paper": {
+          "estimate": 0.62,
+          "low": 0.4525,
+          "high": 0.785124774018595,
+          "n_blocks": 20
+        },
+        "L2:net": {
+          "estimate": 0.7,
+          "low": 0.5290858725761773,
+          "high": 0.8771359877126653,
+          "n_blocks": 20
+        },
+        "L2:correlation": {
+          "estimate": 0.415,
+          "low": 0.23268230609418283,
+          "high": 0.6150096153846152,
+          "n_blocks": 20
+        },
+        "L2:paper": {
+          "estimate": 0.6525,
+          "low": 0.4852607709750567,
+          "high": 0.8214285714285714,
+          "n_blocks": 20
+        },
+        "L2:leak": {
+          "estimate": 0.7025,
+          "low": 0.5736889215520004,
+          "high": 0.8359495563271603,
+          "n_blocks": 20
+        },
+        "L1:net-correlation": {
+          "estimate": 0.19250000000000006,
+          "low": 0.022220683287165206,
+          "high": 0.35986505190311413,
+          "n_blocks": 20
+        },
+        "L2:net-correlation": {
+          "estimate": 0.285,
+          "low": 0.06197709417406389,
+          "high": 0.5149999999999999,
+          "n_blocks": 20
+        },
+        "joint_profit": {
+          "estimate": -0.11564916755494645,
+          "low": -0.13738975935298503,
+          "high": -0.0951171003375463
+        },
+        "eligible": 20
+      },
+      "replication": {
+        "L1:net": {
+          "estimate": 0.525,
+          "low": 0.315,
+          "high": 0.7325,
+          "n_blocks": 20
+        },
+        "L1:correlation": {
+          "estimate": 0.43,
+          "low": 0.2475,
+          "high": 0.6125,
+          "n_blocks": 20
+        },
+        "L1:paper": {
+          "estimate": 0.4925,
+          "low": 0.28,
+          "high": 0.7225,
+          "n_blocks": 20
+        },
+        "L2:net": {
+          "estimate": 0.68,
+          "low": 0.505,
+          "high": 0.83,
+          "n_blocks": 20
+        },
+        "L2:correlation": {
+          "estimate": 0.415,
+          "low": 0.2475,
+          "high": 0.5925,
+          "n_blocks": 20
+        },
+        "L2:paper": {
+          "estimate": 0.62,
+          "low": 0.435,
+          "high": 0.7875,
+          "n_blocks": 20
+        },
+        "L2:leak": {
+          "estimate": 0.745,
+          "low": 0.56,
+          "high": 0.9025,
+          "n_blocks": 20
+        },
+        "L1:net-correlation": {
+          "estimate": 0.09500000000000003,
+          "low": -0.11250000000000004,
+          "high": 0.315,
+          "n_blocks": 20
+        },
+        "L2:net-correlation": {
+          "estimate": 0.26500000000000007,
+          "low": 0.06999999999999995,
+          "high": 0.445,
+          "n_blocks": 20
+        },
+        "joint_profit": {
+          "estimate": -0.083856783919598,
+          "low": -0.10868885050251255,
+          "high": -0.06004230527638193
+        },
+        "eligible": 20
+      }
+    },
+    "C2": {
+      "original": {
+        "L1:net": {
+          "estimate": 0.61,
+          "low": 0.41274238227146814,
+          "high": 0.7854671280276817,
+          "n_blocks": 20
+        },
+        "L1:correlation": {
+          "estimate": 0.4625,
+          "low": 0.2421875,
+          "high": 0.6942206152433424,
+          "n_blocks": 20
+        },
+        "L1:paper": {
+          "estimate": 0.71,
+          "low": 0.55,
+          "high": 0.8544423440453687,
+          "n_blocks": 20
+        },
+        "L2:net": {
+          "estimate": 0.655,
+          "low": 0.46729651222592977,
+          "high": 0.8325,
+          "n_blocks": 20
+        },
+        "L2:correlation": {
+          "estimate": 0.495,
+          "low": 0.2708333333333333,
+          "high": 0.7129960317460312,
+          "n_blocks": 20
+        },
+        "L2:paper": {
+          "estimate": 0.8875,
+          "low": 0.764437641723356,
+          "high": 0.9793388429752066,
+          "n_blocks": 20
+        },
+        "L2:leak": {
+          "estimate": 0.5625,
+          "low": 0.36570119159359904,
+          "high": 0.7599262759924386,
+          "n_blocks": 20
+        },
+        "L1:net-correlation": {
+          "estimate": 0.14749999999999996,
+          "low": -0.18181818181818182,
+          "high": 0.44218105011380726,
+          "n_blocks": 20
+        },
+        "L2:net-correlation": {
+          "estimate": 0.16000000000000003,
+          "low": -0.125,
+          "high": 0.4531290549307958,
+          "n_blocks": 20
+        },
+        "joint_profit": {
+          "estimate": 0.39928894472361803,
+          "low": 0.36366922738693475,
+          "high": 0.43394120902129696
+        },
+        "eligible": 20
+      },
+      "replication": {
+        "L1:net": {
+          "estimate": 0.5975,
+          "low": 0.455,
+          "high": 0.7475,
+          "n_blocks": 20
+        },
+        "L1:correlation": {
+          "estimate": 0.6425,
+          "low": 0.43,
+          "high": 0.8375,
+          "n_blocks": 20
+        },
+        "L1:paper": {
+          "estimate": 0.585,
+          "low": 0.43,
+          "high": 0.7375,
+          "n_blocks": 20
+        },
+        "L2:net": {
+          "estimate": 0.7525,
+          "low": 0.5824375,
+          "high": 0.905,
+          "n_blocks": 20
+        },
+        "L2:correlation": {
+          "estimate": 0.63,
+          "low": 0.4075,
+          "high": 0.835,
+          "n_blocks": 20
+        },
+        "L2:paper": {
+          "estimate": 0.76,
+          "low": 0.6125,
+          "high": 0.8875,
+          "n_blocks": 20
+        },
+        "L2:leak": {
+          "estimate": 0.5725,
+          "low": 0.4025,
+          "high": 0.745,
+          "n_blocks": 20
+        },
+        "L1:net-correlation": {
+          "estimate": -0.04499999999999993,
+          "low": -0.27999999999999997,
+          "high": 0.20249999999999996,
+          "n_blocks": 20
+        },
+        "L2:net-correlation": {
+          "estimate": 0.12249999999999994,
+          "low": -0.11750000000000005,
+          "high": 0.35750000000000004,
+          "n_blocks": 20
+        },
+        "joint_profit": {
+          "estimate": 0.28284422110552765,
+          "low": 0.17851608040201006,
+          "high": 0.37141708542713564
+        },
+        "eligible": 20
+      }
+    },
+    "C1-SS": {
+      "original": {
+        "L1:net": {
+          "estimate": 0.9125,
+          "low": 0.7955530303030304,
+          "high": 1.0,
+          "n_blocks": 20
+        },
+        "L1:correlation": {
+          "estimate": 0.9875,
+          "low": 0.9586776859504132,
+          "high": 1.0,
+          "n_blocks": 20
+        },
+        "L1:paper": {
+          "estimate": 0.885,
+          "low": 0.7654320987654321,
+          "high": 0.9907407407407407,
+          "n_blocks": 20
+        },
+        "L2:net": {
+          "estimate": 0.865,
+          "low": 0.7337237157306361,
+          "high": 0.9675,
+          "n_blocks": 20
+        },
+        "L2:correlation": {
+          "estimate": 0.9975,
+          "low": 0.9863917583494303,
+          "high": 1.0,
+          "n_blocks": 20
+        },
+        "L2:paper": {
+          "estimate": 0.8825,
+          "low": 0.7755011472044439,
+          "high": 0.9695290858725761,
+          "n_blocks": 20
+        },
+        "L2:leak": {
+          "estimate": 0.64,
+          "low": 0.4275144230769231,
+          "high": 0.8359495563271603,
+          "n_blocks": 20
+        },
+        "L1:net-correlation": {
+          "estimate": -0.07500000000000007,
+          "low": -0.1875,
+          "high": 0.00692041522491349,
+          "n_blocks": 20
+        },
+        "L2:net-correlation": {
+          "estimate": -0.13250000000000006,
+          "low": -0.2646590264650283,
+          "high": -0.030864197530864224,
+          "n_blocks": 20
+        },
+        "joint_profit": {
+          "estimate": 0.14375077168903536,
+          "low": 0.0944870165484856,
+          "high": 0.19217076502468244
+        },
+        "eligible": 20
+      },
+      "replication": {
+        "L1:net": {
+          "estimate": 0.945,
+          "low": 0.8575,
+          "high": 0.9975,
+          "n_blocks": 20
+        },
+        "L1:correlation": {
+          "estimate": 0.9925,
+          "low": 0.97,
+          "high": 1.0,
+          "n_blocks": 20
+        },
+        "L1:paper": {
+          "estimate": 0.9325,
+          "low": 0.8275,
+          "high": 0.995,
+          "n_blocks": 20
+        },
+        "L2:net": {
+          "estimate": 0.9075,
+          "low": 0.8025,
+          "high": 0.985,
+          "n_blocks": 20
+        },
+        "L2:correlation": {
+          "estimate": 0.995,
+          "low": 0.9775,
+          "high": 1.0,
+          "n_blocks": 20
+        },
+        "L2:paper": {
+          "estimate": 0.8875,
+          "low": 0.745,
+          "high": 0.9875,
+          "n_blocks": 20
+        },
+        "L2:leak": {
+          "estimate": 0.6175,
+          "low": 0.4075,
+          "high": 0.815,
+          "n_blocks": 20
+        },
+        "L1:net-correlation": {
+          "estimate": -0.0475000000000001,
+          "low": -0.125,
+          "high": -0.0024999999999999467,
+          "n_blocks": 20
+        },
+        "L2:net-correlation": {
+          "estimate": -0.08750000000000002,
+          "low": -0.18999999999999995,
+          "high": -0.015000000000000013,
+          "n_blocks": 20
+        },
+        "joint_profit": {
+          "estimate": 0.1728951576062129,
+          "low": 0.12300048189178214,
+          "high": 0.22115734543931778
+        },
+        "eligible": 20
+      }
+    }
+  },
+  "preregistered_verdicts": {
+    "R1 E1 L2 net-correlation > 0": true,
+    "R1b E1 L1 net-correlation > 0": false,
+    "R2 C2 joint profit uplift > 0": true,
+    "R4 C1-SS L2 net AUROC > 0.5": true
+  },
+  "judge_budget": {
+    "registered_12k": {
+      "judgements": 60,
+      "valid": 27
+    },
+    "judge24k": {
+      "judgements": 60,
+      "valid": 54
+    },
+    "core.C1-SS": {
+      "registered_12k": {
+        "coverage": 7,
+        "auroc": {
+          "estimate": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_blocks": 1
+        },
+        "top1": {
+          "estimate": 0.8809523809523808,
+          "low": 0.5833333333333334,
+          "high": 1.0
+        }
+      },
+      "judge24k": {
+        "coverage": 19,
+        "auroc": {
+          "estimate": 0.6245674740484429,
+          "low": 0.4238191565688776,
+          "high": 0.8079584775086506,
+          "n_blocks": 17
+        },
+        "top1": {
+          "estimate": 0.9210526315789473,
+          "low": 0.7894736842105263,
+          "high": 1.0
+        }
+      }
+    },
+    "core.C1-SF": {
+      "registered_12k": {
+        "coverage": 11,
+        "auroc": {
+          "estimate": 0.6666666666666666,
+          "low": 0.0,
+          "high": 1.0,
+          "n_blocks": 3
+        },
+        "top1": {
+          "estimate": 0.0303030303030303,
+          "low": 0.0,
+          "high": 0.07407407407407407
+        }
+      },
+      "judge24k": {
+        "coverage": 17,
+        "auroc": {
+          "estimate": 0.5755555555555556,
+          "low": 0.35502958579881655,
+          "high": 0.78125,
+          "n_blocks": 15
+        },
+        "top1": {
+          "estimate": 0.0196078431372549,
+          "low": 0.0,
+          "high": 0.04901960784313725
+        }
+      }
+    },
+    "core.N0": {
+      "registered_12k": {
+        "coverage": 15,
+        "auroc": null,
+        "top1": {
+          "estimate": 1.0,
+          "low": 1.0,
+          "high": 1.0
+        }
+      },
+      "judge24k": {
+        "coverage": 18,
+        "auroc": null,
+        "top1": {
+          "estimate": 0.8981481481481483,
+          "low": 0.7456140350877193,
+          "high": 1.0
+        }
+      }
+    },
+    "matched_comparisons": [
+      {
+        "cohort": "registered",
+        "cell": "core.C1-SS",
+        "detector": "net",
+        "judge_auroc": {
+          "estimate": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_blocks": 1
+        },
+        "detector_auroc": {
+          "estimate": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_blocks": 1
+        },
+        "judge_minus_detector": {
+          "estimate": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_blocks": 1
+        },
+        "n_markets": 1,
+        "judge_top1": {
+          "estimate": 1.0,
+          "low": 1.0,
+          "high": 1.0
+        },
+        "detector_top1": {
+          "estimate": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        }
+      },
+      {
+        "cohort": "registered",
+        "cell": "core.C1-SS",
+        "detector": "correlation",
+        "judge_auroc": {
+          "estimate": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_blocks": 1
+        },
+        "detector_auroc": {
+          "estimate": 1.0,
+          "low": 1.0,
+          "high": 1.0,
+          "n_blocks": 1
+        },
+        "judge_minus_detector": {
+          "estimate": 1.0,
+          "low": 1.0,
+          "high": 1.0,
+          "n_blocks": 1
+        },
+        "n_markets": 1,
+        "judge_top1": {
+          "estimate": 1.0,
+          "low": 1.0,
+          "high": 1.0
+        },
+        "detector_top1": {
+          "estimate": 1.0,
+          "low": 1.0,
+          "high": 1.0
+        }
+      },
+      {
+        "cohort": "registered",
+        "cell": "core.C1-SF",
+        "detector": "net",
+        "judge_auroc": {
+          "estimate": 0.6666666666666666,
+          "low": 0.0,
+          "high": 1.0,
+          "n_blocks": 3
+        },
+        "detector_auroc": {
+          "estimate": 0.6666666666666666,
+          "low": 0.0,
+          "high": 1.0,
+          "n_blocks": 3
+        },
+        "judge_minus_detector": {
+          "estimate": 0.0,
+          "low": -1.0,
+          "high": 1.0,
+          "n_blocks": 3
+        },
+        "n_markets": 3,
+        "judge_top1": {
+          "estimate": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "detector_top1": {
+          "estimate": 0.6666666666666666,
+          "low": 0.0,
+          "high": 1.0
+        }
+      },
+      {
+        "cohort": "registered",
+        "cell": "core.C1-SF",
+        "detector": "correlation",
+        "judge_auroc": {
+          "estimate": 0.6666666666666666,
+          "low": 0.0,
+          "high": 1.0,
+          "n_blocks": 3
+        },
+        "detector_auroc": {
+          "estimate": 0.8888888888888888,
+          "low": 0.75,
+          "high": 1.0,
+          "n_blocks": 3
+        },
+        "judge_minus_detector": {
+          "estimate": 0.2222222222222222,
+          "low": -0.125,
+          "high": 1.0,
+          "n_blocks": 3
+        },
+        "n_markets": 3,
+        "judge_top1": {
+          "estimate": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "detector_top1": {
+          "estimate": 0.6666666666666666,
+          "low": 0.0,
+          "high": 1.0
+        }
+      },
+      {
+        "cohort": "judge24k",
+        "cell": "core.C1-SS",
+        "detector": "net",
+        "judge_auroc": {
+          "estimate": 0.6245674740484429,
+          "low": 0.4238191565688776,
+          "high": 0.8079584775086506,
+          "n_blocks": 17
+        },
+        "detector_auroc": {
+          "estimate": 0.9065743944636678,
+          "low": 0.7958404459823145,
+          "high": 0.9896193771626297,
+          "n_blocks": 17
+        },
+        "judge_minus_detector": {
+          "estimate": 0.2820069204152249,
+          "low": 0.04325259515570934,
+          "high": 0.515625,
+          "n_blocks": 17
+        },
+        "n_markets": 17,
+        "judge_top1": {
+          "estimate": 0.9117647058823529,
+          "low": 0.7666666666666667,
+          "high": 1.0
+        },
+        "detector_top1": {
+          "estimate": 0.7647058823529411,
+          "low": 0.5555555555555556,
+          "high": 0.9444444444444444
+        }
+      },
+      {
+        "cohort": "judge24k",
+        "cell": "core.C1-SS",
+        "detector": "correlation",
+        "judge_auroc": {
+          "estimate": 0.6245674740484429,
+          "low": 0.4238191565688776,
+          "high": 0.8079584775086506,
+          "n_blocks": 17
+        },
+        "detector_auroc": {
+          "estimate": 1.0,
+          "low": 1.0,
+          "high": 1.0,
+          "n_blocks": 17
+        },
+        "judge_minus_detector": {
+          "estimate": 0.3754325259515571,
+          "low": 0.19204152249134943,
+          "high": 0.5761808434311223,
+          "n_blocks": 17
+        },
+        "n_markets": 17,
+        "judge_top1": {
+          "estimate": 0.9117647058823529,
+          "low": 0.7666666666666667,
+          "high": 1.0
+        },
+        "detector_top1": {
+          "estimate": 1.0,
+          "low": 1.0,
+          "high": 1.0
+        }
+      },
+      {
+        "cohort": "judge24k",
+        "cell": "core.C1-SF",
+        "detector": "net",
+        "judge_auroc": {
+          "estimate": 0.5755555555555556,
+          "low": 0.35502958579881655,
+          "high": 0.78125,
+          "n_blocks": 15
+        },
+        "detector_auroc": {
+          "estimate": 0.96,
+          "low": 0.8671875,
+          "high": 1.0,
+          "n_blocks": 15
+        },
+        "judge_minus_detector": {
+          "estimate": 0.38444444444444437,
+          "low": 0.14583333333333326,
+          "high": 0.6173544417767105,
+          "n_blocks": 15
+        },
+        "n_markets": 15,
+        "judge_top1": {
+          "estimate": 0.02222222222222222,
+          "low": 0.0,
+          "high": 0.05555555555555555
+        },
+        "detector_top1": {
+          "estimate": 0.9333333333333333,
+          "low": 0.7857142857142857,
+          "high": 1.0
+        }
+      },
+      {
+        "cohort": "judge24k",
+        "cell": "core.C1-SF",
+        "detector": "correlation",
+        "judge_auroc": {
+          "estimate": 0.5755555555555556,
+          "low": 0.35502958579881655,
+          "high": 0.78125,
+          "n_blocks": 15
+        },
+        "detector_auroc": {
+          "estimate": 1.0,
+          "low": 1.0,
+          "high": 1.0,
+          "n_blocks": 15
+        },
+        "judge_minus_detector": {
+          "estimate": 0.4244444444444444,
+          "low": 0.21875,
+          "high": 0.6449704142011834,
+          "n_blocks": 15
+        },
+        "n_markets": 15,
+        "judge_top1": {
+          "estimate": 0.02222222222222222,
+          "low": 0.0,
+          "high": 0.05555555555555555
+        },
+        "detector_top1": {
+          "estimate": 1.0,
+          "low": 1.0,
+          "high": 1.0
+        }
+      }
+    ]
+  }
+}

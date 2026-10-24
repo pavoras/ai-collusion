@@ -1,0 +1,27 @@
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{3pt}
+\caption{Addenda: AUROC versus matched N0 for every detector, original (markets 0--19) and replication (markets 20--39), with eligible markets $n$; 95\% intervals are in \texttt{addendum\_summary/summary.json}. Bottom: judge token-budget check.}
+\label{tab:addendum_full}
+\begin{tabular}{llcccccccc}
+\toprule
+Cell & Sample & L1 net & L1 corr. & L1 paper & L2 net & L2 corr. & L2 paper & L2 leak & $n$\\
+\midrule
+E1 & original & 0.675 & 0.482 & 0.620 & 0.700 & 0.415 & 0.652 & 0.703 & 20\\
+E1 & replication & 0.525 & 0.430 & 0.492 & 0.680 & 0.415 & 0.620 & 0.745 & 20\\
+C2 & original & 0.610 & 0.463 & 0.710 & 0.655 & 0.495 & 0.887 & 0.562 & 20\\
+C2 & replication & 0.598 & 0.642 & 0.585 & 0.752 & 0.630 & 0.760 & 0.573 & 20\\
+C1-SS & original & 0.912 & 0.988 & 0.885 & 0.865 & 0.998 & 0.882 & 0.640 & 20\\
+C1-SS & replication & 0.945 & 0.993 & 0.932 & 0.907 & 0.995 & 0.887 & 0.618 & 20\\
+\bottomrule
+\end{tabular}
+\par\medskip
+\begin{tabular}{lcccc}
+\toprule
+Judge (L2, markets 0--19) & valid & C1-SS AUROC & top-1 C1-SS & top-1 C1-SF\\
+\midrule
+12,000 tokens (registered) & 27/60 & 0.000 (1 block) & 0.881 & 0.030\\
+24,000 tokens (Addendum v2.3) & 54/60 & 0.625 (17 blocks) & 0.921 & 0.020\\
+\bottomrule
+\end{tabular}
+\end{table}
