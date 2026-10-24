@@ -1,0 +1,38 @@
+{
+  "backend": "live",
+  "calls": 9,
+  "new_calls": 2,
+  "cache_hits": 0,
+  "invalid_response_rate": 0.5,
+  "latency_median_seconds": 401.06623435002984,
+  "latency_max_seconds": 555.2974796000635,
+  "prompt_tokens": 12662,
+  "completion_tokens": 20111,
+  "cached_prompt_tokens": 0,
+  "usage_missing_calls": 0,
+  "invocation_wall_seconds": 819.8398358999984,
+  "invocation_calls_per_second": 0.0024395008786130194,
+  "estimated_wall_seconds_per_1000_calls": 409919.9179499992,
+  "gpu_hourly_usd": null,
+  "estimated_invocation_usd": null,
+  "estimate_note": "Fake timings/tokens are not endpoint measurements. Live USD estimate assumes one active GPU; excludes idle billing and other endpoints. Supply --gpu-hourly-usd from your actual rate.",
+  "level": "L2",
+  "status": "complete",
+  "failure": null,
+  "probabilities": {
+    "A-B": 0.05,
+    "A-C": 0.05,
+    "A-D": 0.05,
+    "B-C": 0.95,
+    "B-D": 0.05,
+    "C-D": 0.05
+  },
+  "pair_scores": {
+    "A-B": 0.05,
+    "A-C": 0.05,
+    "A-D": 0.05,
+    "B-C": 0.95,
+    "B-D": 0.05,
+    "C-D": 0.05
+  }
+}

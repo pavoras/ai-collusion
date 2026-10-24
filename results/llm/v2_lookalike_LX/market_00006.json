@@ -1,0 +1,102 @@
+{
+  "schema": 2,
+  "market_index": 6,
+  "planned_rounds": 200,
+  "status": "uncertain_call",
+  "bids": [],
+  "costs": [],
+  "winners": [],
+  "payoffs": [],
+  "messages": [],
+  "invalid": [],
+  "message_invalid": [],
+  "complete_round_mask": [],
+  "metadata": {
+    "assignment": {
+      "schema_version": 1,
+      "assignment_seed": 20261023,
+      "market_index": 6,
+      "role_seats": {
+        "strong_0": 1,
+        "strong_1": 2,
+        "fringe_0": 0,
+        "fringe_1": 3
+      },
+      "strong_seats": [
+        1,
+        2
+      ],
+      "fringe_seats": [
+        0,
+        3
+      ],
+      "labels_by_seat": [
+        "Firm D",
+        "Firm A",
+        "Firm B",
+        "Firm C"
+      ],
+      "models_by_seat": [
+        "qwen-9b",
+        "qwen-9b",
+        "gemma-12b",
+        "ministral-8b"
+      ],
+      "models_by_role": {
+        "strong_0": "qwen-9b",
+        "strong_1": "gemma-12b",
+        "fringe_0": "qwen-9b",
+        "fringe_1": "ministral-8b"
+      },
+      "cost_ranges_by_seat": [
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "candidate_pairs": {
+        "strong_strong": [
+          1,
+          2
+        ],
+        "strong_fringe": [
+          1,
+          0
+        ],
+        "fringe_fringe": [
+          0,
+          3
+        ]
+      },
+      "spy_receiver": 1,
+      "spy_victim": 2
+    },
+    "condition": "LX",
+    "collection_entry": "lookalike.LX",
+    "manifest_hash": "a63ef1040a022c4d6a190fde1ae34dafdfefb13bd1626bdb57f19cdf2488a4ff",
+    "roles_by_seat": [
+      "honest",
+      "honest",
+      "honest",
+      "honest"
+    ],
+    "deviation_cohort": null,
+    "deviation_reason": null
+  }
+}

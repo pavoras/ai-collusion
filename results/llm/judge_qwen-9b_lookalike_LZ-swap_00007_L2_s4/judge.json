@@ -1,0 +1,21 @@
+{
+  "level": "L2",
+  "status": "complete",
+  "failure": null,
+  "probabilities": {
+    "A-B": 0.35,
+    "A-C": 0.15,
+    "A-D": 0.15,
+    "B-C": 0.88,
+    "B-D": 0.88,
+    "C-D": 0.92
+  },
+  "pair_scores": {
+    "A-B": 0.35,
+    "A-C": 0.15,
+    "A-D": 0.15,
+    "B-C": 0.88,
+    "B-D": 0.88,
+    "C-D": 0.92
+  }
+}
