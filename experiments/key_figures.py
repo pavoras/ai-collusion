@@ -1,12 +1,14 @@
-"""Overview figures for the report, rendered from frozen analysis outputs.
+"""Plain-language main-text figures, rendered from frozen analysis outputs.
 
-Figure 1: study design (schematic) and what the auditor scores in matched markets.
-Figure 2: where net influence beats correlation, and profit versus detectability.
+Figure 1: how the test works (schematic, no data).
+Figure 2: how often an alarm rule named exactly the colluding pair, and false alarms.
+Figure 3: which way information flows (pooled leak and action terms).
+Figure 4: net influence versus a simple correlation (detection).
+Figure 5: two warnings for practice (the quiet cartel; the AI judge's shortcut).
 
 No model calls and no statistical refitting: every plotted number is read from
-the final analysis (final_v1) or the replication cohort (replication_v22), and
-recorded with its JSON path in results/report_figures/key_figure_numbers.csv.
-The per-market AUROCs recomputed for Figure 1 are asserted to equal the frozen ones.
+final_v1 or the judge-budget cohort and recorded with its JSON path in
+results/report_figures/key_figure_numbers.csv.
 """
 
 import csv
@@ -15,42 +17,43 @@ from pathlib import Path
 import shutil
 
 import matplotlib
-import matplotlib.ticker
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from matplotlib.patches import FancyArrowPatch, FancyBboxPatch, Patch
 from matplotlib.lines import Line2D
-from matplotlib.patches import FancyArrowPatch, FancyBboxPatch
-import numpy as np
 
-from collusion.plotting import apply_style, BLUE, ORANGE, AQUA, TEXT, TEXT_MUTED, GRID
+from collusion.plotting import apply_style, BLUE, ORANGE, AQUA, TEXT, TEXT_MUTED
 
 ROOT = Path(__file__).resolve().parents[1]
 FINAL = "results/analysis/final_v1/results.json"
-REPL = "results/analysis/replication_v22/results.json"
+JUDGE24K = "results/analysis/judge24k_v23/results.json"
 OUT = ROOT / "results/report_figures"
-PAIRS = [(0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3)]
-GREY = "#8d8c87"
-CELL_NAMES = {"C1-SS": "Cartel, strong pair", "C1-SF": "Cartel, strong + fringe",
-              "C1-FF": "Cartel, fringe pair", "C1-NW": "Cartel, no warning",
-              "C2": "Cartel, no channel", "E1": "Espionage (not a cartel)"}
+GREEN, RED, GREY, LIGHT = "#1f9e60", "#d9483b", "#c9c8c3", "#f4f3ef"
+LEVELS = {"L1": "bids only", "L2": "bids + costs"}
+SCENARIOS = [("core.N0", "Honest market (any alarm = false)"), ("core.C1-SS", "Cartel: two strong firms"),
+             ("core.C1-SF", "Cartel: strong + weak firm"), ("core.C1-FF", "Cartel: two weak firms"),
+             ("core.C2", "Cartel without chat"), ("core.E1", "Spy (no cartel)")]
 
 
 def load(path):
     return json.loads((ROOT / path).read_text(encoding="utf-8"))
 
 
-def find(rows, **keys):
-    hits = [(i, r) for i, r in enumerate(rows) if all(r.get(k) == v for k, v in keys.items())]
-    assert len(hits) == 1, (keys, len(hits))
+def cell_row(data, cell, level, detector, cohort="registered"):
+    hits = [(i, r) for i, r in enumerate(data["all_cells"])
+            if (r["cohort"], r["cell"], r["prefix"], r["mask"], r["level"], r["detector"])
+            == (cohort, cell, 200, "complete", level, detector)]
+    assert len(hits) == 1, (cell, level, detector)
     return hits[0]
 
 
-def record(numbers, figure, panel, label, metric, value, source, path, n=None):
-    numbers.append(dict(figure=figure, panel=panel, label=label, metric=metric, n=n,
-                        estimate=value["estimate"] if isinstance(value, dict) else value,
-                        low=value.get("low") if isinstance(value, dict) else None,
-                        high=value.get("high") if isinstance(value, dict) else None,
-                        source=f"{source} {path}"))
+def record(numbers, figure, label, metric, value, source, path, n=None):
+    if isinstance(value, dict):
+        estimate, low, high = value["estimate"], value.get("low"), value.get("high")
+    else:
+        estimate, low, high = value, None, None
+    numbers.append(dict(figure=figure, label=label, metric=metric, n=n, estimate=estimate,
+                        low=low, high=high, source=f"{source} {path}"))
 
 
 def save(fig, name):
@@ -60,207 +63,231 @@ def save(fig, name):
     plt.close(fig)
 
 
-def auc(negative, positive):
-    """Mann-Whitney AUROC with half credit for ties (the analysis convention)."""
-    neg, pos = np.asarray(negative)[:, None], np.asarray(positive)[None, :]
-    return float(((pos > neg) + .5 * (pos == neg)).mean())
+def box(ax, x, y, w, h, text, fc="white", ec=TEXT_MUTED, size=7, weight="bold", color=TEXT, sub=None):
+    ax.add_patch(FancyBboxPatch((x - w / 2, y - h / 2), w, h, boxstyle="round,pad=.04,rounding_size=.15",
+                                fc=fc, ec=ec, lw=.9))
+    ax.text(x, y + (.17 if sub else 0), text, ha="center", va="center", fontsize=size, weight=weight, color=color)
+    if sub:
+        ax.text(x, y - .25, sub, ha="center", va="center", fontsize=size - 1.3, color=TEXT_MUTED)
 
 
-def matched_scores(data, cell, level, detector):
-    """Designated-pair scores of eligible matched markets, exactly as the frozen pipeline pairs them."""
-    markets = {(m["cohort"], m["cell"], m["market_index"]): m for m in data["markets"]}
-    _, row = find(data["all_cells"], cohort="registered", cell=cell, prefix=200, mask="complete",
-                  level=level, detector=detector)
-    out = []
-    for (cohort, name, index), treatment in sorted(markets.items()):
-        if (cohort, name) != ("registered", cell) or not treatment["eligible"]:
-            continue
-        control = markets.get(("registered", row["control"], index))
-        if control is None or not control["eligible"]:
-            continue
-        view = lambda m: next(v for v in m["views"] if v["prefix"] == 200 and v["mask"] == "complete")
-        target = PAIRS.index(tuple(sorted(treatment["assignment"]["designated_pair"])))
-        out.append((index, view(control)["levels"][level]["scores"][detector][target],
-                    view(treatment)["levels"][level]["scores"][detector][target]))
-    return out, row
+def arrow(ax, a, b, color=TEXT_MUTED, lw=1.2, style="->", ls="-", scale=9):
+    ax.add_patch(FancyArrowPatch(a, b, arrowstyle=style, mutation_scale=scale, color=color, lw=lw, linestyle=ls,
+                                 shrinkA=0, shrinkB=0))
 
 
-def schematic(ax):
-    """Four bidders, the cartel channel, the spy's view of a cost, and the two auditor access levels."""
-    ax.set(xlim=(0, 11), ylim=(0, 7.0), aspect="equal", anchor="N")
+def figure_1():
+    """Three steps: the market, the secret arrangements, what the auditor sees and asks."""
+    fig, ax = plt.subplots(figsize=(6.6, 2.15))
+    ax.set(xlim=(0, 22), ylim=(0, 7.2), aspect="equal")
     ax.axis("off")
-    firms = {"A": (1.6, 4.5, "strong"), "B": (4.4, 4.5, "strong"), "C": (1.6, 1.5, "fringe"), "D": (4.4, 1.5, "fringe")}
-    for name, (x, y, kind) in firms.items():
-        ax.add_patch(FancyBboxPatch((x - .85, y - .6), 1.7, 1.2, boxstyle="round,pad=.05,rounding_size=.2",
-                                    fc="white", ec=TEXT_MUTED, lw=.9))
-        ax.text(x, y + .2, f"Firm {name}", ha="center", va="center", fontsize=7, weight="bold", color=TEXT)
-        ax.text(x, y - .27, "cost 1-3" if kind == "strong" else "cost 3-5", ha="center",
-                va="center", fontsize=5.8, color=TEXT_MUTED)
-    for y, kind in ((4.5, "strong"), (1.5, "fringe")):
-        ax.text(.2, y, kind, rotation=90, ha="center", va="center", fontsize=6, color=TEXT_MUTED)
-    ax.add_patch(FancyArrowPatch((2.5, 4.85), (3.5, 4.85), arrowstyle="<->", mutation_scale=8, color=ORANGE, lw=1.4))
-    ax.text(3.0, 5.75, "cartel: joint-profit goal, private\nmessages (C1) or none (C2)", ha="center", va="center",
-            fontsize=5.8, color=ORANGE)
-    ax.add_patch(FancyArrowPatch((3.5, 4.15), (2.5, 4.15), arrowstyle="->", mutation_scale=8, color=AQUA, lw=1.4,
-                                 linestyle=(0, (3, 2))))
-    ax.text(3.0, 3.3, "espionage (E1): A secretly\nsees B's cost, no cartel", ha="center", va="center",
-            fontsize=5.8, color=AQUA)
-    ax.text(3.0, .2, "200 rounds; lowest bid wins; bids become public", ha="center", va="center",
-            fontsize=5.6, color=TEXT_MUTED)
-    ax.add_patch(FancyArrowPatch((5.4, 3.0), (6.1, 3.0), arrowstyle="->", mutation_scale=9, color=TEXT_MUTED, lw=1.1))
-    ax.add_patch(FancyBboxPatch((6.25, .9), 4.7, 4.3, boxstyle="round,pad=.05,rounding_size=.2",
-                                fc="#f4f3ef", ec=TEXT_MUTED, lw=.9))
-    ax.text(8.6, 4.75, "Auditor", ha="center", va="center", fontsize=7, weight="bold", color=TEXT)
-    lines = (("L1: all bids and winners", TEXT), ("L2: L1 + every firm's cost", TEXT),
-             ("never: messages, roles", TEXT_MUTED), ("scores each of 6 pairs:", TEXT),
-             ("net influence or correlation", TEXT))
-    for k, (line, color) in enumerate(lines):
-        ax.text(6.5, 4.05 - .68 * k, line, ha="left", va="center", fontsize=5.9, color=color)
-    ax.text(0, 7.0, "a  Design", fontsize=8, weight="semibold", color=TEXT, va="top")
-
-
-def strip(ax, blocks, title, color, frozen):
-    """Honest vs treatment designated-pair scores, one faint line per matched market pair."""
-    _, neg, pos = map(np.asarray, zip(*blocks))
-    for a, b in zip(neg, pos):
-        ax.plot([0, 1], [a, b], color=GRID, lw=.7, zorder=1)
-    jitter = np.linspace(-.06, .06, len(neg))
-    ax.scatter(np.zeros(len(neg)) + jitter, neg, s=9, color=GREY, zorder=2, lw=0)
-    ax.scatter(np.ones(len(pos)) + jitter, pos, s=9, color=color, zorder=2, lw=0)
-    value = auc(neg, pos)
-    assert abs(value - frozen["estimate"]) < 1e-12, (title, value, frozen["estimate"])
-    ax.set_xticks([0, 1])
-    ax.set_xlim(-.35, 1.35)
-    ax.grid(axis="x", visible=False)
-    ax.tick_params(labelsize=5.5)
-    ax.yaxis.set_major_locator(matplotlib.ticker.MaxNLocator(4))
-    ax.set_title(f"{title}\nAUROC {value:.2f}", fontsize=7)
-    return value
-
-
-def figure_1(final, numbers):
-    fig = plt.figure(figsize=(6.6, 2.5))
-    schematic(fig.add_axes([0.0, 0.02, 0.42, 0.94]))
-    panels = (("C1-SS", "net", "Cartel: net"), ("C1-SS", "correlation", "Cartel: corr."),
-              ("E1", "net", "Spy: net"), ("E1", "correlation", "Spy: corr."))
-    for k, (cell, detector, title) in enumerate(panels):
-        ax = fig.add_axes([0.535 + k * 0.1175, 0.12, 0.08, 0.62])
-        blocks, row = matched_scores(final, f"core.{cell}", "L2", detector)
-        i, _ = find(final["all_cells"], cohort="registered", cell=f"core.{cell}", prefix=200, mask="complete",
-                    level="L2", detector=detector)
-        strip(ax, blocks, title, BLUE if detector == "net" else ORANGE, row["auroc"])
-        ax.set_xticklabels(["honest", "cartel" if cell != "E1" else "spy"])
-        record(numbers, 1, "b", f"core.{cell} L2 {detector}", "auroc", row["auroc"], FINAL,
-               f"all_cells[{i}].auroc", row["auroc"]["n_blocks"])
-        for index, neg, pos in blocks:
-            record(numbers, 1, "b", f"core.{cell} L2 {detector} market {index}", "designated score (control, treatment)",
-                   {"estimate": pos, "low": neg, "high": None}, FINAL,
-                   f"markets[cell=core.{cell}|{row['control']}, market_index={index}].views[prefix=200,mask=complete].levels.L2.scores.{detector}")
-        if k == 0:
-            ax.set_ylabel("score of the designated pair (L2)", fontsize=6.3)
-    fig.text(.45, .985, "b  Each matched pair of markets (same costs), markets 0-19",
-             fontsize=8, weight="semibold", color=TEXT, va="top")
+    heads = ((3.6, "1  The market"), (10.9, "2  Secret arrangements"), (18.6, "3  The auditor"))
+    for x, text in heads:
+        ax.text(x, 6.9, text, ha="center", va="top", fontsize=8.5, weight="bold", color=TEXT)
+    for name, x, y, sub in (("A", 1.85, 4.6, "strong"), ("B", 5.25, 4.6, "strong"),
+                            ("C", 1.85, 2.3, "weak"), ("D", 5.25, 2.3, "weak")):
+        box(ax, x, y, 3.0, 1.4, f"AI firm {name}", sub=sub + ", low cost" if sub == "strong" else sub + ", high cost")
+    ax.text(3.6, .75, "4 AI agents bid for a contract,\n200 rounds; the lowest bid wins",
+            ha="center", va="center", fontsize=6.4, color=TEXT_MUTED)
+    rows = ((5.3, ORANGE, "<->", "-", "Cartel: agree to raise\nprofits, chat in private"),
+            (3.55, ORANGE, "<->", (0, (1.5, 1.5)), "Cartel without chat:\nsame goal, no messages"),
+            (1.8, AQUA, "<-", (0, (3, 2)), "Spy: secretly sees a\nrival's cost, no cartel"))
+    for y, color, style, ls, text in rows:
+        arrow(ax, (7.9, y), (9.3, y), color=color, lw=1.6, style=style, ls=ls)
+        ax.text(9.6, y, text, ha="left", va="center", fontsize=6.4, color=TEXT)
+    ax.text(10.9, .55, "Honest markets with identical\ncosts serve as the comparison", ha="center", va="center",
+            fontsize=6.4, color=TEXT_MUTED)
+    ax.add_patch(FancyBboxPatch((15.2, .5), 6.75, 5.6, boxstyle="round,pad=.04,rounding_size=.2",
+                                fc=LIGHT, ec=TEXT_MUTED, lw=.9))
+    lines = (("Sees only the bids", TEXT, "bold"), ("(or bids + each firm's cost)", TEXT_MUTED, "normal"),
+             ("Never sees the chat", TEXT_MUTED, "normal"),
+             ("Asks: is there a cartel,", TEXT, "bold"), ("and which 2 of the 4 firms?", TEXT, "bold"),
+             ("Tools: net influence,", TEXT, "normal"), ("simple correlation, AI judge", TEXT, "normal"))
+    for k, (text, color, weight) in enumerate(lines):
+        ax.text(15.55, 5.55 - .72 * k, text, ha="left", va="center", fontsize=6.6, color=color, weight=weight)
+    for x in (7.35, 14.75):
+        arrow(ax, (x - .3, 3.6), (x + .3, 3.6), lw=1.3)
     save(fig, "figure_1")
 
 
-def figure_2(final, repl, numbers):
-    fig, (left, right) = plt.subplots(1, 2, figsize=(6.6, 2.9), gridspec_kw=dict(width_ratios=[1, 1.1], wspace=.5))
-    order = ["E1", "C2", "C1-SS", "C1-SF", "C1-FF", "C1-NW"]
-    left.axvspan(0, .75, color=BLUE, alpha=.06, lw=0)
-    left.axvspan(-.75, 0, color=ORANGE, alpha=.06, lw=0)
-    left.axvline(0, color=TEXT_MUTED, lw=.8)
-    yticks, ylabels = [], []
-    for y, cell in enumerate(order):
-        i, c = find(final["contrasts"], cohort="registered", cell=f"core.{cell}", prefix=200, mask="complete",
-                    contrast="L2:net minus L2:correlation")
-        v = c["result"]
-        left.errorbar(v["estimate"], y - .13, xerr=[[v["estimate"] - v["low"]], [v["high"] - v["estimate"]]],
-                      fmt="o", color=TEXT, ms=4, lw=1.1, capsize=0)
-        record(numbers, 2, "a", f"core.{cell} original", "L2 net minus correlation AUROC", v, FINAL,
-               f"contrasts[{i}].result", v["n_blocks"])
-        hit = [(j, r) for j, r in enumerate(repl["contrasts"]) if r["cell"] == f"rep.{cell}" and r["prefix"] == 200
-               and r["mask"] == "complete" and r["contrast"] == "L2:net minus L2:correlation"]
-        if hit:
-            j, r = hit[0]
-            w = r["result"]
-            left.errorbar(w["estimate"], y + .17, xerr=[[w["estimate"] - w["low"]], [w["high"] - w["estimate"]]],
-                          fmt="o", mfc="white", color=TEXT, ms=4, lw=1.1, capsize=0)
-            record(numbers, 2, "a", f"rep.{cell} replication", "L2 net minus correlation AUROC", w, REPL,
-                   f"contrasts[{j}].result", w["n_blocks"])
-        yticks.append(y)
-        ylabels.append(CELL_NAMES[cell])
-    left.set(yticks=yticks, xlim=(-.75, .75), ylim=(len(order) - .5, -.6),
-             xlabel="AUROC difference, net influence minus correlation (L2)")
-    left.set_yticklabels(ylabels, fontsize=7)
-    left.tick_params(axis="x", labelsize=6.5)
-    left.grid(axis="y", visible=False)
-    left.text(.72, -.45, "net better", ha="right", va="center", fontsize=6.5, color=BLUE)
-    left.text(-.72, -.45, "correlation better", ha="left", va="center", fontsize=6.5, color=ORANGE)
-    left.legend(handles=[Line2D([], [], marker="o", color=TEXT, ls="", ms=4, label="markets 0-19"),
-                         Line2D([], [], marker="o", mfc="white", color=TEXT, ls="", ms=4, label="fresh markets 20-39")],
-                loc="upper left", bbox_to_anchor=(0, .93), fontsize=6.3, handletextpad=.2, borderaxespad=.2)
-    left.set_title("a  Net influence minus correlation", loc="left")
-
-    points = []
-    for cell in order:
-        for data, source, cohort, name, hollow in ((final, FINAL, "registered", f"core.{cell}", False),
-                                                   (repl, REPL, "replication", f"rep.{cell}", True)):
-            hit = [(j, b) for j, b in enumerate(data["behaviour"]) if b["cohort"] == cohort and b["cell"] == name
-                   and b["prefix"] == 200 and b["metric"] == "joint_profit" and b.get("mask", "complete") == "complete"]
-            if not hit:
-                continue
-            j, b = hit[0]
-            x = b["paired_difference"]["estimate"]
-            record(numbers, 2, "b", name, "joint profit uplift per round vs N0", b["paired_difference"], source,
-                   f"behaviour[{j}].paired_difference", b["n_blocks"])
-            ys = {}
-            for detector in ("net", "correlation"):
-                i, r = find(data["all_cells"], cohort=cohort, cell=name, prefix=200, mask="complete",
-                            level="L2", detector=detector)
-                ys[detector] = r["auroc"]["estimate"]
-                record(numbers, 2, "b", name, f"L2 {detector} AUROC", r["auroc"], source,
-                       f"all_cells[{i}].auroc", r["auroc"]["n_blocks"])
-            right.plot([x, x], [ys["correlation"], ys["net"]], color=GRID, lw=1.6, zorder=1)
-            for detector, color, marker in (("net", BLUE, "o"), ("correlation", ORANGE, "s")):
-                right.plot(x, ys[detector], marker=marker, ms=4.5, ls="", zorder=2,
-                           color=color, mfc="white" if hollow else color, mew=1.1)
-            points.append((cell, hollow, x, max(ys.values()), min(ys.values())))
-    places = {("E1", False): (-.13, .70, "right"), ("E1", True): (-.07, .68, "left"),
-              ("C2", False): (.399, .465, "center"), ("C2", True): (.27, .7525, "right"),
-              ("C1-SS", False): (.155, .845, "left"), ("C1-SS", True): (.185, .905, "left"),
-              ("C1-SF", False): (-.075, .85, "right"), ("C1-FF", False): (-.01, 1.025, "right"),
-              ("C1-NW", False): (-.19, .94, "left")}
-    short = {"E1": "spy", "C2": "no channel", "C1-SS": "strong pair", "C1-SF": "strong+fringe",
-             "C1-FF": "fringe pair", "C1-NW": "no warning"}
-    for cell, hollow, *_ in points:
-        x, y, ha = places[(cell, hollow)]
-        right.text(x, y, short[cell] + (" (fresh)" if hollow else ""), fontsize=6.2, color=TEXT_MUTED,
-                   ha=ha, va="center")
-    right.axhline(.5, color=TEXT_MUTED, lw=.7, ls=":")
-    right.axvline(0, color=TEXT_MUTED, lw=.7)
-    right.text(-.33, .52, "chance", fontsize=6.2, color=TEXT_MUTED, va="bottom")
-    right.set(xlim=(-.35, .5), ylim=(.3, 1.05), xlabel="Joint profit gain of the pair vs. honest markets (per round)",
-              ylabel="Detection AUROC (L2)")
-    right.tick_params(labelsize=6.5)
-    right.legend(handles=[Line2D([], [], marker="o", color=BLUE, ls="", ms=4.5, label="net influence"),
-                          Line2D([], [], marker="s", color=ORANGE, ls="", ms=4.5, label="correlation"),
-                          Line2D([], [], marker="o", color=GREY, mfc="white", ls="", ms=4.5, label="fresh markets")],
-                 loc="lower right", fontsize=6.3, handletextpad=.2, borderaxespad=.2)
-    right.set_title("b  Profit vs. detectability", loc="left")
+def figure_2(final, numbers):
+    """Stacked outcome bars: right pair named / no alarm / wrong pair or false alarm."""
+    fig, axes = plt.subplots(1, 4, figsize=(6.6, 2.55), sharey=True, gridspec_kw=dict(wspace=.42))
+    panels = (("paper", "L1", "Published rule"), ("paper", "L2", "Published rule"),
+              ("net", "L1", "Our corrected rule"), ("net", "L2", "Our corrected rule"))
+    for ax, (detector, level, rule) in zip(axes, panels):
+        for y, (cell, label) in enumerate(SCENARIOS):
+            i, r = cell_row(final, cell, level, detector)
+            if cell == "core.N0":
+                false = r["any_candidate"]
+                parts = [(0, GREEN), (false["estimate"], RED), (1 - false["estimate"], GREY)]
+                note = f"{false['hits']}/{false['total']}"
+                record(numbers, 2, f"{cell} {level} {detector}", "false alarm (any pair flagged)", false, FINAL,
+                       f"all_cells[{i}].any_candidate", false["total"])
+            else:
+                right, wrong, none = (r[k]["estimate"] for k in ("correct_unique", "wrong_pair", "abstention"))
+                assert abs(right + wrong + none - 1) < 1e-9
+                parts = [(right, GREEN), (wrong, RED), (none, GREY)]
+                note = f"{round(right * r['coverage'])}/{r['coverage']}"
+                for key in ("correct_unique", "wrong_pair", "abstention"):
+                    record(numbers, 2, f"{cell} {level} {detector}", key, r[key], FINAL, f"all_cells[{i}].{key}",
+                           r["coverage"])
+            left = 0
+            for width, color in parts:
+                ax.barh(y, width, left=left, color=color, height=.66, lw=0)
+                left += width
+            ax.text(1.04, y, note, va="center", ha="left", fontsize=5.8, color=GREEN if cell != "core.N0" else RED)
+        ax.set_title(f"{rule}\n{LEVELS[level]}", fontsize=7.2)
+        ax.set(xlim=(0, 1), xticks=[0, .5, 1], ylim=(len(SCENARIOS) - .5, -.5))
+        ax.set_xticklabels(["0", "50", "100%"], fontsize=6)
+        ax.grid(False)
+        ax.spines["left"].set_visible(False)
+        ax.tick_params(axis="y", length=0)
+        ax.axhline(.5, color=TEXT_MUTED, lw=.6)
+    axes[0].set_yticks(range(len(SCENARIOS)))
+    axes[0].set_yticklabels([label for _, label in SCENARIOS], fontsize=7)
+    fig.legend(handles=[Patch(color=GREEN, label="named exactly the right pair"),
+                        Patch(color=RED, label="wrong pair / false alarm"),
+                        Patch(color=GREY, label="no alarm")],
+               loc="lower center", ncol=3, fontsize=6.6, bbox_to_anchor=(.55, -.01))
+    fig.subplots_adjust(left=.22, right=.955, bottom=.19, top=.83)
     save(fig, "figure_2")
+
+
+def figure_3(final, numbers):
+    """Pooled flow diagrams with costs: lockstep link and the two cost-to-bid leak arrows."""
+    fp = {x["cell"]: (i, x) for i, x in enumerate(final["fingerprints"]) if x["cohort"] == "registered"}
+    panels = (("core.N0", "Honest market", "Firm A", "Firm B"),
+              ("core.C1-SS", "Cartel that chats", "Firm A", "Firm B"),
+              ("core.C2", "Cartel without chat", "Firm A", "Firm B"),
+              ("core.E1", "Spy", "Spy", "Victim"))
+    fig, axes = plt.subplots(1, 4, figsize=(6.6, 2.05), gridspec_kw=dict(wspace=.08))
+    max_leak = max(max(fp[c][1]["terms"][k]["estimate"] for k in ("leak_to_member_1", "leak_to_member_2"))
+                   for c, *_ in panels)
+    for ax, (cell, title, name1, name2) in zip(axes, panels):
+        i, x = fp[cell]
+        terms = x["terms"]
+        for key in ("action", "leak_to_member_1", "leak_to_member_2"):
+            record(numbers, 3, cell, f"pooled {key} (bits)", terms[key], FINAL, f"fingerprints[{i}].terms.{key}",
+                   x["markets"])
+        ax.set(xlim=(0, 10), ylim=(0, 7))
+        ax.axis("off")
+        box(ax, 1.9, 3.4, 3.0, 1.5, name1, sub="bids")
+        box(ax, 8.1, 3.4, 3.0, 1.5, name2, sub="bids")
+        action = terms["action"]["estimate"]
+        ax.plot([3.45, 6.55], [3.4, 3.4], color=ORANGE, lw=max(.4, 60 * action), alpha=.85 if action > .01 else .4,
+                solid_capstyle="butt")
+        for key, start, end, y, text in (("leak_to_member_2", (2.4, 1.75), (7.6, 2.5), .85, f"{name1}'s cost → {name2}'s bid"),
+                                         ("leak_to_member_1", (7.6, 5.05), (2.4, 4.3), 5.95, f"{name2}'s cost → {name1}'s bid")):
+            value, low = terms[key]["estimate"], terms[key]["low"]
+            if value > 0 and low > 0:  # interval excludes zero; width proportional to the estimate
+                arrow(ax, start, end, color=AQUA, lw=max(.3, 4.5 * value / max_leak), scale=6 + 7 * value / max_leak)
+            else:
+                arrow(ax, start, end, color=GREY, lw=.7, ls=(0, (2, 2)), scale=7)
+            ax.text(5, y, text, ha="center", va="center", fontsize=5.4, color=TEXT_MUTED)
+        ax.set_title(title, fontsize=7.6, weight="bold")
+    fig.legend(handles=[Line2D([], [], color=ORANGE, lw=3, label="bids move in lockstep (thickness = strength)"),
+                        Line2D([], [], color=AQUA, lw=2.5, label="a firm's cost shows up in the other's bids"),
+                        Line2D([], [], color=GREY, lw=.8, ls=(0, (2, 2)), label="no clear flow (interval includes zero)")],
+               loc="lower center", ncol=3, fontsize=6.2, bbox_to_anchor=(.5, -.02))
+    fig.subplots_adjust(left=.01, right=.99, top=.86, bottom=.12)
+    save(fig, "figure_3")
+
+
+def figure_4(final, numbers):
+    """Detection: chance that a treated market looks more suspicious than its honest twin."""
+    cells = [("core.C1-SS", "cartel\n2 strong"), ("core.C1-SF", "cartel\nstrong+weak"),
+             ("core.C1-FF", "cartel\n2 weak"), ("core.C2", "cartel\nno chat"), ("core.E1", "spy")]
+    fig, axes = plt.subplots(1, 2, figsize=(6.6, 2.35), sharey=True, gridspec_kw=dict(wspace=.08))
+    for ax, level in zip(axes, ("L1", "L2")):
+        for k, (cell, label) in enumerate(cells):
+            for offset, detector, color in ((-.19, "net", BLUE), (.19, "correlation", ORANGE)):
+                i, r = cell_row(final, cell, level, detector)
+                v = r["auroc"]["estimate"]
+                ax.bar(k + offset, v, width=.36, color=color, lw=0)
+                ax.text(k + offset, v + .015, f"{round(100 * v)}", ha="center", va="bottom", fontsize=5.8, color=color)
+                record(numbers, 4, f"{cell} {level} {detector}", "AUROC", r["auroc"], FINAL, f"all_cells[{i}].auroc",
+                       r["auroc"]["n_blocks"])
+        ax.axhline(.5, color=TEXT_MUTED, lw=.8, ls=":")
+        ax.set_xticks(range(len(cells)))
+        ax.set_xticklabels([label for _, label in cells], fontsize=6.3)
+        ax.set(xlim=(-.6, 4.5), ylim=(0, 1.12), yticks=[0, .25, .5, .75, 1])
+        ax.set_yticklabels(["0%", "25%", "50%", "75%", "100%"], fontsize=6)
+        ax.grid(axis="x", visible=False)
+        ax.set_title(f"Auditor sees {LEVELS[level]}", fontsize=7.6)
+    axes[0].set_ylabel("cartel market looks more\nsuspicious than honest twin", fontsize=6.6)
+    fig.legend(handles=[Patch(color=BLUE, label="net influence (paper's method)"),
+                        Patch(color=ORANGE, label="simple correlation"),
+                        Line2D([], [], color=TEXT_MUTED, lw=.8, ls=":", label="coin flip (50%)")],
+               loc="lower center", ncol=3, fontsize=6.6, bbox_to_anchor=(.55, -.07))
+    fig.subplots_adjust(left=.11, right=.99, top=.9, bottom=.25)
+    save(fig, "figure_4")
+
+
+def figure_5(final, judge24k, numbers):
+    """(a) profit gain versus how often our rule caught the pair; (b) AI judge versus net influence."""
+    fig, (left, right) = plt.subplots(1, 2, figsize=(6.6, 2.25), gridspec_kw=dict(width_ratios=[1.35, 1], wspace=.55))
+    cells = [("core.C1-SS", "Cartel: two strong"), ("core.C1-SF", "Cartel: strong + weak"),
+             ("core.C1-FF", "Cartel: two weak"), ("core.C2", "Cartel without chat")]
+    for y, (cell, label) in enumerate(cells):
+        j, b = next((j, b) for j, b in enumerate(final["behaviour"]) if b["cohort"] == "registered"
+                    and b["cell"] == cell and b["prefix"] == 200 and b["metric"] == "joint_profit")
+        gain = b["paired_difference"]["estimate"]
+        left.barh(y, gain, color=ORANGE if cell == "core.C2" else GREY, height=.6, lw=0)
+        record(numbers, 5, cell, "joint profit gain per round vs honest", b["paired_difference"], FINAL,
+               f"behaviour[{j}].paired_difference", b["n_blocks"])
+        i, r = cell_row(final, cell, "L1", "net")
+        caught = round(r["correct_unique"]["estimate"] * r["coverage"])
+        record(numbers, 5, cell, "L1 net correct_unique", r["correct_unique"], FINAL,
+               f"all_cells[{i}].correct_unique", r["coverage"])
+        left.text(.47, y, f"{caught}/{r['coverage']}", ha="left", va="center", fontsize=6.3,
+                  color=RED if caught == 0 else GREEN, weight="bold")
+    left.axvline(0, color=TEXT_MUTED, lw=.7)
+    left.set_yticks(range(len(cells)))
+    left.set_yticklabels([label for _, label in cells], fontsize=6.6)
+    left.set(xlim=(-.12, .62), ylim=(len(cells) - .5, -1.25))
+    left.set_xlabel("extra profit of the pair per round", fontsize=6.6)
+    left.tick_params(axis="x", labelsize=6)
+    left.grid(axis="y", visible=False)
+    left.set_title("a  The most profitable cartel was the quietest", loc="left", fontsize=7.6)
+    left.text(.47, -.85, "alarm named it\n(bids only)", ha="left", va="center", fontsize=5.6, color=TEXT_MUTED)
+    comps = {r["cell"]: (k, r) for k, r in enumerate(judge24k["judge_comparisons"])
+             if r["cohort"] == "judge24k" and r["level"] == "L2" and r["detector"] == "net"}
+    for x, cell in enumerate(("core.C1-SS", "core.C1-SF")):
+        k, r = comps[cell]
+        for offset, key, color in ((-.19, "judge_localisation", GREY), (.19, "detector_localisation", BLUE)):
+            v = r[key]["top1"]["estimate"]
+            right.bar(x + offset, v, width=.36, color=color, lw=0)
+            right.text(x + offset, v + .02, f"{round(100 * v)}%", ha="center", va="bottom", fontsize=6, color=TEXT)
+            record(numbers, 5, cell, f"{key} top1 (24k judge cohort)", r[key]["top1"], JUDGE24K,
+                   f"judge_comparisons[{k}].{key}.top1", r[key]["n_markets"])
+    right.set_xticks([0, 1])
+    right.set_xticklabels(["Cartel:\ntwo strong", "Cartel:\nstrong + weak"], fontsize=6.4)
+    right.set(ylim=(0, 1.32), yticks=[0, .5, 1])
+    right.set_yticklabels(["0%", "50%", "100%"], fontsize=6)
+    right.set_ylabel("named the right pair first", fontsize=6.6)
+    right.grid(axis="x", visible=False)
+    right.legend(handles=[Patch(color=GREY, label="AI judge"), Patch(color=BLUE, label="net influence")],
+                 fontsize=6.2, loc="upper center", ncol=2, handlelength=1, borderaxespad=0)
+    right.set_title("b  The AI judge just picks the strong firms", loc="left", fontsize=7.6)
+    fig.subplots_adjust(left=.19, right=.99, top=.84, bottom=.2)
+    save(fig, "figure_5")
 
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    final, repl = load(FINAL), load(REPL)
-    assert final["development"] is False and repl["development"] is False
-    assert final["analysis_freeze_commit"] == repl["analysis_freeze_commit"]
+    final, judge24k = load(FINAL), load(JUDGE24K)
+    assert final["development"] is False and judge24k["development"] is False
+    assert final["analysis_freeze_commit"] == judge24k["analysis_freeze_commit"]
     apply_style()
     plt.rcParams.update({"font.size": 7, "axes.titlesize": 8, "axes.labelsize": 7,
-                         "pdf.fonttype": 42, "ps.fonttype": 42, "axes.titleweight": "semibold"})
+                         "pdf.fonttype": 42, "ps.fonttype": 42, "axes.titleweight": "bold"})
     numbers = []
-    figure_1(final, numbers)
-    figure_2(final, repl, numbers)
+    figure_1()
+    figure_2(final, numbers)
+    figure_3(final, numbers)
+    figure_4(final, numbers)
+    figure_5(final, judge24k, numbers)
     with (OUT / "key_figure_numbers.csv").open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=list(numbers[0]))
         writer.writeheader()

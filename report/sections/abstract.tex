@@ -1,26 +1,25 @@
 \begin{abstract}
-Can an overseer find two colluding AI agents from their actions alone? We
-test pairwise net influence, an information-theoretic dependence measure,
-on language-model bidders in a repeated procurement auction with an
-instructed two-firm cartel and matched honest markets, with and without
-access to private costs. In the pre-registered primary test, net influence
-separated cartel from honest markets (AUROC $0.865$, $p=0.00002$, $20$
-matched blocks), but a plain correlation of the same data did better
-($0.9975$), and correlation matched or beat net influence on every cartel
-with a private channel.
-% source: results/analysis/final_v1/results.json primary; all_cells[206,202].auroc
-Net influence added information where one firm secretly saw a rival's cost:
-it beat correlation by $+0.285$ AUROC, and by $+0.265$ $[0.070,0.445]$ on
-fresh markets collected afterwards.
-% source: results/analysis/final_v1/results.json contrasts[263].result; results/analysis/replication_v22/results.json contrasts rep.E1 "L2:net minus L2:correlation"
-A cartel without a channel raised profit the most, also on fresh markets,
-yet was the hardest cartel to detect. The published fixed alarm threshold
-flagged all $40$ honest markets with cost access. An LLM judge with ample
-token budget barely separated cartel from honest markets (AUROC $0.62$,
-interval including $0.5$) and named the strongest firms rather than the
-colluders.
-% source: results/analysis/final_v1/results.json all_cells[63].any_candidate; results/analysis/judge24k_v23/results.json all_cells[138] judge:qwen-9b auroc
-Behaviour-based screens can support an investigation, but should be
-calibrated, compared with simple baselines, and not read as proof of
-agreement.
+AI agents increasingly bid and set prices for competing firms. If two of
+them secretly coordinate, can an overseer find the pair just by watching
+what they do? We test a published information-theoretic measure, pairwise
+net influence, on AI bidders in a repeated auction with an instructed
+two-firm cartel and honest twin markets with identical costs. From bids
+alone, a calibrated alarm built on the measure named exactly the colluding
+pair in $49$ of $60$ markets where the cartel chatted in private, never
+named a wrong pair, and raised one false alarm in $40$ honest markets; the
+alarm rule published with the measure flagged $24$ of $40$ honest markets.
+% source: results/analysis/final_v1/results.json all_cells[199,400,466].correct_unique,wrong_pair; all_cells[55,56].any_candidate
+When the overseer also sees each firm's costs, the direction of information
+flow becomes visible when pooled over markets: two-way for the cartel,
+one-way from victim to spy for an espionage scenario. A plain correlation
+of the same data detected chatting cartels at least as well (pre-registered
+test: net influence AUROC $0.865$, $p=0.00002$; correlation $0.9975$); net
+influence added value only for espionage, and this replicated on fresh
+markets ($+0.265$ AUROC $[0.070,0.445]$).
+% source: results/analysis/final_v1/results.json primary; all_cells[206,202].auroc; fingerprints[2,4].terms; results/analysis/replication_v22/results.json contrasts[501].result
+Two warnings follow: the most profitable cartel, one without chat, went
+almost unnoticed, and an AI judge named the strongest firms rather than the
+colluders. Behaviour-based screens can direct an investigation, but need
+calibration and a simple baseline, and are not proof of agreement.
+% source: results/analysis/final_v1/results.json behaviour[64].paired_difference; all_cells[268].correct_unique; results/analysis/judge24k_v23/results.json judge_comparisons[4].judge_localisation.top1
 \end{abstract}

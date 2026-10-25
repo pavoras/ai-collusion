@@ -1,12 +1,12 @@
 \section{Conclusion}
-Pairwise net influence detects an instructed LLM cartel in a repeated
-procurement auction, but a simple correlation of the same data detects it
-as well or better. Its distinct value appears when one firm's private cost
-flows into another firm's bids: for espionage it beat correlation, and this
-held on fresh markets. The most profitable collusion, a cartel without a
-channel, was the hardest to detect, and a small LLM judge given ample tokens
-judged firm strength rather than coordination. Behaviour-based screens can
-support an investigation; they do not establish agreement, intent or harm.
+Watching only the bids of AI agents, a calibrated net-influence alarm found
+cartels that coordinated by chat and named the right pair, without wrong
+accusations. With private costs, the measure also showed which way
+information flowed, separating a two-way cartel from a one-way spy when
+evidence was pooled. Yet a simple correlation detected talking cartels as
+well, the most profitable cartel stayed hidden, and a small AI judge looked
+at firm strength rather than behaviour. Behaviour-based screens can direct
+an investigation; they do not establish agreement, intent or harm.
 
 \section*{Code and Data}
 {\sloppy All code, collected market data and analysis outputs are in the project
@@ -14,6 +14,7 @@ repository. The frozen final analysis is
 \path{results/analysis/final_v1/results.json}; the replication and judge
 check are in \path{results/analysis/replication_v22/} and
 \path{results/analysis/judge24k_v23/}, summarised by
-\path{experiments/addendum_summary.py}. Appendix~\ref{app:stats} gives every
+\path{experiments/addendum_summary.py}. The main-text figures are rendered
+by \path{experiments/key_figures.py}. Appendix~\ref{app:stats} gives every
 analysis command, execution provenance and checksums.\par}
 \todo{Insert public repository and release archive URLs after release.}

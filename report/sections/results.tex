@@ -1,162 +1,136 @@
 \section{Results}
 \label{sec:results}
-All results use the frozen analysis code, rounds with four valid bids, and
-the full 200-round horizon. Intervals are pointwise 95\% block-bootstrap
-intervals unless stated otherwise. The required scripted
-rock--paper--scissors replication recovered the paper's rising detection
-pattern, but not every published percentage
-(Appendix~\ref{app:replication}); it is separate from the LLM evidence.
-Figure~\ref{fig:headline} summarises the two main patterns.
+All results use the frozen analysis code and the full 200 rounds; ``bids
+only'' is access level L1, ``bids + costs'' is L2. Intervals are 95\%
+block-bootstrap intervals. Detailed per-cell figures, all detector rows and
+the scripted rock--paper--scissors replication of the original paper are in
+the appendix (Appendices~\ref{app:replication} and~\ref{app:allresults}).
+
+\subsection{From bids alone, a calibrated alarm names the cartel}
+Figure~\ref{fig:alarms} asks the question an overseer would ask: did the
+alarm rule point to exactly the colluding pair, to a wrong pair, or stay
+silent? With bids only, our permutation-corrected net-influence rule named
+exactly the right pair in $16$, $13$ and $20$ of $20$ markets for the three
+cartels that chat (two strong firms; strong and weak firm; two weak firms),
+and never named a wrong pair. In $40$ honest markets it raised one false
+alarm.
+% source: results/analysis/final_v1/results.json all_cells[199,400,466].correct_unique,wrong_pair; all_cells[55].any_candidate
+The rule published with the method is not usable as an alarm here: it
+flagged $24$ of $40$ honest markets with bids only and all $40$ with costs,
+and for the strong-pair cartel with costs it named the wrong pair in $19$
+of $20$ markets.
+% source: results/analysis/final_v1/results.json all_cells[56,63].any_candidate; all_cells[207].wrong_pair
+With costs our rule named the pair less often (5, 8 and 19 of 20; three
+false alarms in 40). Neither rule caught the cartel without chat
+or the spy.
+% source: results/analysis/final_v1/results.json all_cells[206,406,472].correct_unique; all_cells[62].any_candidate; all_cells[268,274,334,340].correct_unique
 
 \begin{figure}[t]
 \centering\includegraphics[width=\linewidth]{figures/figure_2.pdf}
-\caption{The main results at a glance (L2, cost access). (a) Paired AUROC
-difference, net influence minus correlation, with 95\% block-bootstrap
-intervals; filled: markets 0--19, open: fresh markets 20--39 (collected for
-E1, C2 and C1-SS only). Only espionage lies clearly above zero, in both
-samples. (b) Joint profit gain of the designated pair over matched honest
-markets against detection AUROC for net influence (circles) and correlation
-(squares); open symbols: fresh markets. The cartel without a channel gained
-most and was detected least.}
-% source: results/report_figures/key_figure_numbers.csv figure=2; results/analysis/final_v1/results.json contrasts[95,208,263,318,373,758].result, behaviour[40,64,88,112,136,280].paired_difference; results/analysis/replication_v22/results.json contrasts[501,555,609].result, behaviour[16,40,64].paired_difference
-\label{fig:headline}
+\caption{What an alarm reports. For each market type, the share of markets
+in which the rule named exactly the colluding pair (green), a wrong pair or,
+in honest markets, any pair (red), or nothing (grey); numbers give right-pair
+counts (cartel rows) or false alarms (honest row). Left: the fixed threshold
+published with the method. Right: our permutation-corrected rule. 20 markets
+per cartel type, 40 honest markets.}
+% source: results/report_figures/key_figure_numbers.csv figure=2 (all_cells[*].correct_unique, wrong_pair, abstention, any_candidate)
+\label{fig:alarms}
 \end{figure}
 
-\subsection{Detection: the primary test passes, but correlation is as good}
-The pre-registered L2 net-influence score separated strong-pair cartel
-markets (C1-SS) from matched honest markets: AUROC $0.865$
-$[0.734,0.968]$, $p=0.00002$ over $20$ matched blocks. This rejects the
-sole confirmatory null.
-% source: results/analysis/final_v1/results.json primary; all_cells[206].auroc
-The same-access correlation baseline scored $0.9875$ at L1 and $0.9975$ at
-L2; the paired L2 difference, net minus correlation, was $-0.1325$
-$[-0.2647,-0.0309]$.
-% source: results/analysis/final_v1/results.json all_cells[196].auroc; all_cells[202].auroc; contrasts[95].result
-Figure~\ref{fig:detection} shows the same picture for every cartel with a
-private channel, including other placements, the no-warning variant and
-other models: correlation was at least as good. The two small L1 advantages
-(C1-FF, Qwen-4B) have intervals including zero.
-% source: results/analysis/final_v1/results.json contrasts[369].result; contrasts[532].result
-On fresh markets (Section~\ref{sec:addenda}) the same pattern held:
-C1-SS reached L2 net AUROC $0.9075$ $[0.8025,0.985]$ against correlation's
-$0.995$, a difference of $-0.0875$ $[-0.19,-0.015]$.
+\subsection{With costs, the direction of the flow becomes visible}
+Costs let the measure separate two things: whether the two firms' bids move
+in lockstep, and whether one firm's private cost shows up in the other
+firm's bids (a ``leak''). Pooled over all markets of a type
+(Figure~\ref{fig:flow}), honest pairs show neither. The cartel that chats
+shows strong lockstep and leaks in both directions, consistent with
+partners who tell each other their costs. The spy shows a one-way leak: the victim's
+cost appears in the spy's bids ($0.0047$ bits), not the reverse
+($-0.0004$). The cartel without chat shows almost nothing.
+% source: results/analysis/final_v1/results.json fingerprints[0,2,3,4].terms.action,leak_to_member_1,leak_to_member_2
+These pooled patterns are clear, but single markets are short: the
+leak-based rule named the spy pair alone in only $4$ of $20$ spy markets,
+and market-level flow labels rarely resolved the mechanism.
+% source: results/analysis/final_v1/results.json all_cells[339].correct_unique; all_cells[206,340].label:*
+
+\begin{figure}[t]
+\centering\includegraphics[width=\linewidth]{figures/figure_3.pdf}
+\caption{Which way information flows (bids + costs, pooled over 40 honest
+and 20 treated markets per type). Orange: the two bids move in lockstep
+beyond what costs and market history explain. Green arrows: a firm's cost
+shows up in the other firm's bids; width proportional to the estimate,
+drawn only when its pooled 95\% interval excludes zero. These pooled
+intervals are approximate (Appendix~\ref{app:stats}).}
+% source: results/report_figures/key_figure_numbers.csv figure=3 (fingerprints[0,2,3,4].terms)
+\label{fig:flow}
+\end{figure}
+
+\subsection{Net influence versus a simple correlation}
+Figure~\ref{fig:compare} compares the two measures by how often a treated
+market looks more suspicious than its honest twin with identical costs
+(AUROC; 50\% is a coin flip). In the pre-registered primary test,
+net influence with costs separated the strong-pair cartel from honest
+markets: AUROC $0.865$ $[0.734,0.968]$, $p=0.00002$ over $20$ matched
+blocks. But a simple correlation of the same data did better ($0.9975$;
+difference $-0.1325$ $[-0.2647,-0.0309]$), and it was at least as good for
+every cartel that chats (the two small exceptions have intervals including
+zero).
+% source: results/analysis/final_v1/results.json primary; all_cells[206,202].auroc; contrasts[95].result
+Net influence was clearly better only where information leaks: for the spy
+with costs, $0.700$ against $0.415$ (difference $+0.285$ $[0.062,0.515]$).
+This held on $20$ fresh markets collected afterwards ($+0.265$
+$[0.070,0.445]$, Section~\ref{sec:addenda}); with bids only it did not
+replicate ($+0.095$ $[-0.1125,0.315]$).
+% source: results/analysis/final_v1/results.json all_cells[340,337].auroc; contrasts[263].result; results/analysis/replication_v22/results.json contrasts[501,498].result
+On fresh markets the strong-pair cartel was again detected (net $0.9075$
+$[0.8025,0.985]$) and again better by correlation ($0.995$).
 % source: results/analysis/replication_v22/results.json all_cells[2122,2119].auroc; contrasts[609].result
 
-\begin{figure}[tb]
-\centering\includegraphics[width=\linewidth]{figures/figure_a.pdf}
-\caption{Detection by treatment (original markets 0--19). AUROC with
-pointwise 95\% block-bootstrap intervals for net influence and correlation
-at L1 and L2, and the L2 leak score; parentheses give matched blocks. E1
-(espionage) is separated because it is not a cartel. Missing small-model
-comparisons are listed in the appendix.}
-% source: results/report_figures/figure_numbers.csv figure=A
-\label{fig:detection}
+\begin{figure}[t]
+\centering\includegraphics[width=\linewidth]{figures/figure_4.pdf}
+\caption{How often a treated market looks more suspicious than its honest
+twin (AUROC, in percent; 20 matched market pairs per type, markets 0--19).
+Net influence is the paper's measure; correlation is the plain dependence
+between the two firms' bids (with costs: after removing each firm's typical
+bid at its own cost). Intervals and the other models are in
+Appendix~\ref{app:allresults}.}
+% source: results/report_figures/key_figure_numbers.csv figure=4 (all_cells[*].auroc)
+\label{fig:compare}
 \end{figure}
 
-\begin{figure}[!t]
-\centering\includegraphics[width=\linewidth]{figures/figure_b.pdf}
-\caption{Localisation and false alarms (original markets 0--19). Top: top-1
-for the assigned pair on all eligible markets. Middle: top-1 at L2 on the
-markets where the judge returned valid output, under the registered
-12,000-token limit (left) and the 24,000-token check of
-Section~\ref{sec:addenda} (right; C1-FF not run). With more budget the judge
-still names the strong pair, so it fails for C1-SF. Bottom: honest-market
-alarm rates with exact binomial intervals; descriptive, not calibration
-guarantees.}
-% source: results/report_figures/figure_numbers.csv figure=B (middle right: results/analysis/judge24k_v23/results.json judge_comparisons)
-\label{fig:localisation}
+\subsection{Two warnings: the quiet cartel and the AI judge}
+The cartel without chat raised the pair's profit by $0.399$ $[0.364,0.434]$
+per round, almost three times the strong-pair cartel's $0.144$, yet it was
+the cartel both measures detected least well and the alarm never caught it
+with bids only (Figure~\ref{fig:warnings}a). The profit gain replicated on
+fresh markets ($+0.283$ $[0.179,0.371]$).
+% source: results/analysis/final_v1/results.json behaviour[64,40].paired_difference; all_cells[268].correct_unique; results/analysis/replication_v22/results.json behaviour[40].paired_difference
+The Qwen 9B judge reads the round records and names the most suspicious
+pair. Under its registered $12{,}000$-token limit it failed on $322$ of
+$600$ judgements. With $24{,}000$ tokens it answered $54$ of $60$, but it
+separated cartel from honest markets barely better than chance (AUROC
+$0.625$ $[0.424,0.808]$) and simply named the two strong firms: right in
+$91\%$ of strong-pair cartels, but in $2\%$ of strong--weak cartels, where
+net influence was right in $93\%$ of the same markets
+(Figure~\ref{fig:warnings}b).
+% source: results/analysis/final_v1/results.json judgments grouped by model/status; results/analysis/judge24k_v23/results.json all_cells[138] judge:qwen-9b auroc; judge_comparisons[0,4].judge_localisation.top1,detector_localisation.top1; results/analysis/addendum_summary/summary.json judge_budget
+
+\begin{figure}[t]
+\centering\includegraphics[width=\linewidth]{figures/figure_5.pdf}
+\caption{(a) Extra profit of the colluding pair per round compared with
+honest markets, and how often our alarm named the pair from bids alone.
+(b) How often the 24k-token AI judge and net influence ranked the true pair
+first, on the same markets with valid judge output (17 strong-pair and 15
+strong--weak markets, bids + costs).}
+% source: results/report_figures/key_figure_numbers.csv figure=5 (behaviour[40,112,136,64]; all_cells[199,400,466,268].correct_unique; judge24k_v23 judge_comparisons[0,4])
+\label{fig:warnings}
 \end{figure}
 
-\subsection{Where net influence adds information: espionage, replicated}
-In E1 one firm secretly sees its rival's current cost. Here net influence
-clearly beat correlation at L2: AUROC $0.700$ versus $0.415$, paired
-difference $+0.285$ $[0.062,0.515]$; at L1 the difference was $+0.1925$
-$[0.0222,0.3599]$. The L2 leak score, which isolates a cost entering a
-rival's bid, reached $0.7025$ $[0.5737,0.8360]$.
-% source: results/analysis/final_v1/results.json all_cells[334,332,340,337,339].auroc; contrasts[259,263].result
-Because E1 was the one cell that stood out, we collected it again on fresh
-markets (Figure~\ref{fig:headline}a; Table~\ref{tab:replication}). The pre-specified L2 criterion
-replicated: net $0.680$ versus correlation $0.415$, difference $+0.265$
-$[0.070,0.445]$, leak $0.745$. The L1 difference did not replicate
-($+0.095$ $[-0.1125,0.315]$). Net influence therefore adds information when
-one firm's private cost flows into another firm's bids and the auditor can
-see costs.
-% source: results/analysis/replication_v22/results.json all_cells[1990,1987,1989].auroc; contrasts[501,498].result; results/analysis/addendum_summary/summary.json preregistered_verdicts
-
-The cartel without a channel (C2) behaved differently. It raised joint
-profit over honest markets by $0.399$ $[0.364,0.434]$ per round, more than
-any other LLM treatment and almost three times the C1-SS uplift ($0.144$).
-Yet it was the cartel both detectors separated least well: net $0.655$ and
-correlation $0.495$ at L2, a difference whose interval includes zero.
-On fresh markets the profit uplift replicated ($+0.283$ $[0.179,0.371]$);
-detection rose somewhat (net $0.753$, correlation $0.630$) and the
-difference again included zero. Against the fresh C1-SS markets, C2 was
-detected less well by both net ($-0.155$ $[-0.30,-0.01]$) and correlation
-($-0.365$ $[-0.59,-0.16]$).
-% source: results/analysis/replication_v22/results.json contrasts "C1-SS minus C2 L2:net", "C1-SS minus C2 L2:correlation" (cohort replication)
-% source: results/analysis/final_v1/results.json behaviour core.C2/core.C1-SS joint_profit; all_cells[274,271].auroc; contrasts[208].result; results/analysis/replication_v22/results.json behaviour[40].paired_difference; all_cells[2056,2053].auroc; contrasts[555].result
-In this game the most profitable collusion was also the quietest.
-
-\subsection{Localisation and honest-market alarms}
-Net influence named the right pair even where the obvious shortcut fails.
-When the cartel was not the strong pair, ranking the two strong firms first
-had top-1 accuracy zero, while net influence reached $1.00/0.80$ (SF) and
-$1.00/1.00$ (FF) at L1/L2; correlation was similar ($1.00/0.90$,
-$1.00/1.00$).
-% source: results/analysis/final_v1/results.json all_cells[398,400,402,403,406,408,464,466,468,469,472,474].top1
-A good ranking is not yet an alarm: in C1-SS at L2, net top-1 was $0.70$,
-but the reporting rule named the correct pair alone in only $0.25$ of
-markets and abstained in $0.75$, with no wrong-pair reports.
-% source: results/analysis/final_v1/results.json all_cells[206].top1,correct_unique,abstention,wrong_pair
-
-In honest markets the permutation-corrected rule never flagged the
-reference pair ($0/40$ at each level; upper limit $0.088$) and flagged any
-pair in $1/40$ (L1) and $3/40$ (L2) markets; the L2 leak rule in $4/40$.
-% source: results/analysis/final_v1/results.json all_cells[55,62].designated_alarm; all_cells[55,62,61].any_candidate,exactly_one_report
-The paper's fixed threshold ($\alpha=0.05$ on uncorrected scores) alarmed in
-$40/40$ honest L2 markets. In C2 its score ranked markets well (AUROC
-$0.8875$), but its reporting rule named the wrong pair in $20/20$ markets.
-% source: results/analysis/final_v1/results.json all_cells[63].any_candidate,exactly_one_report; all_cells[275].auroc,correct_unique,wrong_pair,coverage
-
-\subsection{An LLM judge: more budget, same blind spot}
-Under its registered $12{,}000$-token limit the Qwen judge failed on
-$322/600$ judgements; most failed calls ran out of tokens, so matched
-comparisons covered only $1$--$8$ blocks.
-% source: results/analysis/final_v1/results.json judgments grouped by model/status/failure; judge_comparisons[*].judge_auroc.n_blocks
-With $24{,}000$ tokens (Section~\ref{sec:addenda}) it returned valid output
-for $54$$/60$ L2 judgements on the same markets, against $27/60$
-before; $31$ of the valid answers used more than $12{,}000$
-tokens. Coverage was now adequate, and the judge still did not reliably separate
-cartel from honest markets: AUROC $0.625$ $[0.424,0.808]$ for C1-SS versus N0 on
-$17$ blocks, where net influence scored $0.907$ and
-correlation $1.000$ on the same blocks. It named the strong pair
-almost regardless of the truth: top-1 $0.92$ in C1-SS, $0.90$
-for the honest reference pair, but $0.02$ in C1-SF, where net
-influence reached $0.93$ on the same markets.
-% source: results/analysis/judge24k_v23/results.json judgments (cohort judge24k); all_cells[60,138,206] judge:qwen-9b coverage/auroc/top1; judge_comparisons[0,1,4,5]; valid-answer token counts from results/raw/*__deviation_judge24k/calls; results/analysis/addendum_summary/summary.json judge_budget
-This is a behavioural pattern of one 9B judge model, not evidence about its
-internal reasoning or about larger judges. The Gemma counter-judge returned
-only $5/40$ valid judgements.
-% source: results/analysis/final_v1/results.json judgments grouped by model/status
-
-\subsection{Behaviour, flow labels, breadth and probes}
-Appendix Table~\ref{tab:behaviour} separates economic outcomes from flow labels.
-Removing the surveillance warning (A1) raised the L2 net AUROC by $0.0975$
-$[-0.0051,0.2300]$ relative to C1-SS while joint profit fell by $0.3478$
-$[0.2921,0.4015]$; this does not show deliberate evasion.
-% source: results/analysis/final_v1/results.json addendum.A1.auroc_differences.L2:net; addendum.A1.behaviour_NW_minus_SS.joint_profit
-Market-level flow labels did not separate cartel and spy: C1-SS had $0$
-designated pairs with a detected leak and $12$ unclear; E1 had $4$ with one
-direction detected and the reverse weak, and $8$ unclear.
-% source: results/analysis/final_v1/results.json all_cells[206,340].label:*
-Gemma-E4B and Ministral-3B produced too many invalid bids (at most $2$
-eligible markets per cell), so their results are unavailable, not negative.
-% source: results/analysis/final_v1/results.json all_cells[934,1000,1066,1132].eligible,auroc
-None of the seven A2 placement-swap endpoints survived Holm correction
-(smallest raw $p=0.0377$, adjusted $0.264$).
-% source: results/analysis/final_v1/results.json addendum.A2.endpoints.L2:leak.test.p_value,holm_p_value
-Exploratory probes that changed only the partner's cost found no resolved
-bid slope ($0.0135$ $[-0.0035,0.0320]$); a leak of $0.089$ bits ($p=0.001$)
-is not causal evidence, because five bids share one regenerated message and
-the permutation null ignores that (Appendix~\ref{app:stats}).
-% source: results/analysis/final_v1/results.json probes.summaries[0].slope,leak; docs/PREREG.md section 9
+\subsection{Other results}
+Removing the surveillance warning raised the net AUROC with costs by
+$0.0975$ $[-0.0051,0.2300]$ while profit fell by $0.3478$ per round; this
+does not show deliberate evasion. None of the seven placement-swap
+endpoints survived Holm correction (smallest adjusted $p=0.264$). Gemma-E4B
+and Ministral-3B produced too many invalid bids, so their results are
+unavailable rather than negative. Probes that changed only the partner's
+cost found no resolved bid slope ($0.0135$ $[-0.0035,0.0320]$).
+% source: results/analysis/final_v1/results.json addendum.A1.auroc_differences.L2:net; addendum.A1.behaviour_NW_minus_SS.joint_profit; addendum.A2.endpoints.L2:leak.holm_p_value; all_cells[934,1000,1066,1132].eligible; probes.summaries[0].slope

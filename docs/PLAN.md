@@ -210,3 +210,11 @@ frischem Clone. Keine Zahl im Report ohne reproduzierbaren Lauf.
   Addendum). Stattdessen neue Übersichtsabbildungen ohne Compute (`experiments/key_figures.py`): Abb. 1 Design und
   Einzelmarkt-Scores (C1-SS, E1), Abb. 2 Netz-minus-Korrelation (Original + Replikation) und Gewinn vs. Erkennbarkeit.
   Abb. B zeigt jetzt 12k- gegen 24k-Richter. Verhaltens- und Replikationstabelle in den Anhang; Haupttext 8 Seiten.
+- 25.10. (später): Marvin fand Text und Grafiken für Laien unverständlich (Kürzel L1/L2, Grafiken nicht eingängig,
+  Praxisnutzen unklar; Wunsch: Richtung des Informationsflusses zeigen). Umbau: Haupttext in einfacher Sprache
+  („nur Gebote“ / „Gebote + Kosten“), fünf neue Grafiken aus `experiments/key_figures.py`: Ablauf, Alarm-Ergebnis
+  (richtiges Paar / falsches Paar / kein Alarm), Flussrichtung (gepoolt; Pfeil nur, wenn 95-%-Intervall ohne 0),
+  Netto-Einfluss vs. Korrelation, Warnungen (stilles Kartell, KI-Richter). Kernaussagen: aus Geboten allein nannte
+  die korrigierte Regel das Kartellpaar in 49 von 60 Märkten mit Chat, nie ein falsches Paar, 1 Fehlalarm in 40;
+  Richtung gepoolt sichtbar (Kartell beidseitig, Spion einseitig), pro Markt nur 4 von 20 Spionagemärkten. Alte
+  Abbildungen A/B in Anhang D. Haupttext 8 Seiten.

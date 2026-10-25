@@ -1,41 +1,39 @@
 \section{Introduction}
-Language-model agents increasingly act for competing firms: they set prices,
-place bids and negotiate. If two such agents coordinate in secret, an
-overseer may see only what they do. Their messages may be hidden or encoded,
-and similar bids alone prove nothing, because honest agents react to the
-same market history. Can a statistical audit of behaviour still find the
-colluding pair?
+AI agents increasingly act for competing firms: they set prices, place bids
+and negotiate. If two such agents coordinate in secret, an overseer may see
+only what they do. Their messages may be hidden or encoded, and similar
+bids alone prove nothing, because honest agents react to the same market.
+Can an audit of behaviour still find the colluding pair?
 
 We test one candidate audit, pairwise net influence \citep{bonjour2022}. It
-measures how much one agent's action depends on another's and subtracts the
-strongest dependence on any third agent; a pair that moves together beyond
-what the rest of the market explains is flagged. We apply it to LLM bidders
-in a repeated procurement auction with four firms, an instructed two-firm
-cartel, and matched honest markets with identical costs. The auditor has
-either public bids only (access level L1) or, in addition, every firm's
-private costs (L2). With costs, the measure splits into action dependence
-and directional ``leaks'' of one firm's cost into another firm's bid. The
-auditor never reads messages; we do not test steganography.
+measures how strongly one agent's actions depend on another's and subtracts
+the strongest dependence on any third agent, so that a pair is flagged only
+if it moves together beyond what the rest of the market explains. We give it
+to an auditor of a repeated procurement auction with four AI bidders
+(Figure~\ref{fig:overview}). In some markets two bidders are told to form a
+cartel; in others one bidder secretly sees a rival's cost. Every treated
+market has an honest twin with identical costs. The auditor sees either the
+bids only, as a competition authority usually would, or the bids and every
+firm's private costs. It never reads messages.
 
-Three findings stand out.
+Four findings stand out.
 \begin{enumerate}
 \setlength{\itemsep}{0pt}
-\item \textbf{Detection works, but a simple baseline does as well.} In the
-pre-registered primary test, net influence separated cartel markets from
-honest ones, but a plain correlation of the same data separated them even
-better. On cartels that talk over a private channel, net influence showed
-no advantage.
-\item \textbf{The advantage appears when information leaks.} When one firm
-secretly sees a rival's cost (espionage), net influence beat correlation at
-L2, and this held on fresh markets collected after the main analysis.
-\item \textbf{The most profitable collusion was the quietest.} A cartel
-without a channel raised its joint profit the most of all LLM treatments,
-again on fresh markets, yet it was the cartel that both detectors separated
-least well from honest markets. The published fixed alarm
-threshold flagged every honest market at L2, and an LLM judge, even with
-ample tokens, named the strongest firms rather than the colluders.
+\item \textbf{From bids alone, a calibrated alarm finds cartels that talk.}
+It named exactly the cartel pair in most such markets, never a wrong pair,
+and rarely raised false alarms (Figure~\ref{fig:alarms}). The uncalibrated
+rule published with the method flagged most honest markets.
+\item \textbf{With costs, one can see which way information flows.} Pooled
+over markets, cartel partners leak their costs to each other, while a spy
+receives information one way (Figure~\ref{fig:flow}). In single markets
+this signal is often too weak.
+\item \textbf{A simple correlation detects talking cartels just as well.}
+Net influence added value only where private information leaked
+(espionage), and this held on fresh markets (Figure~\ref{fig:compare}).
+\item \textbf{Two blind spots.} The most profitable cartel, one that never
+talked, went almost unnoticed, and an AI judge named the strongest firms
+instead of the colluders (Figure~\ref{fig:warnings}).
 \end{enumerate}
-The contribution is a pre-registered, matched-control evaluation of what
-such an audit can and cannot tell an overseer, including discrimination,
-localisation of the pair, honest-market alarms, and an out-of-sample
-replication of the secondary findings.
+The contribution is a pre-registered, matched-control test of what such an
+audit can and cannot tell an overseer, with an out-of-sample replication of
+the main secondary findings.

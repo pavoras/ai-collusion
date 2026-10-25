@@ -1,47 +1,42 @@
 \section{Discussion and Limitations}
-\paragraph{What an overseer can take from this.}
-Five practical points follow, each limited to this game.
-(1)~Always report a same-access correlation baseline. Net influence passed
-its primary test, but correlation was at least as good on every cartel with
-a channel; reporting net influence alone would overstate its value.
-(2)~Net influence earns its place where private information flows: it beat
-correlation for espionage at L2, on the original and on fresh markets. That
-use needs access to private inputs; with public bids only, the advantage did
-not replicate.
-(3)~Calibrate before alarming. The published fixed threshold flagged every
-honest L2 market, while the permutation-corrected rule flagged the honest
-reference pair in none.
-(4)~Do not treat a small LLM judge as a safe default. Given enough tokens it
-answered, but it judged firm strength rather than coordination.
-(5)~Profitable tacit collusion is the weak spot. The cartel without a
-channel earned the most and was detected least well by both detectors;
-profit-based screens may need to complement dependence-based ones.
+\paragraph{What this means in practice.}
+Each point is limited to this game.
+(1)~\emph{Screening from public bids is feasible.} An overseer who sees
+only bids, as competition authorities usually do, could have used a
+calibrated alarm to point to the right pair in most markets where AI agents
+coordinated actively, with few false alarms and no wrong accusations.
+(2)~\emph{Calibrate before alarming.} The fixed threshold published with
+the method flagged most or all honest markets; a permutation correction
+fixed this. An uncalibrated screen would accuse innocent firms.
+(3)~\emph{Use costs to understand, not to detect.} Costs did not improve
+detection of talking cartels, but they reveal which way information flows
+and separate a two-way cartel from a one-way spy when evidence is pooled.
+That needs access to private data and many markets.
+(4)~\emph{Always compare with a simple baseline.} A plain correlation did
+as well for talking cartels; net influence earned its place only for
+espionage. Reporting net influence alone would overstate its value.
+(5)~\emph{Watch profits too, and do not trust a small AI judge.} The cartel
+without chat earned the most and was nearly invisible to both measures. The
+9B judge, given ample tokens, judged firm strength rather than coordination.
 
 \paragraph{What the evidence does not show.}
-Only the primary test is confirmatory. The replication was planned after
-the original results were known and reuses the already collected honest
-control markets; it guards against a chance finding on the treatment
-markets, not against every analytic choice. Twenty blocks per cell give
-wide intervals, and absence of an advantage is not equivalence. Separate
-AUROCs do not measure the value of combining scores. Net direction compares
-rival influences and does not identify a sender; a one-way leak is not a
-unique signature of espionage, and market-level flow labels rarely resolved
-the mechanism. Net-influence scores carry permutation Monte Carlo noise of
-about $\pm0.01$ AUROC. The judge comparison concerns one 9B model judging
-its own family; larger or differently prompted judges may behave
-differently. The probes cannot support a causal claim.
+Only the primary test is confirmatory; alarm counts and flow patterns are
+pre-registered secondary results. The replication was planned after the
+original results were known and reuses the honest control markets. Twenty
+markets per type give wide intervals, and absence of an advantage is not
+equivalence. A one-way leak is not a unique signature of espionage, and the
+pooled flow intervals are approximate. The judge result concerns one 9B
+model judging its own family. The probes cannot support a causal claim.
 
 \paragraph{Scope.}
 The auction is synthetic, the cartel is instructed rather than emergent,
 and the treatment bundles a joint objective, partner information, a
-surveillance warning and, in C1, a channel. The core uses one model; small
-models were unusable and breadth cells have ten markets. L2 assumes an
-auditor entitled to see private costs. Privacy, false-accusation and
-dual-use considerations are discussed in Appendix~\ref{app:ethics}.
+surveillance warning and, in C1, a chat channel. The core uses one model;
+small models were unusable and breadth cells have ten markets. Privacy,
+false-accusation and dual-use considerations are discussed in
+Appendix~\ref{app:ethics}.
 
 \paragraph{Next steps.}
-Independent replications with fresh controls; combined detectors that use
-correlation and directional leaks together; larger and more varied bidder
-and judge models; markets with more firms, which need estimators that cope
-with the larger state space; and probes with independent message draws per
-context, analysed with a null that respects that nesting.
+Independent replications; screens that combine correlation, flow direction
+and profits; larger and more varied bidder and judge models; markets with
+more firms; and probes with independent message draws per context.

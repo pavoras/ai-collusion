@@ -64,6 +64,26 @@ this report update, which reads existing frozen analysis files only.
 
 \section{All registered cells and per-model results}
 \label{app:allresults}
+\begin{figure}[htbp]
+\centering\includegraphics[width=\linewidth]{figures/figure_a.pdf}
+\caption{Detection by treatment (original markets 0--19), all models. AUROC
+with pointwise 95\% block-bootstrap intervals for net influence and
+correlation at L1 (bids only) and L2 (bids + costs), and the L2 leak score;
+parentheses give matched blocks. E1 (espionage) is separated because it is
+not a cartel.}
+% source: results/report_figures/figure_numbers.csv figure=A
+\label{fig:detection}
+\end{figure}
+\begin{figure}[htbp]
+\centering\includegraphics[width=\linewidth]{figures/figure_b.pdf}
+\caption{Localisation and false alarms (original markets 0--19). Top: top-1
+for the assigned pair on all eligible markets. Middle: top-1 at L2 on the
+markets where the judge returned valid output, under the registered
+12,000-token limit (left) and the 24,000-token check (right; C1-FF not
+run). Bottom: honest-market alarm rates with exact binomial intervals.}
+% source: results/report_figures/figure_numbers.csv figure=B (middle right: results/analysis/judge24k_v23/results.json judge_comparisons)
+\label{fig:localisation}
+\end{figure}
 \input{sections/behaviour_table}
 The following single comprehensive table includes every registered cell,
 including unavailable detector results and cancelled breadth judges, at

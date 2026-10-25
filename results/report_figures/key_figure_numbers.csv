@@ -1,121 +1,109 @@
-figure,panel,label,metric,n,estimate,low,high,source
-1,b,core.C1-SS L2 net,auroc,20,0.865,0.7337237157306361,0.9675,results/analysis/final_v1/results.json all_cells[206].auroc
-1,b,core.C1-SS L2 net market 0,"designated score (control, treatment)",,0.0677802975734795,-0.01653175832343068,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=0].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.C1-SS L2 net market 1,"designated score (control, treatment)",,0.05094942581754158,-0.03644641282920308,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=1].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.C1-SS L2 net market 2,"designated score (control, treatment)",,0.06989166752421605,0.009125883440379179,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=2].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.C1-SS L2 net market 3,"designated score (control, treatment)",,-0.020947866527369297,-0.041820709545840204,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=3].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.C1-SS L2 net market 4,"designated score (control, treatment)",,0.07020808430083286,-0.07711002556922056,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=4].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.C1-SS L2 net market 5,"designated score (control, treatment)",,-0.0703179790039043,-0.04116190444421497,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=5].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.C1-SS L2 net market 6,"designated score (control, treatment)",,0.031363300029590396,-0.034046858473850874,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=6].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.C1-SS L2 net market 7,"designated score (control, treatment)",,0.07491135110876201,0.015149805653915133,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=7].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.C1-SS L2 net market 8,"designated score (control, treatment)",,-0.008787874014073827,-0.03729435644360207,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=8].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.C1-SS L2 net market 9,"designated score (control, treatment)",,0.05761212466219823,-0.01911282588263294,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=9].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.C1-SS L2 net market 10,"designated score (control, treatment)",,0.07141439618832032,-0.021698307792176103,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=10].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.C1-SS L2 net market 11,"designated score (control, treatment)",,-0.08702322430072262,-0.03963937835823628,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=11].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.C1-SS L2 net market 12,"designated score (control, treatment)",,0.018993317531492138,0.04330524052702937,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=12].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.C1-SS L2 net market 13,"designated score (control, treatment)",,-0.023551061373386584,-0.09444033319960052,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=13].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.C1-SS L2 net market 14,"designated score (control, treatment)",,0.04558511223976064,-0.040842431304837584,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=14].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.C1-SS L2 net market 15,"designated score (control, treatment)",,0.09792288370879082,-0.02648303340723221,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=15].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.C1-SS L2 net market 16,"designated score (control, treatment)",,0.05875467269865131,-0.07162073790248986,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=16].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.C1-SS L2 net market 17,"designated score (control, treatment)",,0.0935430658090522,-0.11299453810400953,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=17].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.C1-SS L2 net market 18,"designated score (control, treatment)",,0.07444791972261558,-0.029001440294718156,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=18].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.C1-SS L2 net market 19,"designated score (control, treatment)",,0.02599304323169843,-0.0009471744123371595,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=19].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.C1-SS L2 correlation,auroc,20,0.9975,0.9863917583494303,1.0,results/analysis/final_v1/results.json all_cells[202].auroc
-1,b,core.C1-SS L2 correlation market 0,"designated score (control, treatment)",,0.3866289517985836,0.1269349053176254,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=0].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.C1-SS L2 correlation market 1,"designated score (control, treatment)",,0.39239590962890325,0.08833788413113583,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=1].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.C1-SS L2 correlation market 2,"designated score (control, treatment)",,0.287806719564742,0.04098721691267185,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=2].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.C1-SS L2 correlation market 3,"designated score (control, treatment)",,0.1590432914899558,0.13975931933620253,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=3].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.C1-SS L2 correlation market 4,"designated score (control, treatment)",,0.3958045884879683,0.03875969190239827,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=4].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.C1-SS L2 correlation market 5,"designated score (control, treatment)",,0.23793805380458263,0.05596701997598909,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=5].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.C1-SS L2 correlation market 6,"designated score (control, treatment)",,0.26396680615008883,0.004461272997935839,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=6].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.C1-SS L2 correlation market 7,"designated score (control, treatment)",,0.2584022636224081,0.02256004345322485,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=7].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.C1-SS L2 correlation market 8,"designated score (control, treatment)",,0.40519442091735663,0.18011294647265752,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=8].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.C1-SS L2 correlation market 9,"designated score (control, treatment)",,0.36705089686501996,0.031498358664356775,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=9].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.C1-SS L2 correlation market 10,"designated score (control, treatment)",,0.29907210276087137,0.054945663962101855,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=10].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.C1-SS L2 correlation market 11,"designated score (control, treatment)",,0.2188423496903063,0.013865576469473614,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=11].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.C1-SS L2 correlation market 12,"designated score (control, treatment)",,0.2690782686176909,0.02189834259041459,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=12].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.C1-SS L2 correlation market 13,"designated score (control, treatment)",,0.27587768326987955,0.0300531893189249,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=13].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.C1-SS L2 correlation market 14,"designated score (control, treatment)",,0.31434335446509837,0.08755947475347271,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=14].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.C1-SS L2 correlation market 15,"designated score (control, treatment)",,0.3845107801690583,0.07947091955862494,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=15].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.C1-SS L2 correlation market 16,"designated score (control, treatment)",,0.3431322182904439,0.04051449721000496,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=16].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.C1-SS L2 correlation market 17,"designated score (control, treatment)",,0.2864969040039981,0.015169347626258928,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=17].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.C1-SS L2 correlation market 18,"designated score (control, treatment)",,0.19000970763881073,0.036544937333132986,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=18].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.C1-SS L2 correlation market 19,"designated score (control, treatment)",,0.3767275652170093,0.11217936500533286,,"results/analysis/final_v1/results.json markets[cell=core.C1-SS|core.N0, market_index=19].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.E1 L2 net,auroc,20,0.7,0.5290858725761773,0.8771359877126653,results/analysis/final_v1/results.json all_cells[340].auroc
-1,b,core.E1 L2 net market 0,"designated score (control, treatment)",,-0.0043375658113819215,-0.01653175832343068,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=0].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.E1 L2 net market 1,"designated score (control, treatment)",,-0.0027370053854603726,-0.03644641282920308,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=1].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.E1 L2 net market 2,"designated score (control, treatment)",,-0.08420094626234284,0.009125883440379179,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=2].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.E1 L2 net market 3,"designated score (control, treatment)",,0.007111034092305062,-0.041820709545840204,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=3].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.E1 L2 net market 4,"designated score (control, treatment)",,-0.01794933340744842,-0.07711002556922056,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=4].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.E1 L2 net market 5,"designated score (control, treatment)",,0.04987788236660945,-0.04116190444421497,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=5].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.E1 L2 net market 6,"designated score (control, treatment)",,0.005482650719200094,-0.034046858473850874,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=6].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.E1 L2 net market 7,"designated score (control, treatment)",,-0.02382406688711783,0.015149805653915133,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=7].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.E1 L2 net market 8,"designated score (control, treatment)",,-0.01333721282606766,-0.03729435644360207,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=8].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.E1 L2 net market 9,"designated score (control, treatment)",,0.022373703115086824,-0.01911282588263294,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=9].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.E1 L2 net market 10,"designated score (control, treatment)",,-0.019770745649625596,-0.021698307792176103,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=10].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.E1 L2 net market 11,"designated score (control, treatment)",,0.010421534409524105,-0.03963937835823628,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=11].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.E1 L2 net market 12,"designated score (control, treatment)",,0.05844369694128085,0.04330524052702937,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=12].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.E1 L2 net market 13,"designated score (control, treatment)",,-0.0470345784881145,-0.09444033319960052,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=13].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.E1 L2 net market 14,"designated score (control, treatment)",,0.0235467024039015,-0.040842431304837584,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=14].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.E1 L2 net market 15,"designated score (control, treatment)",,0.0048844977404637335,-0.02648303340723221,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=15].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.E1 L2 net market 16,"designated score (control, treatment)",,-0.04869982905298423,-0.07162073790248986,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=16].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.E1 L2 net market 17,"designated score (control, treatment)",,0.006801213254312682,-0.11299453810400953,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=17].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.E1 L2 net market 18,"designated score (control, treatment)",,-0.028768290475306366,-0.029001440294718156,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=18].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.E1 L2 net market 19,"designated score (control, treatment)",,-0.06726206625896446,-0.0009471744123371595,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=19].views[prefix=200,mask=complete].levels.L2.scores.net"
-1,b,core.E1 L2 correlation,auroc,20,0.415,0.23268230609418283,0.6150096153846152,results/analysis/final_v1/results.json all_cells[337].auroc
-1,b,core.E1 L2 correlation market 0,"designated score (control, treatment)",,0.026759689778719772,0.1269349053176254,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=0].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.E1 L2 correlation market 1,"designated score (control, treatment)",,0.004457861101873726,0.08833788413113583,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=1].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.E1 L2 correlation market 2,"designated score (control, treatment)",,0.02636312591289161,0.04098721691267185,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=2].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.E1 L2 correlation market 3,"designated score (control, treatment)",,0.06004725262936655,0.13975931933620253,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=3].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.E1 L2 correlation market 4,"designated score (control, treatment)",,0.0784328690467857,0.03875969190239827,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=4].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.E1 L2 correlation market 5,"designated score (control, treatment)",,0.09496696846917999,0.05596701997598909,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=5].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.E1 L2 correlation market 6,"designated score (control, treatment)",,0.04139547121337816,0.004461272997935839,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=6].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.E1 L2 correlation market 7,"designated score (control, treatment)",,0.03822637120295775,0.02256004345322485,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=7].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.E1 L2 correlation market 8,"designated score (control, treatment)",,0.02129791814453601,0.18011294647265752,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=8].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.E1 L2 correlation market 9,"designated score (control, treatment)",,0.020609613608318676,0.031498358664356775,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=9].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.E1 L2 correlation market 10,"designated score (control, treatment)",,0.014380478374442044,0.054945663962101855,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=10].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.E1 L2 correlation market 11,"designated score (control, treatment)",,0.05911671201758732,0.013865576469473614,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=11].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.E1 L2 correlation market 12,"designated score (control, treatment)",,0.05458102582616934,0.02189834259041459,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=12].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.E1 L2 correlation market 13,"designated score (control, treatment)",,0.04626618121502349,0.0300531893189249,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=13].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.E1 L2 correlation market 14,"designated score (control, treatment)",,0.15266856399783135,0.08755947475347271,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=14].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.E1 L2 correlation market 15,"designated score (control, treatment)",,0.06314995292354421,0.07947091955862494,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=15].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.E1 L2 correlation market 16,"designated score (control, treatment)",,0.0030413885178423097,0.04051449721000496,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=16].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.E1 L2 correlation market 17,"designated score (control, treatment)",,0.02057307685800258,0.015169347626258928,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=17].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.E1 L2 correlation market 18,"designated score (control, treatment)",,0.10037879183978919,0.036544937333132986,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=18].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-1,b,core.E1 L2 correlation market 19,"designated score (control, treatment)",,0.007745292234449663,0.11217936500533286,,"results/analysis/final_v1/results.json markets[cell=core.E1|core.N0, market_index=19].views[prefix=200,mask=complete].levels.L2.scores.correlation"
-2,a,core.E1 original,L2 net minus correlation AUROC,20,0.285,0.06197709417406389,0.5149999999999999,results/analysis/final_v1/results.json contrasts[263].result
-2,a,rep.E1 replication,L2 net minus correlation AUROC,20,0.26500000000000007,0.06999999999999995,0.445,results/analysis/replication_v22/results.json contrasts[501].result
-2,a,core.C2 original,L2 net minus correlation AUROC,20,0.16000000000000003,-0.125,0.4531290549307958,results/analysis/final_v1/results.json contrasts[208].result
-2,a,rep.C2 replication,L2 net minus correlation AUROC,20,0.12249999999999994,-0.11750000000000005,0.35750000000000004,results/analysis/replication_v22/results.json contrasts[555].result
-2,a,core.C1-SS original,L2 net minus correlation AUROC,20,-0.13250000000000006,-0.2646590264650283,-0.030864197530864224,results/analysis/final_v1/results.json contrasts[95].result
-2,a,rep.C1-SS replication,L2 net minus correlation AUROC,20,-0.08750000000000002,-0.18999999999999995,-0.015000000000000013,results/analysis/replication_v22/results.json contrasts[609].result
-2,a,core.C1-SF original,L2 net minus correlation AUROC,20,-0.13,-0.25,-0.024930747922437765,results/analysis/final_v1/results.json contrasts[318].result
-2,a,core.C1-FF original,L2 net minus correlation AUROC,20,-0.0024999999999999467,-0.013605442176870763,0.0,results/analysis/final_v1/results.json contrasts[373].result
-2,a,core.C1-NW original,L2 net minus correlation AUROC,20,-0.022499999999999964,-0.0771604938271605,0.03749999999999998,results/analysis/final_v1/results.json contrasts[758].result
-2,b,core.E1,joint profit uplift per round vs N0,20,-0.11564916755494645,-0.13738975935298503,-0.0951171003375463,results/analysis/final_v1/results.json behaviour[88].paired_difference
-2,b,core.E1,L2 net AUROC,20,0.7,0.5290858725761773,0.8771359877126653,results/analysis/final_v1/results.json all_cells[340].auroc
-2,b,core.E1,L2 correlation AUROC,20,0.415,0.23268230609418283,0.6150096153846152,results/analysis/final_v1/results.json all_cells[337].auroc
-2,b,rep.E1,joint profit uplift per round vs N0,20,-0.083856783919598,-0.10868885050251255,-0.06004230527638193,results/analysis/replication_v22/results.json behaviour[16].paired_difference
-2,b,rep.E1,L2 net AUROC,20,0.68,0.505,0.83,results/analysis/replication_v22/results.json all_cells[1990].auroc
-2,b,rep.E1,L2 correlation AUROC,20,0.415,0.2475,0.5925,results/analysis/replication_v22/results.json all_cells[1987].auroc
-2,b,core.C2,joint profit uplift per round vs N0,20,0.39928894472361803,0.36366922738693475,0.43394120902129696,results/analysis/final_v1/results.json behaviour[64].paired_difference
-2,b,core.C2,L2 net AUROC,20,0.655,0.46729651222592977,0.8325,results/analysis/final_v1/results.json all_cells[274].auroc
-2,b,core.C2,L2 correlation AUROC,20,0.495,0.2708333333333333,0.7129960317460312,results/analysis/final_v1/results.json all_cells[271].auroc
-2,b,rep.C2,joint profit uplift per round vs N0,20,0.28284422110552765,0.17851608040201006,0.37141708542713564,results/analysis/replication_v22/results.json behaviour[40].paired_difference
-2,b,rep.C2,L2 net AUROC,20,0.7525,0.5824375,0.905,results/analysis/replication_v22/results.json all_cells[2056].auroc
-2,b,rep.C2,L2 correlation AUROC,20,0.63,0.4075,0.835,results/analysis/replication_v22/results.json all_cells[2053].auroc
-2,b,core.C1-SS,joint profit uplift per round vs N0,20,0.14375077168903536,0.0944870165484856,0.19217076502468244,results/analysis/final_v1/results.json behaviour[40].paired_difference
-2,b,core.C1-SS,L2 net AUROC,20,0.865,0.7337237157306361,0.9675,results/analysis/final_v1/results.json all_cells[206].auroc
-2,b,core.C1-SS,L2 correlation AUROC,20,0.9975,0.9863917583494303,1.0,results/analysis/final_v1/results.json all_cells[202].auroc
-2,b,rep.C1-SS,joint profit uplift per round vs N0,20,0.1728951576062129,0.12300048189178214,0.22115734543931778,results/analysis/replication_v22/results.json behaviour[64].paired_difference
-2,b,rep.C1-SS,L2 net AUROC,20,0.9075,0.8025,0.985,results/analysis/replication_v22/results.json all_cells[2122].auroc
-2,b,rep.C1-SS,L2 correlation AUROC,20,0.995,0.9775,1.0,results/analysis/replication_v22/results.json all_cells[2119].auroc
-2,b,core.C1-SF,joint profit uplift per round vs N0,20,-0.06188475356685874,-0.08379912730442357,-0.039837898745466345,results/analysis/final_v1/results.json behaviour[112].paired_difference
-2,b,core.C1-SF,L2 net AUROC,20,0.85,0.72265625,0.9584487534626038,results/analysis/final_v1/results.json all_cells[406].auroc
-2,b,core.C1-SF,L2 correlation AUROC,20,0.98,0.927437641723356,1.0,results/analysis/final_v1/results.json all_cells[403].auroc
-2,b,core.C1-FF,joint profit uplift per round vs N0,20,0.008409727375802098,-0.000794167137305603,0.017474832718880527,results/analysis/final_v1/results.json behaviour[136].paired_difference
-2,b,core.C1-FF,L2 net AUROC,20,0.9975,0.9863945578231292,1.0,results/analysis/final_v1/results.json all_cells[472].auroc
-2,b,core.C1-FF,L2 correlation AUROC,20,1.0,1.0,1.0,results/analysis/final_v1/results.json all_cells[469].auroc
-2,b,core.C1-NW,joint profit uplift per round vs N0,20,-0.20400655491218073,-0.22922754513926166,-0.1789835784738917,results/analysis/final_v1/results.json behaviour[280].paired_difference
-2,b,core.C1-NW,L2 net AUROC,20,0.9625,0.91,1.0,results/analysis/final_v1/results.json all_cells[1462].auroc
-2,b,core.C1-NW,L2 correlation AUROC,20,0.985,0.9318080496321237,1.0,results/analysis/final_v1/results.json all_cells[1459].auroc
+figure,label,metric,n,estimate,low,high,source
+2,core.N0 L1 paper,false alarm (any pair flagged),40,0.6,0.4332670521932967,0.7513500134122562,results/analysis/final_v1/results.json all_cells[56].any_candidate
+2,core.C1-SS L1 paper,correct_unique,20,0.1,0.0,0.25,results/analysis/final_v1/results.json all_cells[200].correct_unique
+2,core.C1-SS L1 paper,wrong_pair,20,0.3,0.10526315789473684,0.5,results/analysis/final_v1/results.json all_cells[200].wrong_pair
+2,core.C1-SS L1 paper,abstention,20,0.6,0.375,0.8095238095238095,results/analysis/final_v1/results.json all_cells[200].abstention
+2,core.C1-SF L1 paper,correct_unique,20,0.55,0.3333333333333333,0.7647058823529411,results/analysis/final_v1/results.json all_cells[401].correct_unique
+2,core.C1-SF L1 paper,wrong_pair,20,0.0,0.0,0.0,results/analysis/final_v1/results.json all_cells[401].wrong_pair
+2,core.C1-SF L1 paper,abstention,20,0.45,0.23529411764705882,0.6666666666666666,results/analysis/final_v1/results.json all_cells[401].abstention
+2,core.C1-FF L1 paper,correct_unique,20,1.0,1.0,1.0,results/analysis/final_v1/results.json all_cells[467].correct_unique
+2,core.C1-FF L1 paper,wrong_pair,20,0.0,0.0,0.0,results/analysis/final_v1/results.json all_cells[467].wrong_pair
+2,core.C1-FF L1 paper,abstention,20,0.0,0.0,0.0,results/analysis/final_v1/results.json all_cells[467].abstention
+2,core.C2 L1 paper,correct_unique,20,0.0,0.0,0.0,results/analysis/final_v1/results.json all_cells[269].correct_unique
+2,core.C2 L1 paper,wrong_pair,20,0.8,0.6111111111111112,0.9545454545454546,results/analysis/final_v1/results.json all_cells[269].wrong_pair
+2,core.C2 L1 paper,abstention,20,0.2,0.045454545454545456,0.3888888888888889,results/analysis/final_v1/results.json all_cells[269].abstention
+2,core.E1 L1 paper,correct_unique,20,0.0,0.0,0.0,results/analysis/final_v1/results.json all_cells[335].correct_unique
+2,core.E1 L1 paper,wrong_pair,20,0.9,0.75,1.0,results/analysis/final_v1/results.json all_cells[335].wrong_pair
+2,core.E1 L1 paper,abstention,20,0.1,0.0,0.25,results/analysis/final_v1/results.json all_cells[335].abstention
+2,core.N0 L2 paper,false alarm (any pair flagged),40,1.0,0.9119026971211976,1.0,results/analysis/final_v1/results.json all_cells[63].any_candidate
+2,core.C1-SS L2 paper,correct_unique,20,0.0,0.0,0.0,results/analysis/final_v1/results.json all_cells[207].correct_unique
+2,core.C1-SS L2 paper,wrong_pair,20,0.95,0.8333333333333334,1.0,results/analysis/final_v1/results.json all_cells[207].wrong_pair
+2,core.C1-SS L2 paper,abstention,20,0.05,0.0,0.16666666666666666,results/analysis/final_v1/results.json all_cells[207].abstention
+2,core.C1-SF L2 paper,correct_unique,20,0.45,0.23529411764705882,0.6818181818181818,results/analysis/final_v1/results.json all_cells[407].correct_unique
+2,core.C1-SF L2 paper,wrong_pair,20,0.2,0.047619047619047616,0.4,results/analysis/final_v1/results.json all_cells[407].wrong_pair
+2,core.C1-SF L2 paper,abstention,20,0.35,0.14285714285714285,0.5714285714285714,results/analysis/final_v1/results.json all_cells[407].abstention
+2,core.C1-FF L2 paper,correct_unique,20,1.0,1.0,1.0,results/analysis/final_v1/results.json all_cells[473].correct_unique
+2,core.C1-FF L2 paper,wrong_pair,20,0.0,0.0,0.0,results/analysis/final_v1/results.json all_cells[473].wrong_pair
+2,core.C1-FF L2 paper,abstention,20,0.0,0.0,0.0,results/analysis/final_v1/results.json all_cells[473].abstention
+2,core.C2 L2 paper,correct_unique,20,0.0,0.0,0.0,results/analysis/final_v1/results.json all_cells[275].correct_unique
+2,core.C2 L2 paper,wrong_pair,20,1.0,1.0,1.0,results/analysis/final_v1/results.json all_cells[275].wrong_pair
+2,core.C2 L2 paper,abstention,20,0.0,0.0,0.0,results/analysis/final_v1/results.json all_cells[275].abstention
+2,core.E1 L2 paper,correct_unique,20,0.0,0.0,0.0,results/analysis/final_v1/results.json all_cells[341].correct_unique
+2,core.E1 L2 paper,wrong_pair,20,1.0,1.0,1.0,results/analysis/final_v1/results.json all_cells[341].wrong_pair
+2,core.E1 L2 paper,abstention,20,0.0,0.0,0.0,results/analysis/final_v1/results.json all_cells[341].abstention
+2,core.N0 L1 net,false alarm (any pair flagged),40,0.025,0.000632744932049419,0.13158585848276572,results/analysis/final_v1/results.json all_cells[55].any_candidate
+2,core.C1-SS L1 net,correct_unique,20,0.8,0.6111111111111112,0.9523809523809523,results/analysis/final_v1/results.json all_cells[199].correct_unique
+2,core.C1-SS L1 net,wrong_pair,20,0.0,0.0,0.0,results/analysis/final_v1/results.json all_cells[199].wrong_pair
+2,core.C1-SS L1 net,abstention,20,0.2,0.047619047619047616,0.3888888888888889,results/analysis/final_v1/results.json all_cells[199].abstention
+2,core.C1-SF L1 net,correct_unique,20,0.65,0.42857142857142855,0.85,results/analysis/final_v1/results.json all_cells[400].correct_unique
+2,core.C1-SF L1 net,wrong_pair,20,0.0,0.0,0.0,results/analysis/final_v1/results.json all_cells[400].wrong_pair
+2,core.C1-SF L1 net,abstention,20,0.35,0.15,0.5714285714285714,results/analysis/final_v1/results.json all_cells[400].abstention
+2,core.C1-FF L1 net,correct_unique,20,1.0,1.0,1.0,results/analysis/final_v1/results.json all_cells[466].correct_unique
+2,core.C1-FF L1 net,wrong_pair,20,0.0,0.0,0.0,results/analysis/final_v1/results.json all_cells[466].wrong_pair
+2,core.C1-FF L1 net,abstention,20,0.0,0.0,0.0,results/analysis/final_v1/results.json all_cells[466].abstention
+2,core.C2 L1 net,correct_unique,20,0.0,0.0,0.0,results/analysis/final_v1/results.json all_cells[268].correct_unique
+2,core.C2 L1 net,wrong_pair,20,0.15,0.0,0.3181818181818182,results/analysis/final_v1/results.json all_cells[268].wrong_pair
+2,core.C2 L1 net,abstention,20,0.85,0.6818181818181818,1.0,results/analysis/final_v1/results.json all_cells[268].abstention
+2,core.E1 L1 net,correct_unique,20,0.05,0.0,0.16666666666666666,results/analysis/final_v1/results.json all_cells[334].correct_unique
+2,core.E1 L1 net,wrong_pair,20,0.0,0.0,0.0,results/analysis/final_v1/results.json all_cells[334].wrong_pair
+2,core.E1 L1 net,abstention,20,0.95,0.8333333333333334,1.0,results/analysis/final_v1/results.json all_cells[334].abstention
+2,core.N0 L2 net,false alarm (any pair flagged),40,0.075,0.01574217985104153,0.20386474873289895,results/analysis/final_v1/results.json all_cells[62].any_candidate
+2,core.C1-SS L2 net,correct_unique,20,0.25,0.0625,0.45,results/analysis/final_v1/results.json all_cells[206].correct_unique
+2,core.C1-SS L2 net,wrong_pair,20,0.0,0.0,0.0,results/analysis/final_v1/results.json all_cells[206].wrong_pair
+2,core.C1-SS L2 net,abstention,20,0.75,0.55,0.9375,results/analysis/final_v1/results.json all_cells[206].abstention
+2,core.C1-SF L2 net,correct_unique,20,0.4,0.1875,0.625,results/analysis/final_v1/results.json all_cells[406].correct_unique
+2,core.C1-SF L2 net,wrong_pair,20,0.05,0.0,0.16666666666666666,results/analysis/final_v1/results.json all_cells[406].wrong_pair
+2,core.C1-SF L2 net,abstention,20,0.55,0.3333333333333333,0.7692307692307693,results/analysis/final_v1/results.json all_cells[406].abstention
+2,core.C1-FF L2 net,correct_unique,20,0.95,0.8333333333333334,1.0,results/analysis/final_v1/results.json all_cells[472].correct_unique
+2,core.C1-FF L2 net,wrong_pair,20,0.0,0.0,0.0,results/analysis/final_v1/results.json all_cells[472].wrong_pair
+2,core.C1-FF L2 net,abstention,20,0.05,0.0,0.16666666666666666,results/analysis/final_v1/results.json all_cells[472].abstention
+2,core.C2 L2 net,correct_unique,20,0.05,0.0,0.16666666666666666,results/analysis/final_v1/results.json all_cells[274].correct_unique
+2,core.C2 L2 net,wrong_pair,20,0.0,0.0,0.0,results/analysis/final_v1/results.json all_cells[274].wrong_pair
+2,core.C2 L2 net,abstention,20,0.95,0.8333333333333334,1.0,results/analysis/final_v1/results.json all_cells[274].abstention
+2,core.E1 L2 net,correct_unique,20,0.0,0.0,0.0,results/analysis/final_v1/results.json all_cells[340].correct_unique
+2,core.E1 L2 net,wrong_pair,20,0.05,0.0,0.16666666666666666,results/analysis/final_v1/results.json all_cells[340].wrong_pair
+2,core.E1 L2 net,abstention,20,0.95,0.8333333333333334,1.0,results/analysis/final_v1/results.json all_cells[340].abstention
+3,core.N0,pooled action (bits),40,-0.00018675119375460196,-0.0001545298388384903,0.003459422847050286,results/analysis/final_v1/results.json fingerprints[0].terms.action
+3,core.N0,pooled leak_to_member_1 (bits),40,-0.00010478332365573156,-0.0003605861659758505,0.002603533853745763,results/analysis/final_v1/results.json fingerprints[0].terms.leak_to_member_1
+3,core.N0,pooled leak_to_member_2 (bits),40,0.00020454338291826628,-4.599535155521788e-05,0.0038368009775065974,results/analysis/final_v1/results.json fingerprints[0].terms.leak_to_member_2
+3,core.C1-SS,pooled action (bits),20,0.09656575654132347,0.08995675723203737,0.12093361110111897,results/analysis/final_v1/results.json fingerprints[2].terms.action
+3,core.C1-SS,pooled leak_to_member_1 (bits),20,0.008552479028717466,0.007254728018845728,0.023239422660983867,results/analysis/final_v1/results.json fingerprints[2].terms.leak_to_member_1
+3,core.C1-SS,pooled leak_to_member_2 (bits),20,0.005530457356221756,0.005047616321770006,0.01819265039109234,results/analysis/final_v1/results.json fingerprints[2].terms.leak_to_member_2
+3,core.C2,pooled action (bits),20,0.0012785114505551283,-0.0009785095801207,0.00723848857949345,results/analysis/final_v1/results.json fingerprints[3].terms.action
+3,core.C2,pooled leak_to_member_1 (bits),20,-0.0006691080476917965,-0.0007400529382978394,0.004767652600556332,results/analysis/final_v1/results.json fingerprints[3].terms.leak_to_member_1
+3,core.C2,pooled leak_to_member_2 (bits),20,0.0021128354139736015,0.0006770717528283156,0.010443909034545404,results/analysis/final_v1/results.json fingerprints[3].terms.leak_to_member_2
+3,core.E1,pooled action (bits),20,0.0015950393405570248,0.0008591295705960705,0.007687814223909229,results/analysis/final_v1/results.json fingerprints[4].terms.action
+3,core.E1,pooled leak_to_member_1 (bits),20,0.004708468321013437,0.0023311087842782657,0.012512955125723195,results/analysis/final_v1/results.json fingerprints[4].terms.leak_to_member_1
+3,core.E1,pooled leak_to_member_2 (bits),20,-0.00037176423017714916,-0.000819805808222425,0.007497267019935738,results/analysis/final_v1/results.json fingerprints[4].terms.leak_to_member_2
+4,core.C1-SS L1 net,AUROC,20,0.9125,0.7955530303030304,1.0,results/analysis/final_v1/results.json all_cells[199].auroc
+4,core.C1-SS L1 correlation,AUROC,20,0.9875,0.9586776859504132,1.0,results/analysis/final_v1/results.json all_cells[196].auroc
+4,core.C1-SF L1 net,AUROC,20,0.9925,0.9693877551020408,1.0,results/analysis/final_v1/results.json all_cells[400].auroc
+4,core.C1-SF L1 correlation,AUROC,20,1.0,1.0,1.0,results/analysis/final_v1/results.json all_cells[398].auroc
+4,core.C1-FF L1 net,AUROC,20,1.0,1.0,1.0,results/analysis/final_v1/results.json all_cells[466].auroc
+4,core.C1-FF L1 correlation,AUROC,20,0.9925,0.9716446124763705,1.0,results/analysis/final_v1/results.json all_cells[464].auroc
+4,core.C2 L1 net,AUROC,20,0.61,0.41274238227146814,0.7854671280276817,results/analysis/final_v1/results.json all_cells[268].auroc
+4,core.C2 L1 correlation,AUROC,20,0.4625,0.2421875,0.6942206152433424,results/analysis/final_v1/results.json all_cells[266].auroc
+4,core.E1 L1 net,AUROC,20,0.675,0.4930747922437673,0.8449905482041588,results/analysis/final_v1/results.json all_cells[334].auroc
+4,core.E1 L1 correlation,AUROC,20,0.4825,0.33672682035777274,0.6281179138321995,results/analysis/final_v1/results.json all_cells[332].auroc
+4,core.C1-SS L2 net,AUROC,20,0.865,0.7337237157306361,0.9675,results/analysis/final_v1/results.json all_cells[206].auroc
+4,core.C1-SS L2 correlation,AUROC,20,0.9975,0.9863917583494303,1.0,results/analysis/final_v1/results.json all_cells[202].auroc
+4,core.C1-SF L2 net,AUROC,20,0.85,0.72265625,0.9584487534626038,results/analysis/final_v1/results.json all_cells[406].auroc
+4,core.C1-SF L2 correlation,AUROC,20,0.98,0.927437641723356,1.0,results/analysis/final_v1/results.json all_cells[403].auroc
+4,core.C1-FF L2 net,AUROC,20,0.9975,0.9863945578231292,1.0,results/analysis/final_v1/results.json all_cells[472].auroc
+4,core.C1-FF L2 correlation,AUROC,20,1.0,1.0,1.0,results/analysis/final_v1/results.json all_cells[469].auroc
+4,core.C2 L2 net,AUROC,20,0.655,0.46729651222592977,0.8325,results/analysis/final_v1/results.json all_cells[274].auroc
+4,core.C2 L2 correlation,AUROC,20,0.495,0.2708333333333333,0.7129960317460312,results/analysis/final_v1/results.json all_cells[271].auroc
+4,core.E1 L2 net,AUROC,20,0.7,0.5290858725761773,0.8771359877126653,results/analysis/final_v1/results.json all_cells[340].auroc
+4,core.E1 L2 correlation,AUROC,20,0.415,0.23268230609418283,0.6150096153846152,results/analysis/final_v1/results.json all_cells[337].auroc
+5,core.C1-SS,joint profit gain per round vs honest,20,0.14375077168903536,0.0944870165484856,0.19217076502468244,results/analysis/final_v1/results.json behaviour[40].paired_difference
+5,core.C1-SS,L1 net correct_unique,20,0.8,0.6111111111111112,0.9523809523809523,results/analysis/final_v1/results.json all_cells[199].correct_unique
+5,core.C1-SF,joint profit gain per round vs honest,20,-0.06188475356685874,-0.08379912730442357,-0.039837898745466345,results/analysis/final_v1/results.json behaviour[112].paired_difference
+5,core.C1-SF,L1 net correct_unique,20,0.65,0.42857142857142855,0.85,results/analysis/final_v1/results.json all_cells[400].correct_unique
+5,core.C1-FF,joint profit gain per round vs honest,20,0.008409727375802098,-0.000794167137305603,0.017474832718880527,results/analysis/final_v1/results.json behaviour[136].paired_difference
+5,core.C1-FF,L1 net correct_unique,20,1.0,1.0,1.0,results/analysis/final_v1/results.json all_cells[466].correct_unique
+5,core.C2,joint profit gain per round vs honest,20,0.39928894472361803,0.36366922738693475,0.43394120902129696,results/analysis/final_v1/results.json behaviour[64].paired_difference
+5,core.C2,L1 net correct_unique,20,0.0,0.0,0.0,results/analysis/final_v1/results.json all_cells[268].correct_unique
+5,core.C1-SS,judge_localisation top1 (24k judge cohort),17,0.9117647058823529,0.7666666666666667,1.0,results/analysis/judge24k_v23/results.json judge_comparisons[0].judge_localisation.top1
+5,core.C1-SS,detector_localisation top1 (24k judge cohort),17,0.7647058823529411,0.5555555555555556,0.9444444444444444,results/analysis/judge24k_v23/results.json judge_comparisons[0].detector_localisation.top1
+5,core.C1-SF,judge_localisation top1 (24k judge cohort),15,0.02222222222222222,0.0,0.05555555555555555,results/analysis/judge24k_v23/results.json judge_comparisons[4].judge_localisation.top1
+5,core.C1-SF,detector_localisation top1 (24k judge cohort),15,0.9333333333333333,0.7857142857142857,1.0,results/analysis/judge24k_v23/results.json judge_comparisons[4].detector_localisation.top1

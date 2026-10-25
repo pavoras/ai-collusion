@@ -19,17 +19,17 @@ The last command writes `results/analysis/addendum_summary/summary.json` and the
 LaTeX tables `sections/addendum_table.tex` (Table 1) and
 `sections/addendum_full_table.tex` (Appendix E.7).
 
-Figures 1 and 2 (design overview; net-minus-correlation and profit vs. detectability)
-are rendered from the same frozen outputs, without refitting:
+The five plain-language main-text figures (design; alarm outcomes; information-flow
+direction; net influence vs. correlation; quiet cartel and AI judge) are rendered from
+the same frozen outputs, without refitting:
 
 ```powershell
 .venv/Scripts/python experiments/key_figures.py
 ```
 
-It writes `results/report_figures/figure_1.*`, `figure_2.*` and
-`key_figure_numbers.csv` (every plotted value with its JSON path; per-market
-scores of Figure 1b are recomputed into AUROCs and asserted equal to the frozen
-values). Figures A/B of `report_figures.py` appear as Figures 3 and 4.
+It writes `results/report_figures/figure_1.*` to `figure_5.*` and
+`key_figure_numbers.csv` (every plotted value with its JSON path). Figures A/B of
+`report_figures.py` are in Appendix D.
 
 From the repository root:
 
