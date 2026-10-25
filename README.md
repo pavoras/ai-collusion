@@ -2,6 +2,7 @@
 
 Project for the Apart Research **AI Collusion Research Sprint** (23–25 October 2026), research question 1.4:
 can information-theoretic measures find the colluding pair in a multi-agent game?
+Repository: https://github.com/pavoras/ai-collusion
 
 We implement the pairwise net influence statistic of Bonjour, Aggarwal and Bhargava (UAI 2022), reproduce their
 iterated Rock-Paper-Scissors results, add a permutation-calibrated threshold, and test the method for the first time
