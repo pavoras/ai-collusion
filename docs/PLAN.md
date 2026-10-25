@@ -235,3 +235,4 @@ frischem Clone. Keine Zahl im Report ohne reproduzierbaren Lauf.
 - 25.10. (spät, Format): Auf Marvins Wunsch alle rein technischen Betriebsdetails aus dem Bericht entfernt
   (Plattenausfall, Billing, Transport/Retry, Verzeichniswechsel, Befehlsblöcke); Abweichungsliste auf die fünf
   Punkte reduziert, die Design, Daten oder Auswertung betreffen; Befehle in `report/README.md`. Gesamt 36 Seiten.
+- 25.10. (spät): Diskussion um „What a real overseer could use“ ergänzt (Alarm braucht keine Zwillingsmärkte oder Kosten; reale Hürden und Ergänzungen), Schluss um einen Satz zu realen Bedingungen. Sitzungsübergabe in der git-ignorierten `handover.md` im Worktree `.claude/worktrees/projekt-start-schritt-0-1-3e5138/`.

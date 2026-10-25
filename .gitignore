@@ -23,3 +23,6 @@ results/analysis_dev/addendum_v2/dry_runs*/
 
 # Leftover raw copy on C: after the move to D: (disk-full incident, deviation 4)
 results/raw_leftover_c/
+
+# Local session handover (not published)
+handover.md
