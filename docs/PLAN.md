@@ -205,3 +205,8 @@ frischem Clone. Keine Zahl im Report ohne reproduzierbaren Lauf.
   Tabellen `report/sections/addendum_table.tex` und `addendum_full_table.tex`. Report überarbeitet (einfachere
   Sprache, neue Abschnitte 3.5 und 4.4, Anhang E.7), 8 Seiten Haupttext. Modal-Endstand 21:43: 76,30 $ gemessen,
   davon 76,03 $ aus Guthaben.
+- 25.10.: Marvin: restliche ca. 4 $ Compute nach eigenem Ermessen; Entscheidung: kein weiterer Lauf (zu knapp an der
+  80-$-Grenze, Abrechnung mit Verzögerung; alle tragenden Befunde schon repliziert; neuer Lauf bräuchte neues
+  Addendum). Stattdessen neue Übersichtsabbildungen ohne Compute (`experiments/key_figures.py`): Abb. 1 Design und
+  Einzelmarkt-Scores (C1-SS, E1), Abb. 2 Netz-minus-Korrelation (Original + Replikation) und Gewinn vs. Erkennbarkeit.
+  Abb. B zeigt jetzt 12k- gegen 24k-Richter. Verhaltens- und Replikationstabelle in den Anhang; Haupttext 8 Seiten.

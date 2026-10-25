@@ -10,6 +10,22 @@ tie-breaks, and assignments are seeded and matched by market index. Strong
 seats cycle through all six label pairs, hidden from auditors.
 % source: docs/PREREG.md sections 1-2; docs/DESIGN.md Game
 
+\begin{figure}[t]
+\centering\includegraphics[width=\linewidth]{figures/figure_1.pdf}
+\caption{Design and what the audit sees. (a) Four LLM bidders; two of them
+form a cartel (C1 with, C2 without a private channel) or, in E1, one firm
+secretly sees the other's cost. The auditor sees bids (L1) and costs (L2),
+never messages. (b) Each dot is the designated pair's L2 score in one
+market: grey for the honest market, coloured for the treated market with
+the same costs (lines join them). AUROC is the probability that a treated
+market scores higher. Correlation separates the cartel almost perfectly;
+only for the spy does net influence separate better. Net scores are
+permutation-corrected bits, correlation scores absolute residual
+correlations.}
+% source: results/report_figures/key_figure_numbers.csv figure=1; results/analysis/final_v1/results.json all_cells[206,202,340,337].auroc and markets[*].views (prefix 200, complete, L2 scores)
+\label{fig:overview}
+\end{figure}
+
 C1 assigns a cartel with a private channel (SS: strong--strong; SF:
 strong--fringe; FF: fringe--fringe). C2 removes the channel; E1 gives a firm
 unilateral access to its rival's cost. N0 is honest, and P0 is a scripted

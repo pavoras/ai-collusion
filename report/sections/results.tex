@@ -6,6 +6,21 @@ intervals unless stated otherwise. The required scripted
 rock--paper--scissors replication recovered the paper's rising detection
 pattern, but not every published percentage
 (Appendix~\ref{app:replication}); it is separate from the LLM evidence.
+Figure~\ref{fig:headline} summarises the two main patterns.
+
+\begin{figure}[t]
+\centering\includegraphics[width=\linewidth]{figures/figure_2.pdf}
+\caption{The main results at a glance (L2, cost access). (a) Paired AUROC
+difference, net influence minus correlation, with 95\% block-bootstrap
+intervals; filled: markets 0--19, open: fresh markets 20--39 (collected for
+E1, C2 and C1-SS only). Only espionage lies clearly above zero, in both
+samples. (b) Joint profit gain of the designated pair over matched honest
+markets against detection AUROC for net influence (circles) and correlation
+(squares); open symbols: fresh markets. The cartel without a channel gained
+most and was detected least.}
+% source: results/report_figures/key_figure_numbers.csv figure=2; results/analysis/final_v1/results.json contrasts[95,208,263,318,373,758].result, behaviour[40,64,88,112,136,280].paired_difference; results/analysis/replication_v22/results.json contrasts[501,555,609].result, behaviour[16,40,64].paired_difference
+\label{fig:headline}
+\end{figure}
 
 \subsection{Detection: the primary test passes, but correlation is as good}
 The pre-registered L2 net-influence score separated strong-pair cartel
@@ -60,7 +75,7 @@ $[0.0222,0.3599]$. The L2 leak score, which isolates a cost entering a
 rival's bid, reached $0.7025$ $[0.5737,0.8360]$.
 % source: results/analysis/final_v1/results.json all_cells[334,332,340,337,339].auroc; contrasts[259,263].result
 Because E1 was the one cell that stood out, we collected it again on fresh
-markets (Table~\ref{tab:replication}). The pre-specified L2 criterion
+markets (Figure~\ref{fig:headline}a; Table~\ref{tab:replication}). The pre-specified L2 criterion
 replicated: net $0.680$ versus correlation $0.415$, difference $+0.265$
 $[0.070,0.445]$, leak $0.745$. The L1 difference did not replicate
 ($+0.095$ $[-0.1125,0.315]$). Net influence therefore adds information when
@@ -81,8 +96,6 @@ detected less well by both net ($-0.155$ $[-0.30,-0.01]$) and correlation
 % source: results/analysis/replication_v22/results.json contrasts "C1-SS minus C2 L2:net", "C1-SS minus C2 L2:correlation" (cohort replication)
 % source: results/analysis/final_v1/results.json behaviour core.C2/core.C1-SS joint_profit; all_cells[274,271].auroc; contrasts[208].result; results/analysis/replication_v22/results.json behaviour[40].paired_difference; all_cells[2056,2053].auroc; contrasts[555].result
 In this game the most profitable collusion was also the quietest.
-
-\input{sections/addendum_table}
 
 \subsection{Localisation and honest-market alarms}
 Net influence named the right pair even where the obvious shortcut fails.
@@ -127,7 +140,7 @@ only $5/40$ valid judgements.
 % source: results/analysis/final_v1/results.json judgments grouped by model/status
 
 \subsection{Behaviour, flow labels, breadth and probes}
-Table~\ref{tab:behaviour} separates economic outcomes from flow labels.
+Appendix Table~\ref{tab:behaviour} separates economic outcomes from flow labels.
 Removing the surveillance warning (A1) raised the L2 net AUROC by $0.0975$
 $[-0.0051,0.2300]$ relative to C1-SS while joint profit fell by $0.3478$
 $[0.2921,0.4015]$; this does not show deliberate evasion.
@@ -136,7 +149,6 @@ Market-level flow labels did not separate cartel and spy: C1-SS had $0$
 designated pairs with a detected leak and $12$ unclear; E1 had $4$ with one
 direction detected and the reverse weak, and $8$ unclear.
 % source: results/analysis/final_v1/results.json all_cells[206,340].label:*
-\input{sections/behaviour_table}
 Gemma-E4B and Ministral-3B produced too many invalid bids (at most $2$
 eligible markets per cell), so their results are unavailable, not negative.
 % source: results/analysis/final_v1/results.json all_cells[934,1000,1066,1132].eligible,auroc
