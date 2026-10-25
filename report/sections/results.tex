@@ -120,9 +120,16 @@ $35\%$ and $53\%$). Given a firm's own cost, its bid varied by only $0.16$
 bits, against $0.72$ in honest markets. A bid that hardly changes carries
 almost no information, so a dependence measure has nothing to pick up: the
 cartel coordinated on a fixed focal price, not by reacting to each other.
+The chatting cartels did the opposite (Appendix~\ref{app:mechanics}).
+Almost every message revealed the sender's cost, but only $6\%$ said who
+should win: both partners write one message at the same time and never see
+earlier ones, so each announced its own plan. Their winning price fell from
+$2.90$ in the first five rounds to $2.41$, and they earned less than half
+of what a simple split (only the cheaper partner bids 3) would have earned
+against the same rival bids.
 Such stable, elevated prices are what classic bid-rigging screens based on
 the spread of bids look for \citep{huber2019}; we did not test them.
-% source: results/quiet_cartel/summary.json (experiments/quiet_cartel_bids.py; Qwen markets 0-19, designated pair, complete rounds): share_bid_3, same_bid, h_bid_given_cost
+% source: results/quiet_cartel/summary.json (experiments/quiet_cartel_bids.py; Qwen markets 0-19, designated pair, complete rounds): share_bid_3, same_bid, h_bid_given_cost; results/cartel_mechanics/summary.json (experiments/cartel_mechanics.py) core.C1-SS msg_reveals_cost, msg_names_winner, winning_price_rounds_1_5, winning_price_rounds_21_200, joint_profit, cf_pair_cheaper_bids_3_other_7
 
 \emph{The AI judge.} The Qwen 9B judge reads the round records and names
 the most suspicious pair. Under its registered $12{,}000$-token limit it

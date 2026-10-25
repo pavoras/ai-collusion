@@ -163,6 +163,13 @@ interval audit. No billing figure or citation metadata has been invented.
 
 Update 25 Oct 2026 (professional-format pass): the report no longer contains infrastructure
 incidents, billing or reproduction command blocks. Deviations are listed only where they affect
-design, data or analysis (Appendix F.8: parser, judge coverage, executed revision, addenda,
+design, data or analysis (Appendix G.8: parser, judge coverage, executed revision, addenda,
 collection order); the complete record stays in `docs/PREREG.md`. All commands are in
 `report/README.md`.
+
+Update 25 Oct 2026 (cartel mechanics, post hoc): `experiments/cartel_mechanics.py` writes
+`results/cartel_mechanics/summary.json` (Qwen markets 0-19, complete rounds; N0, C1-SS, C1-NW,
+C1-SF, C1-FF, C2). Appendix F (Table 8) and three sentences in Section 4.4 use it: bidding and
+allocation shares, winning price by round bucket, static counterfactual joint profits against
+observed rival bids, and keyword-coded chat messages (approximate). Appendix letters after E
+shifted by one (statistics now G, limitations/ethics H).

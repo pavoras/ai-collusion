@@ -236,3 +236,9 @@ frischem Clone. Keine Zahl im Report ohne reproduzierbaren Lauf.
   (Plattenausfall, Billing, Transport/Retry, Verzeichniswechsel, Befehlsblöcke); Abweichungsliste auf die fünf
   Punkte reduziert, die Design, Daten oder Auswertung betreffen; Befehle in `report/README.md`. Gesamt 36 Seiten.
 - 25.10. (spät): Diskussion um „What a real overseer could use“ ergänzt (Alarm braucht keine Zwillingsmärkte oder Kosten; reale Hürden und Ergänzungen), Schluss um einen Satz zu realen Bedingungen. Sitzungsübergabe in der git-ignorierten `handover.md` im Worktree `.claude/worktrees/projekt-start-schritt-0-1-3e5138/`.
+- 25.10. (spät, Kartell-Mechanik): Post-hoc-Analyse `experiments/cartel_mechanics.py` (neuer Anhang F, drei Sätze in 4.4).
+  Chat-Kartelle: 94 % der Nachrichten nennen die eigenen Kosten, nur 6 % sagen, wer gewinnen soll; gleichzeitiger
+  Kanal ohne Gedächtnis; Preis fällt von 2,90 (Runden 1-5) auf 2,41; nur 0,46 von möglichen ~0,97 Gewinn. Ohne
+  Warnhinweis schlechter (0,12, 28 % Gebote unter Kosten). Kartell ohne Chat: schon in Runde 1 die Hälfte der Gebote = 3,
+  nach Runde 20 98 % (Fokuspunkt + Lock-in). Ehrliche Firmen bieten teils schlecht (12 %/18 % unter Kosten;
+  „Kosten+1“ brächte 0,27 statt 0,16).

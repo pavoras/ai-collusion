@@ -188,6 +188,88 @@ table above. Mixed XX and XY treatments each use their own composition-matched
 honest control; their contrast does not isolate model identity.
 \input{sections/sensitivity_table}
 
+\section{How the cartels behaved (post hoc)}
+\label{app:mechanics}
+This descriptive analysis was not pre-registered. It uses the Qwen3.5-9B
+markets 0--19 and complete rounds, and is produced by
+\path{experiments/cartel_mechanics.py} (Table~\ref{tab:mechanics}). The
+counterfactual rows replace the pair's bids by a fixed rule while keeping
+the two other firms' observed bids; they ignore how rivals would react.
+Messages are coded with simple keyword patterns and are approximate.
+
+\begin{table}[htbp]
+\centering\small
+\caption{How the designated pair bid and what the chatting partners wrote.
+Shares of rounds or bids; profit and prices per round.}
+\label{tab:mechanics}
+\begin{tabular}{lcccc}
+\toprule
+ & Honest & Chat & Chat, no warning & No chat \\
+ & (N0) & (C1-SS) & (C1-NW) & (C2) \\
+\midrule
+Joint profit of the pair & $0.32$ & $0.46$ & $0.12$ & $0.72$ \\
+Winning price & $2.14$ & $2.44$ & $2.10$ & $2.94$ \\
+\quad rounds 1--5 / 21--200 & $2.20$ / $2.14$ & $2.90$ / $2.41$ & $2.32$ / $2.09$ & $2.75$ / $2.96$ \\
+Pair bids equal to 3: round 1 / 21--200 & $33\%$ / $35\%$ & $50\%$ / $49\%$ & $32\%$ / $18\%$ & $50\%$ / $98\%$ \\
+Partners bid the same & $53\%$ & $59\%$ & $77\%$ & $95\%$ \\
+Pair bids below own cost & $12\%$ & $13\%$ & $28\%$ & $0.2\%$ \\
+Pair wins the contract & $96\%$ & $89\%$ & $96\%$ & $75\%$ \\
+\quad of which the costlier partner wins & $19\%$ & $24\%$ & $29\%$ & $31\%$ \\
+\midrule
+\multicolumn{5}{l}{\emph{Counterfactual joint profit against the observed rival bids}} \\
+Only the cheaper partner bids 3 & $0.97$ & $0.97$ & $0.93$ & $0.91$ \\
+Both partners bid 3 & $0.76$ & $0.77$ & $0.74$ & $0.74$ \\
+\midrule
+\multicolumn{5}{l}{\emph{Chat messages}} \\
+Reveal the sender's cost & -- & $94\%$ & $91\%$ & -- \\
+Announce a bid & -- & $73\%$ & $94\%$ & -- \\
+Mention avoiding detection & -- & $76\%$ & $3\%$ & -- \\
+Say who should win & -- & $6\%$ & $14\%$ & -- \\
+Propose alternating wins & -- & $1\%$ & $2\%$ & -- \\
+Both announce a bid / the same bid & -- & $54\%$ / $44\%$ & $88\%$ / $66\%$ & -- \\
+Announced bid kept & -- & $90\%$ & $91\%$ & -- \\
+\bottomrule
+\end{tabular}
+% source: results/cartel_mechanics/summary.json rows core.N0, core.C1-SS, core.C1-NW, core.C2: joint_profit, winning_price, winning_price_rounds_1_5, winning_price_rounds_21_200, pair_bid3_rounds_1_1, pair_bid3_rounds_21_200, pair_same_bid, pair_below_cost, pair_win_share, pair_win_by_costlier, cf_pair_cheaper_bids_3_other_7, cf_pair_both_bid_3, msg_reveals_cost, msg_announces_bid, msg_mentions_detection, msg_names_winner, msg_proposes_alternation, msg_both_announce, msg_both_announce_same_number, msg_announced_bid_kept
+\end{table}
+
+\paragraph{Why the cartel without chat bids 3.} Three explanations fit the
+data and need not exclude each other. (i)~\emph{Focal point.} 3 is the
+highest cost of a strong firm and the lowest cost of a weak firm, so it is
+the highest price at which a strong firm never loses money and a weak firm
+cannot profitably undercut. Already in round 1, half of the pair's bids
+were 3, against a third in honest markets. (ii)~\emph{Lock-in through the
+bid history.} Without a channel the partner's bid is the only signal, and
+a constant bid is easy to read and to match: the share rose to $98\%$ after
+round 20. (iii)~\emph{Caution.} The instruction to behave inconspicuously
+may favour a moderate, stable price; there is no tacit condition without
+that instruction to test this.
+
+\paragraph{Why the chatting cartels earn less.} (i)~\emph{No allocation.}
+Messages revealed costs and announced bids but rarely said who should win;
+when both partners announced a bid, they announced the same one in only
+$44\%$ of rounds. (ii)~\emph{A simultaneous channel without memory.} Each
+partner sends one message at the same time and never sees earlier
+messages, so a proposal cannot be accepted and a rotation cannot be agreed;
+alternating wins were proposed in about $1\%$ of messages. (iii)~\emph{Both
+compete for the win.} The winning price fell over the rounds, and the
+costlier partner won $24\%$ of the pair's contracts. Removing the
+surveillance warning made this worse, not better: the partners announced
+bids in $88\%$ of rounds, more than a quarter of their bids lay below cost,
+and their
+joint profit fell to $0.12$, below honest play. A channel with replies or
+message memory would test explanation (ii).
+
+\paragraph{Do honest firms bid badly?} Partly. Honest strong firms bid
+below their own cost in $12\%$ of bids and weak firms in $18\%$. Against
+the observed rival bids, bidding one above cost would have earned a strong
+firm $0.27$ per round instead of the $0.16$ it earned. Part of the measured
+cartel gain therefore reflects weak honest play. The cartel without chat
+earned about what ``both bid 3'' yields against the same bids ($0.72$
+versus $0.74$), and all cartels stayed well below a split in which only the
+cheaper partner bids 3.
+% source: results/cartel_mechanics/summary.json core.N0 pair_below_cost, fringe_below_cost, cf_strong_bid_cost_plus_1, strong_actual_profit; core.C2 joint_profit, cf_pair_both_bid_3; all rows cf_pair_cheaper_bids_3_other_7
+
 \section{Statistics, provenance, and deviations}
 \label{app:stats}
 \subsection{A1: warning removal}

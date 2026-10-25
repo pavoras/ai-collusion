@@ -48,7 +48,11 @@ The post-hoc bid analysis of the cartel without chat (Section 4.4) is reproduced
 
 ```powershell
 .venv/Scripts/python experiments/quiet_cartel_bids.py
+.venv/Scripts/python experiments/cartel_mechanics.py
 ```
+
+The second script (Appendix F) describes how all cartels bid, what the chatting partners wrote,
+and static counterfactual profits.
 
 It writes `results/report_figures/figure_1.*` to `figure_7.*` and `key_figure_numbers.csv`
 (every plotted value with its source path). Figures A/B of `report_figures.py` are in
