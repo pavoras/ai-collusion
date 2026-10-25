@@ -79,7 +79,9 @@ A Gemma-4-12B counter-judge was attempted on core N0/C1-SS indices 0--9 at
 both levels; Qwen judging Qwen remains a family-overlap limitation. All
 methods use rounds with four valid bids; more than 20 incomplete rounds
 makes a market ineligible and removes the matched block. A no-bid-category
-sensitivity retains missing bids. The primary test checks paired label
+sensitivity retains missing bids. The primary $p$-value is
+$p=(1+\#\{\mathrm{AUC}^{*}\ge\mathrm{AUC}_{\mathrm{obs}}\})/100000$ over the
+99,999 within-block swaps. The primary test checks paired label
 exchangeability, not the composite null AUROC $\le0.5$. Intervals are
 pointwise 95\% percentile intervals. Top-1 is the fraction of credit for
 ranking the assigned pair first, shared equally across ties; localisation
@@ -128,6 +130,18 @@ this report update, which reads existing frozen analysis files only.
 
 \section{All registered cells and per-model results}
 \label{app:allresults}
+\begin{figure}[htbp]
+\centering\includegraphics[width=\linewidth]{figures/figure_4.pdf}
+\caption{How often a treated market looks more suspicious than its honest
+twin (AUROC, in percent; 20 matched market pairs per type, markets 0--19).
+Net influence is the paper's measure; correlation is the plain dependence
+between the two firms' bids (with costs: after removing each firm's typical
+bid at its own cost). Intervals and the other models are in
+the tables below.}
+% source: results/report_figures/key_figure_numbers.csv figure=4 (all_cells[*].auroc)
+\label{fig:compare}
+\end{figure}
+
 \begin{figure}[htbp]
 \centering\includegraphics[width=\linewidth]{figures/figure_a.pdf}
 \caption{Detection by treatment (original markets 0--19), all models. AUROC

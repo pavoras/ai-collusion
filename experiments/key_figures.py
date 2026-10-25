@@ -398,7 +398,7 @@ def figure_7(final, numbers):
         record(numbers, 7, f"core.N0 L1 net prefix {p}", "false alarm", r["any_candidate"], FINAL,
                f"all_cells[{i}].any_candidate", r["any_candidate"]["total"])
     left.plot(prefixes, values, marker="x", color=RED, ms=4, lw=1.2, ls="--", label="honest: false alarm")
-    left.text(212, values[-1] + .03, "honest: false alarm", va="center", fontsize=5.8, color=RED)
+    left.text(212, values[-1] + .03, "honest:\nfalse alarm", va="center", linespacing=.95, fontsize=5.8, color=RED)
     left.set(xticks=prefixes, xlim=(35, 330), ylim=(-.03, 1.05), yticks=[0, .5, 1])
     left.spines["bottom"].set_bounds(35, 215)
     left.set_yticklabels(["0%", "50%", "100%"], fontsize=6)

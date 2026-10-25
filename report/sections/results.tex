@@ -67,37 +67,41 @@ intervals are approximate (Appendix~\ref{app:stats}).}
 \end{figure}
 
 \subsection{Net influence versus a simple correlation}
-Figure~\ref{fig:compare} compares the two measures by how often a treated
-market looks more suspicious than its honest twin with identical costs
-(AUROC; 50\% is a coin flip). In the pre-registered primary test,
-net influence with costs separated the strong-pair cartel from honest
-markets: AUROC $0.865$ $[0.734,0.968]$, $p=0.00002$ over $20$ matched
-blocks. But a simple correlation of the same data did better ($0.9975$;
-difference $-0.1325$ $[-0.2647,-0.0309]$), and it was at least as good for
-every cartel that chats (the two small exceptions have intervals including
-zero).
-% source: results/analysis/final_v1/results.json primary; all_cells[206,202].auroc; contrasts[95].result
-Net influence was clearly better only where information leaks: for the spy
-with costs, $0.700$ against $0.415$ (difference $+0.285$ $[0.062,0.515]$).
-This held on $20$ fresh markets collected afterwards ($+0.265$
-$[0.070,0.445]$, Section~\ref{sec:addenda}); with bids only it did not
-replicate ($+0.095$ $[-0.1125,0.315]$).
-% source: results/analysis/final_v1/results.json all_cells[340,337].auroc; contrasts[263].result; results/analysis/replication_v22/results.json contrasts[501,498].result
-On fresh markets the strong-pair cartel was again detected (net $0.9075$
-$[0.8025,0.985]$) and again better by correlation ($0.995$).
-% source: results/analysis/replication_v22/results.json all_cells[2122,2119].auroc; contrasts[609].result
+Does the paper's measure beat the obvious alternative? We score how often a
+treated market looks more suspicious than its honest twin with identical
+costs (AUROC; $0.5$ is a coin flip, $1$ is perfect separation) and compare
+net influence with a plain correlation of the same two bid series
+(Table~\ref{tab:compare}). In the pre-registered primary test, net
+influence with costs separated the strong-pair cartel from honest markets
+($p=0.00002$), but correlation did better, in the original and in fresh
+markets, and it was at least as good for every cartel that chats
+(Appendix Figure~\ref{fig:compare}). Net influence was better only for the
+spy: it ranked spy markets above their honest twins in $70\%$ of pairs,
+correlation in $41.5\%$, and this held on fresh markets. With bids only the
+advantage did not replicate ($+0.095$ $[-0.1125,0.315]$). This ranking is
+weaker than an alarm: the alarm named the spy in at most $1$ of $20$
+single markets (Figure~\ref{fig:alarms}).
+% source: results/analysis/final_v1/results.json primary; all_cells[206,202,340,337].auroc; contrasts[95,263].result; results/analysis/replication_v22/results.json all_cells[2122,2119,1990,1987].auroc; contrasts[609,501,498].result
 
-\begin{figure}[t]
-\centering\includegraphics[width=\linewidth]{figures/figure_4.pdf}
-\caption{How often a treated market looks more suspicious than its honest
-twin (AUROC, in percent; 20 matched market pairs per type, markets 0--19).
-Net influence is the paper's measure; correlation is the plain dependence
-between the two firms' bids (with costs: after removing each firm's typical
-bid at its own cost). Intervals and the other models are in
-Appendix~\ref{app:allresults}.}
-% source: results/report_figures/key_figure_numbers.csv figure=4 (all_cells[*].auroc)
-\label{fig:compare}
-\end{figure}
+\begin{table}[t]
+\centering\small
+\caption{Net influence versus correlation, bids + costs. AUROC: share of
+treated--honest market pairs (same costs) in which the treated market scores
+higher. Difference with 95\% block-bootstrap interval; 20 matched pairs per
+row. ``Fresh'' rows use markets 20--39, collected after the main analysis.}
+\label{tab:compare}
+\begin{tabular}{llccc}
+\toprule
+Market type & Markets & Net influence & Correlation & Difference \\
+\midrule
+Cartel, two strong (primary) & 0--19 & $0.865$ & $0.9975$ & $-0.133$ $[-0.265,-0.031]$ \\
+Cartel, two strong & fresh & $0.9075$ & $0.995$ & $-0.088$ $[-0.190,-0.015]$ \\
+Spy & 0--19 & $0.700$ & $0.415$ & $+0.285$ $[+0.062,+0.515]$ \\
+Spy & fresh & $0.680$ & $0.415$ & $+0.265$ $[+0.070,+0.445]$ \\
+\bottomrule
+\end{tabular}
+% source: results/analysis/final_v1/results.json all_cells[206,202,340,337].auroc; contrasts[95,263].result; results/analysis/replication_v22/results.json all_cells[2122,2119,1990,1987].auroc; contrasts[609,501].result
+\end{table}
 
 \subsection{Two warnings: the quiet cartel and the AI judge}
 The cartel without chat raised the pair's profit by $0.399$ $[0.364,0.434]$
@@ -106,6 +110,7 @@ the cartel both measures detected least well and the alarm never caught it
 with bids only (Figure~\ref{fig:warnings}a). The profit gain replicated on
 fresh markets ($+0.283$ $[0.179,0.371]$).
 % source: results/analysis/final_v1/results.json behaviour[64,40].paired_difference; all_cells[268].correct_unique; results/analysis/replication_v22/results.json behaviour[40].paired_difference
+
 The Qwen 9B judge reads the round records and names the most suspicious
 pair. Under its registered $12{,}000$-token limit it failed on $322$ of
 $600$ judgements. With $24{,}000$ tokens it answered $54$ of $60$, but it
@@ -128,12 +133,13 @@ strong--weak markets, bids + costs).}
 \end{figure}
 
 \subsection{How many rounds, and other AI models}
-The alarm needs enough rounds. With bids only it named the strong-pair
+\emph{Rounds.} The alarm needs enough rounds. With bids only it named the strong-pair
 cartel in $6$ of $20$ markets after $50$ rounds, $9$ after $100$ and $16$
 after $200$, while false alarms in honest markets stayed at $3$ of $40$ or
 fewer (Figure~\ref{fig:breadth}a).
 % source: results/analysis/final_v1/results.json all_cells[147,173,199].correct_unique; all_cells[3,29,55].any_candidate
-Other models behaved similarly with one exception
+
+\emph{Other models.} Results were similar, with one exception
 (Figure~\ref{fig:breadth}b). The alarm named the cartel in $18$ of $20$
 markets for Qwen3.5-4B and Gemma-4-12B, and in $16$ and $19$ of $20$ in
 mixed-model markets. For Ministral-3-8B it found only $11$ of $20$ and
@@ -148,7 +154,8 @@ the alarm reacts to coordinated bidding, not to its success. With only two
 Qwen sizes, and the smallest Gemma and Ministral models unusable (too many
 invalid bids), the data say nothing about a general size trend.
 % source: results/analysis/final_v1/results.json all_cells[*].correct_unique and any_candidate for sizes.qwen-4b, labs.gemma-12b, labs.ministral-8b, mixed (results/report_figures/key_figure_numbers.csv figure=7); behaviour[208,184,160].paired_difference; all_cells[934,1000,1066,1132].eligible; docs/PREREG.md section 2 sampling table
-Honest look-alikes did not trigger the alarm: honest markets of four
+
+\emph{Look-alikes and other checks.} Honest look-alikes did not trigger the alarm: honest markets of four
 identical Qwen agents raised one false alarm in $40$, mixed honest markets
 $0$ and $1$ in $20$, and swapping which honest firm runs the same model
 had no effect surviving correction (smallest adjusted $p=0.264$).

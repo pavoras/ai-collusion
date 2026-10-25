@@ -81,17 +81,19 @@ from these files; they are not typed by hand.
 
 ## Main-text figures (revised 25 Oct 2026)
 
-The main text is written in plain language around seven figures rendered by
+The main text is written in plain language around six figures and one table; the figures are rendered by
 `experiments/key_figures.py` from frozen outputs only (LaTeX numbering in brackets):
 `figure_1` design schematic, no data [Fig. 1]; `figure_2` alarm outcomes per market type
 (`all_cells[*].correct_unique, wrong_pair, abstention, any_candidate`) [Fig. 2];
 `figure_3` pooled flow diagrams (`fingerprints[0,2,3,4].terms`; arrow only when the pooled
 95% interval excludes zero; verdict texts are asserted against the data) [Fig. 3];
-`figure_4` AUROC net influence vs. correlation [Fig. 4]; `figure_5` quiet cartel and the 24k
-judge (`judge24k_v23 judge_comparisons[0,4]`) [Fig. 5]; `figure_7` alarm hits by observed
-rounds (prefix 50/100/200) and other bidder models with their own honest controls [Fig. 6];
+`figure_4` AUROC net influence vs. correlation [Appendix E, Fig. 7; in the main text replaced by
+Table 1 with `final_v1 all_cells[206,202,340,337].auroc, contrasts[95,263]` and
+`replication_v22 all_cells[2122,2119,1990,1987].auroc, contrasts[609,501]`]; `figure_5` quiet
+cartel and the 24k judge (`judge24k_v23 judge_comparisons[0,4]`) [Fig. 4]; `figure_7` alarm hits
+by observed rounds (prefix 50/100/200) and other bidder models with their own honest controls [Fig. 5];
 `figure_6` scripted-simulation expectations (`results/auction_power/full/{power,leaks,false_alarms}.csv`,
-iid population, q = 1, 200 rounds, n = 20) versus LLM observations [Fig. 7].
+iid population, q = 1, 200 rounds, n = 20) versus LLM observations [Fig. 6].
 `results/report_figures/key_figure_numbers.csv` lists every plotted value with its source path;
 all were re-checked automatically against JSON or CSV (0 mismatches). Comparisons with
 concurrent work quote the READMEs of the cited commits (Raj-Taware 0e2aa44, soumya-nayak-commits

@@ -89,13 +89,9 @@ frozen Qwen3.5-9B judge reads rules and masked round records and returns
 pair probabilities (Appendix~\ref{app:methods}). The market is the analysis
 unit. AUROC is the probability that a randomly chosen treated market scores
 above a control market (ties half). The sole confirmatory test compares
-designated-pair L2 net scores in Qwen C1-SS and N0 markets 0--19, with
-99,999 within-block label swaps (seed 20261027):
-\begin{equation}
-p=\frac{1+\#\{\mathrm{AUC}^{*}\ge\mathrm{AUC}_{\mathrm{obs}}\}}{100000};
-\qquad \text{reject if }\mathrm{AUC}_{\mathrm{obs}}>0.5\text{ and }p\le0.05.
-\label{eq:primary}
-\end{equation}
+designated-pair L2 net scores in Qwen C1-SS and N0 markets 0--19 by AUROC,
+with a one-sided $p$-value from 99,999 within-block label swaps (seed
+20261027; reject if $\mathrm{AUC}>0.5$ and $p\le0.05$).
 Secondary estimates use 10,000 whole matched-block bootstraps. Honest-market
 alarms are counts with Clopper--Pearson intervals.
 % source: docs/PREREG.md sections 4, 6, 8 and 11

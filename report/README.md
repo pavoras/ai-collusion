@@ -19,8 +19,8 @@ The last command writes `results/analysis/addendum_summary/summary.json` and the
 LaTeX tables `sections/addendum_table.tex` (Table 1) and
 `sections/addendum_full_table.tex` (Appendix E.7).
 
-The seven plain-language main-text figures (design; alarm outcomes; information-flow
-direction; net influence vs. correlation; quiet cartel and AI judge; rounds needed and other
+The seven plain-language figures (design; alarm outcomes; information-flow
+direction; net influence vs. correlation, in Appendix E; quiet cartel and AI judge; rounds needed and other
 models; simulation expectations vs. observations) are rendered from frozen outputs, without
 refitting:
 
