@@ -13,8 +13,9 @@ silent? With bids only, our permutation-corrected net-influence rule named
 exactly the right pair in $16$, $13$ and $20$ of $20$ markets for the three
 cartels that chat (two strong firms; strong and weak firm; two weak firms),
 and never named a wrong pair. In $40$ honest markets it raised one false
-alarm.
-% source: results/analysis/final_v1/results.json all_cells[199,400,466].correct_unique,wrong_pair; all_cells[55].any_candidate
+alarm. The positive control, a scripted cartel placed among AI bidders
+(P0), was named in all $20$ markets at both access levels.
+% source: results/analysis/final_v1/results.json all_cells[199,400,466].correct_unique,wrong_pair; all_cells[55].any_candidate; all_cells[124,130].correct_unique
 The rule published with the method is not usable as an alarm here: it
 flagged $24$ of $40$ honest markets with bids only and all $40$ with costs,
 and for the strong-pair cartel with costs it named the wrong pair in $19$
@@ -138,14 +139,23 @@ markets for Qwen3.5-4B and Gemma-4-12B, and in $16$ and $19$ of $20$ in
 mixed-model markets. For Ministral-3-8B it found only $11$ of $20$ and
 raised false alarms in $6$ of $20$ honest Ministral markets ($3$ of $20$
 for Qwen3.5-4B): calibration that holds for one model need not hold for
-another. Gemma-4-E4B and Ministral-3-3B produced too many invalid bids, so
-their results are unavailable rather than negative.
-% source: results/analysis/final_v1/results.json all_cells[*].correct_unique and any_candidate for sizes.qwen-4b, labs.gemma-12b, labs.ministral-8b, mixed (results/report_figures/key_figure_numbers.csv figure=7); all_cells[934,1000,1066,1132].eligible
+another. Ministral was sampled almost deterministically (temperature
+$0.15$, the vendor's recommendation), which may make honest bids look
+alike; we did not test this. The smaller Qwen was caught as often as the
+larger one although its cartel earned less than honest play ($-0.115$ per
+round), while the Ministral and Gemma cartels gained $0.33$ and $0.23$:
+the alarm reacts to coordinated bidding, not to its success. With only two
+Qwen sizes, and the smallest Gemma and Ministral models unusable (too many
+invalid bids), the data say nothing about a general size trend.
+% source: results/analysis/final_v1/results.json all_cells[*].correct_unique and any_candidate for sizes.qwen-4b, labs.gemma-12b, labs.ministral-8b, mixed (results/report_figures/key_figure_numbers.csv figure=7); behaviour[208,184,160].paired_difference; all_cells[934,1000,1066,1132].eligible; docs/PREREG.md section 2 sampling table
+Honest look-alikes did not trigger the alarm: honest markets of four
+identical Qwen agents raised one false alarm in $40$, mixed honest markets
+$0$ and $1$ in $20$, and swapping which honest firm runs the same model
+had no effect surviving correction (smallest adjusted $p=0.264$).
 Removing the surveillance warning lowered the cartel's profit by $0.35$
-per round without a resolved change in detection; swapping honest
-same-model placements and changing only the partner's cost in probes gave
-no resolved effects (Appendix~\ref{app:stats}).
-% source: results/analysis/final_v1/results.json addendum.A1.behaviour_NW_minus_SS.joint_profit; addendum.A1.auroc_differences.L2:net; addendum.A2.endpoints.L2:leak.holm_p_value; probes.summaries[0].slope
+per round without a resolved change in detection, and probes that changed
+only the partner's cost gave no resolved effect (Appendix~\ref{app:stats}).
+% source: results/analysis/final_v1/results.json all_cells[55,1192,1324].any_candidate; addendum.A2.endpoints.L2:leak.holm_p_value; addendum.A1.behaviour_NW_minus_SS.joint_profit; addendum.A1.auroc_differences.L2:net; probes.summaries[0].slope
 
 \begin{figure}[t]
 \centering\includegraphics[width=\linewidth]{figures/figure_7.pdf}
