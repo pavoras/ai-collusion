@@ -343,7 +343,7 @@ def figure_6(final, numbers):
                   r["label:one direction detected, reverse weak"] / r["eligible"],
                   f"all_cells[{i}].label:one direction detected, reverse weak", False))
 
-    fig, ax = plt.subplots(figsize=(6.6, 2.45))
+    fig, ax = plt.subplots(figsize=(6.6, 2.2))
     for y, (label, expected, spath, observed, opath, honest) in enumerate(items):
         ax.plot([expected, observed], [y, y], color=GREY, lw=2.2, zorder=1, solid_capstyle="round")
         ax.plot(expected, y, "o", ms=6, mfc="white", mec=TEXT_MUTED, mew=1.2, zorder=2)
@@ -436,7 +436,7 @@ def figure_7(final, numbers):
     right.legend(handles=[Patch(color=GREEN, label="cartel: right pair named"),
                           Patch(color=RED, label="honest: false alarm")],
                  fontsize=5.8, loc="upper center", bbox_to_anchor=(.45, -.1), ncol=2, handlelength=1, borderaxespad=.2)
-    right.set_title("b  Other AI models (bids only)", loc="left", fontsize=7.4)
+    right.set_title("b  Other bidder models (bids only)", loc="left", fontsize=7.4)
     fig.subplots_adjust(left=.08, right=.99, top=.88, bottom=.19)
     save(fig, "figure_7")
 

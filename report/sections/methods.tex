@@ -35,8 +35,10 @@ honest control (Appendix~\ref{app:prompts}).
 % source: docs/PREREG.md sections 2-3 and addendum A2-A3
 
 \subsection{Auditor access and influence}
-L1 receives bids $B_i$ and winners; L2 additionally receives costs $C_i$.
-Neither sees messages, role texts, condition labels, or model identities.
+The auditor works at one of two access levels. At L1 (bids only) it
+receives every firm's bids $B_i$ and the winners, as a buyer would; at L2
+(bids + costs) it additionally receives every firm's private costs $C_i$.
+Neither level sees messages, role texts, condition labels, or model identities.
 The public state $H_t$ is the previous winning bid. At L1,
 $\gamma_{ij}=I(B_i;B_j\mid H)$. At L2, with $S_i=(C_i,H)$, Equation~3 of
 \citet{bonjour2022} becomes
@@ -70,7 +72,14 @@ paper's net transformation and mutual rule (its Equations~4--5) are
 % source: docs/METHOD.md Definitions
 
 \subsection{Permutation correction}
-Within each market, 999 permutations shuffle each firm's bids within its
+Influence estimated from counts is positive even when two firms bid
+independently, and this bias grows with the number of distinct bids and
+market states. A fixed threshold therefore flags honest pairs, more often
+for firms whose bids vary more. Shuffling a firm's bids among rounds with
+the same conditioning state removes any link between firms but keeps each
+firm's own bidding pattern, so the influence left after shuffling measures
+the bias. Subtracting it centres honest pairs near zero, and the share of
+shuffles that reach the observed value gives a $p$-value. Within each market, 999 permutations shuffle each firm's bids within its
 own strata ($H$ at L1, $(C_i,H)$ at L2). With the permutation mean
 subtracted,
 \begin{equation}
@@ -109,6 +118,8 @@ collected (Addenda v2.2--v2.3): E1, C2 and C1-SS were collected again on
 fresh markets 20--39, matched to the existing honest markets of the same
 index, with pre-specified replication criteria; and the Qwen judge was
 re-run with $24{,}000$ instead of $12{,}000$ output tokens (L2; N0, C1-SS,
-C1-SF markets 0--19). Because the original results were known, the
+C1-SF markets 0--19), because under the registered limit more than half of its
+judgements failed, mostly by running out of tokens before answering, so
+its weak result could have been an artefact of the limit. Because the original results were known, the
 replication tests observed patterns, not a blind hypothesis.
 % source: docs/PREREG.md Addenda v2.2-v2.3

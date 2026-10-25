@@ -15,7 +15,8 @@ and never named a wrong pair. In $40$ honest markets it raised one false
 alarm. The positive control, a scripted cartel placed among AI bidders
 (P0), was named in all $20$ markets at both access levels.
 % source: results/analysis/final_v1/results.json all_cells[199,400,466].correct_unique,wrong_pair; all_cells[55].any_candidate; all_cells[124,130].correct_unique
-The rule published with the method is not usable as an alarm here: it
+The fixed-threshold rule published by \citet{bonjour2022} is not usable
+as an alarm here: it
 flagged $24$ of $40$ honest markets with bids only and all $40$ with costs,
 and for the strong-pair cartel with costs it named the wrong pair in $19$
 of $20$ markets.
@@ -32,7 +33,7 @@ quiet in honest markets; the published rule does not.} For each market type, the
 in which the rule named exactly the colluding pair (green), a wrong pair or,
 in honest markets, any pair (red), or nothing (grey); numbers give right-pair
 counts (cartel rows) or false alarms (honest row). Left: the fixed threshold
-published with the method. Right: our permutation-corrected rule. 20 markets
+published by \citet{bonjour2022}. Right: our permutation-corrected rule. 20 markets
 per cartel type, 40 honest markets.}
 % source: results/report_figures/key_figure_numbers.csv figure=2 (all_cells[*].correct_unique, wrong_pair, abstention, any_candidate)
 \label{fig:alarms}
@@ -164,7 +165,8 @@ after $200$, while false alarms in honest markets stayed at $3$ of $40$ or
 fewer (Figure~\ref{fig:breadth}a).
 % source: results/analysis/final_v1/results.json all_cells[147,173,199].correct_unique; all_cells[3,29,55].any_candidate
 
-\emph{Other models.} Results were similar, with one exception
+\emph{Other bidder models.} When other models played all four firms,
+results were similar, with one exception
 (Figure~\ref{fig:breadth}b). The alarm named the cartel in $18$ of $20$
 markets for Qwen3.5-4B and Gemma-4-12B, and in $16$ and $19$ of $20$ in
 mixed-model markets. For Ministral-3-8B it found only $11$ of $20$ and
@@ -176,9 +178,8 @@ alike. Because temperature and model change together here, the data cannot
 tell whether low temperature in general raises false alarms. The smaller Qwen was caught as often as the
 larger one although its cartel earned less than honest play ($-0.115$ per
 round), while the Ministral and Gemma cartels gained $0.33$ and $0.23$:
-the alarm reacts to coordinated bidding, not to its success. With only two
-Qwen sizes, and the smallest Gemma and Ministral models unusable (too many
-invalid bids), the data say nothing about a general size trend.
+the alarm reacts to coordinated bidding, not to its success. With two Qwen
+sizes and the smallest models unusable, the data show no size trend.
 % source: results/analysis/final_v1/results.json all_cells[*].correct_unique and any_candidate for sizes.qwen-4b, labs.gemma-12b, labs.ministral-8b, mixed (results/report_figures/key_figure_numbers.csv figure=7); behaviour[208,184,160].paired_difference; all_cells[934,1000,1066,1132].eligible; docs/PREREG.md section 2 sampling table
 
 \emph{Look-alikes and other checks.} Honest look-alikes did not trigger the alarm: honest markets of four
@@ -186,18 +187,18 @@ identical Qwen agents raised one false alarm in $40$, mixed honest markets
 $0$ and $1$ in $20$, and swapping which honest firm runs the same model
 had no effect surviving correction (smallest adjusted $p=0.264$).
 Removing the surveillance warning lowered the cartel's profit by $0.35$
-per round without a resolved change in detection, and probes that changed
-only the partner's cost gave no resolved effect (Appendix~\ref{app:stats}).
-% source: results/analysis/final_v1/results.json all_cells[55,1192,1324].any_candidate; addendum.A2.endpoints.L2:leak.holm_p_value; addendum.A1.behaviour_NW_minus_SS.joint_profit; addendum.A1.auroc_differences.L2:net; probes.summaries[0].slope
+per round without a resolved change in detection (Appendix~\ref{app:stats}).
+% source: results/analysis/final_v1/results.json all_cells[55,1192,1324].any_candidate; addendum.A2.endpoints.L2:leak.holm_p_value; addendum.A1.behaviour_NW_minus_SS.joint_profit; addendum.A1.auroc_differences.L2:net
 
 \begin{figure}[t]
 \centering\includegraphics[width=\linewidth]{figures/figure_7.pdf}
-\caption{\textbf{More rounds help, and most models behave like the main
-one, but Ministral needs its own calibration.} (a) Share of cartel markets
+\caption{\textbf{More rounds help, and most bidder models behave like the
+main one, but Ministral needs its own calibration.} (a) Share of cartel markets
 in which our alarm named the right
 pair, and share of honest markets with a false alarm, by the number of
-rounds observed (bids only, Qwen3.5-9B). (b) The same for other bidder
-models, each against its own honest markets (20 markets; Gemma honest: 14
+rounds observed (bids only, Qwen3.5-9B bidders). (b) The same when other
+models play the bidders (all four firms, or mixed markets); the auditor is
+unchanged, each against its own honest markets (20 markets; Gemma honest: 14
 eligible; Qwen3.5-9B honest: 40).}
 % source: results/report_figures/key_figure_numbers.csv figure=7
 \label{fig:breadth}

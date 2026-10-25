@@ -242,3 +242,8 @@ frischem Clone. Keine Zahl im Report ohne reproduzierbaren Lauf.
   Warnhinweis schlechter (0,12, 28 % Gebote unter Kosten). Kartell ohne Chat: schon in Runde 1 die Hälfte der Gebote = 3,
   nach Runde 20 98 % (Fokuspunkt + Lock-in). Ehrliche Firmen bieten teils schlecht (12 %/18 % unter Kosten;
   „Kosten+1“ brächte 0,27 statt 0,16).
+- 25.10. (spät, Abgabeversion): Marvins PDF-Kommentare eingearbeitet (L1/L2 erklärt, Zweck der Permutationskorrektur,
+  Grund für 24k-Judge, „published by Bonjour et al.“, Abb. 5 = Bietermodelle, Abstract präzisiert). Neue Post-hoc-
+  Analyse `experiments/spy_behaviour.py`: Spion nutzt die Kosten kaum (Gebot +0,08 zwischen billigem und teurem Opfer)
+  und verdient weniger als im ehrlichen Zwilling (0,09 vs. 0,16; in 19 von 20 Märkten schlechter). Haupttext 8 Seiten,
+  gesamt 38, Abstract 248 Wörter, keine offenen Verweise. Abgabefertig.

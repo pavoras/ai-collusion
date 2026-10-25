@@ -188,7 +188,7 @@ table above. Mixed XX and XY treatments each use their own composition-matched
 honest control; their contrast does not isolate model identity.
 \input{sections/sensitivity_table}
 
-\section{How the cartels behaved (post hoc)}
+\section{How the cartels and the spy behaved (post hoc)}
 \label{app:mechanics}
 This descriptive analysis was not pre-registered. It uses the Qwen3.5-9B
 markets 0--19 and complete rounds, and is produced by
@@ -269,6 +269,22 @@ earned about what ``both bid 3'' yields against the same bids ($0.72$
 versus $0.74$), and all cartels stayed well below a split in which only the
 cheaper partner bids 3.
 % source: results/cartel_mechanics/summary.json core.N0 pair_below_cost, fringe_below_cost, cf_strong_bid_cost_plus_1, strong_actual_profit; core.C2 joint_profit, cf_pair_both_bid_3; all rows cf_pair_cheaper_bids_3_other_7
+
+\paragraph{Did the spy use the stolen cost?} Barely, and not to its
+advantage (\path{experiments/spy_behaviour.py}; each E1 market against the
+honest market with the same index, costs and seats). Averaged over its own
+cost, the spy bid $2.20$, $2.24$ and $2.28$ when the victim's cost was 1, 2
+and 3; the same firm in the honest twin bid about $2.38$ throughout. The spy won
+more often than its honest counterpart ($54\%$ against $47\%$ of rounds)
+but at lower prices, and earned $0.09$ instead of $0.16$ per round
+(difference $-0.065$ $[-0.079,-0.051]$, market bootstrap); it gained in
+only $1$ of $20$ markets. Its victim also earned less ($0.11$ against
+$0.16$). Against the observed rival bids, simply bidding one above cost
+would have earned the spy $0.27$; a simple informed rule (bid the victim's
+cost when it exceeds one's own) would have earned $0.23$. The small leak
+signal therefore reflects weak use of the information by this model, not
+a profitable advantage that escaped detection.
+% source: results/spy_behaviour/summary.json summary.*
 
 \section{Statistics, provenance, and deviations}
 \label{app:stats}
@@ -513,7 +529,8 @@ data allow every analysis to be rerun.
 
 \section{LLM usage statement}
 Claude Code was used for planning, reviews, commits, the addenda code and
-runs, and the final revision of this report. Codex models wrote code in
+runs, the post-hoc bid, message and spy analyses, and the final revision of
+this report. Codex models wrote code in
 implementation rounds, reviewed the frozen results, and prepared the first
 report draft. Marvin Kemper made the research decisions and reviewed the work.
 The LLM bidders and judges described in the methods are experimental

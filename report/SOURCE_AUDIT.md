@@ -173,3 +173,12 @@ C1-SF, C1-FF, C2). Appendix F (Table 8) and three sentences in Section 4.4 use i
 allocation shares, winning price by round bucket, static counterfactual joint profits against
 observed rival bids, and keyword-coded chat messages (approximate). Appendix letters after E
 shifted by one (statistics now G, limitations/ethics H).
+
+Update 25 Oct 2026 (Marvin's PDF comments, final): `experiments/spy_behaviour.py` writes
+`results/spy_behaviour/summary.json` (E1 markets 0-19 vs. the honest twin with the same index): spy bid by victim
+cost 2.20/2.24/2.28 (twin about 2.38), spy profit 0.0924 vs. 0.1576 (difference -0.0652 [-0.0792, -0.0505],
+market bootstrap, seed 20261025), gained in 1 of 20 markets, victim 0.1125 vs. 0.1629, win share 0.537 vs. 0.474,
+counterfactuals cost+1 0.2656 and informed rule 0.2345. Used in the Discussion and Appendix F. Text changes from the
+comments: access levels L1/L2 defined in Section 3.2, motivation for the permutation correction (3.3), reason for the
+24k judge check (3.5), "published by Bonjour et al." instead of "published with the method", Figure 5 and Section 4.5
+state that other models played the bidders, abstract "do not prove that firms colluded".

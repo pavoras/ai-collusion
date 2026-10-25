@@ -7,14 +7,18 @@ against what the AI agents did. Calibration carried over: honest markets
 raised false alarms at about the simulated rate. Power did not. Scripted
 cartels were named in about $99\%$ of markets and scripted spies in nearly
 all; the AI cartels in $65$ to $100\%$ with bids only, and the AI spy with
-costs in none. Even scripted spies that used the stolen cost only half the
-time were found in $83\%$. Flow direction shows the same gap: the
+costs in none. Flow direction shows the same gap: the
 simulation expected two-way flow in every strong-pair cartel market and
 one-way flow in $80\%$ of spy markets; the AI markets showed it in $0\%$ and
 $20\%$, and only pooling recovered it (Figure~\ref{fig:flow}). AI agents
 act on shared information less consistently than scripts, so their traces
-are weaker than a rule-following simulation suggests.
-% source: results/report_figures/key_figure_numbers.csv figure=6; results/auction_power/full/power.csv row[237].detection_rate
+are weaker than a rule-following simulation suggests. The AI spy is the
+clearest case (Appendix~\ref{app:mechanics}): its bid rose by only $0.08$
+between a cheap and an expensive victim, and it earned less than the same
+firm in the honest twin market ($0.09$ against $0.16$ per round, lower in
+$19$ of $20$ markets). It was hard to catch because it barely used the
+stolen cost, not because it hid a profitable advantage.
+% source: results/report_figures/key_figure_numbers.csv figure=6; results/spy_behaviour/summary.json summary.spy_bid_victim_cost_1,_3, spy_profit, spy_profit_honest_twin, markets_spy_gained
 
 \begin{figure}[t]
 \centering\includegraphics[width=\linewidth]{figures/figure_6.pdf}
@@ -39,24 +43,19 @@ as we did. Unlike us, they found two near-identical Qwen agents flagged in
 $7$ of $10$ games without collusion; in our auction, honest markets of four
 Qwen agents raised one false alarm in $40$. Conditioning on costs and the
 last winning price may explain the difference; we did not test this.
-\citet{nayakRepo} found that net influence and Cram\'er's V named the
-planted pair equally often with scripted agents, as our correlation results
-do for chatting cartels; the exception we add is private information flow
-seen with costs. \citet{rose2026} detect collusion from model activations
-with AUROC $0.99$ to $1.00$ and report that only $2$ of $229$ collusive
-episodes in one environment verbalised the coordination. Behaviour-only
-audits need no model access but miss coordination that leaves no trace in
-actions, as the quiet cartel shows; the two approaches complement each
-other.
+\citet{nayakRepo} found net influence and Cram\'er's V equally good with
+scripted agents, as our correlation results suggest for chatting cartels.
+\citet{rose2026} detect collusion from model activations with AUROC $0.99$
+to $1.00$; behaviour-only audits need no model access but miss coordination
+that leaves no trace in actions, so the two complement each other.
 % source: tawareRepo README at commit 0e2aa44; nayakRepo README at commit ee0c111; rose2026 abstract (arXiv:2604.01151); results/analysis/final_v1/results.json all_cells[55].any_candidate
 
 \paragraph{What a real overseer could use.}
 A real overseer has no honest twin markets and usually no access to firms'
 costs. The twins served only to evaluate the audit; the alarm itself needs
 neither. It tests one market at a time against permutations of that
-market's own bids, using only the bids and the last winning price. That is
-the setting in which it named $49$ of $60$ chatting cartels with one false
-alarm in $40$ honest markets. Real conditions would be harder in three
+market's own bids, using only the bids and the last winning price, the
+setting of our main alarm results. Real conditions would be harder in three
 ways. First, the permutation test assumes that honest bids vary
 independently once the market state is known; common cost shocks, such as
 material prices, would make honest bids move together and raise false
@@ -72,7 +71,7 @@ many tenders with the same firms, as in our flow analysis; screens on the
 level and spread of bids \citep{huber2019,imhof2021}; and, where the
 overseer controls the agents' platform, intervention tests that vary an
 agent's inputs \citep{whisper2025} or activation probes \citep{rose2026}.
-% source: results/analysis/final_v1/results.json all_cells[199,400,466].correct_unique; all_cells[55].any_candidate; all_cells[147,173,199].correct_unique
+% source: results/analysis/final_v1/results.json all_cells[147,173,199].correct_unique
 
 \paragraph{What this means in practice.}
 Each point is limited to this game.
@@ -80,7 +79,7 @@ Each point is limited to this game.
 pointed to the right pair in most markets where AI agents coordinated
 actively, with few false alarms and no wrong accusations.
 (2)~\emph{Calibrate before alarming, per model.} The fixed threshold
-published with the method flagged most or all honest markets; the
+published by \citet{bonjour2022} flagged most or all honest markets; the
 permutation correction fixed this for the main model but not fully for
 Ministral (6 of 20).
 (3)~\emph{Use costs to understand, not to detect.} Costs did not improve
@@ -90,11 +89,9 @@ flows and separate a two-way cartel from a one-way spy.
 for chatting cartels; net influence earned its place only for espionage,
 and there only as a ranking.
 (5)~\emph{Combine dependence with price screens.} The most profitable
-cartel kept a fixed price, which no dependence measure can see but which
-leaves stable, elevated prices and profits that an overseer can monitor.
-(6)~\emph{Do not rely on a small AI judge or on rule-following simulations
-alone.} The 9B judge judged firm strength, not coordination, and the
-simulations overstated detection power.
+cartel kept a fixed price, invisible to dependence measures but visible in
+stable, elevated prices. (6)~\emph{Do not rely on a small AI judge or on
+rule-following simulations alone.}
 
 \paragraph{Limitations.}
 Only the primary test is confirmatory; alarm counts, flow patterns, the
@@ -107,9 +104,8 @@ bundles a joint objective, partner information, a surveillance warning and,
 in C1, a chat channel. The core uses one bidder and one judge model; the
 smallest models were unusable and breadth cells have 20 markets each. A
 one-way leak is not a unique signature of espionage, and the pooled flow
-intervals are approximate. Comparisons with concurrent work cross games and
-implementations. Privacy, false-accusation and dual-use considerations are
-discussed in Appendix~\ref{app:ethics}. Next steps: independent
+intervals are approximate. Privacy, false-accusation and dual-use
+considerations are discussed in Appendix~\ref{app:ethics}. Next steps: independent
 replications; screens that combine correlation, flow direction and price
 stability; larger bidder and judge models; cartels that can reply to each other; and
 markets with more firms.
