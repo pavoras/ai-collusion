@@ -132,7 +132,7 @@ def latex_full(rep, judge):
     lines = [r"\begin{table}[htbp]", r"\centering\small", r"\setlength{\tabcolsep}{3pt}",
              r"\caption{Addenda: AUROC versus matched N0 for every detector, original (markets 0--19) and "
              r"replication (markets 20--39), with eligible markets $n$; 95\% intervals are in "
-             r"\texttt{addendum\_summary/summary.json}. Bottom: judge token-budget check.}",
+             r"\texttt{addendum\_summary/summary.json}. Bottom: judge token-limit check.}",
              r"\label{tab:addendum_full}", r"\begin{tabular}{ll" + "c" * (len(keys) + 1) + "}", r"\toprule",
              "Cell & Sample & " + " & ".join(heads) + r" & $n$\\", r"\midrule"]
     for name in ("E1", "C2", "C1-SS"):

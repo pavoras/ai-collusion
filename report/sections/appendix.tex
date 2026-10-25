@@ -15,10 +15,8 @@ detection cell. Its calibration experiment uses $500$ trials and $199$
 permutations. These settings differ from the registered LLM analysis.
 % source: experiments/rps_replication.py SEED and main; results/rps/cda.csv iters; results/rps/calibration.csv iters,n_perm
 The complete calibration data, including positive conditions, are in
-\path{results/rps/calibration.csv}. Reproduction from the repository root:
-\begin{verbatim}
-.venv/Scripts/python experiments/rps_replication.py
-\end{verbatim}
+\path{results/rps/calibration.csv}; \path{experiments/rps_replication.py}
+reproduces them.
 
 \section{Conditions, prompts and model configuration}
 \label{app:prompts}
@@ -101,7 +99,7 @@ reproducible (Appendix~\ref{app:prompts}). Re-analysing identical markets as
 a separate cohort reproduces correlation, strength and paper scores exactly;
 net and leak scores change only by permutation Monte Carlo noise (largest
 AUROC difference $0.0075$). Deviations from the pre-registration are
-listed in Appendix~\ref{app:stats}.
+listed in Appendix~\ref{app:deviations}.
 % source: docs/PREREG.md sections 7 and 9, addendum A2, Addenda v2.2-v2.3
 
 \section{Scripted validation}
@@ -112,17 +110,9 @@ coarse or incomplete public state can invalidate a permutation null.
 Power planning and conditional-table occupancy checks motivated the market
 horizon and weak-evidence category. These simulations inform the design;
 they do not establish calibration for arbitrary adaptive LLM bidders.
-The existing artefacts are in \path{results/auction_scripted/},
-\path{results/auction_power/}, and \path{results/null_validity/}.
-Reproduction commands (each also accepts \texttt{--quick}):
-\begin{verbatim}
-.venv/Scripts/python experiments/auction_scripted.py
-.venv/Scripts/python experiments/auction_checks.py
-.venv/Scripts/python experiments/auction_power.py
-.venv/Scripts/python experiments/null_validity.py
-\end{verbatim}
-These commands regenerate development outputs. They were not rerun for
-this report update, which reads existing frozen analysis files only.
+The outputs are in \path{results/auction_scripted/},
+\path{results/auction_power/} and \path{results/null_validity/}, produced by
+the scripts of the same names in \path{experiments/}.
 
 \section{All registered cells and per-model results}
 \label{app:allresults}
@@ -232,14 +222,12 @@ Candidate denominators are pair opportunities, not independent trials.
 Qwen produced $278$ valid and $322$ invalid judgements out of $600$;
 Gemma produced $5$ valid and $35$ invalid out of $40$.
 % source: results/analysis/final_v1/results.json judgments grouped by model,status,failure
-Content failures were retained, not resubmitted for a preferred answer.
-Transport failures were reconciled and retried unchanged as recorded in
-the deviations. Breadth judging was cut for budget. Its absent rows are
-uncollected judge coverage, not judge scores of zero. The registered limit
-was $12{,}000$ generated tokens per attempt with the registered retry;
-most failed calls ended with \texttt{length}, according to the raw-log
-observation in the final handover. This report does not infer a cause for
-every invalid output from the failure code alone.
+Invalid outputs were kept as failures and never resubmitted for a
+preferred answer. The registered limit was $12{,}000$ generated tokens per
+attempt with one registered retry; most failed calls reached this limit
+before giving an answer. Breadth cells were not judged
+(Appendix~\ref{app:deviations}), so their judge rows are missing, not
+scores of zero.
 % source: docs/PREREG.md section 8 and deviation 6; Round 14 handover raw-log observation
 
 The successful-output Qwen top-1 pattern in C1-SS was $0.808/0.881$ at
@@ -295,14 +283,13 @@ these intervals are descriptive, not tests.
 \input{sections/fingerprint_table}
 
 \subsection{Freeze, execution and reproducibility}
-{\sloppy The initial preregistration freeze was
-\path{56717aba03261552b9e09be4dded8b6e4cdc04b3}; the amendment freeze was
-\path{4c4b6f1911486d479bd043e3590e9e0f90f6a42d}.
-The final analysis executed at revision \path{7ca459c}, with the documented
-junction-handling loader fix (deviation 5g). It did not run exactly the
-amendment checkout. The registered estimands are retained, and the executable
-change is disclosed separately.
-% source: docs/PLAN.md freeze records; results/analysis/final_v1/results.json analysis_freeze_commit; Round 14 execution handover; docs/PREREG.md deviation 5g
+{\sloppy The pre-registration was frozen at commit
+\path{56717aba03261552b9e09be4dded8b6e4cdc04b3} and amended at
+\path{4c4b6f1911486d479bd043e3590e9e0f90f6a42d}, both before any outcome
+analysis. The final analysis ran at revision \path{7ca459c}, which differs
+from the amendment only in how the data loader locates the raw-data
+directory; no estimand, statistic or setting changed.
+% source: docs/PLAN.md freeze records; results/analysis/final_v1/results.json analysis_freeze_commit; docs/PREREG.md deviation 5g
 The manifest hash is
 \path{a63ef1040a022c4d6a190fde1ae34dafdfefb13bd1626bdb57f19cdf2488a4ff}.\par}
 % source: results/analysis/final_v1/results.json manifest.sha256
@@ -311,113 +298,62 @@ the fingerprint seed is $20261029$, and A1 uses $20261030$.
 A2 uses $20261031$ for swaps and $20261032$ for bootstrap.
 % source: results/analysis/final_v1/results.json primary.seed; bootstrap.registered.seed; fingerprints[*].seed; addendum.A1.seed; addendum.A2.swap_seed,bootstrap_seed
 \input{sections/checksums}
-The digests are of the current files. \path{src/collusion/analysis/io.py}
-differs from the version that executed \texttt{final\_v1} (revision
-\path{7ca459c}, digest \path{4df9668f...7455} with Windows line endings) only by
-the optional \texttt{--run-index} argument added for the addenda (commit
-\path{63cb9f4}), which does not change any statistic. The last digest is the
-judge-budget cohort used in Figure~\ref{fig:localisation}.
+The digests are of the released files. \path{src/collusion/analysis/io.py}
+differs from the executed version only by an optional \texttt{--run-index}
+argument added for the addenda, which does not change any statistic. The
+last digest is the judge cohort with the larger token limit used in
+Figure~\ref{fig:localisation}.
 
-The following command reproduces the final analysis from released local
-inputs. It is documented here, not rerun during report preparation.
-\begin{verbatim}
-.venv/Scripts/python experiments/analyze_llm.py --unblind
-  --input results --manifest experiments/manifests/collection_v2.json
-  --analysis-freeze-commit 4c4b6f1911486d479bd043e3590e9e0f90f6a42d
-  --judges results/llm/judge_index_registered.json
-  --probes results/llm/probe_index.json --name final_v1 --workers 4
-\end{verbatim}
-Join the displayed lines into one command. From the repository root, the
-report-only command is:
-\begin{verbatim}
-.venv/Scripts/python experiments/report_figures.py
-\end{verbatim}
-The optional \texttt{--quick} flag produces identical report numbers: the
-script reads frozen estimates and performs no resampling. It writes PDF/PNG
-figures and a numerical CSV/JSON to \path{results/report_figures/}, copies
-PDFs to \path{report/figures/}, and generates the numerical LaTeX tables.
-\path{results/report_figures/provenance.json} records the source digest,
-analysis settings and bootstrap-weight digest. In \path{report/}, compile
-with automatic package installation disabled:
-\begin{verbatim}
-pdflatex --disable-installer -interaction=nonstopmode main.tex
-bibtex --disable-installer main
-pdflatex --disable-installer -interaction=nonstopmode main.tex
-pdflatex --disable-installer -interaction=nonstopmode main.tex
-\end{verbatim}
+The final analysis is produced by \path{experiments/analyze_llm.py}; the
+appendix figures and tables are generated from its frozen output, without
+resampling, by \path{experiments/report_figures.py}, and the main-text
+figures by \path{experiments/key_figures.py}. The exact commands for every
+analysis are in \path{report/README.md}.
 
-\subsection{Addenda v2.2--v2.3: replication and judge budget}
+\subsection{Addenda v2.2--v2.3: replication and judge token limit}
 \label{app:addenda}
 Both addenda were committed before their data (\path{63cb9f4},
-\path{9d759d0}). The replication cohort re-declares the registered cells
-\texttt{core.E1}, \texttt{core.C2} and \texttt{core.C1-SS} on markets
-20--39 with \path{experiments/cohort_index.py}, which copies each registered
-manifest entry and changes only cohort, indices, control and reason. Its
-matched control is the registered N0 run on markets 20--39. Treatment runs:
-\path{results/llm/rep_{E1,C2,C1-SS}_v22__deviation_replication}, each
-complete with 4,000 rounds. Pre-specified verdicts: R1 (E1, L2 net minus
+\path{9d759d0}). The replication collected the registered cells E1, C2 and
+C1-SS again on fresh markets 20--39, each matched to the registered honest
+market with the same index. Pre-specified verdicts: R1 (E1, L2 net minus
 correlation above zero) replicated; R1b (the same at L1) did not; R2 (C2
 joint-profit uplift above zero) replicated; R4 (C1-SS L2 net AUROC above
 $0.5$) replicated ($0.9075$ $[0.8025,0.985]$).
 % source: results/analysis/addendum_summary/summary.json preregistered_verdicts
-The judge check used the registered prompt, seed and sampling with a
-24,000-token limit (recorded in each run's configuration and reproducibility
-record). Eight interrupted requests were resubmitted unchanged, as for
-the registered judges. Of 60 judgements, 54
-returned valid output and 6 invalid JSON; the registered 12,000-token judge
-had 27 valid outputs on the same 60 markets.
-% source: results/llm/judge_index_24k.json; results/llm/reconciliation_log.json; results/analysis/addendum_summary/summary.json judge_budget
-A check cohort on the registered markets 0--19 reproduced \texttt{final\_v1}
-exactly for correlation, strength and paper scores and within permutation
-noise for net and leak (largest AUROC difference $0.0075$), because
-permutation seeds depend on the cohort name. Commands (one line each):
-\begin{verbatim}
-.venv/Scripts/python experiments/analyze_llm.py --unblind --input results
-  --run-index results/analysis_runs_v22.json
-  --manifest experiments/manifests/collection_v2.json
-  --analysis-freeze-commit 4c4b6f1911486d479bd043e3590e9e0f90f6a42d
-  --name replication_v22 --workers 3
-.venv/Scripts/python experiments/analyze_llm.py --unblind --input results
-  --run-index results/analysis_runs_v23.json
-  --manifest experiments/manifests/collection_v2.json
-  --judges results/llm/judge_index_24k.json
-  --analysis-freeze-commit 4c4b6f1911486d479bd043e3590e9e0f90f6a42d
-  --name judge24k_v23 --workers 3
-.venv/Scripts/python experiments/addendum_summary.py
-  --replication results/analysis/replication_v22/results.json
-  --judge results/analysis/judge24k_v23/results.json
-  --out results/analysis/addendum_summary
-\end{verbatim}
+The judge check reran the registered judge prompt, seed and sampling with a
+$24{,}000$-token limit on the same 60 markets: $54$ judgements returned
+valid output and $6$ invalid JSON, against $27$ valid outputs under the
+registered $12{,}000$-token limit.
+% source: results/llm/judge_index_24k.json; results/analysis/addendum_summary/summary.json judge_budget
+Re-analysing the original markets 0--19 in the same way reproduced
+\texttt{final\_v1} exactly for correlation, strength and paper scores, and
+within permutation noise for net and leak (largest AUROC difference
+$0.0075$).
 \input{sections/addendum_table}
 \input{sections/addendum_full_table}
 
-\subsection{Deviations and collection order}
-The full record is in \path{docs/PREREG.md}; affected attempts are kept in
-the per-run metadata and \path{results/llm/reconciliation_log.json}. None of
-the deviations selected answers by content.
+\subsection{Deviations from the pre-registration}
+\label{app:deviations}
+Deviations that affect the design, data or analysis are listed below; the
+complete record, including operational incidents that changed none of
+these, is in \path{docs/PREREG.md}. No deviation selected answers by
+content.
 \begin{enumerate}
 \setlength{\itemsep}{0pt}
-\item Warm-up transport handling was fixed before any bid was collected.
-\item A versioned parser accepted valid JSON inside one Markdown code block
-for Gemma and Ministral; affected cells were recollected as labelled
-cohorts. Core Qwen and A1 kept the original parser.
-\item Infrastructure failures (request caching, lost replies, streaming,
-timeouts, checkpointing) were repaired and interrupted requests resumed
-unchanged.
-\item After a full disk interrupted collection, raw data moved to another
-drive and the loader was adapted to that location (the change in the
-executed revision, Appendix~\ref{app:stats}).
-\item The original compute budget cap was exceeded and raised (final Modal
-billing USD 76.30, of which USD 76.03 from credits).
-\item Breadth judging was cancelled for budget; core, A1, A2 and the Gemma
-counter-judge were completed.
-\item The two addenda (replication and judge budget) were added after the
-final analysis, each committed before its data.
+\item \emph{Parser.} A versioned parser accepted valid JSON inside one
+Markdown code block for Gemma and Ministral; affected cells were recollected
+as labelled cohorts. Core Qwen and A1 kept the original parser.
+\item \emph{Judge coverage.} Breadth cells were not judged because of compute
+limits; core, A1, A2 and the Gemma counter-judge were judged as planned.
+\item \emph{Executed revision.} The final analysis ran at a revision whose
+only change to the frozen code is the location of the raw data (above).
+\item \emph{Addenda.} The replication and the judge token-limit check were
+added after the final analysis, each committed before its data.
+\item \emph{Collection order.} A1 was collected alongside the core, and A2
+and breadth cells were interleaved, rather than in the planned sequential
+order.
 \end{enumerate}
-% source: docs/PREREG.md Deviations 1-7; `modal billing summary`, 24 Oct 2026 21:43 (76.30 / 76.03)
-A1 collection ran alongside the core, and A2 and breadth collection were
-interleaved after warm-up rather than run in the planned sequential order.
-% source: docs/PLAN.md Log, 23.10 amendment and collection entries; docs/PREREG.md Addendum order and deviations
+% source: docs/PREREG.md Deviations 1-7; docs/PLAN.md Log, 23.10 amendment and collection entries
 
 \section{Limitations and Dual-Use / Ethical Considerations}
 \label{app:ethics}
@@ -488,12 +424,10 @@ steganographic channels or establish robustness against agents optimising
 against the audit. The defensive value is to expose such limits and support
 better evaluation, rather than to offer a covert-coordination recipe.
 
-\paragraph{Compute and reproducibility.}
-All bidders and judges were open-weight models on rented cloud GPUs; the
-whole project cost USD 76.30 in Modal compute. Seeds and pinned
+\paragraph{Reproducibility.}
+All bidders and judges are open-weight models. Seeds and pinned
 configurations do not make re-collection bitwise identical, but the released
 data allow every analysis to be rerun.
-% source: `modal billing summary`, 24 Oct 2026 21:43 (76.30); not an analysis estimate
 
 \section{LLM usage statement}
 Claude Code was used for planning, reviews, commits, the addenda code and

@@ -4,6 +4,22 @@ The manuscript uses `results/analysis/final_v1/results.json`, amendment freeze
 `4c4b6f1`, executed at `7ca459c` with the documented loader fix (deviation 5g).
 Results, Discussion, Conclusion and Abstract now use the final numbers.
 
+The final analysis itself (frozen code, registered markets) is reproduced with:
+
+```powershell
+.venv/Scripts/python experiments/analyze_llm.py --unblind --input results --manifest experiments/manifests/collection_v2.json --analysis-freeze-commit 4c4b6f1911486d479bd043e3590e9e0f90f6a42d --judges results/llm/judge_index_registered.json --probes results/llm/probe_index.json --name final_v1 --workers 4
+```
+
+Development checks cited in Appendices A and D (each also accepts `--quick`):
+
+```powershell
+.venv/Scripts/python experiments/rps_replication.py
+.venv/Scripts/python experiments/auction_scripted.py
+.venv/Scripts/python experiments/auction_checks.py
+.venv/Scripts/python experiments/auction_power.py
+.venv/Scripts/python experiments/null_validity.py
+```
+
 Two pre-registered addenda were added after the final analysis (`docs/PREREG.md`,
 Addenda v2.2 and v2.3, deviation 7): an out-of-sample replication of E1, C2 and
 C1-SS on markets 20-39 and a 24,000-token judge check. Their statistics come from
@@ -76,8 +92,8 @@ the arXiv API, Crossref or the GitHub API. The sprint repository listed in the o
 `soumya-nayak-commits/collusion-sprint` returned 404; the matching public repository of that
 account (`collusion-detetction`, Question 1.4) is cited with commit and access date.
 
-Modal billing: USD 70.35 before the addenda, USD 76.30 metered after them
-(USD 76.03 from credits). Remaining editorial items: release URLs and Marvin's
-final substantive review. Remaining scientific
+Modal billing (repository record only, not in the report since 25 Oct): USD 70.35 before
+the addenda, USD 76.30 metered after them (USD 76.03 from credits). Repository URL is in the
+report. Remaining scientific
 limits: anti-conservative probe leak inference, failure-conditioned judge subsets,
 and the unaudited bias/Monte Carlo contributions to fingerprint intervals.

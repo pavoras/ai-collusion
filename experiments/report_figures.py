@@ -330,7 +330,7 @@ def addendum_tables(data):
 
 def judge_tables(data):
     counts = Counter((j["model"], j["cell"], j["level"], j["status"], j["failure"]) for j in data["judgments"])
-    lines = longtable_start("Judge completion and content failures, including every attempted cell and access level. Invalid entries failed to return valid JSON under the registered budget and retry rule.",
+    lines = longtable_start("Judge completion and content failures, including every attempted cell and access level. Invalid entries failed to return valid JSON under the registered token limit and retry rule.",
                             "@{}llrrr@{}", "Judge / cell & Level & Total & Valid & Invalid JSON")
     groups = sorted(set(k[:3] for k in counts))
     for model, cell, level in groups:

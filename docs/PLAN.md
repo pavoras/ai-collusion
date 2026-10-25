@@ -232,3 +232,6 @@ frischem Clone. Keine Zahl im Report ohne reproduzierbaren Lauf.
   Bildunterschriften mit Kernaussage, Log-Basis in Methoden, Ministral- und Judge-Formulierungen präzisiert,
   Diskussion gestrafft (Praxispunkt Preis-Screens, ein Limitations-Absatz), Infrastruktur-Abweichungen im Anhang
   gekürzt, Fingerprint-Tabelle verständlicher, alle TODO-Marker entfernt. Haupttext 8 Seiten, gesamt 37.
+- 25.10. (spät, Format): Auf Marvins Wunsch alle rein technischen Betriebsdetails aus dem Bericht entfernt
+  (Plattenausfall, Billing, Transport/Retry, Verzeichniswechsel, Befehlsblöcke); Abweichungsliste auf die fünf
+  Punkte reduziert, die Design, Daten oder Auswertung betreffen; Befehle in `report/README.md`. Gesamt 36 Seiten.
