@@ -11,8 +11,7 @@
 - Apart Discord: https://discord.gg/dYUWDm7Ben
 - Contact: sprints@apartresearch.com
 - Deadline: Sunday 25.10. 23:59 AoE = **Monday 26.10. 12:59 German time**
-- German briefing with schedule, all 12 questions, rules and judging:
-  `../Job Search/Bewerbungsunterlagen/4_Bewerbungen/2026-10_Apart-Research_Special-Projects-Manager/Sprint_AI_Collusion.md`
+- A German briefing with schedule, all 12 questions, rules and judging is kept locally (not in the repo).
 
 ## Question 1.4
 
