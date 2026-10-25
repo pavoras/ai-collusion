@@ -218,3 +218,10 @@ frischem Clone. Keine Zahl im Report ohne reproduzierbaren Lauf.
   die korrigierte Regel das Kartellpaar in 49 von 60 Märkten mit Chat, nie ein falsches Paar, 1 Fehlalarm in 40;
   Richtung gepoolt sichtbar (Kartell beidseitig, Spion einseitig), pro Markt nur 4 von 20 Spionagemärkten. Alte
   Abbildungen A/B in Anhang D. Haupttext 8 Seiten.
+- 25.10. (Abend): Marvins Fragen (Pool-Analyse, Simulationsvergleich, Paper/Rose/andere Teilnehmer, Fokus,
+  Modellgrößen/Labore). Ergänzt: Abschnitt „Why this focus“ in der Einleitung; Diskussion mit Simulation vs.
+  Beobachtung (neue Abb. 7: Fehlalarme wie vorhergesagt, Trefferquote deutlich niedriger, Spion 0 % statt 100 %)
+  und Vergleich mit Bonjour, Raj-Taware, soumya-nayak, Rose et al.; neue Abb. 6: Treffer nach Rundenzahl
+  (Kartell zwei starke: 6/9/16 von 20 nach 50/100/200 Runden) und andere Modelle (Qwen-4B 18/20, Gemma-12B 18/20,
+  Ministral-8B 11/20 mit 6/20 Fehlalarmen, gemischte Märkte 16/20 und 19/20). Abb. 3 (Flussrichtung) neu gestaltet;
+  Abb. 2 bleibt als Balken (Marvin). Methodendetails in Anhang C verschoben; Haupttext 8 Seiten.

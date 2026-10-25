@@ -81,20 +81,22 @@ from these files; they are not typed by hand.
 
 ## Main-text figures (revised 25 Oct 2026)
 
-After Marvin's review the main text was rewritten in plain language around five
-figures rendered by `experiments/key_figures.py` from frozen outputs only:
-Figure 1 design schematic (no data); Figure 2 alarm outcomes (right pair / wrong pair
-or false alarm / no alarm; `all_cells[*].correct_unique, wrong_pair, abstention,
-any_candidate`); Figure 3 pooled flow diagrams (`fingerprints[0,2,3,4].terms`; an arrow
-is drawn only when the pooled 95% interval excludes zero, width proportional to the
-estimate); Figure 4 AUROC of net influence vs. correlation (`all_cells[*].auroc`);
-Figure 5 profit gain with alarm counts (`behaviour[*]`, `all_cells[*].correct_unique`)
-and the 24k judge vs. net influence on the same markets
-(`judge24k_v23 judge_comparisons[0,4]`). `results/report_figures/key_figure_numbers.csv`
-lists all 108 plotted values with JSON paths; all were re-checked automatically
-(0 mismatches). Former Figures A/B (`report_figures.py`) moved to Appendix D; the
-behaviour table and Table 1 (replication) are in the appendix. "Bids only" = L1,
-"bids + costs" = L2.
+The main text is written in plain language around seven figures rendered by
+`experiments/key_figures.py` from frozen outputs only (LaTeX numbering in brackets):
+`figure_1` design schematic, no data [Fig. 1]; `figure_2` alarm outcomes per market type
+(`all_cells[*].correct_unique, wrong_pair, abstention, any_candidate`) [Fig. 2];
+`figure_3` pooled flow diagrams (`fingerprints[0,2,3,4].terms`; arrow only when the pooled
+95% interval excludes zero; verdict texts are asserted against the data) [Fig. 3];
+`figure_4` AUROC net influence vs. correlation [Fig. 4]; `figure_5` quiet cartel and the 24k
+judge (`judge24k_v23 judge_comparisons[0,4]`) [Fig. 5]; `figure_7` alarm hits by observed
+rounds (prefix 50/100/200) and other bidder models with their own honest controls [Fig. 6];
+`figure_6` scripted-simulation expectations (`results/auction_power/full/{power,leaks,false_alarms}.csv`,
+iid population, q = 1, 200 rounds, n = 20) versus LLM observations [Fig. 7].
+`results/report_figures/key_figure_numbers.csv` lists every plotted value with its source path;
+all were re-checked automatically against JSON or CSV (0 mismatches). Comparisons with
+concurrent work quote the READMEs of the cited commits (Raj-Taware 0e2aa44, soumya-nayak-commits
+ee0c111) and the arXiv abstract of Rose et al. (2604.01151), read on 25 Oct 2026. Former
+Figures A/B are in Appendix E; detailed method text moved to Appendix C.
 
 ## Claim boundaries implemented
 

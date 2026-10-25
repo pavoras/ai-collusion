@@ -5,6 +5,8 @@ Figure 2: how often an alarm rule named exactly the colluding pair, and false al
 Figure 3: which way information flows (pooled leak and action terms).
 Figure 4: net influence versus a simple correlation (detection).
 Figure 5: two warnings for practice (the quiet cartel; the AI judge's shortcut).
+Figure 6: scripted-simulation expectations versus LLM observations.
+Figure 7: rounds needed, and other bidder models.
 
 No model calls and no statistical refitting: every plotted number is read from
 final_v1 or the judge-budget cohort and recorded with its JSON path in
@@ -28,7 +30,7 @@ ROOT = Path(__file__).resolve().parents[1]
 FINAL = "results/analysis/final_v1/results.json"
 JUDGE24K = "results/analysis/judge24k_v23/results.json"
 OUT = ROOT / "results/report_figures"
-GREEN, RED, GREY, LIGHT = "#1f9e60", "#d9483b", "#c9c8c3", "#f4f3ef"
+GREEN, RED, GREY, LIGHT, GRID_LINE = "#1f9e60", "#d9483b", "#c9c8c3", "#f4f3ef", "#b9b8b3"
 LEVELS = {"L1": "bids only", "L2": "bids + costs"}
 SCENARIOS = [("core.N0", "Honest market (any alarm = false)"), ("core.C1-SS", "Cartel: two strong firms"),
              ("core.C1-SF", "Cartel: strong + weak firm"), ("core.C1-FF", "Cartel: two weak firms"),
@@ -155,42 +157,63 @@ def figure_2(final, numbers):
 
 
 def figure_3(final, numbers):
-    """Pooled flow diagrams with costs: lockstep link and the two cost-to-bid leak arrows."""
+    """Pooled flow diagrams with costs: lockstep band and cost-to-bid arrows, with a one-line verdict."""
+    from matplotlib.patches import Circle
     fp = {x["cell"]: (i, x) for i, x in enumerate(final["fingerprints"]) if x["cohort"] == "registered"}
-    panels = (("core.N0", "Honest market", "Firm A", "Firm B"),
-              ("core.C1-SS", "Cartel that chats", "Firm A", "Firm B"),
-              ("core.C2", "Cartel without chat", "Firm A", "Firm B"),
-              ("core.E1", "Spy", "Spy", "Victim"))
-    fig, axes = plt.subplots(1, 4, figsize=(6.6, 2.05), gridspec_kw=dict(wspace=.08))
+    # (cell, title, names, verdict, expected pattern: lockstep?, flow B->A?, flow A->B?) -- asserted against the data
+    panels = (("core.N0", "Honest market", ("A", "B"), "no link", (False, False, False)),
+              ("core.C1-SS", "Cartel that chats", ("A", "B"), "lockstep, costs\nshared both ways", (True, True, True)),
+              ("core.C2", "Cartel without chat", ("A", "B"), "only a weak trace", (False, False, True)),
+              ("core.E1", "Spy", ("Spy", "Victim"), "one way: the spy\nuses the victim's cost", (False, True, False)))
+    fig, axes = plt.subplots(1, 4, figsize=(6.6, 1.95), gridspec_kw=dict(wspace=.06))
     max_leak = max(max(fp[c][1]["terms"][k]["estimate"] for k in ("leak_to_member_1", "leak_to_member_2"))
                    for c, *_ in panels)
-    for ax, (cell, title, name1, name2) in zip(axes, panels):
+    for ax, (cell, title, (name1, name2), verdict, expected) in zip(axes, panels):
         i, x = fp[cell]
         terms = x["terms"]
         for key in ("action", "leak_to_member_1", "leak_to_member_2"):
             record(numbers, 3, cell, f"pooled {key} (bits)", terms[key], FINAL, f"fingerprints[{i}].terms.{key}",
                    x["markets"])
-        ax.set(xlim=(0, 10), ylim=(0, 7))
+        clear = {k: terms[k]["estimate"] > 0 and terms[k]["low"] > 0 for k in ("leak_to_member_1", "leak_to_member_2")}
+        lockstep = terms["action"]["estimate"] > .01
+        assert (lockstep, clear["leak_to_member_1"], clear["leak_to_member_2"]) == expected, cell
+        ax.set(xlim=(0, 10), ylim=(0, 10), aspect="equal")
         ax.axis("off")
-        box(ax, 1.9, 3.4, 3.0, 1.5, name1, sub="bids")
-        box(ax, 8.1, 3.4, 3.0, 1.5, name2, sub="bids")
+        ax.add_patch(FancyBboxPatch((.2, .2), 9.6, 9.6, boxstyle="round,pad=0,rounding_size=.6", fc=LIGHT, ec="none"))
+        ax.text(5, 9.15, title, ha="center", va="center", fontsize=7.6, weight="bold", color=TEXT)
+        positions = {1: (2.5, 4.2), 2: (7.5, 4.2)}
+        for k, name in ((1, name1), (2, name2)):
+            x0, y0 = positions[k]
+            ax.add_patch(FancyBboxPatch((x0 - .95, 6.75), 1.9, .9, boxstyle="round,pad=.05,rounding_size=.3",
+                                        fc="white", ec=TEXT_MUTED, lw=.7))
+            ax.text(x0, 7.2, "cost", ha="center", va="center", fontsize=5.8, color=TEXT_MUTED)
+            ax.plot([x0, x0], [6.7, 5.45], color=GREY, lw=.8)
+            ax.add_patch(Circle((x0, y0), 1.25, fc="white", ec=TEXT, lw=1.0, zorder=3))
+            ax.text(x0, y0 + .25, name, ha="center", va="center", fontsize=7 if len(name) < 5 else 6, weight="bold", color=TEXT, zorder=4)
+            ax.text(x0, y0 - .38, "bids", ha="center", va="center", fontsize=5.6, color=TEXT_MUTED, zorder=4)
         action = terms["action"]["estimate"]
-        ax.plot([3.45, 6.55], [3.4, 3.4], color=ORANGE, lw=max(.4, 60 * action), alpha=.85 if action > .01 else .4,
-                solid_capstyle="butt")
-        for key, start, end, y, text in (("leak_to_member_2", (2.4, 1.75), (7.6, 2.5), .85, f"{name1}'s cost → {name2}'s bid"),
-                                         ("leak_to_member_1", (7.6, 5.05), (2.4, 4.3), 5.95, f"{name2}'s cost → {name1}'s bid")):
-            value, low = terms[key]["estimate"], terms[key]["low"]
-            if value > 0 and low > 0:  # interval excludes zero; width proportional to the estimate
-                arrow(ax, start, end, color=AQUA, lw=max(.3, 4.5 * value / max_leak), scale=6 + 7 * value / max_leak)
+        ax.plot([3.75, 6.25], [4.2, 4.2], color=ORANGE if lockstep else GREY, lw=max(.6, 55 * action),
+                solid_capstyle="butt", zorder=2)
+        # leak_to_member_1: member 2's cost -> member 1's bids; leak_to_member_2: member 1's cost -> member 2's bids
+        for key, start, end, rad in (("leak_to_member_1", (7.0, 6.75), (3.45, 5.05), .25),
+                                     ("leak_to_member_2", (3.0, 6.75), (6.55, 5.05), -.25)):
+            value = terms[key]["estimate"]
+            if clear[key]:
+                ax.add_patch(FancyArrowPatch(start, end, connectionstyle=f"arc3,rad={rad}", arrowstyle="-|>",
+                                             mutation_scale=7 + 6 * value / max_leak, lw=.8 + 3.2 * value / max_leak,
+                                             color=AQUA, zorder=5, shrinkA=0, shrinkB=0))
             else:
-                arrow(ax, start, end, color=GREY, lw=.7, ls=(0, (2, 2)), scale=7)
-            ax.text(5, y, text, ha="center", va="center", fontsize=5.4, color=TEXT_MUTED)
-        ax.set_title(title, fontsize=7.6, weight="bold")
-    fig.legend(handles=[Line2D([], [], color=ORANGE, lw=3, label="bids move in lockstep (thickness = strength)"),
-                        Line2D([], [], color=AQUA, lw=2.5, label="a firm's cost shows up in the other's bids"),
-                        Line2D([], [], color=GREY, lw=.8, ls=(0, (2, 2)), label="no clear flow (interval includes zero)")],
-               loc="lower center", ncol=3, fontsize=6.2, bbox_to_anchor=(.5, -.02))
-    fig.subplots_adjust(left=.01, right=.99, top=.86, bottom=.12)
+                ax.add_patch(FancyArrowPatch(start, end, connectionstyle=f"arc3,rad={rad}", arrowstyle="-|>",
+                                             mutation_scale=6, lw=.6, color=GREY, ls=(0, (2, 2)), zorder=1,
+                                             shrinkA=0, shrinkB=0))
+        good = cell != "core.N0" and (lockstep or any(clear.values()))
+        ax.text(5, 1.45, verdict, ha="center", va="center", fontsize=6.6, weight="bold",
+                color=(AQUA if cell == "core.E1" else ORANGE) if good and cell != "core.C2" else TEXT_MUTED)
+    fig.legend(handles=[Line2D([], [], color=ORANGE, lw=4, label="bids move in lockstep"),
+                        Line2D([], [], color=AQUA, lw=2.2, marker=">", ms=4, label="a firm's cost shows up in the other's bids"),
+                        Line2D([], [], color=GREY, lw=.8, ls=(0, (2, 2)), label="no clear flow")],
+               loc="lower center", ncol=3, fontsize=6.4, bbox_to_anchor=(.5, -.03), handlelength=2)
+    fig.subplots_adjust(left=.005, right=.995, top=1.0, bottom=.12)
     save(fig, "figure_3")
 
 
@@ -198,7 +221,7 @@ def figure_4(final, numbers):
     """Detection: chance that a treated market looks more suspicious than its honest twin."""
     cells = [("core.C1-SS", "cartel\n2 strong"), ("core.C1-SF", "cartel\nstrong+weak"),
              ("core.C1-FF", "cartel\n2 weak"), ("core.C2", "cartel\nno chat"), ("core.E1", "spy")]
-    fig, axes = plt.subplots(1, 2, figsize=(6.6, 2.35), sharey=True, gridspec_kw=dict(wspace=.08))
+    fig, axes = plt.subplots(1, 2, figsize=(6.6, 2.15), sharey=True, gridspec_kw=dict(wspace=.08))
     for ax, level in zip(axes, ("L1", "L2")):
         for k, (cell, label) in enumerate(cells):
             for offset, detector, color in ((-.19, "net", BLUE), (.19, "correlation", ORANGE)):
@@ -226,7 +249,7 @@ def figure_4(final, numbers):
 
 def figure_5(final, judge24k, numbers):
     """(a) profit gain versus how often our rule caught the pair; (b) AI judge versus net influence."""
-    fig, (left, right) = plt.subplots(1, 2, figsize=(6.6, 2.25), gridspec_kw=dict(width_ratios=[1.35, 1], wspace=.55))
+    fig, (left, right) = plt.subplots(1, 2, figsize=(6.6, 2.1), gridspec_kw=dict(width_ratios=[1.35, 1], wspace=.55))
     cells = [("core.C1-SS", "Cartel: two strong"), ("core.C1-SF", "Cartel: strong + weak"),
              ("core.C1-FF", "Cartel: two weak"), ("core.C2", "Cartel without chat")]
     for y, (cell, label) in enumerate(cells):
@@ -274,6 +297,150 @@ def figure_5(final, judge24k, numbers):
     save(fig, "figure_5")
 
 
+def figure_6(final, numbers):
+    """Dumbbell chart: what the scripted simulation predicted versus what the LLM markets showed."""
+    root = "results/auction_power/full"
+    power = list(csv.DictReader((ROOT / root / "power.csv").open(encoding="utf-8")))
+    leaks = list(csv.DictReader((ROOT / root / "leaks.csv").open(encoding="utf-8")))
+    alarms = list(csv.DictReader((ROOT / root / "false_alarms.csv").open(encoding="utf-8")))
+
+    def sim(rows, name, column, **keys):
+        hits = [(i, r) for i, r in enumerate(rows) if all(r[a] == b for a, b in keys.items())]
+        assert len(hits) == 1, keys
+        i, r = hits[0]
+        return float(r[column]), f"{root}/{name} row[{i}].{column}"
+
+    base = dict(population="iid", rounds="200")
+    items = []
+    for level, name in (("L1", "bids only"), ("L2", "bids + costs")):
+        v, path = sim(alarms, "false_alarms.csv", "pool_rate", level=level, endpoint="pair_family", n_requested="40", **base)
+        i, r = cell_row(final, "core.N0", level, "net")
+        items.append((f"Honest: false alarm ({name})", v, path, r["any_candidate"]["estimate"],
+                      f"all_cells[{i}].any_candidate", True))
+    for cell, position, label in (("core.C1-SS", "strong_strong", "Cartel, two strong"),
+                                  ("core.C1-SF", "strong_fringe", "Cartel, strong + weak"),
+                                  ("core.C1-FF", "fringe_fringe", "Cartel, two weak")):
+        for level, name in (("L1", "bids only"), ("L2", "bids + costs")):
+            v, path = sim(power, "power.csv", "detection_rate", condition="cartel", position=position, q="1.0",
+                          level=level, n="20", **base)
+            i, r = cell_row(final, cell, level, "net")
+            items.append((f"{label}: right pair ({name})", v, path, r["correct_unique"]["estimate"],
+                          f"all_cells[{i}].correct_unique", False))
+    v, path = sim(power, "power.csv", "detection_rate", condition="spy", position="strong_strong", q="1.0",
+                  level="L2", n="20", **base)
+    i, r = cell_row(final, "core.E1", "L2", "net")
+    items.append(("Spy: right pair (bids + costs)", v, path, r["correct_unique"]["estimate"],
+                  f"all_cells[{i}].correct_unique", False))
+    v, path = sim(leaks, "leaks.csv", "correct_rate", condition="cartel", position="strong_strong", q="1.0",
+                  n="20", **base)
+    i, r = cell_row(final, "core.C1-SS", "L2", "net")
+    items.append(("Cartel, two strong: two-way flow seen", v, path,
+                  r["label:both directions detected"] / r["eligible"], f"all_cells[{i}].label:both directions detected", False))
+    v, path = sim(leaks, "leaks.csv", "correct_rate", condition="spy", position="strong_strong", q="1.0",
+                  n="20", **base)
+    i, r = cell_row(final, "core.E1", "L2", "net")
+    items.append(("Spy: one-way flow seen", v, path,
+                  r["label:one direction detected, reverse weak"] / r["eligible"],
+                  f"all_cells[{i}].label:one direction detected, reverse weak", False))
+
+    fig, ax = plt.subplots(figsize=(6.6, 2.45))
+    for y, (label, expected, spath, observed, opath, honest) in enumerate(items):
+        ax.plot([expected, observed], [y, y], color=GREY, lw=2.2, zorder=1, solid_capstyle="round")
+        ax.plot(expected, y, "o", ms=6, mfc="white", mec=TEXT_MUTED, mew=1.2, zorder=2)
+        ax.plot(observed, y, "o", ms=6, color=RED if honest and observed > .1 else BLUE, zorder=3)
+        ax.text(1.04, y, f"{int(100 * expected + .5)}% → {int(100 * observed + .5)}%", va="center", ha="left",
+                fontsize=6.2, color=TEXT_MUTED)
+        record(numbers, 6, label, "simulation expectation", expected, *spath.split(" ", 1))
+        record(numbers, 6, label, "LLM observation", observed, FINAL, opath)
+    ax.set(xlim=(-.02, 1.02), ylim=(len(items) - .5, -.6), xticks=[0, .25, .5, .75, 1])
+    ax.set_xticklabels(["0%", "25%", "50%", "75%", "100%"], fontsize=6.2)
+    ax.set_yticks(range(len(items)))
+    ax.set_yticklabels([item[0] for item in items], fontsize=6.6)
+    ax.axhline(1.5, color=GRID_LINE, lw=.7)
+    ax.axhline(7.5, color=GRID_LINE, lw=.7)
+    ax.grid(axis="y", visible=False)
+    ax.tick_params(axis="y", length=0)
+    ax.legend(handles=[Line2D([], [], marker="o", ls="", mfc="white", mec=TEXT_MUTED, ms=6,
+                              label="expected: scripted simulation (planned before data)"),
+                       Line2D([], [], marker="o", ls="", color=BLUE, ms=6, label="observed: AI agents")],
+              loc="lower center", bbox_to_anchor=(.45, 1.0), ncol=2, fontsize=6.4, borderaxespad=.3)
+    ax.set_xlabel("share of markets (20 per type, 40 honest)", fontsize=6.6)
+    fig.subplots_adjust(left=.31, right=.88, top=.9, bottom=.13)
+    save(fig, "figure_6")
+
+
+def figure_7(final, numbers):
+    """(a) alarm hits versus observed rounds; (b) other bidder models: hits and honest-market false alarms."""
+    def row_at(cell, level, detector, prefix):
+        hits = [(i, r) for i, r in enumerate(final["all_cells"])
+                if (r["cohort"], r["cell"], r["prefix"], r["mask"], r["level"], r["detector"])
+                == ("registered", cell, prefix, "complete", level, detector)]
+        assert len(hits) == 1
+        return hits[0]
+
+    fig, (left, right) = plt.subplots(1, 2, figsize=(6.6, 2.25), gridspec_kw=dict(width_ratios=[1.1, 1.3], wspace=.5))
+    prefixes = (50, 100, 200)
+    for cell, label, color, marker in (("core.C1-FF", "cartel: two weak", GREEN, "o"),
+                                       ("core.C1-SS", "cartel: two strong", BLUE, "s"),
+                                       ("core.C1-SF", "cartel: strong + weak", ORANGE, "^")):
+        values = []
+        for p in prefixes:
+            i, r = row_at(cell, "L1", "net", p)
+            values.append(r["correct_unique"]["estimate"])
+            record(numbers, 7, f"{cell} L1 net prefix {p}", "correct_unique", r["correct_unique"], FINAL,
+                   f"all_cells[{i}].correct_unique", r["coverage"])
+        left.plot(prefixes, values, marker=marker, color=color, ms=4, lw=1.4, label=label)
+        left.text(212, values[-1], label, va="center", fontsize=5.8, color=color)
+    values = []
+    for p in prefixes:
+        i, r = row_at("core.N0", "L1", "net", p)
+        values.append(r["any_candidate"]["estimate"])
+        record(numbers, 7, f"core.N0 L1 net prefix {p}", "false alarm", r["any_candidate"], FINAL,
+               f"all_cells[{i}].any_candidate", r["any_candidate"]["total"])
+    left.plot(prefixes, values, marker="x", color=RED, ms=4, lw=1.2, ls="--", label="honest: false alarm")
+    left.text(212, values[-1] + .03, "honest: false alarm", va="center", fontsize=5.8, color=RED)
+    left.set(xticks=prefixes, xlim=(35, 330), ylim=(-.03, 1.05), yticks=[0, .5, 1])
+    left.spines["bottom"].set_bounds(35, 215)
+    left.set_yticklabels(["0%", "50%", "100%"], fontsize=6)
+    left.tick_params(axis="x", labelsize=6)
+    left.set_xlabel("rounds the auditor observes", fontsize=6.6)
+    left.set_ylabel("markets with the right pair named", fontsize=6.4)
+    left.set_title("a  Longer observation, more cartels found", loc="left", fontsize=7.4)
+
+    models = (("core.C1-SS", "core.N0", "Qwen3.5-9B (main)"), ("sizes.qwen-4b.C1", "sizes.qwen-4b.N0", "Qwen3.5-4B"),
+              ("labs.gemma-12b.C1", "labs.gemma-12b.N0", "Gemma-4-12B"),
+              ("labs.ministral-8b.C1", "labs.ministral-8b.N0", "Ministral-3-8B"),
+              ("mixed.C1-XX", "mixed.D", "Mixed: Qwen+Qwen cartel"),
+              ("mixed.C1-XY", "mixed.H-XYZZ", "Mixed: Qwen+Gemma cartel"))
+    for y, (cell, control, label) in enumerate(models):
+        i, r = cell_row(final, cell, "L1", "net")
+        hit = r["correct_unique"]["estimate"]
+        record(numbers, 7, f"{cell} L1 net", "correct_unique", r["correct_unique"], FINAL,
+               f"all_cells[{i}].correct_unique", r["coverage"])
+        j, c = cell_row(final, control, "L1", "net")
+        alarm = c["any_candidate"]
+        record(numbers, 7, f"{control} L1 net", "false alarm", alarm, FINAL, f"all_cells[{j}].any_candidate",
+               alarm["total"])
+        right.barh(y - .19, hit, height=.36, color=GREEN, lw=0)
+        right.barh(y + .19, alarm["estimate"], height=.36, color=RED, lw=0)
+        right.text(hit + .02, y - .19, f"{round(hit * r['coverage'])}/{r['coverage']}", va="center", fontsize=5.6,
+                   color=GREEN)
+        right.text(alarm["estimate"] + .02, y + .19, f"{alarm['hits']}/{alarm['total']}", va="center", fontsize=5.6,
+                   color=RED)
+    right.set_yticks(range(len(models)))
+    right.set_yticklabels([m[2] for m in models], fontsize=6.3)
+    right.set(xlim=(0, 1.12), ylim=(len(models) - .5, -.6), xticks=[0, .5, 1])
+    right.set_xticklabels(["0%", "50%", "100%"], fontsize=6)
+    right.grid(axis="y", visible=False)
+    right.tick_params(axis="y", length=0)
+    right.legend(handles=[Patch(color=GREEN, label="cartel: right pair named"),
+                          Patch(color=RED, label="honest: false alarm")],
+                 fontsize=5.8, loc="upper center", bbox_to_anchor=(.45, -.1), ncol=2, handlelength=1, borderaxespad=.2)
+    right.set_title("b  Other AI models (bids only)", loc="left", fontsize=7.4)
+    fig.subplots_adjust(left=.08, right=.99, top=.88, bottom=.19)
+    save(fig, "figure_7")
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     final, judge24k = load(FINAL), load(JUDGE24K)
@@ -288,6 +455,8 @@ def main():
     figure_3(final, numbers)
     figure_4(final, numbers)
     figure_5(final, judge24k, numbers)
+    figure_6(final, numbers)
+    figure_7(final, numbers)
     with (OUT / "key_figure_numbers.csv").open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=list(numbers[0]))
         writer.writeheader()

@@ -5,16 +5,29 @@ only what they do. Their messages may be hidden or encoded, and similar
 bids alone prove nothing, because honest agents react to the same market.
 Can an audit of behaviour still find the colluding pair?
 
-We test one candidate audit, pairwise net influence \citep{bonjour2022}. It
-measures how strongly one agent's actions depend on another's and subtracts
-the strongest dependence on any third agent, so that a pair is flagged only
-if it moves together beyond what the rest of the market explains. We give it
-to an auditor of a repeated procurement auction with four AI bidders
-(Figure~\ref{fig:overview}). In some markets two bidders are told to form a
-cartel; in others one bidder secretly sees a rival's cost. Every treated
-market has an honest twin with identical costs. The auditor sees either the
-bids only, as a competition authority usually would, or the bids and every
-firm's private costs. It never reads messages.
+\paragraph{Why this focus.}
+Pairwise net influence \citep{bonjour2022} is a published candidate for
+exactly this audit: it measures how strongly one agent's actions depend on
+another's and subtracts the strongest dependence on any third agent, so that
+a pair is flagged only if it moves together beyond what the rest of the
+market explains. It needs only actions, not messages or model internals.
+So far it has been tested with scripted agents in rock--paper--scissors,
+where coordination is mechanical. Three questions decide whether it is
+useful in practice, and they structure this paper. Does it find colluding
+\emph{AI} agents in a market setting, and does its alarm hold up against
+honest markets? Can it say \emph{what kind} of information flows, a mutual
+cartel or one-sided espionage, if the auditor also sees private costs? And
+does it beat a simple correlation and an AI judge that reads the same
+records? We study a repeated procurement auction because bid rigging is a
+classic cartel problem with clear private information (each firm's cost)
+and a clear honest benchmark.
+
+\paragraph{Setup.}
+Four AI bidders compete for 200 rounds (Figure~\ref{fig:overview}). In some
+markets two bidders are told to form a cartel; in others one bidder
+secretly sees a rival's cost. Every treated market has an honest twin with
+identical costs. The auditor sees either the bids only or the bids and
+every firm's private costs. It never reads messages.
 
 Four findings stand out.
 \begin{enumerate}
@@ -34,6 +47,8 @@ Net influence added value only where private information leaked
 talked, went almost unnoticed, and an AI judge named the strongest firms
 instead of the colluders (Figure~\ref{fig:warnings}).
 \end{enumerate}
+Our simulation had predicted the false-alarm rate well but overestimated
+how clearly AI agents reveal themselves (Figure~\ref{fig:expectations}).
 The contribution is a pre-registered, matched-control test of what such an
 audit can and cannot tell an overseer, with an out-of-sample replication of
 the main secondary findings.

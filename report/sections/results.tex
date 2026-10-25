@@ -45,7 +45,8 @@ firm's bids (a ``leak''). Pooled over all markets of a type
 shows strong lockstep and leaks in both directions, consistent with
 partners who tell each other their costs. The spy shows a one-way leak: the victim's
 cost appears in the spy's bids ($0.0047$ bits), not the reverse
-($-0.0004$). The cartel without chat shows almost nothing.
+($-0.0004$). The cartel without chat leaves only a weak one-way trace
+($0.0021$ bits) and no lockstep.
 % source: results/analysis/final_v1/results.json fingerprints[0,2,3,4].terms.action,leak_to_member_1,leak_to_member_2
 These pooled patterns are clear, but single markets are short: the
 leak-based rule named the spy pair alone in only $4$ of $20$ spy markets,
@@ -125,12 +126,34 @@ strong--weak markets, bids + costs).}
 \label{fig:warnings}
 \end{figure}
 
-\subsection{Other results}
-Removing the surveillance warning raised the net AUROC with costs by
-$0.0975$ $[-0.0051,0.2300]$ while profit fell by $0.3478$ per round; this
-does not show deliberate evasion. None of the seven placement-swap
-endpoints survived Holm correction (smallest adjusted $p=0.264$). Gemma-E4B
-and Ministral-3B produced too many invalid bids, so their results are
-unavailable rather than negative. Probes that changed only the partner's
-cost found no resolved bid slope ($0.0135$ $[-0.0035,0.0320]$).
-% source: results/analysis/final_v1/results.json addendum.A1.auroc_differences.L2:net; addendum.A1.behaviour_NW_minus_SS.joint_profit; addendum.A2.endpoints.L2:leak.holm_p_value; all_cells[934,1000,1066,1132].eligible; probes.summaries[0].slope
+\subsection{How many rounds, and other AI models}
+The alarm needs enough rounds. With bids only it named the strong-pair
+cartel in $6$ of $20$ markets after $50$ rounds, $9$ after $100$ and $16$
+after $200$, while false alarms in honest markets stayed at $3$ of $40$ or
+fewer (Figure~\ref{fig:breadth}a).
+% source: results/analysis/final_v1/results.json all_cells[147,173,199].correct_unique; all_cells[3,29,55].any_candidate
+Other models behaved similarly with one exception
+(Figure~\ref{fig:breadth}b). The alarm named the cartel in $18$ of $20$
+markets for Qwen3.5-4B and Gemma-4-12B, and in $16$ and $19$ of $20$ in
+mixed-model markets. For Ministral-3-8B it found only $11$ of $20$ and
+raised false alarms in $6$ of $20$ honest Ministral markets ($3$ of $20$
+for Qwen3.5-4B): calibration that holds for one model need not hold for
+another. Gemma-4-E4B and Ministral-3-3B produced too many invalid bids, so
+their results are unavailable rather than negative.
+% source: results/analysis/final_v1/results.json all_cells[*].correct_unique and any_candidate for sizes.qwen-4b, labs.gemma-12b, labs.ministral-8b, mixed (results/report_figures/key_figure_numbers.csv figure=7); all_cells[934,1000,1066,1132].eligible
+Removing the surveillance warning lowered the cartel's profit by $0.35$
+per round without a resolved change in detection; swapping honest
+same-model placements and changing only the partner's cost in probes gave
+no resolved effects (Appendix~\ref{app:stats}).
+% source: results/analysis/final_v1/results.json addendum.A1.behaviour_NW_minus_SS.joint_profit; addendum.A1.auroc_differences.L2:net; addendum.A2.endpoints.L2:leak.holm_p_value; probes.summaries[0].slope
+
+\begin{figure}[t]
+\centering\includegraphics[width=\linewidth]{figures/figure_7.pdf}
+\caption{(a) Share of cartel markets in which our alarm named the right
+pair, and share of honest markets with a false alarm, by the number of
+rounds observed (bids only, Qwen3.5-9B). (b) The same for other bidder
+models, each against its own honest markets (20 markets; Gemma honest: 14
+eligible; Qwen3.5-9B honest: 40).}
+% source: results/report_figures/key_figure_numbers.csv figure=7
+\label{fig:breadth}
+\end{figure}

@@ -107,3 +107,49 @@ figure,label,metric,n,estimate,low,high,source
 5,core.C1-SS,detector_localisation top1 (24k judge cohort),17,0.7647058823529411,0.5555555555555556,0.9444444444444444,results/analysis/judge24k_v23/results.json judge_comparisons[0].detector_localisation.top1
 5,core.C1-SF,judge_localisation top1 (24k judge cohort),15,0.02222222222222222,0.0,0.05555555555555555,results/analysis/judge24k_v23/results.json judge_comparisons[4].judge_localisation.top1
 5,core.C1-SF,detector_localisation top1 (24k judge cohort),15,0.9333333333333333,0.7857142857142857,1.0,results/analysis/judge24k_v23/results.json judge_comparisons[4].detector_localisation.top1
+6,Honest: false alarm (bids only),simulation expectation,,0.0325,,,results/auction_power/full/false_alarms.csv row[35].pool_rate
+6,Honest: false alarm (bids only),LLM observation,,0.025,,,results/analysis/final_v1/results.json all_cells[55].any_candidate
+6,Honest: false alarm (bids + costs),simulation expectation,,0.045,,,results/auction_power/full/false_alarms.csv row[50].pool_rate
+6,Honest: false alarm (bids + costs),LLM observation,,0.075,,,results/analysis/final_v1/results.json all_cells[62].any_candidate
+6,"Cartel, two strong: right pair (bids only)",simulation expectation,,0.9925,,,results/auction_power/full/power.csv row[102].detection_rate
+6,"Cartel, two strong: right pair (bids only)",LLM observation,,0.8,,,results/analysis/final_v1/results.json all_cells[199].correct_unique
+6,"Cartel, two strong: right pair (bids + costs)",simulation expectation,,0.995,,,results/auction_power/full/power.csv row[107].detection_rate
+6,"Cartel, two strong: right pair (bids + costs)",LLM observation,,0.25,,,results/analysis/final_v1/results.json all_cells[206].correct_unique
+6,"Cartel, strong + weak: right pair (bids only)",simulation expectation,,0.99,,,results/auction_power/full/power.csv row[142].detection_rate
+6,"Cartel, strong + weak: right pair (bids only)",LLM observation,,0.65,,,results/analysis/final_v1/results.json all_cells[400].correct_unique
+6,"Cartel, strong + weak: right pair (bids + costs)",simulation expectation,,0.7625,,,results/auction_power/full/power.csv row[147].detection_rate
+6,"Cartel, strong + weak: right pair (bids + costs)",LLM observation,,0.4,,,results/analysis/final_v1/results.json all_cells[406].correct_unique
+6,"Cartel, two weak: right pair (bids only)",simulation expectation,,0.9925,,,results/auction_power/full/power.csv row[182].detection_rate
+6,"Cartel, two weak: right pair (bids only)",LLM observation,,1.0,,,results/analysis/final_v1/results.json all_cells[466].correct_unique
+6,"Cartel, two weak: right pair (bids + costs)",simulation expectation,,0.9925,,,results/auction_power/full/power.csv row[187].detection_rate
+6,"Cartel, two weak: right pair (bids + costs)",LLM observation,,0.95,,,results/analysis/final_v1/results.json all_cells[472].correct_unique
+6,Spy: right pair (bids + costs),simulation expectation,,0.995,,,results/auction_power/full/power.csv row[227].detection_rate
+6,Spy: right pair (bids + costs),LLM observation,,0.0,,,results/analysis/final_v1/results.json all_cells[340].correct_unique
+6,"Cartel, two strong: two-way flow seen",simulation expectation,,1.0,,,results/auction_power/full/leaks.csv row[52].correct_rate
+6,"Cartel, two strong: two-way flow seen",LLM observation,,0.0,,,results/analysis/final_v1/results.json all_cells[206].label:both directions detected
+6,Spy: one-way flow seen,simulation expectation,,0.8025,,,results/auction_power/full/leaks.csv row[112].correct_rate
+6,Spy: one-way flow seen,LLM observation,,0.2,,,"results/analysis/final_v1/results.json all_cells[340].label:one direction detected, reverse weak"
+7,core.C1-FF L1 net prefix 50,correct_unique,20,0.6,0.38095238095238093,0.8181818181818182,results/analysis/final_v1/results.json all_cells[422].correct_unique
+7,core.C1-FF L1 net prefix 100,correct_unique,20,1.0,1.0,1.0,results/analysis/final_v1/results.json all_cells[444].correct_unique
+7,core.C1-FF L1 net prefix 200,correct_unique,20,1.0,1.0,1.0,results/analysis/final_v1/results.json all_cells[466].correct_unique
+7,core.C1-SS L1 net prefix 50,correct_unique,20,0.3,0.10526315789473684,0.5,results/analysis/final_v1/results.json all_cells[147].correct_unique
+7,core.C1-SS L1 net prefix 100,correct_unique,20,0.45,0.22727272727272727,0.6666666666666666,results/analysis/final_v1/results.json all_cells[173].correct_unique
+7,core.C1-SS L1 net prefix 200,correct_unique,20,0.8,0.6111111111111112,0.9523809523809523,results/analysis/final_v1/results.json all_cells[199].correct_unique
+7,core.C1-SF L1 net prefix 50,correct_unique,20,0.25,0.0625,0.45454545454545453,results/analysis/final_v1/results.json all_cells[356].correct_unique
+7,core.C1-SF L1 net prefix 100,correct_unique,20,0.4,0.18510101010101015,0.625,results/analysis/final_v1/results.json all_cells[378].correct_unique
+7,core.C1-SF L1 net prefix 200,correct_unique,20,0.65,0.42857142857142855,0.85,results/analysis/final_v1/results.json all_cells[400].correct_unique
+7,core.N0 L1 net prefix 50,false alarm,40,0.075,0.01574217985104153,0.20386474873289895,results/analysis/final_v1/results.json all_cells[3].any_candidate
+7,core.N0 L1 net prefix 100,false alarm,40,0.05,0.006113646599350838,0.16919686395941763,results/analysis/final_v1/results.json all_cells[29].any_candidate
+7,core.N0 L1 net prefix 200,false alarm,40,0.025,0.000632744932049419,0.13158585848276572,results/analysis/final_v1/results.json all_cells[55].any_candidate
+7,core.C1-SS L1 net,correct_unique,20,0.8,0.6111111111111112,0.9523809523809523,results/analysis/final_v1/results.json all_cells[199].correct_unique
+7,core.N0 L1 net,false alarm,40,0.025,0.000632744932049419,0.13158585848276572,results/analysis/final_v1/results.json all_cells[55].any_candidate
+7,sizes.qwen-4b.C1 L1 net,correct_unique,20,0.9,0.75,1.0,results/analysis/final_v1/results.json all_cells[862].correct_unique
+7,sizes.qwen-4b.N0 L1 net,false alarm,20,0.15,0.0320709371854637,0.37892682654531396,results/analysis/final_v1/results.json all_cells[796].any_candidate
+7,labs.gemma-12b.C1 L1 net,correct_unique,20,0.9,0.75,1.0,results/analysis/final_v1/results.json all_cells[598].correct_unique
+7,labs.gemma-12b.N0 L1 net,false alarm,14,0.07142857142857142,0.0018067806591253865,0.3386844899318212,results/analysis/final_v1/results.json all_cells[532].any_candidate
+7,labs.ministral-8b.C1 L1 net,correct_unique,20,0.55,0.3333333333333333,0.7727272727272727,results/analysis/final_v1/results.json all_cells[730].correct_unique
+7,labs.ministral-8b.N0 L1 net,false alarm,20,0.3,0.11893159040572769,0.5427891822762891,results/analysis/final_v1/results.json all_cells[664].any_candidate
+7,mixed.C1-XX L1 net,correct_unique,20,0.8,0.6,0.9523809523809523,results/analysis/final_v1/results.json all_cells[1258].correct_unique
+7,mixed.D L1 net,false alarm,20,0.0,0.0,0.16843347098308528,results/analysis/final_v1/results.json all_cells[1192].any_candidate
+7,mixed.C1-XY L1 net,correct_unique,20,0.95,0.8333333333333334,1.0,results/analysis/final_v1/results.json all_cells[1390].correct_unique
+7,mixed.H-XYZZ L1 net,false alarm,20,0.05,0.0012650894979498038,0.24873276277202777,results/analysis/final_v1/results.json all_cells[1324].any_candidate

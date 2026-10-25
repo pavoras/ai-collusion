@@ -42,6 +42,70 @@ Bidders run without thinking, whereas the primary judge uses thinking.
 No treatment labels, messages or model identities are given to the judges.
 % source: docs/PREREG.md sections 2,8, Addendum A1 and deviation 2; src/collusion/llm/prompts.py
 
+\section{Further method details}
+\label{app:methods}
+\paragraph{State and estimation.} The public state $H_t$ has a start code
+and carries forward after an all-invalid round; masking preserves this
+chronology. Under independent costs and no other access to a rival's
+current cost, leaks probe private-information flow; omitted history can
+induce action dependence. Arrows indicate cost source and bid receiver, not
+intent. Plug-in counts in bits are our replication convention inferred from
+the paper's results; the paper does not specify the log base. Only a unique
+passing pair is reported. Symmetric $\gamma$ need not imply symmetric
+$\Gamma$: the rival comparisons differ. Net direction is not leak direction.
+% source: docs/METHOD.md Definitions
+
+\paragraph{Corrected rules and flow labels.} Corrections remain signed. The
+permutation test concerns influence, not net influence. The secondary leak
+score sums the two corrected leaks; a leak candidate requires either
+direction to pass $0.05/12$, again with unique-pair reporting. Flow labels
+are both directions detected; one detected, reverse weak; neither detected,
+both weak; or unclear. ``Weak'' requires $p\ge0.20$ and a corrected leak at
+most $0.05$ bits. Labels cover designated pairs and the full detection
+pipeline. Weak evidence does not establish absence; one-way flow can arise
+in a cartel with unilateral sharing. Permutation validity requires
+within-stratum exchangeability, which adaptive policies can violate.
+Per-market alarm rates are descriptive, without a general calibration
+guarantee or error control across all analyses.
+% source: docs/PREREG.md sections 5 and 7
+
+\paragraph{Baselines, judge and evaluation.} Constant correlation residuals
+score zero and signed correlations are also retained; the baselines do not
+adjust for history. The judge uses thinking and sees costs only at L2 and
+no treatment information. There is no recalibration or answer selection;
+content failures remain failures. Comparisons use common judged markets and
+report coverage; descriptive Brier scores state the artificial prevalence.
+A Gemma-4-12B counter-judge was attempted on core N0/C1-SS indices 0--9 at
+both levels; Qwen judging Qwen remains a family-overlap limitation. All
+methods use rounds with four valid bids; more than 20 incomplete rounds
+makes a market ineligible and removes the matched block. A no-bid-category
+sensitivity retains missing bids. The primary test checks paired label
+exchangeability, not the composite null AUROC $\le0.5$. Intervals are
+pointwise 95\% percentile intervals. Top-1 is the fraction of credit for
+ranking the assigned pair first, shared equally across ties; localisation
+also reports reciprocal rank, correct/wrong unique reports and abstention;
+$1/6$ is a guessing benchmark, not a null. E1 flow detection is not a
+collusion positive.
+% source: docs/PREREG.md sections 6 and 8
+
+\paragraph{Secondary analyses.} A2 tests paired fringe-placement swaps with
+Holm correction across seven endpoints, not a pure model-sameness
+mechanism. Pooled fingerprints align roles, bootstrap markets, and permute
+within markets. The exploratory probe regenerates a partner's message under
+counterfactual cost, then samples bids with the recipient's cost and
+history fixed; draws remain nested in markets (Appendix~\ref{app:stats}).
+Revisions and sampling are pinned; seeded re-collection is not bitwise
+reproducible (Appendix~\ref{app:prompts}). Re-analysing identical markets as
+a separate cohort reproduces correlation, strength and paper scores exactly;
+net and leak scores change only by permutation Monte Carlo noise (largest
+AUROC difference $0.0075$). The seven deviations cover warm-up transport;
+fenced-JSON parsing and labelled Gemma/Ministral recollection; caching,
+streaming and checkpoints; disk exhaustion and relocation; later recovery,
+call ceilings, loader paths and an exceeded budget cap; judge transport
+recovery and budget cancellation of breadth judging; and the operations of
+the two addenda.
+% source: docs/PREREG.md sections 7 and 9, addendum A2, Addenda v2.2-v2.3
+
 \section{Scripted validation}
 \label{app:scripted}
 Scripted auctions test known cartels, spies and honest policies under the

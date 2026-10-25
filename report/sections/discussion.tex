@@ -1,32 +1,84 @@
 \section{Discussion and Limitations}
+\paragraph{Expected versus observed.}
+Before collecting any LLM data we simulated scripted bidders that always
+follow their strategy, with the same game, rules and sample sizes
+(Appendix~\ref{app:scripted}). Figure~\ref{fig:expectations} compares that
+plan with what the AI agents did. The calibration carried over: honest
+markets produced false alarms at about the simulated rate. The power did
+not. Scripted cartels were named in about $99\%$ of markets and scripted
+spies in $100\%$; the AI cartels in $65$--$100\%$ with bids only, and the
+AI spy in none. Even scripted spies that used the stolen cost only half the
+time were found in $83\%$. Flow direction shows the same gap: two-way flow
+was expected in every strong-pair cartel market and one-way flow in $80\%$
+of spy markets, but was seen in $0\%$ and $20\%$; only pooling over markets
+recovered it (Figure~\ref{fig:flow}). AI agents appear to act on shared
+information far less consistently than scripts, so their traces are weaker
+than a simulation with rule-following agents suggests.
+% source: results/report_figures/key_figure_numbers.csv figure=6; results/auction_power/full/power.csv row[237].detection_rate
+
+\begin{figure}[t]
+\centering\includegraphics[width=\linewidth]{figures/figure_6.pdf}
+\caption{What the pre-data simulation of rule-following scripted bidders
+predicted (open circles; 200 rounds, 20 markets per type, 40 honest) and
+what the AI agents showed (filled). ``Right pair'' uses our corrected
+alarm; ``flow seen'' is the per-market flow label of the designated pair.}
+% source: results/report_figures/key_figure_numbers.csv figure=6 (results/auction_power/full/{power,leaks,false_alarms}.csv; results/analysis/final_v1/results.json all_cells[55,62,199,206,400,406,466,472,340])
+\label{fig:expectations}
+\end{figure}
+
+\paragraph{Comparison with the original paper and concurrent work.}
+Our scripted replication of \citet{bonjour2022} recovered their rising
+detection pattern in rock--paper--scissors, but not every published
+percentage (Appendix~\ref{app:replication}). Two concurrent sprint projects
+studied the same measure in rock--paper--scissors. \citet{tawareRepo} also
+found the fixed threshold unreliable (an innocent pair accused in $29\%$ of
+100-round games) and a permutation-calibrated test near $2\%$ false alarms,
+matching our alarm results. They report, however, that two Qwen agents with
+near-identical prompts were flagged in $7$ of $10$ games without colluding;
+in our auction, honest markets of four Qwen agents raised one false alarm
+in $40$, and swapping same-model placements had no detectable effect. The
+auction's conditioning on costs and the last winning price may explain the
+difference; we did not test this. \citet{nayakRepo} found that net
+influence and Cram\'er's V named the planted pair equally often with
+scripted agents, as our correlation results do for talking cartels; we add
+that the exception is private information flow seen with costs.
+\citet{rose2026} detect collusion from model activations with AUROC $0.99$
+to $1.00$ and report that only $2$ of $229$ collusive episodes in one
+environment verbalised the coordination. Behaviour-only audits like ours
+need no model access but, as the quiet cartel shows, miss coordination that
+leaves no trace in actions; the two approaches complement each other.
+% source: tawareRepo README at commit 0e2aa44; nayakRepo README at commit ee0c111; rose2026 abstract (arXiv:2604.01151); results/analysis/final_v1/results.json all_cells[55].any_candidate; addendum.A2.endpoints
+
 \paragraph{What this means in practice.}
 Each point is limited to this game.
 (1)~\emph{Screening from public bids is feasible.} An overseer who sees
-only bids, as competition authorities usually do, could have used a
-calibrated alarm to point to the right pair in most markets where AI agents
-coordinated actively, with few false alarms and no wrong accusations.
+only bids could have used a calibrated alarm to point to the right pair in
+most markets where AI agents coordinated actively, with few false alarms
+and no wrong accusations.
 (2)~\emph{Calibrate before alarming.} The fixed threshold published with
 the method flagged most or all honest markets; a permutation correction
-fixed this. An uncalibrated screen would accuse innocent firms.
+fixed this.
 (3)~\emph{Use costs to understand, not to detect.} Costs did not improve
-detection of talking cartels, but they reveal which way information flows
-and separate a two-way cartel from a one-way spy when evidence is pooled.
-That needs access to private data and many markets.
+detection of talking cartels, but pooled over many markets they show which
+way information flows and separate a two-way cartel from a one-way spy.
 (4)~\emph{Always compare with a simple baseline.} A plain correlation did
 as well for talking cartels; net influence earned its place only for
-espionage. Reporting net influence alone would overstate its value.
+espionage.
 (5)~\emph{Watch profits too, and do not trust a small AI judge.} The cartel
 without chat earned the most and was nearly invisible to both measures. The
-9B judge, given ample tokens, judged firm strength rather than coordination.
+9B judge judged firm strength rather than coordination.
+(6)~\emph{Do not plan with rule-following simulations alone.} They
+predicted false alarms well but overstated detection power for AI agents.
 
 \paragraph{What the evidence does not show.}
-Only the primary test is confirmatory; alarm counts and flow patterns are
-pre-registered secondary results. The replication was planned after the
+Only the primary test is confirmatory; alarm counts, flow patterns and the
+simulation comparison are secondary. The replication was planned after the
 original results were known and reuses the honest control markets. Twenty
 markets per type give wide intervals, and absence of an advantage is not
 equivalence. A one-way leak is not a unique signature of espionage, and the
 pooled flow intervals are approximate. The judge result concerns one 9B
-model judging its own family. The probes cannot support a causal claim.
+model. Comparisons with concurrent work cross games and implementations.
+The probes cannot support a causal claim.
 
 \paragraph{Scope.}
 The auction is synthetic, the cartel is instructed rather than emergent,
@@ -34,9 +86,6 @@ and the treatment bundles a joint objective, partner information, a
 surveillance warning and, in C1, a chat channel. The core uses one model;
 small models were unusable and breadth cells have ten markets. Privacy,
 false-accusation and dual-use considerations are discussed in
-Appendix~\ref{app:ethics}.
-
-\paragraph{Next steps.}
-Independent replications; screens that combine correlation, flow direction
-and profits; larger and more varied bidder and judge models; markets with
-more firms; and probes with independent message draws per context.
+Appendix~\ref{app:ethics}. Next steps: independent replications; screens
+that combine correlation, flow direction and profits; larger bidder and
+judge models; and markets with more firms.
