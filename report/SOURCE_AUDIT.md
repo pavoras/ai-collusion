@@ -100,6 +100,14 @@ concurrent work quote the READMEs of the cited commits (Raj-Taware 0e2aa44, soum
 ee0c111) and the arXiv abstract of Rose et al. (2604.01151), read on 25 Oct 2026. Former
 Figures A/B are in Appendix E; detailed method text moved to Appendix C.
 
+## Post-hoc quiet-cartel bid analysis (25 Oct 2026, not pre-registered)
+
+`experiments/quiet_cartel_bids.py` reads the registered collection (Qwen markets 0-19, designated
+pair, complete rounds) and writes `results/quiet_cartel/summary.json`. Report section 4.4 uses:
+C2 `share_bid_3` 0.9696, `same_bid` 0.9479, `h_bid_given_cost` 0.1627; N0 (same strong pair)
+0.3489, 0.532, 0.7173. The discussion labels it post hoc. Table 1 (main text) replaces the AUROC
+figure, which moved to Appendix E.
+
 ## Claim boundaries implemented
 
 Only the primary within-block label-exchangeability test is confirmatory.

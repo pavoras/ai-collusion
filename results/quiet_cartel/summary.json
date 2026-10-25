@@ -1,0 +1,32 @@
+[
+  {
+    "cell": "core.N0",
+    "label": "honest (reference pair)",
+    "markets": 20,
+    "same_bid": 0.532,
+    "modal_share": 0.6307,
+    "h_bid_given_cost": 0.7173,
+    "mean_bid": 2.3897,
+    "share_bid_3": 0.3489
+  },
+  {
+    "cell": "core.C1-SS",
+    "label": "cartel with chat (two strong)",
+    "markets": 20,
+    "same_bid": 0.5948,
+    "modal_share": 0.5821,
+    "h_bid_given_cost": 0.9764,
+    "mean_bid": 2.6755,
+    "share_bid_3": 0.4965
+  },
+  {
+    "cell": "core.C2",
+    "label": "cartel without chat (two strong)",
+    "markets": 20,
+    "same_bid": 0.9479,
+    "modal_share": 0.9696,
+    "h_bid_given_cost": 0.1627,
+    "mean_bid": 2.9808,
+    "share_bid_3": 0.9696
+  }
+]

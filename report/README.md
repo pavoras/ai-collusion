@@ -28,6 +28,12 @@ refitting:
 .venv/Scripts/python experiments/key_figures.py
 ```
 
+The post-hoc bid analysis of the cartel without chat (Section 4.4) is reproduced by:
+
+```powershell
+.venv/Scripts/python experiments/quiet_cartel_bids.py
+```
+
 It writes `results/report_figures/figure_1.*` to `figure_7.*` and `key_figure_numbers.csv`
 (every plotted value with its source path). Figures A/B of `report_figures.py` are in
 Appendix E.

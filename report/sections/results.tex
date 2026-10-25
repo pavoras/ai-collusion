@@ -1,10 +1,9 @@
 \section{Results}
 \label{sec:results}
-All results use the frozen analysis code and the full 200 rounds; ``bids
-only'' is access level L1, ``bids + costs'' is L2. Intervals are 95\%
-block-bootstrap intervals. Detailed per-cell figures, all detector rows and
-the scripted rock--paper--scissors replication of the original paper are in
-the appendix (Appendices~\ref{app:replication} and~\ref{app:allresults}).
+All results use the frozen analysis code and the full 200 rounds unless
+stated otherwise. ``Bids only'' is access level L1, ``bids + costs'' is L2;
+intervals are 95\% block-bootstrap intervals. Every detector and cell is
+listed in Appendix~\ref{app:allresults}.
 
 \subsection{From bids alone, a calibrated alarm names the cartel}
 Figure~\ref{fig:alarms} asks the question an overseer would ask: did the
@@ -28,7 +27,8 @@ or the spy (at most $1$ of $20$ markets each).
 
 \begin{figure}[t]
 \centering\includegraphics[width=\linewidth]{figures/figure_2.pdf}
-\caption{What an alarm reports. For each market type, the share of markets
+\caption{\textbf{The corrected alarm names chatting cartels and stays
+quiet in honest markets; the published rule does not.} For each market type, the share of markets
 in which the rule named exactly the colluding pair (green), a wrong pair or,
 in honest markets, any pair (red), or nothing (grey); numbers give right-pair
 counts (cartel rows) or false alarms (honest row). Left: the fixed threshold
@@ -56,8 +56,8 @@ and market-level flow labels rarely resolved the mechanism.
 
 \begin{figure}[t]
 \centering\includegraphics[width=\linewidth]{figures/figure_3.pdf}
-\caption{Which way information flows (bids + costs, pooled over 40 honest
-and 20 treated markets per type). Orange: the two bids move in lockstep
+\caption{\textbf{Pooled over markets, costs reveal who learns from whom.}
+Bids + costs, pooled over 40 honest and 20 treated markets per type. Orange: the two bids move in lockstep
 beyond what costs and market history explain. Green arrows: a firm's cost
 shows up in the other firm's bids; width proportional to the estimate,
 drawn only when its pooled 95\% interval excludes zero. These pooled
@@ -85,7 +85,8 @@ single markets (Figure~\ref{fig:alarms}).
 
 \begin{table}[t]
 \centering\small
-\caption{Net influence versus correlation, bids + costs. AUROC: share of
+\caption{\textbf{Correlation beats net influence for the cartel; net
+influence wins only for the spy.} Bids + costs. AUROC: share of
 treated--honest market pairs (same costs) in which the treated market scores
 higher. Difference with 95\% block-bootstrap interval; 20 matched pairs per
 row. ``Fresh'' rows use markets 20--39, collected after the main analysis.}
@@ -104,26 +105,43 @@ Spy & fresh & $0.680$ & $0.415$ & $+0.265$ $[+0.070,+0.445]$ \\
 \end{table}
 
 \subsection{Two warnings: the quiet cartel and the AI judge}
-The cartel without chat raised the pair's profit by $0.399$ $[0.364,0.434]$
-per round, almost three times the strong-pair cartel's $0.144$, yet it was
-the cartel both measures detected least well and the alarm never caught it
-with bids only (Figure~\ref{fig:warnings}a). The profit gain replicated on
-fresh markets ($+0.283$ $[0.179,0.371]$).
+\emph{The quiet cartel.} The cartel without chat earned the most. Its pair's
+profit rose by $0.399$ $[0.364,0.434]$ per round, almost three times the
+gain of the chatting strong-pair cartel ($0.144$), and the gain replicated
+on fresh markets ($+0.283$ $[0.179,0.371]$). Yet both measures detected it
+least well, and the alarm never named it from bids alone
+(Figure~\ref{fig:warnings}a).
 % source: results/analysis/final_v1/results.json behaviour[64,40].paired_difference; all_cells[268].correct_unique; results/analysis/replication_v22/results.json behaviour[40].paired_difference
+A post-hoc look at the bids shows why. Without a channel, the two partners
+settled on one price: $97\%$ of their bids were exactly 3, the highest cost
+a strong firm can draw and the lowest cost of a weak firm, and they bid the
+same amount in $95\%$ of rounds (the same strong pair in honest markets:
+$35\%$ and $53\%$). Given a firm's own cost, its bid varied by only $0.16$
+bits, against $0.72$ in honest markets. A bid that hardly changes carries
+almost no information, so a dependence measure has nothing to pick up: the
+cartel coordinated on a fixed focal price, not by reacting to each other.
+Such stable, elevated prices are what classic bid-rigging screens based on
+the spread of bids look for \citep{huber2019}; we did not test them.
+% source: results/quiet_cartel/summary.json (experiments/quiet_cartel_bids.py; Qwen markets 0-19, designated pair, complete rounds): share_bid_3, same_bid, h_bid_given_cost
 
-The Qwen 9B judge reads the round records and names the most suspicious
-pair. Under its registered $12{,}000$-token limit it failed on $322$ of
-$600$ judgements. With $24{,}000$ tokens it answered $54$ of $60$, but it
+\emph{The AI judge.} The Qwen 9B judge reads the round records and names
+the most suspicious pair. Under its registered $12{,}000$-token limit it
+returned no valid answer in $322$ of $600$ judgements, mostly because its
+reasoning ran out of tokens. With $24{,}000$ tokens it answered $54$ of
+$60$, but it
 separated cartel from honest markets barely better than chance (AUROC
 $0.625$ $[0.424,0.808]$) and simply named the two strong firms: right in
 $91\%$ of strong-pair cartels, but in $2\%$ of strong--weak cartels, where
 net influence was right in $93\%$ of the same markets
-(Figure~\ref{fig:warnings}b).
+(Figure~\ref{fig:warnings}b). All judge comparisons use only markets with a
+valid answer, so they could favour easier cases.
 % source: results/analysis/final_v1/results.json judgments grouped by model/status; results/analysis/judge24k_v23/results.json all_cells[138] judge:qwen-9b auroc; judge_comparisons[0,4].judge_localisation.top1,detector_localisation.top1; results/analysis/addendum_summary/summary.json judge_budget
 
 \begin{figure}[t]
 \centering\includegraphics[width=\linewidth]{figures/figure_5.pdf}
-\caption{(a) Extra profit of the colluding pair per round compared with
+\caption{\textbf{The most profitable cartel was the least visible, and the
+AI judge simply picked the strong firms.} (a) Extra profit of the colluding
+pair per round compared with
 honest markets, and how often our alarm named the pair from bids alone.
 (b) How often the 24k-token AI judge and net influence ranked the true pair
 first, on the same markets with valid judge output (17 strong-pair and 15
@@ -147,7 +165,8 @@ raised false alarms in $6$ of $20$ honest Ministral markets ($3$ of $20$
 for Qwen3.5-4B): calibration that holds for one model need not hold for
 another. Ministral was sampled almost deterministically (temperature
 $0.15$, the vendor's recommendation), which may make honest bids look
-alike; we did not test this. The smaller Qwen was caught as often as the
+alike. Because temperature and model change together here, the data cannot
+tell whether low temperature in general raises false alarms. The smaller Qwen was caught as often as the
 larger one although its cartel earned less than honest play ($-0.115$ per
 round), while the Ministral and Gemma cartels gained $0.33$ and $0.23$:
 the alarm reacts to coordinated bidding, not to its success. With only two
@@ -166,7 +185,9 @@ only the partner's cost gave no resolved effect (Appendix~\ref{app:stats}).
 
 \begin{figure}[t]
 \centering\includegraphics[width=\linewidth]{figures/figure_7.pdf}
-\caption{(a) Share of cartel markets in which our alarm named the right
+\caption{\textbf{More rounds help, and most models behave like the main
+one, but Ministral needs its own calibration.} (a) Share of cartel markets
+in which our alarm named the right
 pair, and share of honest markets with a false alarm, by the number of
 rounds observed (bids only, Qwen3.5-9B). (b) The same for other bidder
 models, each against its own honest markets (20 markets; Gemma honest: 14

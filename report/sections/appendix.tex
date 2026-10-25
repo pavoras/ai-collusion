@@ -100,12 +100,8 @@ Revisions and sampling are pinned; seeded re-collection is not bitwise
 reproducible (Appendix~\ref{app:prompts}). Re-analysing identical markets as
 a separate cohort reproduces correlation, strength and paper scores exactly;
 net and leak scores change only by permutation Monte Carlo noise (largest
-AUROC difference $0.0075$). The seven deviations cover warm-up transport;
-fenced-JSON parsing and labelled Gemma/Ministral recollection; caching,
-streaming and checkpoints; disk exhaustion and relocation; later recovery,
-call ceilings, loader paths and an exceeded budget cap; judge transport
-recovery and budget cancellation of breadth judging; and the operations of
-the two addenda.
+AUROC difference $0.0075$). Deviations from the pre-registration are
+listed in Appendix~\ref{app:stats}.
 % source: docs/PREREG.md sections 7 and 9, addendum A2, Addenda v2.2-v2.3
 
 \section{Scripted validation}
@@ -284,14 +280,17 @@ hierarchy are needed. Relabelling cost categories among whole bundles
 alone leaves context-conditional mutual information unchanged.
 % source: experiments/run_llm.py probe generation; src/collusion/analysis/probes.py; Round 13 review D
 
-\subsection{Pooled fingerprints: descriptive numerical caution}
-The frozen fingerprint analysis uses $1000$ market-bootstrap draws, $99$
-permutations per draw and $999$ for each point estimate. Some point estimates
-lie outside their percentile intervals. The report generator flags all such
-entries below; it does not alter or refit them. Bootstrap bias and Monte
-Carlo variation are possible explanations, not demonstrated causes. A
-numerical audit of their relative contributions remains open, so these
-intervals are not central evidence for mechanism classification.
+\subsection{Pooled fingerprints: how to read the intervals}
+The pooled flow estimates behind Figure~\ref{fig:flow} use $1000$
+market-bootstrap draws with $99$ permutations each, and $999$ permutations
+for each point estimate. The point estimate and the bootstrap draws are
+corrected with different numbers of permutations, and the estimates are
+small and close to zero; under these conditions a point estimate can fall
+outside its percentile interval. The table marks these cases with an asterisk instead of refitting
+the frozen analysis; we have not established which of the two sources
+(bootstrap bias or Monte Carlo noise) dominates. Figure~\ref{fig:flow}
+therefore draws an arrow only when the whole interval excludes zero, and
+these intervals are descriptive, not tests.
 % source: results/analysis/final_v1/results.json settings; fingerprints[*].n_boot,n_perm_per_draw,point_permutations
 \input{sections/fingerprint_table}
 
@@ -363,9 +362,8 @@ $0.5$) replicated ($0.9075$ $[0.8025,0.985]$).
 % source: results/analysis/addendum_summary/summary.json preregistered_verdicts
 The judge check used the registered prompt, seed and sampling with a
 24,000-token limit (recorded in each run's configuration and reproducibility
-record). Eight second-attempt streams broke server-side after
-400--785\,s without a reply; they were released with an audit record and
-resubmitted unchanged, as for the registered judges. Of 60 judgements, 54
+record). Eight interrupted requests were resubmitted unchanged, as for
+the registered judges. Of 60 judgements, 54
 returned valid output and 6 invalid JSON; the registered 12,000-token judge
 had 27 valid outputs on the same 60 markets.
 % source: results/llm/judge_index_24k.json; results/llm/reconciliation_log.json; results/analysis/addendum_summary/summary.json judge_budget
@@ -394,43 +392,31 @@ permutation seeds depend on the cohort name. Commands (one line each):
 \input{sections/addendum_full_table}
 
 \subsection{Deviations and collection order}
-The following summary follows the appended record in
-\path{docs/PREREG.md}; per-run metadata and
-\path{results/llm/reconciliation_log.json} retain affected attempts.
+The full record is in \path{docs/PREREG.md}; affected attempts are kept in
+the per-run metadata and \path{results/llm/reconciliation_log.json}. None of
+the deviations selected answers by content.
 \begin{enumerate}
-\item Warm-up transport handling was corrected before any bid was collected.
-The stopped pilot attempt was retained.
-\item A versioned parser accepted a single Markdown code block around valid
-JSON for Gemma/Ministral. Initial invalid A2 attempts were retained and
-recollected as labelled cohorts. Core Qwen and A1 kept the original parser.
-\item Concurrent-request caching, lost judge replies, streaming, timeouts
-and Windows checkpoint replacement were repaired. Unread transport replies
-were reconciled and requests resumed unchanged; answers were not selected
-on content.
-\item Disk exhaustion interrupted collection. Raw data moved to another
-drive through a junction, storage guards were added, and orphaned requests
-were reconciled. New run identifiers reused completed cached requests.
-\item Later recovery addressed drive-specific guards, preemption, warm-up
-caps, ledger contention, call ceilings and judge timeouts. The loader's
-containment check was changed to accept the raw-data junction. The original
-budget cap was exceeded and raised; Modal billing was USD 70.35 before the
-addenda and USD 76.30 after them (deviation 7).
-\item Breadth judges were cancelled for budget, while core, A1, A2 and the
-Gemma counter-judge were completed as attempted judgements. Memory failures
-and interrupted judge streams were reconciled; autoscaling was pinned for
-the batch. Content-invalid outputs remained failures. The counter-judge
-used its registered market subset and the fenced parser.
-\item For the addenda, eight broken judge streams were released and
-resubmitted unchanged, and the budget stop was made tiered (judge before
-C1-SS); no tier was reached. The cohort index was regenerated as full copies
-of registered entries before any replication statistic.
+\setlength{\itemsep}{0pt}
+\item Warm-up transport handling was fixed before any bid was collected.
+\item A versioned parser accepted valid JSON inside one Markdown code block
+for Gemma and Ministral; affected cells were recollected as labelled
+cohorts. Core Qwen and A1 kept the original parser.
+\item Infrastructure failures (request caching, lost replies, streaming,
+timeouts, checkpointing) were repaired and interrupted requests resumed
+unchanged.
+\item After a full disk interrupted collection, raw data moved to another
+drive and the loader was adapted to that location (the change in the
+executed revision, Appendix~\ref{app:stats}).
+\item The original compute budget cap was exceeded and raised (final Modal
+billing USD 76.30, of which USD 76.03 from credits).
+\item Breadth judging was cancelled for budget; core, A1, A2 and the Gemma
+counter-judge were completed.
+\item The two addenda (replication and judge budget) were added after the
+final analysis, each committed before its data.
 \end{enumerate}
-% source: docs/PREREG.md Deviations 1-7
-The amendment was recorded before LLM outcome analysis. Actual A1 collection
-started alongside the core; A2 and breadth work were interleaved after
-warm-up, rather than following the proposed fully sequential order.
-The report retains this operational ordering and the parser cohorts instead
-of describing an uninterrupted frozen-code collection.
+% source: docs/PREREG.md Deviations 1-7; `modal billing summary`, 24 Oct 2026 21:43 (76.30 / 76.03)
+A1 collection ran alongside the core, and A2 and breadth collection were
+interleaved after warm-up rather than run in the planned sequential order.
 % source: docs/PLAN.md Log, 23.10 amendment and collection entries; docs/PREREG.md Addendum order and deviations
 
 \section{Limitations and Dual-Use / Ethical Considerations}
@@ -503,18 +489,11 @@ against the audit. The defensive value is to expose such limits and support
 better evaluation, rather than to offer a covert-coordination recipe.
 
 \paragraph{Compute and reproducibility.}
-Collection used cloud-hosted open-weight models; interruptions, retries,
-idle time, and judging contribute to resource use. The registered budget
-cap was exceeded, so the initial budget is not an account of actual spend.
-Total Modal billing for the project was USD 70.35 before the addenda
-(deployment, pilot, collection, judging and probes) and USD 76.30 metered
-after them, of which USD 76.03 came from credits (24 October 2026, all runs
-ended).
-% source: Modal billing dashboard, read by the author on 24 Oct 2026 (70.35); `modal billing summary`, 24 Oct 2026 21:43 (76.30 / 76.03); not an analysis estimate
-Inference seeds and pinned configurations do not ensure identical outputs
-on re-collection. Logs and released data support analysis reproduction;
-unreconciled attempts, parser changes, and missing judgements must remain
-visible in that record.
+All bidders and judges were open-weight models on rented cloud GPUs; the
+whole project cost USD 76.30 in Modal compute. Seeds and pinned
+configurations do not make re-collection bitwise identical, but the released
+data allow every analysis to be rerun.
+% source: `modal billing summary`, 24 Oct 2026 21:43 (76.30); not an analysis estimate
 
 \section{LLM usage statement}
 Claude Code was used for planning, reviews, commits, the addenda code and
@@ -525,5 +504,3 @@ The LLM bidders and judges described in the methods are experimental
 subjects and baselines, distinct from the tools used to develop the study.
 AI assistance does not establish the correctness of a citation, numerical
 result, or interpretation; the final claims remain Marvin's responsibility.
-\todo{Marvin to complete the final substantive review and revise the prose
-in his own words before submission, as encouraged by the report template.}

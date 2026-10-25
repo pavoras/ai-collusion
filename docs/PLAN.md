@@ -226,3 +226,9 @@ frischem Clone. Keine Zahl im Report ohne reproduzierbaren Lauf.
   Ministral-8B 11/20 mit 6/20 Fehlalarmen, gemischte Märkte 16/20 und 19/20). Abb. 3 (Flussrichtung) neu gestaltet;
   Abb. 2 bleibt als Balken (Marvin). Methodendetails in Anhang C verschoben; Haupttext 8 Seiten.
 - 25.10. (spät): Darstellung geschärft. Spion klar formuliert (Einzelmarkt-Alarm höchstens 1/20; Netto-Einfluss nur bessere Rangfolge, AUROC 0,70 vs. 0,415; Richtung nur gepoolt) in Abstract, Einleitung, 4.1, 4.3, Schluss; „Neither rule caught“ korrigiert (je 1/20 statt 0). Abb. 4 im Haupttext durch Tabelle 1 ersetzt (Original + frische Märkte), Abbildung in Anhang E. Related Work gekürzt, Primärtest-Formel in Anhang C, 4.5 gegliedert, Beschriftungsüberlappung in Abb. 5 behoben. Haupttext endet Mitte S. 8. Privater lokaler Pfad aus docs/RESOURCES.md entfernt (steht noch in der Git-Historie).
+- 25.10. (spät, Review): Externes Review eingearbeitet. Neue Post-hoc-Analyse `experiments/quiet_cartel_bids.py`:
+  das Kartell ohne Chat bietet zu 97 % genau 3 und zu 95 % gleich (ehrlich 35 %/53 %), Restvariation des Gebots
+  bei bekannten Kosten 0,16 statt 0,72 bit -> fester Fokuspreis, deshalb unsichtbar für Abhängigkeitsmaße.
+  Bildunterschriften mit Kernaussage, Log-Basis in Methoden, Ministral- und Judge-Formulierungen präzisiert,
+  Diskussion gestrafft (Praxispunkt Preis-Screens, ein Limitations-Absatz), Infrastruktur-Abweichungen im Anhang
+  gekürzt, Fingerprint-Tabelle verständlicher, alle TODO-Marker entfernt. Haupttext 8 Seiten, gesamt 37.

@@ -369,7 +369,7 @@ def sensitivity_and_fingerprints(data):
                               f"{tex(cell+'/'+level+'/'+detector)} & {tex(mask)} & {n} & "+" & ".join(values)+r"\\"])
     lines.append(r"\end{longtable}\endgroup")
     write_tex("sensitivity_table.tex", lines)
-    lines = longtable_start("Pooled directional fingerprints in bits, retained as descriptive estimates. An asterisk flags a point outside its percentile interval; these intervals have not been re-estimated.",
+    lines = longtable_start("Pooled flow estimates in bits, per cell and term (descriptive). \\emph{action}: lockstep between the pair's bids; \\emph{leak\\_to\\_member\\_1}: member 2's cost in member 1's bids, and vice versa. An asterisk marks a point estimate outside its percentile interval (see text above); values are shown as frozen, not refitted.",
                             "@{}p{2.6in}rl@{}", r"Cell / term & Markets & Estimate [95\% interval]")
     flags = []
     for i, r in enumerate(data["fingerprints"]):
